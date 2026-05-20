@@ -326,7 +326,7 @@ export default function HomePage() {
             <div>
               <div className="relative mb-6 rounded-2xl overflow-hidden">
                 <Image
-                  src="https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?w=800&q=80"
+                  src="https://images.unsplash.com/photo-1516455590571-18256e5bb9ff?w=800&q=80"
                   alt="Gouttière bouchée dégâts Bruxelles"
                   width={600}
                   height={340}
