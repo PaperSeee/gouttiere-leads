@@ -12,15 +12,25 @@ export const metadata: Metadata = {
 };
 
 const communes = [
-  { name: "Uccle", slug: "uccle" },
-  { name: "Ixelles", slug: "ixelles" },
-  { name: "Woluwe-Saint-Pierre", slug: "woluwe-saint-pierre" },
-  { name: "Woluwe-Saint-Lambert", slug: "woluwe-saint-lambert" },
+  { name: "Anderlecht", slug: "anderlecht" },
   { name: "Auderghem", slug: "auderghem" },
-  { name: "Watermael-Boitsfort", slug: "watermael-boitsfort" },
+  { name: "Berchem-Sainte-Agathe", slug: "berchem-sainte-agathe" },
+  { name: "Bruxelles", slug: "bruxelles" },
   { name: "Etterbeek", slug: "etterbeek" },
+  { name: "Evere", slug: "evere" },
   { name: "Forest", slug: "forest" },
+  { name: "Ganshoren", slug: "ganshoren" },
+  { name: "Ixelles", slug: "ixelles" },
+  { name: "Jette", slug: "jette" },
+  { name: "Koekelberg", slug: "koekelberg" },
+  { name: "Molenbeek-Saint-Jean", slug: "molenbeek-saint-jean" },
+  { name: "Saint-Gilles", slug: "saint-gilles" },
+  { name: "Saint-Josse-ten-Noode", slug: "saint-josse-ten-noode" },
   { name: "Schaerbeek", slug: "schaerbeek" },
+  { name: "Uccle", slug: "uccle" },
+  { name: "Watermael-Boitsfort", slug: "watermael-boitsfort" },
+  { name: "Woluwe-Saint-Lambert", slug: "woluwe-saint-lambert" },
+  { name: "Woluwe-Saint-Pierre", slug: "woluwe-saint-pierre" },
 ];
 
 export default function NettoyageGouttieres() {
@@ -66,7 +76,7 @@ export default function NettoyageGouttieres() {
             <p className="text-gray-300 text-lg mb-6 leading-relaxed">
               Un nettoyage professionnel de vos gouttières une à deux fois par an suffit à prévenir
               la grande majorité des problèmes liés aux eaux pluviales. Nos techniciens interviennent
-              sur tous types de toitures et de gouttières dans les 9 communes de Bruxelles.
+              sur tous types de toitures et de gouttières dans les 19 communes de Bruxelles.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <a href="tel:0477234187" className="flex items-center justify-center gap-2 bg-[#F97316] hover:bg-orange-500 text-white font-bold px-6 py-3 rounded-xl transition-colors">
