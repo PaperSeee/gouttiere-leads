@@ -28,15 +28,25 @@ export const metadata: Metadata = {
 };
 
 const communes = [
-  { name: "Uccle", slug: "uccle" },
-  { name: "Ixelles", slug: "ixelles" },
-  { name: "Woluwe-Saint-Pierre", slug: "woluwe-saint-pierre" },
-  { name: "Woluwe-Saint-Lambert", slug: "woluwe-saint-lambert" },
+  { name: "Anderlecht", slug: "anderlecht" },
   { name: "Auderghem", slug: "auderghem" },
-  { name: "Watermael-Boitsfort", slug: "watermael-boitsfort" },
+  { name: "Berchem-Sainte-Agathe", slug: "berchem-sainte-agathe" },
+  { name: "Bruxelles-Ville", slug: "bruxelles" },
   { name: "Etterbeek", slug: "etterbeek" },
+  { name: "Evere", slug: "evere" },
   { name: "Forest", slug: "forest" },
+  { name: "Ganshoren", slug: "ganshoren" },
+  { name: "Ixelles", slug: "ixelles" },
+  { name: "Jette", slug: "jette" },
+  { name: "Koekelberg", slug: "koekelberg" },
+  { name: "Molenbeek-Saint-Jean", slug: "molenbeek-saint-jean" },
+  { name: "Saint-Gilles", slug: "saint-gilles" },
+  { name: "Saint-Josse-ten-Noode", slug: "saint-josse-ten-noode" },
   { name: "Schaerbeek", slug: "schaerbeek" },
+  { name: "Uccle", slug: "uccle" },
+  { name: "Watermael-Boitsfort", slug: "watermael-boitsfort" },
+  { name: "Woluwe-Saint-Lambert", slug: "woluwe-saint-lambert" },
+  { name: "Woluwe-Saint-Pierre", slug: "woluwe-saint-pierre" },
 ];
 
 const homeFaqs = [
@@ -463,7 +473,7 @@ export default function HomePage() {
                 Zone d&apos;intervention
               </p>
               <h2 className="text-2xl sm:text-3xl font-bold mb-4">
-                Gouttières Bruxelles — 9 communes couvertes
+                Gouttières Bruxelles — 19 communes couvertes
               </h2>
               <p className="text-green-200 leading-relaxed mb-6">
                 Nous intervenons dans toutes les communes de la région bruxelloise.

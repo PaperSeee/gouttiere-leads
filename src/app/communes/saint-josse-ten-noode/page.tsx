@@ -7,16 +7,16 @@ import LocalBusinessSchema from "@/components/LocalBusinessSchema"
 import ContactForm from "@/components/ContactForm"
 
 export const metadata: Metadata = {
-  title: "Nettoyage Gouttières Woluwe-Saint-Lambert — Villas & Appartements | 0477 23 41 87",
-  description: "Nettoyage gouttières à Woluwe-Saint-Lambert : villas résidentielles, immeubles, platanes des avenues. Devis gratuit, intervention 48h. 0477 23 41 87.",
-  alternates: { canonical: "https://nettoyage-gouttieres-bruxelles.be/communes/woluwe-saint-lambert" },
+  title: "Nettoyage Gouttières Saint-Josse-ten-Noode — Immeubles Denses | 0477 23 41 87",
+  description: "Nettoyage gouttières à Saint-Josse-ten-Noode : immeubles denses, accès hauteur, toitures plates. Devis gratuit, intervention rapide. 0477 23 41 87.",
+  alternates: { canonical: "https://nettoyage-gouttieres-bruxelles.be/communes/saint-josse-ten-noode" },
 }
 
-export default function WoluweStLambertPage() {
+export default function SaintJossePage() {
   return (
     <>
       <LocalBusinessSchema />
-      <Breadcrumb items={[{ label: "Accueil", href: "/" }, { label: "Communes", href: "/" }, { label: "Woluwe-Saint-Lambert" }]} />
+      <Breadcrumb items={[{ label: "Accueil", href: "/" }, { label: "Communes", href: "/" }, { label: "Saint-Josse-ten-Noode" }]} />
 
       <section className="bg-white border-b border-gray-100 py-12 lg:py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -24,15 +24,15 @@ export default function WoluweStLambertPage() {
             <div className="flex-1">
               <div className="flex items-center gap-2 text-sm text-gray-500 mb-4">
                 <MapPin size={14} className="text-[#F97316]" />
-                <span>Woluwe-Saint-Lambert · Résidentiel & commerces</span>
+                <span>Saint-Josse-ten-Noode · Centre-ville dense</span>
               </div>
               <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-gray-900 leading-tight mb-5">
-                Nettoyage Gouttières<br /><span className="text-[#1A4731]">Woluwe-Saint-Lambert</span>
+                Nettoyage Gouttières<br /><span className="text-[#1A4731]">Saint-Josse-ten-Noode</span>
               </h1>
               <p className="text-gray-600 text-lg leading-relaxed mb-7 max-w-xl">
-                Commune mixte entre quartiers résidentiels avec villas et zones commerciales.
-                Les platanes des grandes avenues génèrent des obstructions saisonnières
-                importantes dans les gouttières.
+                La commune la plus densément peuplée de Belgique. Son bâti urbain
+                très compact — immeubles, maisons de rapport — présente des défis
+                d&apos;accès uniques pour l&apos;entretien des gouttières.
               </p>
               <div className="flex flex-wrap gap-3">
                 <a href="tel:0477234187" className="inline-flex items-center gap-2 bg-[#F97316] hover:bg-orange-500 text-white font-bold px-6 py-3.5 rounded-xl transition-colors shadow-md shadow-orange-100">
@@ -44,12 +44,12 @@ export default function WoluweStLambertPage() {
               </div>
             </div>
             <div className="lg:w-72 bg-[#1A4731] text-white rounded-2xl p-6 flex-shrink-0 w-full">
-              <p className="text-green-300 text-xs font-semibold uppercase tracking-wide mb-4">WSL en pratique</p>
+              <p className="text-green-300 text-xs font-semibold uppercase tracking-wide mb-4">Saint-Josse en chiffres</p>
               <div className="space-y-4">
                 {[
-                  { val: "Mixte", label: "villas + immeubles", detail: "deux types d'interventions distincts" },
-                  { val: "Platanes", label: "grandes avenues", detail: "feuilles larges = bouchons rapides" },
-                  { val: "1–2×/an", label: "selon exposition", detail: "villas arborées vs centre-ville" },
+                  { val: "R+4/R+5", label: "hauteur courante", detail: "accès toiture technique" },
+                  { val: "Dense++", label: "la plus dense de Belgique", detail: "peu d'arbres mais beaucoup d'accès" },
+                  { val: "1×/an", label: "nettoyage recommandé", detail: "moins de végétation, mais sédiments" },
                 ].map((s) => (
                   <div key={s.label} className="border-b border-white/20 pb-4 last:border-0 last:pb-0">
                     <p className="text-2xl font-extrabold text-[#F97316]">{s.val}</p>
@@ -67,33 +67,34 @@ export default function WoluweStLambertPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-start">
             <div>
-              <p className="text-[#F97316] font-semibold text-sm uppercase tracking-wide mb-3">Ce qui distingue WSL</p>
-              <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-5">Une commune aux deux visages</h2>
+              <p className="text-[#F97316] font-semibold text-sm uppercase tracking-wide mb-3">Le défi saint-jossois</p>
+              <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-5">Immeubles en hauteur, accès techniques</h2>
               <div className="space-y-4 text-gray-600 leading-relaxed">
                 <p>
-                  Woluwe-Saint-Lambert présente deux réalités bien distinctes : les
-                  <strong> quartiers résidentiels calmes</strong> avec villas des années 60–70 —
-                  notamment autour du Chant d&apos;Oiseau — et les zones plus urbaines et
-                  commerciales autour de l&apos;avenue de Tervueren.
+                  Saint-Josse-ten-Noode est la commune la plus densément peuplée de Belgique.
+                  Son bâti est quasi exclusivement constitué d&apos;<strong>immeubles de rapport</strong>
+                  de 4 à 6 étages construits entre 1900 et 1970. Les espaces verts y sont rares,
+                  et donc les gouttières accumulent surtout des sédiments urbains et de la poussière
+                  plutôt que des feuilles.
                 </p>
                 <p>
-                  Les <strong>grandes avenues bordées de platanes</strong> génèrent des volumes
-                  importants de feuilles en automne. Les platanes sont particulièrement
-                  problématiques car leurs feuilles grandes et larges forment des bouchons
-                  compacts qui obstruent rapidement même les chenaux de grande section.
+                  La principale difficulté à Saint-Josse est l&apos;<strong>accès aux toitures</strong>.
+                  Les immeubles n&apos;ont pas toujours de trappe d&apos;accès facile, et les gouttières
+                  de façade à plusieurs mètres du sol nécessitent un équipement spécifique — échelles
+                  professionnelles, perches télescopiques, ou dans certains cas une nacelle élévatrice.
                 </p>
                 <p>
-                  La commune accueille également de nombreux <strong>immeubles à appartements</strong>
-                  dans sa partie commerciale. Ces bâtiments ont souvent des systèmes d&apos;évacuation
-                  pluviale complexes, avec plusieurs descentes et des gouttières de toiture
-                  collective peu entretenues.
+                  Les <strong>toitures plates</strong> ou en terrasse de nombreux immeubles de
+                  Saint-Josse ont des systèmes d&apos;évacuation internes (gargouilles) qui se bouchent
+                  facilement avec les sédiments et peuvent provoquer des infiltrations importantes
+                  si elles ne sont pas entretenues régulièrement.
                 </p>
               </div>
             </div>
             <div className="space-y-4">
               <Image
-                src="https://images.unsplash.com/photo-1558769132-cb1aea458c5e?w=700&q=80"
-                alt="Nettoyage gouttières Woluwe-Saint-Lambert Bruxelles"
+                src="https://images.unsplash.com/photo-1570129477492-1cf5c04a39d4?w=700&q=80"
+                alt="Nettoyage gouttières Saint-Josse-ten-Noode immeuble Bruxelles"
                 width={600}
                 height={380}
                 className="rounded-2xl object-cover w-full h-64"
@@ -101,10 +102,10 @@ export default function WoluweStLambertPage() {
               />
               <div className="grid grid-cols-2 gap-3">
                 {[
-                  { icon: <Leaf size={18} className="text-[#1A4731]" />, text: "Platanes & grandes feuilles", bg: "bg-green-50" },
-                  { icon: <Wrench size={18} className="text-blue-600" />, text: "Villas & immeubles mixtes", bg: "bg-blue-50" },
-                  { icon: <Droplets size={18} className="text-[#F97316]" />, text: "Descentes collectives", bg: "bg-orange-50" },
-                  { icon: <AlertTriangle size={18} className="text-red-500" />, text: "Obstructions saisonnières", bg: "bg-red-50" },
+                  { icon: <AlertTriangle size={18} className="text-red-500" />, text: "Toitures plates gargouilles", bg: "bg-red-50" },
+                  { icon: <Wrench size={18} className="text-blue-600" />, text: "Accès hauteur R+4/R+5", bg: "bg-blue-50" },
+                  { icon: <Droplets size={18} className="text-[#F97316]" />, text: "Sédiments urbains denses", bg: "bg-orange-50" },
+                  { icon: <Leaf size={18} className="text-[#1A4731]" />, text: "Immeubles rapport collectifs", bg: "bg-green-50" },
                 ].map((p) => (
                   <div key={p.text} className={`${p.bg} rounded-xl p-3 flex items-center gap-2`}>
                     {p.icon}<span className="text-sm font-medium text-gray-800">{p.text}</span>
@@ -118,13 +119,13 @@ export default function WoluweStLambertPage() {
 
       <section className="py-14 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-8">Nos services à Woluwe-Saint-Lambert</h2>
+          <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-8">Nos services à Saint-Josse-ten-Noode</h2>
           <div className="divide-y divide-gray-100 border border-gray-100 rounded-2xl overflow-hidden">
             {[
-              { icon: <Droplets size={22} className="text-[#1A4731]" />, href: "/services/nettoyage-gouttieres", title: "Nettoyage villas & immeubles", desc: "Nettoyage adapté à chaque type de bien : villa individuelle avec devis standard ou immeuble collectif avec rapport pour le syndic.", price: "dès 80€", tag: null },
-              { icon: <AlertTriangle size={22} className="text-red-500" />, href: "/services/debouchage-gouttieres", title: "Débouchage platanes urgence", desc: "Les feuilles de platanes forment des bouchons tenaces. Intervention 7j/7 pour les débordements actifs à Woluwe-Saint-Lambert.", price: "dès 120€", tag: "7j/7" },
-              { icon: <Wrench size={22} className="text-blue-600" />, href: "/services/reparation-gouttieres", title: "Réparation & remplacement", desc: "Gouttières vieillissantes des villas des années 60–70 ou systèmes collectifs d'immeubles. Devis sur mesure selon l'état et les matériaux.", price: "devis gratuit", tag: null },
-              { icon: <Leaf size={22} className="text-yellow-600" />, href: "/services/demoussage-toiture", title: "Démoussage toitures", desc: "Traitement anti-mousse préventif après nettoyage. Protège votre toiture et prolonge la durée de vie des gouttières.", price: "devis gratuit", tag: null },
+              { icon: <Droplets size={22} className="text-[#1A4731]" />, href: "/services/nettoyage-gouttieres", title: "Nettoyage immeubles en hauteur", desc: "Intervention adaptée aux immeubles R+4 et R+5. Rapport d'état complet pour le syndic ou propriétaire. Accès toiture évalué en amont.", price: "dès 80€", tag: null },
+              { icon: <AlertTriangle size={22} className="text-red-500" />, href: "/services/debouchage-gouttieres", title: "Débouchage gargouilles urgence", desc: "Gargouille bouchée sur toiture plate ? L'eau s'accumule et infiltre en quelques heures. On intervient 7j/7 en urgence.", price: "dès 120€", tag: "7j/7" },
+              { icon: <Wrench size={22} className="text-blue-600" />, href: "/services/reparation-gouttieres", title: "Réparation systèmes collectifs", desc: "Remplacement de sections de gouttières ou de descentes sur immeubles. Coordination avec le syndic et rapport pour la copropriété.", price: "devis gratuit", tag: null },
+              { icon: <Leaf size={22} className="text-yellow-600" />, href: "/services/demoussage-toiture", title: "Entretien toitures terrasses", desc: "Nettoyage et traitement des toitures plates ou terrasses : évacuation des sédiments, démoussage des acrotères, test des gargouilles.", price: "devis gratuit", tag: null },
             ].map((s) => (
               <Link key={s.href} href={s.href} className="flex items-start gap-5 p-5 hover:bg-gray-50 transition-colors group">
                 <div className="bg-gray-100 group-hover:bg-white p-3 rounded-xl flex-shrink-0 transition-colors">{s.icon}</div>
@@ -147,13 +148,13 @@ export default function WoluweStLambertPage() {
 
       <section className="py-14 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl font-bold text-gray-900 mb-8">Questions fréquentes — Woluwe-Saint-Lambert</h2>
+          <h2 className="text-2xl font-bold text-gray-900 mb-8">Questions fréquentes — Saint-Josse-ten-Noode</h2>
           <div className="space-y-5">
             {[
-              { q: "Intervenez-vous aussi pour les immeubles à appartements ?", a: "Oui, avec un devis formel pour le syndic ou les copropriétaires. On établit un rapport d'état complet et peut revenir annuellement selon un planning préétabli pour assurer la continuité de l'entretien." },
-              { q: "Les platanes de l'avenue de Tervueren — quelle fréquence de nettoyage ?", a: "Pour les propriétés directement bordées de platanes, deux nettoyages annuels sont recommandés : novembre (chute des grandes feuilles) et mai (débris printaniers). Hors alignement de platanes, un passage automnal suffit généralement." },
-              { q: "Quelle est la différence entre un nettoyage villa et un nettoyage immeuble ?", a: "Pour une villa, on intervient depuis l'extérieur avec des échelles et on nettoie l'ensemble du système. Pour un immeuble, on accède souvent à la toiture et on nettoie les gouttières communes. La facturation immeuble inclut un rapport d'état pour le dossier de copropriété." },
-              { q: "Nos gouttières en PVC des années 70 sont-elles à remplacer ?", a: "Le PVC des années 70 a 50 ans — au-delà de la durée de vie standard de 25–30 ans. Si elles sont cassantes, fissurées ou si les fixations cèdent, un remplacement s'impose. On peut aussi remplacer uniquement les tronçons défaillants pour réduire le coût." },
+              { q: "Comment accédez-vous aux gouttières d'un immeuble de 5 étages ?", a: "Selon la configuration : trappe de toit interne (la plus simple), accès par l'immeuble voisin si accord possible, ou nacelle élévatrice pour les façades sans accès interne. On évalue l'accessibilité avant de donner un devis — l'accès est parfois le facteur de coût le plus important." },
+              { q: "Notre gargouille de toiture plate est bouchée — est-ce urgent ?", a: "Très urgent, oui. Une gargouille bouchée sur toiture plate peut provoquer une accumulation d'eau qui infiltre l'étanchéité et cause des dégâts majeurs à l'immeuble sous-jacent en quelques heures. C'est une intervention d'urgence prioritaire." },
+              { q: "Le syndic doit-il donner son accord avant votre intervention ?", a: "Pour les parties communes d'un immeuble, oui — il faut l'accord du syndic ou d'une assemblée générale pour les travaux importants. On peut vous fournir un devis formel et un rapport d'état préalable pour faciliter la prise de décision en AG." },
+              { q: "Intervenez-vous chaussée de Haecht et rue Royale Sainte-Marie ?", a: "Oui, dans toute la commune de Saint-Josse, y compris les axes principaux et les rues intérieures. La densité du bâti demande parfois une logistique particulière pour le stationnement du matériel, mais on s'adapte." },
             ].map((faq, i) => (
               <div key={i} className="bg-white rounded-xl border border-gray-100 p-6">
                 <p className="font-bold text-gray-900 mb-2 flex items-start gap-2">
@@ -170,7 +171,7 @@ export default function WoluweStLambertPage() {
       <section id="devis" className="py-14 bg-white">
         <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-2">Devis gratuit — Woluwe-Saint-Lambert</h2>
+            <h2 className="text-2xl font-bold text-gray-900 mb-2">Devis gratuit — Saint-Josse-ten-Noode</h2>
             <p className="text-gray-500 text-sm">Réponse sous 2h · ou appelez le <a href="tel:0477234187" className="font-bold text-[#1A4731] hover:text-[#F97316]">0477 23 41 87</a></p>
           </div>
           <div className="bg-gray-50 border border-gray-200 rounded-2xl p-6 sm:p-8"><ContactForm /></div>
@@ -181,7 +182,7 @@ export default function WoluweStLambertPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <p className="text-sm font-semibold text-gray-500 mb-3">Communes voisines desservies</p>
           <div className="flex flex-wrap gap-2">
-            {[{ name: "Woluwe-Saint-Pierre", slug: "woluwe-saint-pierre" }, { name: "Etterbeek", slug: "etterbeek" }, { name: "Schaerbeek", slug: "schaerbeek" }].map((c) => (
+            {[{ name: "Schaerbeek", slug: "schaerbeek" }, { name: "Etterbeek", slug: "etterbeek" }, { name: "Bruxelles-Ville", slug: "bruxelles" }].map((c) => (
               <Link key={c.slug} href={`/communes/${c.slug}`} className="inline-flex items-center gap-1.5 bg-white border border-gray-200 hover:border-[#1A4731] hover:text-[#1A4731] text-gray-600 rounded-lg px-3 py-2 text-sm font-medium transition-colors">
                 <MapPin size={12} className="text-[#F97316]" />{c.name}
               </Link>

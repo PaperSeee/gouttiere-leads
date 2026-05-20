@@ -1,286 +1,189 @@
 import type { Metadata } from "next"
 import Link from "next/link"
-import { Phone, ArrowRight, CheckCircle, MapPin, Leaf, Droplets, Wrench, AlertTriangle } from "lucide-react"
+import Image from "next/image"
+import { Phone, ArrowRight, MapPin, Leaf, Droplets, Wrench, AlertTriangle } from "lucide-react"
 import Breadcrumb from "@/components/Breadcrumb"
 import LocalBusinessSchema from "@/components/LocalBusinessSchema"
 import ContactForm from "@/components/ContactForm"
 
 export const metadata: Metadata = {
-  title: "Nettoyage Gouttières Schaerbeek — Expert Local | Nettoyage Gouttières Bruxelles",
-  description: "Nettoyage gouttières à Schaerbeek : maisons Art Nouveau, ornements zinc, gouttières décoratives difficiles d'accès. Propriétaires soucieux du patrimoine. 0477 23 41 87.",
+  title: "Nettoyage Gouttières Schaerbeek — Maisons Belle Époque | 0477 23 41 87",
+  description: "Nettoyage gouttières à Schaerbeek : maisons Belle Époque, zinc historique, tilleuls. Devis gratuit, intervention rapide. 0477 23 41 87.",
   alternates: { canonical: "https://nettoyage-gouttieres-bruxelles.be/communes/schaerbeek" },
 }
-
-const services = [
-  {
-    href: "/services/nettoyage-gouttieres",
-    icon: <Droplets size={24} className="text-[#1A4731]" />,
-    bg: "bg-green-100",
-    title: "Nettoyage complet",
-    desc: "Les façades Art Nouveau de Schaerbeek comptent des ornements et reliefs qui retiennent les débris. Nos techniciens nettoient méticuleusement ces gouttières décoratives en zinc avec le soin qu'exige ce patrimoine exceptionnel.",
-  },
-  {
-    href: "/services/debouchage-gouttieres",
-    icon: <AlertTriangle size={24} className="text-red-600" />,
-    bg: "bg-red-100",
-    title: "Débouchage urgence",
-    desc: "Les ornements des façades schaerbeekeoises retiennent les feuilles et créent des bouchons spécifiques. Intervention 7j/7 avec techniciens formés à la manipulation des éléments décoratifs en zinc.",
-  },
-  {
-    href: "/services/reparation-gouttieres",
-    icon: <Wrench size={24} className="text-blue-600" />,
-    bg: "bg-blue-100",
-    title: "Réparation / remplacement",
-    desc: "Les gouttières décoratives en zinc Art Nouveau nécessitent une expertise particulière. Nous réparons les sections endommagées en respectant les profils et ornements d'origine, ou remplaçons à l'identique si nécessaire.",
-  },
-  {
-    href: "/services/demoussage-toiture",
-    icon: <Leaf size={24} className="text-yellow-700" />,
-    bg: "bg-yellow-100",
-    title: "Démoussage toiture",
-    desc: "La densité des arbres de rue à Schaerbeek favorise les mousses sur les toitures. Notre démoussage respecte les matériaux anciens et les tuiles d'époque tout en éliminant efficacement les mousses et lichens.",
-  },
-]
-
-const faqs = [
-  {
-    q: "Comment nettoyez-vous les gouttières décoratives Art Nouveau sans les abîmer ?",
-    a: "Les gouttières Art Nouveau en zinc sont à la fois décoratives et fonctionnelles. Nous utilisons des outils adaptés — brosses souples, rinçage à faible pression — pour nettoyer sans abîmer les profils ornementaux. Nos techniciens sont formés à la manipulation de ces éléments fragiles et précieux. Nous signalons systématiquement toute fragilité observée pour éviter les mauvaises surprises.",
-  },
-  {
-    q: "Les ornements des façades de Schaerbeek aggravent-ils les problèmes de gouttières ?",
-    a: "Oui. Les ornements en zinc — têtes de lions, mascarons, rinceaux — créent des recoins où s'accumulent feuilles, mousses et débris. Ces accumulations localisées créent des points de rétention d'eau qui accélèrent la corrosion du zinc. Un nettoyage annuel est encore plus important sur ces façades ornementées que sur des constructions ordinaires.",
-  },
-  {
-    q: "Comment préserver l'esthétique des gouttières en zinc tout en les remplaçant ?",
-    a: "Lorsqu'un remplacement est nécessaire, nous pouvons reproduire les profils d'origine en zinc neuf ou proposer des solutions en aluminium laqué qui imitent l'aspect du zinc patiné. Pour les éléments décoratifs particulièrement précieux, nous pouvons recommander des artisans spécialisés en restauration du patrimoine.",
-  },
-  {
-    q: "Les arbres de rue à Schaerbeek nécessitent-ils un nettoyage plus fréquent ?",
-    a: "Schaerbeek compte parmi les communes bruxelloises les plus denses en arbres de rue — tilleuls, marronniers et platanes bordent la quasi-totalité de ses avenues. Ces arbres génèrent d'importants volumes de feuilles, fleurs et graines. Un nettoyage annuel est indispensable, et les propriétés donnant directement sur une allée d'arbres bénéficient parfois d'un deuxième passage au printemps.",
-  },
-]
 
 export default function SchaerbeekPage() {
   return (
     <>
       <LocalBusinessSchema />
-      <Breadcrumb items={[
-        { label: "Accueil", href: "/" },
-        { label: "Communes", href: "/" },
-        { label: "Schaerbeek" },
-      ]} />
+      <Breadcrumb items={[{ label: "Accueil", href: "/" }, { label: "Communes", href: "/" }, { label: "Schaerbeek" }]} />
 
-      {/* Hero */}
-      <section className="bg-[#1A4731] text-white py-16 lg:py-24">
+      <section className="bg-white border-b border-gray-100 py-12 lg:py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl">
-            <div className="flex flex-wrap gap-2 mb-6">
-              <span className="bg-[#F97316] text-white text-xs font-bold px-3 py-1.5 rounded-full">Commune de Schaerbeek</span>
-              <span className="bg-white/20 text-white text-xs font-semibold px-3 py-1.5 rounded-full">Art Nouveau</span>
-              <span className="bg-white/20 text-white text-xs font-semibold px-3 py-1.5 rounded-full">Devis gratuit</span>
-            </div>
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight mb-6">
-              Nettoyage de Gouttières à <span className="text-[#F97316]">Schaerbeek</span>
-            </h1>
-            <p className="text-lg sm:text-xl text-gray-200 mb-8 leading-relaxed">
-              Expert local en nettoyage de gouttières à Schaerbeek. Maisons Art Nouveau avec ornements en zinc, gouttières décoratives difficiles à nettoyer, arbres de rue denses : nous intervenons avec le soin qu'exige ce patrimoine architectural exceptionnel.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <a
-                href="tel:0477234187"
-                className="flex items-center justify-center gap-2 bg-[#F97316] hover:bg-orange-500 text-white font-bold px-6 py-4 rounded-xl text-lg transition-colors"
-              >
-                <Phone size={20} />
-                0477 23 41 87
-              </a>
-              <a
-                href="#contact"
-                className="flex items-center justify-center gap-2 bg-white hover:bg-gray-100 text-[#1A4731] font-bold px-6 py-4 rounded-xl text-lg transition-colors"
-              >
-                Devis gratuit en ligne
-                <ArrowRight size={20} />
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Intro */}
-      <section className="py-14 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto">
-            <p className="text-[#F97316] font-semibold text-sm uppercase tracking-wide mb-2">Un patrimoine exceptionnel qui demande une expertise particulière</p>
-            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-6">
-              Les spécificités des gouttières à Schaerbeek
-            </h2>
-            <div className="prose prose-gray max-w-none text-gray-600 leading-relaxed space-y-4">
-              <p>
-                Schaerbeek est l'une des communes bruxelloises les plus riches en <strong>architecture Art Nouveau et Art Déco</strong>. Ses avenues et rues abritent des centaines de façades ornementées datant du début du XXe siècle, avec leurs caractéristiques ferronneries, céramiques colorées, et — point crucial pour notre métier — leurs <strong>gouttières en zinc décoratives</strong> aux profils complexes et ornements sophistiqués.
-              </p>
-              <p>
-                Ces gouttières décoratives constituent un défi spécifique : les reliefs, modénatures et ornements créent autant de recoins où <strong>s'accumulent les feuilles et débris</strong> qui ne peuvent pas être évacués naturellement par le vent ou la pluie. Une gouttière ornementée schaerbeeekoise retient davantage de matières organiques qu'une gouttière droite standard, et nécessite donc un nettoyage plus méticuleux et plus régulier.
-              </p>
-              <p>
-                La communauté de propriétaires schaerbeekois est également particulièrement attachée à la préservation de son <strong>patrimoine architectural</strong>. Ils attendent de leurs prestataires une approche respectueuse et experte. C'est pourquoi nos techniciens sont formés à la manipulation des éléments en zinc ancien, fragile et irremplaçable. Nous utilisons des outils adaptés — brosses souples, rinçage à faible pression — pour nettoyer sans fragiliser ni abîmer.
-              </p>
-              <p>
-                La densité des <strong>arbres de rue</strong> dans la plupart des avenues de Schaerbeek est également un facteur important : tilleuls, marronniers et platanes génèrent des volumes importants de feuilles et de fleurs qui viennent obstruer ces gouttières décoratives à chaque saison.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Problèmes */}
-      <section className="py-14 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-10">
-            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3">Problèmes fréquents à Schaerbeek</h2>
-            <p className="text-gray-600">Les situations que nous rencontrons le plus souvent dans cette commune</p>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[
-              {
-                icon: <Wrench size={28} className="text-blue-600" />,
-                bg: "bg-blue-100",
-                title: "Ornements qui retiennent les débris",
-                desc: "Les reliefs décoratifs des corniches Art Nouveau créent des zones de rétention où feuilles, mousses et débris s'accumulent. Un nettoyage manuel méticuleux est nécessaire dans ces zones.",
-              },
-              {
-                icon: <AlertTriangle size={28} className="text-[#F97316]" />,
-                bg: "bg-orange-100",
-                title: "Zinc décoratif corrodé",
-                desc: "Le zinc des façades Art Nouveau a parfois plus de 100 ans. Malgré sa durabilité légendaire, il montre des signes d'oxydation avancée et de micro-perforations à certains endroits.",
-              },
-              {
-                icon: <MapPin size={28} className="text-red-600" />,
-                bg: "bg-red-100",
-                title: "Accès difficile en hauteur",
-                desc: "Les immeubles de Schaerbeek atteignent souvent 4 à 5 étages. Les rues denses et les trottoirs étroits compliquent parfois le stationnement et l'installation du matériel de montée en hauteur.",
-              },
-              {
-                icon: <Leaf size={28} className="text-[#1A4731]" />,
-                bg: "bg-green-100",
-                title: "Arbres de rue très présents",
-                desc: "Tilleuls, marronniers et platanes bordent la majorité des avenues de Schaerbeek. Chaque saison, leurs feuilles et fleurs viennent s'accumuler dans les corniches ornementées des façades.",
-              },
-              {
-                icon: <Droplets size={28} className="text-blue-600" />,
-                bg: "bg-blue-100",
-                title: "Infiltrations par les ornements",
-                desc: "Les jonctions entre ornements décoratifs et le zinc de la gouttière principale sont des points de faiblesse. L'eau peut s'infiltrer dans ces joints et provoquer des dégâts invisibles à l'intérieur de la façade.",
-              },
-              {
-                icon: <CheckCircle size={28} className="text-green-600" />,
-                bg: "bg-green-50",
-                title: "Approche patrimoniale",
-                desc: "Pour les propriétaires attachés à la préservation de leur patrimoine Art Nouveau, nous proposons une inspection détaillée avec rapport photographique de l'état de chaque élément en zinc.",
-              },
-            ].map((item) => (
-              <div key={item.title} className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100">
-                <div className={`${item.bg} p-3 rounded-xl w-fit mb-4`}>{item.icon}</div>
-                <h3 className="font-bold text-gray-900 mb-2">{item.title}</h3>
-                <p className="text-gray-600 text-sm leading-relaxed">{item.desc}</p>
+          <div className="flex flex-col lg:flex-row gap-10 items-start">
+            <div className="flex-1">
+              <div className="flex items-center gap-2 text-sm text-gray-500 mb-4">
+                <MapPin size={14} className="text-[#F97316]" />
+                <span>Commune de Schaerbeek · Belle Époque</span>
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Services */}
-      <section className="py-14 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-10">
-            <p className="text-[#F97316] font-semibold text-sm uppercase tracking-wide mb-2">Nos prestations</p>
-            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3">Nos services à Schaerbeek</h2>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {services.map((s) => (
-              <div key={s.href} className="bg-gray-50 rounded-2xl p-6 border border-gray-100 hover:shadow-md transition-shadow">
-                <div className={`${s.bg} p-3 rounded-xl w-fit mb-4`}>{s.icon}</div>
-                <h3 className="font-bold text-gray-900 mb-2">{s.title}</h3>
-                <p className="text-gray-600 text-sm leading-relaxed mb-4">{s.desc}</p>
-                <Link href={s.href} className="text-[#F97316] text-sm font-semibold hover:underline flex items-center gap-1">
-                  En savoir plus <ArrowRight size={14} />
-                </Link>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* FAQ */}
-      <section className="py-14 bg-gray-50">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-10">
-            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3">Questions fréquentes — Schaerbeek</h2>
-          </div>
-          <div className="space-y-4">
-            {faqs.map((faq) => (
-              <div key={faq.q} className="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
-                <h3 className="font-bold text-gray-900 mb-2 flex items-start gap-2">
-                  <CheckCircle size={18} className="text-[#F97316] mt-0.5 flex-shrink-0" />
-                  {faq.q}
-                </h3>
-                <p className="text-gray-600 text-sm leading-relaxed ml-6">{faq.a}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA */}
-      <section id="contact" className="py-14 bg-[#1A4731]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="text-white">
-              <h2 className="text-2xl sm:text-3xl font-bold mb-4">Devis gratuit — Schaerbeek</h2>
-              <p className="text-gray-300 mb-6 leading-relaxed">
-                Propriétaire d'une maison Art Nouveau à Schaerbeek ? Contactez-nous pour un devis tenant compte des spécificités de votre patrimoine architectural.
+              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-gray-900 leading-tight mb-5">
+                Nettoyage Gouttières<br /><span className="text-[#1A4731]">Schaerbeek</span>
+              </h1>
+              <p className="text-gray-600 text-lg leading-relaxed mb-7 max-w-xl">
+                Schaerbeek concentre un patrimoine Belle Époque remarquable avec des façades
+                ornementales et des gouttières en zinc historiques. Intervention soignée,
+                respectueuse de l&apos;architecture ancienne.
               </p>
-              <div className="space-y-3 mb-8">
-                {["Expertise zinc Art Nouveau", "Manipulation délicate des ornements", "Rapport photographique disponible", "Techniciens certifiés RC Pro"].map((item) => (
-                  <div key={item} className="flex items-center gap-3">
-                    <CheckCircle size={18} className="text-[#F97316]" />
-                    <span className="text-gray-300 text-sm">{item}</span>
+              <div className="flex flex-wrap gap-3">
+                <a href="tel:0477234187" className="inline-flex items-center gap-2 bg-[#F97316] hover:bg-orange-500 text-white font-bold px-6 py-3.5 rounded-xl transition-colors shadow-md shadow-orange-100">
+                  <Phone size={18} />0477 23 41 87
+                </a>
+                <a href="#devis" className="inline-flex items-center gap-2 border-2 border-gray-200 hover:border-[#1A4731] text-gray-700 hover:text-[#1A4731] font-semibold px-6 py-3.5 rounded-xl transition-colors">
+                  Devis gratuit <ArrowRight size={16} />
+                </a>
+              </div>
+            </div>
+            <div className="lg:w-72 bg-[#1A4731] text-white rounded-2xl p-6 flex-shrink-0 w-full">
+              <p className="text-green-300 text-xs font-semibold uppercase tracking-wide mb-4">Schaerbeek en chiffres</p>
+              <div className="space-y-4">
+                {[
+                  { val: "1895–1914", label: "époque du bâti dense", detail: "zinc et ardoises d'origine" },
+                  { val: "Tilleuls", label: "arbres des grandes avenues", detail: "graines collantes bouchent tout" },
+                  { val: "2×/an", label: "nettoyages recommandés", detail: "printemps + automne" },
+                ].map((s) => (
+                  <div key={s.label} className="border-b border-white/20 pb-4 last:border-0 last:pb-0">
+                    <p className="text-2xl font-extrabold text-[#F97316]">{s.val}</p>
+                    <p className="font-semibold text-sm">{s.label}</p>
+                    <p className="text-green-300 text-xs mt-0.5">{s.detail}</p>
                   </div>
                 ))}
               </div>
-              <div className="p-4 bg-white/10 rounded-xl">
-                <p className="text-white font-semibold mb-1">Appel direct</p>
-                <a href="tel:0477234187" className="flex items-center gap-2 text-[#F97316] font-bold text-xl hover:text-orange-400 transition-colors">
-                  <Phone size={24} />0477 23 41 87
-                </a>
-                <p className="text-gray-400 text-xs mt-1">Lun–Ven 7h30–18h | Sam 8h–14h | Urgences 7j/7</p>
-              </div>
-            </div>
-            <div className="bg-white rounded-2xl p-6 sm:p-8">
-              <h3 className="text-gray-900 font-bold text-lg mb-6">Formulaire de devis — Schaerbeek</h3>
-              <ContactForm />
             </div>
           </div>
         </div>
       </section>
 
-      {/* Zones voisines */}
-      <section className="py-10 bg-white">
+      <section className="py-14 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-lg font-bold text-gray-900 mb-4">Communes voisines desservies</h2>
-          <div className="flex flex-wrap gap-3">
+          <div className="grid lg:grid-cols-2 gap-12 items-start">
+            <div>
+              <p className="text-[#F97316] font-semibold text-sm uppercase tracking-wide mb-3">Le défi Schaerbeek</p>
+              <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-5">Belle Époque : un patrimoine à préserver</h2>
+              <div className="space-y-4 text-gray-600 leading-relaxed">
+                <p>
+                  Schaerbeek abrite certaines des plus belles avenues bruxelloises de style Belle Époque,
+                  notamment l&apos;<strong>avenue Louis Bertrand</strong> et l&apos;avenue Rogier. Les maisons
+                  construites entre 1895 et 1914 possèdent des détails architecturaux ornementaux —
+                  y compris des gouttières et descentes en zinc travaillées — qui méritent un
+                  traitement avec soin et expertise.
+                </p>
+                <p>
+                  La commune est traversée par de grandes avenues bordées de <strong>tilleuls</strong>.
+                  Ces arbres produisent au printemps des bourgeons collants et des graines ailées
+                  qui forment des bouchons particulièrement tenaces dans les gouttières.
+                  Un nettoyage de printemps est souvent aussi nécessaire que celui d&apos;automne.
+                </p>
+                <p>
+                  La densité du bâti schaerbeekois — quasi 100% mitoyen — implique que les
+                  gouttières de façade arrière sont souvent difficiles d&apos;accès. Notre équipe
+                  est équipée pour intervenir en toute sécurité même dans les cours étroites.
+                </p>
+              </div>
+            </div>
+            <div className="space-y-4">
+              <Image
+                src="https://images.unsplash.com/photo-1570129477492-1cf5c04a39d4?w=700&q=80"
+                alt="Nettoyage gouttières Schaerbeek Belle Époque Bruxelles"
+                width={600}
+                height={380}
+                className="rounded-2xl object-cover w-full h-64"
+                loading="lazy"
+              />
+              <div className="grid grid-cols-2 gap-3">
+                {[
+                  { icon: <Leaf size={18} className="text-[#1A4731]" />, text: "Graines tilleuls collantes", bg: "bg-green-50" },
+                  { icon: <Wrench size={18} className="text-blue-600" />, text: "Zinc Belle Époque ornemental", bg: "bg-blue-50" },
+                  { icon: <Droplets size={18} className="text-[#F97316]" />, text: "Cours arrière étroites", bg: "bg-orange-50" },
+                  { icon: <AlertTriangle size={18} className="text-red-500" />, text: "2 nettoyages/an conseillés", bg: "bg-red-50" },
+                ].map((p) => (
+                  <div key={p.text} className={`${p.bg} rounded-xl p-3 flex items-center gap-2`}>
+                    {p.icon}<span className="text-sm font-medium text-gray-800">{p.text}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-14 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-8">Nos services à Schaerbeek</h2>
+          <div className="divide-y divide-gray-100 border border-gray-100 rounded-2xl overflow-hidden">
             {[
-              { name: "Etterbeek", slug: "etterbeek" },
-              { name: "Woluwe-Saint-Lambert", slug: "woluwe-saint-lambert" },
-              { name: "Ixelles", slug: "ixelles" },
-            ].map((c) => (
-              <Link
-                key={c.slug}
-                href={`/communes/${c.slug}`}
-                className="flex items-center gap-2 bg-gray-50 hover:bg-[#1A4731] hover:text-white text-gray-700 border border-gray-200 hover:border-[#1A4731] rounded-xl px-4 py-2.5 text-sm font-medium transition-all"
-              >
-                <MapPin size={14} className="text-[#F97316]" />
-                Gouttières {c.name}
-                <ArrowRight size={13} />
+              { icon: <Droplets size={22} className="text-[#1A4731]" />, href: "/services/nettoyage-gouttieres", title: "Nettoyage façades & cours arrière", desc: "Nettoyage complet façade avant et arrière. Matériel adapté aux cours étroites de Schaerbeek. Deux nettoyages annuels conseillés pour les avenues avec tilleuls.", price: "dès 80€", tag: null },
+              { icon: <AlertTriangle size={22} className="text-red-500" />, href: "/services/debouchage-gouttieres", title: "Débouchage urgence 7j/7", desc: "Graines collantes de tilleuls, bouchons par fortes pluies ? On intervient en urgence le jour même lors des épisodes intenses à Schaerbeek.", price: "dès 120€", tag: "7j/7" },
+              { icon: <Wrench size={22} className="text-blue-600" />, href: "/services/reparation-gouttieres", title: "Restauration zinc Belle Époque", desc: "Réparation délicate du zinc ornemental des maisons historiques. On préserve les détails architecturaux. Remplacement si nécessaire avec matériaux assortis.", price: "devis gratuit", tag: null },
+              { icon: <Leaf size={22} className="text-yellow-600" />, href: "/services/demoussage-toiture", title: "Démoussage toitures ardoises", desc: "Toitures à forte pente avec ardoises : traitement anti-mousse préventif après nettoyage pour limiter la recolonisation.", price: "devis gratuit", tag: null },
+            ].map((s) => (
+              <Link key={s.href} href={s.href} className="flex items-start gap-5 p-5 hover:bg-gray-50 transition-colors group">
+                <div className="bg-gray-100 group-hover:bg-white p-3 rounded-xl flex-shrink-0 transition-colors">{s.icon}</div>
+                <div className="flex-1 min-w-0">
+                  <div className="flex items-center gap-2 mb-1">
+                    <h3 className="font-bold text-gray-900 group-hover:text-[#1A4731] transition-colors">{s.title}</h3>
+                    {s.tag && <span className="text-xs bg-green-100 text-green-700 px-2 py-0.5 rounded-full font-semibold">{s.tag}</span>}
+                  </div>
+                  <p className="text-gray-500 text-sm leading-snug">{s.desc}</p>
+                </div>
+                <div className="flex flex-col items-end gap-1 flex-shrink-0">
+                  <span className="text-xs font-semibold text-[#F97316] bg-orange-50 px-2 py-1 rounded-lg">{s.price}</span>
+                  <ArrowRight size={16} className="text-gray-300 group-hover:text-[#F97316] transition-colors" />
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-14 bg-gray-50">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl font-bold text-gray-900 mb-8">Questions fréquentes — Schaerbeek</h2>
+          <div className="space-y-5">
+            {[
+              { q: "Les tilleuls de l'avenue Rogier bouchent vraiment les gouttières ?", a: "Oui, les tilleuls sont parmi les arbres les plus problématiques. Leurs bourgeons collants et petites fleurs forment des masses compactes qui obstruent rapidement au printemps. En automne, leurs feuilles s'accumulent. Deux nettoyages annuels (mai et novembre) sont recommandés." },
+              { q: "Comment accédez-vous aux gouttières de façade arrière ?", a: "Via la cour intérieure. Nos échelles légères passent par la porte de cave ou le couloir latéral dans la plupart des maisons mitoyennes de Schaerbeek. Pour les cours vraiment exiguës, on utilise des perches télescopiques depuis le sol." },
+              { q: "Le zinc de 1900 — est-ce encore récupérable ?", a: "Du zinc bien conservé de 1900 peut encore durer 10–20 ans. Si l'installation est étanche et bien fixée, une soudure et reprise des joints peut suffire. Un diagnostic gratuit permet de trancher sur la meilleure approche." },
+              { q: "Êtes-vous habitués au bâti schaerbeekois ?", a: "Oui, on intervient régulièrement à Schaerbeek dans les grandes avenues et les rues résidentielles du quartier de la Maison des Arts. On connaît bien les contraintes d'accès et les spécificités architecturales locales." },
+            ].map((faq, i) => (
+              <div key={i} className="bg-white rounded-xl border border-gray-100 p-6">
+                <p className="font-bold text-gray-900 mb-2 flex items-start gap-2">
+                  <span className="w-6 h-6 rounded-full bg-[#F97316] text-white text-xs font-bold flex items-center justify-center flex-shrink-0 mt-0.5">{i + 1}</span>
+                  {faq.q}
+                </p>
+                <p className="text-gray-600 text-sm leading-relaxed ml-8">{faq.a}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="devis" className="py-14 bg-white">
+        <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-8">
+            <h2 className="text-2xl font-bold text-gray-900 mb-2">Devis gratuit — Schaerbeek</h2>
+            <p className="text-gray-500 text-sm">Réponse sous 2h · ou appelez le <a href="tel:0477234187" className="font-bold text-[#1A4731] hover:text-[#F97316]">0477 23 41 87</a></p>
+          </div>
+          <div className="bg-gray-50 border border-gray-200 rounded-2xl p-6 sm:p-8"><ContactForm /></div>
+        </div>
+      </section>
+
+      <section className="py-8 bg-gray-50 border-t border-gray-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <p className="text-sm font-semibold text-gray-500 mb-3">Communes voisines desservies</p>
+          <div className="flex flex-wrap gap-2">
+            {[{ name: "Etterbeek", slug: "etterbeek" }, { name: "Woluwe-Saint-Lambert", slug: "woluwe-saint-lambert" }, { name: "Forest", slug: "forest" }].map((c) => (
+              <Link key={c.slug} href={`/communes/${c.slug}`} className="inline-flex items-center gap-1.5 bg-white border border-gray-200 hover:border-[#1A4731] hover:text-[#1A4731] text-gray-600 rounded-lg px-3 py-2 text-sm font-medium transition-colors">
+                <MapPin size={12} className="text-[#F97316]" />{c.name}
               </Link>
             ))}
           </div>

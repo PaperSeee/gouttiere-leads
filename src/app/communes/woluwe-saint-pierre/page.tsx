@@ -1,291 +1,188 @@
 import type { Metadata } from "next"
 import Link from "next/link"
-import { Phone, ArrowRight, CheckCircle, MapPin, Leaf, Droplets, Wrench, AlertTriangle } from "lucide-react"
+import Image from "next/image"
+import { Phone, ArrowRight, MapPin, Leaf, Droplets, Wrench, AlertTriangle } from "lucide-react"
 import Breadcrumb from "@/components/Breadcrumb"
 import LocalBusinessSchema from "@/components/LocalBusinessSchema"
 import ContactForm from "@/components/ContactForm"
 
 export const metadata: Metadata = {
-  title: "Nettoyage Gouttières Woluwe-Saint-Pierre — Expert Local | Nettoyage Gouttières Bruxelles",
-  description: "Nettoyage gouttières à Woluwe-Saint-Pierre : villas résidentielles, parc de Woluwe, aluminium années 80. Devis gratuit. Intervention rapide. 0477 23 41 87.",
+  title: "Nettoyage Gouttières Woluwe-Saint-Pierre — Grandes Villas & Parcs | 0477 23 41 87",
+  description: "Nettoyage gouttières à Woluwe-Saint-Pierre : grandes villas, parcs Malou & Parmentier, érables et marronniers. Devis gratuit. 0477 23 41 87.",
   alternates: { canonical: "https://nettoyage-gouttieres-bruxelles.be/communes/woluwe-saint-pierre" },
 }
 
-const services = [
-  {
-    href: "/services/nettoyage-gouttieres",
-    icon: <Droplets size={24} className="text-[#1A4731]" />,
-    bg: "bg-green-100",
-    title: "Nettoyage complet",
-    desc: "Le parc de Woluwe génère des feuilles en continu d'octobre à décembre. Nos techniciens nettoient en profondeur vos gouttières en aluminium et vos descentes pluviales dans toute la commune.",
-  },
-  {
-    href: "/services/debouchage-gouttieres",
-    icon: <AlertTriangle size={24} className="text-red-600" />,
-    bg: "bg-red-100",
-    title: "Débouchage urgence",
-    desc: "Débordement actif sur votre villa de Woluwe-Saint-Pierre ? Notre équipe intervient 7j/7 dans les 24h. Les mousses accumulées sur tuiles bloquent souvent les descentes lors des premières pluies d'automne.",
-  },
-  {
-    href: "/services/reparation-gouttieres",
-    icon: <Wrench size={24} className="text-blue-600" />,
-    bg: "bg-blue-100",
-    title: "Réparation / remplacement",
-    desc: "Les gouttières en aluminium des villas des années 80-90 de Woluwe arrivent souvent en fin de vie. Nous remplaçons les tronçons déformés ou l'intégralité du système par du matériau de qualité.",
-  },
-  {
-    href: "/services/demoussage-toiture",
-    icon: <Leaf size={24} className="text-yellow-700" />,
-    bg: "bg-yellow-100",
-    title: "Démoussage toiture",
-    desc: "L'ombrage des grands arbres du parc de Woluwe favorise les mousses sur les tuiles des villas environnantes. Notre démoussage mécanique et traitement préventif protège vos tuiles pour plusieurs années.",
-  },
-]
-
-const faqs = [
-  {
-    q: "Le parc de Woluwe nécessite-t-il un nettoyage plus fréquent ?",
-    a: "Oui. Les villas situées à proximité du parc de Woluwe reçoivent des apports massifs de feuilles, samares et débris végétaux sur plusieurs mois. Nous recommandons au minimum deux nettoyages annuels : un en mai-juin pour les floraisons et graines, et un en novembre après la chute des feuilles.",
-  },
-  {
-    q: "Mes gouttières en aluminium des années 80 sont-elles encore réparables ?",
-    a: "Les gouttières en aluminium ont une durée de vie de 30 à 40 ans. Si les vôtres datent des années 80-90, elles sont en fin de vie mais souvent encore réparables partiellement. Nous effectuons un diagnostic complet lors du devis et vous conseillons sur la meilleure solution : réparation partielle ou remplacement complet.",
-  },
-  {
-    q: "Comment éviter les mousses qui se reforment rapidement ?",
-    a: "La mousse se développe dans les zones ombragées et humides. Après un démoussage complet, nous appliquons un traitement biocide préventif qui empêche la repousse pendant 2 à 3 ans. Couper les branches d'arbres qui surplombent directement la toiture réduit également significativement la vitesse de reformation.",
-  },
-  {
-    q: "Intervenez-vous aussi dans le quartier du Tomberg et de Montgomery ?",
-    a: "Oui, nous intervenons dans l'ensemble de la commune de Woluwe-Saint-Pierre, incluant les quartiers Tomberg, Montgomery, Val des Seigneurs, La Chasse et toutes les rues résidentielles. L'accès facile dans cette commune calme nous permet de planifier les interventions rapidement.",
-  },
-]
-
-export default function WoluweSaintPierrePage() {
+export default function WoluweStPierrePage() {
   return (
     <>
       <LocalBusinessSchema />
-      <Breadcrumb items={[
-        { label: "Accueil", href: "/" },
-        { label: "Communes", href: "/" },
-        { label: "Woluwe-Saint-Pierre" },
-      ]} />
+      <Breadcrumb items={[{ label: "Accueil", href: "/" }, { label: "Communes", href: "/" }, { label: "Woluwe-Saint-Pierre" }]} />
 
-      {/* Hero */}
-      <section className="bg-[#1A4731] text-white py-16 lg:py-24">
+      <section className="bg-white border-b border-gray-100 py-12 lg:py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl">
-            <div className="flex flex-wrap gap-2 mb-6">
-              <span className="bg-[#F97316] text-white text-xs font-bold px-3 py-1.5 rounded-full">Woluwe-Saint-Pierre</span>
-              <span className="bg-white/20 text-white text-xs font-semibold px-3 py-1.5 rounded-full">Devis gratuit</span>
-              <span className="bg-white/20 text-white text-xs font-semibold px-3 py-1.5 rounded-full">Intervention 48h</span>
-            </div>
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight mb-6">
-              Nettoyage de Gouttières à <span className="text-[#F97316]">Woluwe-Saint-Pierre</span>
-            </h1>
-            <p className="text-lg sm:text-xl text-gray-200 mb-8 leading-relaxed">
-              Expert local en nettoyage de gouttières à Woluwe-Saint-Pierre. Villas résidentielles, gouttières aluminium, toitures ombragées par le parc de Woluwe : nous intervenons rapidement et proprement.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <a
-                href="tel:0477234187"
-                className="flex items-center justify-center gap-2 bg-[#F97316] hover:bg-orange-500 text-white font-bold px-6 py-4 rounded-xl text-lg transition-colors"
-              >
-                <Phone size={20} />
-                0477 23 41 87
-              </a>
-              <a
-                href="#contact"
-                className="flex items-center justify-center gap-2 bg-white hover:bg-gray-100 text-[#1A4731] font-bold px-6 py-4 rounded-xl text-lg transition-colors"
-              >
-                Devis gratuit en ligne
-                <ArrowRight size={20} />
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Intro spécifique */}
-      <section className="py-14 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto">
-            <p className="text-[#F97316] font-semibold text-sm uppercase tracking-wide mb-2">Pourquoi Woluwe-Saint-Pierre est particulière</p>
-            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-6">
-              Les spécificités des gouttières à Woluwe-Saint-Pierre
-            </h2>
-            <div className="prose prose-gray max-w-none text-gray-600 leading-relaxed space-y-4">
-              <p>
-                Woluwe-Saint-Pierre est l'une des communes les plus résidentielles et les plus agréables de la région bruxelloise. Ses larges rues arborées, ses villas cossues et la présence du <strong>parc de Woluwe</strong> — l'un des plus grands espaces verts de la capitale — en font un cadre de vie exceptionnel. Mais cette verdure abondante a un revers : les arbres du parc génèrent des quantités impressionnantes de feuilles et de débris qui viennent chaque automne obstruer les gouttières des propriétés voisines.
-              </p>
-              <p>
-                Le patrimoine bâti de la commune est largement constitué de <strong>villas construites dans les années 80 et 90</strong>, équipées de gouttières en aluminium qui arrivent progressivement en fin de vie. Ce matériau, très répandu à cette époque, est sensible aux chocs et aux déformations sous le poids de la neige ou des feuilles accumulées. Passé 30-40 ans d'utilisation, les profils se déforment, les joints se dégradent et les clips de fixation lâchent.
-              </p>
-              <p>
-                L'ombrage permanent des grands chênes, hêtres et marronniers qui entourent les propriétés woluwiennes favorise également la <strong>prolifération de mousses sur les tuiles</strong>. Ces mousses, lorsqu'elles se détachent lors des pluies, forment un bouchon naturel dans les gouttières et réduisent drastiquement la capacité d'évacuation. Un démoussage régulier est donc indispensable dans cette commune.
-              </p>
-              <p>
-                Woluwe-Saint-Pierre présente l'avantage d'une topographie plane et d'un accès facile dans ses rues résidentielles calmes, ce qui facilite nos interventions. Nous pouvons nous garer et travailler dans de bonnes conditions dans l'ensemble de la commune.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Problèmes spécifiques */}
-      <section className="py-14 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-10">
-            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3">
-              Problèmes fréquents à Woluwe-Saint-Pierre
-            </h2>
-            <p className="text-gray-600">Les situations que nous rencontrons le plus souvent dans cette commune</p>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[
-              {
-                icon: <Leaf size={28} className="text-[#1A4731]" />,
-                bg: "bg-green-100",
-                title: "Feuilles du parc de Woluwe",
-                desc: "Le parc de Woluwe abrite des chênes, hêtres et marronniers dont les feuilles envahissent les gouttières des propriétés riveraines chaque automne sur plusieurs semaines.",
-              },
-              {
-                icon: <AlertTriangle size={28} className="text-[#F97316]" />,
-                bg: "bg-orange-100",
-                title: "Aluminium déformé",
-                desc: "Les gouttières en aluminium des années 80-90 se déforment sous le poids des feuilles et de la neige. Les profils écrasés ne permettent plus un bon écoulement et retiennent l'eau.",
-              },
-              {
-                icon: <Leaf size={28} className="text-yellow-700" />,
-                bg: "bg-yellow-100",
-                title: "Mousses sur tuiles",
-                desc: "L'ombrage persistant des grands arbres crée des conditions idéales pour les mousses. Sans démoussage régulier, elles colonisent toute la surface de la toiture en 2-3 ans.",
-              },
-              {
-                icon: <Droplets size={28} className="text-blue-600" />,
-                bg: "bg-blue-100",
-                title: "Descentes obstruées",
-                desc: "Les descentes pluviales des villas woluwiennes se bouchent régulièrement avec les composts de feuilles. Un nettoyage de la gouttière sans contrôle des descentes ne résout que partiellement le problème.",
-              },
-              {
-                icon: <Wrench size={28} className="text-purple-600" />,
-                bg: "bg-purple-100",
-                title: "Clips et crochets lâches",
-                desc: "Les crochets de fixation des gouttières en aluminium se dessèchent et lâchent avec le temps. Une gouttière mal fixée s'affaisse et crée des zones de rétention d'eau problématiques.",
-              },
-              {
-                icon: <CheckCircle size={28} className="text-green-600" />,
-                bg: "bg-green-50",
-                title: "Entretien préventif annuel",
-                desc: "Pour les propriétés situées à proximité du parc, nous proposons des contrats d'entretien annuels incluant deux visites systématiques et une vérification complète du système d'évacuation.",
-              },
-            ].map((item) => (
-              <div key={item.title} className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100">
-                <div className={`${item.bg} p-3 rounded-xl w-fit mb-4`}>{item.icon}</div>
-                <h3 className="font-bold text-gray-900 mb-2">{item.title}</h3>
-                <p className="text-gray-600 text-sm leading-relaxed">{item.desc}</p>
+          <div className="flex flex-col lg:flex-row gap-10 items-start">
+            <div className="flex-1">
+              <div className="flex items-center gap-2 text-sm text-gray-500 mb-4">
+                <MapPin size={14} className="text-[#F97316]" />
+                <span>Woluwe-Saint-Pierre · Parcs Malou & Parmentier</span>
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Services */}
-      <section className="py-14 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-10">
-            <p className="text-[#F97316] font-semibold text-sm uppercase tracking-wide mb-2">Nos prestations</p>
-            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3">Nos services à Woluwe-Saint-Pierre</h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">Toutes nos interventions adaptées aux villas résidentielles de Woluwe-Saint-Pierre</p>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {services.map((s) => (
-              <div key={s.href} className="bg-gray-50 rounded-2xl p-6 border border-gray-100 hover:shadow-md transition-shadow">
-                <div className={`${s.bg} p-3 rounded-xl w-fit mb-4`}>{s.icon}</div>
-                <h3 className="font-bold text-gray-900 mb-2">{s.title}</h3>
-                <p className="text-gray-600 text-sm leading-relaxed mb-4">{s.desc}</p>
-                <Link href={s.href} className="text-[#F97316] text-sm font-semibold hover:underline flex items-center gap-1">
-                  En savoir plus <ArrowRight size={14} />
-                </Link>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* FAQ */}
-      <section className="py-14 bg-gray-50">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-10">
-            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3">Questions fréquentes — Woluwe-Saint-Pierre</h2>
-          </div>
-          <div className="space-y-4">
-            {faqs.map((faq) => (
-              <div key={faq.q} className="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
-                <h3 className="font-bold text-gray-900 mb-2 flex items-start gap-2">
-                  <CheckCircle size={18} className="text-[#F97316] mt-0.5 flex-shrink-0" />
-                  {faq.q}
-                </h3>
-                <p className="text-gray-600 text-sm leading-relaxed ml-6">{faq.a}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA */}
-      <section id="contact" className="py-14 bg-[#1A4731]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="text-white">
-              <h2 className="text-2xl sm:text-3xl font-bold mb-4">
-                Devis gratuit pour votre villa à Woluwe-Saint-Pierre
-              </h2>
-              <p className="text-gray-300 mb-6 leading-relaxed">
-                Contactez-nous pour planifier le nettoyage de vos gouttières. Accès facile dans toute la commune, interventions soignées et rapport d'état fourni après chaque visite.
+              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-gray-900 leading-tight mb-5">
+                Nettoyage Gouttières<br /><span className="text-[#1A4731]">Woluwe-Saint-Pierre</span>
+              </h1>
+              <p className="text-gray-600 text-lg leading-relaxed mb-7 max-w-xl">
+                L&apos;une des communes les plus résidentielles de Bruxelles avec de grandes villas.
+                Les chênes du parc Malou et les érables du parc Parmentier imposent un entretien
+                régulier des gouttières.
               </p>
-              <div className="space-y-3 mb-8">
-                {["Devis entièrement gratuit", "Intervention sous 48h", "Aluminium, zinc, PVC — tous matériaux", "Contrats d'entretien annuels disponibles"].map((item) => (
-                  <div key={item} className="flex items-center gap-3">
-                    <CheckCircle size={18} className="text-[#F97316]" />
-                    <span className="text-gray-300 text-sm">{item}</span>
+              <div className="flex flex-wrap gap-3">
+                <a href="tel:0477234187" className="inline-flex items-center gap-2 bg-[#F97316] hover:bg-orange-500 text-white font-bold px-6 py-3.5 rounded-xl transition-colors shadow-md shadow-orange-100">
+                  <Phone size={18} />0477 23 41 87
+                </a>
+                <a href="#devis" className="inline-flex items-center gap-2 border-2 border-gray-200 hover:border-[#1A4731] text-gray-700 hover:text-[#1A4731] font-semibold px-6 py-3.5 rounded-xl transition-colors">
+                  Devis gratuit <ArrowRight size={16} />
+                </a>
+              </div>
+            </div>
+            <div className="lg:w-72 bg-[#1A4731] text-white rounded-2xl p-6 flex-shrink-0 w-full">
+              <p className="text-green-300 text-xs font-semibold uppercase tracking-wide mb-4">WSP en chiffres</p>
+              <div className="space-y-4">
+                {[
+                  { val: "Parcs Malou", label: "& Parmentier", detail: "chênes, érables, marronniers" },
+                  { val: "60–100m", label: "de gouttières", detail: "sur les plus grandes villas" },
+                  { val: "2×/an", label: "minimum conseillé", detail: "printemps + automne" },
+                ].map((s) => (
+                  <div key={s.label} className="border-b border-white/20 pb-4 last:border-0 last:pb-0">
+                    <p className="text-2xl font-extrabold text-[#F97316]">{s.val}</p>
+                    <p className="font-semibold text-sm">{s.label}</p>
+                    <p className="text-green-300 text-xs mt-0.5">{s.detail}</p>
                   </div>
                 ))}
               </div>
-              <div className="p-4 bg-white/10 rounded-xl">
-                <p className="text-white font-semibold mb-1">Appel direct</p>
-                <a href="tel:0477234187" className="flex items-center gap-2 text-[#F97316] font-bold text-xl hover:text-orange-400 transition-colors">
-                  <Phone size={24} />0477 23 41 87
-                </a>
-                <p className="text-gray-400 text-xs mt-1">Lun–Ven 7h30–18h | Sam 8h–14h | Urgences 7j/7</p>
-              </div>
-            </div>
-            <div className="bg-white rounded-2xl p-6 sm:p-8">
-              <h3 className="text-gray-900 font-bold text-lg mb-6">Formulaire de devis — Woluwe-Saint-Pierre</h3>
-              <ContactForm />
             </div>
           </div>
         </div>
       </section>
 
-      {/* Zones voisines */}
-      <section className="py-10 bg-white">
+      <section className="py-14 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-lg font-bold text-gray-900 mb-4">Communes voisines desservies</h2>
-          <div className="flex flex-wrap gap-3">
+          <div className="grid lg:grid-cols-2 gap-12 items-start">
+            <div>
+              <p className="text-[#F97316] font-semibold text-sm uppercase tracking-wide mb-3">Pourquoi WSP est exigeante</p>
+              <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-5">Grandes villas, grands linéaires</h2>
+              <div className="space-y-4 text-gray-600 leading-relaxed">
+                <p>
+                  Woluwe-Saint-Pierre est caractérisée par de <strong>grandes villas avec jardins</strong>
+                  construites dans les années 50 à 80. Ces propriétés ont des linéaires de gouttières
+                  importants — parfois 60 à 100 mètres — et leurs jardins arborés génèrent des
+                  volumes considérables de déchets végétaux.
+                </p>
+                <p>
+                  La proximité du <strong>parc Malou et du parc Parmentier</strong>, avec leurs
+                  chênes centenaires, érables et marronniers, génère des apports de feuilles et
+                  de graines ailées en automne. Les samares d&apos;érables sont particulièrement
+                  problématiques car elles forment des bouchons compacts dans les descentes.
+                </p>
+                <p>
+                  Le <strong>bois de Woluwe</strong> qui prolonge la Forêt de Soignes impose,
+                  comme à Auderghem, un nettoyage post-hivernal pour les propriétés les plus
+                  exposées aux hêtres tardifs.
+                </p>
+              </div>
+            </div>
+            <div className="space-y-4">
+              <Image
+                src="https://images.unsplash.com/photo-1570129477492-1cf5c04a39d4?w=700&q=80"
+                alt="Nettoyage gouttières grande villa Woluwe-Saint-Pierre"
+                width={600}
+                height={380}
+                className="rounded-2xl object-cover w-full h-64"
+                loading="lazy"
+              />
+              <div className="grid grid-cols-2 gap-3">
+                {[
+                  { icon: <Leaf size={18} className="text-[#1A4731]" />, text: "Samares d'érables", bg: "bg-green-50" },
+                  { icon: <Wrench size={18} className="text-blue-600" />, text: "Grands linéaires 60–100m", bg: "bg-blue-50" },
+                  { icon: <Droplets size={18} className="text-[#F97316]" />, text: "Bois Woluwe & hêtres", bg: "bg-orange-50" },
+                  { icon: <AlertTriangle size={18} className="text-red-500" />, text: "Marronniers parc Malou", bg: "bg-red-50" },
+                ].map((p) => (
+                  <div key={p.text} className={`${p.bg} rounded-xl p-3 flex items-center gap-2`}>
+                    {p.icon}<span className="text-sm font-medium text-gray-800">{p.text}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-14 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-8">Nos services à Woluwe-Saint-Pierre</h2>
+          <div className="divide-y divide-gray-100 border border-gray-100 rounded-2xl overflow-hidden">
             {[
-              { name: "Woluwe-Saint-Lambert", slug: "woluwe-saint-lambert" },
-              { name: "Auderghem", slug: "auderghem" },
-              { name: "Etterbeek", slug: "etterbeek" },
-            ].map((c) => (
-              <Link
-                key={c.slug}
-                href={`/communes/${c.slug}`}
-                className="flex items-center gap-2 bg-gray-50 hover:bg-[#1A4731] hover:text-white text-gray-700 border border-gray-200 hover:border-[#1A4731] rounded-xl px-4 py-2.5 text-sm font-medium transition-all"
-              >
-                <MapPin size={14} className="text-[#F97316]" />
-                Gouttières {c.name}
-                <ArrowRight size={13} />
+              { icon: <Droplets size={22} className="text-[#1A4731]" />, href: "/services/nettoyage-gouttieres", title: "Nettoyage grandes villas", desc: "Devis sur mesure pour grands linéaires. Equipe de 2 techniciens si nécessaire. Nettoyage gouttières + descentes + rapport d'état complet inclus.", price: "dès 80€", tag: "Sur mesure" },
+              { icon: <AlertTriangle size={22} className="text-red-500" />, href: "/services/debouchage-gouttieres", title: "Débouchage samares & urgence", desc: "Les samares d'érables bouchent les descentes même hors saison automnale. On intervient 7j/7 pour désobstruer rapidement.", price: "dès 120€", tag: "7j/7" },
+              { icon: <Wrench size={22} className="text-blue-600" />, href: "/services/reparation-gouttieres", title: "Remplacement grandes propriétés", desc: "Devis détaillé par section pour les grandes villas. Zinc, aluminium ou PVC selon les matériaux existants et l'architecture de la propriété.", price: "devis gratuit", tag: null },
+              { icon: <Leaf size={22} className="text-yellow-600" />, href: "/services/demoussage-toiture", title: "Démoussage grandes toitures", desc: "Les grandes toitures des villas de WSP accumulent les mousses. Démoussage mécanique et traitement préventif longue durée (3–5 ans).", price: "devis gratuit", tag: null },
+            ].map((s) => (
+              <Link key={s.href} href={s.href} className="flex items-start gap-5 p-5 hover:bg-gray-50 transition-colors group">
+                <div className="bg-gray-100 group-hover:bg-white p-3 rounded-xl flex-shrink-0 transition-colors">{s.icon}</div>
+                <div className="flex-1 min-w-0">
+                  <div className="flex items-center gap-2 mb-1">
+                    <h3 className="font-bold text-gray-900 group-hover:text-[#1A4731] transition-colors">{s.title}</h3>
+                    {s.tag && <span className="text-xs bg-green-100 text-green-700 px-2 py-0.5 rounded-full font-semibold">{s.tag}</span>}
+                  </div>
+                  <p className="text-gray-500 text-sm leading-snug">{s.desc}</p>
+                </div>
+                <div className="flex flex-col items-end gap-1 flex-shrink-0">
+                  <span className="text-xs font-semibold text-[#F97316] bg-orange-50 px-2 py-1 rounded-lg">{s.price}</span>
+                  <ArrowRight size={16} className="text-gray-300 group-hover:text-[#F97316] transition-colors" />
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-14 bg-gray-50">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl font-bold text-gray-900 mb-8">Questions fréquentes — Woluwe-Saint-Pierre</h2>
+          <div className="space-y-5">
+            {[
+              { q: "Les samares d'érables causent-elles vraiment des bouchons ?", a: "Oui, c'est l'un des débris végétaux les plus problématiques. Les samares sont assez petites pour pénétrer dans les descentes et y former des bouchons compacts. Elles tombent au printemps puis en automne — deux passages annuels sont recommandés pour les propriétés proches des parcs." },
+              { q: "Notre villa a plus de 80 mètres de gouttières. Quel tarif ?", a: "Pour les grandes propriétés, on établit un devis sur mesure tenant compte du linéaire exact, de la hauteur, des matériaux et de l'accessibilité. Deux techniciens pour les grandes interventions. Appelez pour un diagnostic gratuit." },
+              { q: "Intervenez-vous avenue de Tervueren et avenue de Broqueville ?", a: "Oui, dans toute Woluwe-Saint-Pierre, y compris les grandes avenues résidentielles. On connaît bien les propriétés de cette commune et leurs spécificités d'accès." },
+              { q: "Faut-il aussi nettoyer au printemps à WSP ?", a: "Pour les propriétés proches des parcs, oui. Les marronniers du parc Malou et les érables libèrent des pollens, bourgeons et graines en mai qui s'accumulent dans les gouttières. Un passage de printemps complète utilement le nettoyage automnal." },
+            ].map((faq, i) => (
+              <div key={i} className="bg-white rounded-xl border border-gray-100 p-6">
+                <p className="font-bold text-gray-900 mb-2 flex items-start gap-2">
+                  <span className="w-6 h-6 rounded-full bg-[#F97316] text-white text-xs font-bold flex items-center justify-center flex-shrink-0 mt-0.5">{i + 1}</span>
+                  {faq.q}
+                </p>
+                <p className="text-gray-600 text-sm leading-relaxed ml-8">{faq.a}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="devis" className="py-14 bg-white">
+        <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-8">
+            <h2 className="text-2xl font-bold text-gray-900 mb-2">Devis gratuit — Woluwe-Saint-Pierre</h2>
+            <p className="text-gray-500 text-sm">Réponse sous 2h · ou appelez le <a href="tel:0477234187" className="font-bold text-[#1A4731] hover:text-[#F97316]">0477 23 41 87</a></p>
+          </div>
+          <div className="bg-gray-50 border border-gray-200 rounded-2xl p-6 sm:p-8"><ContactForm /></div>
+        </div>
+      </section>
+
+      <section className="py-8 bg-gray-50 border-t border-gray-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <p className="text-sm font-semibold text-gray-500 mb-3">Communes voisines desservies</p>
+          <div className="flex flex-wrap gap-2">
+            {[{ name: "Auderghem", slug: "auderghem" }, { name: "Woluwe-Saint-Lambert", slug: "woluwe-saint-lambert" }, { name: "Watermael-Boitsfort", slug: "watermael-boitsfort" }].map((c) => (
+              <Link key={c.slug} href={`/communes/${c.slug}`} className="inline-flex items-center gap-1.5 bg-white border border-gray-200 hover:border-[#1A4731] hover:text-[#1A4731] text-gray-600 rounded-lg px-3 py-2 text-sm font-medium transition-colors">
+                <MapPin size={12} className="text-[#F97316]" />{c.name}
               </Link>
             ))}
           </div>

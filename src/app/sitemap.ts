@@ -4,15 +4,25 @@ const BASE_URL = "https://nettoyage-gouttieres-bruxelles.be";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const communes = [
-    "uccle",
-    "ixelles",
-    "woluwe-saint-pierre",
-    "woluwe-saint-lambert",
+    "anderlecht",
     "auderghem",
-    "watermael-boitsfort",
+    "berchem-sainte-agathe",
+    "bruxelles",
     "etterbeek",
+    "evere",
     "forest",
+    "ganshoren",
+    "ixelles",
+    "jette",
+    "koekelberg",
+    "molenbeek-saint-jean",
+    "saint-gilles",
+    "saint-josse-ten-noode",
     "schaerbeek",
+    "uccle",
+    "watermael-boitsfort",
+    "woluwe-saint-lambert",
+    "woluwe-saint-pierre",
   ];
 
   const staticPages = [

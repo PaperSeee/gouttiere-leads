@@ -1,286 +1,186 @@
 import type { Metadata } from "next"
 import Link from "next/link"
-import { Phone, ArrowRight, CheckCircle, MapPin, Leaf, Droplets, Wrench, AlertTriangle } from "lucide-react"
+import Image from "next/image"
+import { Phone, ArrowRight, MapPin, Leaf, Droplets, Wrench, AlertTriangle } from "lucide-react"
 import Breadcrumb from "@/components/Breadcrumb"
 import LocalBusinessSchema from "@/components/LocalBusinessSchema"
 import ContactForm from "@/components/ContactForm"
 
 export const metadata: Metadata = {
-  title: "Nettoyage Gouttières Etterbeek — Expert Local | Nettoyage Gouttières Bruxelles",
-  description: "Nettoyage gouttières à Etterbeek : immeubles haussmanniens, corniches zinc, accès en hauteur. Cinquantenaire, débordements caves. Devis gratuit. 0477 23 41 87.",
+  title: "Nettoyage Gouttières Etterbeek — Immeubles & Maisons | 0477 23 41 87",
+  description: "Nettoyage gouttières à Etterbeek : immeubles à appartements, maisons mitoyennes, toitures plates. Devis gratuit, intervention rapide. 0477 23 41 87.",
   alternates: { canonical: "https://nettoyage-gouttieres-bruxelles.be/communes/etterbeek" },
 }
-
-const services = [
-  {
-    href: "/services/nettoyage-gouttieres",
-    icon: <Droplets size={24} className="text-[#1A4731]" />,
-    bg: "bg-green-100",
-    title: "Nettoyage complet",
-    desc: "Les immeubles haussmanniens d'Etterbeek ont des corniches en zinc classiques à fort volume. Nous nettoyons en profondeur ces gouttières souvent hautes perchées et les descentes pluviales encastrées.",
-  },
-  {
-    href: "/services/debouchage-gouttieres",
-    icon: <AlertTriangle size={24} className="text-red-600" />,
-    bg: "bg-red-100",
-    title: "Débouchage urgence",
-    desc: "Dans les immeubles etterbeekois, un débordement peut rapidement atteindre les caves et rez-de-chaussée. Intervention d'urgence 7j/7 pour déboucher rapidement avant que les dégâts ne s'aggravent.",
-  },
-  {
-    href: "/services/reparation-gouttieres",
-    icon: <Wrench size={24} className="text-blue-600" />,
-    bg: "bg-blue-100",
-    title: "Réparation / remplacement",
-    desc: "Les corniches en zinc classique des façades haussmanniennes d'Etterbeek nécessitent un savoir-faire spécifique. Nous réparons ou remplaçons ces éléments en respectant l'architecture d'époque.",
-  },
-  {
-    href: "/services/demoussage-toiture",
-    icon: <Leaf size={24} className="text-yellow-700" />,
-    bg: "bg-yellow-100",
-    title: "Démoussage toiture",
-    desc: "Les arbres matures du quartier du Cinquantenaire génèrent de l'ombrage et de l'humidité favorables aux mousses. Notre démoussage traite l'ensemble de la toiture et prévient la repousse sur 2-3 ans.",
-  },
-]
-
-const faqs = [
-  {
-    q: "Comment intervenez-vous sur les immeubles haussmanniens d'Etterbeek ?",
-    a: "Les immeubles haussmanniens atteignent souvent 4 à 5 étages avec des corniches en zinc situées très haut. Nous utilisons des échelles professionnelles, des échafaudages légers ou des nacelles selon la configuration. La sécurité est notre priorité et nous n'intervenons jamais dans des conditions non sécurisées.",
-  },
-  {
-    q: "Pourquoi mes caves sont-elles humides malgré l'absence de pluie apparente ?",
-    a: "Les caves humides à Etterbeek sont souvent liées à des gouttières bouchées. L'eau qui déborde coule le long de la façade et s'infiltre autour des fondations, puis dans les caves. Ce problème récurrent disparaît généralement avec un entretien régulier des gouttières et des descentes pluviales.",
-  },
-  {
-    q: "Les arbres du Cinquantenaire ont-ils un impact sur les gouttières ?",
-    a: "Oui, les arbres matures du quartier du Cinquantenaire — tilleuls, platanes et marronniers centenaires — génèrent des volumes importants de feuilles, fleurs et graines. Les propriétés du quartier Ambiorix, Cortenbergh et alentours bénéficient d'un nettoyage annuel après la chute des feuilles en novembre.",
-  },
-  {
-    q: "Quel est le risque lié à des gouttières bouchées dans un immeuble de plusieurs étages ?",
-    a: "Dans un immeuble de 4-5 étages, l'eau qui déborde d'une gouttière en haut du bâtiment parcourt toute la façade avant d'atteindre le sol. Ce ruissellement continu dégrade les joints de façade, le crépi et les châssis de fenêtres sur tous les étages. Au sol, l'accumulation d'eau sature le sol autour des fondations et provoque des infiltrations en cave.",
-  },
-]
 
 export default function EtterbeekPage() {
   return (
     <>
       <LocalBusinessSchema />
-      <Breadcrumb items={[
-        { label: "Accueil", href: "/" },
-        { label: "Communes", href: "/" },
-        { label: "Etterbeek" },
-      ]} />
+      <Breadcrumb items={[{ label: "Accueil", href: "/" }, { label: "Communes", href: "/" }, { label: "Etterbeek" }]} />
 
-      {/* Hero */}
-      <section className="bg-[#1A4731] text-white py-16 lg:py-24">
+      <section className="bg-white border-b border-gray-100 py-12 lg:py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl">
-            <div className="flex flex-wrap gap-2 mb-6">
-              <span className="bg-[#F97316] text-white text-xs font-bold px-3 py-1.5 rounded-full">Commune d'Etterbeek</span>
-              <span className="bg-white/20 text-white text-xs font-semibold px-3 py-1.5 rounded-full">Immeubles haussmanniens</span>
-              <span className="bg-white/20 text-white text-xs font-semibold px-3 py-1.5 rounded-full">Devis gratuit</span>
-            </div>
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight mb-6">
-              Nettoyage de Gouttières à <span className="text-[#F97316]">Etterbeek</span>
-            </h1>
-            <p className="text-lg sm:text-xl text-gray-200 mb-8 leading-relaxed">
-              Expert local en nettoyage de gouttières à Etterbeek. Immeubles haussmanniens, corniches en zinc classique, accès en hauteur difficile : notre équipe est équipée pour intervenir en toute sécurité.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <a
-                href="tel:0477234187"
-                className="flex items-center justify-center gap-2 bg-[#F97316] hover:bg-orange-500 text-white font-bold px-6 py-4 rounded-xl text-lg transition-colors"
-              >
-                <Phone size={20} />
-                0477 23 41 87
-              </a>
-              <a
-                href="#contact"
-                className="flex items-center justify-center gap-2 bg-white hover:bg-gray-100 text-[#1A4731] font-bold px-6 py-4 rounded-xl text-lg transition-colors"
-              >
-                Devis gratuit en ligne
-                <ArrowRight size={20} />
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Intro */}
-      <section className="py-14 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto">
-            <p className="text-[#F97316] font-semibold text-sm uppercase tracking-wide mb-2">Pourquoi Etterbeek est particulière</p>
-            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-6">
-              Les spécificités des gouttières à Etterbeek
-            </h2>
-            <div className="prose prose-gray max-w-none text-gray-600 leading-relaxed space-y-4">
-              <p>
-                Etterbeek est une commune au caractère résolument <strong>haussmannien</strong>, avec ses belles façades en brique et pierre bleue du XIXe et début XXe siècle. Ces immeubles élégants sont équipés de <strong>corniches en zinc classique</strong> qui constituent à la fois un élément architectural précieux et un défi d'entretien : situées en hauteur et souvent difficiles d'accès, ces gouttières sont trop souvent négligées faute d'un équipement adapté.
-              </p>
-              <p>
-                La hauteur des bâtiments — généralement 4 à 5 étages — complique considérablement les interventions. Notre équipe est équipée d'<strong>échelles professionnelles, d'échafaudages légers et de matériel de sécurité</strong> adaptés pour travailler en hauteur dans les rues parfois étroites d'Etterbeek. Nous respectons scrupuleusement les normes de sécurité et n'intervenons jamais dans des conditions non sécurisées.
-              </p>
-              <p>
-                Les problèmes liés aux gouttières ont des conséquences particulièrement visibles dans cette commune : les <strong>caves et rez-de-chaussée</strong> des immeubles etterbeekois souffrent fréquemment d'humidité chronique directement liée au débordement des gouttières en hauteur. L'eau ruisselle le long de la façade sur plusieurs étages et s'infiltre progressivement dans les murs et fondations.
-              </p>
-              <p>
-                La proximité du <strong>quartier du Cinquantenaire</strong>, avec ses grands arbres matures, apporte également son lot de feuilles dans les gouttières des immeubles riverains chaque automne. Un nettoyage annuel en novembre est indispensable pour ces propriétés.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Problèmes */}
-      <section className="py-14 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-10">
-            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3">Problèmes fréquents à Etterbeek</h2>
-            <p className="text-gray-600">Les situations que nous rencontrons le plus souvent dans cette commune</p>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[
-              {
-                icon: <MapPin size={28} className="text-red-600" />,
-                bg: "bg-red-100",
-                title: "Accès en hauteur difficile",
-                desc: "Les immeubles haussmanniens de 4-5 étages rendent l'accès aux gouttières délicat. Certaines rues étroites d'Etterbeek compliquent encore le stationnement et l'installation du matériel.",
-              },
-              {
-                icon: <Wrench size={28} className="text-blue-600" />,
-                bg: "bg-blue-100",
-                title: "Zinc classique vieillissant",
-                desc: "Les corniches en zinc des façades haussmanniennes ont souvent plus de 50 ans. Oxydation avancée, perforations et joints défaillants nécessitent des réparations régulières par des techniciens expérimentés.",
-              },
-              {
-                icon: <Droplets size={28} className="text-[#1A4731]" />,
-                bg: "bg-green-100",
-                title: "Infiltrations en cave",
-                desc: "Les caves humides à Etterbeek sont souvent le symptôme de gouttières bouchées. L'eau ruisselle sur 4-5 étages de façade avant d'atteindre les fondations et les caves.",
-              },
-              {
-                icon: <AlertTriangle size={28} className="text-[#F97316]" />,
-                bg: "bg-orange-100",
-                title: "Dégradation des façades",
-                desc: "Le ruissellement chronique d'eau sale sur les façades haussmanniennes dégrade les joints de maçonnerie et favorise l'apparition de taches noires et de salpêtre sur les étages inférieurs.",
-              },
-              {
-                icon: <Leaf size={28} className="text-yellow-700" />,
-                bg: "bg-yellow-100",
-                title: "Arbres du Cinquantenaire",
-                desc: "Les tilleuls, platanes et marronniers du quartier du Cinquantenaire génèrent des volumes importants de feuilles et de fleurs qui obstruent les gouttières des immeubles riverains chaque printemps et automne.",
-              },
-              {
-                icon: <CheckCircle size={28} className="text-green-600" />,
-                bg: "bg-green-50",
-                title: "Coordination avec syndics",
-                desc: "Pour les immeubles en copropriété, nous coordonnons directement avec le syndic. Devis détaillés, rapports d'intervention et contrats d'entretien adaptés aux exigences des assemblées générales.",
-              },
-            ].map((item) => (
-              <div key={item.title} className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100">
-                <div className={`${item.bg} p-3 rounded-xl w-fit mb-4`}>{item.icon}</div>
-                <h3 className="font-bold text-gray-900 mb-2">{item.title}</h3>
-                <p className="text-gray-600 text-sm leading-relaxed">{item.desc}</p>
+          <div className="flex flex-col lg:flex-row gap-10 items-start">
+            <div className="flex-1">
+              <div className="flex items-center gap-2 text-sm text-gray-500 mb-4">
+                <MapPin size={14} className="text-[#F97316]" />
+                <span>Commune d&apos;Etterbeek · Centre-Bruxelles</span>
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Services */}
-      <section className="py-14 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-10">
-            <p className="text-[#F97316] font-semibold text-sm uppercase tracking-wide mb-2">Nos prestations</p>
-            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3">Nos services à Etterbeek</h2>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {services.map((s) => (
-              <div key={s.href} className="bg-gray-50 rounded-2xl p-6 border border-gray-100 hover:shadow-md transition-shadow">
-                <div className={`${s.bg} p-3 rounded-xl w-fit mb-4`}>{s.icon}</div>
-                <h3 className="font-bold text-gray-900 mb-2">{s.title}</h3>
-                <p className="text-gray-600 text-sm leading-relaxed mb-4">{s.desc}</p>
-                <Link href={s.href} className="text-[#F97316] text-sm font-semibold hover:underline flex items-center gap-1">
-                  En savoir plus <ArrowRight size={14} />
-                </Link>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* FAQ */}
-      <section className="py-14 bg-gray-50">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-10">
-            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3">Questions fréquentes — Etterbeek</h2>
-          </div>
-          <div className="space-y-4">
-            {faqs.map((faq) => (
-              <div key={faq.q} className="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
-                <h3 className="font-bold text-gray-900 mb-2 flex items-start gap-2">
-                  <CheckCircle size={18} className="text-[#F97316] mt-0.5 flex-shrink-0" />
-                  {faq.q}
-                </h3>
-                <p className="text-gray-600 text-sm leading-relaxed ml-6">{faq.a}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA */}
-      <section id="contact" className="py-14 bg-[#1A4731]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="text-white">
-              <h2 className="text-2xl sm:text-3xl font-bold mb-4">Devis gratuit — Etterbeek</h2>
-              <p className="text-gray-300 mb-6 leading-relaxed">
-                Immeuble haussmannien ou maison de maître à Etterbeek ? Contactez-nous pour un devis adapté. Notre équipe est équipée pour les interventions en hauteur dans toute la commune.
+              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-gray-900 leading-tight mb-5">
+                Nettoyage Gouttières<br /><span className="text-[#1A4731]">Etterbeek</span>
+              </h1>
+              <p className="text-gray-600 text-lg leading-relaxed mb-7 max-w-xl">
+                Commune dense et urbaine dominée par les immeubles à appartements
+                et les maisons mitoyennes des années 50–70. Gouttières souvent négligées
+                et accessibles uniquement en hauteur — notre spécialité.
               </p>
-              <div className="space-y-3 mb-8">
-                {["Matériel adapté aux grandes hauteurs", "Expertise zinc haussmannien", "Coordination avec syndics", "Intervention urgence 7j/7"].map((item) => (
-                  <div key={item} className="flex items-center gap-3">
-                    <CheckCircle size={18} className="text-[#F97316]" />
-                    <span className="text-gray-300 text-sm">{item}</span>
+              <div className="flex flex-wrap gap-3">
+                <a href="tel:0477234187" className="inline-flex items-center gap-2 bg-[#F97316] hover:bg-orange-500 text-white font-bold px-6 py-3.5 rounded-xl transition-colors shadow-md shadow-orange-100">
+                  <Phone size={18} />0477 23 41 87
+                </a>
+                <a href="#devis" className="inline-flex items-center gap-2 border-2 border-gray-200 hover:border-[#1A4731] text-gray-700 hover:text-[#1A4731] font-semibold px-6 py-3.5 rounded-xl transition-colors">
+                  Devis gratuit <ArrowRight size={16} />
+                </a>
+              </div>
+            </div>
+            <div className="lg:w-72 bg-[#1A4731] text-white rounded-2xl p-6 flex-shrink-0 w-full">
+              <p className="text-green-300 text-xs font-semibold uppercase tracking-wide mb-4">Etterbeek en pratique</p>
+              <div className="space-y-4">
+                {[
+                  { val: "1×/an", label: "fréquence conseillée", detail: "peu d'arbres en centre-ville" },
+                  { val: "R+3/R+4", label: "immeubles typiques", detail: "matériel hauteur requis" },
+                  { val: "PVC", label: "matériau dominant", detail: "facile à nettoyer et remplacer" },
+                ].map((s) => (
+                  <div key={s.label} className="border-b border-white/20 pb-4 last:border-0 last:pb-0">
+                    <p className="text-2xl font-extrabold text-[#F97316]">{s.val}</p>
+                    <p className="font-semibold text-sm">{s.label}</p>
+                    <p className="text-green-300 text-xs mt-0.5">{s.detail}</p>
                   </div>
                 ))}
               </div>
-              <div className="p-4 bg-white/10 rounded-xl">
-                <p className="text-white font-semibold mb-1">Appel direct</p>
-                <a href="tel:0477234187" className="flex items-center gap-2 text-[#F97316] font-bold text-xl hover:text-orange-400 transition-colors">
-                  <Phone size={24} />0477 23 41 87
-                </a>
-                <p className="text-gray-400 text-xs mt-1">Lun–Ven 7h30–18h | Sam 8h–14h | Urgences 7j/7</p>
-              </div>
-            </div>
-            <div className="bg-white rounded-2xl p-6 sm:p-8">
-              <h3 className="text-gray-900 font-bold text-lg mb-6">Formulaire de devis — Etterbeek</h3>
-              <ContactForm />
             </div>
           </div>
         </div>
       </section>
 
-      {/* Zones voisines */}
-      <section className="py-10 bg-white">
+      <section className="py-14 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-lg font-bold text-gray-900 mb-4">Communes voisines desservies</h2>
-          <div className="flex flex-wrap gap-3">
+          <div className="grid lg:grid-cols-2 gap-12 items-start">
+            <div>
+              <p className="text-[#F97316] font-semibold text-sm uppercase tracking-wide mb-3">Spécificités d&apos;Etterbeek</p>
+              <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-5">Bâti dense, accès en hauteur</h2>
+              <div className="space-y-4 text-gray-600 leading-relaxed">
+                <p>
+                  Etterbeek est une commune urbaine dense. Les problèmes de gouttières y sont
+                  moins liés aux feuilles d&apos;arbres qu&apos;à <strong>l&apos;accumulation de poussières,
+                  sédiments et mousses</strong> issues de la pollution atmosphérique et de l&apos;humidité.
+                </p>
+                <p>
+                  Les <strong>immeubles à appartements des années 50–70</strong> qui dominent à Etterbeek
+                  ont souvent des gouttières en PVC ou zinc vieillissant, mal entretenues car
+                  l&apos;accès est difficile sans matériel adapté (R+3 ou R+4 standard).
+                </p>
+                <p>
+                  La question des <strong>toitures plates</strong> est aussi récurrente à Etterbeek.
+                  Les évacuations engorgées créent des flaques d&apos;eau stagnante, source de fuites
+                  et de dégradation des membranes d&apos;étanchéité.
+                </p>
+              </div>
+            </div>
+            <div className="space-y-4">
+              <Image
+                src="https://images.unsplash.com/photo-1570129477492-1cf5c04a39d4?w=700&q=80"
+                alt="Nettoyage gouttières immeuble Etterbeek Bruxelles"
+                width={600}
+                height={380}
+                className="rounded-2xl object-cover w-full h-64"
+                loading="lazy"
+              />
+              <div className="grid grid-cols-2 gap-3">
+                {[
+                  { icon: <Leaf size={18} className="text-[#1A4731]" />, text: "Sédiments & pollution", bg: "bg-green-50" },
+                  { icon: <Wrench size={18} className="text-blue-600" />, text: "PVC & zinc vieillissant", bg: "bg-blue-50" },
+                  { icon: <Droplets size={18} className="text-[#F97316]" />, text: "Toitures plates bouchées", bg: "bg-orange-50" },
+                  { icon: <AlertTriangle size={18} className="text-red-500" />, text: "Accès R+3/R+4", bg: "bg-red-50" },
+                ].map((p) => (
+                  <div key={p.text} className={`${p.bg} rounded-xl p-3 flex items-center gap-2`}>
+                    {p.icon}<span className="text-sm font-medium text-gray-800">{p.text}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-14 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-8">Nos services à Etterbeek</h2>
+          <div className="divide-y divide-gray-100 border border-gray-100 rounded-2xl overflow-hidden">
             {[
-              { name: "Ixelles", slug: "ixelles" },
-              { name: "Woluwe-Saint-Lambert", slug: "woluwe-saint-lambert" },
-              { name: "Schaerbeek", slug: "schaerbeek" },
-            ].map((c) => (
-              <Link
-                key={c.slug}
-                href={`/communes/${c.slug}`}
-                className="flex items-center gap-2 bg-gray-50 hover:bg-[#1A4731] hover:text-white text-gray-700 border border-gray-200 hover:border-[#1A4731] rounded-xl px-4 py-2.5 text-sm font-medium transition-all"
-              >
-                <MapPin size={14} className="text-[#F97316]" />
-                Gouttières {c.name}
-                <ArrowRight size={13} />
+              { icon: <Droplets size={22} className="text-[#1A4731]" />, href: "/services/nettoyage-gouttieres", title: "Nettoyage immeubles & maisons", desc: "Evacuation des dépôts sédimentaires et mousses. Matériel adapté aux hauteurs R+3/R+4 sans échafaudage pour les configurations standard à Etterbeek.", price: "dès 80€", tag: null },
+              { icon: <AlertTriangle size={22} className="text-red-500" />, href: "/services/debouchage-gouttieres", title: "Débouchage urgence 7j/7", desc: "Gouttière qui déborde sur le trottoir ou sur le voisin ? On intervient en urgence à Etterbeek pour stopper les dégâts rapidement.", price: "dès 120€", tag: "7j/7" },
+              { icon: <Wrench size={22} className="text-blue-600" />, href: "/services/reparation-gouttieres", title: "Remplacement PVC & zinc", desc: "Gouttières fissurées ou décrochées ? On remplace les tronçons défaillants ou l'intégralité. Devis copropriété sur demande.", price: "devis gratuit", tag: null },
+              { icon: <Leaf size={22} className="text-yellow-600" />, href: "/services/demoussage-toiture", title: "Toitures plates & terrasses", desc: "Nettoyage des évacuations de toitures plates, débouchage des siphons de sol, élimination des dépôts et mousses sur membrane.", price: "devis gratuit", tag: null },
+            ].map((s) => (
+              <Link key={s.href} href={s.href} className="flex items-start gap-5 p-5 hover:bg-gray-50 transition-colors group">
+                <div className="bg-gray-100 group-hover:bg-white p-3 rounded-xl flex-shrink-0 transition-colors">{s.icon}</div>
+                <div className="flex-1 min-w-0">
+                  <div className="flex items-center gap-2 mb-1">
+                    <h3 className="font-bold text-gray-900 group-hover:text-[#1A4731] transition-colors">{s.title}</h3>
+                    {s.tag && <span className="text-xs bg-green-100 text-green-700 px-2 py-0.5 rounded-full font-semibold">{s.tag}</span>}
+                  </div>
+                  <p className="text-gray-500 text-sm leading-snug">{s.desc}</p>
+                </div>
+                <div className="flex flex-col items-end gap-1 flex-shrink-0">
+                  <span className="text-xs font-semibold text-[#F97316] bg-orange-50 px-2 py-1 rounded-lg">{s.price}</span>
+                  <ArrowRight size={16} className="text-gray-300 group-hover:text-[#F97316] transition-colors" />
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-14 bg-gray-50">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl font-bold text-gray-900 mb-8">Questions fréquentes — Etterbeek</h2>
+          <div className="space-y-5">
+            {[
+              { q: "Pouvez-vous intervenir dans un immeuble de 4 étages sans échafaudage ?", a: "Oui, pour la grande majorité des immeubles d'Etterbeek (R+3 ou R+4). Notre matériel comprend des échelles professionnelles homologuées et des perches télescopiques. Au-delà de 15m, une nacelle peut être nécessaire — on vous prévient à l'avance." },
+              { q: "La copropriété doit-elle donner son accord ?", a: "Pour les parties communes, l'accord du syndic ou d'une majorité de copropriétaires est requis. On fournit un devis formel pour l'AG. Pour les terrasses privatives, seul le propriétaire doit valider." },
+              { q: "Ma toiture plate déborde lors de fortes pluies. Que faire ?", a: "C'est typiquement un siphon bouché ou une évacuation obstruée. On le débouche en urgence et vérifie que la pente de la membrane est correcte. Si l'eau stagne régulièrement, c'est souvent un problème de pente à corriger." },
+              { q: "Un nettoyage par an suffit-il à Etterbeek ?", a: "En général oui. Le centre d'Etterbeek a peu d'arbres. Un nettoyage en octobre-novembre suffit. Si votre rue est bordée de tilleuls ou platanes, un second passage au printemps peut être utile." },
+            ].map((faq, i) => (
+              <div key={i} className="bg-white rounded-xl border border-gray-100 p-6">
+                <p className="font-bold text-gray-900 mb-2 flex items-start gap-2">
+                  <span className="w-6 h-6 rounded-full bg-[#F97316] text-white text-xs font-bold flex items-center justify-center flex-shrink-0 mt-0.5">{i + 1}</span>
+                  {faq.q}
+                </p>
+                <p className="text-gray-600 text-sm leading-relaxed ml-8">{faq.a}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="devis" className="py-14 bg-white">
+        <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-8">
+            <h2 className="text-2xl font-bold text-gray-900 mb-2">Devis gratuit — Etterbeek</h2>
+            <p className="text-gray-500 text-sm">Réponse sous 2h · ou appelez le <a href="tel:0477234187" className="font-bold text-[#1A4731] hover:text-[#F97316]">0477 23 41 87</a></p>
+          </div>
+          <div className="bg-gray-50 border border-gray-200 rounded-2xl p-6 sm:p-8"><ContactForm /></div>
+        </div>
+      </section>
+
+      <section className="py-8 bg-gray-50 border-t border-gray-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <p className="text-sm font-semibold text-gray-500 mb-3">Communes voisines desservies</p>
+          <div className="flex flex-wrap gap-2">
+            {[{ name: "Ixelles", slug: "ixelles" }, { name: "Woluwe-Saint-Lambert", slug: "woluwe-saint-lambert" }, { name: "Schaerbeek", slug: "schaerbeek" }].map((c) => (
+              <Link key={c.slug} href={`/communes/${c.slug}`} className="inline-flex items-center gap-1.5 bg-white border border-gray-200 hover:border-[#1A4731] hover:text-[#1A4731] text-gray-600 rounded-lg px-3 py-2 text-sm font-medium transition-colors">
+                <MapPin size={12} className="text-[#F97316]" />{c.name}
               </Link>
             ))}
           </div>

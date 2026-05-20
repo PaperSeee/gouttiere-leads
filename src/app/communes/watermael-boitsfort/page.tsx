@@ -1,286 +1,188 @@
 import type { Metadata } from "next"
 import Link from "next/link"
-import { Phone, ArrowRight, CheckCircle, MapPin, Leaf, Droplets, Wrench, AlertTriangle } from "lucide-react"
+import Image from "next/image"
+import { Phone, ArrowRight, MapPin, Leaf, Droplets, Wrench, AlertTriangle } from "lucide-react"
 import Breadcrumb from "@/components/Breadcrumb"
 import LocalBusinessSchema from "@/components/LocalBusinessSchema"
 import ContactForm from "@/components/ContactForm"
 
 export const metadata: Metadata = {
-  title: "Nettoyage Gouttières Watermael-Boitsfort — Expert Local | Nettoyage Gouttières Bruxelles",
-  description: "Nettoyage gouttières à Watermael-Boitsfort : commune la plus boisée de Bruxelles, démoussage intensif, 2 nettoyages/an recommandés. Devis gratuit. 0477 23 41 87.",
+  title: "Nettoyage Gouttières Watermael-Boitsfort — Forêt & Cités-Jardins | 0477 23 41 87",
+  description: "Nettoyage gouttières à Watermael-Boitsfort : cités-jardins Le Logis & Floréal, Forêt de Soignes, mousses tenaces. Devis gratuit. 0477 23 41 87.",
   alternates: { canonical: "https://nettoyage-gouttieres-bruxelles.be/communes/watermael-boitsfort" },
 }
 
-const services = [
-  {
-    href: "/services/nettoyage-gouttieres",
-    icon: <Droplets size={24} className="text-[#1A4731]" />,
-    bg: "bg-green-100",
-    title: "Nettoyage complet",
-    desc: "Watermael-Boitsfort est la commune la plus boisée de Bruxelles. Nos techniciens y interviennent régulièrement pour des nettoyages approfondis face aux apports constants de feuilles, samares et débris végétaux.",
-  },
-  {
-    href: "/services/debouchage-gouttieres",
-    icon: <AlertTriangle size={24} className="text-red-600" />,
-    bg: "bg-red-100",
-    title: "Débouchage urgence",
-    desc: "Dans cette commune très boisée, les gouttières se bouchent rapidement et provoquent des débordements. Notre service d'urgence 7j/7 assure une intervention rapide pour protéger vos habitations.",
-  },
-  {
-    href: "/services/reparation-gouttieres",
-    icon: <Wrench size={24} className="text-blue-600" />,
-    bg: "bg-blue-100",
-    title: "Réparation / remplacement",
-    desc: "L'environnement végétal intense de Watermael-Boitsfort accélère l'usure des gouttières. Nous réparons les systèmes existants ou les remplaçons par des matériaux résistants adaptés à cet environnement.",
-  },
-  {
-    href: "/services/demoussage-toiture",
-    icon: <Leaf size={24} className="text-yellow-700" />,
-    bg: "bg-yellow-100",
-    title: "Démoussage toiture",
-    desc: "Watermael-Boitsfort est notre commune de référence pour le démoussage intensif. L'ombrage permanent et l'humidité élevée créent des conditions extrêmement favorables aux mousses. Traitement bi-annuel recommandé.",
-  },
-]
-
-const faqs = [
-  {
-    q: "Combien de nettoyages faut-il par an à Watermael-Boitsfort ?",
-    a: "Nous recommandons systématiquement deux nettoyages par an à Watermael-Boitsfort, voire trois pour les propriétés les plus boisées. Le premier en mai-juin pour les samares, graines et floraisons printanières ; le second en novembre après la chute des feuilles ; et optionnellement un troisième en janvier-février pour les apports tardifs des hêtres et chênes. C'est 2 à 3 fois plus que dans d'autres communes bruxelloises.",
-  },
-  {
-    q: "Pourquoi Watermael-Boitsfort nécessite-t-elle un démoussage plus fréquent ?",
-    a: "Watermael-Boitsfort est la commune la plus arborée de Bruxelles, avec une couverture végétale exceptionnelle. L'ombrage permanent réduit le séchage des toitures après les pluies, et l'humidité ambiante élevée liée aux nombreux arbres crée des conditions idéales pour le développement des mousses. Sans traitement préventif, une toiture peut être entièrement couverte de mousse en moins de deux ans.",
-  },
-  {
-    q: "La végétation peut-elle endommager directement mes gouttières ?",
-    a: "Oui, dans certains cas. Les racines de la végétation qui s'installe dans les gouttières mal entretenues peuvent fissurer les profils en PVC et forcer les jonctions. Les branches surplombant les toitures frottent sur les gouttières lors du vent et peuvent les désolidariser de leur support. Nous conseillons également un élagage préventif des branches les plus proches.",
-  },
-  {
-    q: "Quel est le tarif pour un nettoyage à Watermael-Boitsfort ?",
-    a: "Le tarif dépend de la longueur de gouttières, de l'accessibilité et de l'état de votre système. Pour une maison standard à Watermael-Boitsfort, un nettoyage complet (gouttières + descentes) se situe généralement entre 100 et 180€. Nous établissons un devis précis et gratuit avant toute intervention, sans surprise.",
-  },
-]
-
-export default function WatermaeBoitsfortPage() {
+export default function WatermealBoitsfortPage() {
   return (
     <>
       <LocalBusinessSchema />
-      <Breadcrumb items={[
-        { label: "Accueil", href: "/" },
-        { label: "Communes", href: "/" },
-        { label: "Watermael-Boitsfort" },
-      ]} />
+      <Breadcrumb items={[{ label: "Accueil", href: "/" }, { label: "Communes", href: "/" }, { label: "Watermael-Boitsfort" }]} />
 
-      {/* Hero */}
-      <section className="bg-[#1A4731] text-white py-16 lg:py-24">
+      <section className="bg-white border-b border-gray-100 py-12 lg:py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl">
-            <div className="flex flex-wrap gap-2 mb-6">
-              <span className="bg-[#F97316] text-white text-xs font-bold px-3 py-1.5 rounded-full">Watermael-Boitsfort</span>
-              <span className="bg-white/20 text-white text-xs font-semibold px-3 py-1.5 rounded-full">Commune la plus boisée</span>
-              <span className="bg-white/20 text-white text-xs font-semibold px-3 py-1.5 rounded-full">2 nettoyages/an</span>
-            </div>
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight mb-6">
-              Nettoyage de Gouttières à <span className="text-[#F97316]">Watermael-Boitsfort</span>
-            </h1>
-            <p className="text-lg sm:text-xl text-gray-200 mb-8 leading-relaxed">
-              Expert local en nettoyage de gouttières à Watermael-Boitsfort. La commune la plus boisée de Bruxelles exige un entretien renforcé : feuilles en continu, mousses tenaces, végétation envahissante. Deux nettoyages par an minimum.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <a
-                href="tel:0477234187"
-                className="flex items-center justify-center gap-2 bg-[#F97316] hover:bg-orange-500 text-white font-bold px-6 py-4 rounded-xl text-lg transition-colors"
-              >
-                <Phone size={20} />
-                0477 23 41 87
-              </a>
-              <a
-                href="#contact"
-                className="flex items-center justify-center gap-2 bg-white hover:bg-gray-100 text-[#1A4731] font-bold px-6 py-4 rounded-xl text-lg transition-colors"
-              >
-                Devis gratuit en ligne
-                <ArrowRight size={20} />
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Intro */}
-      <section className="py-14 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto">
-            <p className="text-[#F97316] font-semibold text-sm uppercase tracking-wide mb-2">La commune la plus exigeante de Bruxelles</p>
-            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-6">
-              Pourquoi Watermael-Boitsfort demande un entretien renforcé
-            </h2>
-            <div className="prose prose-gray max-w-none text-gray-600 leading-relaxed space-y-4">
-              <p>
-                Watermael-Boitsfort est, sans conteste, la commune bruxelloise où l'entretien des gouttières est le plus exigeant. Avec <strong>la plus haute densité végétale de la région bruxelloise</strong>, cette commune où les maisons semblent nichées dans la forêt offre un cadre de vie incomparable — mais impose des contraintes d'entretien très spécifiques à ses habitants.
-              </p>
-              <p>
-                Ici, les <strong>feuilles tombent en continu</strong> de septembre à janvier. Platanes, chênes, hêtres, érables et châtaigniers se succèdent dans leur cycle de chute des feuilles, créant un apport quasi ininterrompu de débris végétaux dans les gouttières pendant plus de quatre mois. Dans certaines propriétés particulièrement boisées, des gouttières non entretenues peuvent se retrouver entièrement remplies de feuilles compactées en moins de six semaines.
-              </p>
-              <p>
-                La <strong>prolifération de mousses</strong> est également exceptionnellement rapide à Watermael-Boitsfort. L'ombrage permanent des grands arbres empêche le séchage naturel des toitures après les pluies. Combiné à l'humidité ambiante élevée de cette commune très boisée, ce contexte crée des conditions idéales pour que les mousses et lichens colonisent toute la surface d'une toiture en moins de deux ans.
-              </p>
-              <p>
-                Notre recommandation pour Watermael-Boitsfort est claire : <strong>deux nettoyages par an minimum</strong>, idéalement au printemps et en fin d'automne. Pour les propriétés les plus boisées, un troisième passage en janvier est souvent justifié. Un démoussage de toiture tous les deux à trois ans complète l'entretien préventif recommandé.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Problèmes */}
-      <section className="py-14 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-10">
-            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3">Problèmes fréquents à Watermael-Boitsfort</h2>
-            <p className="text-gray-600">La commune la plus boisée de Bruxelles génère des défis uniques pour vos gouttières</p>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[
-              {
-                icon: <Leaf size={28} className="text-[#1A4731]" />,
-                bg: "bg-green-100",
-                title: "Feuilles en continu 4 mois",
-                desc: "De septembre à janvier, les arbres de Watermael-Boitsfort produisent des feuilles sans interruption. Un nettoyage unique en novembre ne suffit pas à traiter l'intégralité de cette période.",
-              },
-              {
-                icon: <Leaf size={28} className="text-yellow-700" />,
-                bg: "bg-yellow-100",
-                title: "Mousses ultra-rapides",
-                desc: "Sans traitement préventif, une toiture à Watermael-Boitsfort peut être entièrement couverte de mousse en 18 à 24 mois. La vitesse de développement est 2 à 3 fois supérieure à celle des communes moins boisées.",
-              },
-              {
-                icon: <AlertTriangle size={28} className="text-[#F97316]" />,
-                bg: "bg-orange-100",
-                title: "Végétation dans les gouttières",
-                desc: "Dans les cas extrêmes d'absence d'entretien, des plantes entières poussent dans les gouttières de Watermael. Les racines fissurent le PVC et les jonctions doivent être entièrement remplacées.",
-              },
-              {
-                icon: <Droplets size={28} className="text-blue-600" />,
-                bg: "bg-blue-100",
-                title: "Saturation rapide des descentes",
-                desc: "Les volumes de feuilles et de mousses sont tels que même des descentes pluviales bien dimensionnées se bouchent rapidement. Nettoyage des descentes inclus systématiquement dans nos interventions.",
-              },
-              {
-                icon: <Wrench size={28} className="text-purple-600" />,
-                bg: "bg-purple-100",
-                title: "Usure accélérée des gouttières",
-                desc: "L'humidité permanente et les chocs mécaniques des branches accélèrent l'usure des gouttières à Watermael. Une inspection annuelle permet de détecter les fragilités avant qu'elles ne deviennent des problèmes.",
-              },
-              {
-                icon: <CheckCircle size={28} className="text-green-600" />,
-                bg: "bg-green-50",
-                title: "Contrat bi-annuel recommandé",
-                desc: "Pour Watermael-Boitsfort, nous recommandons systématiquement un contrat d'entretien bi-annuel. C'est la solution la plus économique pour maintenir vos gouttières en parfait état sur le long terme.",
-              },
-            ].map((item) => (
-              <div key={item.title} className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100">
-                <div className={`${item.bg} p-3 rounded-xl w-fit mb-4`}>{item.icon}</div>
-                <h3 className="font-bold text-gray-900 mb-2">{item.title}</h3>
-                <p className="text-gray-600 text-sm leading-relaxed">{item.desc}</p>
+          <div className="flex flex-col lg:flex-row gap-10 items-start">
+            <div className="flex-1">
+              <div className="flex items-center gap-2 text-sm text-gray-500 mb-4">
+                <MapPin size={14} className="text-[#F97316]" />
+                <span>Watermael-Boitsfort · Cités-jardins & forêt</span>
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Services */}
-      <section className="py-14 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-10">
-            <p className="text-[#F97316] font-semibold text-sm uppercase tracking-wide mb-2">Nos prestations</p>
-            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3">Nos services à Watermael-Boitsfort</h2>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {services.map((s) => (
-              <div key={s.href} className="bg-gray-50 rounded-2xl p-6 border border-gray-100 hover:shadow-md transition-shadow">
-                <div className={`${s.bg} p-3 rounded-xl w-fit mb-4`}>{s.icon}</div>
-                <h3 className="font-bold text-gray-900 mb-2">{s.title}</h3>
-                <p className="text-gray-600 text-sm leading-relaxed mb-4">{s.desc}</p>
-                <Link href={s.href} className="text-[#F97316] text-sm font-semibold hover:underline flex items-center gap-1">
-                  En savoir plus <ArrowRight size={14} />
-                </Link>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* FAQ */}
-      <section className="py-14 bg-gray-50">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-10">
-            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3">Questions fréquentes — Watermael-Boitsfort</h2>
-          </div>
-          <div className="space-y-4">
-            {faqs.map((faq) => (
-              <div key={faq.q} className="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
-                <h3 className="font-bold text-gray-900 mb-2 flex items-start gap-2">
-                  <CheckCircle size={18} className="text-[#F97316] mt-0.5 flex-shrink-0" />
-                  {faq.q}
-                </h3>
-                <p className="text-gray-600 text-sm leading-relaxed ml-6">{faq.a}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA */}
-      <section id="contact" className="py-14 bg-[#1A4731]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="text-white">
-              <h2 className="text-2xl sm:text-3xl font-bold mb-4">Devis gratuit — Watermael-Boitsfort</h2>
-              <p className="text-gray-300 mb-6 leading-relaxed">
-                Votre propriété dans la commune la plus boisée de Bruxelles mérite un entretien renforcé. Contactez-nous pour un devis adapté à votre situation.
+              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-gray-900 leading-tight mb-5">
+                Nettoyage Gouttières<br /><span className="text-[#1A4731]">Watermael-Boitsfort</span>
+              </h1>
+              <p className="text-gray-600 text-lg leading-relaxed mb-7 max-w-xl">
+                La commune la plus boisée de Bruxelles. Hêtres du Soignes, bouleaux des cités-jardins,
+                mousses omniprésentes — Watermael-Boitsfort réclame le plus d&apos;attention
+                pour l&apos;entretien des gouttières.
               </p>
-              <div className="space-y-3 mb-8">
-                {["Devis entièrement gratuit", "Contrats bi-annuels disponibles", "Démoussage intensif spécialisé", "Intervention urgence 7j/7"].map((item) => (
-                  <div key={item} className="flex items-center gap-3">
-                    <CheckCircle size={18} className="text-[#F97316]" />
-                    <span className="text-gray-300 text-sm">{item}</span>
+              <div className="flex flex-wrap gap-3">
+                <a href="tel:0477234187" className="inline-flex items-center gap-2 bg-[#F97316] hover:bg-orange-500 text-white font-bold px-6 py-3.5 rounded-xl transition-colors shadow-md shadow-orange-100">
+                  <Phone size={18} />0477 23 41 87
+                </a>
+                <a href="#devis" className="inline-flex items-center gap-2 border-2 border-gray-200 hover:border-[#1A4731] text-gray-700 hover:text-[#1A4731] font-semibold px-6 py-3.5 rounded-xl transition-colors">
+                  Devis gratuit <ArrowRight size={16} />
+                </a>
+              </div>
+            </div>
+            <div className="lg:w-72 bg-[#1A4731] text-white rounded-2xl p-6 flex-shrink-0 w-full">
+              <p className="text-green-300 text-xs font-semibold uppercase tracking-wide mb-4">Watermael-Boitsfort</p>
+              <div className="space-y-4">
+                {[
+                  { val: "2–3×/an", label: "fréquence recommandée", detail: "la plus élevée de la région" },
+                  { val: "Hêtres", label: "feuilles jusqu'en février", detail: "nettoyage hivernal indispensable" },
+                  { val: "Mousses++", label: "très tenaces", detail: "humidité quasi permanente" },
+                ].map((s) => (
+                  <div key={s.label} className="border-b border-white/20 pb-4 last:border-0 last:pb-0">
+                    <p className="text-2xl font-extrabold text-[#F97316]">{s.val}</p>
+                    <p className="font-semibold text-sm">{s.label}</p>
+                    <p className="text-green-300 text-xs mt-0.5">{s.detail}</p>
                   </div>
                 ))}
               </div>
-              <div className="p-4 bg-white/10 rounded-xl">
-                <p className="text-white font-semibold mb-1">Appel direct</p>
-                <a href="tel:0477234187" className="flex items-center gap-2 text-[#F97316] font-bold text-xl hover:text-orange-400 transition-colors">
-                  <Phone size={24} />0477 23 41 87
-                </a>
-                <p className="text-gray-400 text-xs mt-1">Lun–Ven 7h30–18h | Sam 8h–14h | Urgences 7j/7</p>
-              </div>
-            </div>
-            <div className="bg-white rounded-2xl p-6 sm:p-8">
-              <h3 className="text-gray-900 font-bold text-lg mb-6">Formulaire de devis — Watermael-Boitsfort</h3>
-              <ContactForm />
             </div>
           </div>
         </div>
       </section>
 
-      {/* Zones voisines */}
-      <section className="py-10 bg-white">
+      <section className="py-14 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-lg font-bold text-gray-900 mb-4">Communes voisines desservies</h2>
-          <div className="flex flex-wrap gap-3">
+          <div className="grid lg:grid-cols-2 gap-12 items-start">
+            <div>
+              <p className="text-[#F97316] font-semibold text-sm uppercase tracking-wide mb-3">La commune la plus exigeante</p>
+              <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-5">Forêt, cités-jardins et humidité permanente</h2>
+              <div className="space-y-4 text-gray-600 leading-relaxed">
+                <p>
+                  Watermael-Boitsfort est enclavée dans et autour de la <strong>Forêt de Soignes</strong>.
+                  C&apos;est la commune où l&apos;entretien des gouttières est le plus critique de toute la
+                  région bruxelloise. Les propriétés sont entourées d&apos;arbres générant des déchets
+                  végétaux pratiquement toute l&apos;année.
+                </p>
+                <p>
+                  Les <strong>cités-jardins Le Logis et Floréal</strong>, construites dans les années
+                  1920–1930, sont des ensembles remarquables avec des maisons basses et des jardins
+                  densément plantés. Ces habitations ont souvent des gouttières en zinc ou cuivre
+                  d&apos;époque qui demandent une expertise particulière.
+                </p>
+                <p>
+                  Le <strong>taux d&apos;humidité</strong> quasi permanent dans cette commune boisée
+                  crée des conditions idéales pour les mousses. Sans démoussage régulier, une
+                  gouttière peut être réduite à la moitié de sa capacité en deux à trois ans.
+                </p>
+              </div>
+            </div>
+            <div className="space-y-4">
+              <Image
+                src="https://images.unsplash.com/photo-1558769132-cb1aea458c5e?w=700&q=80"
+                alt="Nettoyage gouttières Watermael-Boitsfort cités-jardins"
+                width={600}
+                height={380}
+                className="rounded-2xl object-cover w-full h-64"
+                loading="lazy"
+              />
+              <div className="grid grid-cols-2 gap-3">
+                {[
+                  { icon: <Leaf size={18} className="text-[#1A4731]" />, text: "Hêtres jusqu'en février", bg: "bg-green-50" },
+                  { icon: <Wrench size={18} className="text-blue-600" />, text: "Zinc & cuivre cités-jardins", bg: "bg-blue-50" },
+                  { icon: <Droplets size={18} className="text-[#F97316]" />, text: "Mousses très envahissantes", bg: "bg-orange-50" },
+                  { icon: <AlertTriangle size={18} className="text-red-500" />, text: "3 nettoyages/an parfois", bg: "bg-red-50" },
+                ].map((p) => (
+                  <div key={p.text} className={`${p.bg} rounded-xl p-3 flex items-center gap-2`}>
+                    {p.icon}<span className="text-sm font-medium text-gray-800">{p.text}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-14 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-8">Nos services à Watermael-Boitsfort</h2>
+          <div className="divide-y divide-gray-100 border border-gray-100 rounded-2xl overflow-hidden">
             {[
-              { name: "Auderghem", slug: "auderghem" },
-              { name: "Uccle", slug: "uccle" },
-              { name: "Forest", slug: "forest" },
-            ].map((c) => (
-              <Link
-                key={c.slug}
-                href={`/communes/${c.slug}`}
-                className="flex items-center gap-2 bg-gray-50 hover:bg-[#1A4731] hover:text-white text-gray-700 border border-gray-200 hover:border-[#1A4731] rounded-xl px-4 py-2.5 text-sm font-medium transition-all"
-              >
-                <MapPin size={14} className="text-[#F97316]" />
-                Gouttières {c.name}
-                <ArrowRight size={13} />
+              { icon: <Droplets size={22} className="text-[#1A4731]" />, href: "/services/nettoyage-gouttieres", title: "Nettoyage intensif cités-jardins", desc: "2 à 3 passages annuels recommandés pour les propriétés des cités Le Logis et Floréal. Abonnement annuel disponible — on s'occupe du planning, vous n'avez plus à y penser.", price: "dès 80€", tag: "Abonnement dispo" },
+              { icon: <AlertTriangle size={22} className="text-red-500" />, href: "/services/debouchage-gouttieres", title: "Débouchage urgence 7j/7", desc: "En cas de débordement actif dans cette commune où les pluies s'accumulent rapidement. On intervient 7j/7 pour protéger votre propriété.", price: "dès 120€", tag: "7j/7" },
+              { icon: <Wrench size={22} className="text-blue-600" />, href: "/services/reparation-gouttieres", title: "Réparation zinc & cuivre rare", desc: "Les cités-jardins possèdent parfois des gouttières en cuivre. Intervention experte pour préserver ces matériaux nobles et leur patine naturelle.", price: "devis gratuit", tag: null },
+              { icon: <Leaf size={22} className="text-yellow-600" />, href: "/services/demoussage-toiture", title: "Démoussage — priorité absolue ici", desc: "Watermael-Boitsfort est la commune où le démoussage est le plus critique. Sans traitement régulier, les mousses colonisent toiture et gouttières en 18 mois.", price: "devis gratuit", tag: "Prioritaire" },
+            ].map((s) => (
+              <Link key={s.href} href={s.href} className="flex items-start gap-5 p-5 hover:bg-gray-50 transition-colors group">
+                <div className="bg-gray-100 group-hover:bg-white p-3 rounded-xl flex-shrink-0 transition-colors">{s.icon}</div>
+                <div className="flex-1 min-w-0">
+                  <div className="flex items-center gap-2 mb-1">
+                    <h3 className="font-bold text-gray-900 group-hover:text-[#1A4731] transition-colors">{s.title}</h3>
+                    {s.tag && <span className="text-xs bg-green-100 text-green-700 px-2 py-0.5 rounded-full font-semibold">{s.tag}</span>}
+                  </div>
+                  <p className="text-gray-500 text-sm leading-snug">{s.desc}</p>
+                </div>
+                <div className="flex flex-col items-end gap-1 flex-shrink-0">
+                  <span className="text-xs font-semibold text-[#F97316] bg-orange-50 px-2 py-1 rounded-lg">{s.price}</span>
+                  <ArrowRight size={16} className="text-gray-300 group-hover:text-[#F97316] transition-colors" />
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-14 bg-gray-50">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl font-bold text-gray-900 mb-8">Questions fréquentes — Watermael-Boitsfort</h2>
+          <div className="space-y-5">
+            {[
+              { q: "Combien de nettoyages par an à Watermael-Boitsfort ?", a: "2 à 3 selon votre exposition. Les cités Le Logis et Floréal entourées d'arbres bénéficient d'un passage en mai, novembre et janvier-février (hêtres tardifs). On propose des abonnements annuels avec planning préétabli." },
+              { q: "Nos gouttières en cuivre des cités-jardins — comment les entretenir ?", a: "Le cuivre se nettoie avec des outils non-abrasifs pour ne pas rayer la surface et préserver la patine naturelle. Si des fissures apparaissent, on répare par soudure à l'étain. Un cuivre bien entretenu peut durer 80 à 100 ans." },
+              { q: "Les mousses dans nos gouttières sont particulièrement épaisses — pourquoi ?", a: "L'humidité permanente et l'ombrage des grands arbres créent les conditions idéales. À Watermael-Boitsfort, sans traitement préventif, les mousses peuvent atteindre 5 à 10 cm d'épaisseur en 2–3 ans, réduisant la capacité d'écoulement de plus de 50%." },
+              { q: "Proposez-vous des contrats d'entretien annuels ?", a: "Oui, particulièrement recommandé ici. On établit un planning annuel de 2 à 3 visites avec tarif préférentiel. Vous n'avez plus à y penser — on vous contacte avant chaque intervention selon le calendrier convenu." },
+            ].map((faq, i) => (
+              <div key={i} className="bg-white rounded-xl border border-gray-100 p-6">
+                <p className="font-bold text-gray-900 mb-2 flex items-start gap-2">
+                  <span className="w-6 h-6 rounded-full bg-[#F97316] text-white text-xs font-bold flex items-center justify-center flex-shrink-0 mt-0.5">{i + 1}</span>
+                  {faq.q}
+                </p>
+                <p className="text-gray-600 text-sm leading-relaxed ml-8">{faq.a}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="devis" className="py-14 bg-white">
+        <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-8">
+            <h2 className="text-2xl font-bold text-gray-900 mb-2">Devis gratuit — Watermael-Boitsfort</h2>
+            <p className="text-gray-500 text-sm">Réponse sous 2h · ou appelez le <a href="tel:0477234187" className="font-bold text-[#1A4731] hover:text-[#F97316]">0477 23 41 87</a></p>
+          </div>
+          <div className="bg-gray-50 border border-gray-200 rounded-2xl p-6 sm:p-8"><ContactForm /></div>
+        </div>
+      </section>
+
+      <section className="py-8 bg-gray-50 border-t border-gray-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <p className="text-sm font-semibold text-gray-500 mb-3">Communes voisines desservies</p>
+          <div className="flex flex-wrap gap-2">
+            {[{ name: "Auderghem", slug: "auderghem" }, { name: "Uccle", slug: "uccle" }, { name: "Woluwe-Saint-Pierre", slug: "woluwe-saint-pierre" }].map((c) => (
+              <Link key={c.slug} href={`/communes/${c.slug}`} className="inline-flex items-center gap-1.5 bg-white border border-gray-200 hover:border-[#1A4731] hover:text-[#1A4731] text-gray-600 rounded-lg px-3 py-2 text-sm font-medium transition-colors">
+                <MapPin size={12} className="text-[#F97316]" />{c.name}
               </Link>
             ))}
           </div>
