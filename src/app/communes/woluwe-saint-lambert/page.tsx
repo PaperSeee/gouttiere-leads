@@ -92,7 +92,7 @@ export default function WoluweStLambertPage() {
             </div>
             <div className="space-y-4">
               <Image
-                src="https://images.unsplash.com/photo-1509516370-b196ff45bfa1?w=700&q=80"
+                src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=700&q=80"
                 alt="Nettoyage gouttières Woluwe-Saint-Lambert Bruxelles"
                 width={600}
                 height={380}

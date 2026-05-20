@@ -45,7 +45,7 @@ export default function LocalBusinessSchema() {
       },
     ],
     priceRange: "€€",
-    image: "https://images.unsplash.com/photo-1509516370-b196ff45bfa1?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=800&q=80",
     sameAs: [],
   };
 

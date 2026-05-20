@@ -92,7 +92,7 @@ export default function SchaerbeekPage() {
             </div>
             <div className="space-y-4">
               <Image
-                src="https://images.unsplash.com/photo-1572120360610-d4360b11f1a5?w=700&q=80"
+                src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=700&q=80"
                 alt="Nettoyage gouttières Schaerbeek Belle Époque Bruxelles"
                 width={600}
                 height={380}
