@@ -108,17 +108,8 @@ export default function Header() {
               </div>
             </div>
 
-            <Link href="/types-gouttieres" className="text-gray-300 hover:text-white transition-colors">
-              Types de gouttières
-            </Link>
             <Link href="/tarifs" className="text-gray-300 hover:text-white transition-colors">
               Tarifs
-            </Link>
-            <Link href="/faq" className="text-gray-300 hover:text-white transition-colors">
-              FAQ
-            </Link>
-            <Link href="/blog" className="text-gray-300 hover:text-white transition-colors">
-              Blog
             </Link>
             <Link href="/contact" className="text-gray-300 hover:text-white transition-colors">
               Contact
@@ -184,17 +175,8 @@ export default function Header() {
                 ))}
               </div>
             </div>
-            <Link href="/types-gouttieres" className="text-gray-300 hover:text-white py-2 border-t border-green-900" onClick={() => setMobileOpen(false)}>
-              Types de gouttières
-            </Link>
             <Link href="/tarifs" className="text-gray-300 hover:text-white py-2 border-t border-green-900" onClick={() => setMobileOpen(false)}>
               Tarifs
-            </Link>
-            <Link href="/faq" className="text-gray-300 hover:text-white py-2 border-t border-green-900" onClick={() => setMobileOpen(false)}>
-              FAQ
-            </Link>
-            <Link href="/blog" className="text-gray-300 hover:text-white py-2 border-t border-green-900" onClick={() => setMobileOpen(false)}>
-              Blog
             </Link>
             <Link href="/contact" className="text-gray-300 hover:text-white py-2 border-t border-green-900" onClick={() => setMobileOpen(false)}>
               Contact

@@ -92,7 +92,7 @@ export default function KoekelbergPage() {
             </div>
             <div className="space-y-4">
               <Image
-                src="https://images.unsplash.com/photo-1558769132-cb1aea458c5e?w=700&q=80"
+                src="https://images.unsplash.com/photo-1509516370-b196ff45bfa1?w=700&q=80"
                 alt="Nettoyage gouttières Koekelberg Bruxelles Basilique"
                 width={600}
                 height={380}

@@ -195,7 +195,7 @@ export default function HomePage() {
             {/* Colonne image */}
             <div className="relative h-64 lg:h-full lg:min-h-[580px] -mx-4 sm:mx-0 lg:rounded-none">
               <Image
-                src="https://images.unsplash.com/photo-1558769132-cb1aea458c5e?w=1000&q=85"
+                src="https://images.unsplash.com/photo-1509516370-b196ff45bfa1?w=1000&q=85"
                 alt="Nettoyage professionnel gouttières Bruxelles"
                 fill
                 className="object-cover lg:rounded-l-3xl"
@@ -326,7 +326,7 @@ export default function HomePage() {
             <div>
               <div className="relative mb-6 rounded-2xl overflow-hidden">
                 <Image
-                  src="https://images.unsplash.com/photo-1570129477492-1cf5c04a39d4?w=800&q=80"
+                  src="https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?w=800&q=80"
                   alt="Gouttière bouchée dégâts Bruxelles"
                   width={600}
                   height={340}

@@ -28,7 +28,7 @@ export default function BlogAutomneGouttieresBruxellesPage() {
     },
     datePublished: "2026-05-20",
     dateModified: "2026-05-20",
-    image: "https://images.unsplash.com/photo-1570129477492-1cf5c04a39d4?w=1200&q=80",
+    image: "https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?w=1200&q=80",
     url: "https://nettoyage-gouttieres-bruxelles.be/blog/preparer-gouttieres-automne-bruxelles",
     mainEntityOfPage: {
       "@type": "WebPage",
