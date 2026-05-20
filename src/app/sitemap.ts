@@ -1,6 +1,6 @@
 import { MetadataRoute } from "next";
 
-const BASE_URL = "https://nettoyage-gouttieres-bruxelles.be";
+const BASE_URL = "https://www.nettoyage-gouttieres-bruxelles.be";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const communes = [

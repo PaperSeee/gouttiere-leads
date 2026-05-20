@@ -9,7 +9,7 @@ import ContactForm from "@/components/ContactForm"
 export const metadata: Metadata = {
   title: "Nettoyage Gouttières Berchem-Sainte-Agathe — Villas & Lotissements | 0477 23 41 87",
   description: "Nettoyage gouttières à Berchem-Sainte-Agathe : villas lotissements années 60–70, aluminium vieillissant, jardins arborés. Devis gratuit. 0477 23 41 87.",
-  alternates: { canonical: "https://nettoyage-gouttieres-bruxelles.be/communes/berchem-sainte-agathe" },
+  alternates: { canonical: "https://www.nettoyage-gouttieres-bruxelles.be/communes/berchem-sainte-agathe" },
 }
 
 export default function BerchemSainteAgathePage() {

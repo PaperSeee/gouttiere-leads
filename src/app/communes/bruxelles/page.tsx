@@ -9,7 +9,7 @@ import ContactForm from "@/components/ContactForm"
 export const metadata: Metadata = {
   title: "Nettoyage Gouttières Bruxelles-Ville — Pentagone & Immeubles | 0477 23 41 87",
   description: "Nettoyage gouttières à Bruxelles-Ville : Pentagone, Laeken, Neder-Over-Heembeek, immeubles et maisons de maître. Devis gratuit. 0477 23 41 87.",
-  alternates: { canonical: "https://nettoyage-gouttieres-bruxelles.be/communes/bruxelles" },
+  alternates: { canonical: "https://www.nettoyage-gouttieres-bruxelles.be/communes/bruxelles" },
 }
 
 export default function BruxellesPage() {

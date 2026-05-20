@@ -9,7 +9,7 @@ import ContactForm from "@/components/ContactForm"
 export const metadata: Metadata = {
   title: "Nettoyage Gouttières Anderlecht — Maisons Ouvrières & Canaux | 0477 23 41 87",
   description: "Nettoyage gouttières à Anderlecht : maisons ouvrières brique, canal de Charleroi, humidité canal. Devis gratuit, intervention rapide. 0477 23 41 87.",
-  alternates: { canonical: "https://nettoyage-gouttieres-bruxelles.be/communes/anderlecht" },
+  alternates: { canonical: "https://www.nettoyage-gouttieres-bruxelles.be/communes/anderlecht" },
 }
 
 export default function AnderlechtPage() {

@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: "Blog — Conseils Nettoyage Gouttières Bruxelles",
   description:
     "Articles et conseils pratiques sur l'entretien des gouttières à Bruxelles. Guides saisonniers, tutoriels et informations pour propriétaires bruxellois.",
-  alternates: { canonical: "https://nettoyage-gouttieres-bruxelles.be/blog" },
+  alternates: { canonical: "https://www.nettoyage-gouttieres-bruxelles.be/blog" },
 };
 
 export default function Blog() {

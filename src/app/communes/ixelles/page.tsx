@@ -9,7 +9,7 @@ import ContactForm from "@/components/ContactForm"
 export const metadata: Metadata = {
   title: "Nettoyage Gouttières Ixelles — Art Nouveau & Immeubles | 0477 23 41 87",
   description: "Nettoyage gouttières à Ixelles : maisons de maître Art nouveau, immeubles, zinc historique. Devis gratuit, intervention 48h. 0477 23 41 87.",
-  alternates: { canonical: "https://nettoyage-gouttieres-bruxelles.be/communes/ixelles" },
+  alternates: { canonical: "https://www.nettoyage-gouttieres-bruxelles.be/communes/ixelles" },
 }
 
 export default function IxellesPage() {

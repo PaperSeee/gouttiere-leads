@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: "À Propos — Nettoyage Gouttières Bruxelles | Notre Équipe",
   description:
     "Découvrez Nettoyage Gouttières Bruxelles : notre mission, nos valeurs et notre engagement pour l'entretien de vos gouttières en région bruxelloise.",
-  alternates: { canonical: "https://nettoyage-gouttieres-bruxelles.be/a-propos" },
+  alternates: { canonical: "https://www.nettoyage-gouttieres-bruxelles.be/a-propos" },
 };
 
 export default function APropos() {

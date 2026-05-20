@@ -2,11 +2,11 @@ export default function LocalBusinessSchema() {
   const schema = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
-    "@id": "https://nettoyage-gouttieres-bruxelles.be/#business",
+    "@id": "https://www.nettoyage-gouttieres-bruxelles.be/#business",
     name: "Nettoyage Gouttières Bruxelles",
     description:
       "Nettoyage de gouttières à Bruxelles. Débouchage, réparation, démoussage toiture. Devis gratuit, intervention sous 48h, garantie satisfaction.",
-    url: "https://nettoyage-gouttieres-bruxelles.be",
+    url: "https://www.nettoyage-gouttieres-bruxelles.be",
     telephone: "0477234187",
     email: "contact@nettoyage-gouttieres-bruxelles.be",
     address: {

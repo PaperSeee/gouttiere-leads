@@ -9,7 +9,7 @@ import ContactForm from "@/components/ContactForm"
 export const metadata: Metadata = {
   title: "Nettoyage Gouttières Auderghem — Expert Local | Nettoyage Gouttières Bruxelles",
   description: "Nettoyage gouttières à Auderghem : maisons 4 façades, Forêt de Soignes, aluminium à remplacer. Rouge-Cloître. Devis gratuit. 0477 23 41 87.",
-  alternates: { canonical: "https://nettoyage-gouttieres-bruxelles.be/communes/auderghem" },
+  alternates: { canonical: "https://www.nettoyage-gouttieres-bruxelles.be/communes/auderghem" },
 }
 
 export default function AuderghemPage() {

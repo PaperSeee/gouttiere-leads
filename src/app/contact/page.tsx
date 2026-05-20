@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: "Contact Nettoyage Gouttières Bruxelles — Devis Gratuit",
   description:
     "Contactez Nettoyage Gouttières Bruxelles pour votre devis gratuit. Téléphone : 0477 23 41 87. Réponse en moins de 2h en heures ouvrables.",
-  alternates: { canonical: "https://nettoyage-gouttieres-bruxelles.be/contact" },
+  alternates: { canonical: "https://www.nettoyage-gouttieres-bruxelles.be/contact" },
 };
 
 export default function Contact() {

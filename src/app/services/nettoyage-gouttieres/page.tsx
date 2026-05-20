@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: "Nettoyage Gouttières Bruxelles — Service Complet | Devis Gratuit",
   description:
     "Service de nettoyage de gouttières à Bruxelles. Évacuation feuilles, mousses, sédiments. Nettoyage gouttières + descentes pluviales. Devis gratuit. 0477 23 41 87.",
-  alternates: { canonical: "https://nettoyage-gouttieres-bruxelles.be/services/nettoyage-gouttieres" },
+  alternates: { canonical: "https://www.nettoyage-gouttieres-bruxelles.be/services/nettoyage-gouttieres" },
 };
 
 const communes = [

@@ -17,7 +17,7 @@ export default function Breadcrumb({ items }: BreadcrumbProps) {
       "@type": "ListItem",
       position: index + 1,
       name: item.label,
-      ...(item.href ? { item: `https://nettoyage-gouttieres-bruxelles.be${item.href}` } : {}),
+      ...(item.href ? { item: `https://www.nettoyage-gouttieres-bruxelles.be${item.href}` } : {}),
     })),
   };
 

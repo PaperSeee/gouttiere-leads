@@ -7,7 +7,7 @@ import ContactForm from "@/components/ContactForm"
 export const metadata: Metadata = {
   title: "Comment Préparer ses Gouttières Avant l'Automne à Bruxelles | Blog",
   description: "Guide complet pour préparer vos gouttières avant l'automne à Bruxelles : checklist d'inspection, 5 arbres à risque et quand appeler un professionnel.",
-  alternates: { canonical: "https://nettoyage-gouttieres-bruxelles.be/blog/preparer-gouttieres-automne-bruxelles" },
+  alternates: { canonical: "https://www.nettoyage-gouttieres-bruxelles.be/blog/preparer-gouttieres-automne-bruxelles" },
 }
 
 export default function BlogAutomneGouttieresBruxellesPage() {
@@ -19,20 +19,20 @@ export default function BlogAutomneGouttieresBruxellesPage() {
     author: {
       "@type": "Organization",
       name: "Nettoyage Gouttières Bruxelles",
-      url: "https://nettoyage-gouttieres-bruxelles.be",
+      url: "https://www.nettoyage-gouttieres-bruxelles.be",
     },
     publisher: {
       "@type": "Organization",
       name: "Nettoyage Gouttières Bruxelles",
-      url: "https://nettoyage-gouttieres-bruxelles.be",
+      url: "https://www.nettoyage-gouttieres-bruxelles.be",
     },
     datePublished: "2026-05-20",
     dateModified: "2026-05-20",
     image: "https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=1200&q=80",
-    url: "https://nettoyage-gouttieres-bruxelles.be/blog/preparer-gouttieres-automne-bruxelles",
+    url: "https://www.nettoyage-gouttieres-bruxelles.be/blog/preparer-gouttieres-automne-bruxelles",
     mainEntityOfPage: {
       "@type": "WebPage",
-      "@id": "https://nettoyage-gouttieres-bruxelles.be/blog/preparer-gouttieres-automne-bruxelles",
+      "@id": "https://www.nettoyage-gouttieres-bruxelles.be/blog/preparer-gouttieres-automne-bruxelles",
     },
   }
 

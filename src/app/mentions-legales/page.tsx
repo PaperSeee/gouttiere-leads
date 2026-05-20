@@ -4,7 +4,7 @@ import Breadcrumb from "@/components/Breadcrumb";
 export const metadata: Metadata = {
   title: "Mentions Légales — Nettoyage Gouttières Bruxelles",
   description: "Mentions légales de Nettoyage Gouttières Bruxelles conformément à la législation belge.",
-  alternates: { canonical: "https://nettoyage-gouttieres-bruxelles.be/mentions-legales" },
+  alternates: { canonical: "https://www.nettoyage-gouttieres-bruxelles.be/mentions-legales" },
 };
 
 export default function MentionsLegales() {

@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: "/",
       disallow: "/api/",
     },
-    sitemap: "https://nettoyage-gouttieres-bruxelles.be/sitemap.xml",
+    sitemap: "https://www.nettoyage-gouttieres-bruxelles.be/sitemap.xml",
   };
 }

@@ -9,7 +9,7 @@ import ContactForm from "@/components/ContactForm"
 export const metadata: Metadata = {
   title: "Nettoyage Gouttières Woluwe-Saint-Lambert — Villas & Appartements | 0477 23 41 87",
   description: "Nettoyage gouttières à Woluwe-Saint-Lambert : villas résidentielles, immeubles, platanes des avenues. Devis gratuit, intervention 48h. 0477 23 41 87.",
-  alternates: { canonical: "https://nettoyage-gouttieres-bruxelles.be/communes/woluwe-saint-lambert" },
+  alternates: { canonical: "https://www.nettoyage-gouttieres-bruxelles.be/communes/woluwe-saint-lambert" },
 }
 
 export default function WoluweStLambertPage() {

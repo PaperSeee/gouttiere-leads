@@ -9,7 +9,7 @@ import ContactForm from "@/components/ContactForm"
 export const metadata: Metadata = {
   title: "Nettoyage Gouttières Ganshoren — Petite Commune Résidentielle | 0477 23 41 87",
   description: "Nettoyage gouttières à Ganshoren : maisons des années 50–60, jardins arborés, commune résidentielle calme. Devis gratuit. 0477 23 41 87.",
-  alternates: { canonical: "https://nettoyage-gouttieres-bruxelles.be/communes/ganshoren" },
+  alternates: { canonical: "https://www.nettoyage-gouttieres-bruxelles.be/communes/ganshoren" },
 }
 
 export default function GanshorenPage() {
