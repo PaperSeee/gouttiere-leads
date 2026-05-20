@@ -9,10 +9,11 @@ import {
   Leaf,
   Clock,
   Shield,
-  Award,
   CheckCircle,
   MapPin,
   ArrowRight,
+  Euro,
+  ThumbsUp,
 } from "lucide-react";
 import ContactForm from "@/components/ContactForm";
 import FAQAccordion from "@/components/FAQAccordion";
@@ -71,7 +72,7 @@ function RecentPostsSection() {
   if (recentPosts.length === 0) return null;
 
   return (
-    <section className="py-16 bg-white">
+    <section className="py-16 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-end justify-between mb-10">
           <div>
@@ -128,407 +129,237 @@ export default function HomePage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
 
-      {/* HERO */}
-      <section className="relative bg-[#1A4731] text-white overflow-hidden">
-        <div className="absolute inset-0 opacity-20">
-          <Image
-            src="https://images.unsplash.com/photo-1558769132-cb1aea458c5e?w=1600&q=80"
-            alt="Nettoyage gouttières Bruxelles"
-            fill
-            className="object-cover"
-            priority
-          />
-        </div>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
-          <div className="max-w-3xl">
-            <div className="flex flex-wrap gap-2 mb-6">
-              <span className="bg-[#F97316] text-white text-xs font-bold px-3 py-1.5 rounded-full">
-                Devis GRATUIT
-              </span>
-              <span className="bg-white/20 text-white text-xs font-semibold px-3 py-1.5 rounded-full">
-                Intervention sous 48h
-              </span>
-              <span className="bg-white/20 text-white text-xs font-semibold px-3 py-1.5 rounded-full">
-                Garantie satisfaction
-              </span>
+      {/* HERO — split layout, texte gauche / image droite */}
+      <section className="bg-white overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-0 min-h-[580px] items-center">
+            {/* Colonne texte */}
+            <div className="py-14 lg:py-20 lg:pr-12">
+              <div className="inline-flex items-center gap-2 bg-orange-50 border border-orange-200 text-[#F97316] text-xs font-bold px-3 py-1.5 rounded-full mb-6">
+                <Leaf size={12} />
+                Saison automne — Réservez avant septembre
+              </div>
+              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-gray-900 leading-tight mb-5">
+                Nettoyage Gouttières{" "}
+                <span className="text-[#1A4731]">Bruxelles</span>
+                <br />
+                <span className="text-[#F97316]">Devis gratuit sous 2h</span>
+              </h1>
+              <p className="text-gray-600 text-lg leading-relaxed mb-8">
+                Gouttières bouchées, qui débordent, fissurées ? On intervient
+                dans les 48h dans toute la région bruxelloise. Nettoyage,
+                débouchage, réparation PVC/zinc — on s&apos;occupe de tout.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-3 mb-8">
+                <a
+                  href="tel:0477234187"
+                  className="flex items-center justify-center gap-2 bg-[#F97316] hover:bg-orange-500 text-white font-bold px-7 py-4 rounded-xl text-lg transition-colors shadow-lg shadow-orange-200"
+                >
+                  <Phone size={20} />
+                  0477 23 41 87
+                </a>
+                <a
+                  href="#devis"
+                  className="flex items-center justify-center gap-2 border-2 border-[#1A4731] text-[#1A4731] hover:bg-[#1A4731] hover:text-white font-bold px-7 py-4 rounded-xl text-lg transition-colors"
+                >
+                  Formulaire de devis
+                  <ArrowRight size={20} />
+                </a>
+              </div>
+              <div className="flex flex-wrap gap-x-6 gap-y-2 text-sm text-gray-500">
+                <span className="flex items-center gap-1.5">
+                  <CheckCircle size={15} className="text-green-500" />
+                  Intervention sous 48h
+                </span>
+                <span className="flex items-center gap-1.5">
+                  <CheckCircle size={15} className="text-green-500" />
+                  Assuré RC Pro
+                </span>
+                <span className="flex items-center gap-1.5">
+                  <CheckCircle size={15} className="text-green-500" />
+                  Urgences 7j/7
+                </span>
+              </div>
             </div>
 
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight mb-6">
-              Nettoyage de Gouttières à Bruxelles{" "}
-              <span className="text-[#F97316]">— Intervention Rapide</span>
-            </h1>
-
-            <p className="text-lg sm:text-xl text-gray-200 mb-8 leading-relaxed">
-              Vos gouttières bouchées par les feuilles, la mousse ou les débris ?
-              Nettoyage Gouttières Bruxelles intervient rapidement pour nettoyer,
-              déboucher et réparer vos gouttières. Avant l&apos;automne, agissez maintenant
-              pour protéger votre habitation.
-            </p>
-
-            <div className="flex flex-col sm:flex-row gap-4">
-              <a
-                href="tel:0477234187"
-                className="flex items-center justify-center gap-2 bg-[#F97316] hover:bg-orange-500 text-white font-bold px-6 py-4 rounded-xl text-lg transition-colors"
-              >
-                <Phone size={20} />
-                0477 23 41 87
-              </a>
-              <a
-                href="#contact"
-                className="flex items-center justify-center gap-2 bg-white hover:bg-gray-100 text-[#1A4731] font-bold px-6 py-4 rounded-xl text-lg transition-colors"
-              >
-                Devis en ligne gratuit
-                <ArrowRight size={20} />
-              </a>
-            </div>
-
-            <div className="flex flex-wrap gap-4 mt-8 text-sm text-gray-300">
-              <span className="flex items-center gap-1.5">
-                <CheckCircle size={16} className="text-green-400" />
-                Certifié & assuré RC Pro
-              </span>
-              <span className="flex items-center gap-1.5">
-                <CheckCircle size={16} className="text-green-400" />
-                Nettoyage gouttières + descentes
-              </span>
-              <span className="flex items-center gap-1.5">
-                <CheckCircle size={16} className="text-green-400" />
-                Devis gratuit sans engagement
-              </span>
+            {/* Colonne image */}
+            <div className="relative h-64 lg:h-full lg:min-h-[580px] -mx-4 sm:mx-0 lg:rounded-none">
+              <Image
+                src="https://images.unsplash.com/photo-1558769132-cb1aea458c5e?w=1000&q=85"
+                alt="Nettoyage professionnel gouttières Bruxelles"
+                fill
+                className="object-cover lg:rounded-l-3xl"
+                priority
+              />
+              {/* Badge flottant */}
+              <div className="absolute bottom-6 left-6 bg-white rounded-2xl shadow-xl px-5 py-4">
+                <p className="text-3xl font-extrabold text-[#1A4731]">300+</p>
+                <p className="text-sm text-gray-500 font-medium">interventions / an</p>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* URGENCE SAISONNIERE */}
-      <section className="bg-[#F97316] text-white py-8">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
-            <div className="flex items-center gap-4">
-              <div className="bg-white/20 p-3 rounded-xl flex-shrink-0">
-                <Leaf size={28} className="text-white" />
+      {/* CHECKLIST — votre gouttière est-elle prête ? */}
+      <section className="bg-[#1A4731] py-14">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-10">
+            <h2 className="text-2xl sm:text-3xl font-bold text-white mb-2">
+              Votre gouttière est-elle prête pour les pluies ?
+            </h2>
+            <p className="text-green-200 text-sm">
+              Si vous cochez un de ces points, appelez-nous avant que les dégâts ne s&apos;aggravent.
+            </p>
+          </div>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {[
+              {
+                icon: <Leaf size={22} className="text-[#F97316]" />,
+                text: "Des feuilles ou mousse débordent de la gouttière",
+              },
+              {
+                icon: <Droplets size={22} className="text-[#F97316]" />,
+                text: "L'eau déborde lors de fortes pluies",
+              },
+              {
+                icon: <AlertTriangle size={22} className="text-[#F97316]" />,
+                text: "La gouttière est décrochée ou pend d'un côté",
+              },
+              {
+                icon: <Wrench size={22} className="text-[#F97316]" />,
+                text: "Vous n'avez pas fait nettoyer depuis +12 mois",
+              },
+              {
+                icon: <Droplets size={22} className="text-[#F97316]" />,
+                text: "Des taches d'humidité apparaissent sur la façade",
+              },
+              {
+                icon: <Clock size={22} className="text-[#F97316]" />,
+                text: "L'automne approche et les arbres sont proches",
+              },
+            ].map((item, i) => (
+              <div
+                key={i}
+                className="flex items-start gap-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-xl px-4 py-4 transition-colors cursor-default"
+              >
+                <div className="mt-0.5 flex-shrink-0">{item.icon}</div>
+                <p className="text-white text-sm leading-snug">{item.text}</p>
               </div>
-              <div>
-                <p className="font-bold text-lg">Automne approche — Préparez vos gouttières maintenant</p>
-                <p className="text-orange-100 text-sm mt-0.5">
-                  Les feuilles de platanes, marrons et tilleuls vont obstruer vos gouttières dès septembre.
-                  Anticipez avant les premières pluies d&apos;automne.
-                </p>
-              </div>
-            </div>
+            ))}
+          </div>
+          <div className="text-center mt-10">
             <a
               href="tel:0477234187"
-              className="flex items-center gap-2 bg-white text-[#F97316] font-bold px-5 py-3 rounded-xl whitespace-nowrap hover:bg-orange-50 transition-colors flex-shrink-0"
+              className="inline-flex items-center gap-3 bg-[#F97316] hover:bg-orange-500 text-white font-bold px-8 py-4 rounded-xl text-lg transition-colors shadow-lg"
             >
-              <Phone size={18} />
-              Appeler maintenant
+              <Phone size={20} />
+              Appelez-nous — 0477 23 41 87
             </a>
           </div>
         </div>
       </section>
 
-      {/* 4 SERVICES */}
-      <section className="py-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <p className="text-[#F97316] font-semibold text-sm uppercase tracking-wide mb-2">
-              Nos prestations
-            </p>
-            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3">
-              Tous nos services gouttières à Bruxelles
-            </h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
-              Du nettoyage préventif au remplacement complet, nous prenons en charge
-              l&apos;ensemble de vos besoins liés aux gouttières et à la toiture.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
-              <div className="bg-green-100 p-3 rounded-xl w-fit mb-4">
-                <Droplets size={28} className="text-[#1A4731]" />
-              </div>
-              <h3 className="font-bold text-gray-900 mb-2">Nettoyage complet</h3>
-              <p className="text-gray-600 text-sm leading-relaxed mb-3">
-                Evacuation des feuilles, mousses, sédiments et débris accumulés dans
-                vos gouttières et descentes pluviales.
-              </p>
-              <Link
-                href="/services/nettoyage-gouttieres"
-                className="text-[#F97316] text-sm font-semibold hover:underline flex items-center gap-1"
-              >
-                En savoir plus <ArrowRight size={14} />
-              </Link>
-            </div>
-
-            <div className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
-              <div className="bg-red-100 p-3 rounded-xl w-fit mb-4">
-                <AlertTriangle size={28} className="text-red-600" />
-              </div>
-              <h3 className="font-bold text-gray-900 mb-2">Débouchage urgence</h3>
-              <p className="text-gray-600 text-sm leading-relaxed mb-3">
-                Intervention d&apos;urgence 7j/7 en cas de débordement actif. Débouchage
-                haute pression des descentes pluviales.
-              </p>
-              <Link
-                href="/services/debouchage-gouttieres"
-                className="text-[#F97316] text-sm font-semibold hover:underline flex items-center gap-1"
-              >
-                En savoir plus <ArrowRight size={14} />
-              </Link>
-            </div>
-
-            <div className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
-              <div className="bg-blue-100 p-3 rounded-xl w-fit mb-4">
-                <Wrench size={28} className="text-blue-600" />
-              </div>
-              <h3 className="font-bold text-gray-900 mb-2">Réparation / remplacement</h3>
-              <p className="text-gray-600 text-sm leading-relaxed mb-3">
-                Réparation de gouttières fissurées, remplacement de tronçons endommagés
-                en PVC, zinc ou aluminium.
-              </p>
-              <Link
-                href="/services/reparation-gouttieres"
-                className="text-[#F97316] text-sm font-semibold hover:underline flex items-center gap-1"
-              >
-                En savoir plus <ArrowRight size={14} />
-              </Link>
-            </div>
-
-            <div className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
-              <div className="bg-yellow-100 p-3 rounded-xl w-fit mb-4">
-                <Leaf size={28} className="text-yellow-700" />
-              </div>
-              <h3 className="font-bold text-gray-900 mb-2">Démoussage toiture</h3>
-              <p className="text-gray-600 text-sm leading-relaxed mb-3">
-                Traitement anti-mousse et démoussage mécanique de votre toiture pour
-                prolonger la durée de vie des tuiles.
-              </p>
-              <Link
-                href="/services/demoussage-toiture"
-                className="text-[#F97316] text-sm font-semibold hover:underline flex items-center gap-1"
-              >
-                En savoir plus <ArrowRight size={14} />
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* POURQUOI NETTOYER */}
+      {/* CHIFFRES CHOCS + RISQUES — 2 colonnes, stat à gauche, liste à droite */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="relative">
-              <Image
-                src="https://images.unsplash.com/photo-1570129477492-1cf5c04a39d4?w=800&q=80"
-                alt="Professionnel nettoyage gouttières Bruxelles"
-                width={600}
-                height={450}
-                className="rounded-2xl object-cover w-full"
-                loading="lazy"
-              />
-              <div className="absolute -bottom-4 -right-4 bg-[#1A4731] text-white p-4 rounded-xl shadow-lg">
-                <p className="text-2xl font-bold text-[#F97316]">300+</p>
-                <p className="text-sm">interventions/an</p>
-                <p className="text-xs text-gray-300">en région bruxelloise</p>
-              </div>
-            </div>
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            {/* Stats */}
             <div>
-              <p className="text-[#F97316] font-semibold text-sm uppercase tracking-wide mb-2">
-                Pourquoi agir maintenant ?
+              <p className="text-[#F97316] font-semibold text-sm uppercase tracking-wide mb-3">
+                Pourquoi ne pas attendre ?
               </p>
-              <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-6">
-                4 risques majeurs si vous négligez vos gouttières
+              <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-10">
+                Le coût de l&apos;inaction
               </h2>
-              <div className="space-y-5">
-                <div className="flex items-start gap-4">
-                  <div className="bg-red-100 p-2.5 rounded-xl flex-shrink-0 mt-0.5">
-                    <AlertTriangle size={20} className="text-red-600" />
+              <div className="grid grid-cols-2 gap-6">
+                {[
+                  {
+                    value: "×10",
+                    label: "plus cher",
+                    detail: "une réparation de toiture vs un nettoyage préventif",
+                    color: "text-red-500",
+                    bg: "bg-red-50",
+                  },
+                  {
+                    value: "3 ans",
+                    label: "de vie en moins",
+                    detail: "pour une toiture mal entretenue à cause des gouttières",
+                    color: "text-orange-500",
+                    bg: "bg-orange-50",
+                  },
+                  {
+                    value: "80%",
+                    label: "des infiltrations",
+                    detail: "proviennent de gouttières mal entretenues ou bouchées",
+                    color: "text-[#1A4731]",
+                    bg: "bg-green-50",
+                  },
+                  {
+                    value: "48h",
+                    label: "notre délai",
+                    detail: "pour intervenir chez vous, urgences le jour même",
+                    color: "text-blue-500",
+                    bg: "bg-blue-50",
+                  },
+                ].map((stat) => (
+                  <div key={stat.label} className={`${stat.bg} rounded-2xl p-5`}>
+                    <p className={`text-3xl font-extrabold ${stat.color} mb-1`}>{stat.value}</p>
+                    <p className="font-bold text-gray-900 text-sm mb-1">{stat.label}</p>
+                    <p className="text-gray-500 text-xs leading-snug">{stat.detail}</p>
                   </div>
-                  <div>
-                    <h3 className="font-bold text-gray-900 mb-1">Infiltrations dans la toiture</h3>
-                    <p className="text-gray-600 text-sm">
-                      L&apos;eau stagnante dans une gouttière bouchée remonte sous les tuiles et provoque
-                      des infiltrations coûteuses dans les combles.
-                    </p>
+                ))}
+              </div>
+            </div>
+
+            {/* Image + risques */}
+            <div>
+              <div className="relative mb-6 rounded-2xl overflow-hidden">
+                <Image
+                  src="https://images.unsplash.com/photo-1570129477492-1cf5c04a39d4?w=800&q=80"
+                  alt="Gouttière bouchée dégâts Bruxelles"
+                  width={600}
+                  height={340}
+                  className="object-cover w-full h-56 lg:h-72"
+                  loading="lazy"
+                />
+              </div>
+              <div className="space-y-3">
+                {[
+                  "Infiltrations dans les combles et plafonds",
+                  "Ruissellement sur la façade — salpêtre, taches",
+                  "Saturation du sol autour des fondations",
+                  "Développement de moisissures intérieures",
+                ].map((risk, i) => (
+                  <div key={i} className="flex items-start gap-3">
+                    <div className="w-6 h-6 rounded-full bg-red-100 flex items-center justify-center flex-shrink-0 mt-0.5">
+                      <AlertTriangle size={13} className="text-red-600" />
+                    </div>
+                    <p className="text-gray-700 text-sm">{risk}</p>
                   </div>
-                </div>
-                <div className="flex items-start gap-4">
-                  <div className="bg-orange-100 p-2.5 rounded-xl flex-shrink-0 mt-0.5">
-                    <Droplets size={20} className="text-[#F97316]" />
-                  </div>
-                  <div>
-                    <h3 className="font-bold text-gray-900 mb-1">Dégâts sur la façade</h3>
-                    <p className="text-gray-600 text-sm">
-                      Le ruissellement d&apos;eau le long de la façade dégrade les joints, le
-                      crépi et favorise l&apos;apparition de salpêtre et de taches noires.
-                    </p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-4">
-                  <div className="bg-blue-100 p-2.5 rounded-xl flex-shrink-0 mt-0.5">
-                    <Wrench size={20} className="text-blue-600" />
-                  </div>
-                  <div>
-                    <h3 className="font-bold text-gray-900 mb-1">Détérioration des fondations</h3>
-                    <p className="text-gray-600 text-sm">
-                      L&apos;eau qui déborde au pied du mur sature le sol autour des fondations,
-                      provoquant tassements et fissures sur le long terme.
-                    </p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-4">
-                  <div className="bg-green-100 p-2.5 rounded-xl flex-shrink-0 mt-0.5">
-                    <Leaf size={20} className="text-[#1A4731]" />
-                  </div>
-                  <div>
-                    <h3 className="font-bold text-gray-900 mb-1">Moisissures intérieures</h3>
-                    <p className="text-gray-600 text-sm">
-                      L&apos;humidité pénétrante favorise le développement de moisissures dans les
-                      murs et les plafonds, nuisibles à la santé des occupants.
-                    </p>
-                  </div>
-                </div>
+                ))}
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* PROCESSUS */}
+      {/* FAQ — EN MILIEU DE PAGE (différence clé vs humidité) */}
       <section className="py-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3">
-              Notre processus en 4 étapes
-            </h2>
-            <p className="text-gray-600">
-              Simple, rapide et transparent — du premier contact à la fin de l&apos;intervention
-            </p>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {[
-              {
-                step: "01",
-                title: "Appel ou formulaire",
-                desc: "Contactez-nous par téléphone ou via le formulaire. Nous répondons dans l'heure en heures ouvrables pour convenir d'un rendez-vous.",
-              },
-              {
-                step: "02",
-                title: "Visite & devis gratuit",
-                desc: "Nos techniciens inspectent vos gouttières sur place et vous remettent un devis détaillé, sans engagement ni surprise.",
-              },
-              {
-                step: "03",
-                title: "Intervention rapide",
-                desc: "Nettoyage, débouchage ou réparation selon vos besoins. Intervention propre et soignée, déchets évacués à notre charge.",
-              },
-              {
-                step: "04",
-                title: "Contrôle & garantie",
-                desc: "Vérification du bon écoulement en fin d'intervention. Rapport d'état fourni et garantie satisfaction sur nos prestations.",
-              },
-            ].map((item) => (
-              <div key={item.step} className="text-center">
-                <div className="w-14 h-14 bg-[#1A4731] text-white rounded-2xl flex items-center justify-center mx-auto mb-4 text-lg font-bold">
-                  {item.step}
-                </div>
-                <h3 className="font-bold text-gray-900 mb-2">{item.title}</h3>
-                <p className="text-gray-600 text-sm leading-relaxed">{item.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* COMMUNES */}
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-10">
-            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3">
-              Zone d&apos;intervention à Bruxelles
-            </h2>
-            <p className="text-gray-600">
-              Nous intervenons dans 9 communes de la région bruxelloise
-            </p>
-          </div>
-          <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
-            {communes.map((c) => (
-              <Link
-                key={c.slug}
-                href={`/communes/${c.slug}`}
-                className="bg-gray-50 hover:bg-[#1A4731] text-gray-800 hover:text-white border border-gray-200 hover:border-[#1A4731] rounded-xl px-4 py-3 text-sm font-medium flex items-center gap-2 transition-all group"
-              >
-                <MapPin size={16} className="text-[#F97316] flex-shrink-0" />
-                Gouttières {c.name}
-                <ArrowRight
-                  size={14}
-                  className="ml-auto opacity-0 group-hover:opacity-100 transition-opacity"
-                />
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* GARANTIES */}
-      <section className="py-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3">
-              Nos garanties
-            </h2>
-            <p className="text-gray-600">Des engagements concrets pour votre tranquillité</p>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {[
-              {
-                icon: <Shield size={32} className="text-[#1A4731]" />,
-                title: "Certifié & Assuré",
-                desc: "Assurance RC Professionnelle en ordre. Techniciens qualifiés et formés aux techniques de nettoyage en hauteur.",
-              },
-              {
-                icon: <Award size={32} className="text-[#F97316]" />,
-                title: "Assurance RC Pro",
-                desc: "Vous êtes protégés en cas d'incident. Notre couverture RC Pro garantit votre bien pendant toute l'intervention.",
-              },
-              {
-                icon: <CheckCircle size={32} className="text-green-600" />,
-                title: "Devis gratuit",
-                desc: "Devis 100% gratuit et sans engagement. Tarif fixé à l'avance, aucune mauvaise surprise sur la facture finale.",
-              },
-              {
-                icon: <Clock size={32} className="text-blue-600" />,
-                title: "Intervention 48h",
-                desc: "Disponibilité rapide pour les nettoyages planifiés. Interventions d'urgence disponibles 7j/7 pour les débouchages.",
-              },
-            ].map((item) => (
-              <div key={item.title} className="bg-white rounded-xl p-6 shadow-sm border border-gray-100 text-center">
-                <div className="flex justify-center mb-4">{item.icon}</div>
-                <h3 className="font-bold text-[#1A4731] text-lg mb-2">{item.title}</h3>
-                <p className="text-gray-600 text-sm leading-relaxed">{item.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* FAQ */}
-      <section className="py-16 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10">
-            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3">
+            <p className="text-[#F97316] font-semibold text-sm uppercase tracking-wide mb-2">
               Questions fréquentes
-            </h2>
-            <p className="text-gray-600">
-              Tout ce que vous devez savoir avant de nous contacter
             </p>
+            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3">
+              Ce que nos clients demandent avant de nous appeler
+            </h2>
           </div>
           <FAQAccordion items={homeFaqs} />
           <div className="text-center mt-8">
             <Link
               href="/faq"
-              className="text-[#1A4731] font-semibold hover:text-[#F97316] transition-colors flex items-center gap-1 justify-center"
+              className="text-[#1A4731] font-semibold hover:text-[#F97316] transition-colors inline-flex items-center gap-1"
             >
               Voir toutes nos FAQ <ArrowRight size={16} />
             </Link>
@@ -536,60 +367,224 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ARTICLES RÉCENTS */}
-      <RecentPostsSection />
-
-      {/* CTA CONTACT */}
-      <section id="contact" className="py-16 bg-[#1A4731]">
+      {/* NOS SERVICES — liste horizontale avec liens, pas de cards */}
+      <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="text-white">
-              <h2 className="text-2xl sm:text-3xl font-bold mb-4">
-                Demandez votre devis gratuit
-              </h2>
-              <p className="text-gray-300 mb-6 leading-relaxed">
-                Remplissez le formulaire ci-contre ou appelez-nous directement.
-                Un expert vous rappelle sous 2h en heures ouvrables pour
-                planifier l&apos;intervention.
+          <div className="flex flex-col lg:flex-row gap-10 lg:gap-20 items-start">
+            <div className="lg:w-1/3 flex-shrink-0">
+              <p className="text-[#F97316] font-semibold text-sm uppercase tracking-wide mb-3">
+                Nos prestations
               </p>
-              <div className="space-y-3">
-                <div className="flex items-center gap-3">
-                  <CheckCircle size={20} className="text-[#F97316]" />
-                  <span className="text-gray-300 text-sm">Devis entièrement gratuit</span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <CheckCircle size={20} className="text-[#F97316]" />
-                  <span className="text-gray-300 text-sm">Intervention possible sous 48h</span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <CheckCircle size={20} className="text-[#F97316]" />
-                  <span className="text-gray-300 text-sm">Techniciens certifiés et assurés</span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <CheckCircle size={20} className="text-[#F97316]" />
-                  <span className="text-gray-300 text-sm">Débouchage urgence 7j/7</span>
-                </div>
+              <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-5">
+                Tous nos services gouttières
+              </h2>
+              <p className="text-gray-600 leading-relaxed mb-6">
+                Du nettoyage annuel à l&apos;intervention d&apos;urgence, nous couvrons
+                l&apos;ensemble des besoins liés à l&apos;entretien de vos gouttières et
+                de votre toiture en région bruxelloise.
+              </p>
+              <a
+                href="tel:0477234187"
+                className="inline-flex items-center gap-2 bg-[#1A4731] text-white font-semibold px-5 py-3 rounded-xl hover:bg-green-800 transition-colors text-sm"
+              >
+                <Phone size={16} />
+                Appeler pour un devis
+              </a>
+            </div>
+            <div className="flex-1 w-full">
+              <div className="divide-y divide-gray-100">
+                {[
+                  {
+                    icon: <Droplets size={24} className="text-[#1A4731]" />,
+                    title: "Nettoyage complet gouttières",
+                    desc: "Evacuation des feuilles, mousses, sédiments. Nettoyage gouttières + descentes pluviales inclus.",
+                    href: "/services/nettoyage-gouttieres",
+                    price: "dès 80€",
+                  },
+                  {
+                    icon: <AlertTriangle size={24} className="text-red-500" />,
+                    title: "Débouchage urgence 7j/7",
+                    desc: "Débordement actif ? Intervention haute pression en urgence, souvent le jour même.",
+                    href: "/services/debouchage-gouttieres",
+                    price: "dès 120€",
+                  },
+                  {
+                    icon: <Wrench size={24} className="text-blue-500" />,
+                    title: "Réparation & remplacement",
+                    desc: "Gouttière fissurée, décalée ou à remplacer. PVC, zinc, aluminium — tous matériaux.",
+                    href: "/services/reparation-gouttieres",
+                    price: "devis gratuit",
+                  },
+                  {
+                    icon: <Leaf size={24} className="text-yellow-600" />,
+                    title: "Démoussage toiture",
+                    desc: "Traitement anti-mousse mécanique. Prolonge la durée de vie de votre toiture.",
+                    href: "/services/demoussage-toiture",
+                    price: "devis gratuit",
+                  },
+                ].map((service) => (
+                  <Link
+                    key={service.href}
+                    href={service.href}
+                    className="flex items-start gap-5 py-5 group hover:bg-gray-50 -mx-4 px-4 transition-colors rounded-xl"
+                  >
+                    <div className="bg-gray-100 group-hover:bg-white p-3 rounded-xl flex-shrink-0 transition-colors">
+                      {service.icon}
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <div className="flex items-start justify-between gap-2">
+                        <h3 className="font-bold text-gray-900 group-hover:text-[#1A4731] transition-colors">
+                          {service.title}
+                        </h3>
+                        <span className="text-xs font-semibold text-[#F97316] bg-orange-50 px-2 py-1 rounded-lg whitespace-nowrap flex-shrink-0">
+                          {service.price}
+                        </span>
+                      </div>
+                      <p className="text-gray-500 text-sm mt-1 leading-snug">{service.desc}</p>
+                    </div>
+                    <ArrowRight
+                      size={18}
+                      className="text-gray-300 group-hover:text-[#F97316] transition-colors flex-shrink-0 mt-1"
+                    />
+                  </Link>
+                ))}
               </div>
-              <div className="mt-8 p-4 bg-white/10 rounded-xl">
-                <p className="text-white font-semibold mb-1">Préférez-vous appeler ?</p>
-                <a
-                  href="tel:0477234187"
-                  className="flex items-center gap-2 text-[#F97316] font-bold text-xl hover:text-orange-400 transition-colors"
-                >
-                  <Phone size={24} />
-                  0477 23 41 87
-                </a>
-                <p className="text-gray-400 text-xs mt-1">
-                  Lun–Ven 7h30–18h | Sam 8h–14h | Urgences 7j/7
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* COMMUNES — fond vert, liste compacte avec tags */}
+      <section className="py-16 bg-[#1A4731]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col lg:flex-row gap-10 items-center">
+            <div className="lg:w-2/5 text-white">
+              <p className="text-[#F97316] font-semibold text-sm uppercase tracking-wide mb-3">
+                Zone d&apos;intervention
+              </p>
+              <h2 className="text-2xl sm:text-3xl font-bold mb-4">
+                Gouttières Bruxelles — 9 communes couvertes
+              </h2>
+              <p className="text-green-200 leading-relaxed mb-6">
+                Nous intervenons dans toutes les communes de la région bruxelloise.
+                Déplacement inclus dans le devis. Priorité aux urgences.
+              </p>
+              <div className="flex items-center gap-3 bg-white/10 border border-white/20 rounded-xl px-4 py-3">
+                <MapPin size={20} className="text-[#F97316] flex-shrink-0" />
+                <p className="text-white text-sm">
+                  <strong>Votre commune n&apos;est pas listée ?</strong>{" "}
+                  <a href="tel:0477234187" className="text-[#F97316] underline hover:text-orange-400">
+                    Appelez-nous
+                  </a>{" "}
+                  — on couvre aussi la périphérie.
                 </p>
               </div>
             </div>
-            <div className="bg-white rounded-2xl p-6 sm:p-8">
-              <h3 className="text-gray-900 font-bold text-lg mb-6">
-                Formulaire de devis gratuit
-              </h3>
-              <ContactForm />
+            <div className="flex-1 w-full">
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-2">
+                {communes.map((c) => (
+                  <Link
+                    key={c.slug}
+                    href={`/communes/${c.slug}`}
+                    className="flex items-center justify-between bg-white/10 hover:bg-white hover:text-[#1A4731] text-white border border-white/20 hover:border-white rounded-xl px-4 py-3.5 text-sm font-semibold transition-all group"
+                  >
+                    <span>Gouttières {c.name}</span>
+                    <ArrowRight
+                      size={15}
+                      className="text-white/40 group-hover:text-[#F97316] transition-colors"
+                    />
+                  </Link>
+                ))}
+              </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CONFIANCE — horizontal, icônes + texte inline, pas de cards */}
+      <section className="py-12 bg-white border-b border-gray-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-0 lg:divide-x divide-gray-200">
+            {[
+              {
+                icon: <Shield size={28} className="text-[#1A4731]" />,
+                title: "Assuré RC Pro",
+                desc: "Couverture complète pendant l'intervention",
+              },
+              {
+                icon: <Euro size={28} className="text-[#F97316]" />,
+                title: "Devis gratuit",
+                desc: "Sans engagement, prix fixé à l'avance",
+              },
+              {
+                icon: <Clock size={28} className="text-blue-600" />,
+                title: "48h max",
+                desc: "Urgences traitées le jour même, 7j/7",
+              },
+              {
+                icon: <ThumbsUp size={28} className="text-green-600" />,
+                title: "Garantie résultat",
+                desc: "Écoulement vérifié avant de partir",
+              },
+            ].map((item) => (
+              <div key={item.title} className="lg:px-8 flex flex-col items-center text-center lg:items-start lg:text-left">
+                <div className="mb-3">{item.icon}</div>
+                <p className="font-bold text-gray-900 mb-1">{item.title}</p>
+                <p className="text-gray-500 text-sm leading-snug">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ARTICLES RÉCENTS */}
+      <RecentPostsSection />
+
+      {/* FORMULAIRE DEVIS — centré, sans double colonne */}
+      <section id="devis" className="py-16 bg-gray-50">
+        <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-10">
+            <p className="text-[#F97316] font-semibold text-sm uppercase tracking-wide mb-2">
+              Devis gratuit
+            </p>
+            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3">
+              Recevez votre prix en 2h
+            </h2>
+            <p className="text-gray-500">
+              Remplissez le formulaire ou appelez directement le{" "}
+              <a href="tel:0477234187" className="text-[#1A4731] font-bold hover:text-[#F97316] transition-colors">
+                0477 23 41 87
+              </a>
+              . Rappel sous 2h en heures ouvrables.
+            </p>
+          </div>
+          <div className="bg-white rounded-2xl shadow-sm border border-gray-200 p-6 sm:p-8">
+            <ContactForm />
+          </div>
+        </div>
+      </section>
+
+      {/* CTA FINAL — bande orange, minimaliste */}
+      <section className="bg-[#F97316] py-10">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-xl sm:text-2xl font-bold text-white mb-4">
+            Gouttières bouchées ? On intervient sous 48h dans toute la région bruxelloise.
+          </h2>
+          <div className="flex flex-col sm:flex-row gap-3 justify-center">
+            <a
+              href="tel:0477234187"
+              className="inline-flex items-center justify-center gap-2 bg-white text-[#F97316] font-bold px-6 py-3 rounded-xl hover:bg-orange-50 transition-colors"
+            >
+              <Phone size={18} />
+              0477 23 41 87
+            </a>
+            <a
+              href="#devis"
+              className="inline-flex items-center justify-center gap-2 bg-white/20 hover:bg-white/30 text-white font-bold px-6 py-3 rounded-xl transition-colors"
+            >
+              Formulaire de devis
+              <ArrowRight size={18} />
+            </a>
           </div>
         </div>
       </section>
