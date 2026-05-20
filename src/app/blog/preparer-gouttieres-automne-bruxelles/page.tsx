@@ -333,7 +333,7 @@ export default function BlogAutomneGouttieresBruxellesPage() {
               Le coût d'un nettoyage préventif — entre 80 et 200€ selon le type de bâtiment — est sans commune mesure avec celui d'une intervention d'urgence suite à des dégâts des eaux, qui peut rapidement atteindre plusieurs milliers d'euros (réparation de plafond, traitement contre les moisissures, séchage des murs, etc.).
             </p>
             <p>
-              Vous souhaitez planifier un nettoyage avant l'automne ? Contactez-nous dès maintenant pour un devis gratuit. Notre équipe intervient dans les 9 communes de la région bruxelloise et peut planifier votre intervention dans les 48 heures.
+              Vous souhaitez planifier un nettoyage avant l'automne ? Contactez-nous dès maintenant pour un devis gratuit. Notre équipe intervient dans les 19 communes de la région bruxelloise et peut planifier votre intervention dans les 48 heures.
             </p>
           </div>
 
