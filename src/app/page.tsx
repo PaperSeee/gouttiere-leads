@@ -132,7 +132,7 @@ export default function HomePage() {
       <section className="relative bg-[#1A4731] text-white overflow-hidden">
         <div className="absolute inset-0 opacity-20">
           <Image
-            src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=1600&q=80"
+            src="https://images.unsplash.com/photo-1558769132-cb1aea458c5e?w=1600&q=80"
             alt="Nettoyage gouttières Bruxelles"
             fill
             className="object-cover"
@@ -320,7 +320,7 @@ export default function HomePage() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="relative">
               <Image
-                src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&q=80"
+                src="https://images.unsplash.com/photo-1570129477492-1cf5c04a39d4?w=800&q=80"
                 alt="Professionnel nettoyage gouttières Bruxelles"
                 width={600}
                 height={450}

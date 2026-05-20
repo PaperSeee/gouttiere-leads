@@ -20,7 +20,7 @@ export const blogPosts: BlogPost[] = [
     dateLabel: "20 mai 2026",
     category: "Saisonnier",
     readTime: "7 min",
-    imageUrl: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&q=80",
+    imageUrl: "https://images.unsplash.com/photo-1570129477492-1cf5c04a39d4?w=800&q=80",
     imageAlt: "Toiture et gouttières d'une maison bruxelloise en automne",
     excerpt: "L'automne bruxellois est la saison la plus critique pour vos gouttières. Feuilles de platanes, marrons et frênes obstruent les descentes en quelques semaines. Voici comment anticiper et éviter les dégâts des eaux.",
   },
