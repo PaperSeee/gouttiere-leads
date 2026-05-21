@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
 import { Phone, Menu, X, ChevronDown } from "lucide-react";
 
@@ -43,11 +44,15 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo texte */}
-          <Link href="/" className="flex items-center shrink-0">
-            <span className="text-white font-bold text-lg leading-tight">
-              Nettoyage Gouttières{" "}
-              <span className="text-[#F97316]">Bruxelles</span>
-            </span>
+          <Link href="/" className="flex items-center shrink-0" aria-label="Nettoyage Gouttières Bruxelles — Accueil">
+            <Image
+              src="/logo.svg"
+              alt="Nettoyage Gouttières Bruxelles logo"
+              width={500}
+              height={80}
+              priority
+              style={{ height: "44px", width: "auto", maxWidth: "260px", pointerEvents: "none" }}
+            />
           </Link>
 
           {/* Desktop nav */}

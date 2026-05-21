@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 80" width="500" height="80">
+
+  <!-- Bloc vert gauche -->
+  <rect x="0" y="0" width="72" height="80" rx="10" fill="#1a4a2e"/>
+
+  <!-- Toit -->
+  <polygon points="36,12 66,38 6,38" fill="none" stroke="#ffffff" stroke-width="2.5" stroke-linejoin="round"/>
+  <!-- Corps maison -->
+  <rect x="14" y="38" width="44" height="24" fill="none" stroke="#ffffff" stroke-width="2.5"/>
+  <!-- Gouttière orange -->
+  <rect x="10" y="38" width="52" height="5" rx="2" fill="#f97316"/>
+  <!-- Gouttes -->
+  <ellipse cx="18" cy="72" rx="2" ry="3" fill="#f97316"/>
+  <ellipse cx="29" cy="76" rx="2" ry="3" fill="#f97316"/>
+  <ellipse cx="40" cy="72" rx="2" ry="3" fill="#f97316"/>
+  <ellipse cx="51" cy="76" rx="2" ry="3" fill="#f97316"/>
+
+  <!-- Barre accent orange -->
+  <rect x="82" y="0" width="3" height="80" rx="1.5" fill="#f97316"/>
+
+  <!-- NETTOYAGE en noir -->
+  <text x="96" y="32" font-family="'Arial Black', Arial, sans-serif" font-weight="900" font-size="22" fill="#0f172a" letter-spacing="-0.5">NETTOYAGE</text>
+  <!-- GOUTTIÈRES en vert -->
+  <text x="96" y="56" font-family="'Arial Black', Arial, sans-serif" font-weight="900" font-size="22" fill="#1a4a2e" letter-spacing="-0.5">GOUTTIÈRES</text>
+
+  <!-- Pill BRUXELLES -->
+  <rect x="310" y="38" width="90" height="20" rx="4" fill="#f97316"/>
+  <text x="355" y="52" font-family="Arial, sans-serif" font-size="9" font-weight="700" fill="#ffffff" text-anchor="middle" letter-spacing="1.5">BRUXELLES</text>
+
+  <!-- Tagline -->
+  <text x="96" y="72" font-family="Arial, sans-serif" font-size="9" fill="#94a3b8" letter-spacing="0.3">Intervention 48h · Devis gratuit · Urgences 7j/7</text>
+
+</svg>

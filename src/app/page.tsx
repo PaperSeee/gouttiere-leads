@@ -195,7 +195,7 @@ export default function HomePage() {
             {/* Colonne image */}
             <div className="relative h-64 lg:h-full lg:min-h-[580px] -mx-4 sm:mx-0 lg:rounded-none">
               <Image
-                src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=1000&q=85"
+                src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1000&q=85"
                 alt="Nettoyage professionnel gouttières Bruxelles"
                 fill
                 className="object-cover lg:rounded-l-3xl"
