@@ -1,6 +1,7 @@
 import { MetadataRoute } from "next";
 
 const BASE_URL = "https://www.nettoyage-gouttieres-bruxelles.be";
+const LAST_MODIFIED = new Date("2026-05-26");
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const communes = [
@@ -53,7 +54,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   return allPages.map((path) => ({
     url: `${BASE_URL}${path}`,
-    lastModified: new Date(),
+    lastModified: LAST_MODIFIED,
     changeFrequency: (path === "" ? "weekly" : "monthly") as "weekly" | "monthly",
     priority:
       path === ""

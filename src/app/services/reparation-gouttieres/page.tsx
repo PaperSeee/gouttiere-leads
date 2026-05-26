@@ -9,6 +9,18 @@ export const metadata: Metadata = {
   description:
     "Réparation et remplacement de gouttières à Bruxelles. PVC, zinc, aluminium, cuivre. Fissures, joints, fixations. Devis gratuit. Appelez le 0477 23 41 87.",
   alternates: { canonical: "https://www.nettoyage-gouttieres-bruxelles.be/services/reparation-gouttieres" },
+  openGraph: {
+    type: "website",
+    title: "Réparation Gouttières Bruxelles — PVC, Zinc, Alu",
+    description: "Réparation et remplacement gouttières à Bruxelles. Tous matériaux : PVC, zinc, aluminium, cuivre. Devis gratuit.",
+    images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "Réparation gouttières Bruxelles" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Réparation Gouttières Bruxelles — Devis Gratuit",
+    description: "Réparation et remplacement gouttières à Bruxelles. Tous matériaux. Devis gratuit.",
+    images: ["/opengraph-image"],
+  },
 };
 
 export default function ReparationGouttieres() {

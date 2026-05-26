@@ -11,33 +11,76 @@ const inter = Inter({
   display: "swap",
 });
 
+const DOMAIN = "https://www.nettoyage-gouttieres-bruxelles.be";
+
 export const metadata: Metadata = {
-  title: "Nettoyage Gouttières Bruxelles | Devis Gratuit — Intervention 48h",
+  title: {
+    default: "Nettoyage Gouttières Bruxelles | Devis Gratuit — Intervention 48h",
+    template: "%s | Nettoyage Gouttières Bruxelles",
+  },
   description:
     "Nettoyage de gouttières à Bruxelles. Débouchage, réparation, démoussage toiture. Devis gratuit, intervention sous 48h. Appelez le 0477 23 41 87.",
-  metadataBase: new URL("https://www.nettoyage-gouttieres-bruxelles.be"),
-  alternates: {
-    canonical: "/",
-  },
+  metadataBase: new URL(DOMAIN),
+  alternates: { canonical: "/" },
   icons: {
-    icon: [
-      { url: "/favicon.svg", type: "image/svg+xml" },
-    ],
+    icon: [{ url: "/favicon.svg", type: "image/svg+xml" }],
   },
   openGraph: {
     title: "Nettoyage Gouttières Bruxelles | Devis Gratuit",
     description:
       "Expert nettoyage gouttières à Bruxelles. Devis gratuit, intervention 48h, garantie satisfaction.",
-    url: "https://www.nettoyage-gouttieres-bruxelles.be",
+    url: DOMAIN,
     siteName: "Nettoyage Gouttières Bruxelles",
     locale: "fr_BE",
     type: "website",
+    images: [
+      {
+        url: "/opengraph-image",
+        width: 1200,
+        height: 630,
+        alt: "Nettoyage Gouttières Bruxelles — Devis Gratuit, Intervention 48h",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Nettoyage Gouttières Bruxelles | Devis Gratuit",
+    description: "Expert nettoyage gouttières à Bruxelles. Devis gratuit, intervention 48h.",
+    images: ["/opengraph-image"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  verification: {
+    google: "4c166d9c2126e736",
   },
 };
 
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
+};
+
+const websiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": `${DOMAIN}/#website`,
+  url: DOMAIN,
+  name: "Nettoyage Gouttières Bruxelles",
+  description: "Nettoyage de gouttières à Bruxelles. Débouchage, réparation, démoussage toiture.",
+  publisher: { "@id": `${DOMAIN}/#business` },
+  potentialAction: {
+    "@type": "SearchAction",
+    target: { "@type": "EntryPoint", urlTemplate: `${DOMAIN}/?s={search_term_string}` },
+    "query-input": "required name=search_term_string",
+  },
 };
 
 export default function RootLayout({
@@ -47,8 +90,19 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fr" className={`${inter.className} h-full`}>
-      <body className="min-h-full flex flex-col bg-white text-gray-900 antialiased">
+      <head>
+        <meta name="theme-color" content="#1A4731" />
+        <meta name="geo.region" content="BE-BRU" />
+        <meta name="geo.placename" content="Bruxelles" />
+        <meta name="geo.position" content="50.8503;4.3517" />
+        <meta name="ICBM" content="50.8503, 4.3517" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
+        />
         <LocalBusinessSchema />
+      </head>
+      <body className="min-h-full flex flex-col bg-white text-gray-900 antialiased">
         <Header />
         <main className="flex-1 pb-6 sm:pb-0">{children}</main>
         <Footer />

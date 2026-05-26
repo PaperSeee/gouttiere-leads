@@ -9,6 +9,18 @@ export const metadata: Metadata = {
   description:
     "Démoussage et traitement anti-mousse de toiture à Bruxelles. Prolongez la vie de vos tuiles. Devis gratuit. Appelez le 0477 23 41 87.",
   alternates: { canonical: "https://www.nettoyage-gouttieres-bruxelles.be/services/demoussage-toiture" },
+  openGraph: {
+    type: "website",
+    title: "Démoussage Toiture Bruxelles — Traitement Anti-Mousse",
+    description: "Démoussage et traitement anti-mousse de toiture à Bruxelles. Prolonge la vie de vos tuiles. Devis gratuit.",
+    images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "Démoussage toiture Bruxelles" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Démoussage Toiture Bruxelles — Devis Gratuit",
+    description: "Démoussage anti-mousse toiture Bruxelles. Devis gratuit, intervention rapide.",
+    images: ["/opengraph-image"],
+  },
 };
 
 export default function DemoussageToiture() {

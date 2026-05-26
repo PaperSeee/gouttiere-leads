@@ -1,17 +1,20 @@
+const DOMAIN = "https://www.nettoyage-gouttieres-bruxelles.be";
+
 export default function LocalBusinessSchema() {
   const schema = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
-    "@id": "https://www.nettoyage-gouttieres-bruxelles.be/#business",
+    "@id": `${DOMAIN}/#business`,
     name: "Nettoyage Gouttières Bruxelles",
     description:
       "Nettoyage de gouttières à Bruxelles. Débouchage, réparation, démoussage toiture. Devis gratuit, intervention sous 48h, garantie satisfaction.",
-    url: "https://www.nettoyage-gouttieres-bruxelles.be",
-    telephone: "0477234187",
+    url: DOMAIN,
+    telephone: "+32477234187",
     email: "contact@nettoyage-gouttieres-bruxelles.be",
     address: {
       "@type": "PostalAddress",
       addressLocality: "Bruxelles",
+      addressRegion: "Bruxelles-Capitale",
       addressCountry: "BE",
     },
     geo: {
@@ -20,15 +23,10 @@ export default function LocalBusinessSchema() {
       longitude: 4.3517,
     },
     areaServed: [
-      "Uccle",
-      "Ixelles",
-      "Woluwe-Saint-Pierre",
-      "Woluwe-Saint-Lambert",
-      "Auderghem",
-      "Watermael-Boitsfort",
-      "Etterbeek",
-      "Forest",
-      "Schaerbeek",
+      "Anderlecht", "Auderghem", "Berchem-Sainte-Agathe", "Bruxelles",
+      "Etterbeek", "Evere", "Forest", "Ganshoren", "Ixelles", "Jette",
+      "Koekelberg", "Molenbeek-Saint-Jean", "Saint-Gilles", "Saint-Josse-ten-Noode",
+      "Schaerbeek", "Uccle", "Watermael-Boitsfort", "Woluwe-Saint-Lambert", "Woluwe-Saint-Pierre",
     ],
     openingHoursSpecification: [
       {
@@ -45,7 +43,21 @@ export default function LocalBusinessSchema() {
       },
     ],
     priceRange: "€€",
-    image: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=800&q=80",
+    image: `${DOMAIN}/opengraph-image`,
+    logo: {
+      "@type": "ImageObject",
+      url: `${DOMAIN}/logo.svg`,
+    },
+    hasOfferCatalog: {
+      "@type": "OfferCatalog",
+      name: "Services nettoyage gouttières Bruxelles",
+      itemListElement: [
+        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Nettoyage gouttières", url: `${DOMAIN}/services/nettoyage-gouttieres` } },
+        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Débouchage gouttières", url: `${DOMAIN}/services/debouchage-gouttieres` } },
+        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Réparation gouttières", url: `${DOMAIN}/services/reparation-gouttieres` } },
+        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Démoussage toiture", url: `${DOMAIN}/services/demoussage-toiture` } },
+      ],
+    },
     sameAs: [],
   };
 
