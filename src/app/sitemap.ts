@@ -47,6 +47,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const blogPages = [
     "/blog",
+    "/blog/gouttiere-qui-deborde-causes-solutions",
     "/blog/preparer-gouttieres-automne-bruxelles",
   ];
 
