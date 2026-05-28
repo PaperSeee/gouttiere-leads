@@ -9,6 +9,14 @@ export const metadata: Metadata = {
   title: "Nettoyage Gouttières Woluwe-Saint-Pierre — Grandes Villas & Parcs | 0477 23 41 87",
   description: "Nettoyage gouttières à Woluwe-Saint-Pierre : grandes villas, parcs Malou & Parmentier, érables et marronniers. Devis gratuit. 0477 23 41 87.",
   alternates: { canonical: "https://www.nettoyage-gouttieres-bruxelles.be/communes/woluwe-saint-pierre" },
+  keywords: ["nettoyage gouttières Woluwe-Saint-Pierre", "débouchage gouttières Woluwe-Saint-Pierre", "gouttières bouchées Woluwe-Saint-Pierre", "prix nettoyage gouttières Woluwe-Saint-Pierre"],
+  openGraph: {
+    title: "Nettoyage Gouttières Woluwe-Saint-Pierre — Devis Gratuit | 0477 23 41 87",
+    description: "Expert nettoyage gouttières à Woluwe-Saint-Pierre. Débouchage urgent, réparation, démoussage. Devis gratuit, intervention rapide.",
+    url: "https://www.nettoyage-gouttieres-bruxelles.be/communes/woluwe-saint-pierre",
+    type: "website",
+    images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "Nettoyage gouttières Woluwe-Saint-Pierre" }],
+  },
 }
 
 export default function WoluweStPierrePage() {

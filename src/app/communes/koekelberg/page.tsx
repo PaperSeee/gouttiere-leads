@@ -9,6 +9,14 @@ export const metadata: Metadata = {
   title: "Nettoyage Gouttières Koekelberg — Basilique & Habitat Compact | 0477 23 41 87",
   description: "Nettoyage gouttières à Koekelberg : habitat compact, Basilique du Sacré-Cœur, maisons mitoyennes zinc. Devis gratuit. 0477 23 41 87.",
   alternates: { canonical: "https://www.nettoyage-gouttieres-bruxelles.be/communes/koekelberg" },
+  keywords: ["nettoyage gouttières Koekelberg", "débouchage gouttières Koekelberg", "gouttières bouchées Koekelberg", "prix nettoyage gouttières Koekelberg"],
+  openGraph: {
+    title: "Nettoyage Gouttières Koekelberg — Devis Gratuit | 0477 23 41 87",
+    description: "Expert nettoyage gouttières à Koekelberg. Débouchage urgent, réparation, démoussage. Devis gratuit, intervention rapide.",
+    url: "https://www.nettoyage-gouttieres-bruxelles.be/communes/koekelberg",
+    type: "website",
+    images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "Nettoyage gouttières Koekelberg" }],
+  },
 }
 
 export default function KoekelbergPage() {

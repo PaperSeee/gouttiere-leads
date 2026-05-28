@@ -20,8 +20,21 @@ export const metadata: Metadata = {
   },
   description:
     "Nettoyage de gouttières à Bruxelles. Débouchage, réparation, démoussage toiture. Devis gratuit, intervention sous 48h. Appelez le 0477 23 41 87.",
+  keywords: [
+    "nettoyage gouttières Bruxelles", "débouchage gouttières Bruxelles", "réparation gouttières Bruxelles",
+    "démoussage toiture Bruxelles", "gouttières bouchées Bruxelles", "nettoyage gouttières urgence",
+    "prix nettoyage gouttières Bruxelles", "entretien gouttières Bruxelles", "gouttières aluminium Bruxelles",
+    "nettoyage descentes pluviales Bruxelles",
+  ],
   metadataBase: new URL(DOMAIN),
-  alternates: { canonical: "/" },
+  alternates: {
+    canonical: "/",
+    languages: {
+      "fr-BE": "/",
+      "fr": "/",
+      "x-default": "/",
+    },
+  },
   icons: {
     icon: [{ url: "/favicon.svg", type: "image/svg+xml" }],
   },
@@ -68,6 +81,27 @@ export const viewport: Viewport = {
   initialScale: 1,
 };
 
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "@id": `${DOMAIN}/#organization`,
+  name: "Nettoyage Gouttières Bruxelles",
+  url: DOMAIN,
+  logo: {
+    "@type": "ImageObject",
+    url: `${DOMAIN}/favicon.svg`,
+  },
+  contactPoint: {
+    "@type": "ContactPoint",
+    telephone: "+32477234187",
+    contactType: "customer service",
+    availableLanguage: "French",
+    areaServed: "BE",
+  },
+  areaServed: { "@type": "AdministrativeArea", name: "Bruxelles-Capitale" },
+  sameAs: [],
+};
+
 const websiteSchema = {
   "@context": "https://schema.org",
   "@type": "WebSite",
@@ -96,6 +130,10 @@ export default function RootLayout({
         <meta name="geo.placename" content="Bruxelles" />
         <meta name="geo.position" content="50.8503;4.3517" />
         <meta name="ICBM" content="50.8503, 4.3517" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}

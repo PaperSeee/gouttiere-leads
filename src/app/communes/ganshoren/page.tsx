@@ -9,6 +9,14 @@ export const metadata: Metadata = {
   title: "Nettoyage Gouttières Ganshoren — Petite Commune Résidentielle | 0477 23 41 87",
   description: "Nettoyage gouttières à Ganshoren : maisons des années 50–60, jardins arborés, commune résidentielle calme. Devis gratuit. 0477 23 41 87.",
   alternates: { canonical: "https://www.nettoyage-gouttieres-bruxelles.be/communes/ganshoren" },
+  keywords: ["nettoyage gouttières Ganshoren", "débouchage gouttières Ganshoren", "gouttières bouchées Ganshoren", "prix nettoyage gouttières Ganshoren"],
+  openGraph: {
+    title: "Nettoyage Gouttières Ganshoren — Devis Gratuit | 0477 23 41 87",
+    description: "Expert nettoyage gouttières à Ganshoren. Débouchage urgent, réparation, démoussage. Devis gratuit, intervention rapide.",
+    url: "https://www.nettoyage-gouttieres-bruxelles.be/communes/ganshoren",
+    type: "website",
+    images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "Nettoyage gouttières Ganshoren" }],
+  },
 }
 
 export default function GanshorenPage() {

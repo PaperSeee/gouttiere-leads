@@ -24,7 +24,18 @@ export const metadata: Metadata = {
   title: "Nettoyage de Gouttières à Bruxelles — Intervention Rapide | Devis Gratuit",
   description:
     "Expert nettoyage de gouttières à Bruxelles. Débouchage urgent, réparation, démoussage toiture. Devis gratuit, intervention sous 48h. Appelez le 0477 23 41 87.",
-  alternates: { canonical: "https://www.nettoyage-gouttieres-bruxelles.be/" },
+  keywords: ["nettoyage gouttières Bruxelles", "débouchage gouttières urgence Bruxelles", "réparation gouttières Bruxelles", "démoussage toiture Bruxelles", "gouttières bouchées intervention rapide"],
+  alternates: {
+    canonical: "https://www.nettoyage-gouttieres-bruxelles.be/",
+    languages: { "fr-BE": "/", "fr": "/", "x-default": "/" },
+  },
+  openGraph: {
+    title: "Nettoyage de Gouttières à Bruxelles — Intervention Rapide | Devis Gratuit",
+    description: "Expert nettoyage de gouttières à Bruxelles. Débouchage urgent, réparation, démoussage toiture. Devis gratuit, intervention sous 48h.",
+    url: "https://www.nettoyage-gouttieres-bruxelles.be/",
+    type: "website",
+    images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "Nettoyage Gouttières Bruxelles" }],
+  },
 };
 
 const communes = [

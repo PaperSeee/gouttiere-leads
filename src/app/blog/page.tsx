@@ -7,7 +7,15 @@ export const metadata: Metadata = {
   title: "Blog — Conseils Nettoyage Gouttières Bruxelles",
   description:
     "Articles et conseils pratiques sur l'entretien des gouttières à Bruxelles. Guides saisonniers, tutoriels et informations pour propriétaires bruxellois.",
+  keywords: ["conseils gouttières Bruxelles", "entretien gouttières maison", "blog nettoyage gouttières", "guides gouttières propriétaires Bruxelles"],
   alternates: { canonical: "https://www.nettoyage-gouttieres-bruxelles.be/blog" },
+  openGraph: {
+    title: "Blog — Conseils Nettoyage Gouttières Bruxelles",
+    description: "Articles pratiques sur l'entretien des gouttières à Bruxelles. Guides saisonniers pour propriétaires.",
+    url: "https://www.nettoyage-gouttieres-bruxelles.be/blog",
+    type: "website",
+    images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "Blog nettoyage gouttières Bruxelles" }],
+  },
 };
 
 export default function Blog() {

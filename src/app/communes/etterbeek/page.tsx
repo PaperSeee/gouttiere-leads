@@ -9,6 +9,14 @@ export const metadata: Metadata = {
   title: "Nettoyage Gouttières Etterbeek — Immeubles & Maisons | 0477 23 41 87",
   description: "Nettoyage gouttières à Etterbeek : immeubles à appartements, maisons mitoyennes, toitures plates. Devis gratuit, intervention rapide. 0477 23 41 87.",
   alternates: { canonical: "https://www.nettoyage-gouttieres-bruxelles.be/communes/etterbeek" },
+  keywords: ["nettoyage gouttières Etterbeek", "débouchage gouttières Etterbeek", "gouttières bouchées Etterbeek", "prix nettoyage gouttières Etterbeek"],
+  openGraph: {
+    title: "Nettoyage Gouttières Etterbeek — Devis Gratuit | 0477 23 41 87",
+    description: "Expert nettoyage gouttières à Etterbeek. Débouchage urgent, réparation, démoussage. Devis gratuit, intervention rapide.",
+    url: "https://www.nettoyage-gouttieres-bruxelles.be/communes/etterbeek",
+    type: "website",
+    images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "Nettoyage gouttières Etterbeek" }],
+  },
 }
 
 export default function EtterbeekPage() {

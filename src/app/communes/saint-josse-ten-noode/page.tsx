@@ -9,6 +9,14 @@ export const metadata: Metadata = {
   title: "Nettoyage Gouttières Saint-Josse-ten-Noode — Immeubles Denses | 0477 23 41 87",
   description: "Nettoyage gouttières à Saint-Josse-ten-Noode : immeubles denses, accès hauteur, toitures plates. Devis gratuit, intervention rapide. 0477 23 41 87.",
   alternates: { canonical: "https://www.nettoyage-gouttieres-bruxelles.be/communes/saint-josse-ten-noode" },
+  keywords: ["nettoyage gouttières Saint-Josse", "débouchage gouttières Saint-Josse", "gouttières bouchées Saint-Josse", "prix nettoyage gouttières Saint-Josse"],
+  openGraph: {
+    title: "Nettoyage Gouttières Saint-Josse — Devis Gratuit | 0477 23 41 87",
+    description: "Expert nettoyage gouttières à Saint-Josse. Débouchage urgent, réparation, démoussage. Devis gratuit, intervention rapide.",
+    url: "https://www.nettoyage-gouttieres-bruxelles.be/communes/saint-josse-ten-noode",
+    type: "website",
+    images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "Nettoyage gouttières Saint-Josse" }],
+  },
 }
 
 export default function SaintJossePage() {

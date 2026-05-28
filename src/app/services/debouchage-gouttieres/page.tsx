@@ -9,6 +9,7 @@ export const metadata: Metadata = {
   description:
     "Débouchage urgent de gouttières et descentes pluviales à Bruxelles. Intervention 7j/7, haute pression. Débordement actif ? Appelez le 0477 23 41 87.",
   alternates: { canonical: "https://www.nettoyage-gouttieres-bruxelles.be/services/debouchage-gouttieres" },
+  keywords: ["débouchage gouttières urgence Bruxelles", "gouttières bouchées Bruxelles", "débouchage descentes pluviales", "urgence gouttières 7j/7 Bruxelles"],
   openGraph: {
     type: "website",
     title: "Débouchage Gouttières Bruxelles — Urgence 7j/7",

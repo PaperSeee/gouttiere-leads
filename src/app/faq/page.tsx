@@ -8,7 +8,15 @@ export const metadata: Metadata = {
   title: "FAQ Nettoyage Gouttières Bruxelles — 15 Questions & Réponses",
   description:
     "Toutes les réponses à vos questions sur le nettoyage de gouttières à Bruxelles : prix, fréquence, risques, urgences, matériaux. Expert disponible au 0477 23 41 87.",
+  keywords: ["FAQ gouttières Bruxelles", "questions nettoyage gouttières", "fréquence nettoyage gouttières", "gouttières bouchées risques", "prix gouttières Bruxelles"],
   alternates: { canonical: "https://www.nettoyage-gouttieres-bruxelles.be/faq" },
+  openGraph: {
+    title: "FAQ Nettoyage Gouttières Bruxelles — 15 Questions & Réponses",
+    description: "Prix, fréquence, risques, urgences, matériaux — toutes les réponses sur le nettoyage de gouttières à Bruxelles.",
+    url: "https://www.nettoyage-gouttieres-bruxelles.be/faq",
+    type: "website",
+    images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "FAQ nettoyage gouttières Bruxelles" }],
+  },
 };
 
 const faqs = [
