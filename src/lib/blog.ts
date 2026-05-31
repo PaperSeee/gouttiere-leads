@@ -13,6 +13,30 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "prix-nettoyage-gouttieres-bruxelles",
+    title: "Prix nettoyage gouttières à Bruxelles : tarifs 2026 et ce qui influence le coût",
+    description: "Combien coûte un nettoyage de gouttières à Bruxelles ? Tarifs détaillés 2026 selon le type de maison, comparaison DIY vs professionnel et ce qui est inclus dans une prestation.",
+    date: "2026-05-29",
+    dateLabel: "29 mai 2026",
+    category: "Tarifs",
+    readTime: "8 min",
+    imageUrl: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80",
+    imageAlt: "Nettoyage professionnel de gouttières — tarifs Bruxelles 2026",
+    excerpt: "Vous souhaitez faire nettoyer vos gouttières mais vous ne savez pas combien cela coûte ? Ce guide détaille les tarifs réels pratiqués à Bruxelles en 2026 : de 80€ pour une maison mitoyenne à 220€ pour une villa 4 façades.",
+  },
+  {
+    slug: "entretien-gouttieres-quand-faire",
+    title: "Quand nettoyer ses gouttières ? Le calendrier d'entretien idéal à Bruxelles",
+    description: "À quelle fréquence faut-il nettoyer ses gouttières à Bruxelles ? Découvrez le calendrier d'entretien recommandé, les signes d'alerte et les conséquences d'un entretien négligé.",
+    date: "2026-05-29",
+    dateLabel: "29 mai 2026",
+    category: "Entretien",
+    readTime: "7 min",
+    imageUrl: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&q=80",
+    imageAlt: "Calendrier entretien gouttières Bruxelles — nettoyage 2x par an",
+    excerpt: "Beaucoup de propriétaires bruxellois ne savent pas à quelle fréquence entretenir leurs gouttières. La règle à Bruxelles : 2 nettoyages par an minimum — après l'automne et avant le printemps. Voici le calendrier complet.",
+  },
+  {
     slug: "gouttiere-qui-deborde-causes-solutions",
     title: "Gouttière qui déborde : causes, dangers et solutions immédiates",
     description: "Votre gouttière déborde lors des pluies ? Découvrez les 6 causes les plus fréquentes, les risques pour votre maison et ce qu'il faut faire immédiatement.",

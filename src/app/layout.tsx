@@ -19,11 +19,13 @@ export const metadata: Metadata = {
     template: "%s | Nettoyage Gouttières Bruxelles",
   },
   description:
-    "Nettoyage de gouttières à Bruxelles. Débouchage, réparation, démoussage toiture. Devis gratuit, intervention sous 48h. Appelez le 0477 23 41 87.",
+    "Nettoyage de gouttières à Bruxelles. Prix dès 80 € — débouchage, réparation, démoussage toiture. Devis gratuit, intervention sous 48h. Appelez le 0477 23 41 87.",
   keywords: [
     "nettoyage gouttières Bruxelles", "débouchage gouttières Bruxelles", "réparation gouttières Bruxelles",
     "démoussage toiture Bruxelles", "gouttières bouchées Bruxelles", "nettoyage gouttières urgence",
-    "prix nettoyage gouttières Bruxelles", "entretien gouttières Bruxelles", "gouttières aluminium Bruxelles",
+    "prix nettoyage gouttières Bruxelles", "prix nettoyage gouttières", "prix nettoyage gouttière",
+    "tarif nettoyage gouttières Bruxelles", "tarif nettoyage gouttières", "coût nettoyage gouttières",
+    "gouttière bouchée prix", "entretien gouttières Bruxelles", "nettoyage gouttière prix",
     "nettoyage descentes pluviales Bruxelles",
   ],
   metadataBase: new URL(DOMAIN),
