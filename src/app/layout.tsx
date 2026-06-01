@@ -38,7 +38,16 @@ export const metadata: Metadata = {
     },
   },
   icons: {
-    icon: [{ url: "/favicon.svg", type: "image/svg+xml" }],
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/favicon.svg", type: "image/svg+xml" },
+    ],
+    apple: [
+      { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
+    ],
+    other: [
+      { rel: "manifest", url: "/site.webmanifest" },
+    ],
   },
   openGraph: {
     title: "Nettoyage Gouttières Bruxelles | Devis Gratuit",
@@ -128,6 +137,10 @@ export default function RootLayout({
     <html lang="fr" className={`${inter.className} h-full`}>
       <head>
         <meta name="theme-color" content="#1A4731" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+        <meta name="apple-mobile-web-app-title" content="Gouttières BXL" />
+        <link rel="manifest" href="/site.webmanifest" />
         <meta name="geo.region" content="BE-BRU" />
         <meta name="geo.placename" content="Bruxelles" />
         <meta name="geo.position" content="50.8503;4.3517" />
