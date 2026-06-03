@@ -60,6 +60,30 @@ export const blogPosts: BlogPost[] = [
     imageAlt: "Toiture et gouttières d'une maison bruxelloise en automne",
     excerpt: "L'automne bruxellois est la saison la plus critique pour vos gouttières. Feuilles de platanes, marrons et frênes obstruent les descentes en quelques semaines. Voici comment anticiper et éviter les dégâts des eaux.",
   },
+  {
+    slug: "materiaux-gouttieres-zinc-pvc-aluminium",
+    title: "Zinc, PVC ou Aluminium : Quel Matériau Choisir pour ses Gouttières ?",
+    description: "Comparatif complet des matériaux de gouttières disponibles à Bruxelles : durée de vie, entretien, coût et adaptation aux maisons belges. Faites le bon choix.",
+    date: "2026-06-01",
+    dateLabel: "1 juin 2026",
+    category: "Conseils",
+    readTime: "6 min",
+    imageUrl: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&q=80",
+    imageAlt: "Gouttières en zinc sur maison bruxelloise — matériaux comparatif",
+    excerpt: "Zinc, PVC, aluminium, cuivre — chaque matériau de gouttière a ses avantages et ses inconvénients. Ce guide vous aide à choisir le bon matériau selon le type de votre maison bruxelloise et votre budget.",
+  },
+  {
+    slug: "infiltration-eau-facade-gouttieres",
+    title: "Infiltrations d'eau sur Façade : le Rôle Méconnu des Gouttières",
+    description: "Taches d'humidité, moisissures, peinture qui s'écaille — les gouttières défectueuses sont souvent à l'origine des infiltrations de façade. Comment diagnostiquer et résoudre le problème.",
+    date: "2026-06-02",
+    dateLabel: "2 juin 2026",
+    category: "Urgence",
+    readTime: "5 min",
+    imageUrl: "https://images.unsplash.com/photo-1516455590571-18256e5bb9ff?w=800&q=80",
+    imageAlt: "Infiltration d'eau sur façade bruxelloise — rôle des gouttières",
+    excerpt: "Si votre façade présente des traces d'humidité, des moisissures ou une peinture qui s'écaille, vos gouttières sont peut-être en cause. Voici comment identifier le problème et les solutions pour l'éliminer définitivement.",
+  },
 ]
 
 export function getPostBySlug(slug: string): BlogPost | undefined {
