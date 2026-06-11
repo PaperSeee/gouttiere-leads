@@ -1,7 +1,8 @@
 import { MetadataRoute } from "next";
+import { blogPosts } from "@/lib/blog";
 
 const BASE_URL = "https://www.nettoyage-gouttieres-bruxelles.be";
-const LAST_MODIFIED = new Date("2026-05-26");
+const LAST_MODIFIED = new Date("2026-06-09");
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const communes = [
@@ -47,8 +48,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const blogPages = [
     "/blog",
-    "/blog/gouttiere-qui-deborde-causes-solutions",
-    "/blog/preparer-gouttieres-automne-bruxelles",
+    ...blogPosts.map((post) => `/blog/${post.slug}`),
   ];
 
   const allPages = [...staticPages, ...communePages, ...servicePages, ...blogPages];
