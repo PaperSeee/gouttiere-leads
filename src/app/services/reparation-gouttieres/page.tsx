@@ -5,7 +5,7 @@ import Breadcrumb from "@/components/Breadcrumb";
 import ContactForm from "@/components/ContactForm";
 
 export const metadata: Metadata = {
-  title: "Réparation Gouttières Bruxelles — Remplacement PVC, Zinc, Alu | Devis Gratuit",
+  title: "Réparation Gouttières Bruxelles — Remplacement PVC, Zinc",
   description:
     "Réparation et remplacement de gouttières à Bruxelles. PVC, zinc, aluminium, cuivre. Fissures, joints, fixations. Devis gratuit. Appelez le 0477 23 41 87.",
   alternates: { canonical: "https://www.nettoyage-gouttieres-bruxelles.be/services/reparation-gouttieres" },

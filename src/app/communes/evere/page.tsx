@@ -6,7 +6,7 @@ import Breadcrumb from "@/components/Breadcrumb"
 import ContactForm from "@/components/ContactForm"
 
 export const metadata: Metadata = {
-  title: "Nettoyage Gouttières Evere — OTAN & Quartiers Résidentiels | 0477 23 41 87",
+  title: "Nettoyage Gouttières Evere — Quartiers Résidentiels",
   description: "Nettoyage gouttières à Evere : quartiers résidentiels OTAN, maisons des années 60, peupliers. Devis gratuit, intervention rapide. 0477 23 41 87.",
   alternates: { canonical: "https://www.nettoyage-gouttieres-bruxelles.be/communes/evere" },
   keywords: ["nettoyage gouttières Evere", "débouchage gouttières Evere", "gouttières bouchées Evere", "prix nettoyage gouttières Evere"],

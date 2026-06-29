@@ -6,7 +6,7 @@ import Breadcrumb from "@/components/Breadcrumb"
 import ContactForm from "@/components/ContactForm"
 
 export const metadata: Metadata = {
-  title: "Nettoyage Gouttières Jette — Villas Résidentielles & Parc de Laeken | 0477 23 41 87",
+  title: "Nettoyage Gouttières Jette — Villas Résidentielles",
   description: "Nettoyage gouttières à Jette : villas résidentielles, bouleau et charme, maisons des années 50–70. Devis gratuit, intervention rapide. 0477 23 41 87.",
   alternates: { canonical: "https://www.nettoyage-gouttieres-bruxelles.be/communes/jette" },
   keywords: ["nettoyage gouttières Jette", "débouchage gouttières Jette", "gouttières bouchées Jette", "prix nettoyage gouttières Jette"],

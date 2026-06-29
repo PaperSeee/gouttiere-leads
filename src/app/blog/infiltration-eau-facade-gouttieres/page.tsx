@@ -5,8 +5,8 @@ import Breadcrumb from "@/components/Breadcrumb"
 import ContactForm from "@/components/ContactForm"
 
 export const metadata: Metadata = {
-  title: "Infiltrations d'Eau sur Façade : le Rôle Méconnu des Gouttières",
-  description: "Taches d'humidité, moisissures, peinture qui s'écaille — les gouttières défectueuses sont souvent la cause des infiltrations de façade. Diagnostic et solutions.",
+  title: "Infiltrations d'Eau Façade : le Rôle des Gouttières",
+  description: "Taches d'humidité, moisissures, peinture qui s'écaille : les gouttières défectueuses causent souvent des infiltrations de façade. Diagnostic et solutions.",
   keywords: ["infiltration eau façade", "gouttière qui déborde façade", "humidité mur extérieur", "moisissures façade causes", "gouttière endommagée infiltration"],
   alternates: { canonical: "https://www.nettoyage-gouttieres-bruxelles.be/blog/infiltration-eau-facade-gouttieres" },
   openGraph: {

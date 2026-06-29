@@ -6,7 +6,7 @@ import Breadcrumb from "@/components/Breadcrumb"
 import ContactForm from "@/components/ContactForm"
 
 export const metadata: Metadata = {
-  title: "Nettoyage Gouttières Saint-Gilles — Art Nouveau & Maisons de Maître | 0477 23 41 87",
+  title: "Nettoyage Gouttières Saint-Gilles — Art Nouveau",
   description: "Nettoyage gouttières à Saint-Gilles : maisons de maître Art nouveau, zinc ornemental, parvis. Devis gratuit, intervention rapide. 0477 23 41 87.",
   alternates: { canonical: "https://www.nettoyage-gouttieres-bruxelles.be/communes/saint-gilles" },
   keywords: ["nettoyage gouttières Saint-Gilles", "débouchage gouttières Saint-Gilles", "gouttières bouchées Saint-Gilles", "prix nettoyage gouttières Saint-Gilles"],

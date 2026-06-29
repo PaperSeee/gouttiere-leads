@@ -5,7 +5,7 @@ import Breadcrumb from "@/components/Breadcrumb"
 import ContactForm from "@/components/ContactForm"
 
 export const metadata: Metadata = {
-  title: "Comment Préparer ses Gouttières Avant l'Automne à Bruxelles | Blog",
+  title: "Préparer ses Gouttières Avant l'Automne à Bruxelles",
   description: "Guide complet pour préparer vos gouttières avant l'automne à Bruxelles : checklist d'inspection, 5 arbres à risque et quand appeler un professionnel.",
   alternates: { canonical: "https://www.nettoyage-gouttieres-bruxelles.be/blog/preparer-gouttieres-automne-bruxelles" },
   openGraph: {

@@ -5,8 +5,8 @@ import Breadcrumb from "@/components/Breadcrumb"
 import ContactForm from "@/components/ContactForm"
 
 export const metadata: Metadata = {
-  title: "Quand Nettoyer ses Gouttières ? Le Calendrier d'Entretien Idéal à Bruxelles",
-  description: "À quelle fréquence faut-il nettoyer ses gouttières à Bruxelles ? Découvrez le calendrier d'entretien recommandé, les signes d'alerte et les conséquences d'un entretien négligé.",
+  title: "Quand Nettoyer ses Gouttières ? Calendrier Bruxelles",
+  description: "À quelle fréquence nettoyer ses gouttières à Bruxelles ? Calendrier d'entretien recommandé, signes d'alerte et conséquences d'un entretien négligé.",
   keywords: ["entretien gouttières bruxelles", "quand nettoyer gouttières", "fréquence nettoyage gouttières", "calendrier entretien gouttières"],
   alternates: { canonical: "https://www.nettoyage-gouttieres-bruxelles.be/blog/entretien-gouttieres-quand-faire" },
   openGraph: {

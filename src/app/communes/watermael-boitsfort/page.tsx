@@ -6,7 +6,7 @@ import Breadcrumb from "@/components/Breadcrumb"
 import ContactForm from "@/components/ContactForm"
 
 export const metadata: Metadata = {
-  title: "Nettoyage Gouttières Watermael-Boitsfort — Forêt & Cités-Jardins | 0477 23 41 87",
+  title: "Nettoyage Gouttières Watermael-Boitsfort — Forêt",
   description: "Nettoyage gouttières à Watermael-Boitsfort : cités-jardins Le Logis & Floréal, Forêt de Soignes, mousses tenaces. Devis gratuit. 0477 23 41 87.",
   alternates: { canonical: "https://www.nettoyage-gouttieres-bruxelles.be/communes/watermael-boitsfort" },
   keywords: ["nettoyage gouttières Watermael-Boitsfort", "débouchage gouttières Watermael-Boitsfort", "gouttières bouchées Watermael-Boitsfort", "prix nettoyage gouttières Watermael-Boitsfort"],

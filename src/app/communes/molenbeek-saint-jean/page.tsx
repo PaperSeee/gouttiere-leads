@@ -6,7 +6,7 @@ import Breadcrumb from "@/components/Breadcrumb"
 import ContactForm from "@/components/ContactForm"
 
 export const metadata: Metadata = {
-  title: "Nettoyage Gouttières Molenbeek-Saint-Jean — Canal & Rénovation | 0477 23 41 87",
+  title: "Nettoyage Gouttières Molenbeek-Saint-Jean — Canal",
   description: "Nettoyage gouttières à Molenbeek-Saint-Jean : habitat dense, canal, rénovation bâti ancien. Devis gratuit, intervention rapide. 0477 23 41 87.",
   alternates: { canonical: "https://www.nettoyage-gouttieres-bruxelles.be/communes/molenbeek-saint-jean" },
   keywords: ["nettoyage gouttières Molenbeek", "débouchage gouttières Molenbeek", "gouttières bouchées Molenbeek", "prix nettoyage gouttières Molenbeek"],

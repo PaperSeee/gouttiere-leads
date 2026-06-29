@@ -5,8 +5,8 @@ import Breadcrumb from "@/components/Breadcrumb"
 import ContactForm from "@/components/ContactForm"
 
 export const metadata: Metadata = {
-  title: "Prix Nettoyage Gouttières à Bruxelles : Tarifs 2026 et Ce Qui Influence le Coût",
-  description: "Combien coûte un nettoyage de gouttières à Bruxelles ? Tarifs détaillés 2026 selon le type de maison, comparaison DIY vs professionnel et ce qui est inclus dans une prestation. Devis gratuit.",
+  title: "Prix Nettoyage Gouttières à Bruxelles : Tarifs 2026",
+  description: "Combien coûte un nettoyage de gouttières à Bruxelles ? Tarifs 2026 selon le type de maison, comparaison DIY vs pro et ce qui est inclus. Devis gratuit.",
   keywords: ["prix nettoyage gouttières", "tarif nettoyage gouttières bruxelles", "coût nettoyage gouttières", "prix nettoyage gouttière", "tarif gouttières bruxelles"],
   alternates: { canonical: "https://www.nettoyage-gouttieres-bruxelles.be/blog/prix-nettoyage-gouttieres-bruxelles" },
   openGraph: {
