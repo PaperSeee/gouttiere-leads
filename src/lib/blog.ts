@@ -13,6 +13,18 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "orages-ete-gouttieres-bruxelles-checklist",
+    title: "Orages d'été à Bruxelles : la checklist gouttières avant les intempéries",
+    description: "Un orage d'été déverse en 20 minutes l'équivalent de plusieurs jours de pluie. La checklist en 7 points pour préparer vos gouttières avant les intempéries à Bruxelles.",
+    date: "2026-07-03",
+    dateLabel: "3 juillet 2026",
+    category: "Saisonnier",
+    readTime: "6 min",
+    imageUrl: "https://images.unsplash.com/photo-1500674425229-f692875b0ab7?w=800&q=80",
+    imageAlt: "Orage d'été au-dessus de toitures bruxelloises",
+    excerpt: "Fleurs, graines et mousses s'accumulent dans les chéneaux dès mai-juin — et l'orage de juillet fait déborder ce qu'une pluie fine tolérait encore. Checklist complète en 7 points, et les bons réflexes si l'orage est déjà annoncé.",
+  },
+  {
     slug: "degat-des-eaux-gouttiere-assurance-bruxelles",
     title: "Dégât des eaux dû à une gouttière : êtes-vous couvert par votre assurance ?",
     description: "Une gouttière bouchée a causé un dégât des eaux ? Découvrez si votre assurance habitation couvre les dommages à Bruxelles, le rôle de l'entretien et comment éviter un refus d'indemnisation.",
