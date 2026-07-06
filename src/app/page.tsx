@@ -21,9 +21,9 @@ import BlogCard from "@/components/BlogCard";
 import { getRecentPosts } from "@/lib/blog";
 
 export const metadata: Metadata = {
-  title: "Nettoyage de Gouttières à Bruxelles — Intervention Rapide | Devis Gratuit",
+  title: "Nettoyage Gouttières Bruxelles — Devis Gratuit 48h",
   description:
-    "Expert nettoyage de gouttières à Bruxelles. Débouchage urgent, réparation, démoussage toiture. Devis gratuit, intervention sous 48h. Appelez le 0477 23 41 87.",
+    "Nettoyage de gouttières à Bruxelles : débouchage, réparation, démoussage. Devis gratuit, intervention sous 48h. Appelez le 0477 23 41 87.",
   keywords: ["nettoyage gouttières Bruxelles", "débouchage gouttières urgence Bruxelles", "réparation gouttières Bruxelles", "démoussage toiture Bruxelles", "gouttières bouchées intervention rapide"],
   alternates: {
     canonical: "https://www.nettoyage-gouttieres-bruxelles.be/",

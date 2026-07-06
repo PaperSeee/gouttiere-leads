@@ -5,7 +5,7 @@ import Breadcrumb from "@/components/Breadcrumb";
 import ContactForm from "@/components/ContactForm";
 
 export const metadata: Metadata = {
-  title: "Débouchage Gouttières Bruxelles — Urgence 7j/7 | 0477 23 41 87",
+  title: "Débouchage Gouttières Urgence Bruxelles — 7j/7",
   description:
     "Débouchage urgent de gouttières et descentes pluviales à Bruxelles. Intervention 7j/7, haute pression. Débordement actif ? Appelez le 0477 23 41 87.",
   alternates: { canonical: "https://www.nettoyage-gouttieres-bruxelles.be/services/debouchage-gouttieres" },
@@ -177,6 +177,14 @@ export default function DebouchageGouttieres() {
                 <Link href="/services/nettoyage-gouttieres" className="text-[#F97316] text-sm font-semibold flex items-center gap-1">
                   Planifier un nettoyage <ArrowRight size={14} />
                 </Link>
+              </div>
+
+              <div className="bg-gray-50 rounded-2xl p-6">
+                <h3 className="font-bold text-gray-900 mb-2">Conseils & guides</h3>
+                <ul className="space-y-1.5">
+                  <li><Link href="/blog/gouttiere-qui-deborde-causes-solutions" className="text-sm text-gray-700 hover:text-[#F97316]">→ Gouttière qui déborde : causes</Link></li>
+                  <li><Link href="/blog/orages-ete-gouttieres-bruxelles-checklist" className="text-sm text-gray-700 hover:text-[#F97316]">→ Orages d&apos;été : la checklist</Link></li>
+                </ul>
               </div>
             </div>
           </div>

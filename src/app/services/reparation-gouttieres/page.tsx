@@ -5,7 +5,7 @@ import Breadcrumb from "@/components/Breadcrumb";
 import ContactForm from "@/components/ContactForm";
 
 export const metadata: Metadata = {
-  title: "Réparation Gouttières Bruxelles — Remplacement PVC, Zinc, Alu | Devis Gratuit",
+  title: "Réparation Gouttières Bruxelles — PVC, Zinc, Alu",
   description:
     "Réparation et remplacement de gouttières à Bruxelles. PVC, zinc, aluminium, cuivre. Fissures, joints, fixations. Devis gratuit. Appelez le 0477 23 41 87.",
   alternates: { canonical: "https://www.nettoyage-gouttieres-bruxelles.be/services/reparation-gouttieres" },
@@ -173,6 +173,14 @@ export default function ReparationGouttieres() {
                   <li><Link href="/services/nettoyage-gouttieres" className="text-gray-700 hover:text-[#F97316]">→ Nettoyage gouttières</Link></li>
                   <li><Link href="/services/debouchage-gouttieres" className="text-gray-700 hover:text-[#F97316]">→ Débouchage urgence</Link></li>
                   <li><Link href="/services/demoussage-toiture" className="text-gray-700 hover:text-[#F97316]">→ Démoussage toiture</Link></li>
+                </ul>
+              </div>
+
+              <div className="bg-gray-50 rounded-2xl p-6">
+                <h3 className="font-bold text-gray-900 mb-2">Conseils & guides</h3>
+                <ul className="space-y-1.5">
+                  <li><Link href="/blog/infiltration-eau-facade-gouttieres" className="text-sm text-gray-700 hover:text-[#F97316]">→ Infiltrations façade et gouttières</Link></li>
+                  <li><Link href="/blog/materiaux-gouttieres-zinc-pvc-aluminium" className="text-sm text-gray-700 hover:text-[#F97316]">→ Zinc, PVC ou aluminium ?</Link></li>
                 </ul>
               </div>
             </div>

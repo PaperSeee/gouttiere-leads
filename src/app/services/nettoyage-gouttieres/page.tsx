@@ -5,9 +5,9 @@ import Breadcrumb from "@/components/Breadcrumb";
 import ContactForm from "@/components/ContactForm";
 
 export const metadata: Metadata = {
-  title: "Nettoyage Gouttières Bruxelles — Service Complet | Devis Gratuit",
+  title: "Nettoyage Gouttières Bruxelles — Service Complet",
   description:
-    "Service de nettoyage de gouttières à Bruxelles. Évacuation feuilles, mousses, sédiments. Nettoyage gouttières + descentes pluviales. Devis gratuit. 0477 23 41 87.",
+    "Service de nettoyage de gouttières à Bruxelles. Feuilles, mousses, sédiments, descentes pluviales. Devis gratuit. 0477 23 41 87.",
   alternates: { canonical: "https://www.nettoyage-gouttieres-bruxelles.be/services/nettoyage-gouttieres" },
   keywords: ["nettoyage gouttières Bruxelles professionnel", "nettoyage gouttières prix Bruxelles", "entretien gouttières maison Bruxelles", "nettoyage haute pression gouttières"],
   openGraph: {
@@ -219,6 +219,15 @@ export default function NettoyageGouttieres() {
                   <li><Link href="/services/debouchage-gouttieres" className="text-sm text-gray-700 hover:text-[#F97316]">→ Débouchage urgence</Link></li>
                   <li><Link href="/services/reparation-gouttieres" className="text-sm text-gray-700 hover:text-[#F97316]">→ Réparation gouttières</Link></li>
                   <li><Link href="/services/demoussage-toiture" className="text-sm text-gray-700 hover:text-[#F97316]">→ Démoussage toiture</Link></li>
+                </ul>
+              </div>
+
+              <div className="bg-gray-50 rounded-2xl p-6">
+                <h3 className="font-bold text-gray-900 mb-2">Conseils & guides</h3>
+                <ul className="space-y-1.5">
+                  <li><Link href="/blog/entretien-gouttieres-quand-faire" className="text-sm text-gray-700 hover:text-[#F97316]">→ Quand nettoyer ses gouttières ?</Link></li>
+                  <li><Link href="/blog/orages-ete-gouttieres-bruxelles-checklist" className="text-sm text-gray-700 hover:text-[#F97316]">→ Orages d&apos;été : la checklist</Link></li>
+                  <li><Link href="/blog/prix-nettoyage-gouttieres-bruxelles" className="text-sm text-gray-700 hover:text-[#F97316]">→ Prix nettoyage gouttières</Link></li>
                 </ul>
               </div>
             </div>
