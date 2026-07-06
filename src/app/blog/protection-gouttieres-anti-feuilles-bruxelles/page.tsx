@@ -232,6 +232,7 @@ export default function BlogProtectionGouttieresAntiFeuilles() {
               { label: "Gouttière qui déborde", href: "/blog/gouttiere-qui-deborde-causes-solutions" },
               { label: "Matériaux gouttières", href: "/blog/materiaux-gouttieres-zinc-pvc-aluminium" },
               { label: "Gouttières et gel en hiver", href: "/blog/gouttiere-gel-hiver-bruxelles-protection" },
+              { label: "Orages d'été : la checklist gouttières", href: "/blog/orages-ete-gouttieres-bruxelles-checklist" },
             ].map((link) => (
               <Link
                 key={link.href}

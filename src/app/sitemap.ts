@@ -2,7 +2,7 @@ import { MetadataRoute } from "next";
 import { blogPosts } from "@/lib/blog";
 
 const BASE_URL = "https://www.nettoyage-gouttieres-bruxelles.be";
-const LAST_MODIFIED = new Date("2026-07-03");
+const LAST_MODIFIED = new Date("2026-07-06");
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const communes = [
