@@ -432,6 +432,7 @@ export default function BlogDebordementPage() {
               { label: "Nettoyage de gouttières", href: "/services/nettoyage-gouttieres" },
               { label: "Réparation gouttières", href: "/services/reparation-gouttieres" },
               { label: "Préparer ses gouttières pour l'automne", href: "/blog/preparer-gouttieres-automne-bruxelles" },
+              { label: "Orages d'été : la checklist gouttières", href: "/blog/orages-ete-gouttieres-bruxelles-checklist" },
             ].map((link) => (
               <Link
                 key={link.href}

@@ -217,6 +217,7 @@ export default function BlogInfiltrationEauFacadeGouttieres() {
               { label: "Prix nettoyage gouttières", href: "/blog/prix-nettoyage-gouttieres-bruxelles" },
               { label: "Préparer l'automne", href: "/blog/preparer-gouttieres-automne-bruxelles" },
               { label: "Matériaux gouttières", href: "/blog/materiaux-gouttieres-zinc-pvc-aluminium" },
+              { label: "Orages d'été : la checklist gouttières", href: "/blog/orages-ete-gouttieres-bruxelles-checklist" },
             ].map((link) => (
               <Link
                 key={link.href}

@@ -235,6 +235,7 @@ export default function BlogDegatDesEauxGouttiereAssurance() {
               { label: "Quand nettoyer ses gouttières ?", href: "/blog/entretien-gouttieres-quand-faire" },
               { label: "Prix nettoyage gouttières", href: "/blog/prix-nettoyage-gouttieres-bruxelles" },
               { label: "Protections anti-feuilles", href: "/blog/protection-gouttieres-anti-feuilles-bruxelles" },
+              { label: "Orages d'été : la checklist gouttières", href: "/blog/orages-ete-gouttieres-bruxelles-checklist" },
             ].map((link) => (
               <Link
                 key={link.href}

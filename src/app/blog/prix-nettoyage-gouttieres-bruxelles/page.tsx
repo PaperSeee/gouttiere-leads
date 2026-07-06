@@ -420,6 +420,7 @@ export default function BlogPrixNettoyageGouttieresBruxellesPage() {
               { label: "Préparer ses gouttières pour l'automne", href: "/blog/preparer-gouttieres-automne-bruxelles" },
               { label: "Gouttière qui déborde", href: "/blog/gouttiere-qui-deborde-causes-solutions" },
               { label: "Démoussage de toiture", href: "/services/demoussage-toiture" },
+              { label: "Orages d'été : la checklist gouttières", href: "/blog/orages-ete-gouttieres-bruxelles-checklist" },
             ].map((link) => (
               <Link
                 key={link.href}
