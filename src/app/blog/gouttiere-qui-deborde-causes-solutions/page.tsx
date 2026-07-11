@@ -72,7 +72,7 @@ export default function BlogDebordementPage() {
           {
             "@type": "Question",
             name: "Combien coûte un débouchage d'urgence à Bruxelles ?",
-            acceptedAnswer: { "@type": "Answer", text: "Le débouchage d'urgence est facturé entre 120 et 200€ selon l'accessibilité et la nature du bouchon. Nous intervenons 7j/7 à Bruxelles, souvent le jour même. Devis gratuit au 0477 23 41 87." },
+            acceptedAnswer: { "@type": "Answer", text: "Le débouchage d'urgence est facturé entre 120 et 200€ selon l'accessibilité et la nature du bouchon. Nous intervenons 7j/7 à Bruxelles, souvent le jour même. Devis gratuit au 0451 05 33 70." },
           },
         ],
       },
@@ -111,11 +111,11 @@ export default function BlogDebordementPage() {
           </p>
           <div className="mt-6">
             <a
-              href="tel:0477234187"
+              href="tel:0451053370"
               className="inline-flex items-center gap-2 bg-red-500 hover:bg-red-600 text-white font-bold px-6 py-3 rounded-xl transition-colors"
             >
               <Phone size={18} />
-              Urgence — 0477 23 41 87
+              Urgence — 0451 05 33 70
             </a>
           </div>
         </div>
@@ -128,7 +128,7 @@ export default function BlogDebordementPage() {
             <AlertTriangle size={20} className="text-red-500 flex-shrink-0 mt-0.5" />
             <p className="text-red-800 text-sm">
               <strong>Débordement actif en ce moment ?</strong> N&apos;attendez pas — chaque heure de pluie aggrave les dégâts. Appelez le{" "}
-              <a href="tel:0477234187" className="font-bold underline">0477 23 41 87</a>
+              <a href="tel:0451053370" className="font-bold underline">0451 05 33 70</a>
               {" "}— intervention 7j/7, souvent le jour même.
             </p>
           </div>
@@ -345,7 +345,7 @@ export default function BlogDebordementPage() {
                 },
                 {
                   q: "Combien coûte un débouchage d'urgence à Bruxelles ?",
-                  a: "Le débouchage d'urgence est facturé entre 120 et 200€ selon l'accessibilité et la nature du bouchon. Nous intervenons 7j/7 à Bruxelles, souvent le jour même. Devis gratuit au 0477 23 41 87.",
+                  a: "Le débouchage d'urgence est facturé entre 120 et 200€ selon l'accessibilité et la nature du bouchon. Nous intervenons 7j/7 à Bruxelles, souvent le jour même. Devis gratuit au 0451 05 33 70.",
                 },
               ].map((faq, i) => (
                 <div key={i} className="bg-gray-50 rounded-xl border border-gray-100 p-5">
@@ -373,11 +373,11 @@ export default function BlogDebordementPage() {
                 <p className="text-gray-300 text-sm">Urgences 7j/7 · Devis gratuit · Intervention haute pression</p>
               </div>
               <a
-                href="tel:0477234187"
+                href="tel:0451053370"
                 className="flex items-center gap-2 bg-[#F97316] hover:bg-orange-500 text-white font-bold px-5 py-3 rounded-xl whitespace-nowrap transition-colors"
               >
                 <Phone size={18} />
-                0477 23 41 87
+                0451 05 33 70
               </a>
             </div>
           </div>
@@ -408,8 +408,8 @@ export default function BlogDebordementPage() {
               </div>
               <div className="mt-6 p-4 bg-[#1A4731] rounded-xl">
                 <p className="text-white font-semibold mb-1 text-sm">Appel direct — urgence 7j/7</p>
-                <a href="tel:0477234187" className="flex items-center gap-2 text-[#F97316] font-bold text-lg hover:text-orange-400 transition-colors">
-                  <Phone size={20} />0477 23 41 87
+                <a href="tel:0451053370" className="flex items-center gap-2 text-[#F97316] font-bold text-lg hover:text-orange-400 transition-colors">
+                  <Phone size={20} />0451 05 33 70
                 </a>
                 <p className="text-gray-400 text-xs mt-1">Lun–Ven 7h30–18h | Sam 8h–14h | Urgences 7j/7</p>
               </div>

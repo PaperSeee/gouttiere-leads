@@ -371,11 +371,11 @@ export default function BlogAutomneGouttieresBruxellesPage() {
                 <p className="text-gray-300 text-sm">Devis gratuit — intervention dans les 48h — techniciens certifiés RC Pro</p>
               </div>
               <a
-                href="tel:0477234187"
+                href="tel:0451053370"
                 className="flex items-center gap-2 bg-[#F97316] hover:bg-orange-500 text-white font-bold px-5 py-3 rounded-xl whitespace-nowrap transition-colors"
               >
                 <Phone size={18} />
-                0477 23 41 87
+                0451 05 33 70
               </a>
             </div>
           </div>
@@ -406,8 +406,8 @@ export default function BlogAutomneGouttieresBruxellesPage() {
               </div>
               <div className="mt-6 p-4 bg-[#1A4731] rounded-xl">
                 <p className="text-white font-semibold mb-1 text-sm">Appel direct</p>
-                <a href="tel:0477234187" className="flex items-center gap-2 text-[#F97316] font-bold text-lg hover:text-orange-400 transition-colors">
-                  <Phone size={20} />0477 23 41 87
+                <a href="tel:0451053370" className="flex items-center gap-2 text-[#F97316] font-bold text-lg hover:text-orange-400 transition-colors">
+                  <Phone size={20} />0451 05 33 70
                 </a>
                 <p className="text-gray-400 text-xs mt-1">Lun–Ven 7h30–18h | Sam 8h–14h | Urgences 7j/7</p>
               </div>

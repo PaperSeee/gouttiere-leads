@@ -13,14 +13,14 @@ export const metadata: Metadata = {
     type: "article",
     title: "Zinc, PVC ou Aluminium : Comparatif Matériaux Gouttières",
     description: "Durée de vie, entretien, coût — le guide complet pour choisir le bon matériau de gouttière pour votre maison bruxelloise.",
-    images: [{ url: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1200&q=80", width: 1200, height: 630, alt: "Comparatif matériaux gouttières Bruxelles" }],
+    images: [{ url: "https://images.unsplash.com/photo-1504510533704-35680f356dfd?w=1200&q=80", width: 1200, height: 630, alt: "Comparatif matériaux gouttières Bruxelles" }],
     publishedTime: "2026-06-01",
   },
   twitter: {
     card: "summary_large_image",
     title: "Zinc, PVC ou Aluminium pour vos Gouttières ?",
     description: "Comparatif complet des matériaux de gouttières pour les maisons bruxelloises.",
-    images: ["https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1200&q=80"],
+    images: ["https://images.unsplash.com/photo-1504510533704-35680f356dfd?w=1200&q=80"],
   },
 }
 
@@ -44,7 +44,7 @@ export default function BlogMateriauxGouttieresPvcZincPage() {
         },
         datePublished: "2026-06-01",
         dateModified: "2026-06-01",
-        image: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1200&q=80",
+        image: "https://images.unsplash.com/photo-1504510533704-35680f356dfd?w=1200&q=80",
         mainEntityOfPage: { "@type": "WebPage", "@id": `${DOMAIN}/blog/materiaux-gouttieres-zinc-pvc-aluminium` },
         inLanguage: "fr-BE",
         keywords: "gouttières zinc, gouttières PVC, gouttières aluminium, choisir matériau gouttière",

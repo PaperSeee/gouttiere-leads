@@ -73,8 +73,8 @@ export default function ContactForm({
         </p>
         <p className="mt-3 text-green-600 text-sm">
           Besoin urgent ?{" "}
-          <a href="tel:0477234187" className="font-semibold underline">
-            Appelez-nous au 0477 23 41 87
+          <a href="tel:0451053370" className="font-semibold underline">
+            Appelez-nous au 0451 05 33 70
           </a>
         </p>
       </div>

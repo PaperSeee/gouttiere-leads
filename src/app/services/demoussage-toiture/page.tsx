@@ -7,7 +7,7 @@ import ContactForm from "@/components/ContactForm";
 export const metadata: Metadata = {
   title: "Démoussage Toiture Bruxelles — Traitement Anti-Mousse | Devis Gratuit",
   description:
-    "Démoussage et traitement anti-mousse de toiture à Bruxelles. Prolongez la vie de vos tuiles. Devis gratuit. Appelez le 0477 23 41 87.",
+    "Démoussage et traitement anti-mousse de toiture à Bruxelles. Prolongez la vie de vos tuiles. Devis gratuit. Appelez le 0451 05 33 70.",
   alternates: { canonical: "https://www.nettoyage-gouttieres-bruxelles.be/services/demoussage-toiture" },
   keywords: ["démoussage toiture Bruxelles", "mousses toiture Bruxelles", "traitement anti-mousse toiture", "démoussage toiture prix Bruxelles"],
   openGraph: {
@@ -50,8 +50,8 @@ export default function DemoussageToiture() {
               dégrade les tuiles et alimente directement vos gouttières en débris. Un démoussage
               professionnel associé à un traitement préventif protège votre toiture pendant plusieurs années.
             </p>
-            <a href="tel:0477234187" className="inline-flex items-center gap-2 bg-[#F97316] hover:bg-orange-500 text-white font-bold px-6 py-3 rounded-xl transition-colors">
-              <Phone size={18} /> 0477 23 41 87
+            <a href="tel:0451053370" className="inline-flex items-center gap-2 bg-[#F97316] hover:bg-orange-500 text-white font-bold px-6 py-3 rounded-xl transition-colors">
+              <Phone size={18} /> 0451 05 33 70
             </a>
           </div>
         </div>
@@ -154,7 +154,7 @@ export default function DemoussageToiture() {
                     <span className="font-bold text-[#F97316]">Remise</span>
                   </div>
                 </div>
-                <a href="tel:0477234187" className="flex items-center justify-center gap-2 bg-[#F97316] text-white font-bold px-4 py-3 rounded-lg w-full hover:bg-orange-500 transition-colors">
+                <a href="tel:0451053370" className="flex items-center justify-center gap-2 bg-[#F97316] text-white font-bold px-4 py-3 rounded-lg w-full hover:bg-orange-500 transition-colors">
                   <Phone size={16} /> Devis gratuit
                 </a>
               </div>

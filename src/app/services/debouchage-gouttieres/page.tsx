@@ -5,21 +5,21 @@ import Breadcrumb from "@/components/Breadcrumb";
 import ContactForm from "@/components/ContactForm";
 
 export const metadata: Metadata = {
-  title: "Débouchage Gouttières Bruxelles — Urgence 7j/7 | 0477 23 41 87",
+  title: "Débouchage Gouttières Bruxelles — Urgence 7j/7 | 0451 05 33 70",
   description:
-    "Débouchage urgent de gouttières et descentes pluviales à Bruxelles. Intervention 7j/7, haute pression. Débordement actif ? Appelez le 0477 23 41 87.",
+    "Débouchage urgent de gouttières et descentes pluviales à Bruxelles. Intervention 7j/7, haute pression. Débordement actif ? Appelez le 0451 05 33 70.",
   alternates: { canonical: "https://www.nettoyage-gouttieres-bruxelles.be/services/debouchage-gouttieres" },
   keywords: ["débouchage gouttières urgence Bruxelles", "gouttières bouchées Bruxelles", "débouchage descentes pluviales", "urgence gouttières 7j/7 Bruxelles"],
   openGraph: {
     type: "website",
     title: "Débouchage Gouttières Bruxelles — Urgence 7j/7",
-    description: "Débouchage urgent gouttières et descentes pluviales à Bruxelles. Intervention haute pression 7j/7. Appelez le 0477 23 41 87.",
+    description: "Débouchage urgent gouttières et descentes pluviales à Bruxelles. Intervention haute pression 7j/7. Appelez le 0451 05 33 70.",
     images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "Débouchage gouttières urgence Bruxelles" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Débouchage Gouttières Bruxelles — Urgence 7j/7",
-    description: "Débouchage urgent gouttières Bruxelles. Intervention 7j/7. 0477 23 41 87.",
+    description: "Débouchage urgent gouttières Bruxelles. Intervention 7j/7. 0451 05 33 70.",
     images: ["/opengraph-image"],
   },
 };
@@ -32,7 +32,7 @@ export default function DebouchageGouttieres() {
     provider: {
       "@type": "LocalBusiness",
       name: "Nettoyage Gouttières Bruxelles",
-      telephone: "0477234187",
+      telephone: "0451053370",
     },
     areaServed: "Bruxelles",
     description: "Service de débouchage d'urgence de gouttières et descentes pluviales à Bruxelles. Disponible 7j/7.",
@@ -69,8 +69,8 @@ export default function DebouchageGouttieres() {
               et descentes pluviales avant que les dégâts ne s&apos;aggravent.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <a href="tel:0477234187" className="flex items-center justify-center gap-2 bg-yellow-400 hover:bg-yellow-300 text-red-900 font-bold px-6 py-4 rounded-xl text-lg transition-colors">
-                <Phone size={20} /> Urgence : 0477 23 41 87
+              <a href="tel:0451053370" className="flex items-center justify-center gap-2 bg-yellow-400 hover:bg-yellow-300 text-red-900 font-bold px-6 py-4 rounded-xl text-lg transition-colors">
+                <Phone size={20} /> Urgence : 0451 05 33 70
               </a>
             </div>
             <div className="flex items-center gap-2 mt-4 text-red-200 text-sm">
@@ -149,7 +149,7 @@ export default function DebouchageGouttieres() {
                     <span className="font-bold">160–200€</span>
                   </div>
                 </div>
-                <a href="tel:0477234187" className="flex items-center justify-center gap-2 bg-yellow-400 text-red-900 font-bold px-4 py-3 rounded-lg w-full hover:bg-yellow-300 transition-colors">
+                <a href="tel:0451053370" className="flex items-center justify-center gap-2 bg-yellow-400 text-red-900 font-bold px-4 py-3 rounded-lg w-full hover:bg-yellow-300 transition-colors">
                   <Phone size={16} /> Appeler maintenant
                 </a>
               </div>

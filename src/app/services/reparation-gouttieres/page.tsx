@@ -7,7 +7,7 @@ import ContactForm from "@/components/ContactForm";
 export const metadata: Metadata = {
   title: "Réparation Gouttières Bruxelles — Remplacement PVC, Zinc, Alu | Devis Gratuit",
   description:
-    "Réparation et remplacement de gouttières à Bruxelles. PVC, zinc, aluminium, cuivre. Fissures, joints, fixations. Devis gratuit. Appelez le 0477 23 41 87.",
+    "Réparation et remplacement de gouttières à Bruxelles. PVC, zinc, aluminium, cuivre. Fissures, joints, fixations. Devis gratuit. Appelez le 0451 05 33 70.",
   alternates: { canonical: "https://www.nettoyage-gouttieres-bruxelles.be/services/reparation-gouttieres" },
   keywords: ["réparation gouttières Bruxelles", "gouttières qui fuient Bruxelles", "fixation gouttières Bruxelles", "remplacement gouttières endommagées"],
   openGraph: {
@@ -51,8 +51,8 @@ export default function ReparationGouttieres() {
               l&apos;état de vos gouttières et vous proposent la solution la plus adaptée, de la simple
               réparation au remplacement complet.
             </p>
-            <a href="tel:0477234187" className="inline-flex items-center gap-2 bg-[#F97316] hover:bg-orange-500 text-white font-bold px-6 py-3 rounded-xl transition-colors">
-              <Phone size={18} /> 0477 23 41 87
+            <a href="tel:0451053370" className="inline-flex items-center gap-2 bg-[#F97316] hover:bg-orange-500 text-white font-bold px-6 py-3 rounded-xl transition-colors">
+              <Phone size={18} /> 0451 05 33 70
             </a>
           </div>
         </div>
@@ -162,7 +162,7 @@ export default function ReparationGouttieres() {
                     <span className="font-bold">20–45€/ml</span>
                   </div>
                 </div>
-                <a href="tel:0477234187" className="flex items-center justify-center gap-2 bg-[#F97316] text-white font-bold px-4 py-3 rounded-lg w-full hover:bg-orange-500 transition-colors">
+                <a href="tel:0451053370" className="flex items-center justify-center gap-2 bg-[#F97316] text-white font-bold px-4 py-3 rounded-lg w-full hover:bg-orange-500 transition-colors">
                   <Phone size={16} /> Devis gratuit
                 </a>
               </div>
