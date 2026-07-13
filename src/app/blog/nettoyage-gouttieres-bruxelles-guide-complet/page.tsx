@@ -5,8 +5,8 @@ import Breadcrumb from "@/components/Breadcrumb"
 import ContactForm from "@/components/ContactForm"
 
 export const metadata: Metadata = {
-  title: "Nettoyage Gouttières Bruxelles : Guide Complet 2026 — Prix, Fréquence & Conseils",
-  description: "Tout savoir sur le nettoyage de gouttières à Bruxelles : fréquence recommandée, prix du marché, risques d'une gouttière bouchée, et comment trouver un professionnel fiable.",
+  title: "Nettoyage Gouttières Bruxelles : Guide Complet 2026",
+  description: "Nettoyage de gouttières à Bruxelles : fréquence recommandée, prix du marché, risques d'une gouttière bouchée et critères d'un pro fiable.",
   keywords: ["nettoyage gouttières bruxelles", "nettoyer gouttières bruxelles", "prix nettoyage gouttières", "gouttières bouchées bruxelles", "entretien gouttières belgique"],
   alternates: { canonical: "https://www.nettoyage-gouttieres-bruxelles.be/blog/nettoyage-gouttieres-bruxelles-guide-complet" },
   openGraph: {

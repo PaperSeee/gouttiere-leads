@@ -6,7 +6,7 @@ import Breadcrumb from "@/components/Breadcrumb"
 import ContactForm from "@/components/ContactForm"
 
 export const metadata: Metadata = {
-  title: "Nettoyage Gouttières Watermael-Boitsfort — Forêt & Cités-Jardins | 0451 05 33 70",
+  title: "Nettoyage Gouttières Watermael-Boitsfort — Forêt & Cités-Jardins",
   description: "Nettoyage gouttières à Watermael-Boitsfort : cités-jardins Le Logis & Floréal, Forêt de Soignes, mousses tenaces. Devis gratuit. 0451 05 33 70.",
   alternates: { canonical: "https://www.nettoyage-gouttieres-bruxelles.be/communes/watermael-boitsfort" },
   keywords: ["nettoyage gouttières Watermael-Boitsfort", "débouchage gouttières Watermael-Boitsfort", "gouttières bouchées Watermael-Boitsfort", "prix nettoyage gouttières Watermael-Boitsfort"],
@@ -19,9 +19,27 @@ export const metadata: Metadata = {
   },
 }
 
+const faqs: { q: string; a: string }[] = [
+  { q: "Combien de nettoyages par an à Watermael-Boitsfort ?", a: "2 à 3 selon votre exposition. Les cités Le Logis et Floréal entourées d'arbres bénéficient d'un passage en mai, novembre et janvier-février (hêtres tardifs). On propose des abonnements annuels avec planning préétabli." },
+  { q: "Nos gouttières en cuivre des cités-jardins — comment les entretenir ?", a: "Le cuivre se nettoie avec des outils non-abrasifs pour ne pas rayer la surface et préserver la patine naturelle. Si des fissures apparaissent, on répare par soudure à l'étain. Un cuivre bien entretenu peut durer 80 à 100 ans." },
+  { q: "Les mousses dans nos gouttières sont particulièrement épaisses — pourquoi ?", a: "L'humidité permanente et l'ombrage des grands arbres créent les conditions idéales. À Watermael-Boitsfort, sans traitement préventif, les mousses peuvent atteindre 5 à 10 cm d'épaisseur en 2–3 ans, réduisant la capacité d'écoulement de plus de 50%." },
+  { q: "Proposez-vous des contrats d'entretien annuels ?", a: "Oui, particulièrement recommandé ici. On établit un planning annuel de 2 à 3 visites avec tarif préférentiel. Vous n'avez plus à y penser — on vous contacte avant chaque intervention selon le calendrier convenu." },
+];
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map((faq) => ({
+    "@type": "Question",
+    name: faq.q,
+    acceptedAnswer: { "@type": "Answer", text: faq.a },
+  })),
+};
+
 export default function WatermealBoitsfortPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <Breadcrumb items={[{ label: "Accueil", href: "/" }, { label: "Communes", href: "/" }, { label: "Watermael-Boitsfort" }]} />
 
       <section className="bg-white border-b border-gray-100 py-12 lg:py-16">
@@ -154,12 +172,7 @@ export default function WatermealBoitsfortPage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl font-bold text-gray-900 mb-8">Questions fréquentes — Watermael-Boitsfort</h2>
           <div className="space-y-5">
-            {[
-              { q: "Combien de nettoyages par an à Watermael-Boitsfort ?", a: "2 à 3 selon votre exposition. Les cités Le Logis et Floréal entourées d'arbres bénéficient d'un passage en mai, novembre et janvier-février (hêtres tardifs). On propose des abonnements annuels avec planning préétabli." },
-              { q: "Nos gouttières en cuivre des cités-jardins — comment les entretenir ?", a: "Le cuivre se nettoie avec des outils non-abrasifs pour ne pas rayer la surface et préserver la patine naturelle. Si des fissures apparaissent, on répare par soudure à l'étain. Un cuivre bien entretenu peut durer 80 à 100 ans." },
-              { q: "Les mousses dans nos gouttières sont particulièrement épaisses — pourquoi ?", a: "L'humidité permanente et l'ombrage des grands arbres créent les conditions idéales. À Watermael-Boitsfort, sans traitement préventif, les mousses peuvent atteindre 5 à 10 cm d'épaisseur en 2–3 ans, réduisant la capacité d'écoulement de plus de 50%." },
-              { q: "Proposez-vous des contrats d'entretien annuels ?", a: "Oui, particulièrement recommandé ici. On établit un planning annuel de 2 à 3 visites avec tarif préférentiel. Vous n'avez plus à y penser — on vous contacte avant chaque intervention selon le calendrier convenu." },
-            ].map((faq, i) => (
+            {faqs.map((faq, i) => (
               <div key={i} className="bg-white rounded-xl border border-gray-100 p-6">
                 <p className="font-bold text-gray-900 mb-2 flex items-start gap-2">
                   <span className="w-6 h-6 rounded-full bg-[#F97316] text-white text-xs font-bold flex items-center justify-center flex-shrink-0 mt-0.5">{i + 1}</span>

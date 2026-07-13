@@ -13,6 +13,18 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "corniche-gouttiere-bruxelles-difference-prix",
+    title: "Corniche ou Gouttière à Bruxelles : Différence, Entretien, Prix",
+    description: "Corniche et gouttière ne sont pas la même chose. Différences, signes d'usure sur le bâti bruxellois ancien, et prix d'un entretien de corniche.",
+    date: "2026-07-13",
+    dateLabel: "13 juillet 2026",
+    category: "Conseils",
+    readTime: "7 min",
+    imageUrl: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=800&q=80",
+    imageAlt: "Corniche et gouttière en zinc sur façade Art nouveau à Bruxelles",
+    excerpt: "Corniche et gouttière sont souvent confondues, à tort. Sur le bâti ancien bruxellois, la corniche abrite souvent un chéneau encaissé bien différent d'une gouttière pendante — et son entretien ne s'improvise pas de la même façon.",
+  },
+  {
     slug: "orages-ete-gouttieres-bruxelles-checklist",
     title: "Orages d'été à Bruxelles : la checklist gouttières avant les intempéries",
     description: "Un orage d'été déverse en 20 minutes l'équivalent de plusieurs jours de pluie. La checklist en 7 points pour préparer vos gouttières avant les intempéries à Bruxelles.",

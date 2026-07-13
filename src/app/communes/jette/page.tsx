@@ -6,7 +6,7 @@ import Breadcrumb from "@/components/Breadcrumb"
 import ContactForm from "@/components/ContactForm"
 
 export const metadata: Metadata = {
-  title: "Nettoyage Gouttières Jette — Villas Résidentielles & Parc de Laeken | 0451 05 33 70",
+  title: "Nettoyage Gouttières Jette — Villas Résidentielles & Parc de Laeken",
   description: "Nettoyage gouttières à Jette : villas résidentielles, bouleau et charme, maisons des années 50–70. Devis gratuit, intervention rapide. 0451 05 33 70.",
   alternates: { canonical: "https://www.nettoyage-gouttieres-bruxelles.be/communes/jette" },
   keywords: ["nettoyage gouttières Jette", "débouchage gouttières Jette", "gouttières bouchées Jette", "prix nettoyage gouttières Jette"],
@@ -19,9 +19,27 @@ export const metadata: Metadata = {
   },
 }
 
+const faqs: { q: string; a: string }[] = [
+  { q: "Les chatons de bouleaux sont-ils vraiment problématiques ?", a: "Oui, c'est l'une des surprises printanières pour les propriétaires de Jette. Les chatons tombent en avril-mai et sont suffisamment petits pour pénétrer dans les descentes, où ils se collent et forment des bouchons denses. Un nettoyage de mai complète utilement le nettoyage automnal pour les jardins avec bouleaux." },
+  { q: "Nos gouttières en aluminium des années 60 tiennent-elles encore ?", a: "L'aluminium des années 60 est en fin de vie standard (25–30 ans) depuis longtemps. Si elles fuient ou si les crochets cèdent, un remplacement s'impose. Si elles sont simplement encrassées et bien fixées, un nettoyage + démoussage peut encore prolonger leur vie de 3–5 ans." },
+  { q: "Le vent venant du parc de Laeken apporte-t-il des feuilles chez nous ?", a: "Oui, les vents d'ouest en automne transportent des feuilles des grands arbres du domaine royal vers les quartiers nord de Jette. Les propriétés les plus exposées peuvent recevoir des volumes bien supérieurs à ce que leurs propres jardins génèrent." },
+  { q: "Intervenez-vous dans tous les quartiers de Jette ?", a: "Oui, dans toute la commune — quartier des Quatre-Vents, Miroir, Karreveld, et vers Ganshoren. On connaît bien les configurations des maisons quatre façades de Jette et leurs spécificités d'accès." },
+];
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map((faq) => ({
+    "@type": "Question",
+    name: faq.q,
+    acceptedAnswer: { "@type": "Answer", text: faq.a },
+  })),
+};
+
 export default function JettePage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <Breadcrumb items={[{ label: "Accueil", href: "/" }, { label: "Communes", href: "/" }, { label: "Jette" }]} />
 
       <section className="bg-white border-b border-gray-100 py-12 lg:py-16">
@@ -156,12 +174,7 @@ export default function JettePage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl font-bold text-gray-900 mb-8">Questions fréquentes — Jette</h2>
           <div className="space-y-5">
-            {[
-              { q: "Les chatons de bouleaux sont-ils vraiment problématiques ?", a: "Oui, c'est l'une des surprises printanières pour les propriétaires de Jette. Les chatons tombent en avril-mai et sont suffisamment petits pour pénétrer dans les descentes, où ils se collent et forment des bouchons denses. Un nettoyage de mai complète utilement le nettoyage automnal pour les jardins avec bouleaux." },
-              { q: "Nos gouttières en aluminium des années 60 tiennent-elles encore ?", a: "L'aluminium des années 60 est en fin de vie standard (25–30 ans) depuis longtemps. Si elles fuient ou si les crochets cèdent, un remplacement s'impose. Si elles sont simplement encrassées et bien fixées, un nettoyage + démoussage peut encore prolonger leur vie de 3–5 ans." },
-              { q: "Le vent venant du parc de Laeken apporte-t-il des feuilles chez nous ?", a: "Oui, les vents d'ouest en automne transportent des feuilles des grands arbres du domaine royal vers les quartiers nord de Jette. Les propriétés les plus exposées peuvent recevoir des volumes bien supérieurs à ce que leurs propres jardins génèrent." },
-              { q: "Intervenez-vous dans tous les quartiers de Jette ?", a: "Oui, dans toute la commune — quartier des Quatre-Vents, Miroir, Karreveld, et vers Ganshoren. On connaît bien les configurations des maisons quatre façades de Jette et leurs spécificités d'accès." },
-            ].map((faq, i) => (
+            {faqs.map((faq, i) => (
               <div key={i} className="bg-white rounded-xl border border-gray-100 p-6">
                 <p className="font-bold text-gray-900 mb-2 flex items-start gap-2">
                   <span className="w-6 h-6 rounded-full bg-[#F97316] text-white text-xs font-bold flex items-center justify-center flex-shrink-0 mt-0.5">{i + 1}</span>

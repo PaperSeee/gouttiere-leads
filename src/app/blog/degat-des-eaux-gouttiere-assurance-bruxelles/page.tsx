@@ -5,8 +5,8 @@ import Breadcrumb from "@/components/Breadcrumb"
 import ContactForm from "@/components/ContactForm"
 
 export const metadata: Metadata = {
-  title: "Dégât des Eaux dû à une Gouttière : Êtes-vous Couvert par l'Assurance ?",
-  description: "Une gouttière bouchée a causé un dégât des eaux à Bruxelles ? Découvrez si votre assurance habitation couvre les dommages et comment éviter un refus pour défaut d'entretien.",
+  title: "Dégât des Eaux par Gouttière : Assurance, êtes-vous Couvert ?",
+  description: "Gouttière bouchée, dégât des eaux à Bruxelles : votre assurance habitation couvre-t-elle les dommages ? Comment éviter un refus pour défaut d'entretien.",
   keywords: ["dégât des eaux gouttière assurance", "gouttière bouchée assurance habitation", "défaut entretien gouttière", "infiltration assurance Bruxelles", "indemnisation dégât des eaux toiture"],
   alternates: { canonical: "https://www.nettoyage-gouttieres-bruxelles.be/blog/degat-des-eaux-gouttiere-assurance-bruxelles" },
   openGraph: {

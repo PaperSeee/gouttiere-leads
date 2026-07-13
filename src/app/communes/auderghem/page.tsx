@@ -6,7 +6,7 @@ import Breadcrumb from "@/components/Breadcrumb"
 import ContactForm from "@/components/ContactForm"
 
 export const metadata: Metadata = {
-  title: "Nettoyage Gouttières Auderghem — Expert Local | Nettoyage Gouttières Bruxelles",
+  title: "Nettoyage Gouttières Auderghem — Expert Local",
   description: "Nettoyage gouttières à Auderghem : maisons 4 façades, Forêt de Soignes, aluminium à remplacer. Rouge-Cloître. Devis gratuit. 0451 05 33 70.",
   alternates: { canonical: "https://www.nettoyage-gouttieres-bruxelles.be/communes/auderghem" },
   keywords: ["nettoyage gouttières Auderghem", "débouchage gouttières Auderghem", "gouttières bouchées Auderghem", "prix nettoyage gouttières Auderghem"],
@@ -19,9 +19,27 @@ export const metadata: Metadata = {
   },
 }
 
+const faqs: { q: string; a: string }[] = [
+  { q: "La Forêt de Soignes impacte-t-elle vraiment les gouttières à Auderghem ?", a: "Oui, très significativement. Composée majoritairement de hêtres à feuilles caduques tardives, la forêt génère des apports de feuilles jusqu'en janvier-février. Un nettoyage en novembre ne suffit pas — un passage hivernal ou en début d'année est souvent nécessaire pour les propriétés proches du Soignes." },
+  { q: "Mes gouttières en aluminium des années 80 sont-elles à remplacer ?", a: "À 35–45 ans, les gouttières en aluminium des années 80 dépassent leur durée de vie théorique. Si les profils se déforment, si les clips se décrochent ou si les joints sèchent, un remplacement s'impose. Un diagnostic gratuit permet de trancher entre réparation ciblée ou remplacement complet." },
+  { q: "Intervenez-vous dans le quartier Rouge-Cloître ?", a: "Oui, nous intervenons dans tout Auderghem, y compris Rouge-Cloître, un quartier particulièrement boisé et humide. L'accès est facile et les propriétés y ont généralement des jardins arborés qui nécessitent un entretien régulier des gouttières." },
+  { q: "Proposez-vous des devis pour les grandes propriétés ?", a: "Absolument. Les maisons 4 façades d'Auderghem peuvent avoir 50 à 80 mètres de gouttières. Nous établissons systématiquement un devis sur mesure tenant compte du linéaire total, de l'accessibilité et de l'état général de l'installation." },
+];
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map((faq) => ({
+    "@type": "Question",
+    name: faq.q,
+    acceptedAnswer: { "@type": "Answer", text: faq.a },
+  })),
+};
+
 export default function AuderghemPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <Breadcrumb items={[
         { label: "Accueil", href: "/" },
         { label: "Communes", href: "/" },
@@ -161,12 +179,7 @@ export default function AuderghemPage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl font-bold text-gray-900 mb-8">Questions fréquentes — Auderghem</h2>
           <div className="space-y-5">
-            {[
-              { q: "La Forêt de Soignes impacte-t-elle vraiment les gouttières à Auderghem ?", a: "Oui, très significativement. Composée majoritairement de hêtres à feuilles caduques tardives, la forêt génère des apports de feuilles jusqu'en janvier-février. Un nettoyage en novembre ne suffit pas — un passage hivernal ou en début d'année est souvent nécessaire pour les propriétés proches du Soignes." },
-              { q: "Mes gouttières en aluminium des années 80 sont-elles à remplacer ?", a: "À 35–45 ans, les gouttières en aluminium des années 80 dépassent leur durée de vie théorique. Si les profils se déforment, si les clips se décrochent ou si les joints sèchent, un remplacement s'impose. Un diagnostic gratuit permet de trancher entre réparation ciblée ou remplacement complet." },
-              { q: "Intervenez-vous dans le quartier Rouge-Cloître ?", a: "Oui, nous intervenons dans tout Auderghem, y compris Rouge-Cloître, un quartier particulièrement boisé et humide. L'accès est facile et les propriétés y ont généralement des jardins arborés qui nécessitent un entretien régulier des gouttières." },
-              { q: "Proposez-vous des devis pour les grandes propriétés ?", a: "Absolument. Les maisons 4 façades d'Auderghem peuvent avoir 50 à 80 mètres de gouttières. Nous établissons systématiquement un devis sur mesure tenant compte du linéaire total, de l'accessibilité et de l'état général de l'installation." },
-            ].map((faq, i) => (
+            {faqs.map((faq, i) => (
               <div key={i} className="bg-white rounded-xl border border-gray-100 p-6">
                 <p className="font-bold text-gray-900 mb-2 flex items-start gap-2">
                   <span className="w-6 h-6 rounded-full bg-[#F97316] text-white text-xs font-bold flex items-center justify-center flex-shrink-0 mt-0.5">{i + 1}</span>

@@ -5,7 +5,7 @@ import Breadcrumb from "@/components/Breadcrumb";
 import ContactForm from "@/components/ContactForm";
 
 export const metadata: Metadata = {
-  title: "Démoussage Toiture Bruxelles — Traitement Anti-Mousse | Devis Gratuit",
+  title: "Démoussage Toiture Bruxelles — Anti-Mousse",
   description:
     "Démoussage et traitement anti-mousse de toiture à Bruxelles. Prolongez la vie de vos tuiles. Devis gratuit. Appelez le 0451 05 33 70.",
   alternates: { canonical: "https://www.nettoyage-gouttieres-bruxelles.be/services/demoussage-toiture" },

@@ -6,7 +6,7 @@ import Breadcrumb from "@/components/Breadcrumb"
 import ContactForm from "@/components/ContactForm"
 
 export const metadata: Metadata = {
-  title: "Nettoyage Gouttières Ixelles — Art Nouveau & Immeubles | 0451 05 33 70",
+  title: "Nettoyage Gouttières Ixelles — Art Nouveau & Immeubles",
   description: "Nettoyage gouttières à Ixelles : maisons de maître Art nouveau, immeubles, zinc historique. Devis gratuit, intervention 48h. 0451 05 33 70.",
   alternates: { canonical: "https://www.nettoyage-gouttieres-bruxelles.be/communes/ixelles" },
   keywords: ["nettoyage gouttières Ixelles", "débouchage gouttières Ixelles", "gouttières bouchées Ixelles", "prix nettoyage gouttières Ixelles"],
@@ -19,9 +19,27 @@ export const metadata: Metadata = {
   },
 }
 
+const faqs: { q: string; a: string }[] = [
+  { q: "Peut-on nettoyer du zinc Art nouveau sans l'abîmer ?", a: "Oui, avec les bons outils. On travaille manuellement et utilise des brosses non-abrasives dans les zones ornementales. Pas de nettoyeur haute pression sur du zinc historique — trop de risque de déformation ou d'arrachage des reliefs." },
+  { q: "Notre descente pluviale est partagée avec le voisin. Comment procédez-vous ?", a: "Dans les maisons mitoyennes d'Ixelles, les descentes partagées nécessitent l'accord des deux parties. On peut intervenir sur l'ensemble du système si vous avez l'accord voisin, ou uniquement sur votre partie avec rapport pour faciliter la démarche." },
+  { q: "À quelle fréquence nettoyer à Ixelles ?", a: "Une fois par an en automne suffit généralement. Les propriétés proches du Bois de la Cambre ou des étangs peuvent nécessiter un second passage au printemps pour évacuer algues et sédiments." },
+  { q: "Intervenez-vous en copropriété ?", a: "Oui. On intervient pour les copropriétés avec devis global, rapport d'état et facture pour le syndic. On coordonne les interventions pour minimiser les perturbations." },
+];
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map((faq) => ({
+    "@type": "Question",
+    name: faq.q,
+    acceptedAnswer: { "@type": "Answer", text: faq.a },
+  })),
+};
+
 export default function IxellesPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <Breadcrumb items={[{ label: "Accueil", href: "/" }, { label: "Communes", href: "/" }, { label: "Ixelles" }]} />
 
       <section className="bg-white border-b border-gray-100 py-12 lg:py-16">
@@ -153,12 +171,7 @@ export default function IxellesPage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl font-bold text-gray-900 mb-8">Questions fréquentes — Ixelles</h2>
           <div className="space-y-5">
-            {[
-              { q: "Peut-on nettoyer du zinc Art nouveau sans l'abîmer ?", a: "Oui, avec les bons outils. On travaille manuellement et utilise des brosses non-abrasives dans les zones ornementales. Pas de nettoyeur haute pression sur du zinc historique — trop de risque de déformation ou d'arrachage des reliefs." },
-              { q: "Notre descente pluviale est partagée avec le voisin. Comment procédez-vous ?", a: "Dans les maisons mitoyennes d'Ixelles, les descentes partagées nécessitent l'accord des deux parties. On peut intervenir sur l'ensemble du système si vous avez l'accord voisin, ou uniquement sur votre partie avec rapport pour faciliter la démarche." },
-              { q: "À quelle fréquence nettoyer à Ixelles ?", a: "Une fois par an en automne suffit généralement. Les propriétés proches du Bois de la Cambre ou des étangs peuvent nécessiter un second passage au printemps pour évacuer algues et sédiments." },
-              { q: "Intervenez-vous en copropriété ?", a: "Oui. On intervient pour les copropriétés avec devis global, rapport d'état et facture pour le syndic. On coordonne les interventions pour minimiser les perturbations." },
-            ].map((faq, i) => (
+            {faqs.map((faq, i) => (
               <div key={i} className="bg-white rounded-xl border border-gray-100 p-6">
                 <p className="font-bold text-gray-900 mb-2 flex items-start gap-2">
                   <span className="w-6 h-6 rounded-full bg-[#F97316] text-white text-xs font-bold flex items-center justify-center flex-shrink-0 mt-0.5">{i + 1}</span>

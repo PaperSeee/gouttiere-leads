@@ -6,7 +6,7 @@ import ContactForm from "@/components/ContactForm"
 
 export const metadata: Metadata = {
   title: "Prix Remplacement Gouttières Bruxelles 2026 : Tarifs Complets",
-  description: "Combien coûte le remplacement de vos gouttières à Bruxelles en 2026 ? Tarifs détaillés par matériau (zinc, aluminium, PVC), longueur et type de maison. Devis sans surprise.",
+  description: "Prix du remplacement de gouttières à Bruxelles en 2026 : tarifs par matériau (zinc, aluminium, PVC), longueur et type de maison.",
   keywords: ["prix remplacement gouttières bruxelles", "coût changement gouttière", "tarif pose gouttière belgique", "remplacement gouttière zinc prix", "devis gouttière bruxelles"],
   alternates: { canonical: "https://www.nettoyage-gouttieres-bruxelles.be/blog/prix-remplacement-gouttieres-bruxelles-2026" },
   openGraph: {

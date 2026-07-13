@@ -4,9 +4,9 @@ import { ArrowRight, CheckCircle } from "lucide-react";
 import Breadcrumb from "@/components/Breadcrumb";
 
 export const metadata: Metadata = {
-  title: "Types de Gouttières : Zinc, PVC, Aluminium, Cuivre — Guide Complet",
+  title: "Types de Gouttières : Zinc, PVC, Aluminium, Cuivre",
   description:
-    "Guide complet des types de gouttières : zinc, PVC, aluminium et cuivre. Avantages, inconvénients, prix et durée de vie. Choisissez le bon matériau pour votre habitation bruxelloise.",
+    "Zinc, PVC, aluminium, cuivre : avantages, prix et durée de vie de chaque matériau. Choisissez la bonne gouttière pour votre maison bruxelloise.",
   alternates: { canonical: "https://www.nettoyage-gouttieres-bruxelles.be/types-gouttieres" },
 };
 

@@ -5,9 +5,9 @@ import Breadcrumb from "@/components/Breadcrumb";
 import ContactForm from "@/components/ContactForm";
 
 export const metadata: Metadata = {
-  title: "Tarifs Nettoyage Gouttières Bruxelles — Prix 2026 & Devis Gratuit",
+  title: "Tarifs Nettoyage Gouttières Bruxelles — Prix 2026",
   description:
-    "Prix détaillés pour le nettoyage, débouchage et réparation de gouttières à Bruxelles en 2026. Nettoyage dès 80€, débouchage dès 120€, démoussage 3–6€/m². Devis gratuit 0451 05 33 70.",
+    "Nettoyage dès 80€, débouchage dès 120€, démoussage 3–6€/m². Tarifs détaillés 2026 à Bruxelles. Devis gratuit 0451 05 33 70.",
   keywords: ["prix nettoyage gouttières Bruxelles", "tarifs débouchage gouttières", "coût réparation gouttières Bruxelles", "devis gouttières Bruxelles 2026", "tarif démoussage toiture Bruxelles"],
   alternates: { canonical: "https://www.nettoyage-gouttieres-bruxelles.be/tarifs" },
   openGraph: {
