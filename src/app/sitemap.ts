@@ -2,7 +2,8 @@ import { MetadataRoute } from "next";
 import { blogPosts } from "@/lib/blog";
 
 const BASE_URL = "https://www.nettoyage-gouttieres-bruxelles.be";
-const LAST_MODIFIED = new Date("2026-07-03");
+// Recalculated at each build so lastmod never goes stale between content updates.
+const LAST_MODIFIED = new Date();
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const communes = [
@@ -46,6 +47,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/services/demoussage-toiture",
   ];
 
+  const blogLastModified: Record<string, Date> = Object.fromEntries(
+    blogPosts.map((post) => [`/blog/${post.slug}`, new Date(post.date)])
+  );
+
   const blogPages = [
     "/blog",
     ...blogPosts.map((post) => `/blog/${post.slug}`),
@@ -55,7 +60,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   return allPages.map((path) => ({
     url: `${BASE_URL}${path}`,
-    lastModified: LAST_MODIFIED,
+    // Blog posts keep their real publication date; every other page reflects the last build.
+    lastModified: blogLastModified[path] ?? LAST_MODIFIED,
     changeFrequency: (path === "" ? "weekly" : "monthly") as "weekly" | "monthly",
     priority:
       path === ""
