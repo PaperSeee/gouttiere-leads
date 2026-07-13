@@ -6,7 +6,7 @@ import Breadcrumb from "@/components/Breadcrumb"
 import ContactForm from "@/components/ContactForm"
 
 export const metadata: Metadata = {
-  title: "Nettoyage Gouttières Ganshoren — Petite Commune Résidentielle | 0451 05 33 70",
+  title: "Nettoyage Gouttières Ganshoren — Petite Commune Résidentielle",
   description: "Nettoyage gouttières à Ganshoren : maisons des années 50–60, jardins arborés, commune résidentielle calme. Devis gratuit. 0451 05 33 70.",
   alternates: { canonical: "https://www.nettoyage-gouttieres-bruxelles.be/communes/ganshoren" },
   keywords: ["nettoyage gouttières Ganshoren", "débouchage gouttières Ganshoren", "gouttières bouchées Ganshoren", "prix nettoyage gouttières Ganshoren"],
@@ -19,9 +19,27 @@ export const metadata: Metadata = {
   },
 }
 
+const faqs: { q: string; a: string }[] = [
+  { q: "Comment savoir si nos gouttières des années 60 doivent être remplacées ?", a: "Trois signes clairs : des fuites visibles lors des pluies, des fixations (crochets) qui se détachent du fascia, et des déformations ou affaissements du chenal. Si deux de ces trois signes sont présents, un remplacement est préférable à une réparation ponctuelle." },
+  { q: "Un nettoyage par an est-il vraiment suffisant à Ganshoren ?", a: "Pour la plupart des propriétés de Ganshoren, oui. La commune n'est pas exposée aux grands arbres forestiers ni aux avenues de platanes. Un nettoyage automnal en novembre, après la chute des feuilles, suffit généralement à maintenir le système en bon état." },
+  { q: "Intervenez-vous avenue du Château et avenue de la Réforme ?", a: "Oui, dans toutes les rues de Ganshoren. La petite taille de la commune nous permet d'intervenir rapidement — souvent sous 48 heures — sans frais de déplacement supplémentaires." },
+  { q: "Peut-on avoir un devis sans s'engager ?", a: "Bien sûr, le devis est entièrement gratuit et sans engagement. On peut l'établir par téléphone ou lors d'un passage sur place. On vous présente les différentes options et vous décidez librement." },
+];
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map((faq) => ({
+    "@type": "Question",
+    name: faq.q,
+    acceptedAnswer: { "@type": "Answer", text: faq.a },
+  })),
+};
+
 export default function GanshorenPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <Breadcrumb items={[{ label: "Accueil", href: "/" }, { label: "Communes", href: "/" }, { label: "Ganshoren" }]} />
 
       <section className="bg-white border-b border-gray-100 py-12 lg:py-16">
@@ -156,12 +174,7 @@ export default function GanshorenPage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl font-bold text-gray-900 mb-8">Questions fréquentes — Ganshoren</h2>
           <div className="space-y-5">
-            {[
-              { q: "Comment savoir si nos gouttières des années 60 doivent être remplacées ?", a: "Trois signes clairs : des fuites visibles lors des pluies, des fixations (crochets) qui se détachent du fascia, et des déformations ou affaissements du chenal. Si deux de ces trois signes sont présents, un remplacement est préférable à une réparation ponctuelle." },
-              { q: "Un nettoyage par an est-il vraiment suffisant à Ganshoren ?", a: "Pour la plupart des propriétés de Ganshoren, oui. La commune n'est pas exposée aux grands arbres forestiers ni aux avenues de platanes. Un nettoyage automnal en novembre, après la chute des feuilles, suffit généralement à maintenir le système en bon état." },
-              { q: "Intervenez-vous avenue du Château et avenue de la Réforme ?", a: "Oui, dans toutes les rues de Ganshoren. La petite taille de la commune nous permet d'intervenir rapidement — souvent sous 48 heures — sans frais de déplacement supplémentaires." },
-              { q: "Peut-on avoir un devis sans s'engager ?", a: "Bien sûr, le devis est entièrement gratuit et sans engagement. On peut l'établir par téléphone ou lors d'un passage sur place. On vous présente les différentes options et vous décidez librement." },
-            ].map((faq, i) => (
+            {faqs.map((faq, i) => (
               <div key={i} className="bg-white rounded-xl border border-gray-100 p-6">
                 <p className="font-bold text-gray-900 mb-2 flex items-start gap-2">
                   <span className="w-6 h-6 rounded-full bg-[#F97316] text-white text-xs font-bold flex items-center justify-center flex-shrink-0 mt-0.5">{i + 1}</span>

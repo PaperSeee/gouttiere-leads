@@ -6,7 +6,7 @@ import Breadcrumb from "@/components/Breadcrumb"
 import ContactForm from "@/components/ContactForm"
 
 export const metadata: Metadata = {
-  title: "Nettoyage Gouttières Woluwe-Saint-Lambert — Villas & Appartements | 0451 05 33 70",
+  title: "Nettoyage Gouttières Woluwe-Saint-Lambert — Villas & Appartements",
   description: "Nettoyage gouttières à Woluwe-Saint-Lambert : villas résidentielles, immeubles, platanes des avenues. Devis gratuit, intervention 48h. 0451 05 33 70.",
   alternates: { canonical: "https://www.nettoyage-gouttieres-bruxelles.be/communes/woluwe-saint-lambert" },
   keywords: ["nettoyage gouttières Woluwe-Saint-Lambert", "débouchage gouttières Woluwe-Saint-Lambert", "gouttières bouchées Woluwe-Saint-Lambert", "prix nettoyage gouttières Woluwe-Saint-Lambert"],
@@ -19,9 +19,27 @@ export const metadata: Metadata = {
   },
 }
 
+const faqs: { q: string; a: string }[] = [
+  { q: "Intervenez-vous aussi pour les immeubles à appartements ?", a: "Oui, avec un devis formel pour le syndic ou les copropriétaires. On établit un rapport d'état complet et peut revenir annuellement selon un planning préétabli pour assurer la continuité de l'entretien." },
+  { q: "Les platanes de l'avenue de Tervueren — quelle fréquence de nettoyage ?", a: "Pour les propriétés directement bordées de platanes, deux nettoyages annuels sont recommandés : novembre (chute des grandes feuilles) et mai (débris printaniers). Hors alignement de platanes, un passage automnal suffit généralement." },
+  { q: "Quelle est la différence entre un nettoyage villa et un nettoyage immeuble ?", a: "Pour une villa, on intervient depuis l'extérieur avec des échelles et on nettoie l'ensemble du système. Pour un immeuble, on accède souvent à la toiture et on nettoie les gouttières communes. La facturation immeuble inclut un rapport d'état pour le dossier de copropriété." },
+  { q: "Nos gouttières en PVC des années 70 sont-elles à remplacer ?", a: "Le PVC des années 70 a 50 ans — au-delà de la durée de vie standard de 25–30 ans. Si elles sont cassantes, fissurées ou si les fixations cèdent, un remplacement s'impose. On peut aussi remplacer uniquement les tronçons défaillants pour réduire le coût." },
+];
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map((faq) => ({
+    "@type": "Question",
+    name: faq.q,
+    acceptedAnswer: { "@type": "Answer", text: faq.a },
+  })),
+};
+
 export default function WoluweStLambertPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <Breadcrumb items={[{ label: "Accueil", href: "/" }, { label: "Communes", href: "/" }, { label: "Woluwe-Saint-Lambert" }]} />
 
       <section className="bg-white border-b border-gray-100 py-12 lg:py-16">
@@ -155,12 +173,7 @@ export default function WoluweStLambertPage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl font-bold text-gray-900 mb-8">Questions fréquentes — Woluwe-Saint-Lambert</h2>
           <div className="space-y-5">
-            {[
-              { q: "Intervenez-vous aussi pour les immeubles à appartements ?", a: "Oui, avec un devis formel pour le syndic ou les copropriétaires. On établit un rapport d'état complet et peut revenir annuellement selon un planning préétabli pour assurer la continuité de l'entretien." },
-              { q: "Les platanes de l'avenue de Tervueren — quelle fréquence de nettoyage ?", a: "Pour les propriétés directement bordées de platanes, deux nettoyages annuels sont recommandés : novembre (chute des grandes feuilles) et mai (débris printaniers). Hors alignement de platanes, un passage automnal suffit généralement." },
-              { q: "Quelle est la différence entre un nettoyage villa et un nettoyage immeuble ?", a: "Pour une villa, on intervient depuis l'extérieur avec des échelles et on nettoie l'ensemble du système. Pour un immeuble, on accède souvent à la toiture et on nettoie les gouttières communes. La facturation immeuble inclut un rapport d'état pour le dossier de copropriété." },
-              { q: "Nos gouttières en PVC des années 70 sont-elles à remplacer ?", a: "Le PVC des années 70 a 50 ans — au-delà de la durée de vie standard de 25–30 ans. Si elles sont cassantes, fissurées ou si les fixations cèdent, un remplacement s'impose. On peut aussi remplacer uniquement les tronçons défaillants pour réduire le coût." },
-            ].map((faq, i) => (
+            {faqs.map((faq, i) => (
               <div key={i} className="bg-white rounded-xl border border-gray-100 p-6">
                 <p className="font-bold text-gray-900 mb-2 flex items-start gap-2">
                   <span className="w-6 h-6 rounded-full bg-[#F97316] text-white text-xs font-bold flex items-center justify-center flex-shrink-0 mt-0.5">{i + 1}</span>
