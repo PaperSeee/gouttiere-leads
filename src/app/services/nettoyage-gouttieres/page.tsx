@@ -162,7 +162,11 @@ export default function NettoyageGouttieres() {
               <p className="text-gray-600 leading-relaxed mb-4">
                 Pour les copropriétés et immeubles à appartements, nous recommandons également un
                 contrôle annuel systématique, car les gouttières communes sont souvent moins bien
-                entretenues que celles des maisons individuelles.
+                entretenues que celles des maisons individuelles. Voir notre guide sur{" "}
+                <Link href="/blog/gouttieres-copropriete-bruxelles-qui-paie-entretien" className="text-[#1A4731] font-semibold hover:text-[#F97316]">
+                  l&apos;entretien des gouttières en copropriété
+                </Link>{" "}
+                pour savoir qui paie et comment l&apos;organiser avec votre syndic.
               </p>
 
               <h2 className="text-2xl font-bold text-gray-900 mb-4 mt-8">Nos communes d&apos;intervention</h2>

@@ -25,8 +25,26 @@ export const metadata: Metadata = {
 };
 
 export default function ReparationGouttieres() {
+  const serviceSchema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: "Réparation et remplacement de gouttières Bruxelles",
+    provider: {
+      "@type": "LocalBusiness",
+      name: "Nettoyage Gouttières Bruxelles",
+      telephone: "0451053370",
+    },
+    areaServed: "Bruxelles",
+    description: "Réparation et remplacement de gouttières à Bruxelles. PVC, zinc, aluminium, cuivre. Fissures, joints, fixations.",
+    offers: {
+      "@type": "Offer",
+      priceRange: "40-200€",
+    },
+  };
+
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
       <Breadcrumb
         items={[
           { label: "Accueil", href: "/" },

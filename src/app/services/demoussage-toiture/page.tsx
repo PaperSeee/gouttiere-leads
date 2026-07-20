@@ -25,8 +25,26 @@ export const metadata: Metadata = {
 };
 
 export default function DemoussageToiture() {
+  const serviceSchema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: "Démoussage toiture Bruxelles",
+    provider: {
+      "@type": "LocalBusiness",
+      name: "Nettoyage Gouttières Bruxelles",
+      telephone: "0451053370",
+    },
+    areaServed: "Bruxelles",
+    description: "Démoussage et traitement anti-mousse de toiture à Bruxelles. Prolonge la durée de vie des tuiles et protège les gouttières.",
+    offers: {
+      "@type": "Offer",
+      priceRange: "3-6€/m²",
+    },
+  };
+
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
       <Breadcrumb
         items={[
           { label: "Accueil", href: "/" },
