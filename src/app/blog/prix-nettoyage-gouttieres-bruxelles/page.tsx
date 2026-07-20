@@ -164,6 +164,13 @@ export default function BlogPrixNettoyageGouttieresBruxellesPage() {
             <p className="text-sm text-gray-500 italic">
               Ces tarifs sont indicatifs et valables pour 2026. Un devis précis et gratuit est établi avant toute intervention sur votre habitation.
             </p>
+            <p className="text-sm text-gray-500">
+              Vous gérez une copropriété ? Consultez notre guide sur{" "}
+              <Link href="/blog/gouttieres-copropriete-bruxelles-qui-paie-entretien" className="text-[#1A4731] font-semibold hover:text-[#F97316]">
+                qui paie l&apos;entretien des gouttières en copropriété
+              </Link>{" "}
+              et comment l&apos;organiser avec votre syndic.
+            </p>
 
             {/* Section 2 */}
             <h2 className="text-2xl font-bold text-gray-900 mt-10 mb-4">

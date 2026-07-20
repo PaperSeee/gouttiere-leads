@@ -19,9 +19,27 @@ export const metadata: Metadata = {
   },
 }
 
+const communeFaqs: { q: string; a: string }[] = [
+              { q: "L'humidité du canal affecte-t-elle vraiment les gouttières ?", a: "Oui, significativement. Les propriétés dans un rayon de 300 mètres du canal de Charleroi connaissent une croissance des mousses 30 à 40% plus rapide. Un démoussage préventif annuel est recommandé plutôt qu'un nettoyage curatif tous les 3 ans." },
+              { q: "Le zinc de nos maisons des années 40 est-il encore récupérable ?", a: "Dans la moitié des cas, oui. Un zinc des années 40 bien conservé peut encore durer 15 à 20 ans si les profils sont droits et les soudures tiennent. On fait un diagnostic gratuit avant toute décision de remplacement." },
+              { q: "Intervenez-vous dans les quartiers Cureghem et Neerpede ?", a: "Oui, dans toute la commune d'Anderlecht sans exception. On connaît bien les particularités d'accès du bâti ouvrier local — cours étroites, passages latéraux, mitoyenneté complexe." },
+              { q: "Peut-on coordonner le nettoyage avec les voisins mitoyens ?", a: "Absolument, c'est même conseillé. On propose un tarif réduit pour les interventions groupées sur deux maisons mitoyennes le même jour. Cela permet aussi de traiter les descentes partagées en une seule fois." },
+            ]
+
 export default function AnderlechtPage() {
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: communeFaqs.map((faq) => ({
+      "@type": "Question",
+      name: faq.q,
+      acceptedAnswer: { "@type": "Answer", text: faq.a },
+    })),
+  }
+
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <Breadcrumb items={[{ label: "Accueil", href: "/" }, { label: "Communes", href: "/" }, { label: "Anderlecht" }]} />
 
       <section className="bg-white border-b border-gray-100 py-12 lg:py-16">
@@ -155,12 +173,7 @@ export default function AnderlechtPage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl font-bold text-gray-900 mb-8">Questions fréquentes — Anderlecht</h2>
           <div className="space-y-5">
-            {[
-              { q: "L'humidité du canal affecte-t-elle vraiment les gouttières ?", a: "Oui, significativement. Les propriétés dans un rayon de 300 mètres du canal de Charleroi connaissent une croissance des mousses 30 à 40% plus rapide. Un démoussage préventif annuel est recommandé plutôt qu'un nettoyage curatif tous les 3 ans." },
-              { q: "Le zinc de nos maisons des années 40 est-il encore récupérable ?", a: "Dans la moitié des cas, oui. Un zinc des années 40 bien conservé peut encore durer 15 à 20 ans si les profils sont droits et les soudures tiennent. On fait un diagnostic gratuit avant toute décision de remplacement." },
-              { q: "Intervenez-vous dans les quartiers Cureghem et Neerpede ?", a: "Oui, dans toute la commune d'Anderlecht sans exception. On connaît bien les particularités d'accès du bâti ouvrier local — cours étroites, passages latéraux, mitoyenneté complexe." },
-              { q: "Peut-on coordonner le nettoyage avec les voisins mitoyens ?", a: "Absolument, c'est même conseillé. On propose un tarif réduit pour les interventions groupées sur deux maisons mitoyennes le même jour. Cela permet aussi de traiter les descentes partagées en une seule fois." },
-            ].map((faq, i) => (
+            {communeFaqs.map((faq, i) => (
               <div key={i} className="bg-white rounded-xl border border-gray-100 p-6">
                 <p className="font-bold text-gray-900 mb-2 flex items-start gap-2">
                   <span className="w-6 h-6 rounded-full bg-[#F97316] text-white text-xs font-bold flex items-center justify-center flex-shrink-0 mt-0.5">{i + 1}</span>

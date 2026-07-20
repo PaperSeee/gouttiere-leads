@@ -19,9 +19,27 @@ export const metadata: Metadata = {
   },
 }
 
+const communeFaqs: { q: string; a: string }[] = [
+              { q: "Peut-on coordonner le nettoyage avec notre voisin mitoyen ?", a: "Oui, et c'est même conseillé ! Pour les maisons mitoyennes, on propose un tarif légèrement réduit quand on fait deux maisons le même jour. Cela permet aussi de traiter les descentes partagées en une seule intervention efficace." },
+              { q: "Nos gouttières en zinc des années 30 valent-elles encore la peine ?", a: "Ça dépend de l'état. Le zinc des années 30 peut encore durer 10–20 ans si l'oxydation est légère et les profils rectilignes. Un diagnostic gratuit permet de trancher — si 60% du linéaire est en bon état, une réparation ciblée reste économique." },
+              { q: "Les ardoises du toit causent-elles des problèmes de gouttières ?", a: "Les mousses sur ardoises migrent vers les gouttières et forment des bouchons compacts. Les ardoises brisées créent aussi des points d'infiltration. Un démoussage préventif protège les deux à la fois." },
+              { q: "Intervenez-vous avenue Van Volxem et avenue Besme ?", a: "Oui, dans toutes les rues de Forest, y compris les avenues bordées d'arbres qui génèrent le plus de feuilles. On connaît bien ces zones et leurs spécificités d'accès." },
+            ]
+
 export default function ForestPage() {
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: communeFaqs.map((faq) => ({
+      "@type": "Question",
+      name: faq.q,
+      acceptedAnswer: { "@type": "Answer", text: faq.a },
+    })),
+  }
+
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <Breadcrumb items={[{ label: "Accueil", href: "/" }, { label: "Communes", href: "/" }, { label: "Forest" }]} />
 
       <section className="bg-white border-b border-gray-100 py-12 lg:py-16">
@@ -154,12 +172,7 @@ export default function ForestPage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl font-bold text-gray-900 mb-8">Questions fréquentes — Forest</h2>
           <div className="space-y-5">
-            {[
-              { q: "Peut-on coordonner le nettoyage avec notre voisin mitoyen ?", a: "Oui, et c'est même conseillé ! Pour les maisons mitoyennes, on propose un tarif légèrement réduit quand on fait deux maisons le même jour. Cela permet aussi de traiter les descentes partagées en une seule intervention efficace." },
-              { q: "Nos gouttières en zinc des années 30 valent-elles encore la peine ?", a: "Ça dépend de l'état. Le zinc des années 30 peut encore durer 10–20 ans si l'oxydation est légère et les profils rectilignes. Un diagnostic gratuit permet de trancher — si 60% du linéaire est en bon état, une réparation ciblée reste économique." },
-              { q: "Les ardoises du toit causent-elles des problèmes de gouttières ?", a: "Les mousses sur ardoises migrent vers les gouttières et forment des bouchons compacts. Les ardoises brisées créent aussi des points d'infiltration. Un démoussage préventif protège les deux à la fois." },
-              { q: "Intervenez-vous avenue Van Volxem et avenue Besme ?", a: "Oui, dans toutes les rues de Forest, y compris les avenues bordées d'arbres qui génèrent le plus de feuilles. On connaît bien ces zones et leurs spécificités d'accès." },
-            ].map((faq, i) => (
+            {communeFaqs.map((faq, i) => (
               <div key={i} className="bg-white rounded-xl border border-gray-100 p-6">
                 <p className="font-bold text-gray-900 mb-2 flex items-start gap-2">
                   <span className="w-6 h-6 rounded-full bg-[#F97316] text-white text-xs font-bold flex items-center justify-center flex-shrink-0 mt-0.5">{i + 1}</span>

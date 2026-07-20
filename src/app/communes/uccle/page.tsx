@@ -19,9 +19,39 @@ export const metadata: Metadata = {
   },
 }
 
+const communeFaqs: { q: string; a: string }[] = [
+              {
+                q: "À quelle fréquence faut-il nettoyer les gouttières à Uccle ?",
+                a: "À Uccle, deux nettoyages par an sont souvent nécessaires — mai après les floraisons printanières, novembre après la chute des feuilles. Les propriétés avec de grands jardins arborés (platanes, chênes, hêtres) peuvent nécessiter trois passages.",
+              },
+              {
+                q: "Intervenez-vous avenue Molière et avenue Brugmann ?",
+                a: "Oui, nous intervenons régulièrement dans toutes les avenues d'Uccle — Molière, Brugmann, Winston Churchill, Delleur et le quartier du Bois. Notre matériel est adapté aux villas haut de gamme avec façades hautes.",
+              },
+              {
+                q: "Mes gouttières en zinc d'époque peuvent-elles être réparées ?",
+                a: "Les gouttières en zinc des villas des années 30–60 peuvent souvent être réparées par soudure ou reprise de joints si l'oxydation n'est pas trop avancée. Sinon, remplacement par zinc neuf ou aluminium laqué qui s'intègre parfaitement à l'architecture d'époque.",
+              },
+              {
+                q: "La pente de mon jardin aggrave-t-elle les risques ?",
+                a: "Oui. Les terrains en pente typiques d'Uccle concentrent les eaux pluviales vers les fondations en cas de débordement. C'est pourquoi l'entretien régulier est encore plus crucial ici — un bouchon peut causer des infiltrations de fondations en quelques heures.",
+              },
+            ]
+
 export default function UcclePage() {
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: communeFaqs.map((faq) => ({
+      "@type": "Question",
+      name: faq.q,
+      acceptedAnswer: { "@type": "Answer", text: faq.a },
+    })),
+  }
+
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <Breadcrumb items={[
         { label: "Accueil", href: "/" },
         { label: "Communes", href: "/" },
@@ -214,24 +244,7 @@ export default function UcclePage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl font-bold text-gray-900 mb-8">Questions fréquentes — Uccle</h2>
           <div className="space-y-5">
-            {[
-              {
-                q: "À quelle fréquence faut-il nettoyer les gouttières à Uccle ?",
-                a: "À Uccle, deux nettoyages par an sont souvent nécessaires — mai après les floraisons printanières, novembre après la chute des feuilles. Les propriétés avec de grands jardins arborés (platanes, chênes, hêtres) peuvent nécessiter trois passages.",
-              },
-              {
-                q: "Intervenez-vous avenue Molière et avenue Brugmann ?",
-                a: "Oui, nous intervenons régulièrement dans toutes les avenues d'Uccle — Molière, Brugmann, Winston Churchill, Delleur et le quartier du Bois. Notre matériel est adapté aux villas haut de gamme avec façades hautes.",
-              },
-              {
-                q: "Mes gouttières en zinc d'époque peuvent-elles être réparées ?",
-                a: "Les gouttières en zinc des villas des années 30–60 peuvent souvent être réparées par soudure ou reprise de joints si l'oxydation n'est pas trop avancée. Sinon, remplacement par zinc neuf ou aluminium laqué qui s'intègre parfaitement à l'architecture d'époque.",
-              },
-              {
-                q: "La pente de mon jardin aggrave-t-elle les risques ?",
-                a: "Oui. Les terrains en pente typiques d'Uccle concentrent les eaux pluviales vers les fondations en cas de débordement. C'est pourquoi l'entretien régulier est encore plus crucial ici — un bouchon peut causer des infiltrations de fondations en quelques heures.",
-              },
-            ].map((faq, i) => (
+            {communeFaqs.map((faq, i) => (
               <div key={i} className="bg-white rounded-xl border border-gray-100 p-6">
                 <p className="font-bold text-gray-900 mb-2 flex items-start gap-2">
                   <span className="w-6 h-6 rounded-full bg-[#F97316] text-white text-xs font-bold flex items-center justify-center flex-shrink-0 mt-0.5">{i + 1}</span>

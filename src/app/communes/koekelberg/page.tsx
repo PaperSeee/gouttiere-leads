@@ -19,9 +19,27 @@ export const metadata: Metadata = {
   },
 }
 
+const communeFaqs: { q: string; a: string }[] = [
+              { q: "Le zinc de nos maisons des années 20 mérite-t-il encore d'être réparé ?", a: "Un zinc des années 20 bien conservé peut encore durer 10 à 15 ans. Si les soudures tiennent et que les profils sont rectilignes, une réparation ponctuelle des zones défaillantes est économiquement pertinente. On fait un diagnostic gratuit pour évaluer la situation." },
+              { q: "Comment accédez-vous aux gouttières arrière à Koekelberg ?", a: "Généralement par la cour intérieure avec des échelles légères ou des perches télescopiques. Dans les cours particulièrement étroites, on utilise exclusivement des perches depuis le sol pour ne pas risquer d'abîmer les façades voisines." },
+              { q: "Faut-il prévenir les voisins pour l'accès aux cours partagées ?", a: "C'est recommandé. Dans les maisons mitoyennes de Koekelberg avec cours partagées, on vous conseille de prévenir les voisins au moins 24h à l'avance. Si plusieurs voisins souhaitent un nettoyage le même jour, on propose un tarif groupé avantageux." },
+              { q: "Intervenez-vous avenue de la Basilique et rue Schmitz ?", a: "Oui, dans toutes les rues de Koekelberg. La commune est petite et bien connue de notre équipe. Délai d'intervention habituel : 48 à 72 heures après contact." },
+            ]
+
 export default function KoekelbergPage() {
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: communeFaqs.map((faq) => ({
+      "@type": "Question",
+      name: faq.q,
+      acceptedAnswer: { "@type": "Answer", text: faq.a },
+    })),
+  }
+
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <Breadcrumb items={[{ label: "Accueil", href: "/" }, { label: "Communes", href: "/" }, { label: "Koekelberg" }]} />
 
       <section className="bg-white border-b border-gray-100 py-12 lg:py-16">
@@ -155,12 +173,7 @@ export default function KoekelbergPage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl font-bold text-gray-900 mb-8">Questions fréquentes — Koekelberg</h2>
           <div className="space-y-5">
-            {[
-              { q: "Le zinc de nos maisons des années 20 mérite-t-il encore d'être réparé ?", a: "Un zinc des années 20 bien conservé peut encore durer 10 à 15 ans. Si les soudures tiennent et que les profils sont rectilignes, une réparation ponctuelle des zones défaillantes est économiquement pertinente. On fait un diagnostic gratuit pour évaluer la situation." },
-              { q: "Comment accédez-vous aux gouttières arrière à Koekelberg ?", a: "Généralement par la cour intérieure avec des échelles légères ou des perches télescopiques. Dans les cours particulièrement étroites, on utilise exclusivement des perches depuis le sol pour ne pas risquer d'abîmer les façades voisines." },
-              { q: "Faut-il prévenir les voisins pour l'accès aux cours partagées ?", a: "C'est recommandé. Dans les maisons mitoyennes de Koekelberg avec cours partagées, on vous conseille de prévenir les voisins au moins 24h à l'avance. Si plusieurs voisins souhaitent un nettoyage le même jour, on propose un tarif groupé avantageux." },
-              { q: "Intervenez-vous avenue de la Basilique et rue Schmitz ?", a: "Oui, dans toutes les rues de Koekelberg. La commune est petite et bien connue de notre équipe. Délai d'intervention habituel : 48 à 72 heures après contact." },
-            ].map((faq, i) => (
+            {communeFaqs.map((faq, i) => (
               <div key={i} className="bg-white rounded-xl border border-gray-100 p-6">
                 <p className="font-bold text-gray-900 mb-2 flex items-start gap-2">
                   <span className="w-6 h-6 rounded-full bg-[#F97316] text-white text-xs font-bold flex items-center justify-center flex-shrink-0 mt-0.5">{i + 1}</span>

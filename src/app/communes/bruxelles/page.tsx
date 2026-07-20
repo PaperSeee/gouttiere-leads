@@ -19,9 +19,27 @@ export const metadata: Metadata = {
   },
 }
 
+const communeFaqs: { q: string; a: string }[] = [
+              { q: "Comment accédez-vous aux toits des immeubles du centre ?", a: "Selon la configuration : trappe de toit intérieure, accès par un immeuble voisin, ou nacelle pour les immeubles sans accès interne. On évalue gratuitement l'accessibilité avant toute intervention pour donner un devis précis." },
+              { q: "Notre villa à Laeken est proche du parc royal — quelle fréquence ?", a: "Deux passages annuels sont recommandés pour les propriétés proches des grands espaces verts : novembre après la chute des feuilles et mai après la libération des samares d'érables et des pollens printaniers." },
+              { q: "Intervenez-vous à Neder-Over-Heembeek et Haren ?", a: "Oui, dans toute la commune de Bruxelles-Ville, y compris les extensions nord. Ces zones ont moins de contraintes d'accès mais des propriétés souvent plus exposées à la végétation. Devis gratuit sur place." },
+              { q: "L'immeuble de notre syndic n'a jamais eu de nettoyage de gouttières — par où commencer ?", a: "On commence par un diagnostic complet : état des gouttières, descentes, évacuations. Ensuite on propose un programme de mise à niveau puis un planning d'entretien annuel. On fournit un rapport formel pour le dossier de copropriété." },
+            ]
+
 export default function BruxellesPage() {
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: communeFaqs.map((faq) => ({
+      "@type": "Question",
+      name: faq.q,
+      acceptedAnswer: { "@type": "Answer", text: faq.a },
+    })),
+  }
+
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <Breadcrumb items={[{ label: "Accueil", href: "/" }, { label: "Communes", href: "/" }, { label: "Bruxelles-Ville" }]} />
 
       <section className="bg-white border-b border-gray-100 py-12 lg:py-16">
@@ -155,12 +173,7 @@ export default function BruxellesPage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl font-bold text-gray-900 mb-8">Questions fréquentes — Bruxelles-Ville</h2>
           <div className="space-y-5">
-            {[
-              { q: "Comment accédez-vous aux toits des immeubles du centre ?", a: "Selon la configuration : trappe de toit intérieure, accès par un immeuble voisin, ou nacelle pour les immeubles sans accès interne. On évalue gratuitement l'accessibilité avant toute intervention pour donner un devis précis." },
-              { q: "Notre villa à Laeken est proche du parc royal — quelle fréquence ?", a: "Deux passages annuels sont recommandés pour les propriétés proches des grands espaces verts : novembre après la chute des feuilles et mai après la libération des samares d'érables et des pollens printaniers." },
-              { q: "Intervenez-vous à Neder-Over-Heembeek et Haren ?", a: "Oui, dans toute la commune de Bruxelles-Ville, y compris les extensions nord. Ces zones ont moins de contraintes d'accès mais des propriétés souvent plus exposées à la végétation. Devis gratuit sur place." },
-              { q: "L'immeuble de notre syndic n'a jamais eu de nettoyage de gouttières — par où commencer ?", a: "On commence par un diagnostic complet : état des gouttières, descentes, évacuations. Ensuite on propose un programme de mise à niveau puis un planning d'entretien annuel. On fournit un rapport formel pour le dossier de copropriété." },
-            ].map((faq, i) => (
+            {communeFaqs.map((faq, i) => (
               <div key={i} className="bg-white rounded-xl border border-gray-100 p-6">
                 <p className="font-bold text-gray-900 mb-2 flex items-start gap-2">
                   <span className="w-6 h-6 rounded-full bg-[#F97316] text-white text-xs font-bold flex items-center justify-center flex-shrink-0 mt-0.5">{i + 1}</span>

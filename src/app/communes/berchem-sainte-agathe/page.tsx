@@ -19,9 +19,27 @@ export const metadata: Metadata = {
   },
 }
 
+const communeFaqs: { q: string; a: string }[] = [
+              { q: "Notre villa des années 70 a des gouttières d'origine — faut-il tout changer ?", a: "Pas forcément tout. On inspecte d'abord : si les crochets tiennent, les joints sont étanches et le profil est droit, une réparation ciblée et un nettoyage peuvent suffire. Si plus de 40% du linéaire présente des problèmes, un remplacement complet est plus économique sur le long terme." },
+              { q: "Peut-on choisir la couleur des nouvelles gouttières ?", a: "Oui, l'aluminium laqué est disponible dans de nombreuses teintes RAL. On s'assure que la nouvelle couleur s'harmonise avec votre façade et vos menuiseries. La teinte gris anthracite (RAL 7016) et le blanc cassé (RAL 9010) sont les plus demandées à Berchem." },
+              { q: "Combien de temps dure une intervention à Berchem-Sainte-Agathe ?", a: "Pour une villa quatre façades standard, le nettoyage dure environ 2 à 3 heures. Un remplacement complet de gouttières prend généralement une journée complète. On vous donne une estimation précise lors du devis." },
+              { q: "Intervenez-vous dans les lotissements de la chaussée de Gand ?", a: "Oui, dans tout Berchem-Sainte-Agathe, y compris les lotissements le long de la chaussée de Gand et les rues résidentielles plus calmes. Délai habituel : 48 à 72 heures après contact." },
+            ]
+
 export default function BerchemSainteAgathePage() {
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: communeFaqs.map((faq) => ({
+      "@type": "Question",
+      name: faq.q,
+      acceptedAnswer: { "@type": "Answer", text: faq.a },
+    })),
+  }
+
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <Breadcrumb items={[{ label: "Accueil", href: "/" }, { label: "Communes", href: "/" }, { label: "Berchem-Sainte-Agathe" }]} />
 
       <section className="bg-white border-b border-gray-100 py-12 lg:py-16">
@@ -156,12 +174,7 @@ export default function BerchemSainteAgathePage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl font-bold text-gray-900 mb-8">Questions fréquentes — Berchem-Sainte-Agathe</h2>
           <div className="space-y-5">
-            {[
-              { q: "Notre villa des années 70 a des gouttières d'origine — faut-il tout changer ?", a: "Pas forcément tout. On inspecte d'abord : si les crochets tiennent, les joints sont étanches et le profil est droit, une réparation ciblée et un nettoyage peuvent suffire. Si plus de 40% du linéaire présente des problèmes, un remplacement complet est plus économique sur le long terme." },
-              { q: "Peut-on choisir la couleur des nouvelles gouttières ?", a: "Oui, l'aluminium laqué est disponible dans de nombreuses teintes RAL. On s'assure que la nouvelle couleur s'harmonise avec votre façade et vos menuiseries. La teinte gris anthracite (RAL 7016) et le blanc cassé (RAL 9010) sont les plus demandées à Berchem." },
-              { q: "Combien de temps dure une intervention à Berchem-Sainte-Agathe ?", a: "Pour une villa quatre façades standard, le nettoyage dure environ 2 à 3 heures. Un remplacement complet de gouttières prend généralement une journée complète. On vous donne une estimation précise lors du devis." },
-              { q: "Intervenez-vous dans les lotissements de la chaussée de Gand ?", a: "Oui, dans tout Berchem-Sainte-Agathe, y compris les lotissements le long de la chaussée de Gand et les rues résidentielles plus calmes. Délai habituel : 48 à 72 heures après contact." },
-            ].map((faq, i) => (
+            {communeFaqs.map((faq, i) => (
               <div key={i} className="bg-white rounded-xl border border-gray-100 p-6">
                 <p className="font-bold text-gray-900 mb-2 flex items-start gap-2">
                   <span className="w-6 h-6 rounded-full bg-[#F97316] text-white text-xs font-bold flex items-center justify-center flex-shrink-0 mt-0.5">{i + 1}</span>

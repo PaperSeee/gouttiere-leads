@@ -19,9 +19,27 @@ export const metadata: Metadata = {
   },
 }
 
+const communeFaqs: { q: string; a: string }[] = [
+              { q: "Les samares d'érables causent-elles vraiment des bouchons ?", a: "Oui, c'est l'un des débris végétaux les plus problématiques. Les samares sont assez petites pour pénétrer dans les descentes et y former des bouchons compacts. Elles tombent au printemps puis en automne — deux passages annuels sont recommandés pour les propriétés proches des parcs." },
+              { q: "Notre villa a plus de 80 mètres de gouttières. Quel tarif ?", a: "Pour les grandes propriétés, on établit un devis sur mesure tenant compte du linéaire exact, de la hauteur, des matériaux et de l'accessibilité. Deux techniciens pour les grandes interventions. Appelez pour un diagnostic gratuit." },
+              { q: "Intervenez-vous avenue de Tervueren et avenue de Broqueville ?", a: "Oui, dans toute Woluwe-Saint-Pierre, y compris les grandes avenues résidentielles. On connaît bien les propriétés de cette commune et leurs spécificités d'accès." },
+              { q: "Faut-il aussi nettoyer au printemps à WSP ?", a: "Pour les propriétés proches des parcs, oui. Les marronniers du parc Malou et les érables libèrent des pollens, bourgeons et graines en mai qui s'accumulent dans les gouttières. Un passage de printemps complète utilement le nettoyage automnal." },
+            ]
+
 export default function WoluweStPierrePage() {
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: communeFaqs.map((faq) => ({
+      "@type": "Question",
+      name: faq.q,
+      acceptedAnswer: { "@type": "Answer", text: faq.a },
+    })),
+  }
+
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <Breadcrumb items={[{ label: "Accueil", href: "/" }, { label: "Communes", href: "/" }, { label: "Woluwe-Saint-Pierre" }]} />
 
       <section className="bg-white border-b border-gray-100 py-12 lg:py-16">
@@ -154,12 +172,7 @@ export default function WoluweStPierrePage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl font-bold text-gray-900 mb-8">Questions fréquentes — Woluwe-Saint-Pierre</h2>
           <div className="space-y-5">
-            {[
-              { q: "Les samares d'érables causent-elles vraiment des bouchons ?", a: "Oui, c'est l'un des débris végétaux les plus problématiques. Les samares sont assez petites pour pénétrer dans les descentes et y former des bouchons compacts. Elles tombent au printemps puis en automne — deux passages annuels sont recommandés pour les propriétés proches des parcs." },
-              { q: "Notre villa a plus de 80 mètres de gouttières. Quel tarif ?", a: "Pour les grandes propriétés, on établit un devis sur mesure tenant compte du linéaire exact, de la hauteur, des matériaux et de l'accessibilité. Deux techniciens pour les grandes interventions. Appelez pour un diagnostic gratuit." },
-              { q: "Intervenez-vous avenue de Tervueren et avenue de Broqueville ?", a: "Oui, dans toute Woluwe-Saint-Pierre, y compris les grandes avenues résidentielles. On connaît bien les propriétés de cette commune et leurs spécificités d'accès." },
-              { q: "Faut-il aussi nettoyer au printemps à WSP ?", a: "Pour les propriétés proches des parcs, oui. Les marronniers du parc Malou et les érables libèrent des pollens, bourgeons et graines en mai qui s'accumulent dans les gouttières. Un passage de printemps complète utilement le nettoyage automnal." },
-            ].map((faq, i) => (
+            {communeFaqs.map((faq, i) => (
               <div key={i} className="bg-white rounded-xl border border-gray-100 p-6">
                 <p className="font-bold text-gray-900 mb-2 flex items-start gap-2">
                   <span className="w-6 h-6 rounded-full bg-[#F97316] text-white text-xs font-bold flex items-center justify-center flex-shrink-0 mt-0.5">{i + 1}</span>
