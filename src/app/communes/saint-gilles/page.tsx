@@ -19,9 +19,27 @@ export const metadata: Metadata = {
   },
 }
 
+const communeFaqs: { q: string; a: string }[] = [
+              { q: "Comment nettoyer le zinc ornemental sans l'endommager ?", a: "On utilise exclusivement des outils en plastique souple ou des brosses non-abrasives. Aucun métal sur le zinc — les rayures accélèrent la corrosion. Pour les profils complexes, un nettoyage à la main avec des chiffons humides et un aspirateur industriel." },
+              { q: "Nos gouttières en zinc de 1905 sont-elles classées ?", a: "Les façades peuvent être classées, mais les gouttières elles-mêmes rarement. Cependant, pour les biens à valeur patrimoniale, on recommande de consulter le permis d'urbanisme avant tout remplacement et de privilégier les matériaux d'origine (zinc à la place de zinc)." },
+              { q: "Intervenez-vous au Parvis de Saint-Gilles et chaussée de Waterloo ?", a: "Oui, dans toute la commune. On connaît bien les contraintes du bâti saint-gillois — ruelles étroites, cours intérieures partagées, accès en étage depuis l'intérieur. On s'adapte à chaque configuration." },
+              { q: "Les acacias de nos rues bouchent-ils vraiment les gouttières au printemps ?", a: "Oui, leurs petites fleurs blanches tombent en masse en mai et forment des bouchons compacts. Combiné aux bourgeons collants des tilleuls voisins, un nettoyage de mai après la floraison est souvent aussi important que celui de novembre." },
+            ]
+
 export default function SaintGillesPage() {
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: communeFaqs.map((faq) => ({
+      "@type": "Question",
+      name: faq.q,
+      acceptedAnswer: { "@type": "Answer", text: faq.a },
+    })),
+  }
+
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <Breadcrumb items={[{ label: "Accueil", href: "/" }, { label: "Communes", href: "/" }, { label: "Saint-Gilles" }]} />
 
       <section className="bg-white border-b border-gray-100 py-12 lg:py-16">
@@ -155,12 +173,7 @@ export default function SaintGillesPage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl font-bold text-gray-900 mb-8">Questions fréquentes — Saint-Gilles</h2>
           <div className="space-y-5">
-            {[
-              { q: "Comment nettoyer le zinc ornemental sans l'endommager ?", a: "On utilise exclusivement des outils en plastique souple ou des brosses non-abrasives. Aucun métal sur le zinc — les rayures accélèrent la corrosion. Pour les profils complexes, un nettoyage à la main avec des chiffons humides et un aspirateur industriel." },
-              { q: "Nos gouttières en zinc de 1905 sont-elles classées ?", a: "Les façades peuvent être classées, mais les gouttières elles-mêmes rarement. Cependant, pour les biens à valeur patrimoniale, on recommande de consulter le permis d'urbanisme avant tout remplacement et de privilégier les matériaux d'origine (zinc à la place de zinc)." },
-              { q: "Intervenez-vous au Parvis de Saint-Gilles et chaussée de Waterloo ?", a: "Oui, dans toute la commune. On connaît bien les contraintes du bâti saint-gillois — ruelles étroites, cours intérieures partagées, accès en étage depuis l'intérieur. On s'adapte à chaque configuration." },
-              { q: "Les acacias de nos rues bouchent-ils vraiment les gouttières au printemps ?", a: "Oui, leurs petites fleurs blanches tombent en masse en mai et forment des bouchons compacts. Combiné aux bourgeons collants des tilleuls voisins, un nettoyage de mai après la floraison est souvent aussi important que celui de novembre." },
-            ].map((faq, i) => (
+            {communeFaqs.map((faq, i) => (
               <div key={i} className="bg-white rounded-xl border border-gray-100 p-6">
                 <p className="font-bold text-gray-900 mb-2 flex items-start gap-2">
                   <span className="w-6 h-6 rounded-full bg-[#F97316] text-white text-xs font-bold flex items-center justify-center flex-shrink-0 mt-0.5">{i + 1}</span>

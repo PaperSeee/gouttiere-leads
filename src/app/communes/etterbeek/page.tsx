@@ -19,9 +19,27 @@ export const metadata: Metadata = {
   },
 }
 
+const communeFaqs: { q: string; a: string }[] = [
+              { q: "Pouvez-vous intervenir dans un immeuble de 4 étages sans échafaudage ?", a: "Oui, pour la grande majorité des immeubles d'Etterbeek (R+3 ou R+4). Notre matériel comprend des échelles professionnelles homologuées et des perches télescopiques. Au-delà de 15m, une nacelle peut être nécessaire — on vous prévient à l'avance." },
+              { q: "La copropriété doit-elle donner son accord ?", a: "Pour les parties communes, l'accord du syndic ou d'une majorité de copropriétaires est requis. On fournit un devis formel pour l'AG. Pour les terrasses privatives, seul le propriétaire doit valider." },
+              { q: "Ma toiture plate déborde lors de fortes pluies. Que faire ?", a: "C'est typiquement un siphon bouché ou une évacuation obstruée. On le débouche en urgence et vérifie que la pente de la membrane est correcte. Si l'eau stagne régulièrement, c'est souvent un problème de pente à corriger." },
+              { q: "Un nettoyage par an suffit-il à Etterbeek ?", a: "En général oui. Le centre d'Etterbeek a peu d'arbres. Un nettoyage en octobre-novembre suffit. Si votre rue est bordée de tilleuls ou platanes, un second passage au printemps peut être utile." },
+            ]
+
 export default function EtterbeekPage() {
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: communeFaqs.map((faq) => ({
+      "@type": "Question",
+      name: faq.q,
+      acceptedAnswer: { "@type": "Answer", text: faq.a },
+    })),
+  }
+
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <Breadcrumb items={[{ label: "Accueil", href: "/" }, { label: "Communes", href: "/" }, { label: "Etterbeek" }]} />
 
       <section className="bg-white border-b border-gray-100 py-12 lg:py-16">
@@ -152,12 +170,7 @@ export default function EtterbeekPage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl font-bold text-gray-900 mb-8">Questions fréquentes — Etterbeek</h2>
           <div className="space-y-5">
-            {[
-              { q: "Pouvez-vous intervenir dans un immeuble de 4 étages sans échafaudage ?", a: "Oui, pour la grande majorité des immeubles d'Etterbeek (R+3 ou R+4). Notre matériel comprend des échelles professionnelles homologuées et des perches télescopiques. Au-delà de 15m, une nacelle peut être nécessaire — on vous prévient à l'avance." },
-              { q: "La copropriété doit-elle donner son accord ?", a: "Pour les parties communes, l'accord du syndic ou d'une majorité de copropriétaires est requis. On fournit un devis formel pour l'AG. Pour les terrasses privatives, seul le propriétaire doit valider." },
-              { q: "Ma toiture plate déborde lors de fortes pluies. Que faire ?", a: "C'est typiquement un siphon bouché ou une évacuation obstruée. On le débouche en urgence et vérifie que la pente de la membrane est correcte. Si l'eau stagne régulièrement, c'est souvent un problème de pente à corriger." },
-              { q: "Un nettoyage par an suffit-il à Etterbeek ?", a: "En général oui. Le centre d'Etterbeek a peu d'arbres. Un nettoyage en octobre-novembre suffit. Si votre rue est bordée de tilleuls ou platanes, un second passage au printemps peut être utile." },
-            ].map((faq, i) => (
+            {communeFaqs.map((faq, i) => (
               <div key={i} className="bg-white rounded-xl border border-gray-100 p-6">
                 <p className="font-bold text-gray-900 mb-2 flex items-start gap-2">
                   <span className="w-6 h-6 rounded-full bg-[#F97316] text-white text-xs font-bold flex items-center justify-center flex-shrink-0 mt-0.5">{i + 1}</span>

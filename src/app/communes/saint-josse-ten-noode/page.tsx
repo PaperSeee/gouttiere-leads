@@ -19,9 +19,27 @@ export const metadata: Metadata = {
   },
 }
 
+const communeFaqs: { q: string; a: string }[] = [
+              { q: "Comment accédez-vous aux gouttières d'un immeuble de 5 étages ?", a: "Selon la configuration : trappe de toit interne (la plus simple), accès par l'immeuble voisin si accord possible, ou nacelle élévatrice pour les façades sans accès interne. On évalue l'accessibilité avant de donner un devis — l'accès est parfois le facteur de coût le plus important." },
+              { q: "Notre gargouille de toiture plate est bouchée — est-ce urgent ?", a: "Très urgent, oui. Une gargouille bouchée sur toiture plate peut provoquer une accumulation d'eau qui infiltre l'étanchéité et cause des dégâts majeurs à l'immeuble sous-jacent en quelques heures. C'est une intervention d'urgence prioritaire." },
+              { q: "Le syndic doit-il donner son accord avant votre intervention ?", a: "Pour les parties communes d'un immeuble, oui — il faut l'accord du syndic ou d'une assemblée générale pour les travaux importants. On peut vous fournir un devis formel et un rapport d'état préalable pour faciliter la prise de décision en AG." },
+              { q: "Intervenez-vous chaussée de Haecht et rue Royale Sainte-Marie ?", a: "Oui, dans toute la commune de Saint-Josse, y compris les axes principaux et les rues intérieures. La densité du bâti demande parfois une logistique particulière pour le stationnement du matériel, mais on s'adapte." },
+            ]
+
 export default function SaintJossePage() {
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: communeFaqs.map((faq) => ({
+      "@type": "Question",
+      name: faq.q,
+      acceptedAnswer: { "@type": "Answer", text: faq.a },
+    })),
+  }
+
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <Breadcrumb items={[{ label: "Accueil", href: "/" }, { label: "Communes", href: "/" }, { label: "Saint-Josse-ten-Noode" }]} />
 
       <section className="bg-white border-b border-gray-100 py-12 lg:py-16">
@@ -156,12 +174,7 @@ export default function SaintJossePage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl font-bold text-gray-900 mb-8">Questions fréquentes — Saint-Josse-ten-Noode</h2>
           <div className="space-y-5">
-            {[
-              { q: "Comment accédez-vous aux gouttières d'un immeuble de 5 étages ?", a: "Selon la configuration : trappe de toit interne (la plus simple), accès par l'immeuble voisin si accord possible, ou nacelle élévatrice pour les façades sans accès interne. On évalue l'accessibilité avant de donner un devis — l'accès est parfois le facteur de coût le plus important." },
-              { q: "Notre gargouille de toiture plate est bouchée — est-ce urgent ?", a: "Très urgent, oui. Une gargouille bouchée sur toiture plate peut provoquer une accumulation d'eau qui infiltre l'étanchéité et cause des dégâts majeurs à l'immeuble sous-jacent en quelques heures. C'est une intervention d'urgence prioritaire." },
-              { q: "Le syndic doit-il donner son accord avant votre intervention ?", a: "Pour les parties communes d'un immeuble, oui — il faut l'accord du syndic ou d'une assemblée générale pour les travaux importants. On peut vous fournir un devis formel et un rapport d'état préalable pour faciliter la prise de décision en AG." },
-              { q: "Intervenez-vous chaussée de Haecht et rue Royale Sainte-Marie ?", a: "Oui, dans toute la commune de Saint-Josse, y compris les axes principaux et les rues intérieures. La densité du bâti demande parfois une logistique particulière pour le stationnement du matériel, mais on s'adapte." },
-            ].map((faq, i) => (
+            {communeFaqs.map((faq, i) => (
               <div key={i} className="bg-white rounded-xl border border-gray-100 p-6">
                 <p className="font-bold text-gray-900 mb-2 flex items-start gap-2">
                   <span className="w-6 h-6 rounded-full bg-[#F97316] text-white text-xs font-bold flex items-center justify-center flex-shrink-0 mt-0.5">{i + 1}</span>

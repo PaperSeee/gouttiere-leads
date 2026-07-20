@@ -19,9 +19,27 @@ export const metadata: Metadata = {
   },
 }
 
+const communeFaqs: { q: string; a: string }[] = [
+              { q: "Les tilleuls de l'avenue Rogier bouchent vraiment les gouttières ?", a: "Oui, les tilleuls sont parmi les arbres les plus problématiques. Leurs bourgeons collants et petites fleurs forment des masses compactes qui obstruent rapidement au printemps. En automne, leurs feuilles s'accumulent. Deux nettoyages annuels (mai et novembre) sont recommandés." },
+              { q: "Comment accédez-vous aux gouttières de façade arrière ?", a: "Via la cour intérieure. Nos échelles légères passent par la porte de cave ou le couloir latéral dans la plupart des maisons mitoyennes de Schaerbeek. Pour les cours vraiment exiguës, on utilise des perches télescopiques depuis le sol." },
+              { q: "Le zinc de 1900 — est-ce encore récupérable ?", a: "Du zinc bien conservé de 1900 peut encore durer 10–20 ans. Si l'installation est étanche et bien fixée, une soudure et reprise des joints peut suffire. Un diagnostic gratuit permet de trancher sur la meilleure approche." },
+              { q: "Êtes-vous habitués au bâti schaerbeekois ?", a: "Oui, on intervient régulièrement à Schaerbeek dans les grandes avenues et les rues résidentielles du quartier de la Maison des Arts. On connaît bien les contraintes d'accès et les spécificités architecturales locales." },
+            ]
+
 export default function SchaerbeekPage() {
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: communeFaqs.map((faq) => ({
+      "@type": "Question",
+      name: faq.q,
+      acceptedAnswer: { "@type": "Answer", text: faq.a },
+    })),
+  }
+
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <Breadcrumb items={[{ label: "Accueil", href: "/" }, { label: "Communes", href: "/" }, { label: "Schaerbeek" }]} />
 
       <section className="bg-white border-b border-gray-100 py-12 lg:py-16">
@@ -155,12 +173,7 @@ export default function SchaerbeekPage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl font-bold text-gray-900 mb-8">Questions fréquentes — Schaerbeek</h2>
           <div className="space-y-5">
-            {[
-              { q: "Les tilleuls de l'avenue Rogier bouchent vraiment les gouttières ?", a: "Oui, les tilleuls sont parmi les arbres les plus problématiques. Leurs bourgeons collants et petites fleurs forment des masses compactes qui obstruent rapidement au printemps. En automne, leurs feuilles s'accumulent. Deux nettoyages annuels (mai et novembre) sont recommandés." },
-              { q: "Comment accédez-vous aux gouttières de façade arrière ?", a: "Via la cour intérieure. Nos échelles légères passent par la porte de cave ou le couloir latéral dans la plupart des maisons mitoyennes de Schaerbeek. Pour les cours vraiment exiguës, on utilise des perches télescopiques depuis le sol." },
-              { q: "Le zinc de 1900 — est-ce encore récupérable ?", a: "Du zinc bien conservé de 1900 peut encore durer 10–20 ans. Si l'installation est étanche et bien fixée, une soudure et reprise des joints peut suffire. Un diagnostic gratuit permet de trancher sur la meilleure approche." },
-              { q: "Êtes-vous habitués au bâti schaerbeekois ?", a: "Oui, on intervient régulièrement à Schaerbeek dans les grandes avenues et les rues résidentielles du quartier de la Maison des Arts. On connaît bien les contraintes d'accès et les spécificités architecturales locales." },
-            ].map((faq, i) => (
+            {communeFaqs.map((faq, i) => (
               <div key={i} className="bg-white rounded-xl border border-gray-100 p-6">
                 <p className="font-bold text-gray-900 mb-2 flex items-start gap-2">
                   <span className="w-6 h-6 rounded-full bg-[#F97316] text-white text-xs font-bold flex items-center justify-center flex-shrink-0 mt-0.5">{i + 1}</span>

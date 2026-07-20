@@ -19,9 +19,27 @@ export const metadata: Metadata = {
   },
 }
 
+const communeFaqs: { q: string; a: string }[] = [
+              { q: "Le coton de peupliers est-il vraiment problématique pour les gouttières ?", a: "C'est l'un des phénomènes les plus surprenants. En mai-juin, les peupliers libèrent leurs aigrettes cotonneuses qui s'accumulent dans les gouttières et descentes en quelques jours. Humidifiées par la pluie, elles se compactent et bloquent complètement l'écoulement. Un nettoyage de juin est indispensable pour les propriétés exposées." },
+              { q: "Comment savoir si mon crochet de fixation est défaillant ?", a: "Le signe le plus visible est une gouttière qui 'penche' ou s'éloigne de la façade. Vous pouvez aussi vérifier en regardant si l'eau s'accumule dans un recoin plutôt que de s'écouler vers la descente. Un crochet qui cède peut provoquer l'arrachage d'une section entière lors d'une forte pluie." },
+              { q: "Intervenez-vous avenue de l'Héliport et chaussée de Louvain ?", a: "Oui, dans toute la commune d'Evere, y compris les axes principaux et les rues résidentielles calmes autour du parc Walckiers. Délai habituel : 48 à 72 heures après contact." },
+              { q: "Peut-on remplacer seulement les crochets sans changer toute la gouttière ?", a: "Oui, si la gouttière est en bon état, on peut remplacer uniquement les crochets défaillants. C'est bien moins coûteux qu'un remplacement complet. On évalue ce qui peut être conservé lors du diagnostic gratuit." },
+            ]
+
 export default function EverePage() {
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: communeFaqs.map((faq) => ({
+      "@type": "Question",
+      name: faq.q,
+      acceptedAnswer: { "@type": "Answer", text: faq.a },
+    })),
+  }
+
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <Breadcrumb items={[{ label: "Accueil", href: "/" }, { label: "Communes", href: "/" }, { label: "Evere" }]} />
 
       <section className="bg-white border-b border-gray-100 py-12 lg:py-16">
@@ -155,12 +173,7 @@ export default function EverePage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl font-bold text-gray-900 mb-8">Questions fréquentes — Evere</h2>
           <div className="space-y-5">
-            {[
-              { q: "Le coton de peupliers est-il vraiment problématique pour les gouttières ?", a: "C'est l'un des phénomènes les plus surprenants. En mai-juin, les peupliers libèrent leurs aigrettes cotonneuses qui s'accumulent dans les gouttières et descentes en quelques jours. Humidifiées par la pluie, elles se compactent et bloquent complètement l'écoulement. Un nettoyage de juin est indispensable pour les propriétés exposées." },
-              { q: "Comment savoir si mon crochet de fixation est défaillant ?", a: "Le signe le plus visible est une gouttière qui 'penche' ou s'éloigne de la façade. Vous pouvez aussi vérifier en regardant si l'eau s'accumule dans un recoin plutôt que de s'écouler vers la descente. Un crochet qui cède peut provoquer l'arrachage d'une section entière lors d'une forte pluie." },
-              { q: "Intervenez-vous avenue de l'Héliport et chaussée de Louvain ?", a: "Oui, dans toute la commune d'Evere, y compris les axes principaux et les rues résidentielles calmes autour du parc Walckiers. Délai habituel : 48 à 72 heures après contact." },
-              { q: "Peut-on remplacer seulement les crochets sans changer toute la gouttière ?", a: "Oui, si la gouttière est en bon état, on peut remplacer uniquement les crochets défaillants. C'est bien moins coûteux qu'un remplacement complet. On évalue ce qui peut être conservé lors du diagnostic gratuit." },
-            ].map((faq, i) => (
+            {communeFaqs.map((faq, i) => (
               <div key={i} className="bg-white rounded-xl border border-gray-100 p-6">
                 <p className="font-bold text-gray-900 mb-2 flex items-start gap-2">
                   <span className="w-6 h-6 rounded-full bg-[#F97316] text-white text-xs font-bold flex items-center justify-center flex-shrink-0 mt-0.5">{i + 1}</span>

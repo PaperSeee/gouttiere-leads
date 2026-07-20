@@ -19,9 +19,27 @@ export const metadata: Metadata = {
   },
 }
 
+const communeFaqs: { q: string; a: string }[] = [
+              { q: "On rénove notre immeuble de rapport — quand faut-il s'occuper des gouttières ?", a: "Idéalement avant les travaux de façade et de toiture. Des gouttières défectueuses peuvent ruiner une réfection de façade en quelques mois. On s'intègre dans le planning de rénovation pour coordonner avec les autres corps de métier." },
+              { q: "Les gouttières de notre maison canal n'ont pas été nettoyées depuis 5 ans — que faire ?", a: "Pas de panique, mais il faut agir vite. Après 5 ans sans entretien, on trouve généralement des mousses épaisses, des dépôts de sédiments compactés et parfois des plantes installées. On peut tout traiter en une intervention avec du matériel adapté." },
+              { q: "Comment s'organise le paiement pour une maison de rapport avec plusieurs propriétaires ?", a: "On établit une facture unique au nom du gestionnaire ou de la copropriété. Si nécessaire, on peut diviser la facture par unité pour faciliter la répartition des charges entre copropriétaires." },
+              { q: "Intervenez-vous rue de Birmingham et rue Ransfort ?", a: "Oui, dans toute Molenbeek-Saint-Jean. On connaît bien la configuration des rues étroites et des cours intérieures de la commune. On s'adapte à chaque situation d'accès." },
+            ]
+
 export default function MolenbeekSaintJeanPage() {
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: communeFaqs.map((faq) => ({
+      "@type": "Question",
+      name: faq.q,
+      acceptedAnswer: { "@type": "Answer", text: faq.a },
+    })),
+  }
+
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <Breadcrumb items={[{ label: "Accueil", href: "/" }, { label: "Communes", href: "/" }, { label: "Molenbeek-Saint-Jean" }]} />
 
       <section className="bg-white border-b border-gray-100 py-12 lg:py-16">
@@ -155,12 +173,7 @@ export default function MolenbeekSaintJeanPage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl font-bold text-gray-900 mb-8">Questions fréquentes — Molenbeek-Saint-Jean</h2>
           <div className="space-y-5">
-            {[
-              { q: "On rénove notre immeuble de rapport — quand faut-il s'occuper des gouttières ?", a: "Idéalement avant les travaux de façade et de toiture. Des gouttières défectueuses peuvent ruiner une réfection de façade en quelques mois. On s'intègre dans le planning de rénovation pour coordonner avec les autres corps de métier." },
-              { q: "Les gouttières de notre maison canal n'ont pas été nettoyées depuis 5 ans — que faire ?", a: "Pas de panique, mais il faut agir vite. Après 5 ans sans entretien, on trouve généralement des mousses épaisses, des dépôts de sédiments compactés et parfois des plantes installées. On peut tout traiter en une intervention avec du matériel adapté." },
-              { q: "Comment s'organise le paiement pour une maison de rapport avec plusieurs propriétaires ?", a: "On établit une facture unique au nom du gestionnaire ou de la copropriété. Si nécessaire, on peut diviser la facture par unité pour faciliter la répartition des charges entre copropriétaires." },
-              { q: "Intervenez-vous rue de Birmingham et rue Ransfort ?", a: "Oui, dans toute Molenbeek-Saint-Jean. On connaît bien la configuration des rues étroites et des cours intérieures de la commune. On s'adapte à chaque situation d'accès." },
-            ].map((faq, i) => (
+            {communeFaqs.map((faq, i) => (
               <div key={i} className="bg-white rounded-xl border border-gray-100 p-6">
                 <p className="font-bold text-gray-900 mb-2 flex items-start gap-2">
                   <span className="w-6 h-6 rounded-full bg-[#F97316] text-white text-xs font-bold flex items-center justify-center flex-shrink-0 mt-0.5">{i + 1}</span>
