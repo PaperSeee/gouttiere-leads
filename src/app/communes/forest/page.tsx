@@ -6,7 +6,7 @@ import Breadcrumb from "@/components/Breadcrumb"
 import ContactForm from "@/components/ContactForm"
 
 export const metadata: Metadata = {
-  title: "Nettoyage Gouttières Forest — Maisons Mitoyennes & Cottages | 0451 05 33 70",
+  title: "Nettoyage Gouttières Forest — Maisons Mitoyennes & Cottages",
   description: "Nettoyage gouttières à Forest : maisons mitoyennes brique rouge, zinc d'époque, parc de Forest. Devis gratuit, intervention 48h. 0451 05 33 70.",
   alternates: { canonical: "https://www.nettoyage-gouttieres-bruxelles.be/communes/forest" },
   keywords: ["nettoyage gouttières Forest", "débouchage gouttières Forest", "gouttières bouchées Forest", "prix nettoyage gouttières Forest"],

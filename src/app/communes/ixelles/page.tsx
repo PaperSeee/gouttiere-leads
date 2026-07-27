@@ -6,7 +6,7 @@ import Breadcrumb from "@/components/Breadcrumb"
 import ContactForm from "@/components/ContactForm"
 
 export const metadata: Metadata = {
-  title: "Nettoyage Gouttières Ixelles — Art Nouveau & Immeubles | 0451 05 33 70",
+  title: "Nettoyage Gouttières Ixelles — Art Nouveau & Immeubles",
   description: "Nettoyage gouttières à Ixelles : maisons de maître Art nouveau, immeubles, zinc historique. Devis gratuit, intervention 48h. 0451 05 33 70.",
   alternates: { canonical: "https://www.nettoyage-gouttieres-bruxelles.be/communes/ixelles" },
   keywords: ["nettoyage gouttières Ixelles", "débouchage gouttières Ixelles", "gouttières bouchées Ixelles", "prix nettoyage gouttières Ixelles"],

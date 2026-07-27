@@ -6,7 +6,7 @@ import Breadcrumb from "@/components/Breadcrumb"
 import ContactForm from "@/components/ContactForm"
 
 export const metadata: Metadata = {
-  title: "Nettoyage Gouttières Koekelberg — Basilique & Habitat Compact | 0451 05 33 70",
+  title: "Nettoyage Gouttières Koekelberg — Basilique & Habitat Compact",
   description: "Nettoyage gouttières à Koekelberg : habitat compact, Basilique du Sacré-Cœur, maisons mitoyennes zinc. Devis gratuit. 0451 05 33 70.",
   alternates: { canonical: "https://www.nettoyage-gouttieres-bruxelles.be/communes/koekelberg" },
   keywords: ["nettoyage gouttières Koekelberg", "débouchage gouttières Koekelberg", "gouttières bouchées Koekelberg", "prix nettoyage gouttières Koekelberg"],
