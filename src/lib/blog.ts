@@ -13,6 +13,18 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "entretien-gouttieres-copropriete-bruxelles-qui-paie",
+    title: "Entretien des Gouttières en Copropriété à Bruxelles : Qui Paie, Qui Décide ?",
+    description: "Immeuble en copropriété à Bruxelles : qui paie et qui décide l'entretien des gouttières communes ? Rôle du syndic, répartition des frais, bonnes pratiques.",
+    date: "2026-07-15",
+    dateLabel: "15 juillet 2026",
+    category: "Conseils",
+    readTime: "8 min",
+    imageUrl: "https://images.unsplash.com/photo-1481026469463-66327c86e544?w=800&q=80",
+    imageAlt: "Immeuble à appartements en copropriété à Bruxelles",
+    excerpt: "Dans un immeuble à appartements, l'entretien des gouttières ne dépend pas d'un seul propriétaire mais d'une décision collective. Qui paie, qui décide et comment s'organiser : le guide pour syndics et copropriétaires bruxellois.",
+  },
+  {
     slug: "orages-ete-gouttieres-bruxelles-checklist",
     title: "Orages d'été à Bruxelles : la checklist gouttières avant les intempéries",
     description: "Un orage d'été déverse en 20 minutes l'équivalent de plusieurs jours de pluie. La checklist en 7 points pour préparer vos gouttières avant les intempéries à Bruxelles.",
