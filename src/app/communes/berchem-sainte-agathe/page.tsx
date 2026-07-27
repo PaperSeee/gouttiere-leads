@@ -6,7 +6,7 @@ import Breadcrumb from "@/components/Breadcrumb"
 import ContactForm from "@/components/ContactForm"
 
 export const metadata: Metadata = {
-  title: "Nettoyage Gouttières Berchem-Sainte-Agathe — Villas & Lotissements | 0451 05 33 70",
+  title: "Nettoyage Gouttières Berchem-Sainte-Agathe — Villas & Lotissements",
   description: "Nettoyage gouttières à Berchem-Sainte-Agathe : villas lotissements années 60–70, aluminium vieillissant, jardins arborés. Devis gratuit. 0451 05 33 70.",
   alternates: { canonical: "https://www.nettoyage-gouttieres-bruxelles.be/communes/berchem-sainte-agathe" },
   keywords: ["nettoyage gouttières Berchem-Sainte-Agathe", "débouchage gouttières Berchem-Sainte-Agathe", "gouttières bouchées Berchem-Sainte-Agathe", "prix nettoyage gouttières Berchem-Sainte-Agathe"],
