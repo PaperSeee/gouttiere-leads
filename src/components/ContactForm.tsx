@@ -4,16 +4,26 @@ import { useState } from "react";
 import { Send, CheckCircle } from "lucide-react";
 
 const communes = [
-  "Uccle",
-  "Ixelles",
-  "Woluwe-Saint-Pierre",
-  "Woluwe-Saint-Lambert",
+  "Anderlecht",
   "Auderghem",
-  "Watermael-Boitsfort",
+  "Berchem-Sainte-Agathe",
+  "Bruxelles-Ville",
   "Etterbeek",
+  "Evere",
   "Forest",
+  "Ganshoren",
+  "Ixelles",
+  "Jette",
+  "Koekelberg",
+  "Molenbeek-Saint-Jean",
+  "Saint-Gilles",
+  "Saint-Josse-ten-Noode",
   "Schaerbeek",
-  "Autre commune de Bruxelles",
+  "Uccle",
+  "Watermael-Boitsfort",
+  "Woluwe-Saint-Lambert",
+  "Woluwe-Saint-Pierre",
+  "Autre commune / périphérie",
 ];
 
 const interventionTypes = [
