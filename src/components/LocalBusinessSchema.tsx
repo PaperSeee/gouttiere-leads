@@ -3,7 +3,7 @@ const DOMAIN = "https://www.nettoyage-gouttieres-bruxelles.be";
 export default function LocalBusinessSchema() {
   const schema = {
     "@context": "https://schema.org",
-    "@type": "LocalBusiness",
+    "@type": ["RoofingContractor", "HomeAndConstructionBusiness"],
     "@id": `${DOMAIN}/#business`,
     name: "Nettoyage Gouttières Bruxelles",
     description:
