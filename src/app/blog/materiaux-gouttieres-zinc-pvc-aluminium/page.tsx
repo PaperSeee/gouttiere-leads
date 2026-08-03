@@ -5,8 +5,8 @@ import Breadcrumb from "@/components/Breadcrumb"
 import ContactForm from "@/components/ContactForm"
 
 export const metadata: Metadata = {
-  title: "Zinc, PVC ou Aluminium : Quel Matériau pour ses Gouttières à Bruxelles ?",
-  description: "Comparatif complet zinc, PVC, aluminium et cuivre pour les gouttières à Bruxelles. Durée de vie, entretien, coût et compatibilité avec les maisons belges.",
+  title: "Zinc, PVC ou Alu : Quel Matériau pour ses Gouttières ?",
+  description: "Comparatif zinc, PVC, aluminium et cuivre pour vos gouttières à Bruxelles : durée de vie, entretien, coût et compatibilité.",
   keywords: ["gouttières zinc bruxelles", "gouttières PVC", "gouttières aluminium", "quel matériau gouttière", "choisir gouttière belgique"],
   alternates: { canonical: "https://www.nettoyage-gouttieres-bruxelles.be/blog/materiaux-gouttieres-zinc-pvc-aluminium" },
   openGraph: {

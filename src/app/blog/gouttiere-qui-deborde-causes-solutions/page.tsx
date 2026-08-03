@@ -5,8 +5,8 @@ import Breadcrumb from "@/components/Breadcrumb"
 import ContactForm from "@/components/ContactForm"
 
 export const metadata: Metadata = {
-  title: "Gouttière qui Déborde : Causes, Dangers et Solutions | Nettoyage Gouttières Bruxelles",
-  description: "Votre gouttière déborde sous la pluie ? Découvrez les 6 causes les plus fréquentes, les risques pour votre maison et ce qu'il faut faire immédiatement. Intervention urgence 7j/7.",
+  title: "Gouttière qui Déborde : Causes et Solutions Bruxelles",
+  description: "Gouttière qui déborde sous la pluie à Bruxelles ? 6 causes fréquentes, risques pour votre maison et gestes à faire immédiatement.",
   alternates: { canonical: "https://www.nettoyage-gouttieres-bruxelles.be/blog/gouttiere-qui-deborde-causes-solutions" },
   openGraph: {
     type: "article",
