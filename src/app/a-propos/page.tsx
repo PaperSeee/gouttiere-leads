@@ -4,7 +4,7 @@ import { Phone, CheckCircle, ArrowRight, Shield, Award, Users, Leaf } from "luci
 import Breadcrumb from "@/components/Breadcrumb";
 
 export const metadata: Metadata = {
-  title: "À Propos — Nettoyage Gouttières Bruxelles | Notre Équipe",
+  title: "À Propos — Nettoyage Gouttières Bruxelles",
   description:
     "Découvrez Nettoyage Gouttières Bruxelles : notre mission, nos valeurs et notre engagement pour l'entretien de vos gouttières en région bruxelloise.",
   alternates: { canonical: "https://www.nettoyage-gouttieres-bruxelles.be/a-propos" },

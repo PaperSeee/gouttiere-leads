@@ -5,7 +5,7 @@ import Breadcrumb from "@/components/Breadcrumb";
 import ContactForm from "@/components/ContactForm";
 
 export const metadata: Metadata = {
-  title: "Débouchage Gouttières Bruxelles — Urgence 7j/7 | 0451 05 33 70",
+  title: "Débouchage Gouttières Bruxelles — Urgence 7j/7",
   description:
     "Débouchage urgent de gouttières et descentes pluviales à Bruxelles. Intervention 7j/7, haute pression. Débordement actif ? Appelez le 0451 05 33 70.",
   alternates: { canonical: "https://www.nettoyage-gouttieres-bruxelles.be/services/debouchage-gouttieres" },
