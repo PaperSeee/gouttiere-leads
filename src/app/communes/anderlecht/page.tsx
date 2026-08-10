@@ -6,7 +6,7 @@ import Breadcrumb from "@/components/Breadcrumb"
 import ContactForm from "@/components/ContactForm"
 
 export const metadata: Metadata = {
-  title: "Nettoyage Gouttières Anderlecht — Maisons Ouvrières & Canaux | 0451 05 33 70",
+  title: "Nettoyage Gouttières Anderlecht — Maisons Ouvrières & Canaux",
   description: "Nettoyage gouttières à Anderlecht : maisons ouvrières brique, canal de Charleroi, humidité canal. Devis gratuit, intervention rapide. 0451 05 33 70.",
   alternates: { canonical: "https://www.nettoyage-gouttieres-bruxelles.be/communes/anderlecht" },
   keywords: ["nettoyage gouttières Anderlecht", "débouchage gouttières Anderlecht", "gouttières bouchées Anderlecht", "prix nettoyage gouttières Anderlecht"],
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
 export default function AnderlechtPage() {
   return (
     <>
-      <Breadcrumb items={[{ label: "Accueil", href: "/" }, { label: "Communes", href: "/" }, { label: "Anderlecht" }]} />
+      <Breadcrumb items={[{ label: "Accueil", href: "/" }, { label: "Communes", href: "/communes" }, { label: "Anderlecht" }]} />
 
       <section className="bg-white border-b border-gray-100 py-12 lg:py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

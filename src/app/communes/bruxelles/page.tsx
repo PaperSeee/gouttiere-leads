@@ -6,7 +6,7 @@ import Breadcrumb from "@/components/Breadcrumb"
 import ContactForm from "@/components/ContactForm"
 
 export const metadata: Metadata = {
-  title: "Nettoyage Gouttières Bruxelles-Ville — Pentagone & Immeubles | 0451 05 33 70",
+  title: "Nettoyage Gouttières Bruxelles-Ville — Pentagone & Immeubles",
   description: "Nettoyage gouttières à Bruxelles-Ville : Pentagone, Laeken, Neder-Over-Heembeek, immeubles et maisons de maître. Devis gratuit. 0451 05 33 70.",
   alternates: { canonical: "https://www.nettoyage-gouttieres-bruxelles.be/communes/bruxelles" },
   keywords: ["nettoyage gouttières Bruxelles", "débouchage gouttières Bruxelles", "gouttières bouchées Bruxelles", "prix nettoyage gouttières Bruxelles"],
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
 export default function BruxellesPage() {
   return (
     <>
-      <Breadcrumb items={[{ label: "Accueil", href: "/" }, { label: "Communes", href: "/" }, { label: "Bruxelles-Ville" }]} />
+      <Breadcrumb items={[{ label: "Accueil", href: "/" }, { label: "Communes", href: "/communes" }, { label: "Bruxelles-Ville" }]} />
 
       <section className="bg-white border-b border-gray-100 py-12 lg:py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

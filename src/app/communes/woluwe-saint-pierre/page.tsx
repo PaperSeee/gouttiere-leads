@@ -6,7 +6,7 @@ import Breadcrumb from "@/components/Breadcrumb"
 import ContactForm from "@/components/ContactForm"
 
 export const metadata: Metadata = {
-  title: "Nettoyage Gouttières Woluwe-Saint-Pierre — Grandes Villas & Parcs | 0451 05 33 70",
+  title: "Nettoyage Gouttières Woluwe-Saint-Pierre | Devis Gratuit",
   description: "Nettoyage gouttières à Woluwe-Saint-Pierre : grandes villas, parcs Malou & Parmentier, érables et marronniers. Devis gratuit. 0451 05 33 70.",
   alternates: { canonical: "https://www.nettoyage-gouttieres-bruxelles.be/communes/woluwe-saint-pierre" },
   keywords: ["nettoyage gouttières Woluwe-Saint-Pierre", "débouchage gouttières Woluwe-Saint-Pierre", "gouttières bouchées Woluwe-Saint-Pierre", "prix nettoyage gouttières Woluwe-Saint-Pierre"],
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
 export default function WoluweStPierrePage() {
   return (
     <>
-      <Breadcrumb items={[{ label: "Accueil", href: "/" }, { label: "Communes", href: "/" }, { label: "Woluwe-Saint-Pierre" }]} />
+      <Breadcrumb items={[{ label: "Accueil", href: "/" }, { label: "Communes", href: "/communes" }, { label: "Woluwe-Saint-Pierre" }]} />
 
       <section className="bg-white border-b border-gray-100 py-12 lg:py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

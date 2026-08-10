@@ -6,7 +6,7 @@ import Breadcrumb from "@/components/Breadcrumb"
 import ContactForm from "@/components/ContactForm"
 
 export const metadata: Metadata = {
-  title: "Nettoyage Gouttières Ganshoren — Petite Commune Résidentielle | 0451 05 33 70",
+  title: "Nettoyage Gouttières Ganshoren — Commune Résidentielle",
   description: "Nettoyage gouttières à Ganshoren : maisons des années 50–60, jardins arborés, commune résidentielle calme. Devis gratuit. 0451 05 33 70.",
   alternates: { canonical: "https://www.nettoyage-gouttieres-bruxelles.be/communes/ganshoren" },
   keywords: ["nettoyage gouttières Ganshoren", "débouchage gouttières Ganshoren", "gouttières bouchées Ganshoren", "prix nettoyage gouttières Ganshoren"],
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
 export default function GanshorenPage() {
   return (
     <>
-      <Breadcrumb items={[{ label: "Accueil", href: "/" }, { label: "Communes", href: "/" }, { label: "Ganshoren" }]} />
+      <Breadcrumb items={[{ label: "Accueil", href: "/" }, { label: "Communes", href: "/communes" }, { label: "Ganshoren" }]} />
 
       <section className="bg-white border-b border-gray-100 py-12 lg:py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

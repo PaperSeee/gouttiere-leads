@@ -4,9 +4,9 @@ import { ArrowRight, CheckCircle } from "lucide-react";
 import Breadcrumb from "@/components/Breadcrumb";
 
 export const metadata: Metadata = {
-  title: "Types de Gouttières : Zinc, PVC, Aluminium, Cuivre — Guide Complet",
+  title: "Types de Gouttières : Zinc, PVC, Aluminium, Cuivre",
   description:
-    "Guide complet des types de gouttières : zinc, PVC, aluminium et cuivre. Avantages, inconvénients, prix et durée de vie. Choisissez le bon matériau pour votre habitation bruxelloise.",
+    "Guide des types de gouttières : zinc, PVC, aluminium, cuivre. Avantages, inconvénients, prix et durée de vie pour votre habitation bruxelloise.",
   alternates: { canonical: "https://www.nettoyage-gouttieres-bruxelles.be/types-gouttieres" },
 };
 
@@ -177,7 +177,38 @@ export default function TypesGouttieres() {
             ))}
           </div>
 
-          <div className="mt-12 bg-[#1A4731] text-white rounded-2xl p-8">
+          <div className="mt-12 grid sm:grid-cols-2 gap-4">
+            <Link
+              href="/services/reparation-gouttieres"
+              className="group border border-gray-200 hover:border-[#1A4731] rounded-2xl p-6 transition-colors"
+            >
+              <h3 className="font-bold text-gray-900 group-hover:text-[#1A4731] transition-colors mb-1.5">
+                Gouttière à remplacer ?
+              </h3>
+              <p className="text-gray-500 text-sm mb-3">
+                Découvrez notre service de réparation et remplacement en PVC, aluminium, zinc ou cuivre.
+              </p>
+              <span className="text-sm font-semibold text-[#F97316] flex items-center gap-1">
+                Voir le service réparation <ArrowRight size={14} />
+              </span>
+            </Link>
+            <Link
+              href="/services/nettoyage-gouttieres"
+              className="group border border-gray-200 hover:border-[#1A4731] rounded-2xl p-6 transition-colors"
+            >
+              <h3 className="font-bold text-gray-900 group-hover:text-[#1A4731] transition-colors mb-1.5">
+                Entretien régulier
+              </h3>
+              <p className="text-gray-500 text-sm mb-3">
+                Quel que soit le matériau, un nettoyage régulier prolonge la durée de vie de vos gouttières.
+              </p>
+              <span className="text-sm font-semibold text-[#F97316] flex items-center gap-1">
+                Voir le service nettoyage <ArrowRight size={14} />
+              </span>
+            </Link>
+          </div>
+
+          <div className="mt-6 bg-[#1A4731] text-white rounded-2xl p-8">
             <h2 className="text-xl font-bold mb-3">Besoin d&apos;un conseil personnalisé ?</h2>
             <p className="text-gray-300 mb-4">
               Nos techniciens évaluent gratuitement l&apos;état de vos gouttières actuelles et vous recommandent

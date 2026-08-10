@@ -6,7 +6,7 @@ import Breadcrumb from "@/components/Breadcrumb"
 import ContactForm from "@/components/ContactForm"
 
 export const metadata: Metadata = {
-  title: "Nettoyage Gouttières Koekelberg — Basilique & Habitat Compact | 0451 05 33 70",
+  title: "Nettoyage Gouttières Koekelberg — Basilique & Habitat",
   description: "Nettoyage gouttières à Koekelberg : habitat compact, Basilique du Sacré-Cœur, maisons mitoyennes zinc. Devis gratuit. 0451 05 33 70.",
   alternates: { canonical: "https://www.nettoyage-gouttieres-bruxelles.be/communes/koekelberg" },
   keywords: ["nettoyage gouttières Koekelberg", "débouchage gouttières Koekelberg", "gouttières bouchées Koekelberg", "prix nettoyage gouttières Koekelberg"],
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
 export default function KoekelbergPage() {
   return (
     <>
-      <Breadcrumb items={[{ label: "Accueil", href: "/" }, { label: "Communes", href: "/" }, { label: "Koekelberg" }]} />
+      <Breadcrumb items={[{ label: "Accueil", href: "/" }, { label: "Communes", href: "/communes" }, { label: "Koekelberg" }]} />
 
       <section className="bg-white border-b border-gray-100 py-12 lg:py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

@@ -6,7 +6,7 @@ import Breadcrumb from "@/components/Breadcrumb"
 import ContactForm from "@/components/ContactForm"
 
 export const metadata: Metadata = {
-  title: "Nettoyage Gouttières Evere — OTAN & Quartiers Résidentiels | 0451 05 33 70",
+  title: "Nettoyage Gouttières Evere — OTAN & Quartiers Résidentiels",
   description: "Nettoyage gouttières à Evere : quartiers résidentiels OTAN, maisons des années 60, peupliers. Devis gratuit, intervention rapide. 0451 05 33 70.",
   alternates: { canonical: "https://www.nettoyage-gouttieres-bruxelles.be/communes/evere" },
   keywords: ["nettoyage gouttières Evere", "débouchage gouttières Evere", "gouttières bouchées Evere", "prix nettoyage gouttières Evere"],
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
 export default function EverePage() {
   return (
     <>
-      <Breadcrumb items={[{ label: "Accueil", href: "/" }, { label: "Communes", href: "/" }, { label: "Evere" }]} />
+      <Breadcrumb items={[{ label: "Accueil", href: "/" }, { label: "Communes", href: "/communes" }, { label: "Evere" }]} />
 
       <section className="bg-white border-b border-gray-100 py-12 lg:py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

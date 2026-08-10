@@ -6,7 +6,7 @@ import Breadcrumb from "@/components/Breadcrumb"
 import ContactForm from "@/components/ContactForm"
 
 export const metadata: Metadata = {
-  title: "Nettoyage Gouttières Ixelles — Art Nouveau & Immeubles | 0451 05 33 70",
+  title: "Nettoyage Gouttières Ixelles — Art Nouveau & Immeubles",
   description: "Nettoyage gouttières à Ixelles : maisons de maître Art nouveau, immeubles, zinc historique. Devis gratuit, intervention 48h. 0451 05 33 70.",
   alternates: { canonical: "https://www.nettoyage-gouttieres-bruxelles.be/communes/ixelles" },
   keywords: ["nettoyage gouttières Ixelles", "débouchage gouttières Ixelles", "gouttières bouchées Ixelles", "prix nettoyage gouttières Ixelles"],
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
 export default function IxellesPage() {
   return (
     <>
-      <Breadcrumb items={[{ label: "Accueil", href: "/" }, { label: "Communes", href: "/" }, { label: "Ixelles" }]} />
+      <Breadcrumb items={[{ label: "Accueil", href: "/" }, { label: "Communes", href: "/communes" }, { label: "Ixelles" }]} />
 
       <section className="bg-white border-b border-gray-100 py-12 lg:py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

@@ -6,7 +6,7 @@ import Breadcrumb from "@/components/Breadcrumb"
 import ContactForm from "@/components/ContactForm"
 
 export const metadata: Metadata = {
-  title: "Nettoyage Gouttières Etterbeek — Immeubles & Maisons | 0451 05 33 70",
+  title: "Nettoyage Gouttières Etterbeek — Immeubles & Maisons",
   description: "Nettoyage gouttières à Etterbeek : immeubles à appartements, maisons mitoyennes, toitures plates. Devis gratuit, intervention rapide. 0451 05 33 70.",
   alternates: { canonical: "https://www.nettoyage-gouttieres-bruxelles.be/communes/etterbeek" },
   keywords: ["nettoyage gouttières Etterbeek", "débouchage gouttières Etterbeek", "gouttières bouchées Etterbeek", "prix nettoyage gouttières Etterbeek"],
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
 export default function EtterbeekPage() {
   return (
     <>
-      <Breadcrumb items={[{ label: "Accueil", href: "/" }, { label: "Communes", href: "/" }, { label: "Etterbeek" }]} />
+      <Breadcrumb items={[{ label: "Accueil", href: "/" }, { label: "Communes", href: "/communes" }, { label: "Etterbeek" }]} />
 
       <section className="bg-white border-b border-gray-100 py-12 lg:py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

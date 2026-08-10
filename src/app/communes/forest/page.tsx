@@ -6,7 +6,7 @@ import Breadcrumb from "@/components/Breadcrumb"
 import ContactForm from "@/components/ContactForm"
 
 export const metadata: Metadata = {
-  title: "Nettoyage Gouttières Forest — Maisons Mitoyennes & Cottages | 0451 05 33 70",
+  title: "Nettoyage Gouttières Forest — Maisons Mitoyennes & Cottages",
   description: "Nettoyage gouttières à Forest : maisons mitoyennes brique rouge, zinc d'époque, parc de Forest. Devis gratuit, intervention 48h. 0451 05 33 70.",
   alternates: { canonical: "https://www.nettoyage-gouttieres-bruxelles.be/communes/forest" },
   keywords: ["nettoyage gouttières Forest", "débouchage gouttières Forest", "gouttières bouchées Forest", "prix nettoyage gouttières Forest"],
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
 export default function ForestPage() {
   return (
     <>
-      <Breadcrumb items={[{ label: "Accueil", href: "/" }, { label: "Communes", href: "/" }, { label: "Forest" }]} />
+      <Breadcrumb items={[{ label: "Accueil", href: "/" }, { label: "Communes", href: "/communes" }, { label: "Forest" }]} />
 
       <section className="bg-white border-b border-gray-100 py-12 lg:py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

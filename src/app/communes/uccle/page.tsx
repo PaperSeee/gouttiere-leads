@@ -6,7 +6,7 @@ import Breadcrumb from "@/components/Breadcrumb"
 import ContactForm from "@/components/ContactForm"
 
 export const metadata: Metadata = {
-  title: "Nettoyage Gouttières Uccle — Expert Local | Nettoyage Gouttières Bruxelles",
+  title: "Nettoyage Gouttières Uccle — Villas & Zinc Oxydé",
   description: "Nettoyage de gouttières à Uccle : villas, maisons 4 façades, zinc oxydé. Intervention rapide avenue Molière, Brugmann. Devis gratuit. 0451 05 33 70.",
   alternates: { canonical: "https://www.nettoyage-gouttieres-bruxelles.be/communes/uccle" },
   keywords: ["nettoyage gouttières Uccle", "débouchage gouttières Uccle", "gouttières bouchées Uccle", "prix nettoyage gouttières Uccle"],
@@ -24,7 +24,7 @@ export default function UcclePage() {
     <>
       <Breadcrumb items={[
         { label: "Accueil", href: "/" },
-        { label: "Communes", href: "/" },
+        { label: "Communes", href: "/communes" },
         { label: "Uccle" },
       ]} />
 

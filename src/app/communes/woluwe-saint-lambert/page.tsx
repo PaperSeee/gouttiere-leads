@@ -6,7 +6,7 @@ import Breadcrumb from "@/components/Breadcrumb"
 import ContactForm from "@/components/ContactForm"
 
 export const metadata: Metadata = {
-  title: "Nettoyage Gouttières Woluwe-Saint-Lambert — Villas & Appartements | 0451 05 33 70",
+  title: "Nettoyage Gouttières Woluwe-Saint-Lambert | Devis Gratuit",
   description: "Nettoyage gouttières à Woluwe-Saint-Lambert : villas résidentielles, immeubles, platanes des avenues. Devis gratuit, intervention 48h. 0451 05 33 70.",
   alternates: { canonical: "https://www.nettoyage-gouttieres-bruxelles.be/communes/woluwe-saint-lambert" },
   keywords: ["nettoyage gouttières Woluwe-Saint-Lambert", "débouchage gouttières Woluwe-Saint-Lambert", "gouttières bouchées Woluwe-Saint-Lambert", "prix nettoyage gouttières Woluwe-Saint-Lambert"],
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
 export default function WoluweStLambertPage() {
   return (
     <>
-      <Breadcrumb items={[{ label: "Accueil", href: "/" }, { label: "Communes", href: "/" }, { label: "Woluwe-Saint-Lambert" }]} />
+      <Breadcrumb items={[{ label: "Accueil", href: "/" }, { label: "Communes", href: "/communes" }, { label: "Woluwe-Saint-Lambert" }]} />
 
       <section className="bg-white border-b border-gray-100 py-12 lg:py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
