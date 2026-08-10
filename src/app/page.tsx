@@ -21,7 +21,7 @@ import BlogCard from "@/components/BlogCard";
 import { getRecentPosts } from "@/lib/blog";
 
 export const metadata: Metadata = {
-  title: "Nettoyage de Gouttières à Bruxelles — Intervention Rapide | Devis Gratuit",
+  title: "Nettoyage Gouttières Bruxelles — Devis Gratuit, Intervention 48h",
   description:
     "Expert nettoyage de gouttières à Bruxelles. Débouchage urgent, réparation, démoussage toiture. Devis gratuit, intervention sous 48h. Appelez le 0451 05 33 70.",
   keywords: ["nettoyage gouttières Bruxelles", "débouchage gouttières urgence Bruxelles", "réparation gouttières Bruxelles", "démoussage toiture Bruxelles", "gouttières bouchées intervention rapide"],
@@ -404,13 +404,21 @@ export default function HomePage() {
                 l&apos;ensemble des besoins liés à l&apos;entretien de vos gouttières et
                 de votre toiture en région bruxelloise.
               </p>
-              <a
-                href="tel:0451053370"
-                className="inline-flex items-center gap-2 bg-[#1A4731] text-white font-semibold px-5 py-3 rounded-xl hover:bg-green-800 transition-colors text-sm"
-              >
-                <Phone size={16} />
-                Appeler pour un devis
-              </a>
+              <div className="flex flex-wrap gap-3">
+                <a
+                  href="tel:0451053370"
+                  className="inline-flex items-center gap-2 bg-[#1A4731] text-white font-semibold px-5 py-3 rounded-xl hover:bg-green-800 transition-colors text-sm"
+                >
+                  <Phone size={16} />
+                  Appeler pour un devis
+                </a>
+                <Link
+                  href="/services"
+                  className="inline-flex items-center gap-2 border-2 border-[#1A4731] text-[#1A4731] font-semibold px-5 py-3 rounded-xl hover:bg-[#1A4731] hover:text-white transition-colors text-sm"
+                >
+                  Voir tous les services
+                </Link>
+              </div>
             </div>
             <div className="flex-1 w-full">
               <div className="divide-y divide-gray-100">
@@ -490,7 +498,7 @@ export default function HomePage() {
                 Nous intervenons dans toutes les communes de la région bruxelloise.
                 Déplacement inclus dans le devis. Priorité aux urgences.
               </p>
-              <div className="flex items-center gap-3 bg-white/10 border border-white/20 rounded-xl px-4 py-3">
+              <div className="flex items-center gap-3 bg-white/10 border border-white/20 rounded-xl px-4 py-3 mb-4">
                 <MapPin size={20} className="text-[#F97316] flex-shrink-0" />
                 <p className="text-white text-sm">
                   <strong>Votre commune n&apos;est pas listée ?</strong>{" "}
@@ -500,6 +508,12 @@ export default function HomePage() {
                   — on couvre aussi la périphérie.
                 </p>
               </div>
+              <Link
+                href="/communes"
+                className="inline-flex items-center gap-1 text-white font-semibold hover:text-[#F97316] transition-colors text-sm"
+              >
+                Voir toutes les communes desservies <ArrowRight size={15} />
+              </Link>
             </div>
             <div className="flex-1 w-full">
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-2">

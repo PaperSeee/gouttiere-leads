@@ -6,7 +6,7 @@ import Breadcrumb from "@/components/Breadcrumb"
 import ContactForm from "@/components/ContactForm"
 
 export const metadata: Metadata = {
-  title: "Nettoyage Gouttières Watermael-Boitsfort — Forêt & Cités-Jardins | 0451 05 33 70",
+  title: "Nettoyage Gouttières Watermael-Boitsfort | Devis Gratuit",
   description: "Nettoyage gouttières à Watermael-Boitsfort : cités-jardins Le Logis & Floréal, Forêt de Soignes, mousses tenaces. Devis gratuit. 0451 05 33 70.",
   alternates: { canonical: "https://www.nettoyage-gouttieres-bruxelles.be/communes/watermael-boitsfort" },
   keywords: ["nettoyage gouttières Watermael-Boitsfort", "débouchage gouttières Watermael-Boitsfort", "gouttières bouchées Watermael-Boitsfort", "prix nettoyage gouttières Watermael-Boitsfort"],
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
 export default function WatermealBoitsfortPage() {
   return (
     <>
-      <Breadcrumb items={[{ label: "Accueil", href: "/" }, { label: "Communes", href: "/" }, { label: "Watermael-Boitsfort" }]} />
+      <Breadcrumb items={[{ label: "Accueil", href: "/" }, { label: "Communes", href: "/communes" }, { label: "Watermael-Boitsfort" }]} />
 
       <section className="bg-white border-b border-gray-100 py-12 lg:py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

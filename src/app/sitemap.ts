@@ -37,8 +37,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/mentions-legales",
   ];
 
+  const communeHub = "/communes";
   const communePages = communes.map((slug) => `/communes/${slug}`);
 
+  const serviceHub = "/services";
   const servicePages = [
     "/services/nettoyage-gouttieres",
     "/services/debouchage-gouttieres",
@@ -51,7 +53,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...blogPosts.map((post) => `/blog/${post.slug}`),
   ];
 
-  const allPages = [...staticPages, ...communePages, ...servicePages, ...blogPages];
+  const allPages = [
+    ...staticPages,
+    communeHub,
+    ...communePages,
+    serviceHub,
+    ...servicePages,
+    ...blogPages,
+  ];
 
   return allPages.map((path) => ({
     url: `${BASE_URL}${path}`,
@@ -60,6 +69,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority:
       path === ""
         ? 1.0
+        : path === communeHub || path === serviceHub
+        ? 0.85
         : path.startsWith("/communes")
         ? 0.8
         : servicePages.includes(path)

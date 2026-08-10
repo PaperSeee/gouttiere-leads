@@ -84,6 +84,12 @@ export default function Header() {
                     {s.name}
                   </Link>
                 ))}
+                <Link
+                  href="/services"
+                  className="block px-4 py-2 border-t border-gray-100 mt-1 pt-2 text-[#1A4731] hover:text-[#F97316] text-sm font-semibold transition-colors"
+                >
+                  Tous nos services
+                </Link>
               </div>
             </div>
 
@@ -110,6 +116,12 @@ export default function Header() {
                     {c.name}
                   </Link>
                 ))}
+                <Link
+                  href="/communes"
+                  className="block px-4 py-2 border-t border-gray-100 mt-1 pt-2 text-[#1A4731] hover:text-[#F97316] text-sm font-semibold transition-colors"
+                >
+                  Toutes les communes
+                </Link>
               </div>
             </div>
 
@@ -163,6 +175,13 @@ export default function Header() {
                     {s.name}
                   </Link>
                 ))}
+                <Link
+                  href="/services"
+                  className="text-[#F97316] hover:text-orange-400 py-1 text-sm font-semibold"
+                  onClick={() => setMobileOpen(false)}
+                >
+                  Tous nos services
+                </Link>
               </div>
             </div>
             <div className="border-t border-green-900 pt-2">
@@ -179,6 +198,13 @@ export default function Header() {
                   </Link>
                 ))}
               </div>
+              <Link
+                href="/communes"
+                className="text-[#F97316] hover:text-orange-400 py-1 text-sm font-semibold block mt-1"
+                onClick={() => setMobileOpen(false)}
+              >
+                Toutes les communes
+              </Link>
             </div>
             <Link href="/tarifs" className="text-gray-300 hover:text-white py-2 border-t border-green-900" onClick={() => setMobileOpen(false)}>
               Tarifs

@@ -6,7 +6,7 @@ import Breadcrumb from "@/components/Breadcrumb"
 import ContactForm from "@/components/ContactForm"
 
 export const metadata: Metadata = {
-  title: "Nettoyage Gouttières Molenbeek-Saint-Jean — Canal & Rénovation | 0451 05 33 70",
+  title: "Nettoyage Gouttières Molenbeek-Saint-Jean | Devis Gratuit",
   description: "Nettoyage gouttières à Molenbeek-Saint-Jean : habitat dense, canal, rénovation bâti ancien. Devis gratuit, intervention rapide. 0451 05 33 70.",
   alternates: { canonical: "https://www.nettoyage-gouttieres-bruxelles.be/communes/molenbeek-saint-jean" },
   keywords: ["nettoyage gouttières Molenbeek", "débouchage gouttières Molenbeek", "gouttières bouchées Molenbeek", "prix nettoyage gouttières Molenbeek"],
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
 export default function MolenbeekSaintJeanPage() {
   return (
     <>
-      <Breadcrumb items={[{ label: "Accueil", href: "/" }, { label: "Communes", href: "/" }, { label: "Molenbeek-Saint-Jean" }]} />
+      <Breadcrumb items={[{ label: "Accueil", href: "/" }, { label: "Communes", href: "/communes" }, { label: "Molenbeek-Saint-Jean" }]} />
 
       <section className="bg-white border-b border-gray-100 py-12 lg:py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

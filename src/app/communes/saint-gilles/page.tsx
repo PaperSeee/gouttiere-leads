@@ -6,7 +6,7 @@ import Breadcrumb from "@/components/Breadcrumb"
 import ContactForm from "@/components/ContactForm"
 
 export const metadata: Metadata = {
-  title: "Nettoyage Gouttières Saint-Gilles — Art Nouveau & Maisons de Maître | 0451 05 33 70",
+  title: "Nettoyage Gouttières Saint-Gilles — Art Nouveau",
   description: "Nettoyage gouttières à Saint-Gilles : maisons de maître Art nouveau, zinc ornemental, parvis. Devis gratuit, intervention rapide. 0451 05 33 70.",
   alternates: { canonical: "https://www.nettoyage-gouttieres-bruxelles.be/communes/saint-gilles" },
   keywords: ["nettoyage gouttières Saint-Gilles", "débouchage gouttières Saint-Gilles", "gouttières bouchées Saint-Gilles", "prix nettoyage gouttières Saint-Gilles"],
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
 export default function SaintGillesPage() {
   return (
     <>
-      <Breadcrumb items={[{ label: "Accueil", href: "/" }, { label: "Communes", href: "/" }, { label: "Saint-Gilles" }]} />
+      <Breadcrumb items={[{ label: "Accueil", href: "/" }, { label: "Communes", href: "/communes" }, { label: "Saint-Gilles" }]} />
 
       <section className="bg-white border-b border-gray-100 py-12 lg:py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

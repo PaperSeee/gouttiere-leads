@@ -104,6 +104,11 @@ export default function Footer() {
                   </Link>
                 </li>
               ))}
+              <li>
+                <Link href="/communes" className="text-[#F97316] hover:text-orange-400 transition-colors font-semibold py-1 block">
+                  Toutes les communes
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -111,6 +116,11 @@ export default function Footer() {
           <div>
             <h3 className="text-white font-semibold mb-4">Nos services</h3>
             <ul className="space-y-1.5 text-sm">
+              <li>
+                <Link href="/services" className="text-[#F97316] hover:text-orange-400 transition-colors font-semibold">
+                  Tous nos services
+                </Link>
+              </li>
               <li>
                 <Link href="/services/nettoyage-gouttieres" className="hover:text-[#F97316] transition-colors">
                   Nettoyage gouttières

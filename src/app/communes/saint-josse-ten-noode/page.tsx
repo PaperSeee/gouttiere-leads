@@ -6,7 +6,7 @@ import Breadcrumb from "@/components/Breadcrumb"
 import ContactForm from "@/components/ContactForm"
 
 export const metadata: Metadata = {
-  title: "Nettoyage Gouttières Saint-Josse-ten-Noode — Immeubles Denses | 0451 05 33 70",
+  title: "Nettoyage Gouttières Saint-Josse-ten-Noode | Devis Gratuit",
   description: "Nettoyage gouttières à Saint-Josse-ten-Noode : immeubles denses, accès hauteur, toitures plates. Devis gratuit, intervention rapide. 0451 05 33 70.",
   alternates: { canonical: "https://www.nettoyage-gouttieres-bruxelles.be/communes/saint-josse-ten-noode" },
   keywords: ["nettoyage gouttières Saint-Josse", "débouchage gouttières Saint-Josse", "gouttières bouchées Saint-Josse", "prix nettoyage gouttières Saint-Josse"],
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
 export default function SaintJossePage() {
   return (
     <>
-      <Breadcrumb items={[{ label: "Accueil", href: "/" }, { label: "Communes", href: "/" }, { label: "Saint-Josse-ten-Noode" }]} />
+      <Breadcrumb items={[{ label: "Accueil", href: "/" }, { label: "Communes", href: "/communes" }, { label: "Saint-Josse-ten-Noode" }]} />
 
       <section className="bg-white border-b border-gray-100 py-12 lg:py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

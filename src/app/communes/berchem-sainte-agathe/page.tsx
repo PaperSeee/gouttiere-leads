@@ -6,8 +6,8 @@ import Breadcrumb from "@/components/Breadcrumb"
 import ContactForm from "@/components/ContactForm"
 
 export const metadata: Metadata = {
-  title: "Nettoyage Gouttières Berchem-Sainte-Agathe — Villas & Lotissements | 0451 05 33 70",
-  description: "Nettoyage gouttières à Berchem-Sainte-Agathe : villas lotissements années 60–70, aluminium vieillissant, jardins arborés. Devis gratuit. 0451 05 33 70.",
+  title: "Nettoyage Gouttières Berchem-Sainte-Agathe | Devis Gratuit",
+  description: "Nettoyage gouttières à Berchem-Sainte-Agathe : villas, lotissements 60–70, aluminium vieillissant. Devis gratuit. 0451 05 33 70.",
   alternates: { canonical: "https://www.nettoyage-gouttieres-bruxelles.be/communes/berchem-sainte-agathe" },
   keywords: ["nettoyage gouttières Berchem-Sainte-Agathe", "débouchage gouttières Berchem-Sainte-Agathe", "gouttières bouchées Berchem-Sainte-Agathe", "prix nettoyage gouttières Berchem-Sainte-Agathe"],
   openGraph: {
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
 export default function BerchemSainteAgathePage() {
   return (
     <>
-      <Breadcrumb items={[{ label: "Accueil", href: "/" }, { label: "Communes", href: "/" }, { label: "Berchem-Sainte-Agathe" }]} />
+      <Breadcrumb items={[{ label: "Accueil", href: "/" }, { label: "Communes", href: "/communes" }, { label: "Berchem-Sainte-Agathe" }]} />
 
       <section className="bg-white border-b border-gray-100 py-12 lg:py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
