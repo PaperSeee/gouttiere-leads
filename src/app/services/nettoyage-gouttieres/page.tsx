@@ -5,9 +5,9 @@ import Breadcrumb from "@/components/Breadcrumb";
 import ContactForm from "@/components/ContactForm";
 
 export const metadata: Metadata = {
-  title: "Nettoyage Gouttières Bruxelles — Service Complet | Devis Gratuit",
+  title: { absolute: "Nettoyage Gouttières Bruxelles — Service Complet" },
   description:
-    "Service de nettoyage de gouttières à Bruxelles. Évacuation feuilles, mousses, sédiments. Nettoyage gouttières + descentes pluviales. Devis gratuit. 0451 05 33 70.",
+    "Service de nettoyage de gouttières à Bruxelles. Évacuation feuilles, mousses, sédiments. Gouttières + descentes pluviales. Devis gratuit.",
   alternates: { canonical: "https://www.nettoyage-gouttieres-bruxelles.be/services/nettoyage-gouttieres" },
   keywords: ["nettoyage gouttières Bruxelles professionnel", "nettoyage gouttières prix Bruxelles", "entretien gouttières maison Bruxelles", "nettoyage haute pression gouttières"],
   openGraph: {
@@ -54,7 +54,7 @@ export default function NettoyageGouttieres() {
     provider: {
       "@type": "LocalBusiness",
       name: "Nettoyage Gouttières Bruxelles",
-      telephone: "0451053370",
+      telephone: "+32451053370",
     },
     areaServed: "Bruxelles",
     description: "Service de nettoyage complet de gouttières à Bruxelles. Évacuation des feuilles, mousses et sédiments. Nettoyage des descentes pluviales inclus.",
@@ -70,7 +70,7 @@ export default function NettoyageGouttieres() {
       <Breadcrumb
         items={[
           { label: "Accueil", href: "/" },
-          { label: "Services", href: "/" },
+          { label: "Services" },
           { label: "Nettoyage gouttières" },
         ]}
       />

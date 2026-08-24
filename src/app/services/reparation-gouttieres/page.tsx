@@ -5,7 +5,7 @@ import Breadcrumb from "@/components/Breadcrumb";
 import ContactForm from "@/components/ContactForm";
 
 export const metadata: Metadata = {
-  title: "Réparation Gouttières Bruxelles — Remplacement PVC, Zinc, Alu | Devis Gratuit",
+  title: { absolute: "Réparation Gouttières Bruxelles — PVC, Zinc, Alu" },
   description:
     "Réparation et remplacement de gouttières à Bruxelles. PVC, zinc, aluminium, cuivre. Fissures, joints, fixations. Devis gratuit. Appelez le 0451 05 33 70.",
   alternates: { canonical: "https://www.nettoyage-gouttieres-bruxelles.be/services/reparation-gouttieres" },
@@ -25,12 +25,30 @@ export const metadata: Metadata = {
 };
 
 export default function ReparationGouttieres() {
+  const serviceSchema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: "Réparation et remplacement de gouttières Bruxelles",
+    provider: {
+      "@type": "LocalBusiness",
+      name: "Nettoyage Gouttières Bruxelles",
+      telephone: "+32451053370",
+    },
+    areaServed: "Bruxelles",
+    description: "Réparation et remplacement de gouttières à Bruxelles : PVC, zinc, aluminium, cuivre. Fissures, joints, fixations.",
+    offers: {
+      "@type": "Offer",
+      priceRange: "40-80€",
+    },
+  };
+
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
       <Breadcrumb
         items={[
           { label: "Accueil", href: "/" },
-          { label: "Services", href: "/" },
+          { label: "Services" },
           { label: "Réparation gouttières" },
         ]}
       />
