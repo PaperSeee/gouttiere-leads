@@ -5,7 +5,7 @@ import Breadcrumb from "@/components/Breadcrumb";
 import ContactForm from "@/components/ContactForm";
 
 export const metadata: Metadata = {
-  title: "Débouchage Gouttières Bruxelles — Urgence 7j/7 | 0451 05 33 70",
+  title: { absolute: "Débouchage Gouttières Bruxelles — Urgence 7j/7" },
   description:
     "Débouchage urgent de gouttières et descentes pluviales à Bruxelles. Intervention 7j/7, haute pression. Débordement actif ? Appelez le 0451 05 33 70.",
   alternates: { canonical: "https://www.nettoyage-gouttieres-bruxelles.be/services/debouchage-gouttieres" },
@@ -32,7 +32,7 @@ export default function DebouchageGouttieres() {
     provider: {
       "@type": "LocalBusiness",
       name: "Nettoyage Gouttières Bruxelles",
-      telephone: "0451053370",
+      telephone: "+32451053370",
     },
     areaServed: "Bruxelles",
     description: "Service de débouchage d'urgence de gouttières et descentes pluviales à Bruxelles. Disponible 7j/7.",
@@ -48,7 +48,7 @@ export default function DebouchageGouttieres() {
       <Breadcrumb
         items={[
           { label: "Accueil", href: "/" },
-          { label: "Services", href: "/" },
+          { label: "Services" },
           { label: "Débouchage urgence" },
         ]}
       />
