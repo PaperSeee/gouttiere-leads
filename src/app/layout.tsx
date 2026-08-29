@@ -9,6 +9,7 @@ import { Phone, MessageCircle } from "lucide-react";
 const inter = Inter({
   subsets: ["latin"],
   display: "swap",
+  variable: "--font-inter",
 });
 
 const DOMAIN = "https://www.nettoyage-gouttieres-bruxelles.be";
@@ -134,7 +135,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="fr" className={`${inter.className} h-full`}>
+    <html lang="fr" className={`${inter.variable} ${inter.className} h-full`}>
       <head>
         <meta name="theme-color" content="#1A4731" />
         <meta name="apple-mobile-web-app-capable" content="yes" />

@@ -1,12 +1,73 @@
 @import "tailwindcss";
 
+/*
+ * Design system — Nettoyage Gouttières Bruxelles
+ *
+ * Palette pensée pour un métier d'entretien de toiture/gouttières :
+ * - "Ardoise" (vert-de-gris profond) : couleur de marque historique du site,
+ *   déjà utilisée partout (#1A4731). Elle évoque le zinc oxydé et l'ardoise
+ *   de toiture bruxelloise. Conservée telle quelle pour la cohérence de marque
+ *   (52 fichiers l'utilisent déjà) et formalisée ici en token nommé.
+ * - "Pluie" (orange signal) : accent d'action (#F97316), déjà en place sur
+ *   tous les CTA/téléphone. Conservé pour ne pas casser la reconnaissance
+ *   de marque déjà installée sur ce site.
+ * - Neutres "zinc" : gris légèrement bleutés (au lieu de gris purement
+ *   neutres) pour rappeler le métal de toiture plutôt qu'une palette
+ *   générique de SaaS.
+ */
 :root {
+  /* Marque */
+  --color-ardoise-900: #0f2e1f;
+  --color-ardoise-800: #1a4731; /* couleur de marque principale (inchangée) */
+  --color-ardoise-700: #235a3f;
+  --color-ardoise-100: #e6f0ea;
+
+  --color-pluie-600: #ea6a0f;
+  --color-pluie-500: #f97316; /* accent CTA (inchangé) */
+  --color-pluie-100: #fff1e6;
+
+  /* Neutres "zinc" — gris à légère dominante bleu-gris plutôt que gris pur */
+  --color-zinc-950: #12181a;
+  --color-zinc-800: #2b3538;
+  --color-zinc-600: #5b6b70;
+  --color-zinc-400: #94a3a6;
+  --color-zinc-200: #e2e8ea;
+  --color-zinc-100: #f1f4f5;
+  --color-zinc-50: #f8fafa;
+
+  /* Tokens sémantiques */
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: var(--color-zinc-950);
+  --brand: var(--color-ardoise-800);
+  --brand-strong: var(--color-ardoise-900);
+  --brand-soft: var(--color-ardoise-100);
+  --accent: var(--color-pluie-500);
+  --accent-strong: var(--color-pluie-600);
+  --accent-soft: var(--color-pluie-100);
+  --surface-muted: var(--color-zinc-50);
+  --border-subtle: var(--color-zinc-200);
+  --text-muted: var(--color-zinc-600);
+
+  --font-sans: var(--font-inter, "Inter"), Arial, Helvetica, sans-serif;
+}
+
+/* Enregistre les alias sémantiques comme utilitaires Tailwind v4
+   (bg-brand, text-accent, bg-surface-muted, border-subtle, text-muted, ...) */
+@theme inline {
+  --color-brand: var(--brand);
+  --color-brand-strong: var(--brand-strong);
+  --color-brand-soft: var(--brand-soft);
+  --color-accent: var(--accent);
+  --color-accent-strong: var(--accent-strong);
+  --color-accent-soft: var(--accent-soft);
+  --color-surface-muted: var(--surface-muted);
+  --color-subtle: var(--border-subtle);
+  --color-muted: var(--text-muted);
+  --font-sans: var(--font-sans);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
 }
