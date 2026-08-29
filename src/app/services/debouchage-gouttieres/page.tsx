@@ -4,6 +4,28 @@ import { Phone, CheckCircle, ArrowRight, AlertTriangle, Clock } from "lucide-rea
 import Breadcrumb from "@/components/Breadcrumb";
 import ContactForm from "@/components/ContactForm";
 
+const communes = [
+  { name: "Anderlecht", slug: "anderlecht" },
+  { name: "Auderghem", slug: "auderghem" },
+  { name: "Berchem-Sainte-Agathe", slug: "berchem-sainte-agathe" },
+  { name: "Bruxelles", slug: "bruxelles" },
+  { name: "Etterbeek", slug: "etterbeek" },
+  { name: "Evere", slug: "evere" },
+  { name: "Forest", slug: "forest" },
+  { name: "Ganshoren", slug: "ganshoren" },
+  { name: "Ixelles", slug: "ixelles" },
+  { name: "Jette", slug: "jette" },
+  { name: "Koekelberg", slug: "koekelberg" },
+  { name: "Molenbeek-Saint-Jean", slug: "molenbeek-saint-jean" },
+  { name: "Saint-Gilles", slug: "saint-gilles" },
+  { name: "Saint-Josse-ten-Noode", slug: "saint-josse-ten-noode" },
+  { name: "Schaerbeek", slug: "schaerbeek" },
+  { name: "Uccle", slug: "uccle" },
+  { name: "Watermael-Boitsfort", slug: "watermael-boitsfort" },
+  { name: "Woluwe-Saint-Lambert", slug: "woluwe-saint-lambert" },
+  { name: "Woluwe-Saint-Pierre", slug: "woluwe-saint-pierre" },
+];
+
 export const metadata: Metadata = {
   title: "Débouchage Gouttières Bruxelles — Urgence 7j/7 | 0451 05 33 70",
   description:
@@ -132,6 +154,15 @@ export default function DebouchageGouttieres() {
                   normalement par les descentes. Un filet d&apos;eau irrégulier ou l&apos;absence d&apos;écoulement
                   sont les premiers signes d&apos;une obstruction.
                 </p>
+              </div>
+
+              <h2 className="text-2xl font-bold text-gray-900 mb-4 mt-8">Nos communes d&apos;intervention</h2>
+              <div className="grid grid-cols-3 gap-2">
+                {communes.map((c) => (
+                  <Link key={c.slug} href={`/communes/${c.slug}`} className="text-[#1A4731] hover:text-[#F97316] font-medium text-sm flex items-center gap-1">
+                    <ArrowRight size={12} /> {c.name}
+                  </Link>
+                ))}
               </div>
             </div>
 

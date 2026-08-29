@@ -9,6 +9,7 @@ import { Phone, MessageCircle } from "lucide-react";
 const inter = Inter({
   subsets: ["latin"],
   display: "swap",
+  variable: "--font-inter",
 });
 
 const DOMAIN = "https://www.nettoyage-gouttieres-bruxelles.be";
@@ -134,7 +135,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="fr" className={`${inter.className} h-full`}>
+    <html lang="fr" className={`${inter.variable} ${inter.className} h-full`}>
       <head>
         <meta name="theme-color" content="#1A4731" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -172,7 +173,7 @@ export default function RootLayout({
           </a>
           <a
             href="tel:0451053370"
-            className="flex items-center justify-center w-14 h-14 bg-[#F97316] hover:bg-orange-500 text-white rounded-full shadow-2xl transition-colors"
+            className="flex items-center justify-center w-14 h-14 bg-accent hover:bg-accent-strong text-white rounded-full shadow-2xl transition-colors"
             aria-label="Appeler"
           >
             <Phone size={26} />

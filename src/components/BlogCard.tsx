@@ -26,14 +26,14 @@ export default function BlogCard({ post, featured = false }: BlogCardProps) {
 
       <div className="p-5 flex flex-col flex-1">
         <div className="mb-3">
-          <span className="inline-block bg-green-100 text-[#1A4731] text-xs font-semibold px-2.5 py-1 rounded-full">
+          <span className="inline-block bg-green-100 text-brand text-xs font-semibold px-2.5 py-1 rounded-full">
             {post.category}
           </span>
         </div>
 
         <Link href={`/blog/${post.slug}`}>
           <h2
-            className={`font-bold text-[#1A4731] hover:text-[#F97316] transition-colors leading-snug mb-2 ${
+            className={`font-bold text-brand hover:text-accent transition-colors leading-snug mb-2 ${
               featured ? "text-xl" : "text-lg"
             }`}
           >
@@ -58,7 +58,7 @@ export default function BlogCard({ post, featured = false }: BlogCardProps) {
           </div>
           <Link
             href={`/blog/${post.slug}`}
-            className="flex items-center gap-1 text-[#F97316] font-semibold text-sm hover:gap-2 transition-all"
+            className="flex items-center gap-1 text-accent font-semibold text-sm hover:gap-2 transition-all"
             aria-label={`Lire l'article : ${post.title}`}
           >
             Lire <ArrowRight size={14} />

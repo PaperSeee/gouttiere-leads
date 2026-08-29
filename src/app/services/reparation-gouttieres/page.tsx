@@ -24,9 +24,49 @@ export const metadata: Metadata = {
   },
 };
 
+const communes = [
+  { name: "Anderlecht", slug: "anderlecht" },
+  { name: "Auderghem", slug: "auderghem" },
+  { name: "Berchem-Sainte-Agathe", slug: "berchem-sainte-agathe" },
+  { name: "Bruxelles", slug: "bruxelles" },
+  { name: "Etterbeek", slug: "etterbeek" },
+  { name: "Evere", slug: "evere" },
+  { name: "Forest", slug: "forest" },
+  { name: "Ganshoren", slug: "ganshoren" },
+  { name: "Ixelles", slug: "ixelles" },
+  { name: "Jette", slug: "jette" },
+  { name: "Koekelberg", slug: "koekelberg" },
+  { name: "Molenbeek-Saint-Jean", slug: "molenbeek-saint-jean" },
+  { name: "Saint-Gilles", slug: "saint-gilles" },
+  { name: "Saint-Josse-ten-Noode", slug: "saint-josse-ten-noode" },
+  { name: "Schaerbeek", slug: "schaerbeek" },
+  { name: "Uccle", slug: "uccle" },
+  { name: "Watermael-Boitsfort", slug: "watermael-boitsfort" },
+  { name: "Woluwe-Saint-Lambert", slug: "woluwe-saint-lambert" },
+  { name: "Woluwe-Saint-Pierre", slug: "woluwe-saint-pierre" },
+];
+
 export default function ReparationGouttieres() {
+  const serviceSchema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: "Réparation et remplacement de gouttières Bruxelles",
+    provider: {
+      "@type": "LocalBusiness",
+      name: "Nettoyage Gouttières Bruxelles",
+      telephone: "0451053370",
+    },
+    areaServed: "Bruxelles",
+    description: "Réparation et remplacement de gouttières à Bruxelles. Tous matériaux : PVC, zinc, aluminium, cuivre. Devis gratuit.",
+    offers: {
+      "@type": "Offer",
+      priceRange: "40-200€",
+    },
+  };
+
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
       <Breadcrumb
         items={[
           { label: "Accueil", href: "/" },
@@ -138,6 +178,15 @@ export default function ReparationGouttieres() {
                 <Link href="/types-gouttieres" className="text-[#F97316] text-sm font-semibold flex items-center gap-1">
                   Guide complet types de gouttières <ArrowRight size={14} />
                 </Link>
+              </div>
+
+              <h2 className="text-2xl font-bold text-gray-900 mb-4 mt-8">Nos communes d&apos;intervention</h2>
+              <div className="grid grid-cols-3 gap-2">
+                {communes.map((c) => (
+                  <Link key={c.slug} href={`/communes/${c.slug}`} className="text-[#1A4731] hover:text-[#F97316] font-medium text-sm flex items-center gap-1">
+                    <ArrowRight size={12} /> {c.name}
+                  </Link>
+                ))}
               </div>
             </div>
 
