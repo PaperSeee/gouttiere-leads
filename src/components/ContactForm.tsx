@@ -94,7 +94,7 @@ export default function ContactForm({
             required
             value={form.prenom}
             onChange={handleChange}
-            className="w-full border border-gray-300 rounded-lg px-3 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#1A4731] focus:border-transparent"
+            className="w-full border border-gray-300 rounded-lg px-3 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-brand focus:border-transparent"
             placeholder="Jean"
           />
         </div>
@@ -108,7 +108,7 @@ export default function ContactForm({
             required
             value={form.nom}
             onChange={handleChange}
-            className="w-full border border-gray-300 rounded-lg px-3 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#1A4731] focus:border-transparent"
+            className="w-full border border-gray-300 rounded-lg px-3 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-brand focus:border-transparent"
             placeholder="Dupont"
           />
         </div>
@@ -125,7 +125,7 @@ export default function ContactForm({
             required
             value={form.telephone}
             onChange={handleChange}
-            className="w-full border border-gray-300 rounded-lg px-3 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#1A4731] focus:border-transparent"
+            className="w-full border border-gray-300 rounded-lg px-3 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-brand focus:border-transparent"
             placeholder="+32 4XX XX XX XX"
           />
         </div>
@@ -138,7 +138,7 @@ export default function ContactForm({
             name="email"
             value={form.email}
             onChange={handleChange}
-            className="w-full border border-gray-300 rounded-lg px-3 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#1A4731] focus:border-transparent"
+            className="w-full border border-gray-300 rounded-lg px-3 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-brand focus:border-transparent"
             placeholder="jean@exemple.be"
           />
         </div>
@@ -154,7 +154,7 @@ export default function ContactForm({
             required
             value={form.commune}
             onChange={handleChange}
-            className="w-full border border-gray-300 rounded-lg px-3 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#1A4731] focus:border-transparent bg-white"
+            className="w-full border border-gray-300 rounded-lg px-3 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-brand focus:border-transparent bg-white"
           >
             <option value="">Sélectionnez votre commune</option>
             {communes.map((c) => (
@@ -173,7 +173,7 @@ export default function ContactForm({
             required
             value={form.intervention}
             onChange={handleChange}
-            className="w-full border border-gray-300 rounded-lg px-3 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#1A4731] focus:border-transparent bg-white"
+            className="w-full border border-gray-300 rounded-lg px-3 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-brand focus:border-transparent bg-white"
           >
             <option value="">Sélectionnez le type</option>
             {interventionTypes.map((t) => (
@@ -194,7 +194,7 @@ export default function ContactForm({
           rows={3}
           value={form.message}
           onChange={handleChange}
-          className="w-full border border-gray-300 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-[#1A4731] focus:border-transparent resize-none"
+          className="w-full border border-gray-300 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-brand focus:border-transparent resize-none"
           placeholder="Précisez la longueur approximative des gouttières, la hauteur du bâtiment, l'urgence..."
         />
       </div>
@@ -202,7 +202,7 @@ export default function ContactForm({
       <button
         type="submit"
         disabled={loading}
-        className="w-full flex items-center justify-center gap-2 bg-[#F97316] hover:bg-orange-500 disabled:bg-orange-300 text-white font-bold py-3.5 px-6 rounded-lg transition-colors text-sm"
+        className="w-full flex items-center justify-center gap-2 bg-accent hover:bg-accent-strong disabled:bg-orange-300 text-white font-bold py-3.5 px-6 rounded-lg transition-colors text-sm"
       >
         {loading ? (
           <>

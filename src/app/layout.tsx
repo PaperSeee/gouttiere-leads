@@ -173,7 +173,7 @@ export default function RootLayout({
           </a>
           <a
             href="tel:0451053370"
-            className="flex items-center justify-center w-14 h-14 bg-[#F97316] hover:bg-orange-500 text-white rounded-full shadow-2xl transition-colors"
+            className="flex items-center justify-center w-14 h-14 bg-accent hover:bg-accent-strong text-white rounded-full shadow-2xl transition-colors"
             aria-label="Appeler"
           >
             <Phone size={26} />
