@@ -19,9 +19,49 @@ export const metadata: Metadata = {
   },
 }
 
+const ucclefaqs = [
+  {
+    question: "À quelle fréquence faut-il nettoyer les gouttières à Uccle ?",
+    answer:
+      "À Uccle, deux nettoyages par an sont souvent nécessaires — mai après les floraisons printanières, novembre après la chute des feuilles. Les propriétés avec de grands jardins arborés (platanes, chênes, hêtres) peuvent nécessiter trois passages.",
+  },
+  {
+    question: "Intervenez-vous avenue Molière et avenue Brugmann ?",
+    answer:
+      "Oui, nous intervenons régulièrement dans toutes les avenues d'Uccle — Molière, Brugmann, Winston Churchill, Delleur et le quartier du Bois. Notre matériel est adapté aux villas haut de gamme avec façades hautes.",
+  },
+  {
+    question: "Mes gouttières en zinc d'époque peuvent-elles être réparées ?",
+    answer:
+      "Les gouttières en zinc des villas des années 30–60 peuvent souvent être réparées par soudure ou reprise de joints si l'oxydation n'est pas trop avancée. Sinon, remplacement par zinc neuf ou aluminium laqué qui s'intègre parfaitement à l'architecture d'époque.",
+  },
+  {
+    question: "La pente de mon jardin aggrave-t-elle les risques ?",
+    answer:
+      "Oui. Les terrains en pente typiques d'Uccle concentrent les eaux pluviales vers les fondations en cas de débordement. C'est pourquoi l'entretien régulier est encore plus crucial ici — un bouchon peut causer des infiltrations de fondations en quelques heures.",
+  },
+];
+
 export default function UcclePage() {
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: ucclefaqs.map((faq) => ({
+      "@type": "Question",
+      name: faq.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: faq.answer,
+      },
+    })),
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       <Breadcrumb items={[
         { label: "Accueil", href: "/" },
         { label: "Communes", href: "/" },
