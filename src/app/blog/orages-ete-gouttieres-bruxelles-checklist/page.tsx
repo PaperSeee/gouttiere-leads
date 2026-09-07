@@ -6,7 +6,7 @@ import ContactForm from "@/components/ContactForm"
 
 export const metadata: Metadata = {
   title: "Orages d'Été à Bruxelles : la Checklist Gouttières Avant les Intempéries",
-  description: "Les orages d'été déversent en 20 minutes l'équivalent de plusieurs jours de pluie. Gouttière bouchée = débordement garanti. La checklist complète pour préparer vos gouttières avant l'orage à Bruxelles.",
+  description: "Un orage d'été déverse en 20 minutes l'équivalent de plusieurs jours de pluie. La checklist en 7 points pour préparer vos gouttières avant l'orage à Bruxelles.",
   keywords: ["orage gouttière bruxelles", "gouttière déborde orage", "pluie intense gouttière bouchée", "préparer gouttières été", "intempéries toiture Bruxelles"],
   alternates: { canonical: "https://www.nettoyage-gouttieres-bruxelles.be/blog/orages-ete-gouttieres-bruxelles-checklist" },
   openGraph: {
@@ -210,6 +210,7 @@ export default function BlogOragesEteGouttieres() {
               { label: "Infiltrations façade et gouttières", href: "/blog/infiltration-eau-facade-gouttieres" },
               { label: "Prix nettoyage gouttières", href: "/blog/prix-nettoyage-gouttieres-bruxelles" },
               { label: "Protections anti-feuilles", href: "/blog/protection-gouttieres-anti-feuilles-bruxelles" },
+              { label: "Débouchage d'urgence", href: "/services/debouchage-gouttieres" },
             ].map((link) => (
               <Link
                 key={link.href}
