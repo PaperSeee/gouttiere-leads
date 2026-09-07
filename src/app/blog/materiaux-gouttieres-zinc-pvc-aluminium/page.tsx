@@ -257,6 +257,7 @@ export default function BlogMateriauxGouttieresPvcZincPage() {
               { label: "Gouttière qui déborde", href: "/blog/gouttiere-qui-deborde-causes-solutions" },
               { label: "Types de gouttières", href: "/types-gouttieres" },
               { label: "Infiltrations et façade", href: "/blog/infiltration-eau-facade-gouttieres" },
+              { label: "Réparation de gouttières", href: "/services/reparation-gouttieres" },
             ].map((link) => (
               <Link
                 key={link.href}

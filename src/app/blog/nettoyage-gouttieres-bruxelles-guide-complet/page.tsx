@@ -5,7 +5,7 @@ import Breadcrumb from "@/components/Breadcrumb"
 import ContactForm from "@/components/ContactForm"
 
 export const metadata: Metadata = {
-  title: "Nettoyage Gouttières Bruxelles : Guide Complet 2026 — Prix, Fréquence & Conseils",
+  title: "Nettoyage Gouttières Bruxelles : Guide Complet 2026",
   description: "Tout savoir sur le nettoyage de gouttières à Bruxelles : fréquence recommandée, prix du marché, risques d'une gouttière bouchée, et comment trouver un professionnel fiable.",
   keywords: ["nettoyage gouttières bruxelles", "nettoyer gouttières bruxelles", "prix nettoyage gouttières", "gouttières bouchées bruxelles", "entretien gouttières belgique"],
   alternates: { canonical: "https://www.nettoyage-gouttieres-bruxelles.be/blog/nettoyage-gouttieres-bruxelles-guide-complet" },
@@ -311,6 +311,29 @@ export default function BlogNettoyageGouttieresBruxellesPage() {
               </div>
             </div>
           </aside>
+        </div>
+      </section>
+
+      {/* Liens internes */}
+      <section className="py-10 bg-white border-t border-gray-100">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-lg font-bold text-gray-900 mb-4">Articles et pages liés</h2>
+          <div className="flex flex-wrap gap-3">
+            {[
+              { label: "Nettoyage de gouttières", href: "/services/nettoyage-gouttieres" },
+              { label: "Débouchage d'urgence", href: "/services/debouchage-gouttieres" },
+              { label: "Prix nettoyage gouttières", href: "/blog/prix-nettoyage-gouttieres-bruxelles" },
+              { label: "Quand nettoyer ses gouttières ?", href: "/blog/entretien-gouttieres-quand-faire" },
+            ].map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className="flex items-center gap-1.5 bg-gray-50 hover:bg-[#1A4731] hover:text-white text-gray-700 border border-gray-200 hover:border-[#1A4731] rounded-lg px-3 py-2 text-sm font-medium transition-all"
+              >
+                {link.label} <ArrowRight size={13} />
+              </Link>
+            ))}
+          </div>
         </div>
       </section>
 

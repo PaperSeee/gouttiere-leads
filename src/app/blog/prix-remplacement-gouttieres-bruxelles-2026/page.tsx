@@ -271,6 +271,29 @@ export default function BlogPrixRemplacementGouttieresBruxelles2026Page() {
         </div>
       </section>
 
+      {/* Liens internes */}
+      <section className="py-10 bg-white border-t border-gray-100">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-lg font-bold text-gray-900 mb-4">Articles et pages liés</h2>
+          <div className="flex flex-wrap gap-3">
+            {[
+              { label: "Réparation de gouttières", href: "/services/reparation-gouttieres" },
+              { label: "Types de gouttières", href: "/types-gouttieres" },
+              { label: "Matériaux gouttières", href: "/blog/materiaux-gouttieres-zinc-pvc-aluminium" },
+              { label: "Gouttière qui déborde", href: "/blog/gouttiere-qui-deborde-causes-solutions" },
+            ].map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className="flex items-center gap-1.5 bg-gray-50 hover:bg-[#1A4731] hover:text-white text-gray-700 border border-gray-200 hover:border-[#1A4731] rounded-lg px-3 py-2 text-sm font-medium transition-all"
+              >
+                {link.label} <ArrowRight size={13} />
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="py-12 px-4 bg-gray-50 border-t border-gray-100">
         <div className="max-w-4xl mx-auto">
