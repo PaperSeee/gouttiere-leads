@@ -183,6 +183,16 @@ export default function WoluweStLambertPage() {
         </div>
       </section>
 
+      <section className="py-6 bg-white border-t border-gray-100">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <p className="text-sm text-gray-500">
+            Besoin d'un devis ailleurs à Bruxelles ? Retrouvez notre service de{" "}
+            <Link href="/" className="font-semibold text-[#1A4731] hover:text-[#F97316]">nettoyage de gouttières à Bruxelles</Link>
+            , toutes communes confondues.
+          </p>
+        </div>
+      </section>
+
       <section className="py-8 bg-gray-50 border-t border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <p className="text-sm font-semibold text-gray-500 mb-3">Communes voisines desservies</p>
