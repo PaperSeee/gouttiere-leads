@@ -9,6 +9,7 @@ import { Phone, MessageCircle } from "lucide-react";
 const inter = Inter({
   subsets: ["latin"],
   display: "swap",
+  variable: "--font-inter",
 });
 
 const DOMAIN = "https://www.nettoyage-gouttieres-bruxelles.be";
@@ -19,7 +20,7 @@ export const metadata: Metadata = {
     template: "%s | Nettoyage Gouttières Bruxelles",
   },
   description:
-    "Nettoyage de gouttières à Bruxelles. Prix dès 80 € — débouchage, réparation, démoussage toiture. Devis gratuit, intervention sous 48h. Appelez le 0477 23 41 87.",
+    "Nettoyage de gouttières à Bruxelles. Prix dès 80 € — débouchage, réparation, démoussage toiture. Devis gratuit, intervention sous 48h. Appelez le 0451 05 33 70.",
   keywords: [
     "nettoyage gouttières Bruxelles", "débouchage gouttières Bruxelles", "réparation gouttières Bruxelles",
     "démoussage toiture Bruxelles", "gouttières bouchées Bruxelles", "nettoyage gouttières urgence",
@@ -104,7 +105,7 @@ const organizationSchema = {
   },
   contactPoint: {
     "@type": "ContactPoint",
-    telephone: "+32477234187",
+    telephone: "+32451053370",
     contactType: "customer service",
     availableLanguage: "French",
     areaServed: "BE",
@@ -134,7 +135,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="fr" className={`${inter.className} h-full`}>
+    <html lang="fr" className={`${inter.variable} ${inter.className} h-full`}>
       <head>
         <meta name="theme-color" content="#1A4731" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -171,8 +172,8 @@ export default function RootLayout({
             <MessageCircle size={26} />
           </a>
           <a
-            href="tel:0477234187"
-            className="flex items-center justify-center w-14 h-14 bg-[#F97316] hover:bg-orange-500 text-white rounded-full shadow-2xl transition-colors"
+            href="tel:0451053370"
+            className="flex items-center justify-center w-14 h-14 bg-accent hover:bg-accent-strong text-white rounded-full shadow-2xl transition-colors"
             aria-label="Appeler"
           >
             <Phone size={26} />

@@ -13,14 +13,14 @@ export const metadata: Metadata = {
     type: "article",
     title: "Quand Nettoyer ses Gouttières ? Calendrier d'Entretien à Bruxelles",
     description: "Fréquence recommandée, meilleurs moments de l'année et signes d'alerte pour l'entretien de vos gouttières à Bruxelles.",
-    images: [{ url: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1200&q=80", width: 1200, height: 630, alt: "Calendrier entretien gouttières Bruxelles" }],
+    images: [{ url: "https://images.unsplash.com/photo-1504510533704-35680f356dfd?w=1200&q=80", width: 1200, height: 630, alt: "Calendrier entretien gouttières Bruxelles" }],
     publishedTime: "2026-05-29",
   },
   twitter: {
     card: "summary_large_image",
     title: "Quand Nettoyer ses Gouttières ? Calendrier Bruxelles",
     description: "Fréquence, meilleurs moments, signes d'alerte — guide complet pour l'entretien de vos gouttières.",
-    images: ["https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1200&q=80"],
+    images: ["https://images.unsplash.com/photo-1504510533704-35680f356dfd?w=1200&q=80"],
   },
 }
 
@@ -44,7 +44,7 @@ export default function BlogEntretienGouttieresMomentPage() {
         },
         datePublished: "2026-05-29",
         dateModified: "2026-05-29",
-        image: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1200&q=80",
+        image: "https://images.unsplash.com/photo-1504510533704-35680f356dfd?w=1200&q=80",
         mainEntityOfPage: { "@type": "WebPage", "@id": `${DOMAIN}/blog/entretien-gouttieres-quand-faire` },
         inLanguage: "fr-BE",
         keywords: "entretien gouttières bruxelles, quand nettoyer gouttières, fréquence nettoyage gouttières",
@@ -398,11 +398,11 @@ export default function BlogEntretienGouttieresMomentPage() {
                 <p className="text-gray-300 text-sm">Devis gratuit · Intervention sous 48h · Techniciens RC Pro à Bruxelles</p>
               </div>
               <a
-                href="tel:0477234187"
+                href="tel:0451053370"
                 className="flex items-center gap-2 bg-[#F97316] hover:bg-orange-500 text-white font-bold px-5 py-3 rounded-xl whitespace-nowrap transition-colors"
               >
                 <Phone size={18} />
-                0477 23 41 87
+                0451 05 33 70
               </a>
             </div>
           </div>
@@ -433,8 +433,8 @@ export default function BlogEntretienGouttieresMomentPage() {
               </div>
               <div className="mt-6 p-4 bg-[#1A4731] rounded-xl">
                 <p className="text-white font-semibold mb-1 text-sm">Appel direct</p>
-                <a href="tel:0477234187" className="flex items-center gap-2 text-[#F97316] font-bold text-lg hover:text-orange-400 transition-colors">
-                  <Phone size={20} />0477 23 41 87
+                <a href="tel:0451053370" className="flex items-center gap-2 text-[#F97316] font-bold text-lg hover:text-orange-400 transition-colors">
+                  <Phone size={20} />0451 05 33 70
                 </a>
                 <p className="text-gray-400 text-xs mt-1">Lun–Ven 7h30–18h | Sam 8h–14h | Urgences 7j/7</p>
               </div>

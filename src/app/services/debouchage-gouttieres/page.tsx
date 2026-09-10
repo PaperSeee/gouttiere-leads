@@ -4,22 +4,44 @@ import { Phone, CheckCircle, ArrowRight, AlertTriangle, Clock } from "lucide-rea
 import Breadcrumb from "@/components/Breadcrumb";
 import ContactForm from "@/components/ContactForm";
 
+const communes = [
+  { name: "Anderlecht", slug: "anderlecht" },
+  { name: "Auderghem", slug: "auderghem" },
+  { name: "Berchem-Sainte-Agathe", slug: "berchem-sainte-agathe" },
+  { name: "Bruxelles", slug: "bruxelles" },
+  { name: "Etterbeek", slug: "etterbeek" },
+  { name: "Evere", slug: "evere" },
+  { name: "Forest", slug: "forest" },
+  { name: "Ganshoren", slug: "ganshoren" },
+  { name: "Ixelles", slug: "ixelles" },
+  { name: "Jette", slug: "jette" },
+  { name: "Koekelberg", slug: "koekelberg" },
+  { name: "Molenbeek-Saint-Jean", slug: "molenbeek-saint-jean" },
+  { name: "Saint-Gilles", slug: "saint-gilles" },
+  { name: "Saint-Josse-ten-Noode", slug: "saint-josse-ten-noode" },
+  { name: "Schaerbeek", slug: "schaerbeek" },
+  { name: "Uccle", slug: "uccle" },
+  { name: "Watermael-Boitsfort", slug: "watermael-boitsfort" },
+  { name: "Woluwe-Saint-Lambert", slug: "woluwe-saint-lambert" },
+  { name: "Woluwe-Saint-Pierre", slug: "woluwe-saint-pierre" },
+];
+
 export const metadata: Metadata = {
-  title: "Débouchage Gouttières Bruxelles — Urgence 7j/7 | 0477 23 41 87",
+  title: "Débouchage Gouttières Bruxelles — Urgence 7j/7 | 0451 05 33 70",
   description:
-    "Débouchage urgent de gouttières et descentes pluviales à Bruxelles. Intervention 7j/7, haute pression. Débordement actif ? Appelez le 0477 23 41 87.",
+    "Débouchage urgent de gouttières et descentes pluviales à Bruxelles. Intervention 7j/7, haute pression. Débordement actif ? Appelez le 0451 05 33 70.",
   alternates: { canonical: "https://www.nettoyage-gouttieres-bruxelles.be/services/debouchage-gouttieres" },
   keywords: ["débouchage gouttières urgence Bruxelles", "gouttières bouchées Bruxelles", "débouchage descentes pluviales", "urgence gouttières 7j/7 Bruxelles"],
   openGraph: {
     type: "website",
     title: "Débouchage Gouttières Bruxelles — Urgence 7j/7",
-    description: "Débouchage urgent gouttières et descentes pluviales à Bruxelles. Intervention haute pression 7j/7. Appelez le 0477 23 41 87.",
+    description: "Débouchage urgent gouttières et descentes pluviales à Bruxelles. Intervention haute pression 7j/7. Appelez le 0451 05 33 70.",
     images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "Débouchage gouttières urgence Bruxelles" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Débouchage Gouttières Bruxelles — Urgence 7j/7",
-    description: "Débouchage urgent gouttières Bruxelles. Intervention 7j/7. 0477 23 41 87.",
+    description: "Débouchage urgent gouttières Bruxelles. Intervention 7j/7. 0451 05 33 70.",
     images: ["/opengraph-image"],
   },
 };
@@ -32,7 +54,7 @@ export default function DebouchageGouttieres() {
     provider: {
       "@type": "LocalBusiness",
       name: "Nettoyage Gouttières Bruxelles",
-      telephone: "0477234187",
+      telephone: "0451053370",
     },
     areaServed: "Bruxelles",
     description: "Service de débouchage d'urgence de gouttières et descentes pluviales à Bruxelles. Disponible 7j/7.",
@@ -69,8 +91,8 @@ export default function DebouchageGouttieres() {
               et descentes pluviales avant que les dégâts ne s&apos;aggravent.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <a href="tel:0477234187" className="flex items-center justify-center gap-2 bg-yellow-400 hover:bg-yellow-300 text-red-900 font-bold px-6 py-4 rounded-xl text-lg transition-colors">
-                <Phone size={20} /> Urgence : 0477 23 41 87
+              <a href="tel:0451053370" className="flex items-center justify-center gap-2 bg-yellow-400 hover:bg-yellow-300 text-red-900 font-bold px-6 py-4 rounded-xl text-lg transition-colors">
+                <Phone size={20} /> Urgence : 0451 05 33 70
               </a>
             </div>
             <div className="flex items-center gap-2 mt-4 text-red-200 text-sm">
@@ -133,6 +155,15 @@ export default function DebouchageGouttieres() {
                   sont les premiers signes d&apos;une obstruction.
                 </p>
               </div>
+
+              <h2 className="text-2xl font-bold text-gray-900 mb-4 mt-8">Nos communes d&apos;intervention</h2>
+              <div className="grid grid-cols-3 gap-2">
+                {communes.map((c) => (
+                  <Link key={c.slug} href={`/communes/${c.slug}`} className="text-[#1A4731] hover:text-[#F97316] font-medium text-sm flex items-center gap-1">
+                    <ArrowRight size={12} /> {c.name}
+                  </Link>
+                ))}
+              </div>
             </div>
 
             <div className="space-y-6">
@@ -149,7 +180,7 @@ export default function DebouchageGouttieres() {
                     <span className="font-bold">160–200€</span>
                   </div>
                 </div>
-                <a href="tel:0477234187" className="flex items-center justify-center gap-2 bg-yellow-400 text-red-900 font-bold px-4 py-3 rounded-lg w-full hover:bg-yellow-300 transition-colors">
+                <a href="tel:0451053370" className="flex items-center justify-center gap-2 bg-yellow-400 text-red-900 font-bold px-4 py-3 rounded-lg w-full hover:bg-yellow-300 transition-colors">
                   <Phone size={16} /> Appeler maintenant
                 </a>
               </div>

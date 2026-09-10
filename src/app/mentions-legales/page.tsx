@@ -28,7 +28,7 @@ export default function MentionsLegales() {
                 <strong>Dénomination :</strong> Nettoyage Gouttières Bruxelles<br />
                 <strong>Domaine :</strong> nettoyage-gouttieres-bruxelles.be<br />
                 <strong>Adresse :</strong> Bruxelles, Belgique<br />
-                <strong>Téléphone :</strong> 0477 23 41 87<br />
+                <strong>Téléphone :</strong> 0451 05 33 70<br />
                 <strong>Email :</strong> contact@nettoyage-gouttieres-bruxelles.be<br />
                 <strong>Activité :</strong> Nettoyage, débouchage, réparation et entretien de gouttières
               </p>
@@ -104,7 +104,7 @@ export default function MentionsLegales() {
                 Pour toute question relative à ces mentions légales ou à la protection de vos
                 données personnelles :<br />
                 Email : contact@nettoyage-gouttieres-bruxelles.be<br />
-                Téléphone : 0477 23 41 87
+                Téléphone : 0451 05 33 70
               </p>
             </section>
           </div>

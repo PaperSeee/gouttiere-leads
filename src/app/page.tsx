@@ -23,7 +23,7 @@ import { getRecentPosts } from "@/lib/blog";
 export const metadata: Metadata = {
   title: "Nettoyage de Gouttières à Bruxelles — Intervention Rapide | Devis Gratuit",
   description:
-    "Expert nettoyage de gouttières à Bruxelles. Débouchage urgent, réparation, démoussage toiture. Devis gratuit, intervention sous 48h. Appelez le 0477 23 41 87.",
+    "Expert nettoyage de gouttières à Bruxelles. Débouchage urgent, réparation, démoussage toiture. Devis gratuit, intervention sous 48h. Appelez le 0451 05 33 70.",
   keywords: ["nettoyage gouttières Bruxelles", "débouchage gouttières urgence Bruxelles", "réparation gouttières Bruxelles", "démoussage toiture Bruxelles", "gouttières bouchées intervention rapide"],
   alternates: {
     canonical: "https://www.nettoyage-gouttieres-bruxelles.be/",
@@ -79,7 +79,7 @@ const homeFaqs = [
   {
     question: "Intervenez-vous en urgence en cas de débordement ?",
     answer:
-      "Oui, notre service de débouchage d'urgence est disponible 7j/7. En cas de débordement actif lors de fortes pluies, appelez-nous directement au 0477 23 41 87. Nous intervenons généralement dans les 24 heures, souvent le jour même en haute saison automnale.",
+      "Oui, notre service de débouchage d'urgence est disponible 7j/7. En cas de débordement actif lors de fortes pluies, appelez-nous directement au 0451 05 33 70. Nous intervenons généralement dans les 24 heures, souvent le jour même en haute saison automnale.",
   },
   {
     question: "Nettoyez-vous aussi les descentes pluviales ?",
@@ -173,11 +173,11 @@ export default function HomePage() {
               </p>
               <div className="flex flex-col sm:flex-row gap-3 mb-8">
                 <a
-                  href="tel:0477234187"
+                  href="tel:0451053370"
                   className="flex items-center justify-center gap-2 bg-[#F97316] hover:bg-orange-500 text-white font-bold px-7 py-4 rounded-xl text-lg transition-colors shadow-lg shadow-orange-200"
                 >
                   <Phone size={20} />
-                  0477 23 41 87
+                  0451 05 33 70
                 </a>
                 <a
                   href="#devis"
@@ -271,11 +271,11 @@ export default function HomePage() {
           </div>
           <div className="text-center mt-10">
             <a
-              href="tel:0477234187"
+              href="tel:0451053370"
               className="inline-flex items-center gap-3 bg-[#F97316] hover:bg-orange-500 text-white font-bold px-8 py-4 rounded-xl text-lg transition-colors shadow-lg"
             >
               <Phone size={20} />
-              Appelez-nous — 0477 23 41 87
+              Appelez-nous — 0451 05 33 70
             </a>
           </div>
         </div>
@@ -405,7 +405,7 @@ export default function HomePage() {
                 de votre toiture en région bruxelloise.
               </p>
               <a
-                href="tel:0477234187"
+                href="tel:0451053370"
                 className="inline-flex items-center gap-2 bg-[#1A4731] text-white font-semibold px-5 py-3 rounded-xl hover:bg-green-800 transition-colors text-sm"
               >
                 <Phone size={16} />
@@ -494,7 +494,7 @@ export default function HomePage() {
                 <MapPin size={20} className="text-[#F97316] flex-shrink-0" />
                 <p className="text-white text-sm">
                   <strong>Votre commune n&apos;est pas listée ?</strong>{" "}
-                  <a href="tel:0477234187" className="text-[#F97316] underline hover:text-orange-400">
+                  <a href="tel:0451053370" className="text-[#F97316] underline hover:text-orange-400">
                     Appelez-nous
                   </a>{" "}
                   — on couvre aussi la périphérie.
@@ -573,8 +573,8 @@ export default function HomePage() {
             </h2>
             <p className="text-gray-500">
               Remplissez le formulaire ou appelez directement le{" "}
-              <a href="tel:0477234187" className="text-[#1A4731] font-bold hover:text-[#F97316] transition-colors">
-                0477 23 41 87
+              <a href="tel:0451053370" className="text-[#1A4731] font-bold hover:text-[#F97316] transition-colors">
+                0451 05 33 70
               </a>
               . Rappel sous 2h en heures ouvrables.
             </p>
@@ -593,11 +593,11 @@ export default function HomePage() {
           </h2>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <a
-              href="tel:0477234187"
+              href="tel:0451053370"
               className="inline-flex items-center justify-center gap-2 bg-white text-[#F97316] font-bold px-6 py-3 rounded-xl hover:bg-orange-50 transition-colors"
             >
               <Phone size={18} />
-              0477 23 41 87
+              0451 05 33 70
             </a>
             <a
               href="#devis"

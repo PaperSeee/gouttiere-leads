@@ -7,7 +7,7 @@ import ContactForm from "@/components/ContactForm";
 export const metadata: Metadata = {
   title: "Démoussage Toiture Bruxelles — Traitement Anti-Mousse | Devis Gratuit",
   description:
-    "Démoussage et traitement anti-mousse de toiture à Bruxelles. Prolongez la vie de vos tuiles. Devis gratuit. Appelez le 0477 23 41 87.",
+    "Démoussage et traitement anti-mousse de toiture à Bruxelles. Prolongez la vie de vos tuiles. Devis gratuit. Appelez le 0451 05 33 70.",
   alternates: { canonical: "https://www.nettoyage-gouttieres-bruxelles.be/services/demoussage-toiture" },
   keywords: ["démoussage toiture Bruxelles", "mousses toiture Bruxelles", "traitement anti-mousse toiture", "démoussage toiture prix Bruxelles"],
   openGraph: {
@@ -24,9 +24,49 @@ export const metadata: Metadata = {
   },
 };
 
+const communes = [
+  { name: "Anderlecht", slug: "anderlecht" },
+  { name: "Auderghem", slug: "auderghem" },
+  { name: "Berchem-Sainte-Agathe", slug: "berchem-sainte-agathe" },
+  { name: "Bruxelles", slug: "bruxelles" },
+  { name: "Etterbeek", slug: "etterbeek" },
+  { name: "Evere", slug: "evere" },
+  { name: "Forest", slug: "forest" },
+  { name: "Ganshoren", slug: "ganshoren" },
+  { name: "Ixelles", slug: "ixelles" },
+  { name: "Jette", slug: "jette" },
+  { name: "Koekelberg", slug: "koekelberg" },
+  { name: "Molenbeek-Saint-Jean", slug: "molenbeek-saint-jean" },
+  { name: "Saint-Gilles", slug: "saint-gilles" },
+  { name: "Saint-Josse-ten-Noode", slug: "saint-josse-ten-noode" },
+  { name: "Schaerbeek", slug: "schaerbeek" },
+  { name: "Uccle", slug: "uccle" },
+  { name: "Watermael-Boitsfort", slug: "watermael-boitsfort" },
+  { name: "Woluwe-Saint-Lambert", slug: "woluwe-saint-lambert" },
+  { name: "Woluwe-Saint-Pierre", slug: "woluwe-saint-pierre" },
+];
+
 export default function DemoussageToiture() {
+  const serviceSchema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: "Démoussage toiture Bruxelles",
+    provider: {
+      "@type": "LocalBusiness",
+      name: "Nettoyage Gouttières Bruxelles",
+      telephone: "0451053370",
+    },
+    areaServed: "Bruxelles",
+    description: "Démoussage et traitement anti-mousse de toiture à Bruxelles. Prolonge la vie des tuiles et protège les gouttières des débris.",
+    offers: {
+      "@type": "Offer",
+      priceRange: "3-6€/m²",
+    },
+  };
+
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
       <Breadcrumb
         items={[
           { label: "Accueil", href: "/" },
@@ -50,8 +90,8 @@ export default function DemoussageToiture() {
               dégrade les tuiles et alimente directement vos gouttières en débris. Un démoussage
               professionnel associé à un traitement préventif protège votre toiture pendant plusieurs années.
             </p>
-            <a href="tel:0477234187" className="inline-flex items-center gap-2 bg-[#F97316] hover:bg-orange-500 text-white font-bold px-6 py-3 rounded-xl transition-colors">
-              <Phone size={18} /> 0477 23 41 87
+            <a href="tel:0451053370" className="inline-flex items-center gap-2 bg-[#F97316] hover:bg-orange-500 text-white font-bold px-6 py-3 rounded-xl transition-colors">
+              <Phone size={18} /> 0451 05 33 70
             </a>
           </div>
         </div>
@@ -135,6 +175,15 @@ export default function DemoussageToiture() {
                   nettoyage des gouttières lors d&apos;une même intervention. Contactez-nous pour un devis personnalisé.
                 </p>
               </div>
+
+              <h2 className="text-2xl font-bold text-gray-900 mb-4 mt-8">Nos communes d&apos;intervention</h2>
+              <div className="grid grid-cols-3 gap-2">
+                {communes.map((c) => (
+                  <Link key={c.slug} href={`/communes/${c.slug}`} className="text-[#1A4731] hover:text-[#F97316] font-medium text-sm flex items-center gap-1">
+                    <ArrowRight size={12} /> {c.name}
+                  </Link>
+                ))}
+              </div>
             </div>
 
             <div className="space-y-6">
@@ -154,7 +203,7 @@ export default function DemoussageToiture() {
                     <span className="font-bold text-[#F97316]">Remise</span>
                   </div>
                 </div>
-                <a href="tel:0477234187" className="flex items-center justify-center gap-2 bg-[#F97316] text-white font-bold px-4 py-3 rounded-lg w-full hover:bg-orange-500 transition-colors">
+                <a href="tel:0451053370" className="flex items-center justify-center gap-2 bg-[#F97316] text-white font-bold px-4 py-3 rounded-lg w-full hover:bg-orange-500 transition-colors">
                   <Phone size={16} /> Devis gratuit
                 </a>
               </div>

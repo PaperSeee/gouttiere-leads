@@ -103,7 +103,7 @@ export default function APropos() {
                 <div className="space-y-2 mb-4 text-sm">
                   <p className="flex items-center gap-2">
                     <Phone size={14} className="text-[#F97316]" />
-                    <a href="tel:0477234187" className="text-[#F97316] font-bold">0477 23 41 87</a>
+                    <a href="tel:0451053370" className="text-[#F97316] font-bold">0451 05 33 70</a>
                   </p>
                   <p className="text-gray-400 text-xs">Lun–Ven 7h30–18h | Sam 8h–14h</p>
                 </div>

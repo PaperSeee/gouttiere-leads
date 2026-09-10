@@ -269,7 +269,7 @@ export default function BlogNettoyageGouttieresBruxellesPage() {
               <p className="text-xs font-bold text-green-300 uppercase tracking-widest mb-3">Devis gratuit</p>
               <p className="font-bold text-lg mb-1">Nettoyage de gouttières à Bruxelles</p>
               <p className="text-green-200 text-sm mb-4">Réponse sous 24h, tarif transparent, intervention dans les 7 jours.</p>
-              <a href="tel:+3200000000" className="flex items-center gap-2 bg-white text-[#1A4731] font-bold rounded-xl px-4 py-2.5 text-sm hover:bg-green-50 transition-colors">
+              <a href="tel:+32451053370" className="flex items-center gap-2 bg-white text-[#1A4731] font-bold rounded-xl px-4 py-2.5 text-sm hover:bg-green-50 transition-colors">
                 <Phone size={14} /> Appeler maintenant
               </a>
             </div>

@@ -7,7 +7,7 @@ import ContactForm from "@/components/ContactForm";
 export const metadata: Metadata = {
   title: "Tarifs Nettoyage Gouttières Bruxelles — Prix 2026 & Devis Gratuit",
   description:
-    "Prix détaillés pour le nettoyage, débouchage et réparation de gouttières à Bruxelles en 2026. Nettoyage dès 80€, débouchage dès 120€, démoussage 3–6€/m². Devis gratuit 0477 23 41 87.",
+    "Prix détaillés pour le nettoyage, débouchage et réparation de gouttières à Bruxelles en 2026. Nettoyage dès 80€, débouchage dès 120€, démoussage 3–6€/m². Devis gratuit 0451 05 33 70.",
   keywords: ["prix nettoyage gouttières Bruxelles", "tarifs débouchage gouttières", "coût réparation gouttières Bruxelles", "devis gouttières Bruxelles 2026", "tarif démoussage toiture Bruxelles"],
   alternates: { canonical: "https://www.nettoyage-gouttieres-bruxelles.be/tarifs" },
   openGraph: {
@@ -203,8 +203,8 @@ export default function Tarifs() {
               Aucune mauvaise surprise.
             </p>
             <div className="flex flex-col sm:flex-row gap-3">
-              <a href="tel:0477234187" className="flex items-center justify-center gap-2 bg-[#F97316] hover:bg-orange-500 text-white font-bold px-6 py-3 rounded-xl transition-colors">
-                <Phone size={18} /> 0477 23 41 87 — Devis gratuit
+              <a href="tel:0451053370" className="flex items-center justify-center gap-2 bg-[#F97316] hover:bg-orange-500 text-white font-bold px-6 py-3 rounded-xl transition-colors">
+                <Phone size={18} /> 0451 05 33 70 — Devis gratuit
               </a>
               <a href="#devis" className="flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white font-semibold px-6 py-3 rounded-xl transition-colors">
                 Formulaire de devis <ArrowRight size={16} />
@@ -406,8 +406,8 @@ export default function Tarifs() {
             Appelez-nous ou remplissez le formulaire. On revient vers vous sous 2h en heures ouvrables avec un prix précis, adapté à votre maison.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
-            <a href="tel:0477234187" className="flex items-center justify-center gap-2 bg-[#F97316] hover:bg-orange-500 text-white font-bold px-7 py-3.5 rounded-xl transition-colors">
-              <Phone size={18} /> 0477 23 41 87
+            <a href="tel:0451053370" className="flex items-center justify-center gap-2 bg-[#F97316] hover:bg-orange-500 text-white font-bold px-7 py-3.5 rounded-xl transition-colors">
+              <Phone size={18} /> 0451 05 33 70
             </a>
             <a href="#devis" className="flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white font-bold px-7 py-3.5 rounded-xl transition-colors">
               Formulaire de devis <ArrowRight size={16} />

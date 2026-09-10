@@ -108,7 +108,7 @@ export default function OgImage() {
             color: "#F97316",
           }}
         >
-          📞 0477 23 41 87
+          📞 0451 05 33 70
         </div>
       </div>
     ),

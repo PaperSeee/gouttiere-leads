@@ -40,7 +40,7 @@ export default function Header() {
   const [servicesOpen, setServicesOpen] = useState(false);
 
   return (
-    <header className="bg-[#1A4731] sticky top-0 z-50 shadow-lg">
+    <header className="bg-brand sticky top-0 z-50 shadow-lg">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo texte */}
@@ -79,7 +79,7 @@ export default function Header() {
                   <Link
                     key={s.href}
                     href={s.href}
-                    className="block px-4 py-2 text-gray-700 hover:bg-orange-50 hover:text-[#F97316] text-sm transition-colors"
+                    className="block px-4 py-2 text-gray-700 hover:bg-orange-50 hover:text-accent text-sm transition-colors"
                   >
                     {s.name}
                   </Link>
@@ -105,7 +105,7 @@ export default function Header() {
                   <Link
                     key={c.slug}
                     href={`/communes/${c.slug}`}
-                    className="block px-4 py-2 text-gray-700 hover:bg-orange-50 hover:text-[#F97316] text-sm transition-colors"
+                    className="block px-4 py-2 text-gray-700 hover:bg-orange-50 hover:text-accent text-sm transition-colors"
                   >
                     {c.name}
                   </Link>
@@ -124,11 +124,11 @@ export default function Header() {
           {/* CTA phone */}
           <div className="hidden sm:flex items-center gap-3">
             <a
-              href="tel:0477234187"
-              className="flex items-center gap-2 bg-[#F97316] hover:bg-orange-500 text-white font-semibold px-4 py-2 rounded-lg text-sm transition-colors"
+              href="tel:0451053370"
+              className="flex items-center gap-2 bg-accent hover:bg-accent-strong text-white font-semibold px-4 py-2 rounded-lg text-sm transition-colors"
             >
               <Phone size={16} />
-              <span>0477 23 41 87</span>
+              <span>0451 05 33 70</span>
             </a>
           </div>
 
@@ -145,7 +145,7 @@ export default function Header() {
 
       {/* Mobile menu */}
       {mobileOpen && (
-        <div className="lg:hidden bg-[#133826] border-t border-green-900 px-4 py-4">
+        <div className="lg:hidden bg-brand-deep border-t border-green-900 px-4 py-4">
           <nav className="flex flex-col gap-3">
             <Link href="/" className="text-gray-300 hover:text-white py-2 border-b border-green-900" onClick={() => setMobileOpen(false)}>
               Accueil
@@ -157,7 +157,7 @@ export default function Header() {
                   <Link
                     key={s.href}
                     href={s.href}
-                    className="text-gray-300 hover:text-[#F97316] py-1 text-sm"
+                    className="text-gray-300 hover:text-accent py-1 text-sm"
                     onClick={() => setMobileOpen(false)}
                   >
                     {s.name}
@@ -172,7 +172,7 @@ export default function Header() {
                   <Link
                     key={c.slug}
                     href={`/communes/${c.slug}`}
-                    className="text-gray-300 hover:text-[#F97316] py-1 text-sm"
+                    className="text-gray-300 hover:text-accent py-1 text-sm"
                     onClick={() => setMobileOpen(false)}
                   >
                     {c.name}
@@ -187,8 +187,8 @@ export default function Header() {
               Contact
             </Link>
             <a
-              href="tel:0477234187"
-              className="flex items-center justify-center gap-2 bg-[#F97316] text-white font-semibold px-4 py-3 rounded-lg mt-2"
+              href="tel:0451053370"
+              className="flex items-center justify-center gap-2 bg-accent text-white font-semibold px-4 py-3 rounded-lg mt-2"
             >
               <Phone size={18} />
               Appeler maintenant

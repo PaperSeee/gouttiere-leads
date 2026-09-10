@@ -9,7 +9,7 @@ export default function LocalBusinessSchema() {
     description:
       "Nettoyage de gouttières à Bruxelles. Débouchage, réparation, démoussage toiture. Devis gratuit, intervention sous 48h, garantie satisfaction.",
     url: DOMAIN,
-    telephone: "+32477234187",
+    telephone: "+32451053370",
     email: "contact@nettoyage-gouttieres-bruxelles.be",
     address: {
       "@type": "PostalAddress",

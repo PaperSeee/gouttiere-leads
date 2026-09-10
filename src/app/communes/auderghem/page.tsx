@@ -7,11 +7,11 @@ import ContactForm from "@/components/ContactForm"
 
 export const metadata: Metadata = {
   title: "Nettoyage Gouttières Auderghem — Expert Local | Nettoyage Gouttières Bruxelles",
-  description: "Nettoyage gouttières à Auderghem : maisons 4 façades, Forêt de Soignes, aluminium à remplacer. Rouge-Cloître. Devis gratuit. 0477 23 41 87.",
+  description: "Nettoyage gouttières à Auderghem : maisons 4 façades, Forêt de Soignes, aluminium à remplacer. Rouge-Cloître. Devis gratuit. 0451 05 33 70.",
   alternates: { canonical: "https://www.nettoyage-gouttieres-bruxelles.be/communes/auderghem" },
   keywords: ["nettoyage gouttières Auderghem", "débouchage gouttières Auderghem", "gouttières bouchées Auderghem", "prix nettoyage gouttières Auderghem"],
   openGraph: {
-    title: "Nettoyage Gouttières Auderghem — Devis Gratuit | 0477 23 41 87",
+    title: "Nettoyage Gouttières Auderghem — Devis Gratuit | 0451 05 33 70",
     description: "Expert nettoyage gouttières à Auderghem. Débouchage urgent, réparation, démoussage. Devis gratuit, intervention rapide.",
     url: "https://www.nettoyage-gouttieres-bruxelles.be/communes/auderghem",
     type: "website",
@@ -46,8 +46,8 @@ export default function AuderghemPage() {
                 devis gratuit.
               </p>
               <div className="flex flex-wrap gap-3">
-                <a href="tel:0477234187" className="inline-flex items-center gap-2 bg-[#F97316] hover:bg-orange-500 text-white font-bold px-6 py-3.5 rounded-xl transition-colors shadow-md shadow-orange-100">
-                  <Phone size={18} />0477 23 41 87
+                <a href="tel:0451053370" className="inline-flex items-center gap-2 bg-[#F97316] hover:bg-orange-500 text-white font-bold px-6 py-3.5 rounded-xl transition-colors shadow-md shadow-orange-100">
+                  <Phone size={18} />0451 05 33 70
                 </a>
                 <a href="#devis" className="inline-flex items-center gap-2 border-2 border-gray-200 hover:border-[#1A4731] text-gray-700 hover:text-[#1A4731] font-semibold px-6 py-3.5 rounded-xl transition-colors">
                   Devis gratuit <ArrowRight size={16} />
@@ -183,7 +183,7 @@ export default function AuderghemPage() {
         <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8">
             <h2 className="text-2xl font-bold text-gray-900 mb-2">Devis gratuit — Auderghem</h2>
-            <p className="text-gray-500 text-sm">Réponse sous 2h · ou appelez le <a href="tel:0477234187" className="font-bold text-[#1A4731] hover:text-[#F97316]">0477 23 41 87</a></p>
+            <p className="text-gray-500 text-sm">Réponse sous 2h · ou appelez le <a href="tel:0451053370" className="font-bold text-[#1A4731] hover:text-[#F97316]">0451 05 33 70</a></p>
           </div>
           <div className="bg-gray-50 border border-gray-200 rounded-2xl p-6 sm:p-8">
             <ContactForm />

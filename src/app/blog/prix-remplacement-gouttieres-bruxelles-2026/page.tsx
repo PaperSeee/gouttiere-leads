@@ -13,14 +13,14 @@ export const metadata: Metadata = {
     type: "article",
     title: "Prix Remplacement Gouttières Bruxelles 2026 — Tarifs Détaillés",
     description: "Tarifs réels par matériau et type de maison pour le remplacement de gouttières à Bruxelles en 2026.",
-    images: [{ url: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1200&q=80", width: 1200, height: 630, alt: "Remplacement gouttières Bruxelles prix" }],
+    images: [{ url: "https://images.unsplash.com/photo-1504510533704-35680f356dfd?w=1200&q=80", width: 1200, height: 630, alt: "Remplacement gouttières Bruxelles prix" }],
     publishedTime: "2026-06-05",
   },
   twitter: {
     card: "summary_large_image",
     title: "Prix Remplacement Gouttières Bruxelles 2026",
     description: "Tarifs détaillés pour le remplacement de gouttières à Bruxelles selon le matériau.",
-    images: ["https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1200&q=80"],
+    images: ["https://images.unsplash.com/photo-1504510533704-35680f356dfd?w=1200&q=80"],
   },
 }
 
@@ -45,7 +45,7 @@ export default function BlogPrixRemplacementGouttieresBruxelles2026Page() {
         },
         datePublished: "2026-06-05",
         dateModified: "2026-06-05",
-        image: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1200&q=80",
+        image: "https://images.unsplash.com/photo-1504510533704-35680f356dfd?w=1200&q=80",
         mainEntityOfPage: { "@type": "WebPage", "@id": `${DOMAIN}/blog/${SLUG}` },
         inLanguage: "fr-BE",
         keywords: "prix remplacement gouttières bruxelles, coût changement gouttière, tarif pose gouttière belgique",
@@ -239,8 +239,8 @@ export default function BlogPrixRemplacementGouttieresBruxelles2026Page() {
               <p className="text-green-200 text-sm mb-4">
                 Estimation sous 24h pour toute la Région bruxelloise. Sans engagement.
               </p>
-              <a href="tel:0477234187" className="flex items-center justify-center gap-2 bg-white text-[#1A4731] font-bold py-3 px-4 rounded-xl text-sm hover:bg-green-50 transition mb-3">
-                0477 23 41 87
+              <a href="tel:0451053370" className="flex items-center justify-center gap-2 bg-white text-[#1A4731] font-bold py-3 px-4 rounded-xl text-sm hover:bg-green-50 transition mb-3">
+                0451 05 33 70
               </a>
               <Link href="/contact" className="flex items-center justify-center gap-2 border border-white/30 text-white font-semibold py-3 px-4 rounded-xl text-sm hover:bg-white/10 transition">
                 Devis gratuit <ArrowRight size={14} />

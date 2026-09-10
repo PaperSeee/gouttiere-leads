@@ -7,7 +7,7 @@ import FAQAccordion from "@/components/FAQAccordion";
 export const metadata: Metadata = {
   title: "FAQ Nettoyage Gouttières Bruxelles — 15 Questions & Réponses",
   description:
-    "Toutes les réponses à vos questions sur le nettoyage de gouttières à Bruxelles : prix, fréquence, risques, urgences, matériaux. Expert disponible au 0477 23 41 87.",
+    "Toutes les réponses à vos questions sur le nettoyage de gouttières à Bruxelles : prix, fréquence, risques, urgences, matériaux. Expert disponible au 0451 05 33 70.",
   keywords: ["FAQ gouttières Bruxelles", "questions nettoyage gouttières", "fréquence nettoyage gouttières", "gouttières bouchées risques", "prix gouttières Bruxelles"],
   alternates: { canonical: "https://www.nettoyage-gouttieres-bruxelles.be/faq" },
   openGraph: {
@@ -34,7 +34,7 @@ const faqs = [
   },
   {
     question: "Intervenez-vous en urgence en cas de débordement ?",
-    answer: "Oui, notre service de débouchage d'urgence est disponible 7 jours sur 7. En cas de débordement actif lors de fortes pluies, appelez-nous directement au 0477 23 41 87. Nous intervenons généralement dans les 24 heures, parfois le jour même en haute saison automnale. Le tarif urgence est de 120 à 200€ selon le jour et l'heure d'intervention.",
+    answer: "Oui, notre service de débouchage d'urgence est disponible 7 jours sur 7. En cas de débordement actif lors de fortes pluies, appelez-nous directement au 0451 05 33 70. Nous intervenons généralement dans les 24 heures, parfois le jour même en haute saison automnale. Le tarif urgence est de 120 à 200€ selon le jour et l'heure d'intervention.",
   },
   {
     question: "Quelle est la durée d'un nettoyage de gouttières ?",
@@ -78,7 +78,7 @@ const faqs = [
   },
   {
     question: "Comment se passe le devis ?",
-    answer: "Le processus est simple : vous nous contactez par téléphone (0477 23 41 87) ou via notre formulaire en ligne. Nous convenons d'un rendez-vous pour une visite gratuite de votre bien. Sur place, nos techniciens inspectent l'état de vos gouttières et vous remettent un devis écrit détaillé, fixant le prix exact avant toute intervention. Vous acceptez ou refusez librement. Si vous acceptez, l'intervention est planifiée selon vos disponibilités.",
+    answer: "Le processus est simple : vous nous contactez par téléphone (0451 05 33 70) ou via notre formulaire en ligne. Nous convenons d'un rendez-vous pour une visite gratuite de votre bien. Sur place, nos techniciens inspectent l'état de vos gouttières et vous remettent un devis écrit détaillé, fixant le prix exact avant toute intervention. Vous acceptez ou refusez librement. Si vous acceptez, l'intervention est planifiée selon vos disponibilités.",
   },
 ];
 
@@ -128,8 +128,8 @@ export default function FAQ() {
               en heures ouvrables.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
-              <a href="tel:0477234187" className="flex items-center justify-center gap-2 bg-[#F97316] text-white font-bold px-6 py-3 rounded-xl hover:bg-orange-500 transition-colors">
-                <Phone size={18} /> 0477 23 41 87
+              <a href="tel:0451053370" className="flex items-center justify-center gap-2 bg-[#F97316] text-white font-bold px-6 py-3 rounded-xl hover:bg-orange-500 transition-colors">
+                <Phone size={18} /> 0451 05 33 70
               </a>
               <Link href="/contact" className="flex items-center justify-center gap-2 bg-white text-[#1A4731] font-bold px-6 py-3 rounded-xl hover:bg-gray-100 transition-colors">
                 Nous écrire <ArrowRight size={18} />

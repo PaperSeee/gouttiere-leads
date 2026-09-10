@@ -7,11 +7,11 @@ import ContactForm from "@/components/ContactForm"
 
 export const metadata: Metadata = {
   title: "Nettoyage Gouttières Uccle — Expert Local | Nettoyage Gouttières Bruxelles",
-  description: "Nettoyage de gouttières à Uccle : villas, maisons 4 façades, zinc oxydé. Intervention rapide avenue Molière, Brugmann. Devis gratuit. 0477 23 41 87.",
+  description: "Nettoyage de gouttières à Uccle : villas, maisons 4 façades, zinc oxydé. Intervention rapide avenue Molière, Brugmann. Devis gratuit. 0451 05 33 70.",
   alternates: { canonical: "https://www.nettoyage-gouttieres-bruxelles.be/communes/uccle" },
   keywords: ["nettoyage gouttières Uccle", "débouchage gouttières Uccle", "gouttières bouchées Uccle", "prix nettoyage gouttières Uccle"],
   openGraph: {
-    title: "Nettoyage Gouttières Uccle — Devis Gratuit | 0477 23 41 87",
+    title: "Nettoyage Gouttières Uccle — Devis Gratuit | 0451 05 33 70",
     description: "Expert nettoyage gouttières à Uccle. Débouchage urgent, réparation, démoussage. Devis gratuit, intervention rapide.",
     url: "https://www.nettoyage-gouttieres-bruxelles.be/communes/uccle",
     type: "website",
@@ -48,11 +48,11 @@ export default function UcclePage() {
               </p>
               <div className="flex flex-wrap gap-3">
                 <a
-                  href="tel:0477234187"
+                  href="tel:0451053370"
                   className="inline-flex items-center gap-2 bg-[#F97316] hover:bg-orange-500 text-white font-bold px-6 py-3.5 rounded-xl transition-colors shadow-md shadow-orange-100"
                 >
                   <Phone size={18} />
-                  0477 23 41 87
+                  0451 05 33 70
                 </a>
                 <a
                   href="#devis"
@@ -251,7 +251,7 @@ export default function UcclePage() {
             <h2 className="text-2xl font-bold text-gray-900 mb-2">Devis gratuit pour Uccle</h2>
             <p className="text-gray-500 text-sm">
               Réponse sous 2h · ou appelez le{" "}
-              <a href="tel:0477234187" className="font-bold text-[#1A4731] hover:text-[#F97316]">0477 23 41 87</a>
+              <a href="tel:0451053370" className="font-bold text-[#1A4731] hover:text-[#F97316]">0451 05 33 70</a>
             </p>
           </div>
           <div className="bg-gray-50 border border-gray-200 rounded-2xl p-6 sm:p-8">

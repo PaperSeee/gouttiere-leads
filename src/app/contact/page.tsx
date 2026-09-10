@@ -6,12 +6,12 @@ import ContactForm from "@/components/ContactForm";
 export const metadata: Metadata = {
   title: "Contact Nettoyage Gouttières Bruxelles — Devis Gratuit",
   description:
-    "Contactez Nettoyage Gouttières Bruxelles pour votre devis gratuit. Téléphone : 0477 23 41 87. Réponse en moins de 2h en heures ouvrables.",
-  keywords: ["contact nettoyage gouttières Bruxelles", "devis gouttières Bruxelles gratuit", "0477 23 41 87", "demande devis gouttières"],
+    "Contactez Nettoyage Gouttières Bruxelles pour votre devis gratuit. Téléphone : 0451 05 33 70. Réponse en moins de 2h en heures ouvrables.",
+  keywords: ["contact nettoyage gouttières Bruxelles", "devis gouttières Bruxelles gratuit", "0451 05 33 70", "demande devis gouttières"],
   alternates: { canonical: "https://www.nettoyage-gouttieres-bruxelles.be/contact" },
   openGraph: {
     title: "Contact — Devis Gratuit Nettoyage Gouttières Bruxelles",
-    description: "Demandez votre devis gratuit. Réponse en moins de 2h. Téléphone : 0477 23 41 87.",
+    description: "Demandez votre devis gratuit. Réponse en moins de 2h. Téléphone : 0451 05 33 70.",
     url: "https://www.nettoyage-gouttieres-bruxelles.be/contact",
     type: "website",
     images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "Contact nettoyage gouttières Bruxelles" }],
@@ -52,8 +52,8 @@ export default function Contact() {
                   </div>
                   <div>
                     <p className="font-semibold text-gray-900">Téléphone</p>
-                    <a href="tel:0477234187" className="text-[#F97316] font-bold text-xl hover:text-orange-500 transition-colors">
-                      0477 23 41 87
+                    <a href="tel:0451053370" className="text-[#F97316] font-bold text-xl hover:text-orange-500 transition-colors">
+                      0451 05 33 70
                     </a>
                     <p className="text-gray-500 text-sm mt-1">Lun–Ven 7h30–18h | Sam 8h–14h</p>
                   </div>

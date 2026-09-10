@@ -7,7 +7,7 @@ import ContactForm from "@/components/ContactForm";
 export const metadata: Metadata = {
   title: "Nettoyage Gouttières Bruxelles — Service Complet | Devis Gratuit",
   description:
-    "Service de nettoyage de gouttières à Bruxelles. Évacuation feuilles, mousses, sédiments. Nettoyage gouttières + descentes pluviales. Devis gratuit. 0477 23 41 87.",
+    "Service de nettoyage de gouttières à Bruxelles. Évacuation feuilles, mousses, sédiments. Nettoyage gouttières + descentes pluviales. Devis gratuit. 0451 05 33 70.",
   alternates: { canonical: "https://www.nettoyage-gouttieres-bruxelles.be/services/nettoyage-gouttieres" },
   keywords: ["nettoyage gouttières Bruxelles professionnel", "nettoyage gouttières prix Bruxelles", "entretien gouttières maison Bruxelles", "nettoyage haute pression gouttières"],
   openGraph: {
@@ -54,7 +54,7 @@ export default function NettoyageGouttieres() {
     provider: {
       "@type": "LocalBusiness",
       name: "Nettoyage Gouttières Bruxelles",
-      telephone: "0477234187",
+      telephone: "0451053370",
     },
     areaServed: "Bruxelles",
     description: "Service de nettoyage complet de gouttières à Bruxelles. Évacuation des feuilles, mousses et sédiments. Nettoyage des descentes pluviales inclus.",
@@ -92,8 +92,8 @@ export default function NettoyageGouttieres() {
               sur tous types de toitures et de gouttières dans les 19 communes de Bruxelles.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <a href="tel:0477234187" className="flex items-center justify-center gap-2 bg-[#F97316] hover:bg-orange-500 text-white font-bold px-6 py-3 rounded-xl transition-colors">
-                <Phone size={18} /> 0477 23 41 87
+              <a href="tel:0451053370" className="flex items-center justify-center gap-2 bg-[#F97316] hover:bg-orange-500 text-white font-bold px-6 py-3 rounded-xl transition-colors">
+                <Phone size={18} /> 0451 05 33 70
               </a>
               <a href="#devis" className="flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white font-bold px-6 py-3 rounded-xl transition-colors">
                 Devis gratuit <ArrowRight size={18} />
@@ -192,8 +192,8 @@ export default function NettoyageGouttieres() {
                     <span className="font-bold">Sur mesure</span>
                   </div>
                 </div>
-                <a href="tel:0477234187" className="mt-5 flex items-center justify-center gap-2 bg-[#F97316] text-white font-bold px-4 py-3 rounded-lg w-full hover:bg-orange-500 transition-colors">
-                  <Phone size={16} /> 0477 23 41 87
+                <a href="tel:0451053370" className="mt-5 flex items-center justify-center gap-2 bg-[#F97316] text-white font-bold px-4 py-3 rounded-lg w-full hover:bg-orange-500 transition-colors">
+                  <Phone size={16} /> 0451 05 33 70
                 </a>
               </div>
 

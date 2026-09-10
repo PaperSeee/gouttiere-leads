@@ -184,8 +184,8 @@ export default function BlogDemoussageToitureBruxellesPage() {
               <p className="text-green-200 text-sm mb-4">
                 Nos équipes interviennent dans toute la Région bruxelloise sous 48h. Devis gratuit, sans engagement.
               </p>
-              <a href="tel:0477234187" className="flex items-center justify-center gap-2 bg-white text-[#1A4731] font-bold py-3 px-4 rounded-xl text-sm hover:bg-green-50 transition mb-3">
-                0477 23 41 87
+              <a href="tel:0451053370" className="flex items-center justify-center gap-2 bg-white text-[#1A4731] font-bold py-3 px-4 rounded-xl text-sm hover:bg-green-50 transition mb-3">
+                0451 05 33 70
               </a>
               <Link href="/contact" className="flex items-center justify-center gap-2 border border-white/30 text-white font-semibold py-3 px-4 rounded-xl text-sm hover:bg-white/10 transition">
                 Devis gratuit <ArrowRight size={14} />
