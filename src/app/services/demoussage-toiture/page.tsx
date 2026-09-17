@@ -14,6 +14,7 @@ export const metadata: Metadata = {
     type: "website",
     title: "Démoussage Toiture Bruxelles — Traitement Anti-Mousse",
     description: "Démoussage et traitement anti-mousse de toiture à Bruxelles. Prolonge la vie de vos tuiles. Devis gratuit.",
+    url: "https://www.nettoyage-gouttieres-bruxelles.be/services/demoussage-toiture",
     images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "Démoussage toiture Bruxelles" }],
   },
   twitter: {
@@ -52,9 +53,7 @@ export default function DemoussageToiture() {
     "@type": "Service",
     name: "Démoussage toiture Bruxelles",
     provider: {
-      "@type": "LocalBusiness",
-      name: "Nettoyage Gouttières Bruxelles",
-      telephone: "0451053370",
+      "@id": "https://www.nettoyage-gouttieres-bruxelles.be/#business",
     },
     areaServed: "Bruxelles",
     description: "Démoussage et traitement anti-mousse de toiture à Bruxelles. Prolonge la vie des tuiles et protège les gouttières des débris.",

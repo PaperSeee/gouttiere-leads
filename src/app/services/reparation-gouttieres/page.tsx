@@ -14,6 +14,7 @@ export const metadata: Metadata = {
     type: "website",
     title: "Réparation Gouttières Bruxelles — PVC, Zinc, Alu",
     description: "Réparation et remplacement gouttières à Bruxelles. Tous matériaux : PVC, zinc, aluminium, cuivre. Devis gratuit.",
+    url: "https://www.nettoyage-gouttieres-bruxelles.be/services/reparation-gouttieres",
     images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "Réparation gouttières Bruxelles" }],
   },
   twitter: {
@@ -52,9 +53,7 @@ export default function ReparationGouttieres() {
     "@type": "Service",
     name: "Réparation et remplacement de gouttières Bruxelles",
     provider: {
-      "@type": "LocalBusiness",
-      name: "Nettoyage Gouttières Bruxelles",
-      telephone: "0451053370",
+      "@id": "https://www.nettoyage-gouttieres-bruxelles.be/#business",
     },
     areaServed: "Bruxelles",
     description: "Réparation et remplacement de gouttières à Bruxelles. Tous matériaux : PVC, zinc, aluminium, cuivre. Devis gratuit.",

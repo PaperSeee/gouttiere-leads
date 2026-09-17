@@ -36,6 +36,7 @@ export const metadata: Metadata = {
     type: "website",
     title: "Débouchage Gouttières Bruxelles — Urgence 7j/7",
     description: "Débouchage urgent gouttières et descentes pluviales à Bruxelles. Intervention haute pression 7j/7. Appelez le 0451 05 33 70.",
+    url: "https://www.nettoyage-gouttieres-bruxelles.be/services/debouchage-gouttieres",
     images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "Débouchage gouttières urgence Bruxelles" }],
   },
   twitter: {
@@ -52,9 +53,7 @@ export default function DebouchageGouttieres() {
     "@type": "Service",
     name: "Débouchage gouttières urgence Bruxelles",
     provider: {
-      "@type": "LocalBusiness",
-      name: "Nettoyage Gouttières Bruxelles",
-      telephone: "0451053370",
+      "@id": "https://www.nettoyage-gouttieres-bruxelles.be/#business",
     },
     areaServed: "Bruxelles",
     description: "Service de débouchage d'urgence de gouttières et descentes pluviales à Bruxelles. Disponible 7j/7.",

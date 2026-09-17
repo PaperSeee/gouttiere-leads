@@ -56,6 +56,7 @@ export default function LocalBusinessSchema() {
         { "@type": "Offer", itemOffered: { "@type": "Service", name: "Débouchage gouttières", url: `${DOMAIN}/services/debouchage-gouttieres` } },
         { "@type": "Offer", itemOffered: { "@type": "Service", name: "Réparation gouttières", url: `${DOMAIN}/services/reparation-gouttieres` } },
         { "@type": "Offer", itemOffered: { "@type": "Service", name: "Démoussage toiture", url: `${DOMAIN}/services/demoussage-toiture` } },
+        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Protection anti-feuilles gouttières", url: `${DOMAIN}/services/protection-gouttieres` } },
       ],
     },
     sameAs: [],

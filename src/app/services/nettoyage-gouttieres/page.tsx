@@ -14,6 +14,7 @@ export const metadata: Metadata = {
     type: "website",
     title: "Nettoyage Gouttières Bruxelles — Service Complet",
     description: "Évacuation feuilles, mousses, sédiments. Nettoyage gouttières + descentes pluviales. Devis gratuit, intervention 48h.",
+    url: "https://www.nettoyage-gouttieres-bruxelles.be/services/nettoyage-gouttieres",
     images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "Nettoyage gouttières Bruxelles" }],
   },
   twitter: {
@@ -52,9 +53,7 @@ export default function NettoyageGouttieres() {
     "@type": "Service",
     name: "Nettoyage de gouttières Bruxelles",
     provider: {
-      "@type": "LocalBusiness",
-      name: "Nettoyage Gouttières Bruxelles",
-      telephone: "0451053370",
+      "@id": "https://www.nettoyage-gouttieres-bruxelles.be/#business",
     },
     areaServed: "Bruxelles",
     description: "Service de nettoyage complet de gouttières à Bruxelles. Évacuation des feuilles, mousses et sédiments. Nettoyage des descentes pluviales inclus.",
