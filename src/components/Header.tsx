@@ -32,6 +32,7 @@ const servicesNav = [
   { name: "Débouchage urgence", href: "/services/debouchage-gouttieres" },
   { name: "Réparation / remplacement", href: "/services/reparation-gouttieres" },
   { name: "Démoussage toiture", href: "/services/demoussage-toiture" },
+  { name: "Protection anti-feuilles", href: "/services/protection-gouttieres" },
 ];
 
 export default function Header() {

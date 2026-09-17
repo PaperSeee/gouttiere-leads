@@ -194,6 +194,9 @@ export default function BlogProtectionGouttieresAntiFeuilles() {
             <p>
               Notre conseil pour une maison bruxelloise très exposée aux arbres : une <strong>grille de qualité bien posée</strong>, combinée à une <strong>inspection annuelle</strong>. Vous ne supprimez pas l&apos;entretien, mais vous le réduisez nettement et vous évitez les débordements.
             </p>
+            <p>
+              Nous proposons la <Link href="/services/protection-gouttieres">pose professionnelle de protections anti-feuilles</Link> dans les 19 communes de Bruxelles, avec un diagnostic gratuit pour choisir le système le plus adapté à votre environnement.
+            </p>
 
             <div className="not-prose bg-green-50 border border-green-200 rounded-xl p-5 mb-6">
               <h3 className="font-bold text-green-800 mb-3 text-sm flex items-center gap-2"><CheckCircle size={16} className="text-green-600" /> En résumé</h3>
@@ -227,6 +230,7 @@ export default function BlogProtectionGouttieresAntiFeuilles() {
           <h2 className="text-lg font-bold text-gray-900 mb-4">Articles liés</h2>
           <div className="flex flex-wrap gap-3">
             {[
+              { label: "Pose de protections anti-feuilles", href: "/services/protection-gouttieres" },
               { label: "Quand nettoyer ses gouttières ?", href: "/blog/entretien-gouttieres-quand-faire" },
               { label: "Préparer l'automne", href: "/blog/preparer-gouttieres-automne-bruxelles" },
               { label: "Gouttière qui déborde", href: "/blog/gouttiere-qui-deborde-causes-solutions" },
