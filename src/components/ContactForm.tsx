@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Send, CheckCircle } from "lucide-react";
+import { Send, CheckCircle, AlertCircle } from "lucide-react";
 
 const communes = [
   "Uccle",
@@ -35,6 +35,7 @@ export default function ContactForm({
 }: ContactFormProps) {
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(false);
   const [form, setForm] = useState({
     prenom: "",
     nom: "",
@@ -54,10 +55,20 @@ export default function ContactForm({
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
-    await new Promise((r) => setTimeout(r, 800));
-    console.log("Formulaire soumis:", form);
-    setLoading(false);
-    setSubmitted(true);
+    setError(false);
+    try {
+      const res = await fetch("/api/lead", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
+      });
+      if (!res.ok) throw new Error("request_failed");
+      setSubmitted(true);
+    } catch {
+      setError(true);
+    } finally {
+      setLoading(false);
+    }
   };
 
   if (submitted) {
@@ -198,6 +209,20 @@ export default function ContactForm({
           placeholder="Précisez la longueur approximative des gouttières, la hauteur du bâtiment, l'urgence..."
         />
       </div>
+
+      {error && (
+        <div className="flex items-start gap-2 bg-red-50 border border-red-200 rounded-lg p-3 text-sm text-red-700">
+          <AlertCircle size={18} className="flex-shrink-0 mt-0.5" />
+          <span>
+            Une erreur est survenue lors de l&apos;envoi de votre demande. Merci de réessayer ou
+            de nous appeler directement au{" "}
+            <a href="tel:0451053370" className="font-semibold underline">
+              0451 05 33 70
+            </a>
+            .
+          </span>
+        </div>
+      )}
 
       <button
         type="submit"
