@@ -6,7 +6,7 @@ import ContactForm from "@/components/ContactForm"
 
 export const metadata: Metadata = {
   title: "Protections Anti-Feuilles pour Gouttières : Grilles, Brosses ou Filets ?",
-  description: "Grilles, brosses, filets, mousses : comparatif des protections anti-feuilles pour gouttières à Bruxelles. Avantages, limites, prix et efficacité réelle pour espacer les nettoyages.",
+  description: "Grilles, brosses, filets, mousses : comparatif des protections anti-feuilles pour gouttières à Bruxelles. Avantages, limites, prix et efficacité.",
   keywords: ["protection gouttière anti-feuilles", "grille gouttière Bruxelles", "brosse gouttière", "filet anti-feuilles gouttière", "système anti-feuilles gouttière prix"],
   alternates: { canonical: "https://www.nettoyage-gouttieres-bruxelles.be/blog/protection-gouttieres-anti-feuilles-bruxelles" },
   openGraph: {

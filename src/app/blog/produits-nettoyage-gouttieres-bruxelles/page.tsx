@@ -6,7 +6,7 @@ import ContactForm from "@/components/ContactForm"
 
 export const metadata: Metadata = {
   title: "Produits Nettoyage Gouttières Bruxelles : Lesquels Choisir et Éviter ?",
-  description: "Guide complet sur les produits pour nettoyer vos gouttières à Bruxelles : démoussants, dégraissants, traitements anti-algues. Ce qui fonctionne vraiment et ce qui abîme vos gouttières.",
+  description: "Guide sur les produits pour nettoyer vos gouttières à Bruxelles : démoussants, dégraissants, anti-algues. Ce qui fonctionne et ce qui les abîme.",
   keywords: ["produits nettoyage gouttières", "démoussant gouttière bruxelles", "nettoyer gouttières soi-même", "entretien gouttières belgique", "traitement anti-algues gouttière"],
   alternates: { canonical: "https://www.nettoyage-gouttieres-bruxelles.be/blog/produits-nettoyage-gouttieres-bruxelles" },
   openGraph: {

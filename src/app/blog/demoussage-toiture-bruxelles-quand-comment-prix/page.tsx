@@ -6,7 +6,7 @@ import ContactForm from "@/components/ContactForm"
 
 export const metadata: Metadata = {
   title: "Démoussage de Toiture à Bruxelles : Quand, Comment et à Quel Prix en 2026",
-  description: "Mousses, lichens et algues sur votre toit ? Découvrez quand faire un démoussage à Bruxelles, les méthodes professionnelles, les prix 2026 et le lien direct avec vos gouttières.",
+  description: "Mousses et algues sur votre toit ? Quand faire un démoussage à Bruxelles, les méthodes professionnelles, les prix 2026 et le lien avec vos gouttières.",
   keywords: ["démoussage toiture bruxelles", "nettoyage toiture bruxelles", "prix démoussage toiture", "traitement anti-mousse toiture", "démoussage tuiles bruxelles"],
   alternates: { canonical: "https://www.nettoyage-gouttieres-bruxelles.be/blog/demoussage-toiture-bruxelles-quand-comment-prix" },
   openGraph: {
