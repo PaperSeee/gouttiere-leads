@@ -20,8 +20,19 @@ export const metadata: Metadata = {
 }
 
 export default function KoekelbergPage() {
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      { "@type": "Question", name: "Le zinc de nos maisons des années 20 mérite-t-il encore d'être réparé ?", acceptedAnswer: { "@type": "Answer", text: "Un zinc des années 20 bien conservé peut encore durer 10 à 15 ans. Si les soudures tiennent et que les profils sont rectilignes, une réparation ponctuelle des zones défaillantes est économiquement pertinente. On fait un diagnostic gratuit pour évaluer la situation." } },
+      { "@type": "Question", name: "Comment accédez-vous aux gouttières arrière à Koekelberg ?", acceptedAnswer: { "@type": "Answer", text: "Généralement par la cour intérieure avec des échelles légères ou des perches télescopiques. Dans les cours particulièrement étroites, on utilise exclusivement des perches depuis le sol pour ne pas risquer d'abîmer les façades voisines." } },
+      { "@type": "Question", name: "Faut-il prévenir les voisins pour l'accès aux cours partagées ?", acceptedAnswer: { "@type": "Answer", text: "C'est recommandé. Dans les maisons mitoyennes de Koekelberg avec cours partagées, on vous conseille de prévenir les voisins au moins 24h à l'avance. Si plusieurs voisins souhaitent un nettoyage le même jour, on propose un tarif groupé avantageux." } },
+      { "@type": "Question", name: "Intervenez-vous avenue de la Basilique et rue Schmitz ?", acceptedAnswer: { "@type": "Answer", text: "Oui, dans toutes les rues de Koekelberg. La commune est petite et bien connue de notre équipe. Délai d'intervention habituel : 48 à 72 heures après contact." } }
+    ],
+  }
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <Breadcrumb items={[{ label: "Accueil", href: "/" }, { label: "Communes", href: "/" }, { label: "Koekelberg" }]} />
 
       <section className="bg-white border-b border-gray-100 py-12 lg:py-16">

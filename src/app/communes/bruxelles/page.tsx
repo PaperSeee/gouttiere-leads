@@ -20,8 +20,19 @@ export const metadata: Metadata = {
 }
 
 export default function BruxellesPage() {
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      { "@type": "Question", name: "Comment accédez-vous aux toits des immeubles du centre ?", acceptedAnswer: { "@type": "Answer", text: "Selon la configuration : trappe de toit intérieure, accès par un immeuble voisin, ou nacelle pour les immeubles sans accès interne. On évalue gratuitement l'accessibilité avant toute intervention pour donner un devis précis." } },
+      { "@type": "Question", name: "Notre villa à Laeken est proche du parc royal — quelle fréquence ?", acceptedAnswer: { "@type": "Answer", text: "Deux passages annuels sont recommandés pour les propriétés proches des grands espaces verts : novembre après la chute des feuilles et mai après la libération des samares d'érables et des pollens printaniers." } },
+      { "@type": "Question", name: "Intervenez-vous à Neder-Over-Heembeek et Haren ?", acceptedAnswer: { "@type": "Answer", text: "Oui, dans toute la commune de Bruxelles-Ville, y compris les extensions nord. Ces zones ont moins de contraintes d'accès mais des propriétés souvent plus exposées à la végétation. Devis gratuit sur place." } },
+      { "@type": "Question", name: "L'immeuble de notre syndic n'a jamais eu de nettoyage de gouttières — par où commencer ?", acceptedAnswer: { "@type": "Answer", text: "On commence par un diagnostic complet : état des gouttières, descentes, évacuations. Ensuite on propose un programme de mise à niveau puis un planning d'entretien annuel. On fournit un rapport formel pour le dossier de copropriété." } }
+    ],
+  }
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <Breadcrumb items={[{ label: "Accueil", href: "/" }, { label: "Communes", href: "/" }, { label: "Bruxelles-Ville" }]} />
 
       <section className="bg-white border-b border-gray-100 py-12 lg:py-16">

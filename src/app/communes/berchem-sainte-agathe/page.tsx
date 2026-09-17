@@ -20,8 +20,19 @@ export const metadata: Metadata = {
 }
 
 export default function BerchemSainteAgathePage() {
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      { "@type": "Question", name: "Notre villa des années 70 a des gouttières d'origine — faut-il tout changer ?", acceptedAnswer: { "@type": "Answer", text: "Pas forcément tout. On inspecte d'abord : si les crochets tiennent, les joints sont étanches et le profil est droit, une réparation ciblée et un nettoyage peuvent suffire. Si plus de 40% du linéaire présente des problèmes, un remplacement complet est plus économique sur le long terme." } },
+      { "@type": "Question", name: "Peut-on choisir la couleur des nouvelles gouttières ?", acceptedAnswer: { "@type": "Answer", text: "Oui, l'aluminium laqué est disponible dans de nombreuses teintes RAL. On s'assure que la nouvelle couleur s'harmonise avec votre façade et vos menuiseries. La teinte gris anthracite (RAL 7016) et le blanc cassé (RAL 9010) sont les plus demandées à Berchem." } },
+      { "@type": "Question", name: "Combien de temps dure une intervention à Berchem-Sainte-Agathe ?", acceptedAnswer: { "@type": "Answer", text: "Pour une villa quatre façades standard, le nettoyage dure environ 2 à 3 heures. Un remplacement complet de gouttières prend généralement une journée complète. On vous donne une estimation précise lors du devis." } },
+      { "@type": "Question", name: "Intervenez-vous dans les lotissements de la chaussée de Gand ?", acceptedAnswer: { "@type": "Answer", text: "Oui, dans tout Berchem-Sainte-Agathe, y compris les lotissements le long de la chaussée de Gand et les rues résidentielles plus calmes. Délai habituel : 48 à 72 heures après contact." } }
+    ],
+  }
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <Breadcrumb items={[{ label: "Accueil", href: "/" }, { label: "Communes", href: "/" }, { label: "Berchem-Sainte-Agathe" }]} />
 
       <section className="bg-white border-b border-gray-100 py-12 lg:py-16">

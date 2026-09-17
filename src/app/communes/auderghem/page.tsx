@@ -6,7 +6,7 @@ import Breadcrumb from "@/components/Breadcrumb"
 import ContactForm from "@/components/ContactForm"
 
 export const metadata: Metadata = {
-  title: "Nettoyage Gouttières Auderghem — Expert Local | Nettoyage Gouttières Bruxelles",
+  title: "Nettoyage Gouttières Auderghem — Forêt de Soignes | 0451 05 33 70",
   description: "Nettoyage gouttières à Auderghem : maisons 4 façades, Forêt de Soignes, aluminium à remplacer. Rouge-Cloître. Devis gratuit. 0451 05 33 70.",
   alternates: { canonical: "https://www.nettoyage-gouttieres-bruxelles.be/communes/auderghem" },
   keywords: ["nettoyage gouttières Auderghem", "débouchage gouttières Auderghem", "gouttières bouchées Auderghem", "prix nettoyage gouttières Auderghem"],
@@ -20,8 +20,19 @@ export const metadata: Metadata = {
 }
 
 export default function AuderghemPage() {
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      { "@type": "Question", name: "La Forêt de Soignes impacte-t-elle vraiment les gouttières à Auderghem ?", acceptedAnswer: { "@type": "Answer", text: "Oui, très significativement. Composée majoritairement de hêtres à feuilles caduques tardives, la forêt génère des apports de feuilles jusqu'en janvier-février. Un nettoyage en novembre ne suffit pas — un passage hivernal ou en début d'année est souvent nécessaire pour les propriétés proches du Soignes." } },
+      { "@type": "Question", name: "Mes gouttières en aluminium des années 80 sont-elles à remplacer ?", acceptedAnswer: { "@type": "Answer", text: "À 35–45 ans, les gouttières en aluminium des années 80 dépassent leur durée de vie théorique. Si les profils se déforment, si les clips se décrochent ou si les joints sèchent, un remplacement s'impose. Un diagnostic gratuit permet de trancher entre réparation ciblée ou remplacement complet." } },
+      { "@type": "Question", name: "Intervenez-vous dans le quartier Rouge-Cloître ?", acceptedAnswer: { "@type": "Answer", text: "Oui, nous intervenons dans tout Auderghem, y compris Rouge-Cloître, un quartier particulièrement boisé et humide. L'accès est facile et les propriétés y ont généralement des jardins arborés qui nécessitent un entretien régulier des gouttières." } },
+      { "@type": "Question", name: "Proposez-vous des devis pour les grandes propriétés ?", acceptedAnswer: { "@type": "Answer", text: "Absolument. Les maisons 4 façades d'Auderghem peuvent avoir 50 à 80 mètres de gouttières. Nous établissons systématiquement un devis sur mesure tenant compte du linéaire total, de l'accessibilité et de l'état général de l'installation." } }
+    ],
+  }
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <Breadcrumb items={[
         { label: "Accueil", href: "/" },
         { label: "Communes", href: "/" },

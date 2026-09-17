@@ -20,8 +20,19 @@ export const metadata: Metadata = {
 }
 
 export default function EverePage() {
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      { "@type": "Question", name: "Le coton de peupliers est-il vraiment problématique pour les gouttières ?", acceptedAnswer: { "@type": "Answer", text: "C'est l'un des phénomènes les plus surprenants. En mai-juin, les peupliers libèrent leurs aigrettes cotonneuses qui s'accumulent dans les gouttières et descentes en quelques jours. Humidifiées par la pluie, elles se compactent et bloquent complètement l'écoulement. Un nettoyage de juin est indispensable pour les propriétés exposées." } },
+      { "@type": "Question", name: "Comment savoir si mon crochet de fixation est défaillant ?", acceptedAnswer: { "@type": "Answer", text: "Le signe le plus visible est une gouttière qui 'penche' ou s'éloigne de la façade. Vous pouvez aussi vérifier en regardant si l'eau s'accumule dans un recoin plutôt que de s'écouler vers la descente. Un crochet qui cède peut provoquer l'arrachage d'une section entière lors d'une forte pluie." } },
+      { "@type": "Question", name: "Intervenez-vous avenue de l'Héliport et chaussée de Louvain ?", acceptedAnswer: { "@type": "Answer", text: "Oui, dans toute la commune d'Evere, y compris les axes principaux et les rues résidentielles calmes autour du parc Walckiers. Délai habituel : 48 à 72 heures après contact." } },
+      { "@type": "Question", name: "Peut-on remplacer seulement les crochets sans changer toute la gouttière ?", acceptedAnswer: { "@type": "Answer", text: "Oui, si la gouttière est en bon état, on peut remplacer uniquement les crochets défaillants. C'est bien moins coûteux qu'un remplacement complet. On évalue ce qui peut être conservé lors du diagnostic gratuit." } }
+    ],
+  }
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <Breadcrumb items={[{ label: "Accueil", href: "/" }, { label: "Communes", href: "/" }, { label: "Evere" }]} />
 
       <section className="bg-white border-b border-gray-100 py-12 lg:py-16">

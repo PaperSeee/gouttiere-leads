@@ -20,8 +20,19 @@ export const metadata: Metadata = {
 }
 
 export default function WoluweStLambertPage() {
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      { "@type": "Question", name: "Intervenez-vous aussi pour les immeubles à appartements ?", acceptedAnswer: { "@type": "Answer", text: "Oui, avec un devis formel pour le syndic ou les copropriétaires. On établit un rapport d'état complet et peut revenir annuellement selon un planning préétabli pour assurer la continuité de l'entretien." } },
+      { "@type": "Question", name: "Les platanes de l'avenue de Tervueren — quelle fréquence de nettoyage ?", acceptedAnswer: { "@type": "Answer", text: "Pour les propriétés directement bordées de platanes, deux nettoyages annuels sont recommandés : novembre (chute des grandes feuilles) et mai (débris printaniers). Hors alignement de platanes, un passage automnal suffit généralement." } },
+      { "@type": "Question", name: "Quelle est la différence entre un nettoyage villa et un nettoyage immeuble ?", acceptedAnswer: { "@type": "Answer", text: "Pour une villa, on intervient depuis l'extérieur avec des échelles et on nettoie l'ensemble du système. Pour un immeuble, on accède souvent à la toiture et on nettoie les gouttières communes. La facturation immeuble inclut un rapport d'état pour le dossier de copropriété." } },
+      { "@type": "Question", name: "Nos gouttières en PVC des années 70 sont-elles à remplacer ?", acceptedAnswer: { "@type": "Answer", text: "Le PVC des années 70 a 50 ans — au-delà de la durée de vie standard de 25–30 ans. Si elles sont cassantes, fissurées ou si les fixations cèdent, un remplacement s'impose. On peut aussi remplacer uniquement les tronçons défaillants pour réduire le coût." } }
+    ],
+  }
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <Breadcrumb items={[{ label: "Accueil", href: "/" }, { label: "Communes", href: "/" }, { label: "Woluwe-Saint-Lambert" }]} />
 
       <section className="bg-white border-b border-gray-100 py-12 lg:py-16">

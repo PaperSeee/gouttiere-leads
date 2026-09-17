@@ -20,8 +20,19 @@ export const metadata: Metadata = {
 }
 
 export default function ForestPage() {
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      { "@type": "Question", name: "Peut-on coordonner le nettoyage avec notre voisin mitoyen ?", acceptedAnswer: { "@type": "Answer", text: "Oui, et c'est même conseillé ! Pour les maisons mitoyennes, on propose un tarif légèrement réduit quand on fait deux maisons le même jour. Cela permet aussi de traiter les descentes partagées en une seule intervention efficace." } },
+      { "@type": "Question", name: "Nos gouttières en zinc des années 30 valent-elles encore la peine ?", acceptedAnswer: { "@type": "Answer", text: "Ça dépend de l'état. Le zinc des années 30 peut encore durer 10–20 ans si l'oxydation est légère et les profils rectilignes. Un diagnostic gratuit permet de trancher — si 60% du linéaire est en bon état, une réparation ciblée reste économique." } },
+      { "@type": "Question", name: "Les ardoises du toit causent-elles des problèmes de gouttières ?", acceptedAnswer: { "@type": "Answer", text: "Les mousses sur ardoises migrent vers les gouttières et forment des bouchons compacts. Les ardoises brisées créent aussi des points d'infiltration. Un démoussage préventif protège les deux à la fois." } },
+      { "@type": "Question", name: "Intervenez-vous avenue Van Volxem et avenue Besme ?", acceptedAnswer: { "@type": "Answer", text: "Oui, dans toutes les rues de Forest, y compris les avenues bordées d'arbres qui génèrent le plus de feuilles. On connaît bien ces zones et leurs spécificités d'accès." } }
+    ],
+  }
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <Breadcrumb items={[{ label: "Accueil", href: "/" }, { label: "Communes", href: "/" }, { label: "Forest" }]} />
 
       <section className="bg-white border-b border-gray-100 py-12 lg:py-16">

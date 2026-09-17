@@ -20,8 +20,19 @@ export const metadata: Metadata = {
 }
 
 export default function WatermealBoitsfortPage() {
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      { "@type": "Question", name: "Combien de nettoyages par an à Watermael-Boitsfort ?", acceptedAnswer: { "@type": "Answer", text: "2 à 3 selon votre exposition. Les cités Le Logis et Floréal entourées d'arbres bénéficient d'un passage en mai, novembre et janvier-février (hêtres tardifs). On propose des abonnements annuels avec planning préétabli." } },
+      { "@type": "Question", name: "Nos gouttières en cuivre des cités-jardins — comment les entretenir ?", acceptedAnswer: { "@type": "Answer", text: "Le cuivre se nettoie avec des outils non-abrasifs pour ne pas rayer la surface et préserver la patine naturelle. Si des fissures apparaissent, on répare par soudure à l'étain. Un cuivre bien entretenu peut durer 80 à 100 ans." } },
+      { "@type": "Question", name: "Les mousses dans nos gouttières sont particulièrement épaisses — pourquoi ?", acceptedAnswer: { "@type": "Answer", text: "L'humidité permanente et l'ombrage des grands arbres créent les conditions idéales. À Watermael-Boitsfort, sans traitement préventif, les mousses peuvent atteindre 5 à 10 cm d'épaisseur en 2–3 ans, réduisant la capacité d'écoulement de plus de 50%." } },
+      { "@type": "Question", name: "Proposez-vous des contrats d'entretien annuels ?", acceptedAnswer: { "@type": "Answer", text: "Oui, particulièrement recommandé ici. On établit un planning annuel de 2 à 3 visites avec tarif préférentiel. Vous n'avez plus à y penser — on vous contacte avant chaque intervention selon le calendrier convenu." } }
+    ],
+  }
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <Breadcrumb items={[{ label: "Accueil", href: "/" }, { label: "Communes", href: "/" }, { label: "Watermael-Boitsfort" }]} />
 
       <section className="bg-white border-b border-gray-100 py-12 lg:py-16">

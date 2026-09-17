@@ -20,8 +20,19 @@ export const metadata: Metadata = {
 }
 
 export default function SaintGillesPage() {
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      { "@type": "Question", name: "Comment nettoyer le zinc ornemental sans l'endommager ?", acceptedAnswer: { "@type": "Answer", text: "On utilise exclusivement des outils en plastique souple ou des brosses non-abrasives. Aucun métal sur le zinc — les rayures accélèrent la corrosion. Pour les profils complexes, un nettoyage à la main avec des chiffons humides et un aspirateur industriel." } },
+      { "@type": "Question", name: "Nos gouttières en zinc de 1905 sont-elles classées ?", acceptedAnswer: { "@type": "Answer", text: "Les façades peuvent être classées, mais les gouttières elles-mêmes rarement. Cependant, pour les biens à valeur patrimoniale, on recommande de consulter le permis d'urbanisme avant tout remplacement et de privilégier les matériaux d'origine (zinc à la place de zinc)." } },
+      { "@type": "Question", name: "Intervenez-vous au Parvis de Saint-Gilles et chaussée de Waterloo ?", acceptedAnswer: { "@type": "Answer", text: "Oui, dans toute la commune. On connaît bien les contraintes du bâti saint-gillois — ruelles étroites, cours intérieures partagées, accès en étage depuis l'intérieur. On s'adapte à chaque configuration." } },
+      { "@type": "Question", name: "Les acacias de nos rues bouchent-ils vraiment les gouttières au printemps ?", acceptedAnswer: { "@type": "Answer", text: "Oui, leurs petites fleurs blanches tombent en masse en mai et forment des bouchons compacts. Combiné aux bourgeons collants des tilleuls voisins, un nettoyage de mai après la floraison est souvent aussi important que celui de novembre." } }
+    ],
+  }
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <Breadcrumb items={[{ label: "Accueil", href: "/" }, { label: "Communes", href: "/" }, { label: "Saint-Gilles" }]} />
 
       <section className="bg-white border-b border-gray-100 py-12 lg:py-16">

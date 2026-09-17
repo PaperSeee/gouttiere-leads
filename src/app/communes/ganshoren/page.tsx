@@ -20,8 +20,19 @@ export const metadata: Metadata = {
 }
 
 export default function GanshorenPage() {
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      { "@type": "Question", name: "Comment savoir si nos gouttières des années 60 doivent être remplacées ?", acceptedAnswer: { "@type": "Answer", text: "Trois signes clairs : des fuites visibles lors des pluies, des fixations (crochets) qui se détachent du fascia, et des déformations ou affaissements du chenal. Si deux de ces trois signes sont présents, un remplacement est préférable à une réparation ponctuelle." } },
+      { "@type": "Question", name: "Un nettoyage par an est-il vraiment suffisant à Ganshoren ?", acceptedAnswer: { "@type": "Answer", text: "Pour la plupart des propriétés de Ganshoren, oui. La commune n'est pas exposée aux grands arbres forestiers ni aux avenues de platanes. Un nettoyage automnal en novembre, après la chute des feuilles, suffit généralement à maintenir le système en bon état." } },
+      { "@type": "Question", name: "Intervenez-vous avenue du Château et avenue de la Réforme ?", acceptedAnswer: { "@type": "Answer", text: "Oui, dans toutes les rues de Ganshoren. La petite taille de la commune nous permet d'intervenir rapidement — souvent sous 48 heures — sans frais de déplacement supplémentaires." } },
+      { "@type": "Question", name: "Peut-on avoir un devis sans s'engager ?", acceptedAnswer: { "@type": "Answer", text: "Bien sûr, le devis est entièrement gratuit et sans engagement. On peut l'établir par téléphone ou lors d'un passage sur place. On vous présente les différentes options et vous décidez librement." } }
+    ],
+  }
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <Breadcrumb items={[{ label: "Accueil", href: "/" }, { label: "Communes", href: "/" }, { label: "Ganshoren" }]} />
 
       <section className="bg-white border-b border-gray-100 py-12 lg:py-16">

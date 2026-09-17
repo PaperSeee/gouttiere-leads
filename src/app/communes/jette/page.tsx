@@ -20,8 +20,19 @@ export const metadata: Metadata = {
 }
 
 export default function JettePage() {
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      { "@type": "Question", name: "Les chatons de bouleaux sont-ils vraiment problématiques ?", acceptedAnswer: { "@type": "Answer", text: "Oui, c'est l'une des surprises printanières pour les propriétaires de Jette. Les chatons tombent en avril-mai et sont suffisamment petits pour pénétrer dans les descentes, où ils se collent et forment des bouchons denses. Un nettoyage de mai complète utilement le nettoyage automnal pour les jardins avec bouleaux." } },
+      { "@type": "Question", name: "Nos gouttières en aluminium des années 60 tiennent-elles encore ?", acceptedAnswer: { "@type": "Answer", text: "L'aluminium des années 60 est en fin de vie standard (25–30 ans) depuis longtemps. Si elles fuient ou si les crochets cèdent, un remplacement s'impose. Si elles sont simplement encrassées et bien fixées, un nettoyage + démoussage peut encore prolonger leur vie de 3–5 ans." } },
+      { "@type": "Question", name: "Le vent venant du parc de Laeken apporte-t-il des feuilles chez nous ?", acceptedAnswer: { "@type": "Answer", text: "Oui, les vents d'ouest en automne transportent des feuilles des grands arbres du domaine royal vers les quartiers nord de Jette. Les propriétés les plus exposées peuvent recevoir des volumes bien supérieurs à ce que leurs propres jardins génèrent." } },
+      { "@type": "Question", name: "Intervenez-vous dans tous les quartiers de Jette ?", acceptedAnswer: { "@type": "Answer", text: "Oui, dans toute la commune — quartier des Quatre-Vents, Miroir, Karreveld, et vers Ganshoren. On connaît bien les configurations des maisons quatre façades de Jette et leurs spécificités d'accès." } }
+    ],
+  }
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <Breadcrumb items={[{ label: "Accueil", href: "/" }, { label: "Communes", href: "/" }, { label: "Jette" }]} />
 
       <section className="bg-white border-b border-gray-100 py-12 lg:py-16">

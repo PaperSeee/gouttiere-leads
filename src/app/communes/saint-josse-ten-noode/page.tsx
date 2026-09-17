@@ -20,8 +20,19 @@ export const metadata: Metadata = {
 }
 
 export default function SaintJossePage() {
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      { "@type": "Question", name: "Comment accédez-vous aux gouttières d'un immeuble de 5 étages ?", acceptedAnswer: { "@type": "Answer", text: "Selon la configuration : trappe de toit interne (la plus simple), accès par l'immeuble voisin si accord possible, ou nacelle élévatrice pour les façades sans accès interne. On évalue l'accessibilité avant de donner un devis — l'accès est parfois le facteur de coût le plus important." } },
+      { "@type": "Question", name: "Notre gargouille de toiture plate est bouchée — est-ce urgent ?", acceptedAnswer: { "@type": "Answer", text: "Très urgent, oui. Une gargouille bouchée sur toiture plate peut provoquer une accumulation d'eau qui infiltre l'étanchéité et cause des dégâts majeurs à l'immeuble sous-jacent en quelques heures. C'est une intervention d'urgence prioritaire." } },
+      { "@type": "Question", name: "Le syndic doit-il donner son accord avant votre intervention ?", acceptedAnswer: { "@type": "Answer", text: "Pour les parties communes d'un immeuble, oui — il faut l'accord du syndic ou d'une assemblée générale pour les travaux importants. On peut vous fournir un devis formel et un rapport d'état préalable pour faciliter la prise de décision en AG." } },
+      { "@type": "Question", name: "Intervenez-vous chaussée de Haecht et rue Royale Sainte-Marie ?", acceptedAnswer: { "@type": "Answer", text: "Oui, dans toute la commune de Saint-Josse, y compris les axes principaux et les rues intérieures. La densité du bâti demande parfois une logistique particulière pour le stationnement du matériel, mais on s'adapte." } }
+    ],
+  }
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <Breadcrumb items={[{ label: "Accueil", href: "/" }, { label: "Communes", href: "/" }, { label: "Saint-Josse-ten-Noode" }]} />
 
       <section className="bg-white border-b border-gray-100 py-12 lg:py-16">

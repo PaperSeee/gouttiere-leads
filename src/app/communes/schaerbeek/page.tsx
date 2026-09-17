@@ -20,8 +20,19 @@ export const metadata: Metadata = {
 }
 
 export default function SchaerbeekPage() {
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      { "@type": "Question", name: "Les tilleuls de l'avenue Rogier bouchent vraiment les gouttières ?", acceptedAnswer: { "@type": "Answer", text: "Oui, les tilleuls sont parmi les arbres les plus problématiques. Leurs bourgeons collants et petites fleurs forment des masses compactes qui obstruent rapidement au printemps. En automne, leurs feuilles s'accumulent. Deux nettoyages annuels (mai et novembre) sont recommandés." } },
+      { "@type": "Question", name: "Comment accédez-vous aux gouttières de façade arrière ?", acceptedAnswer: { "@type": "Answer", text: "Via la cour intérieure. Nos échelles légères passent par la porte de cave ou le couloir latéral dans la plupart des maisons mitoyennes de Schaerbeek. Pour les cours vraiment exiguës, on utilise des perches télescopiques depuis le sol." } },
+      { "@type": "Question", name: "Le zinc de 1900 — est-ce encore récupérable ?", acceptedAnswer: { "@type": "Answer", text: "Du zinc bien conservé de 1900 peut encore durer 10–20 ans. Si l'installation est étanche et bien fixée, une soudure et reprise des joints peut suffire. Un diagnostic gratuit permet de trancher sur la meilleure approche." } },
+      { "@type": "Question", name: "Êtes-vous habitués au bâti schaerbeekois ?", acceptedAnswer: { "@type": "Answer", text: "Oui, on intervient régulièrement à Schaerbeek dans les grandes avenues et les rues résidentielles du quartier de la Maison des Arts. On connaît bien les contraintes d'accès et les spécificités architecturales locales." } }
+    ],
+  }
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <Breadcrumb items={[{ label: "Accueil", href: "/" }, { label: "Communes", href: "/" }, { label: "Schaerbeek" }]} />
 
       <section className="bg-white border-b border-gray-100 py-12 lg:py-16">

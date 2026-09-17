@@ -6,7 +6,7 @@ import Breadcrumb from "@/components/Breadcrumb"
 import ContactForm from "@/components/ContactForm"
 
 export const metadata: Metadata = {
-  title: "Nettoyage Gouttières Uccle — Expert Local | Nettoyage Gouttières Bruxelles",
+  title: "Nettoyage Gouttières Uccle — Villas & Zinc Centenaire | 0451 05 33 70",
   description: "Nettoyage de gouttières à Uccle : villas, maisons 4 façades, zinc oxydé. Intervention rapide avenue Molière, Brugmann. Devis gratuit. 0451 05 33 70.",
   alternates: { canonical: "https://www.nettoyage-gouttieres-bruxelles.be/communes/uccle" },
   keywords: ["nettoyage gouttières Uccle", "débouchage gouttières Uccle", "gouttières bouchées Uccle", "prix nettoyage gouttières Uccle"],
@@ -20,8 +20,19 @@ export const metadata: Metadata = {
 }
 
 export default function UcclePage() {
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      { "@type": "Question", name: "À quelle fréquence faut-il nettoyer les gouttières à Uccle ?", acceptedAnswer: { "@type": "Answer", text: "À Uccle, deux nettoyages par an sont souvent nécessaires — mai après les floraisons printanières, novembre après la chute des feuilles. Les propriétés avec de grands jardins arborés (platanes, chênes, hêtres) peuvent nécessiter trois passages." } },
+      { "@type": "Question", name: "Intervenez-vous avenue Molière et avenue Brugmann ?", acceptedAnswer: { "@type": "Answer", text: "Oui, nous intervenons régulièrement dans toutes les avenues d'Uccle — Molière, Brugmann, Winston Churchill, Delleur et le quartier du Bois. Notre matériel est adapté aux villas haut de gamme avec façades hautes." } },
+      { "@type": "Question", name: "Mes gouttières en zinc d'époque peuvent-elles être réparées ?", acceptedAnswer: { "@type": "Answer", text: "Les gouttières en zinc des villas des années 30–60 peuvent souvent être réparées par soudure ou reprise de joints si l'oxydation n'est pas trop avancée. Sinon, remplacement par zinc neuf ou aluminium laqué qui s'intègre parfaitement à l'architecture d'époque." } },
+      { "@type": "Question", name: "La pente de mon jardin aggrave-t-elle les risques ?", acceptedAnswer: { "@type": "Answer", text: "Oui. Les terrains en pente typiques d'Uccle concentrent les eaux pluviales vers les fondations en cas de débordement. C'est pourquoi l'entretien régulier est encore plus crucial ici — un bouchon peut causer des infiltrations de fondations en quelques heures." } }
+    ],
+  }
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <Breadcrumb items={[
         { label: "Accueil", href: "/" },
         { label: "Communes", href: "/" },
