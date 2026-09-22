@@ -206,6 +206,14 @@ export default function ProtectionGouttieres() {
                   <li><Link href="/services/demoussage-toiture" className="text-sm text-gray-700 hover:text-[#F97316]">→ Démoussage toiture</Link></li>
                 </ul>
               </div>
+
+              <div className="bg-green-50 border border-green-200 rounded-2xl p-6">
+                <h3 className="font-semibold text-[#1A4731] mb-2">Pour bien choisir</h3>
+                <p className="text-gray-600 text-sm mb-2">Grilles, brosses ou filets : notre comparatif détaillé pour choisir le bon système.</p>
+                <Link href="/blog/protection-gouttieres-anti-feuilles-bruxelles" className="text-[#F97316] text-sm font-semibold flex items-center gap-1">
+                  Grilles, brosses ou filets : que choisir ? <ArrowRight size={14} />
+                </Link>
+              </div>
             </div>
           </div>
         </div>

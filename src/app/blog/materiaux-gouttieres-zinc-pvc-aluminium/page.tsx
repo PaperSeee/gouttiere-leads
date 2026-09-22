@@ -252,6 +252,7 @@ export default function BlogMateriauxGouttieresPvcZincPage() {
           <h2 className="text-lg font-bold text-gray-900 mb-4">Articles liés</h2>
           <div className="flex flex-wrap gap-3">
             {[
+              { label: "Service réparation gouttières", href: "/services/reparation-gouttieres" },
               { label: "Prix nettoyage gouttières", href: "/blog/prix-nettoyage-gouttieres-bruxelles" },
               { label: "Quand nettoyer ses gouttières ?", href: "/blog/entretien-gouttieres-quand-faire" },
               { label: "Gouttière qui déborde", href: "/blog/gouttiere-qui-deborde-causes-solutions" },

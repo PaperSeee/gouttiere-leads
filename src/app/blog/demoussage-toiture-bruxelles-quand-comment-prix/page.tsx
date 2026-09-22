@@ -196,6 +196,11 @@ export default function BlogDemoussageToitureBruxellesPage() {
               <h3 className="font-bold text-gray-900 mb-3 text-sm">Articles connexes</h3>
               <ul className="space-y-3">
                 <li>
+                  <Link href="/services/demoussage-toiture" className="text-sm text-[#1A4731] hover:underline flex items-center gap-1">
+                    <ArrowRight size={12} /> Service démoussage de toiture
+                  </Link>
+                </li>
+                <li>
                   <Link href="/blog/entretien-gouttieres-quand-faire" className="text-sm text-[#1A4731] hover:underline flex items-center gap-1">
                     <ArrowRight size={12} /> Quand nettoyer ses gouttières ?
                   </Link>

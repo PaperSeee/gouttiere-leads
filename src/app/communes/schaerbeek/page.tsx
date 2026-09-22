@@ -208,7 +208,7 @@ export default function SchaerbeekPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <p className="text-sm font-semibold text-gray-500 mb-3">Communes voisines desservies</p>
           <div className="flex flex-wrap gap-2">
-            {[{ name: "Etterbeek", slug: "etterbeek" }, { name: "Woluwe-Saint-Lambert", slug: "woluwe-saint-lambert" }, { name: "Forest", slug: "forest" }].map((c) => (
+            {[{ name: "Etterbeek", slug: "etterbeek" }, { name: "Woluwe-Saint-Lambert", slug: "woluwe-saint-lambert" }, { name: "Evere", slug: "evere" }].map((c) => (
               <Link key={c.slug} href={`/communes/${c.slug}`} className="inline-flex items-center gap-1.5 bg-white border border-gray-200 hover:border-[#1A4731] hover:text-[#1A4731] text-gray-600 rounded-lg px-3 py-2 text-sm font-medium transition-colors">
                 <MapPin size={12} className="text-[#F97316]" />{c.name}
               </Link>

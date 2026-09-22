@@ -215,6 +215,14 @@ export default function DemoussageToiture() {
                   <li><Link href="/services/reparation-gouttieres" className="text-gray-700 hover:text-[#F97316]">→ Réparation gouttières</Link></li>
                 </ul>
               </div>
+
+              <div className="bg-green-50 border border-green-200 rounded-xl p-4">
+                <h3 className="font-semibold text-[#1A4731] mb-2">Pour aller plus loin</h3>
+                <p className="text-gray-600 text-sm mb-2">Quand démousser, quelles méthodes et à quel prix ? Notre guide complet 2026.</p>
+                <Link href="/blog/demoussage-toiture-bruxelles-quand-comment-prix" className="text-[#F97316] text-sm font-semibold flex items-center gap-1">
+                  Démoussage toiture : guide complet <ArrowRight size={14} />
+                </Link>
+              </div>
             </div>
           </div>
         </div>

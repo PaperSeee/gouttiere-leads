@@ -207,7 +207,7 @@ export default function ForestPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <p className="text-sm font-semibold text-gray-500 mb-3">Communes voisines desservies</p>
           <div className="flex flex-wrap gap-2">
-            {[{ name: "Uccle", slug: "uccle" }, { name: "Ixelles", slug: "ixelles" }, { name: "Schaerbeek", slug: "schaerbeek" }].map((c) => (
+            {[{ name: "Uccle", slug: "uccle" }, { name: "Ixelles", slug: "ixelles" }, { name: "Saint-Gilles", slug: "saint-gilles" }].map((c) => (
               <Link key={c.slug} href={`/communes/${c.slug}`} className="inline-flex items-center gap-1.5 bg-white border border-gray-200 hover:border-[#1A4731] hover:text-[#1A4731] text-gray-600 rounded-lg px-3 py-2 text-sm font-medium transition-colors">
                 <MapPin size={12} className="text-[#F97316]" />{c.name}
               </Link>

@@ -163,6 +163,13 @@ export default function BlogAutomneGouttieresBruxellesPage() {
                 </div>
               ))}
             </div>
+            <p>
+              Si votre maison est entourée de plusieurs de ces arbres, un nettoyage manuel répété chaque automne n&apos;est pas la seule option. Consultez notre comparatif des{" "}
+              <Link href="/blog/protection-gouttieres-anti-feuilles-bruxelles" className="text-[#1A4731] font-semibold hover:text-[#F97316] transition-colors">
+                protections anti-feuilles (grilles, brosses ou filets)
+              </Link>{" "}
+              pour espacer nettement la fréquence des interventions.
+            </p>
 
             {/* Section 3 */}
             <h2 className="text-2xl font-bold text-gray-900 mt-10 mb-4">
@@ -428,6 +435,10 @@ export default function BlogAutomneGouttieresBruxellesPage() {
             {[
               { label: "Nettoyage de gouttières", href: "/services/nettoyage-gouttieres" },
               { label: "Démoussage de toiture", href: "/services/demoussage-toiture" },
+              { label: "Quand nettoyer ses gouttières ?", href: "/blog/entretien-gouttieres-quand-faire" },
+              { label: "Gouttières et gel en hiver", href: "/blog/gouttiere-gel-hiver-bruxelles-protection" },
+              { label: "Protections anti-feuilles", href: "/blog/protection-gouttieres-anti-feuilles-bruxelles" },
+              { label: "Gouttière qui déborde", href: "/blog/gouttiere-qui-deborde-causes-solutions" },
               { label: "Gouttières à Uccle", href: "/communes/uccle" },
               { label: "Gouttières à Watermael-Boitsfort", href: "/communes/watermael-boitsfort" },
               { label: "Gouttières à Woluwe-Saint-Pierre", href: "/communes/woluwe-saint-pierre" },

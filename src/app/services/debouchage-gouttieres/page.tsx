@@ -201,6 +201,14 @@ export default function DebouchageGouttieres() {
                 </ul>
               </div>
 
+              <div className="bg-blue-50 border border-blue-200 rounded-xl p-4">
+                <p className="font-semibold text-[#1A4731] mb-2">Comprendre le problème</p>
+                <p className="text-gray-600 text-sm mb-2">Pourquoi votre gouttière déborde-t-elle ? Les causes les plus fréquentes :</p>
+                <Link href="/blog/gouttiere-qui-deborde-causes-solutions" className="text-[#F97316] text-sm font-semibold flex items-center gap-1">
+                  Gouttière qui déborde : causes et solutions <ArrowRight size={14} />
+                </Link>
+              </div>
+
               <div className="bg-green-50 border border-green-200 rounded-xl p-4">
                 <p className="font-semibold text-[#1A4731] mb-2">Après l&apos;urgence</p>
                 <p className="text-gray-600 text-sm mb-2">Évitez la prochaine urgence avec un entretien régulier :</p>
