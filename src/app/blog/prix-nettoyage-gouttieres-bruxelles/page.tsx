@@ -317,6 +317,11 @@ export default function BlogPrixNettoyageGouttieresBruxellesPage() {
                 </div>
               ))}
             </div>
+            <p className="not-prose">
+              <Link href="/services/contrat-entretien-gouttieres" className="text-[#F97316] text-sm font-semibold inline-flex items-center gap-1">
+                Découvrir notre contrat d&apos;entretien annuel <ArrowRight size={14} />
+              </Link>
+            </p>
 
             {/* Section 6 — FAQ */}
             <h2 className="text-2xl font-bold text-gray-900 mt-10 mb-4">Questions fréquentes sur les tarifs</h2>

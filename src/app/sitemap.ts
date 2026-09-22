@@ -47,6 +47,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/services/reparation-gouttieres",
     "/services/demoussage-toiture",
     "/services/protection-gouttieres",
+    "/services/contrat-entretien-gouttieres",
   ];
 
   const nonBlogPages = [...staticPages, ...communePages, ...servicePages, "/blog"];

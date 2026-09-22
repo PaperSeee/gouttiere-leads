@@ -137,6 +137,11 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="/services/contrat-entretien-gouttieres" className="hover:text-accent transition-colors">
+                  Contrat d&apos;entretien annuel
+                </Link>
+              </li>
+              <li>
                 <Link href="/types-gouttieres" className="hover:text-accent transition-colors">
                   Types de gouttières
                 </Link>

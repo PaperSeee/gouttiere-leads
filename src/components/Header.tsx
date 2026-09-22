@@ -33,6 +33,7 @@ const servicesNav = [
   { name: "Réparation / remplacement", href: "/services/reparation-gouttieres" },
   { name: "Démoussage toiture", href: "/services/demoussage-toiture" },
   { name: "Protection anti-feuilles", href: "/services/protection-gouttieres" },
+  { name: "Contrat d'entretien annuel", href: "/services/contrat-entretien-gouttieres" },
 ];
 
 export default function Header() {

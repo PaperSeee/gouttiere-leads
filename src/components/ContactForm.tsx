@@ -21,6 +21,8 @@ const interventionTypes = [
   "Débouchage urgent",
   "Réparation gouttières",
   "Démoussage toiture",
+  "Protection anti-feuilles",
+  "Contrat d'entretien annuel",
   "Autre",
 ];
 

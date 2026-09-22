@@ -388,6 +388,13 @@ export default function BlogEntretienGouttieresMomentPage() {
             <p>
               Le meilleur moment pour planifier un nettoyage, c&apos;est avant d&apos;en avoir besoin. Un entretien préventif régulier coûte entre 80 et 200€ — contre plusieurs milliers d&apos;euros pour réparer les dégâts causés par des gouttières négligées. L&apos;investissement est évident.
             </p>
+            <p>
+              Pour ne plus avoir à y penser, découvrez notre{" "}
+              <Link href="/services/contrat-entretien-gouttieres" className="text-[#F97316] font-semibold">
+                contrat d&apos;entretien annuel
+              </Link>{" "}
+              : passages programmés en octobre et mars, -10% sur le tarif standard.
+            </p>
           </div>
 
           {/* CTA inline */}

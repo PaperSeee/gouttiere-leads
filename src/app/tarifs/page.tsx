@@ -326,6 +326,27 @@ export default function Tarifs() {
         </div>
       </section>
 
+      {/* Contrat d'entretien annuel */}
+      <section className="py-14 bg-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl font-bold text-gray-900 mb-2">Contrat d&apos;entretien annuel</h2>
+          <p className="text-gray-500 text-sm mb-6">Passages programmés en octobre et mars, -10% sur le tarif standard, priorité de planning en haute saison.</p>
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between p-4 sm:p-5 rounded-xl border border-green-200 bg-green-50 gap-2 mb-4">
+            <div>
+              <div className="flex items-center gap-2 flex-wrap">
+                <p className="font-semibold text-gray-900">Contrat 1 ou 2 passages/an</p>
+                <span className="text-xs bg-[#1A4731] text-white px-2 py-0.5 rounded-full">-10% sur le tarif standard</span>
+              </div>
+              <p className="text-gray-500 text-xs mt-0.5">Calculé sur la base du tarif nettoyage habituel de votre bien</p>
+            </div>
+            <p className="font-bold text-lg text-[#1A4731] flex-shrink-0">Sur devis</p>
+          </div>
+          <Link href="/services/contrat-entretien-gouttieres" className="text-sm text-[#1A4731] hover:text-[#F97316] flex items-center gap-1 font-medium">
+            <ArrowRight size={14} /> Découvrir le contrat d&apos;entretien annuel
+          </Link>
+        </div>
+      </section>
+
       {/* Comparatif matériaux */}
       <section className="py-14 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">

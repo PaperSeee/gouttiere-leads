@@ -180,6 +180,13 @@ export default function WatermealBoitsfortPage() {
               </div>
             ))}
           </div>
+          <p className="text-sm text-gray-500 mt-6">
+            Découvrez notre{" "}
+            <Link href="/services/contrat-entretien-gouttieres" className="font-semibold text-[#1A4731] hover:text-[#F97316]">
+              contrat d&apos;entretien annuel
+            </Link>{" "}
+            avec planning préétabli, particulièrement adapté aux propriétés arborées de Watermael-Boitsfort.
+          </p>
         </div>
       </section>
 
