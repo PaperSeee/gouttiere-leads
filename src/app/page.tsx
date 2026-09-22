@@ -21,17 +21,17 @@ import BlogCard from "@/components/BlogCard";
 import { getRecentPosts } from "@/lib/blog";
 
 export const metadata: Metadata = {
-  title: "Nettoyage de Gouttières à Bruxelles — Intervention Rapide | Devis Gratuit",
+  title: "Nettoyage gouttières Bruxelles dès 80€ | Devis gratuit",
   description:
-    "Expert nettoyage de gouttières à Bruxelles. Débouchage urgent, réparation, démoussage toiture. Devis gratuit, intervention sous 48h. Appelez le 0451 05 33 70.",
+    "Nettoyage de gouttières à Bruxelles dès 80€ : feuilles, mousse et descentes pluviales. Intervention sous 48h, urgences 7j/7. Devis gratuit : 0451 05 33 70.",
   keywords: ["nettoyage gouttières Bruxelles", "débouchage gouttières urgence Bruxelles", "réparation gouttières Bruxelles", "démoussage toiture Bruxelles", "gouttières bouchées intervention rapide"],
   alternates: {
     canonical: "https://www.nettoyage-gouttieres-bruxelles.be/",
     languages: { "fr-BE": "/", "fr": "/", "x-default": "/" },
   },
   openGraph: {
-    title: "Nettoyage de Gouttières à Bruxelles — Intervention Rapide | Devis Gratuit",
-    description: "Expert nettoyage de gouttières à Bruxelles. Débouchage urgent, réparation, démoussage toiture. Devis gratuit, intervention sous 48h.",
+    title: "Nettoyage gouttières Bruxelles dès 80€ | Devis gratuit",
+    description: "Nettoyage de gouttières à Bruxelles dès 80€ : feuilles, mousse, descentes pluviales. Devis gratuit, intervention sous 48h.",
     url: "https://www.nettoyage-gouttieres-bruxelles.be/",
     type: "website",
     images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "Nettoyage Gouttières Bruxelles" }],
@@ -158,7 +158,7 @@ export default function HomePage() {
             <div className="py-14 lg:py-20 lg:pr-12">
               <div className="inline-flex items-center gap-2 bg-orange-50 border border-orange-200 text-[#F97316] text-xs font-bold px-3 py-1.5 rounded-full mb-6">
                 <Leaf size={12} />
-                Saison automne — Réservez avant septembre
+                Saison automne — Réservez avant les grandes pluies
               </div>
               <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-gray-900 leading-tight mb-5">
                 Nettoyage Gouttières{" "}
@@ -361,6 +361,54 @@ export default function HomePage() {
                 ))}
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* PRIX — fourchettes reprises de la grille /tarifs */}
+      <section className="py-16 bg-white border-t border-gray-100">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-10">
+            <p className="text-[#F97316] font-semibold text-sm uppercase tracking-wide mb-2">
+              Tarifs transparents
+            </p>
+            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3">
+              Prix du nettoyage de gouttières à Bruxelles
+            </h2>
+            <p className="text-gray-600 max-w-2xl mx-auto">
+              Le prix d&apos;un nettoyage de gouttières dépend de la longueur à
+              nettoyer, de la hauteur du bâtiment et de l&apos;accès aux façades.
+              Pour une maison bruxelloise, comptez en moyenne entre 80 et 150€,
+              descentes pluviales comprises. Le prix exact est fixé dans un devis
+              gratuit, avant toute intervention.
+            </p>
+          </div>
+          <div className="grid sm:grid-cols-3 gap-4 mb-8">
+            {[
+              { label: "Maison 2 façades", price: "80 – 100€", detail: "Gouttières + descentes, 15–20 ml" },
+              { label: "Maison 3–4 façades / villa", price: "100 – 150€", detail: "Toutes façades, descentes multiples" },
+              { label: "Débouchage urgent", price: "120 – 200€", detail: "Selon jour et heure d'intervention" },
+            ].map((row) => (
+              <div key={row.label} className="rounded-2xl border border-green-200 bg-green-50 p-5 text-center">
+                <p className="font-bold text-gray-900 text-sm mb-1">{row.label}</p>
+                <p className="text-2xl font-extrabold text-[#1A4731] mb-1">{row.price}</p>
+                <p className="text-gray-500 text-xs">{row.detail}</p>
+              </div>
+            ))}
+          </div>
+          <div className="flex flex-col sm:flex-row gap-3 justify-center text-sm">
+            <Link
+              href="/tarifs"
+              className="inline-flex items-center justify-center gap-1 text-[#1A4731] font-semibold hover:text-[#F97316] transition-colors"
+            >
+              Grille complète des tarifs gouttières <ArrowRight size={16} />
+            </Link>
+            <Link
+              href="/blog/prix-nettoyage-gouttieres-bruxelles"
+              className="inline-flex items-center justify-center gap-1 text-[#1A4731] font-semibold hover:text-[#F97316] transition-colors"
+            >
+              Ce qui fait varier le prix d&apos;un nettoyage <ArrowRight size={16} />
+            </Link>
           </div>
         </div>
       </section>

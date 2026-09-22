@@ -5,14 +5,14 @@ import Breadcrumb from "@/components/Breadcrumb";
 import FAQAccordion from "@/components/FAQAccordion";
 
 export const metadata: Metadata = {
-  title: "FAQ Nettoyage Gouttières Bruxelles — 15 Questions & Réponses",
+  title: { absolute: "FAQ gouttières et toiture à Bruxelles : prix, délais" },
   description:
-    "Toutes les réponses à vos questions sur le nettoyage de gouttières à Bruxelles : prix, fréquence, risques, urgences, matériaux. Expert disponible au 0451 05 33 70.",
-  keywords: ["FAQ gouttières Bruxelles", "questions nettoyage gouttières", "fréquence nettoyage gouttières", "gouttières bouchées risques", "prix gouttières Bruxelles"],
+    "Prix, fréquence, urgences, nettoyage de toiture : 15 réponses sur l'entretien des gouttières à Bruxelles. Devis gratuit au 0451 05 33 70.",
+  keywords: ["FAQ gouttières Bruxelles", "questions nettoyage gouttières", "fréquence nettoyage gouttières", "nettoyage toiture Bruxelles", "prix gouttières Bruxelles"],
   alternates: { canonical: "https://www.nettoyage-gouttieres-bruxelles.be/faq" },
   openGraph: {
-    title: "FAQ Nettoyage Gouttières Bruxelles — 15 Questions & Réponses",
-    description: "Prix, fréquence, risques, urgences, matériaux — toutes les réponses sur le nettoyage de gouttières à Bruxelles.",
+    title: "FAQ gouttières et toiture à Bruxelles : prix, délais",
+    description: "Prix, fréquence, urgences, nettoyage de toiture — toutes les réponses sur l'entretien des gouttières à Bruxelles.",
     url: "https://www.nettoyage-gouttieres-bruxelles.be/faq",
     type: "website",
     images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "FAQ nettoyage gouttières Bruxelles" }],
@@ -57,8 +57,8 @@ const faqs = [
     answer: "Oui, nos techniciens sont formés et équipés pour les travaux en hauteur : échelles professionnelles, nacelles (selon accessibilité) et équipements de sécurité certifiés. Nous intervenons sur des bâtiments jusqu'à R+3 standard. Au-delà ou pour des configurations très particulières (toitures mansardées, accès restreint), nous évaluons la situation lors de la visite de devis.",
   },
   {
-    question: "Proposez-vous aussi le démoussage de toiture ?",
-    answer: "Oui, le démoussage de toiture est l'un de nos services complémentaires. La mousse sur les tuiles retient l'humidité, dégrade les tuiles et alimente les gouttières en débris. Un démoussage associé à un traitement anti-mousse préventif protège votre toiture pendant 3 à 5 ans. Nous proposons un tarif avantageux lorsque le démoussage est combiné au nettoyage des gouttières lors d'une même visite.",
+    question: "Proposez-vous aussi le nettoyage de toiture à Bruxelles ?",
+    answer: "Oui, le nettoyage et le démoussage de toiture font partie de nos services complémentaires à Bruxelles. Comptez 3 à 6€/m² pour un démoussage mécanique, traitement anti-mousse compris. La mousse sur les tuiles retient l'humidité, dégrade les tuiles et alimente les gouttières en débris. Un démoussage associé à un traitement anti-mousse préventif protège votre toiture pendant 3 à 5 ans. Nous proposons un tarif avantageux lorsque le démoussage est combiné au nettoyage des gouttières lors d'une même visite.",
   },
   {
     question: "Mon assurance couvre-t-elle les dégâts dus aux gouttières bouchées ?",
@@ -120,6 +120,28 @@ export default function FAQ() {
       <section className="py-16 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <FAQAccordion items={faqs} />
+
+          <div className="mt-12">
+            <h2 className="text-xl font-bold text-gray-900 mb-4">Nos services gouttières et toiture à Bruxelles</h2>
+            <div className="grid sm:grid-cols-2 gap-2">
+              {[
+                { label: "Nettoyage de gouttières", href: "/services/nettoyage-gouttieres" },
+                { label: "Débouchage de gouttières en urgence", href: "/services/debouchage-gouttieres" },
+                { label: "Nettoyage et démoussage de toiture", href: "/services/demoussage-toiture" },
+                { label: "Réparation de gouttières", href: "/services/reparation-gouttieres" },
+                { label: "Tarifs 2026 du nettoyage de gouttières", href: "/tarifs" },
+                { label: "Types de gouttières : PVC, zinc, aluminium", href: "/types-gouttieres" },
+              ].map((l) => (
+                <Link
+                  key={l.href}
+                  href={l.href}
+                  className="flex items-center justify-between border border-gray-200 rounded-xl px-4 py-3 text-sm font-semibold text-[#1A4731] hover:border-[#F97316] hover:text-[#F97316] transition-colors"
+                >
+                  {l.label} <ArrowRight size={16} />
+                </Link>
+              ))}
+            </div>
+          </div>
 
           <div className="mt-12 bg-[#1A4731] text-white rounded-2xl p-8 text-center">
             <h2 className="text-xl font-bold mb-3">Vous n&apos;avez pas trouvé votre réponse ?</h2>
