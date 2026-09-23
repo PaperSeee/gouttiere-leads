@@ -5,9 +5,9 @@ import Breadcrumb from "@/components/Breadcrumb";
 import ContactForm from "@/components/ContactForm";
 
 export const metadata: Metadata = {
-  title: "Contrat d'Entretien Annuel Gouttières Bruxelles — Abonnement | Devis Gratuit",
+  title: { absolute: "Contrat d'entretien de gouttières à Bruxelles" },
   description:
-    "Contrat d'entretien annuel pour vos gouttières à Bruxelles : passages programmés en octobre et mars, -10% sur le tarif standard, priorité de planning. Devis gratuit. 0451 05 33 70.",
+    "Contrat d'entretien annuel pour vos gouttières à Bruxelles : passages programmés en octobre et mars, -10% sur le tarif standard, priorité de planning.",
   alternates: { canonical: "https://www.nettoyage-gouttieres-bruxelles.be/services/contrat-entretien-gouttieres" },
   keywords: ["contrat entretien gouttières Bruxelles", "abonnement nettoyage gouttières", "entretien annuel gouttières prix", "forfait entretien gouttières Bruxelles"],
   openGraph: {

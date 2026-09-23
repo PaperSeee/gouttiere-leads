@@ -6,12 +6,13 @@ import Breadcrumb from "@/components/Breadcrumb"
 import ContactForm from "@/components/ContactForm"
 
 export const metadata: Metadata = {
-  title: "Nettoyage Gouttières Ganshoren — Petite Commune Résidentielle | 0451 05 33 70",
-  description: "Nettoyage gouttières à Ganshoren : maisons des années 50–60, jardins arborés, commune résidentielle calme. Devis gratuit. 0451 05 33 70.",
+  title: { absolute: "Nettoyage de gouttières à Ganshoren | Gouttières Bruxelles" },
+  description:
+    "Nettoyage gouttières à Ganshoren : maisons des années 50–60, jardins arborés, commune résidentielle calme. Devis gratuit.",
   alternates: { canonical: "https://www.nettoyage-gouttieres-bruxelles.be/communes/ganshoren" },
   keywords: ["nettoyage gouttières Ganshoren", "débouchage gouttières Ganshoren", "gouttières bouchées Ganshoren", "prix nettoyage gouttières Ganshoren"],
   openGraph: {
-    title: "Nettoyage Gouttières Ganshoren — Devis Gratuit | 0451 05 33 70",
+    title: "Nettoyage Gouttières Ganshoren — Devis Gratuit",
     description: "Expert nettoyage gouttières à Ganshoren. Débouchage urgent, réparation, démoussage. Devis gratuit, intervention rapide.",
     url: "https://www.nettoyage-gouttieres-bruxelles.be/communes/ganshoren",
     type: "website",

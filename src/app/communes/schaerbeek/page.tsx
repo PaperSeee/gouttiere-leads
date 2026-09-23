@@ -6,12 +6,13 @@ import Breadcrumb from "@/components/Breadcrumb"
 import ContactForm from "@/components/ContactForm"
 
 export const metadata: Metadata = {
-  title: "Nettoyage Gouttières Schaerbeek — Maisons Belle Époque | 0451 05 33 70",
-  description: "Nettoyage gouttières à Schaerbeek : maisons Belle Époque, zinc historique, tilleuls. Devis gratuit, intervention rapide. 0451 05 33 70.",
+  title: { absolute: "Nettoyage de gouttières à Schaerbeek | Gouttières Bruxelles" },
+  description:
+    "Nettoyage gouttières à Schaerbeek : maisons Belle Époque, zinc historique, tilleuls. Devis gratuit, intervention rapide.",
   alternates: { canonical: "https://www.nettoyage-gouttieres-bruxelles.be/communes/schaerbeek" },
   keywords: ["nettoyage gouttières Schaerbeek", "débouchage gouttières Schaerbeek", "gouttières bouchées Schaerbeek", "prix nettoyage gouttières Schaerbeek"],
   openGraph: {
-    title: "Nettoyage Gouttières Schaerbeek — Devis Gratuit | 0451 05 33 70",
+    title: "Nettoyage Gouttières Schaerbeek — Devis Gratuit",
     description: "Expert nettoyage gouttières à Schaerbeek. Débouchage urgent, réparation, démoussage. Devis gratuit, intervention rapide.",
     url: "https://www.nettoyage-gouttieres-bruxelles.be/communes/schaerbeek",
     type: "website",

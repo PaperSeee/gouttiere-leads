@@ -6,12 +6,13 @@ import Breadcrumb from "@/components/Breadcrumb"
 import ContactForm from "@/components/ContactForm"
 
 export const metadata: Metadata = {
-  title: "Nettoyage Gouttières Molenbeek-Saint-Jean — Canal & Rénovation | 0451 05 33 70",
-  description: "Nettoyage gouttières à Molenbeek-Saint-Jean : habitat dense, canal, rénovation bâti ancien. Devis gratuit, intervention rapide. 0451 05 33 70.",
+  title: { absolute: "Nettoyage de gouttières à Molenbeek-Saint-Jean, Bruxelles" },
+  description:
+    "Nettoyage gouttières à Molenbeek-Saint-Jean : habitat dense, canal, rénovation bâti ancien. Devis gratuit, intervention rapide.",
   alternates: { canonical: "https://www.nettoyage-gouttieres-bruxelles.be/communes/molenbeek-saint-jean" },
   keywords: ["nettoyage gouttières Molenbeek", "débouchage gouttières Molenbeek", "gouttières bouchées Molenbeek", "prix nettoyage gouttières Molenbeek"],
   openGraph: {
-    title: "Nettoyage Gouttières Molenbeek — Devis Gratuit | 0451 05 33 70",
+    title: "Nettoyage Gouttières Molenbeek — Devis Gratuit",
     description: "Expert nettoyage gouttières à Molenbeek. Débouchage urgent, réparation, démoussage. Devis gratuit, intervention rapide.",
     url: "https://www.nettoyage-gouttieres-bruxelles.be/communes/molenbeek-saint-jean",
     type: "website",

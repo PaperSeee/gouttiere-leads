@@ -23,8 +23,8 @@ const DOMAIN = "https://www.nettoyage-gouttieres-bruxelles.be";
 
 export const metadata: Metadata = {
   title: {
-    default: "Nettoyage Gouttières Bruxelles | Devis Gratuit — Intervention 48h",
-    template: "%s | Nettoyage Gouttières Bruxelles",
+    default: "Nettoyage de gouttières à Bruxelles | Gouttières Bruxelles",
+    template: "%s | Gouttières Bruxelles",
   },
   description:
     "Nettoyage de gouttières à Bruxelles. Prix dès 80 € — débouchage, réparation, démoussage toiture. Devis gratuit, intervention sous 48h. Appelez le 0451 05 33 70.",

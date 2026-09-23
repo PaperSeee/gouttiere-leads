@@ -22,9 +22,9 @@ import { getRecentPosts } from "@/lib/blog";
 import GutterIllustration from "@/components/GutterIllustration";
 
 export const metadata: Metadata = {
-  title: "Nettoyage gouttières Bruxelles dès 80€ | Devis gratuit",
+  title: { absolute: "Nettoyage de gouttières à Bruxelles | Gouttières Bruxelles" },
   description:
-    "Nettoyage de gouttières à Bruxelles dès 80€ : feuilles, mousse et descentes pluviales. Intervention sous 48h, urgences 7j/7. Devis gratuit : 0451 05 33 70.",
+    "Nettoyage de gouttières à Bruxelles dès 80€ : feuilles, mousse et descentes pluviales. Intervention sous 48h, urgences 7j/7. Devis gratuit.",
   keywords: ["nettoyage gouttières Bruxelles", "débouchage gouttières urgence Bruxelles", "réparation gouttières Bruxelles", "démoussage toiture Bruxelles", "gouttières bouchées intervention rapide"],
   alternates: {
     canonical: "https://www.nettoyage-gouttieres-bruxelles.be/",

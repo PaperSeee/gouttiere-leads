@@ -6,12 +6,13 @@ import Breadcrumb from "@/components/Breadcrumb"
 import ContactForm from "@/components/ContactForm"
 
 export const metadata: Metadata = {
-  title: "Nettoyage Gouttières Anderlecht — Maisons Ouvrières & Canaux | 0451 05 33 70",
-  description: "Nettoyage gouttières à Anderlecht : maisons ouvrières brique, canal de Charleroi, humidité canal. Devis gratuit, intervention rapide. 0451 05 33 70.",
+  title: { absolute: "Nettoyage de gouttières à Anderlecht | Gouttières Bruxelles" },
+  description:
+    "Nettoyage gouttières à Anderlecht : maisons ouvrières brique, canal de Charleroi, humidité canal. Devis gratuit, intervention rapide.",
   alternates: { canonical: "https://www.nettoyage-gouttieres-bruxelles.be/communes/anderlecht" },
   keywords: ["nettoyage gouttières Anderlecht", "débouchage gouttières Anderlecht", "gouttières bouchées Anderlecht", "prix nettoyage gouttières Anderlecht"],
   openGraph: {
-    title: "Nettoyage Gouttières Anderlecht — Devis Gratuit | 0451 05 33 70",
+    title: "Nettoyage Gouttières Anderlecht — Devis Gratuit",
     description: "Expert nettoyage gouttières à Anderlecht. Débouchage urgent, réparation, démoussage. Devis gratuit, intervention rapide.",
     url: "https://www.nettoyage-gouttieres-bruxelles.be/communes/anderlecht",
     type: "website",

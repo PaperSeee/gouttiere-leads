@@ -7,7 +7,7 @@ import FAQAccordion from "@/components/FAQAccordion";
 export const metadata: Metadata = {
   title: { absolute: "FAQ gouttières et toiture à Bruxelles : prix, délais" },
   description:
-    "Prix, fréquence, urgences, nettoyage de toiture : 16 réponses sur l'entretien des gouttières à Bruxelles. Devis gratuit au 0451 05 33 70.",
+    "Prix, fréquence, urgences, nettoyage de toiture : 16 réponses sur l'entretien des gouttières à Bruxelles. Devis gratuit.",
   keywords: ["FAQ gouttières Bruxelles", "questions nettoyage gouttières", "fréquence nettoyage gouttières", "nettoyage toiture Bruxelles", "prix gouttières Bruxelles"],
   alternates: { canonical: "https://www.nettoyage-gouttieres-bruxelles.be/faq" },
   openGraph: {

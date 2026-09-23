@@ -4,7 +4,7 @@ import BlogCard from "@/components/BlogCard";
 import { blogPosts } from "@/lib/blog";
 
 export const metadata: Metadata = {
-  title: "Blog — Conseils Nettoyage Gouttières Bruxelles",
+  title: { absolute: "Conseils gouttières à Bruxelles | Gouttières Bruxelles" },
   description:
     "Articles et conseils pratiques sur l'entretien des gouttières à Bruxelles. Guides saisonniers, tutoriels et informations pour propriétaires bruxellois.",
   keywords: ["conseils gouttières Bruxelles", "entretien gouttières maison", "blog nettoyage gouttières", "guides gouttières propriétaires Bruxelles"],

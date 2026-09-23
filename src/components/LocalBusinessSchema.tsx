@@ -1,9 +1,11 @@
+import { BUSINESS } from "@/lib/business";
+
 const DOMAIN = "https://www.nettoyage-gouttieres-bruxelles.be";
 
 export default function LocalBusinessSchema() {
   const schema = {
     "@context": "https://schema.org",
-    "@type": "LocalBusiness",
+    "@type": "RoofingContractor",
     "@id": `${DOMAIN}/#business`,
     name: "Nettoyage Gouttières Bruxelles",
     description:
@@ -13,15 +15,14 @@ export default function LocalBusinessSchema() {
     email: "contact@nettoyage-gouttieres-bruxelles.be",
     address: {
       "@type": "PostalAddress",
+      ...(BUSINESS.streetAddress && { streetAddress: BUSINESS.streetAddress }),
+      ...(BUSINESS.postalCode && { postalCode: BUSINESS.postalCode }),
       addressLocality: "Bruxelles",
       addressRegion: "Bruxelles-Capitale",
       addressCountry: "BE",
     },
-    geo: {
-      "@type": "GeoCoordinates",
-      latitude: 50.8503,
-      longitude: 4.3517,
-    },
+    // Coordonnées publiées uniquement si elles correspondent à une adresse d'activité réelle.
+    ...(BUSINESS.geo && { geo: { "@type": "GeoCoordinates", ...BUSINESS.geo } }),
     areaServed: [
       "Anderlecht", "Auderghem", "Berchem-Sainte-Agathe", "Bruxelles",
       "Etterbeek", "Evere", "Forest", "Ganshoren", "Ixelles", "Jette",
@@ -57,9 +58,10 @@ export default function LocalBusinessSchema() {
         { "@type": "Offer", itemOffered: { "@type": "Service", name: "Réparation gouttières", url: `${DOMAIN}/services/reparation-gouttieres` } },
         { "@type": "Offer", itemOffered: { "@type": "Service", name: "Démoussage toiture", url: `${DOMAIN}/services/demoussage-toiture` } },
         { "@type": "Offer", itemOffered: { "@type": "Service", name: "Protection anti-feuilles gouttières", url: `${DOMAIN}/services/protection-gouttieres` } },
+        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Contrat d'entretien annuel", url: `${DOMAIN}/services/contrat-entretien-gouttieres` } },
       ],
     },
-    sameAs: [],
+    ...(BUSINESS.sameAs.length > 0 && { sameAs: BUSINESS.sameAs }),
   };
 
   return (

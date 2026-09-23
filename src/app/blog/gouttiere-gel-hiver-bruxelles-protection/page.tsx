@@ -5,8 +5,9 @@ import Breadcrumb from "@/components/Breadcrumb"
 import ContactForm from "@/components/ContactForm"
 
 export const metadata: Metadata = {
-  title: "Gouttières et Gel en Hiver à Bruxelles : Risques et Protection",
-  description: "Gel et neige fondue endommagent les gouttières en hiver à Bruxelles. Découvrez les risques (fissures, descentes bouchées) et comment les protéger du froid.",
+  title: { absolute: "Gouttières et gel en hiver : risques et protection" },
+  description:
+    "Gel et neige fondue endommagent les gouttières en hiver à Bruxelles. Découvrez les risques (fissures, descentes bouchées) et comment les protéger du froid.",
   keywords: ["gouttière gel hiver", "gouttière gelée Bruxelles", "barrière de glace toiture", "descente gouttière bouchée glace", "protéger gouttière froid"],
   alternates: { canonical: "https://www.nettoyage-gouttieres-bruxelles.be/blog/gouttiere-gel-hiver-bruxelles-protection" },
   openGraph: {

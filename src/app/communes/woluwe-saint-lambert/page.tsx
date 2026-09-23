@@ -6,12 +6,13 @@ import Breadcrumb from "@/components/Breadcrumb"
 import ContactForm from "@/components/ContactForm"
 
 export const metadata: Metadata = {
-  title: "Nettoyage Gouttières Woluwe-Saint-Lambert — Villas & Appartements | 0451 05 33 70",
-  description: "Nettoyage gouttières à Woluwe-Saint-Lambert : villas résidentielles, immeubles, platanes des avenues. Devis gratuit, intervention 48h. 0451 05 33 70.",
+  title: { absolute: "Nettoyage de gouttières à Woluwe-Saint-Lambert, Bruxelles" },
+  description:
+    "Nettoyage gouttières à Woluwe-Saint-Lambert : villas résidentielles, immeubles, platanes des avenues. Devis gratuit, intervention 48h.",
   alternates: { canonical: "https://www.nettoyage-gouttieres-bruxelles.be/communes/woluwe-saint-lambert" },
   keywords: ["nettoyage gouttières Woluwe-Saint-Lambert", "débouchage gouttières Woluwe-Saint-Lambert", "gouttières bouchées Woluwe-Saint-Lambert", "prix nettoyage gouttières Woluwe-Saint-Lambert"],
   openGraph: {
-    title: "Nettoyage Gouttières Woluwe-Saint-Lambert — Devis Gratuit | 0451 05 33 70",
+    title: "Nettoyage Gouttières Woluwe-Saint-Lambert — Devis Gratuit",
     description: "Expert nettoyage gouttières à Woluwe-Saint-Lambert. Débouchage urgent, réparation, démoussage. Devis gratuit, intervention rapide.",
     url: "https://www.nettoyage-gouttieres-bruxelles.be/communes/woluwe-saint-lambert",
     type: "website",

@@ -6,12 +6,13 @@ import Breadcrumb from "@/components/Breadcrumb"
 import ContactForm from "@/components/ContactForm"
 
 export const metadata: Metadata = {
-  title: "Nettoyage Gouttières Forest — Maisons Mitoyennes & Cottages | 0451 05 33 70",
-  description: "Nettoyage gouttières à Forest : maisons mitoyennes brique rouge, zinc d'époque, parc de Forest. Devis gratuit, intervention 48h. 0451 05 33 70.",
+  title: { absolute: "Nettoyage de gouttières à Forest | Gouttières Bruxelles" },
+  description:
+    "Nettoyage gouttières à Forest : maisons mitoyennes brique rouge, zinc d'époque, parc de Forest. Devis gratuit, intervention 48h.",
   alternates: { canonical: "https://www.nettoyage-gouttieres-bruxelles.be/communes/forest" },
   keywords: ["nettoyage gouttières Forest", "débouchage gouttières Forest", "gouttières bouchées Forest", "prix nettoyage gouttières Forest"],
   openGraph: {
-    title: "Nettoyage Gouttières Forest — Devis Gratuit | 0451 05 33 70",
+    title: "Nettoyage Gouttières Forest — Devis Gratuit",
     description: "Expert nettoyage gouttières à Forest. Débouchage urgent, réparation, démoussage. Devis gratuit, intervention rapide.",
     url: "https://www.nettoyage-gouttieres-bruxelles.be/communes/forest",
     type: "website",

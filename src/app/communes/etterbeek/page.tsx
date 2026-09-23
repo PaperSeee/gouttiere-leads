@@ -6,12 +6,13 @@ import Breadcrumb from "@/components/Breadcrumb"
 import ContactForm from "@/components/ContactForm"
 
 export const metadata: Metadata = {
-  title: "Nettoyage Gouttières Etterbeek — Immeubles & Maisons | 0451 05 33 70",
-  description: "Nettoyage gouttières à Etterbeek : immeubles à appartements, maisons mitoyennes, toitures plates. Devis gratuit, intervention rapide. 0451 05 33 70.",
+  title: { absolute: "Nettoyage de gouttières à Etterbeek | Gouttières Bruxelles" },
+  description:
+    "Nettoyage gouttières à Etterbeek : immeubles à appartements, maisons mitoyennes, toitures plates. Devis gratuit, intervention rapide.",
   alternates: { canonical: "https://www.nettoyage-gouttieres-bruxelles.be/communes/etterbeek" },
   keywords: ["nettoyage gouttières Etterbeek", "débouchage gouttières Etterbeek", "gouttières bouchées Etterbeek", "prix nettoyage gouttières Etterbeek"],
   openGraph: {
-    title: "Nettoyage Gouttières Etterbeek — Devis Gratuit | 0451 05 33 70",
+    title: "Nettoyage Gouttières Etterbeek — Devis Gratuit",
     description: "Expert nettoyage gouttières à Etterbeek. Débouchage urgent, réparation, démoussage. Devis gratuit, intervention rapide.",
     url: "https://www.nettoyage-gouttieres-bruxelles.be/communes/etterbeek",
     type: "website",

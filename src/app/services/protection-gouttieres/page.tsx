@@ -5,9 +5,9 @@ import Breadcrumb from "@/components/Breadcrumb";
 import ContactForm from "@/components/ContactForm";
 
 export const metadata: Metadata = {
-  title: "Protection Anti-Feuilles Gouttières Bruxelles — Pose Grilles | Devis Gratuit",
+  title: { absolute: "Protection anti-feuilles à Bruxelles | Gouttières Bruxelles" },
   description:
-    "Pose de protections anti-feuilles pour gouttières à Bruxelles : grilles, brosses, filets. Espacez vos nettoyages. Devis gratuit. 0451 05 33 70.",
+    "Pose de protections anti-feuilles pour gouttières à Bruxelles : grilles, brosses, filets. Espacez vos nettoyages. Devis gratuit.",
   alternates: { canonical: "https://www.nettoyage-gouttieres-bruxelles.be/services/protection-gouttieres" },
   keywords: ["protection gouttière anti-feuilles Bruxelles", "pose grille gouttière Bruxelles", "installation brosse anti-feuilles gouttière", "filet anti-feuilles gouttière prix"],
   openGraph: {

@@ -4,9 +4,9 @@ import Breadcrumb from "@/components/Breadcrumb";
 import ContactForm from "@/components/ContactForm";
 
 export const metadata: Metadata = {
-  title: "Contact Nettoyage Gouttières Bruxelles — Devis Gratuit",
+  title: { absolute: "Contact et devis gratuit | Gouttières Bruxelles" },
   description:
-    "Contactez Nettoyage Gouttières Bruxelles pour votre devis gratuit. Téléphone : 0451 05 33 70. Réponse en moins de 2h en heures ouvrables.",
+    "Contactez Nettoyage Gouttières Bruxelles pour votre devis gratuit. Téléphone : Réponse en moins de 2h en heures ouvrables.",
   keywords: ["contact nettoyage gouttières Bruxelles", "devis gouttières Bruxelles gratuit", "0451 05 33 70", "demande devis gouttières"],
   alternates: { canonical: "https://www.nettoyage-gouttieres-bruxelles.be/contact" },
   openGraph: {

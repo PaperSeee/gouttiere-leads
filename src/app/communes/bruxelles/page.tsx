@@ -6,12 +6,13 @@ import Breadcrumb from "@/components/Breadcrumb"
 import ContactForm from "@/components/ContactForm"
 
 export const metadata: Metadata = {
-  title: "Nettoyage Gouttières Bruxelles-Ville — Pentagone & Immeubles | 0451 05 33 70",
-  description: "Nettoyage gouttières à Bruxelles-Ville : Pentagone, Laeken, Neder-Over-Heembeek, immeubles et maisons de maître. Devis gratuit. 0451 05 33 70.",
+  title: { absolute: "Nettoyage de gouttières à Bruxelles-Ville, Bruxelles" },
+  description:
+    "Nettoyage gouttières à Bruxelles-Ville : Pentagone, Laeken, Neder-Over-Heembeek, immeubles et maisons de maître. Devis gratuit.",
   alternates: { canonical: "https://www.nettoyage-gouttieres-bruxelles.be/communes/bruxelles" },
   keywords: ["nettoyage gouttières Bruxelles", "débouchage gouttières Bruxelles", "gouttières bouchées Bruxelles", "prix nettoyage gouttières Bruxelles"],
   openGraph: {
-    title: "Nettoyage Gouttières Bruxelles — Devis Gratuit | 0451 05 33 70",
+    title: "Nettoyage Gouttières Bruxelles — Devis Gratuit",
     description: "Expert nettoyage gouttières à Bruxelles. Débouchage urgent, réparation, démoussage. Devis gratuit, intervention rapide.",
     url: "https://www.nettoyage-gouttieres-bruxelles.be/communes/bruxelles",
     type: "website",
