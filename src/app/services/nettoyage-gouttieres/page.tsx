@@ -224,7 +224,7 @@ export default function NettoyageGouttieres() {
               <div className="bg-green-50 border border-green-200 rounded-2xl p-6">
                 <h3 className="font-semibold text-[#1A4731] mb-2">Pour aller plus loin</h3>
                 <ul className="space-y-1.5">
-                  <li><Link href="/blog/prix-nettoyage-gouttieres-bruxelles" className="text-sm text-[#F97316] font-semibold flex items-center gap-1">→ Combien coûte un nettoyage en 2026 ?</Link></li>
+                  <li><Link href="/tarifs" className="text-sm text-[#F97316] font-semibold flex items-center gap-1">→ Combien coûte un nettoyage en 2026 ?</Link></li>
                   <li><Link href="/blog/entretien-gouttieres-quand-faire" className="text-sm text-[#F97316] font-semibold flex items-center gap-1">→ À quelle fréquence nettoyer ?</Link></li>
                 </ul>
               </div>

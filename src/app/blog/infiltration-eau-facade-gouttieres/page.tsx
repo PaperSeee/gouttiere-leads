@@ -214,9 +214,9 @@ export default function BlogInfiltrationEauFacadeGouttieres() {
             {[
               { label: "Gouttière qui déborde", href: "/blog/gouttiere-qui-deborde-causes-solutions" },
               { label: "Quand nettoyer ses gouttières ?", href: "/blog/entretien-gouttieres-quand-faire" },
-              { label: "Prix nettoyage gouttières", href: "/blog/prix-nettoyage-gouttieres-bruxelles" },
+              { label: "Prix nettoyage gouttières", href: "/tarifs" },
               { label: "Préparer l'automne", href: "/blog/preparer-gouttieres-automne-bruxelles" },
-              { label: "Matériaux gouttières", href: "/blog/materiaux-gouttieres-zinc-pvc-aluminium" },
+              { label: "Matériaux gouttières", href: "/types-gouttieres" },
             ].map((link) => (
               <Link
                 key={link.href}

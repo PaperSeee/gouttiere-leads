@@ -233,7 +233,7 @@ export default function BlogDegatDesEauxGouttiereAssurance() {
               { label: "Infiltrations façade et gouttières", href: "/blog/infiltration-eau-facade-gouttieres" },
               { label: "Gouttière qui déborde", href: "/blog/gouttiere-qui-deborde-causes-solutions" },
               { label: "Quand nettoyer ses gouttières ?", href: "/blog/entretien-gouttieres-quand-faire" },
-              { label: "Prix nettoyage gouttières", href: "/blog/prix-nettoyage-gouttieres-bruxelles" },
+              { label: "Prix nettoyage gouttières", href: "/tarifs" },
               { label: "Protections anti-feuilles", href: "/blog/protection-gouttieres-anti-feuilles-bruxelles" },
             ].map((link) => (
               <Link

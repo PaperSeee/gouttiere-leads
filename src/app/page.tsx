@@ -404,10 +404,10 @@ export default function HomePage() {
               Grille complète des tarifs gouttières <ArrowRight size={16} />
             </Link>
             <Link
-              href="/blog/prix-nettoyage-gouttieres-bruxelles"
+              href="/services/nettoyage-gouttieres"
               className="inline-flex items-center justify-center gap-1 text-[#1A4731] font-semibold hover:text-[#F97316] transition-colors"
             >
-              Ce qui fait varier le prix d&apos;un nettoyage <ArrowRight size={16} />
+              Ce qui est inclus dans un nettoyage <ArrowRight size={16} />
             </Link>
           </div>
         </div>

@@ -251,12 +251,12 @@ export default function BlogPrixRemplacementGouttieresBruxelles2026Page() {
               <h3 className="font-bold text-gray-900 mb-3 text-sm">Articles connexes</h3>
               <ul className="space-y-3">
                 <li>
-                  <Link href="/blog/prix-nettoyage-gouttieres-bruxelles" className="text-sm text-[#1A4731] hover:underline flex items-center gap-1">
+                  <Link href="/tarifs" className="text-sm text-[#1A4731] hover:underline flex items-center gap-1">
                     <ArrowRight size={12} /> Prix nettoyage gouttières 2026
                   </Link>
                 </li>
                 <li>
-                  <Link href="/blog/materiaux-gouttieres-zinc-pvc-aluminium" className="text-sm text-[#1A4731] hover:underline flex items-center gap-1">
+                  <Link href="/types-gouttieres" className="text-sm text-[#1A4731] hover:underline flex items-center gap-1">
                     <ArrowRight size={12} /> Zinc, PVC ou Aluminium ?
                   </Link>
                 </li>

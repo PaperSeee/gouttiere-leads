@@ -234,7 +234,7 @@ export default function BlogProtectionGouttieresAntiFeuilles() {
               { label: "Quand nettoyer ses gouttières ?", href: "/blog/entretien-gouttieres-quand-faire" },
               { label: "Préparer l'automne", href: "/blog/preparer-gouttieres-automne-bruxelles" },
               { label: "Gouttière qui déborde", href: "/blog/gouttiere-qui-deborde-causes-solutions" },
-              { label: "Matériaux gouttières", href: "/blog/materiaux-gouttieres-zinc-pvc-aluminium" },
+              { label: "Matériaux gouttières", href: "/types-gouttieres" },
               { label: "Gouttières et gel en hiver", href: "/blog/gouttiere-gel-hiver-bruxelles-protection" },
             ].map((link) => (
               <Link

@@ -178,7 +178,7 @@ export default function ReparationGouttieres() {
                   Guide complet types de gouttières <ArrowRight size={14} />
                 </Link>
                 <p className="text-gray-600 text-sm mt-4 mb-2">Zinc, PVC, aluminium : quel matériau choisir lors d&apos;un remplacement ?</p>
-                <Link href="/blog/materiaux-gouttieres-zinc-pvc-aluminium" className="text-[#F97316] text-sm font-semibold flex items-center gap-1">
+                <Link href="/types-gouttieres" className="text-[#F97316] text-sm font-semibold flex items-center gap-1">
                   Comparatif zinc, PVC, aluminium <ArrowRight size={14} />
                 </Link>
               </div>

@@ -207,7 +207,7 @@ export default function BlogProduitsNettoyageGouttieresBruxellesPage() {
                   </Link>
                 </li>
                 <li>
-                  <Link href="/blog/materiaux-gouttieres-zinc-pvc-aluminium" className="text-sm text-[#1A4731] hover:underline flex items-center gap-1">
+                  <Link href="/types-gouttieres" className="text-sm text-[#1A4731] hover:underline flex items-center gap-1">
                     <ArrowRight size={12} /> Zinc, PVC ou Aluminium ?
                   </Link>
                 </li>

@@ -177,7 +177,7 @@ export default function BlogOragesEteGouttieres() {
 
             <h2>Combien ça coûte — et combien ça évite</h2>
             <p>
-              Un nettoyage professionnel de gouttières à Bruxelles coûte généralement <strong>entre 80 et 200 €</strong> selon la longueur et l&apos;accessibilité (détail dans notre <Link href="/blog/prix-nettoyage-gouttieres-bruxelles">guide des prix</Link>). Un dégât des eaux après débordement — plafonds, peintures, parquet — se chiffre vite en milliers d&apos;euros, avec le risque d&apos;un refus d&apos;indemnisation pour défaut d&apos;entretien. L&apos;arbitrage est vite fait.
+              Un nettoyage professionnel de gouttières à Bruxelles coûte généralement <strong>entre 80 et 200 €</strong> selon la longueur et l&apos;accessibilité (détail dans notre <Link href="/tarifs">guide des prix</Link>). Un dégât des eaux après débordement — plafonds, peintures, parquet — se chiffre vite en milliers d&apos;euros, avec le risque d&apos;un refus d&apos;indemnisation pour défaut d&apos;entretien. L&apos;arbitrage est vite fait.
             </p>
 
           </article>
@@ -208,7 +208,7 @@ export default function BlogOragesEteGouttieres() {
               { label: "Gouttière qui déborde : causes et solutions", href: "/blog/gouttiere-qui-deborde-causes-solutions" },
               { label: "Dégât des eaux et assurance", href: "/blog/degat-des-eaux-gouttiere-assurance-bruxelles" },
               { label: "Infiltrations façade et gouttières", href: "/blog/infiltration-eau-facade-gouttieres" },
-              { label: "Prix nettoyage gouttières", href: "/blog/prix-nettoyage-gouttieres-bruxelles" },
+              { label: "Prix nettoyage gouttières", href: "/tarifs" },
               { label: "Protections anti-feuilles", href: "/blog/protection-gouttieres-anti-feuilles-bruxelles" },
             ].map((link) => (
               <Link

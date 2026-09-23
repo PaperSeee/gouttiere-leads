@@ -177,6 +177,23 @@ export default function TypesGouttieres() {
             ))}
           </div>
 
+          <div className="mt-12">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">Quel matériau choisir selon votre maison à Bruxelles ?</h2>
+            <ul className="space-y-3">
+              {[
+                { maison: "Maison Art nouveau ou ancienne (avant 1970)", choix: "zinc, pour conserver le cachet architectural et la durabilité sur le long terme" },
+                { maison: "Construction récente ou rénovation standard", choix: "aluminium, pour le meilleur rapport qualité-prix" },
+                { maison: "Petit budget ou annexe (garage, abri)", choix: "PVC, économique et facile à poser" },
+                { maison: "Immeuble classé ou projet premium", choix: "cuivre ou zinc, incontournables" },
+              ].map((r) => (
+                <li key={r.maison} className="flex items-start gap-3 text-gray-700">
+                  <CheckCircle size={18} className="text-[#1A4731] flex-shrink-0 mt-0.5" />
+                  <span><strong>{r.maison}</strong> : {r.choix}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+
           <div className="mt-12 bg-[#1A4731] text-white rounded-2xl p-8">
             <h2 className="text-xl font-bold mb-3">Besoin d&apos;un conseil personnalisé ?</h2>
             <p className="text-gray-300 mb-4">

@@ -7,7 +7,7 @@ import FAQAccordion from "@/components/FAQAccordion";
 export const metadata: Metadata = {
   title: { absolute: "FAQ gouttières et toiture à Bruxelles : prix, délais" },
   description:
-    "Prix, fréquence, urgences, nettoyage de toiture : 15 réponses sur l'entretien des gouttières à Bruxelles. Devis gratuit au 0451 05 33 70.",
+    "Prix, fréquence, urgences, nettoyage de toiture : 16 réponses sur l'entretien des gouttières à Bruxelles. Devis gratuit au 0451 05 33 70.",
   keywords: ["FAQ gouttières Bruxelles", "questions nettoyage gouttières", "fréquence nettoyage gouttières", "nettoyage toiture Bruxelles", "prix gouttières Bruxelles"],
   alternates: { canonical: "https://www.nettoyage-gouttieres-bruxelles.be/faq" },
   openGraph: {
@@ -39,6 +39,10 @@ const faqs = [
   {
     question: "Quelle est la durée d'un nettoyage de gouttières ?",
     answer: "Pour une maison individuelle standard à Bruxelles, un nettoyage complet prend entre 1h30 et 3h selon la longueur des gouttières, le degré d'obstruction et l'accessibilité. Pour les immeubles et copropriétés, compter une journée complète. Nous vous donnons une estimation précise lors de la prise de rendez-vous.",
+  },
+  {
+    question: "Peut-on nettoyer ses gouttières soi-même ?",
+    answer: "Techniquement oui, si votre maison n'a qu'un niveau et que la gouttière est accessible depuis une échelle stable. Mais à Bruxelles, la plupart des maisons de rangée ont des toits hauts et des façades étroites qui compliquent l'accès en sécurité. Les risques : chute d'échelle, gouttière en zinc abîmée si on marche dessus, bouchons laissés dans les descentes et aucun diagnostic de l'état général. Pour un bâtiment de 2 étages ou plus, faites toujours appel à un professionnel équipé.",
   },
   {
     question: "Faut-il être présent lors de l'intervention ?",
@@ -112,7 +116,7 @@ export default function FAQ() {
             FAQ — Nettoyage Gouttières Bruxelles
           </h1>
           <p className="text-gray-300 text-lg max-w-2xl">
-            15 questions fréquentes sur le nettoyage, le débouchage et l&apos;entretien de vos gouttières à Bruxelles.
+            16 questions fréquentes sur le nettoyage, le débouchage et l&apos;entretien de vos gouttières à Bruxelles.
           </p>
         </div>
       </section>

@@ -461,7 +461,7 @@ export default function BlogEntretienGouttieresMomentPage() {
           <div className="flex flex-wrap gap-3">
             {[
               { label: "Nettoyage de gouttières", href: "/services/nettoyage-gouttieres" },
-              { label: "Prix nettoyage gouttières", href: "/blog/prix-nettoyage-gouttieres-bruxelles" },
+              { label: "Prix nettoyage gouttières", href: "/tarifs" },
               { label: "Préparer ses gouttières pour l'automne", href: "/blog/preparer-gouttieres-automne-bruxelles" },
               { label: "Gouttière qui déborde", href: "/blog/gouttiere-qui-deborde-causes-solutions" },
               { label: "Démoussage de toiture", href: "/services/demoussage-toiture" },

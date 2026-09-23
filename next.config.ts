@@ -16,6 +16,14 @@ const nextConfig: NextConfig = {
       { protocol: "https", hostname: "images.unsplash.com" },
     ],
   },
+  async redirects() {
+    return [
+      // Articles fusionnés dans la page qui couvre la même intention — 2026-09-23
+      { source: "/blog/prix-nettoyage-gouttieres-bruxelles", destination: "/tarifs", permanent: true },
+      { source: "/blog/materiaux-gouttieres-zinc-pvc-aluminium", destination: "/types-gouttieres", permanent: true },
+      { source: "/blog/nettoyage-gouttieres-bruxelles-guide-complet", destination: "/", permanent: true },
+    ];
+  },
   async headers() {
     return [
       {
