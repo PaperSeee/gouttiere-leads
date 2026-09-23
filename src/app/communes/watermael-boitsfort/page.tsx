@@ -1,6 +1,6 @@
 import type { Metadata } from "next"
 import Link from "next/link"
-import Image from "next/image"
+import GutterIllustration from "@/components/GutterIllustration"
 import { Phone, ArrowRight, MapPin, Leaf, Droplets, Wrench, AlertTriangle } from "lucide-react"
 import Breadcrumb from "@/components/Breadcrumb"
 import ContactForm from "@/components/ContactForm"
@@ -26,7 +26,7 @@ export default function WatermealBoitsfortPage() {
     mainEntity: [
       { "@type": "Question", name: "Combien de nettoyages par an à Watermael-Boitsfort ?", acceptedAnswer: { "@type": "Answer", text: "2 à 3 selon votre exposition. Les cités Le Logis et Floréal entourées d'arbres bénéficient d'un passage en mai, novembre et janvier-février (hêtres tardifs). On propose des abonnements annuels avec planning préétabli." } },
       { "@type": "Question", name: "Nos gouttières en cuivre des cités-jardins — comment les entretenir ?", acceptedAnswer: { "@type": "Answer", text: "Le cuivre se nettoie avec des outils non-abrasifs pour ne pas rayer la surface et préserver la patine naturelle. Si des fissures apparaissent, on répare par soudure à l'étain. Un cuivre bien entretenu peut durer 80 à 100 ans." } },
-      { "@type": "Question", name: "Les mousses dans nos gouttières sont particulièrement épaisses — pourquoi ?", acceptedAnswer: { "@type": "Answer", text: "L'humidité permanente et l'ombrage des grands arbres créent les conditions idéales. À Watermael-Boitsfort, sans traitement préventif, les mousses peuvent atteindre 5 à 10 cm d'épaisseur en 2–3 ans, réduisant la capacité d'écoulement de plus de 50%." } },
+      { "@type": "Question", name: "Les mousses dans nos gouttières sont particulièrement épaisses — pourquoi ?", acceptedAnswer: { "@type": "Answer", text: "L'humidité permanente et l'ombrage des grands arbres créent les conditions idéales. À Watermael-Boitsfort, sans traitement préventif, les mousses peuvent atteindre une couche épaisse en quelques années, qui réduit fortement la capacité d'écoulement." } },
       { "@type": "Question", name: "Proposez-vous des contrats d'entretien annuels ?", acceptedAnswer: { "@type": "Answer", text: "Oui, particulièrement recommandé ici. On établit un planning annuel de 2 à 3 visites avec tarif préférentiel. Vous n'avez plus à y penser — on vous contacte avant chaque intervention selon le calendrier convenu." } }
     ],
   }
@@ -107,14 +107,9 @@ export default function WatermealBoitsfortPage() {
               </div>
             </div>
             <div className="space-y-4">
-              <Image
-                src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=700&q=80"
-                alt="Nettoyage gouttières Watermael-Boitsfort cités-jardins"
-                width={600}
-                height={380}
-                className="rounded-2xl object-cover w-full h-64"
-                loading="lazy"
-              />
+              <div className="rounded-2xl bg-gradient-to-b from-sky-100 to-sky-50 p-3 ring-1 ring-sky-200/60">
+                <GutterIllustration className="h-64 w-full" />
+              </div>
               <div className="grid grid-cols-2 gap-3">
                 {[
                   { icon: <Leaf size={18} className="text-[#1A4731]" />, text: "Hêtres jusqu'en février", bg: "bg-green-50" },
@@ -168,7 +163,7 @@ export default function WatermealBoitsfortPage() {
             {[
               { q: "Combien de nettoyages par an à Watermael-Boitsfort ?", a: "2 à 3 selon votre exposition. Les cités Le Logis et Floréal entourées d'arbres bénéficient d'un passage en mai, novembre et janvier-février (hêtres tardifs). On propose des abonnements annuels avec planning préétabli." },
               { q: "Nos gouttières en cuivre des cités-jardins — comment les entretenir ?", a: "Le cuivre se nettoie avec des outils non-abrasifs pour ne pas rayer la surface et préserver la patine naturelle. Si des fissures apparaissent, on répare par soudure à l'étain. Un cuivre bien entretenu peut durer 80 à 100 ans." },
-              { q: "Les mousses dans nos gouttières sont particulièrement épaisses — pourquoi ?", a: "L'humidité permanente et l'ombrage des grands arbres créent les conditions idéales. À Watermael-Boitsfort, sans traitement préventif, les mousses peuvent atteindre 5 à 10 cm d'épaisseur en 2–3 ans, réduisant la capacité d'écoulement de plus de 50%." },
+              { q: "Les mousses dans nos gouttières sont particulièrement épaisses — pourquoi ?", a: "L'humidité permanente et l'ombrage des grands arbres créent les conditions idéales. À Watermael-Boitsfort, sans traitement préventif, les mousses peuvent atteindre une couche épaisse en quelques années, qui réduit fortement la capacité d'écoulement." },
               { q: "Proposez-vous des contrats d'entretien annuels ?", a: "Oui, particulièrement recommandé ici. On établit un planning annuel de 2 à 3 visites avec tarif préférentiel. Vous n'avez plus à y penser — on vous contacte avant chaque intervention selon le calendrier convenu." },
             ].map((faq, i) => (
               <div key={i} className="bg-white rounded-xl border border-gray-100 p-6">
@@ -196,7 +191,7 @@ export default function WatermealBoitsfortPage() {
             <h2 className="text-2xl font-bold text-gray-900 mb-2">Devis gratuit — Watermael-Boitsfort</h2>
             <p className="text-gray-500 text-sm">Réponse sous 2h · ou appelez le <a href="tel:0451053370" className="font-bold text-[#1A4731] hover:text-[#F97316]">0451 05 33 70</a></p>
           </div>
-          <div className="bg-gray-50 border border-gray-200 rounded-2xl p-6 sm:p-8"><ContactForm /></div>
+          <div className="bg-gray-50 border border-gray-200 rounded-2xl p-6 sm:p-8"><ContactForm defaultCommune="Watermael-Boitsfort" /></div>
         </div>
       </section>
 

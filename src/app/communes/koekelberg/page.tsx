@@ -1,6 +1,6 @@
 import type { Metadata } from "next"
 import Link from "next/link"
-import Image from "next/image"
+import GutterIllustration from "@/components/GutterIllustration"
 import { Phone, ArrowRight, MapPin, Leaf, Droplets, Wrench, AlertTriangle } from "lucide-react"
 import Breadcrumb from "@/components/Breadcrumb"
 import ContactForm from "@/components/ContactForm"
@@ -108,14 +108,9 @@ export default function KoekelbergPage() {
               </div>
             </div>
             <div className="space-y-4">
-              <Image
-                src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=700&q=80"
-                alt="Nettoyage gouttières Koekelberg Bruxelles Basilique"
-                width={600}
-                height={380}
-                className="rounded-2xl object-cover w-full h-64"
-                loading="lazy"
-              />
+              <div className="rounded-2xl bg-gradient-to-b from-sky-100 to-sky-50 p-3 ring-1 ring-sky-200/60">
+                <GutterIllustration className="h-64 w-full" />
+              </div>
               <div className="grid grid-cols-2 gap-3">
                 {[
                   { icon: <Wrench size={18} className="text-blue-600" />, text: "Zinc 1910–1935 historique", bg: "bg-blue-50" },
@@ -190,7 +185,7 @@ export default function KoekelbergPage() {
             <h2 className="text-2xl font-bold text-gray-900 mb-2">Devis gratuit — Koekelberg</h2>
             <p className="text-gray-500 text-sm">Réponse sous 2h · ou appelez le <a href="tel:0451053370" className="font-bold text-[#1A4731] hover:text-[#F97316]">0451 05 33 70</a></p>
           </div>
-          <div className="bg-gray-50 border border-gray-200 rounded-2xl p-6 sm:p-8"><ContactForm /></div>
+          <div className="bg-gray-50 border border-gray-200 rounded-2xl p-6 sm:p-8"><ContactForm defaultCommune="Koekelberg" /></div>
         </div>
       </section>
 

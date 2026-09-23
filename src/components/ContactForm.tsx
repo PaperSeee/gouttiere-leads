@@ -1,19 +1,29 @@
 "use client";
 
 import { useState } from "react";
-import { Send, CheckCircle, AlertCircle } from "lucide-react";
+import { Send, CheckCircle, AlertCircle, Phone } from "lucide-react";
 
 const communes = [
-  "Uccle",
-  "Ixelles",
-  "Woluwe-Saint-Pierre",
-  "Woluwe-Saint-Lambert",
+  "Anderlecht",
   "Auderghem",
-  "Watermael-Boitsfort",
+  "Berchem-Sainte-Agathe",
+  "Bruxelles-Ville",
   "Etterbeek",
+  "Evere",
   "Forest",
+  "Ganshoren",
+  "Ixelles",
+  "Jette",
+  "Koekelberg",
+  "Molenbeek-Saint-Jean",
+  "Saint-Gilles",
+  "Saint-Josse-ten-Noode",
   "Schaerbeek",
-  "Autre commune de Bruxelles",
+  "Uccle",
+  "Watermael-Boitsfort",
+  "Woluwe-Saint-Lambert",
+  "Woluwe-Saint-Pierre",
+  "Périphérie de Bruxelles",
 ];
 
 const interventionTypes = [
@@ -29,28 +39,28 @@ const interventionTypes = [
 interface ContactFormProps {
   defaultCommune?: string;
   defaultIntervention?: string;
+  /** Version courte (accueil, encarts) : message masqué, champs sur une colonne. */
+  compact?: boolean;
 }
 
-export default function ContactForm({
-  defaultCommune,
-  defaultIntervention,
-}: ContactFormProps) {
+const field =
+  "w-full rounded-xl border border-gray-300 bg-white px-3.5 py-3 text-gray-900 placeholder:text-gray-400 focus:border-[#1F7A55] focus:outline-none focus:ring-4 focus:ring-[#1F7A55]/15";
+const label = "mb-1.5 block text-sm font-bold text-gray-800";
+
+export default function ContactForm({ defaultCommune, defaultIntervention, compact = false }: ContactFormProps) {
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
   const [form, setForm] = useState({
-    prenom: "",
     nom: "",
     telephone: "",
     email: "",
-    commune: defaultCommune || "",
+    commune: defaultCommune && communes.includes(defaultCommune) ? defaultCommune : defaultCommune === "Bruxelles" ? "Bruxelles-Ville" : "",
     intervention: defaultIntervention || "",
     message: "",
   });
 
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>
-  ) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
@@ -62,7 +72,8 @@ export default function ContactForm({
       const res = await fetch("/api/lead", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(form),
+        // prenom reste envoyé (vide) pour garder le même format côté webhook.
+        body: JSON.stringify({ prenom: "", ...form }),
       });
       if (!res.ok) throw new Error("request_failed");
       setSubmitted(true);
@@ -75,19 +86,16 @@ export default function ContactForm({
 
   if (submitted) {
     return (
-      <div className="bg-green-50 border border-green-200 rounded-2xl p-8 text-center">
-        <CheckCircle size={48} className="text-green-500 mx-auto mb-4" />
-        <h3 className="text-xl font-bold text-green-800 mb-2">
-          Demande envoyée avec succès !
-        </h3>
-        <p className="text-green-700">
-          Nous avons bien reçu votre demande de devis. Un expert vous contactera
-          dans les 24 heures pour planifier l&apos;intervention.
+      <div className="rounded-2xl border border-green-200 bg-green-50 p-7 text-center">
+        <CheckCircle size={44} className="mx-auto mb-3 text-green-600" />
+        <h3 className="mb-2 text-xl font-bold text-green-900">Demande envoyée !</h3>
+        <p className="text-green-800">
+          Nous avons bien reçu votre demande. Un technicien vous rappelle pour fixer l&apos;intervention.
         </p>
-        <p className="mt-3 text-green-600 text-sm">
+        <p className="mt-3 text-sm text-green-700">
           Besoin urgent ?{" "}
           <a href="tel:0451053370" className="font-semibold underline">
-            Appelez-nous au 0451 05 33 70
+            Appelez le 0451 05 33 70
           </a>
         </p>
       </div>
@@ -96,132 +104,62 @@ export default function ContactForm({
 
   return (
     <form onSubmit={handleSubmit} className="space-y-4">
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+      <div className={compact ? "space-y-4" : "grid grid-cols-1 gap-4 sm:grid-cols-2"}>
         <div>
-          <label className="block text-sm font-medium text-gray-700 mb-1">
-            Prénom *
-          </label>
-          <input
-            type="text"
-            name="prenom"
-            required
-            value={form.prenom}
-            onChange={handleChange}
-            className="w-full border border-gray-300 rounded-lg px-3 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-brand focus:border-transparent"
-            placeholder="Jean"
-          />
+          <label htmlFor="cf-nom" className={label}>Votre nom *</label>
+          <input id="cf-nom" type="text" name="nom" required autoComplete="name" value={form.nom} onChange={handleChange} className={field} placeholder="Jean Dupont" />
         </div>
         <div>
-          <label className="block text-sm font-medium text-gray-700 mb-1">
-            Nom *
-          </label>
-          <input
-            type="text"
-            name="nom"
-            required
-            value={form.nom}
-            onChange={handleChange}
-            className="w-full border border-gray-300 rounded-lg px-3 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-brand focus:border-transparent"
-            placeholder="Dupont"
-          />
-        </div>
-      </div>
-
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-        <div>
-          <label className="block text-sm font-medium text-gray-700 mb-1">
-            Téléphone *
-          </label>
-          <input
-            type="tel"
-            name="telephone"
-            required
-            value={form.telephone}
-            onChange={handleChange}
-            className="w-full border border-gray-300 rounded-lg px-3 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-brand focus:border-transparent"
-            placeholder="+32 4XX XX XX XX"
-          />
+          <label htmlFor="cf-tel" className={label}>Téléphone *</label>
+          <input id="cf-tel" type="tel" name="telephone" required autoComplete="tel" value={form.telephone} onChange={handleChange} className={field} placeholder="04xx xx xx xx" />
         </div>
         <div>
-          <label className="block text-sm font-medium text-gray-700 mb-1">
-            Email
-          </label>
-          <input
-            type="email"
-            name="email"
-            value={form.email}
-            onChange={handleChange}
-            className="w-full border border-gray-300 rounded-lg px-3 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-brand focus:border-transparent"
-            placeholder="jean@exemple.be"
-          />
-        </div>
-      </div>
-
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-        <div>
-          <label className="block text-sm font-medium text-gray-700 mb-1">
-            Commune *
-          </label>
-          <select
-            name="commune"
-            required
-            value={form.commune}
-            onChange={handleChange}
-            className="w-full border border-gray-300 rounded-lg px-3 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-brand focus:border-transparent bg-white"
-          >
-            <option value="">Sélectionnez votre commune</option>
+          <label htmlFor="cf-commune" className={label}>Commune *</label>
+          <select id="cf-commune" name="commune" required value={form.commune} onChange={handleChange} className={field}>
+            <option value="" disabled>Sélectionnez votre commune</option>
             {communes.map((c) => (
-              <option key={c} value={c}>
-                {c}
-              </option>
+              <option key={c} value={c}>{c}</option>
             ))}
           </select>
         </div>
         <div>
-          <label className="block text-sm font-medium text-gray-700 mb-1">
-            Type d&apos;intervention *
-          </label>
-          <select
-            name="intervention"
-            required
-            value={form.intervention}
-            onChange={handleChange}
-            className="w-full border border-gray-300 rounded-lg px-3 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-brand focus:border-transparent bg-white"
-          >
-            <option value="">Sélectionnez le type</option>
+          <label htmlFor="cf-type" className={label}>Intervention *</label>
+          <select id="cf-type" name="intervention" required value={form.intervention} onChange={handleChange} className={field}>
+            <option value="" disabled>Type d&apos;intervention</option>
             {interventionTypes.map((t) => (
-              <option key={t} value={t}>
-                {t}
-              </option>
+              <option key={t} value={t}>{t}</option>
             ))}
           </select>
         </div>
+        {!compact && (
+          <div>
+            <label htmlFor="cf-email" className={label}>E-mail <span className="font-normal text-gray-500">(facultatif)</span></label>
+            <input id="cf-email" type="email" name="email" autoComplete="email" value={form.email} onChange={handleChange} className={field} placeholder="jean@exemple.be" />
+          </div>
+        )}
       </div>
 
-      <div>
-        <label className="block text-sm font-medium text-gray-700 mb-1">
-          Message (optionnel)
-        </label>
-        <textarea
-          name="message"
-          rows={3}
-          value={form.message}
-          onChange={handleChange}
-          className="w-full border border-gray-300 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-brand focus:border-transparent resize-none"
-          placeholder="Précisez la longueur approximative des gouttières, la hauteur du bâtiment, l'urgence..."
-        />
-      </div>
+      {!compact && (
+        <div>
+          <label htmlFor="cf-msg" className={label}>Message <span className="font-normal text-gray-500">(facultatif)</span></label>
+          <textarea
+            id="cf-msg"
+            name="message"
+            rows={3}
+            value={form.message}
+            onChange={handleChange}
+            className={field}
+            placeholder="Longueur approximative des gouttières, hauteur du bâtiment, urgence…"
+          />
+        </div>
+      )}
 
       {error && (
-        <div className="flex items-start gap-2 bg-red-50 border border-red-200 rounded-lg p-3 text-sm text-red-700">
-          <AlertCircle size={18} className="flex-shrink-0 mt-0.5" />
+        <div className="flex items-start gap-2 rounded-xl bg-red-50 p-3 text-sm text-red-800">
+          <AlertCircle size={18} className="mt-0.5 shrink-0" />
           <span>
-            Une erreur est survenue lors de l&apos;envoi de votre demande. Merci de réessayer ou
-            de nous appeler directement au{" "}
-            <a href="tel:0451053370" className="font-semibold underline">
-              0451 05 33 70
-            </a>
-            .
+            L&apos;envoi a échoué. Appelez-nous directement au{" "}
+            <a href="tel:0451053370" className="font-semibold underline">0451 05 33 70</a>.
           </span>
         </div>
       )}
@@ -229,23 +167,17 @@ export default function ContactForm({
       <button
         type="submit"
         disabled={loading}
-        className="w-full flex items-center justify-center gap-2 bg-accent hover:bg-accent-strong disabled:bg-orange-300 text-white font-bold py-3.5 px-6 rounded-lg transition-colors text-sm"
+        className="flex w-full items-center justify-center gap-2 rounded-xl bg-[#F97316] px-6 py-4 text-base font-extrabold text-white shadow-[0_10px_24px_-10px_rgba(249,115,22,0.8)] transition hover:bg-[#EA580C] disabled:opacity-60"
       >
-        {loading ? (
-          <>
-            <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin" />
-            Envoi en cours...
-          </>
-        ) : (
-          <>
-            <Send size={16} />
-            Demander mon devis gratuit
-          </>
-        )}
+        <Send size={18} />
+        {loading ? "Envoi en cours…" : "Recevoir mon devis gratuit"}
       </button>
-
-      <p className="text-xs text-gray-500 text-center">
-        * Champs obligatoires. Vos données sont utilisées uniquement pour vous contacter.
+      <p className="flex items-center justify-center gap-1.5 text-center text-xs font-semibold text-gray-500">
+        Gratuit et sans engagement · ou appelez le
+        <a href="tel:0451053370" className="inline-flex items-center gap-1 text-[#1F7A55] underline">
+          <Phone size={12} />
+          0451 05 33 70
+        </a>
       </p>
     </form>
   );

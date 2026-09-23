@@ -1,7 +1,6 @@
 import { ImageResponse } from "next/og";
 
-export const runtime = "edge";
-export const alt = "Nettoyage Gouttières Bruxelles — Devis Gratuit, Intervention 48h";
+export const alt = "Nettoyage Gouttières Bruxelles — devis gratuit, intervention sous 48h";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -10,105 +9,58 @@ export default function OgImage() {
     (
       <div
         style={{
-          background: "linear-gradient(135deg, #0f2419 0%, #1A4731 55%, #0f2419 100%)",
+          background: "#0f2e1f",
           width: "100%",
           height: "100%",
           display: "flex",
           flexDirection: "column",
-          alignItems: "center",
-          justifyContent: "center",
+          justifyContent: "space-between",
           fontFamily: "sans-serif",
+          padding: "72px 80px",
           position: "relative",
-          overflow: "hidden",
         }}
       >
-        {/* Background pattern */}
         <div
           style={{
             position: "absolute",
-            inset: 0,
-            backgroundImage: "radial-gradient(circle at 20% 80%, rgba(249,115,22,0.15) 0%, transparent 50%), radial-gradient(circle at 80% 20%, rgba(249,115,22,0.1) 0%, transparent 50%)",
+            right: "-160px",
+            top: "-160px",
+            width: "620px",
+            height: "620px",
+            borderRadius: "620px",
+            background: "radial-gradient(circle, rgba(31,122,85,0.55) 0%, rgba(31,122,85,0) 70%)",
+            display: "flex",
           }}
         />
-
-        {/* Logo icon */}
-        <div
-          style={{
-            display: "flex",
-            alignItems: "center",
-            gap: "20px",
-            marginBottom: "32px",
-          }}
-        >
-          <div
-            style={{
-              background: "#F97316",
-              borderRadius: "16px",
-              width: "72px",
-              height: "72px",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              fontSize: "38px",
-            }}
-          >
-            🏠
-          </div>
+        <div style={{ display: "flex", alignItems: "center", gap: "22px" }}>
+          <svg width="96" height="96" viewBox="0 0 48 48">
+            <rect width="48" height="48" rx="13" fill="#133826" />
+            <path d="M8 19.5 24 9l16 10.5" fill="none" stroke="#ffffff" strokeWidth="3.2" strokeLinecap="round" strokeLinejoin="round" />
+            <path d="M9.5 23h29v2.2a5 5 0 0 1-5 5h-19a5 5 0 0 1-5-5Z" fill="#7fd8a4" />
+            <path d="M31 30.2h4.4v5.6H31z" fill="#7fd8a4" />
+            <path d="M33.2 37.6s-2.6 2.9-2.6 4.4a2.6 2.6 0 0 0 5.2 0c0-1.5-2.6-4.4-2.6-4.4Z" fill="#f97316" />
+          </svg>
           <div style={{ display: "flex", flexDirection: "column" }}>
-            <span style={{ fontSize: "42px", fontWeight: 900, color: "white", lineHeight: 1 }}>
-              NETTOYAGE
-            </span>
-            <span style={{ fontSize: "42px", fontWeight: 900, color: "#F97316", lineHeight: 1 }}>
-              GOUTTIÈRES
-            </span>
+            <span style={{ fontSize: "46px", fontWeight: 800, color: "white" }}>Nettoyage Gouttières</span>
+            <span style={{ fontSize: "22px", fontWeight: 700, color: "#f97316", letterSpacing: "6px" }}>BRUXELLES</span>
           </div>
         </div>
 
-        {/* Main tagline */}
-        <div
-          style={{
-            fontSize: "34px",
-            fontWeight: 700,
-            color: "white",
-            textAlign: "center",
-            lineHeight: 1.3,
-            marginBottom: "28px",
-          }}
-        >
-          Expert gouttières à{" "}
-          <span style={{ color: "#F97316" }}>Bruxelles</span>
+        <div style={{ display: "flex", flexDirection: "column" }}>
+          <span style={{ fontSize: "62px", fontWeight: 800, color: "white", lineHeight: 1.1 }}>Des gouttières qui</span>
+          <span style={{ fontSize: "62px", fontWeight: 800, color: "#7fd8a4", lineHeight: 1.1 }}>ne débordent plus.</span>
+          <span style={{ fontSize: "28px", color: "#d1fae5", marginTop: "22px" }}>
+            Nettoyage · débouchage · réparation · démoussage — 19 communes
+          </span>
         </div>
 
-        {/* Pills */}
-        <div style={{ display: "flex", gap: "16px" }}>
-          {["Devis gratuit", "Intervention 48h", "Urgences 7j/7"].map((text) => (
-            <div
-              key={text}
-              style={{
-                background: "rgba(255,255,255,0.12)",
-                border: "1px solid rgba(255,255,255,0.2)",
-                borderRadius: "50px",
-                padding: "10px 24px",
-                fontSize: "20px",
-                color: "white",
-                fontWeight: 600,
-              }}
-            >
-              {text}
-            </div>
-          ))}
-        </div>
-
-        {/* Phone */}
-        <div
-          style={{
-            marginTop: "32px",
-            fontSize: "26px",
-            fontWeight: 800,
-            color: "#F97316",
-          }}
-        >
-          📞 0451 05 33 70
+        <div style={{ display: "flex", gap: "18px" }}>
+          <div style={{ display: "flex", background: "#f97316", color: "white", borderRadius: "18px", padding: "16px 30px", fontSize: "30px", fontWeight: 800 }}>
+            Devis gratuit
+          </div>
+          <div style={{ display: "flex", border: "2px solid rgba(255,255,255,0.3)", color: "white", borderRadius: "18px", padding: "16px 30px", fontSize: "30px", fontWeight: 700 }}>
+            Intervention sous 48h
+          </div>
         </div>
       </div>
     ),

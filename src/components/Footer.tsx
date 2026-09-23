@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Logo from "./Logo";
 import { Phone, Mail, MapPin, Shield, Award, Clock, Droplets } from "lucide-react";
 
 const communes = [
@@ -59,10 +60,9 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* NAP */}
           <div>
-            <h3 className="text-white font-bold text-lg mb-4">
-              Nettoyage Gouttières{" "}
-              <span className="text-accent">Bruxelles</span>
-            </h3>
+            <div className="mb-4">
+              <Logo tone="light" />
+            </div>
             <p className="text-sm mb-4 text-gray-400">
               Vos gouttières nettoyées avant l&apos;automne — Devis gratuit, intervention
               rapide, garantie satisfaction.

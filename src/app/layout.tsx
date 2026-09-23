@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Sora } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -10,6 +10,13 @@ const inter = Inter({
   subsets: ["latin"],
   display: "swap",
   variable: "--font-inter",
+});
+
+const sora = Sora({
+  subsets: ["latin", "latin-ext"],
+  display: "swap",
+  variable: "--font-sora",
+  weight: ["600", "700", "800"],
 });
 
 const DOMAIN = "https://www.nettoyage-gouttieres-bruxelles.be";
@@ -135,9 +142,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="fr" className={`${inter.variable} ${inter.className} h-full`}>
+    <html lang="fr" className={`${inter.variable} ${sora.variable} ${inter.className} h-full`}>
       <head>
-        <meta name="theme-color" content="#1A4731" />
+        <meta name="theme-color" content="#133826" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
         <meta name="apple-mobile-web-app-title" content="Gouttières BXL" />
@@ -158,25 +165,25 @@ export default function RootLayout({
       </head>
       <body className="min-h-full flex flex-col bg-white text-gray-900 antialiased">
         <Header />
-        <main className="flex-1 pb-6 sm:pb-0">{children}</main>
+        <main className="flex-1 pb-20 sm:pb-0">{children}</main>
         <Footer />
-        {/* Floating action buttons - mobile only */}
-        <div className="fixed bottom-6 right-4 z-40 sm:hidden flex flex-col gap-3">
+        {/* Barre d'action mobile : appel, WhatsApp, devis */}
+        <div className="fixed inset-x-0 bottom-0 z-40 grid grid-cols-[1fr_auto_1fr] gap-2 border-t border-gray-200 bg-white/95 p-2 pb-[max(0.5rem,env(safe-area-inset-bottom))] shadow-[0_-6px_18px_rgba(19,56,38,0.12)] backdrop-blur sm:hidden">
+          <a href="tel:0451053370" className="flex items-center justify-center gap-1.5 rounded-xl bg-[#F97316] py-3 text-[13px] font-extrabold text-white">
+            <Phone size={16} />
+            Appeler
+          </a>
           <a
             href="https://wa.me/32477234187"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center justify-center w-14 h-14 bg-[#25D366] hover:bg-green-500 text-white rounded-full shadow-2xl transition-colors"
+            className="flex w-12 items-center justify-center rounded-xl bg-[#25D366] text-white"
             aria-label="WhatsApp"
           >
-            <MessageCircle size={26} />
+            <MessageCircle size={22} />
           </a>
-          <a
-            href="tel:0451053370"
-            className="flex items-center justify-center w-14 h-14 bg-accent hover:bg-accent-strong text-white rounded-full shadow-2xl transition-colors"
-            aria-label="Appeler"
-          >
-            <Phone size={26} />
+          <a href="/contact" className="flex items-center justify-center rounded-xl border-2 border-[#133826] py-3 text-[13px] font-extrabold text-[#133826]">
+            Devis gratuit
           </a>
         </div>
       </body>

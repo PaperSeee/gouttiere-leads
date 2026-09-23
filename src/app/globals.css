@@ -51,6 +51,7 @@
   --text-muted: var(--color-zinc-600);
 
   --font-sans: var(--font-inter, "Inter"), Arial, Helvetica, sans-serif;
+  --font-display-stack: var(--font-sora, "Sora"), var(--font-inter, "Inter"), Arial, sans-serif;
 }
 
 /* Enregistre les alias sémantiques comme utilitaires Tailwind v4
@@ -73,4 +74,17 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-sans);
+}
+
+/* Titres : Sora (géométrique, plus de caractère que le texte courant). */
+@theme inline {
+  --font-display: var(--font-display-stack);
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-display-stack);
+  letter-spacing: -0.015em;
+  text-wrap: balance;
 }

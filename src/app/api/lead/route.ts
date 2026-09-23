@@ -24,7 +24,8 @@ export async function POST(req: Request) {
   const commune = String(data.commune ?? "").trim();
   const intervention = String(data.intervention ?? "").trim();
 
-  if (!prenom || !nom || !telephone || !commune || !intervention) {
+  // Un seul champ « nom » dans le formulaire depuis la refonte : prénom facultatif.
+  if (!(prenom || nom) || !telephone || !commune || !intervention) {
     return NextResponse.json({ ok: false, error: "missing_fields" }, { status: 400 });
   }
 

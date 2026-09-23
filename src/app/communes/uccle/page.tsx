@@ -1,6 +1,6 @@
 import type { Metadata } from "next"
 import Link from "next/link"
-import Image from "next/image"
+import GutterIllustration from "@/components/GutterIllustration"
 import { Phone, ArrowRight, CheckCircle, MapPin, Leaf, Droplets, Wrench, AlertTriangle, Euro } from "lucide-react"
 import Breadcrumb from "@/components/Breadcrumb"
 import ContactForm from "@/components/ContactForm"
@@ -125,14 +125,9 @@ export default function UcclePage() {
               </div>
             </div>
             <div className="space-y-4">
-              <Image
-                src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=700&q=80"
-                alt="Nettoyage gouttières villa Uccle"
-                width={600}
-                height={380}
-                className="rounded-2xl object-cover w-full h-64"
-                loading="lazy"
-              />
+              <div className="rounded-2xl bg-gradient-to-b from-sky-100 to-sky-50 p-3 ring-1 ring-sky-200/60">
+                <GutterIllustration className="h-64 w-full" />
+              </div>
               {/* 4 problèmes fréquents */}
               <div className="grid grid-cols-2 gap-3">
                 {[
@@ -266,7 +261,7 @@ export default function UcclePage() {
             </p>
           </div>
           <div className="bg-gray-50 border border-gray-200 rounded-2xl p-6 sm:p-8">
-            <ContactForm />
+            <ContactForm defaultCommune="Uccle" />
           </div>
         </div>
       </section>

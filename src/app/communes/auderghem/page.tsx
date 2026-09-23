@@ -1,6 +1,6 @@
 import type { Metadata } from "next"
 import Link from "next/link"
-import Image from "next/image"
+import GutterIllustration from "@/components/GutterIllustration"
 import { Phone, ArrowRight, MapPin, Leaf, Droplets, Wrench, AlertTriangle } from "lucide-react"
 import Breadcrumb from "@/components/Breadcrumb"
 import ContactForm from "@/components/ContactForm"
@@ -108,19 +108,14 @@ export default function AuderghemPage() {
                 <p>
                   La forte humidité ambiante liée à la forêt et aux ruisseaux de la commune favorise
                   les <strong>mousses tenaces</strong> sur les toitures. Sans traitement préventif, elles
-                  migrent vers les gouttières et réduisent leur capacité d&apos;écoulement de 30 à 50%.
+                  migrent vers les gouttières et réduisent fortement leur capacité d&apos;écoulement.
                 </p>
               </div>
             </div>
             <div className="space-y-4">
-              <Image
-                src="https://images.unsplash.com/photo-1563906267088-b029e7101114?w=700&q=80"
-                alt="Gouttière entretien Auderghem Bruxelles"
-                width={600}
-                height={380}
-                className="rounded-2xl object-cover w-full h-64"
-                loading="lazy"
-              />
+              <div className="rounded-2xl bg-gradient-to-b from-sky-100 to-sky-50 p-3 ring-1 ring-sky-200/60">
+                <GutterIllustration className="h-64 w-full" />
+              </div>
               <div className="grid grid-cols-2 gap-3">
                 {[
                   { icon: <Leaf size={18} className="text-[#1A4731]" />, text: "Hêtres tardifs du Soignes", bg: "bg-green-50" },
@@ -197,7 +192,7 @@ export default function AuderghemPage() {
             <p className="text-gray-500 text-sm">Réponse sous 2h · ou appelez le <a href="tel:0451053370" className="font-bold text-[#1A4731] hover:text-[#F97316]">0451 05 33 70</a></p>
           </div>
           <div className="bg-gray-50 border border-gray-200 rounded-2xl p-6 sm:p-8">
-            <ContactForm />
+            <ContactForm defaultCommune="Auderghem" />
           </div>
         </div>
       </section>

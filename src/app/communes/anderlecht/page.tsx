@@ -1,6 +1,6 @@
 import type { Metadata } from "next"
 import Link from "next/link"
-import Image from "next/image"
+import GutterIllustration from "@/components/GutterIllustration"
 import { Phone, ArrowRight, MapPin, Leaf, Droplets, Wrench, AlertTriangle } from "lucide-react"
 import Breadcrumb from "@/components/Breadcrumb"
 import ContactForm from "@/components/ContactForm"
@@ -24,7 +24,7 @@ export default function AnderlechtPage() {
     "@context": "https://schema.org",
     "@type": "FAQPage",
     mainEntity: [
-      { "@type": "Question", name: "L'humidité du canal affecte-t-elle vraiment les gouttières ?", acceptedAnswer: { "@type": "Answer", text: "Oui, significativement. Les propriétés dans un rayon de 300 mètres du canal de Charleroi connaissent une croissance des mousses 30 à 40% plus rapide. Un démoussage préventif annuel est recommandé plutôt qu'un nettoyage curatif tous les 3 ans." } },
+      { "@type": "Question", name: "L'humidité du canal affecte-t-elle vraiment les gouttières ?", acceptedAnswer: { "@type": "Answer", text: "Oui, significativement. Les propriétés dans un rayon de 300 mètres du canal de Charleroi connaissent une croissance des mousses nettement plus rapide. Un démoussage préventif annuel est recommandé plutôt qu'un nettoyage curatif tous les 3 ans." } },
       { "@type": "Question", name: "Le zinc de nos maisons des années 40 est-il encore récupérable ?", acceptedAnswer: { "@type": "Answer", text: "Dans la moitié des cas, oui. Un zinc des années 40 bien conservé peut encore durer 15 à 20 ans si les profils sont droits et les soudures tiennent. On fait un diagnostic gratuit avant toute décision de remplacement." } },
       { "@type": "Question", name: "Intervenez-vous dans les quartiers Cureghem et Neerpede ?", acceptedAnswer: { "@type": "Answer", text: "Oui, dans toute la commune d'Anderlecht sans exception. On connaît bien les particularités d'accès du bâti ouvrier local — cours étroites, passages latéraux, mitoyenneté complexe." } },
       { "@type": "Question", name: "Peut-on coordonner le nettoyage avec les voisins mitoyens ?", acceptedAnswer: { "@type": "Answer", text: "Absolument, c'est même conseillé. On propose un tarif réduit pour les interventions groupées sur deux maisons mitoyennes le même jour. Cela permet aussi de traiter les descentes partagées en une seule fois." } }
@@ -108,14 +108,9 @@ export default function AnderlechtPage() {
               </div>
             </div>
             <div className="space-y-4">
-              <Image
-                src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=700&q=80"
-                alt="Nettoyage gouttières Anderlecht Bruxelles canal"
-                width={600}
-                height={380}
-                className="rounded-2xl object-cover w-full h-64"
-                loading="lazy"
-              />
+              <div className="rounded-2xl bg-gradient-to-b from-sky-100 to-sky-50 p-3 ring-1 ring-sky-200/60">
+                <GutterIllustration className="h-64 w-full" />
+              </div>
               <div className="grid grid-cols-2 gap-3">
                 {[
                   { icon: <Droplets size={18} className="text-[#1A4731]" />, text: "Humidité canal de Charleroi", bg: "bg-green-50" },
@@ -167,7 +162,7 @@ export default function AnderlechtPage() {
           <h2 className="text-2xl font-bold text-gray-900 mb-8">Questions fréquentes — Anderlecht</h2>
           <div className="space-y-5">
             {[
-              { q: "L'humidité du canal affecte-t-elle vraiment les gouttières ?", a: "Oui, significativement. Les propriétés dans un rayon de 300 mètres du canal de Charleroi connaissent une croissance des mousses 30 à 40% plus rapide. Un démoussage préventif annuel est recommandé plutôt qu'un nettoyage curatif tous les 3 ans." },
+              { q: "L'humidité du canal affecte-t-elle vraiment les gouttières ?", a: "Oui, significativement. Les propriétés dans un rayon de 300 mètres du canal de Charleroi connaissent une croissance des mousses nettement plus rapide. Un démoussage préventif annuel est recommandé plutôt qu'un nettoyage curatif tous les 3 ans." },
               { q: "Le zinc de nos maisons des années 40 est-il encore récupérable ?", a: "Dans la moitié des cas, oui. Un zinc des années 40 bien conservé peut encore durer 15 à 20 ans si les profils sont droits et les soudures tiennent. On fait un diagnostic gratuit avant toute décision de remplacement." },
               { q: "Intervenez-vous dans les quartiers Cureghem et Neerpede ?", a: "Oui, dans toute la commune d'Anderlecht sans exception. On connaît bien les particularités d'accès du bâti ouvrier local — cours étroites, passages latéraux, mitoyenneté complexe." },
               { q: "Peut-on coordonner le nettoyage avec les voisins mitoyens ?", a: "Absolument, c'est même conseillé. On propose un tarif réduit pour les interventions groupées sur deux maisons mitoyennes le même jour. Cela permet aussi de traiter les descentes partagées en une seule fois." },
@@ -190,7 +185,7 @@ export default function AnderlechtPage() {
             <h2 className="text-2xl font-bold text-gray-900 mb-2">Devis gratuit — Anderlecht</h2>
             <p className="text-gray-500 text-sm">Réponse sous 2h · ou appelez le <a href="tel:0451053370" className="font-bold text-[#1A4731] hover:text-[#F97316]">0451 05 33 70</a></p>
           </div>
-          <div className="bg-gray-50 border border-gray-200 rounded-2xl p-6 sm:p-8"><ContactForm /></div>
+          <div className="bg-gray-50 border border-gray-200 rounded-2xl p-6 sm:p-8"><ContactForm defaultCommune="Anderlecht" /></div>
         </div>
       </section>
 

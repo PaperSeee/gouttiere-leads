@@ -1,6 +1,6 @@
 import type { Metadata } from "next"
 import Link from "next/link"
-import Image from "next/image"
+import GutterIllustration from "@/components/GutterIllustration"
 import { Phone, ArrowRight, MapPin, Leaf, Droplets, Wrench, AlertTriangle } from "lucide-react"
 import Breadcrumb from "@/components/Breadcrumb"
 import ContactForm from "@/components/ContactForm"
@@ -109,14 +109,9 @@ export default function SaintJossePage() {
               </div>
             </div>
             <div className="space-y-4">
-              <Image
-                src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=700&q=80"
-                alt="Nettoyage gouttières Saint-Josse-ten-Noode immeuble Bruxelles"
-                width={600}
-                height={380}
-                className="rounded-2xl object-cover w-full h-64"
-                loading="lazy"
-              />
+              <div className="rounded-2xl bg-gradient-to-b from-sky-100 to-sky-50 p-3 ring-1 ring-sky-200/60">
+                <GutterIllustration className="h-64 w-full" />
+              </div>
               <div className="grid grid-cols-2 gap-3">
                 {[
                   { icon: <AlertTriangle size={18} className="text-red-500" />, text: "Toitures plates gargouilles", bg: "bg-red-50" },
@@ -191,7 +186,7 @@ export default function SaintJossePage() {
             <h2 className="text-2xl font-bold text-gray-900 mb-2">Devis gratuit — Saint-Josse-ten-Noode</h2>
             <p className="text-gray-500 text-sm">Réponse sous 2h · ou appelez le <a href="tel:0451053370" className="font-bold text-[#1A4731] hover:text-[#F97316]">0451 05 33 70</a></p>
           </div>
-          <div className="bg-gray-50 border border-gray-200 rounded-2xl p-6 sm:p-8"><ContactForm /></div>
+          <div className="bg-gray-50 border border-gray-200 rounded-2xl p-6 sm:p-8"><ContactForm defaultCommune="Saint-Josse-ten-Noode" /></div>
         </div>
       </section>
 
