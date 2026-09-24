@@ -22,7 +22,7 @@ import { getRecentPosts } from "@/lib/blog";
 import GutterIllustration from "@/components/GutterIllustration";
 
 export const metadata: Metadata = {
-  title: { absolute: "Nettoyage de gouttières à Bruxelles | Gouttières Bruxelles" },
+  title: { absolute: "Nettoyage gouttières Bruxelles dès 80€ | Devis gratuit" },
   description:
     "Nettoyage de gouttières à Bruxelles dès 80€ : feuilles, mousse et descentes pluviales. Intervention sous 48h, urgences 7j/7. Devis gratuit.",
   keywords: ["nettoyage gouttières Bruxelles", "débouchage gouttières urgence Bruxelles", "réparation gouttières Bruxelles", "démoussage toiture Bruxelles", "gouttières bouchées intervention rapide"],
