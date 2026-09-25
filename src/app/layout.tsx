@@ -1,3 +1,4 @@
+import ClarityTag from "@/components/Clarity";
 import type { Metadata, Viewport } from "next";
 import { Inter, Sora } from "next/font/google";
 import "./globals.css";
@@ -186,7 +187,7 @@ export default function RootLayout({
             Devis gratuit
           </a>
         </div>
-      </body>
+      <ClarityTag id="yntj10qd01" /></body>
     </html>
   );
 }
