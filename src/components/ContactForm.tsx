@@ -73,9 +73,10 @@ export default function ContactForm({ defaultCommune, defaultIntervention, compa
         method: "POST",
         headers: { "Content-Type": "application/json" },
         // prenom reste envoyé (vide) pour garder le même format côté webhook.
-        body: JSON.stringify({ prenom: "", ...form }),
+        body: JSON.stringify({ prenom: "", ...form, page: window.location.pathname }),
       });
       if (!res.ok) throw new Error("request_failed");
+      (window as unknown as { gtag?: (...a: unknown[]) => void }).gtag?.("event", "form_submit", { page_path: window.location.pathname });
       setSubmitted(true);
     } catch {
       setError(true);

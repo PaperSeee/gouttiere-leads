@@ -1,63 +1,71 @@
 import { NextResponse } from "next/server";
 
-interface LeadPayload {
-  prenom?: unknown;
-  nom?: unknown;
-  telephone?: unknown;
-  email?: unknown;
-  commune?: unknown;
-  intervention?: unknown;
-  message?: unknown;
-}
+// Demandes du site → scénario Make « Webhooks → Google Sheets » (le même pour
+// tous les sites leadgen). Format commun : site | name | phone | commune |
+// message | page | receivedAt. Accepte le JSON (formulaire React) ET un envoi
+// de formulaire HTML classique (fonctionne même sans JavaScript).
+const SITE = "nettoyage-gouttieres-bruxelles.be";
+const MAKE_WEBHOOK = "https://hook.eu1.make.com/9rl39iles3anfazn0o322yorpku1wwwj";
+const SUCCESS_PATH = "/";
+const ERROR_PATH = "/";
 
 export async function POST(req: Request) {
-  let data: LeadPayload;
+  const isJson = (req.headers.get("content-type") || "").includes("application/json");
+  const reply = (ok: boolean, error: string | null, status: number) =>
+    isJson
+      ? NextResponse.json(ok ? { ok: true } : { ok: false, error }, { status })
+      : NextResponse.redirect(new URL(ok ? SUCCESS_PATH : ERROR_PATH, req.url), 303);
+
+  const d: Record<string, string> = {};
   try {
-    data = await req.json();
+    if (isJson) {
+      const j = (await req.json()) as Record<string, unknown>;
+      for (const [k, v] of Object.entries(j ?? {})) d[k] = String(v ?? "").trim();
+    } else {
+      const fd = await req.formData();
+      fd.forEach((v, k) => { if (typeof v === "string") d[k] = v.trim(); });
+    }
   } catch {
-    return NextResponse.json({ ok: false, error: "invalid_json" }, { status: 400 });
+    return reply(false, "invalid_body", 400);
   }
 
-  const prenom = String(data.prenom ?? "").trim();
-  const nom = String(data.nom ?? "").trim();
-  const telephone = String(data.telephone ?? "").trim();
-  const commune = String(data.commune ?? "").trim();
-  const intervention = String(data.intervention ?? "").trim();
+  // Anti-spam : champ caché « website » rempli = robot → on fait semblant.
+  if (d.website) return reply(true, null, 200);
 
-  // Un seul champ « nom » dans le formulaire depuis la refonte : prénom facultatif.
-  if (!(prenom || nom) || !telephone || !commune || !intervention) {
-    return NextResponse.json({ ok: false, error: "missing_fields" }, { status: 400 });
-  }
+  const pick = (...keys: string[]) => keys.map((k) => d[k] || "").find(Boolean) || "";
+  const name = pick("name") || [d.prenom, d.nom].filter(Boolean).join(" ");
+  const phone = pick("phone", "telephone", "tel");
+  const email = pick("email");
+  if (!phone && !email) return reply(false, "missing_fields", 400);
+
+  const service = pick("intervention", "service", "type");
+  const extras = [service && `Demande : ${service}`, email && `E-mail : ${email}`, d.adresse && `Adresse : ${d.adresse}`].filter(Boolean).join(" · ");
+  let page = d.page || "";
+  if (!page) { try { page = new URL(req.headers.get("referer") || "").pathname; } catch { /* inconnu */ } }
 
   const payload = {
-    site: "nettoyage-gouttieres-bruxelles.be",
-    prenom,
-    nom,
-    telephone,
-    email: String(data.email ?? "").trim(),
-    commune,
-    intervention,
-    message: String(data.message ?? "").trim(),
+    site: SITE,
+    name,
+    phone,
+    commune: pick("commune", "adresse"),
+    message: [d.message, extras].filter(Boolean).join(" — "),
+    page,
     receivedAt: new Date().toISOString(),
+    email,
+    service,
   };
 
-  const webhook = process.env.WEBHOOK_URL;
-  if (!webhook) {
-    console.error("WEBHOOK_URL is not configured; lead lost:", JSON.stringify(payload));
-    return NextResponse.json({ ok: false, error: "not_configured" }, { status: 500 });
-  }
-
   try {
-    const res = await fetch(webhook, {
+    const res = await fetch(process.env.WEBHOOK_URL || MAKE_WEBHOOK, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(payload),
       signal: AbortSignal.timeout(8000),
     });
     if (!res.ok) throw new Error(`webhook_status_${res.status}`);
-    return NextResponse.json({ ok: true });
+    return reply(true, null, 200);
   } catch (err) {
     console.error("Lead webhook failed:", err, JSON.stringify(payload));
-    return NextResponse.json({ ok: false, error: "webhook_failed" }, { status: 502 });
+    return reply(false, "webhook_failed", 502);
   }
 }
