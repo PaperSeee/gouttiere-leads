@@ -4,11 +4,13 @@ import GutterIllustration from "@/components/GutterIllustration"
 import { Phone, ArrowRight, MapPin, Leaf, Droplets, Wrench, AlertTriangle } from "lucide-react"
 import Breadcrumb from "@/components/Breadcrumb"
 import ContactForm from "@/components/ContactForm"
+import { CommuneConseils, NeighborCommunes } from "@/components/CommuneLocal"
+import { localFaqs, localFaqSchema } from "@/lib/communes"
 
 export const metadata: Metadata = {
   title: { absolute: "Nettoyage de gouttières à Woluwe-Saint-Pierre, Bruxelles" },
   description:
-    "Nettoyage gouttières à Woluwe-Saint-Pierre : grandes villas, parcs Malou & Parmentier, érables et marronniers. Devis gratuit.",
+    "Nettoyage de gouttières à Woluwe-Saint-Pierre dès 80 € : grandes villas, parc de Woluwe, Stockel. Devis gratuit, sous 48h.",
   alternates: { canonical: "https://www.nettoyage-gouttieres-bruxelles.be/communes/woluwe-saint-pierre" },
   keywords: ["nettoyage gouttières Woluwe-Saint-Pierre", "débouchage gouttières Woluwe-Saint-Pierre", "gouttières bouchées Woluwe-Saint-Pierre", "prix nettoyage gouttières Woluwe-Saint-Pierre"],
   openGraph: {
@@ -28,13 +30,14 @@ export default function WoluweStPierrePage() {
       { "@type": "Question", name: "Les samares d'érables causent-elles vraiment des bouchons ?", acceptedAnswer: { "@type": "Answer", text: "Oui, c'est l'un des débris végétaux les plus problématiques. Les samares sont assez petites pour pénétrer dans les descentes et y former des bouchons compacts. Elles tombent au printemps puis en automne — deux passages annuels sont recommandés pour les propriétés proches des parcs." } },
       { "@type": "Question", name: "Notre villa a plus de 80 mètres de gouttières. Quel tarif ?", acceptedAnswer: { "@type": "Answer", text: "Pour les grandes propriétés, on établit un devis sur mesure tenant compte du linéaire exact, de la hauteur, des matériaux et de l'accessibilité. Deux techniciens pour les grandes interventions. Appelez pour un diagnostic gratuit." } },
       { "@type": "Question", name: "Intervenez-vous avenue de Tervueren et avenue de Broqueville ?", acceptedAnswer: { "@type": "Answer", text: "Oui, dans toute Woluwe-Saint-Pierre, y compris les grandes avenues résidentielles. On connaît bien les propriétés de cette commune et leurs spécificités d'accès." } },
-      { "@type": "Question", name: "Faut-il aussi nettoyer au printemps à WSP ?", acceptedAnswer: { "@type": "Answer", text: "Pour les propriétés proches des parcs, oui. Les marronniers du parc Malou et les érables libèrent des pollens, bourgeons et graines en mai qui s'accumulent dans les gouttières. Un passage de printemps complète utilement le nettoyage automnal." } }
+      { "@type": "Question", name: "Faut-il aussi nettoyer au printemps à WSP ?", acceptedAnswer: { "@type": "Answer", text: "Pour les propriétés proches des parcs, oui. Les marronniers du parc de Woluwe et les érables libèrent des pollens, bourgeons et graines en mai qui s'accumulent dans les gouttières. Un passage de printemps complète utilement le nettoyage automnal." } },
+      ...localFaqSchema("woluwe-saint-pierre"),
     ],
   }
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-      <Breadcrumb items={[{ label: "Accueil", href: "/" }, { label: "Communes", href: "/" }, { label: "Woluwe-Saint-Pierre" }]} />
+      <Breadcrumb items={[{ label: "Accueil", href: "/" }, { label: "Communes", href: "/communes" }, { label: "Woluwe-Saint-Pierre" }]} />
 
       <section className="bg-white border-b border-gray-100 py-12 lg:py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -42,14 +45,14 @@ export default function WoluweStPierrePage() {
             <div className="flex-1">
               <div className="flex items-center gap-2 text-sm text-gray-500 mb-4">
                 <MapPin size={14} className="text-[#F97316]" />
-                <span>Woluwe-Saint-Pierre · Parcs Malou & Parmentier</span>
+                <span>Woluwe-Saint-Pierre · Parcs de Woluwe & Parmentier</span>
               </div>
               <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-gray-900 leading-tight mb-5">
                 Nettoyage Gouttières<br /><span className="text-[#1A4731]">Woluwe-Saint-Pierre</span>
               </h1>
               <p className="text-gray-600 text-lg leading-relaxed mb-7 max-w-xl">
                 L&apos;une des communes les plus résidentielles de Bruxelles avec de grandes villas.
-                Les chênes du parc Malou et les érables du parc Parmentier imposent un entretien
+                Les chênes du parc de Woluwe et les érables du parc Parmentier imposent un entretien
                 régulier des gouttières.
               </p>
               <div className="flex flex-wrap gap-3">
@@ -65,7 +68,7 @@ export default function WoluweStPierrePage() {
               <p className="text-green-300 text-xs font-semibold uppercase tracking-wide mb-4">WSP en chiffres</p>
               <div className="space-y-4">
                 {[
-                  { val: "Parcs Malou", label: "& Parmentier", detail: "chênes, érables, marronniers" },
+                  { val: "Woluwe", label: "& parc Parmentier", detail: "chênes, érables, marronniers" },
                   { val: "60–100m", label: "de gouttières", detail: "sur les plus grandes villas" },
                   { val: "2×/an", label: "minimum conseillé", detail: "printemps + automne" },
                 ].map((s) => (
@@ -95,13 +98,13 @@ export default function WoluweStPierrePage() {
                   volumes considérables de déchets végétaux.
                 </p>
                 <p>
-                  La proximité du <strong>parc Malou et du parc Parmentier</strong>, avec leurs
+                  La proximité du <strong>parc de Woluwe et du parc Parmentier</strong>, avec leurs
                   chênes centenaires, érables et marronniers, génère des apports de feuilles et
                   de graines ailées en automne. Les samares d&apos;érables sont particulièrement
                   problématiques car elles forment des bouchons compacts dans les descentes.
                 </p>
                 <p>
-                  Le <strong>bois de Woluwe</strong> qui prolonge la Forêt de Soignes impose,
+                  La <strong>Forêt de Soignes</strong>, toute proche au sud-est, impose,
                   comme à Auderghem, un nettoyage post-hivernal pour les propriétés les plus
                   exposées aux hêtres tardifs.
                 </p>
@@ -116,7 +119,7 @@ export default function WoluweStPierrePage() {
                   { icon: <Leaf size={18} className="text-[#1A4731]" />, text: "Samares d'érables", bg: "bg-green-50" },
                   { icon: <Wrench size={18} className="text-blue-600" />, text: "Grands linéaires 60–100m", bg: "bg-blue-50" },
                   { icon: <Droplets size={18} className="text-[#F97316]" />, text: "Bois Woluwe & hêtres", bg: "bg-orange-50" },
-                  { icon: <AlertTriangle size={18} className="text-red-500" />, text: "Marronniers parc Malou", bg: "bg-red-50" },
+                  { icon: <AlertTriangle size={18} className="text-red-500" />, text: "Marronniers des parcs", bg: "bg-red-50" },
                 ].map((p) => (
                   <div key={p.text} className={`${p.bg} rounded-xl p-3 flex items-center gap-2`}>
                     {p.icon}<span className="text-sm font-medium text-gray-800">{p.text}</span>
@@ -165,7 +168,8 @@ export default function WoluweStPierrePage() {
               { q: "Les samares d'érables causent-elles vraiment des bouchons ?", a: "Oui, c'est l'un des débris végétaux les plus problématiques. Les samares sont assez petites pour pénétrer dans les descentes et y former des bouchons compacts. Elles tombent au printemps puis en automne — deux passages annuels sont recommandés pour les propriétés proches des parcs." },
               { q: "Notre villa a plus de 80 mètres de gouttières. Quel tarif ?", a: "Pour les grandes propriétés, on établit un devis sur mesure tenant compte du linéaire exact, de la hauteur, des matériaux et de l'accessibilité. Deux techniciens pour les grandes interventions. Appelez pour un diagnostic gratuit." },
               { q: "Intervenez-vous avenue de Tervueren et avenue de Broqueville ?", a: "Oui, dans toute Woluwe-Saint-Pierre, y compris les grandes avenues résidentielles. On connaît bien les propriétés de cette commune et leurs spécificités d'accès." },
-              { q: "Faut-il aussi nettoyer au printemps à WSP ?", a: "Pour les propriétés proches des parcs, oui. Les marronniers du parc Malou et les érables libèrent des pollens, bourgeons et graines en mai qui s'accumulent dans les gouttières. Un passage de printemps complète utilement le nettoyage automnal." },
+              { q: "Faut-il aussi nettoyer au printemps à WSP ?", a: "Pour les propriétés proches des parcs, oui. Les marronniers du parc de Woluwe et les érables libèrent des pollens, bourgeons et graines en mai qui s'accumulent dans les gouttières. Un passage de printemps complète utilement le nettoyage automnal." },
+              ...localFaqs("woluwe-saint-pierre"),
             ].map((faq, i) => (
               <div key={i} className="bg-white rounded-xl border border-gray-100 p-6">
                 <p className="font-bold text-gray-900 mb-2 flex items-start gap-2">
@@ -178,6 +182,8 @@ export default function WoluweStPierrePage() {
           </div>
         </div>
       </section>
+
+      <CommuneConseils slug="woluwe-saint-pierre" />
 
       <section id="devis" className="py-14 bg-white">
         <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -198,19 +204,7 @@ export default function WoluweStPierrePage() {
           </p>
         </div>
       </section>
-
-      <section className="py-8 bg-gray-50 border-t border-gray-100">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <p className="text-sm font-semibold text-gray-500 mb-3">Communes voisines desservies</p>
-          <div className="flex flex-wrap gap-2">
-            {[{ name: "Auderghem", slug: "auderghem" }, { name: "Woluwe-Saint-Lambert", slug: "woluwe-saint-lambert" }, { name: "Watermael-Boitsfort", slug: "watermael-boitsfort" }].map((c) => (
-              <Link key={c.slug} href={`/communes/${c.slug}`} className="inline-flex items-center gap-1.5 bg-white border border-gray-200 hover:border-[#1A4731] hover:text-[#1A4731] text-gray-600 rounded-lg px-3 py-2 text-sm font-medium transition-colors">
-                <MapPin size={12} className="text-[#F97316]" />{c.name}
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
+      <NeighborCommunes slug="woluwe-saint-pierre" />
     </>
   )
 }

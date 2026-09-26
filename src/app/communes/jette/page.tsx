@@ -4,11 +4,13 @@ import GutterIllustration from "@/components/GutterIllustration"
 import { Phone, ArrowRight, MapPin, Leaf, Droplets, Wrench, AlertTriangle } from "lucide-react"
 import Breadcrumb from "@/components/Breadcrumb"
 import ContactForm from "@/components/ContactForm"
+import { CommuneConseils, NeighborCommunes } from "@/components/CommuneLocal"
+import { localFaqs, localFaqSchema } from "@/lib/communes"
 
 export const metadata: Metadata = {
   title: { absolute: "Nettoyage de gouttières à Jette | Gouttières Bruxelles" },
   description:
-    "Nettoyage gouttières à Jette : villas résidentielles, bouleau et charme, maisons des années 50–70. Devis gratuit, intervention rapide.",
+    "Nettoyage de gouttières à Jette dès 80 € : villas des années 50–70, bouleaux, bordure du Laerbeek. Devis gratuit, intervention sous 48h.",
   alternates: { canonical: "https://www.nettoyage-gouttieres-bruxelles.be/communes/jette" },
   keywords: ["nettoyage gouttières Jette", "débouchage gouttières Jette", "gouttières bouchées Jette", "prix nettoyage gouttières Jette"],
   openGraph: {
@@ -27,14 +29,15 @@ export default function JettePage() {
     mainEntity: [
       { "@type": "Question", name: "Les chatons de bouleaux sont-ils vraiment problématiques ?", acceptedAnswer: { "@type": "Answer", text: "Oui, c'est l'une des surprises printanières pour les propriétaires de Jette. Les chatons tombent en avril-mai et sont suffisamment petits pour pénétrer dans les descentes, où ils se collent et forment des bouchons denses. Un nettoyage de mai complète utilement le nettoyage automnal pour les jardins avec bouleaux." } },
       { "@type": "Question", name: "Nos gouttières en aluminium des années 60 tiennent-elles encore ?", acceptedAnswer: { "@type": "Answer", text: "L'aluminium des années 60 est en fin de vie standard (25–30 ans) depuis longtemps. Si elles fuient ou si les crochets cèdent, un remplacement s'impose. Si elles sont simplement encrassées et bien fixées, un nettoyage + démoussage peut encore prolonger leur vie de 3–5 ans." } },
-      { "@type": "Question", name: "Le vent venant du parc de Laeken apporte-t-il des feuilles chez nous ?", acceptedAnswer: { "@type": "Answer", text: "Oui, les vents d'ouest en automne transportent des feuilles des grands arbres du domaine royal vers les quartiers nord de Jette. Les propriétés les plus exposées peuvent recevoir des volumes bien supérieurs à ce que leurs propres jardins génèrent." } },
-      { "@type": "Question", name: "Intervenez-vous dans tous les quartiers de Jette ?", acceptedAnswer: { "@type": "Answer", text: "Oui, dans toute la commune — quartier des Quatre-Vents, Miroir, Karreveld, et vers Ganshoren. On connaît bien les configurations des maisons quatre façades de Jette et leurs spécificités d'accès." } }
+      { "@type": "Question", name: "Les grands espaces verts voisins apportent-ils des feuilles chez nous ?", acceptedAnswer: { "@type": "Answer", text: "Oui. Les maisons en bordure du bois du Laerbeek ou du parc Roi Baudouin reçoivent, par coups de vent, des feuilles qui ne viennent pas de leur propre jardin. Ce sont elles qui justifient le plus souvent un second passage." } },
+      { "@type": "Question", name: "Intervenez-vous dans tous les quartiers de Jette ?", acceptedAnswer: { "@type": "Answer", text: "Oui, dans toute la commune — autour de la place Cardinal Mercier, près du bois du Laerbeek et vers Ganshoren. On connaît bien les configurations des maisons quatre façades de Jette et leurs spécificités d'accès." } },
+      ...localFaqSchema("jette"),
     ],
   }
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-      <Breadcrumb items={[{ label: "Accueil", href: "/" }, { label: "Communes", href: "/" }, { label: "Jette" }]} />
+      <Breadcrumb items={[{ label: "Accueil", href: "/" }, { label: "Communes", href: "/communes" }, { label: "Jette" }]} />
 
       <section className="bg-white border-b border-gray-100 py-12 lg:py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -102,10 +105,10 @@ export default function JettePage() {
                   denses et compacts.
                 </p>
                 <p>
-                  La commune jouxte le domaine royal de <strong>Laeken</strong>, ce qui signifie
-                  que les quartiers nord de Jette bénéficient d&apos;une végétation abondante mais
-                  sont aussi exposés aux apports de feuilles des grands arbres du domaine lors
-                  des vents d&apos;automne.
+                  Jette compte aussi de grands espaces verts, comme le <strong>bois du Laerbeek</strong>
+                  et le parc Roi Baudouin : les maisons qui les bordent reçoivent, lors des coups
+                  de vent d&apos;automne, bien plus de feuilles que leurs propres jardins n&apos;en
+                  produisent.
                 </p>
               </div>
             </div>
@@ -118,7 +121,7 @@ export default function JettePage() {
                   { icon: <Leaf size={18} className="text-[#1A4731]" />, text: "Bouleaux & chatons printaniers", bg: "bg-green-50" },
                   { icon: <Wrench size={18} className="text-blue-600" />, text: "Aluminium années 50–70", bg: "bg-blue-50" },
                   { icon: <Droplets size={18} className="text-[#F97316]" />, text: "Villas 4 façades jardins", bg: "bg-orange-50" },
-                  { icon: <AlertTriangle size={18} className="text-red-500" />, text: "Voisinage parc de Laeken", bg: "bg-red-50" },
+                  { icon: <AlertTriangle size={18} className="text-red-500" />, text: "Bordure du Laerbeek", bg: "bg-red-50" },
                 ].map((p) => (
                   <div key={p.text} className={`${p.bg} rounded-xl p-3 flex items-center gap-2`}>
                     {p.icon}<span className="text-sm font-medium text-gray-800">{p.text}</span>
@@ -166,8 +169,9 @@ export default function JettePage() {
             {[
               { q: "Les chatons de bouleaux sont-ils vraiment problématiques ?", a: "Oui, c'est l'une des surprises printanières pour les propriétaires de Jette. Les chatons tombent en avril-mai et sont suffisamment petits pour pénétrer dans les descentes, où ils se collent et forment des bouchons denses. Un nettoyage de mai complète utilement le nettoyage automnal pour les jardins avec bouleaux." },
               { q: "Nos gouttières en aluminium des années 60 tiennent-elles encore ?", a: "L'aluminium des années 60 est en fin de vie standard (25–30 ans) depuis longtemps. Si elles fuient ou si les crochets cèdent, un remplacement s'impose. Si elles sont simplement encrassées et bien fixées, un nettoyage + démoussage peut encore prolonger leur vie de 3–5 ans." },
-              { q: "Le vent venant du parc de Laeken apporte-t-il des feuilles chez nous ?", a: "Oui, les vents d'ouest en automne transportent des feuilles des grands arbres du domaine royal vers les quartiers nord de Jette. Les propriétés les plus exposées peuvent recevoir des volumes bien supérieurs à ce que leurs propres jardins génèrent." },
-              { q: "Intervenez-vous dans tous les quartiers de Jette ?", a: "Oui, dans toute la commune — quartier des Quatre-Vents, Miroir, Karreveld, et vers Ganshoren. On connaît bien les configurations des maisons quatre façades de Jette et leurs spécificités d'accès." },
+              { q: "Les grands espaces verts voisins apportent-ils des feuilles chez nous ?", a: "Oui. Les maisons en bordure du bois du Laerbeek ou du parc Roi Baudouin reçoivent, par coups de vent, des feuilles qui ne viennent pas de leur propre jardin. Ce sont elles qui justifient le plus souvent un second passage." },
+              { q: "Intervenez-vous dans tous les quartiers de Jette ?", a: "Oui, dans toute la commune — autour de la place Cardinal Mercier, près du bois du Laerbeek et vers Ganshoren. On connaît bien les configurations des maisons quatre façades de Jette et leurs spécificités d'accès." },
+              ...localFaqs("jette"),
             ].map((faq, i) => (
               <div key={i} className="bg-white rounded-xl border border-gray-100 p-6">
                 <p className="font-bold text-gray-900 mb-2 flex items-start gap-2">
@@ -180,6 +184,8 @@ export default function JettePage() {
           </div>
         </div>
       </section>
+
+      <CommuneConseils slug="jette" />
 
       <section id="devis" className="py-14 bg-white">
         <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -200,19 +206,7 @@ export default function JettePage() {
           </p>
         </div>
       </section>
-
-      <section className="py-8 bg-gray-50 border-t border-gray-100">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <p className="text-sm font-semibold text-gray-500 mb-3">Communes voisines desservies</p>
-          <div className="flex flex-wrap gap-2">
-            {[{ name: "Ganshoren", slug: "ganshoren" }, { name: "Koekelberg", slug: "koekelberg" }, { name: "Berchem-Sainte-Agathe", slug: "berchem-sainte-agathe" }].map((c) => (
-              <Link key={c.slug} href={`/communes/${c.slug}`} className="inline-flex items-center gap-1.5 bg-white border border-gray-200 hover:border-[#1A4731] hover:text-[#1A4731] text-gray-600 rounded-lg px-3 py-2 text-sm font-medium transition-colors">
-                <MapPin size={12} className="text-[#F97316]" />{c.name}
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
+      <NeighborCommunes slug="jette" />
     </>
   )
 }

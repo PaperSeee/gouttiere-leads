@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Phone, CheckCircle, ArrowRight, AlertTriangle, Clock } from "lucide-react";
 import Breadcrumb from "@/components/Breadcrumb";
 import ContactForm from "@/components/ContactForm";
+import ServiceGuides from "@/components/ServiceGuides";
 
 const communes = [
   { name: "Anderlecht", slug: "anderlecht" },
@@ -29,13 +30,13 @@ const communes = [
 export const metadata: Metadata = {
   title: { absolute: "Débouchage de gouttières à Bruxelles | Gouttières Bruxelles" },
   description:
-    "Débouchage urgent de gouttières et descentes pluviales à Bruxelles. Intervention 7j/7, haute pression. Débordement actif ? Devis gratuit.",
+    "Débouchage de gouttières et descentes pluviales à Bruxelles : 120–160 € en semaine, 7j/7 en urgence. Test d'écoulement inclus, devis gratuit.",
   alternates: { canonical: "https://www.nettoyage-gouttieres-bruxelles.be/services/debouchage-gouttieres" },
   keywords: ["débouchage gouttières urgence Bruxelles", "gouttières bouchées Bruxelles", "débouchage descentes pluviales", "urgence gouttières 7j/7 Bruxelles"],
   openGraph: {
     type: "website",
     title: "Débouchage Gouttières Bruxelles — Urgence 7j/7",
-    description: "Débouchage urgent gouttières et descentes pluviales à Bruxelles. Intervention haute pression 7j/7. Appelez le",
+    description: "Débouchage urgent gouttières et descentes pluviales à Bruxelles. Intervention 7j/7. Appelez le 0451 05 33 70.",
     url: "https://www.nettoyage-gouttieres-bruxelles.be/services/debouchage-gouttieres",
     images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "Débouchage gouttières urgence Bruxelles" }],
   },
@@ -69,7 +70,7 @@ export default function DebouchageGouttieres() {
       <Breadcrumb
         items={[
           { label: "Accueil", href: "/" },
-          { label: "Services", href: "/" },
+          { label: "Services", href: "/services" },
           { label: "Débouchage urgence" },
         ]}
       />
@@ -220,6 +221,9 @@ export default function DebouchageGouttieres() {
           </div>
         </div>
       </section>
+
+      <ServiceGuides service="debouchage-gouttieres" title="Guides : débordement et descente bouchée" />
+
 
       <section id="devis" className="py-16 bg-gray-50">
         <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">

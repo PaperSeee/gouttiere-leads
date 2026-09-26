@@ -52,14 +52,6 @@ export default function BlogProduitsNettoyageGouttieresBruxellesPage() {
         keywords: "produits nettoyage gouttières, démoussant gouttière bruxelles, traitement anti-algues gouttière",
         articleSection: "Conseils",
       },
-      {
-        "@type": "BreadcrumbList",
-        itemListElement: [
-          { "@type": "ListItem", position: 1, name: "Accueil", item: DOMAIN },
-          { "@type": "ListItem", position: 2, name: "Blog", item: `${DOMAIN}/blog` },
-          { "@type": "ListItem", position: 3, name: "Produits nettoyage gouttières", item: `${DOMAIN}/blog/${SLUG}` },
-        ],
-      },
     ],
   }
 
@@ -200,7 +192,7 @@ export default function BlogProduitsNettoyageGouttieresBruxellesPage() {
             </div>
 
             <div className="border border-gray-200 rounded-2xl p-5">
-              <h3 className="font-bold text-gray-900 mb-3 text-sm">Articles connexes</h3>
+              <h3 className="font-bold text-gray-900 mb-3 text-sm">À lire aussi</h3>
               <ul className="space-y-3">
                 <li>
                   <Link href="/blog/entretien-gouttieres-quand-faire" className="text-sm text-[#1A4731] hover:underline flex items-center gap-1">
@@ -215,6 +207,11 @@ export default function BlogProduitsNettoyageGouttieresBruxellesPage() {
                 <li>
                   <Link href="/blog/gouttiere-qui-deborde-causes-solutions" className="text-sm text-[#1A4731] hover:underline flex items-center gap-1">
                     <ArrowRight size={12} /> Gouttière qui déborde : causes
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/blog/nettoyer-gouttieres-soi-meme" className="text-sm text-[#1A4731] hover:underline flex items-center gap-1">
+                    <ArrowRight size={12} /> Nettoyer ses gouttières soi-même
                   </Link>
                 </li>
               </ul>

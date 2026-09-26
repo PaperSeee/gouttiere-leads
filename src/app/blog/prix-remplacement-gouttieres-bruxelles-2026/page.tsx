@@ -52,14 +52,6 @@ export default function BlogPrixRemplacementGouttieresBruxelles2026Page() {
         keywords: "prix remplacement gouttières bruxelles, coût changement gouttière, tarif pose gouttière belgique",
         articleSection: "Tarifs",
       },
-      {
-        "@type": "BreadcrumbList",
-        itemListElement: [
-          { "@type": "ListItem", position: 1, name: "Accueil", item: DOMAIN },
-          { "@type": "ListItem", position: 2, name: "Blog", item: `${DOMAIN}/blog` },
-          { "@type": "ListItem", position: 3, name: "Prix remplacement gouttières 2026", item: `${DOMAIN}/blog/${SLUG}` },
-        ],
-      },
     ],
   }
 
@@ -158,7 +150,7 @@ export default function BlogPrixRemplacementGouttieresBruxelles2026Page() {
 
             <p className="text-sm text-gray-500 italic">Prix TTC, main d&apos;œuvre et dépose des anciennes gouttières incluses. Hors travaux de réparation de fascia ou charpente.</p>
 
-            <h2>Exemples de devis réels à Bruxelles</h2>
+            <h2>Exemples de budget à Bruxelles</h2>
 
             <h3>Maison mitoyenne type à Ixelles (longueur totale : 25 ml)</h3>
             <div className="not-prose bg-gray-50 border border-gray-200 rounded-xl p-5 my-4">
@@ -249,7 +241,7 @@ export default function BlogPrixRemplacementGouttieresBruxelles2026Page() {
             </div>
 
             <div className="border border-gray-200 rounded-2xl p-5">
-              <h3 className="font-bold text-gray-900 mb-3 text-sm">Articles connexes</h3>
+              <h3 className="font-bold text-gray-900 mb-3 text-sm">À lire aussi</h3>
               <ul className="space-y-3">
                 <li>
                   <Link href="/tarifs" className="text-sm text-[#1A4731] hover:underline flex items-center gap-1">
@@ -264,6 +256,11 @@ export default function BlogPrixRemplacementGouttieresBruxelles2026Page() {
                 <li>
                   <Link href="/blog/infiltration-eau-facade-gouttieres" className="text-sm text-[#1A4731] hover:underline flex items-center gap-1">
                     <ArrowRight size={12} /> Infiltrations d&apos;eau et gouttières
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/blog/gouttiere-qui-fuit" className="text-sm text-[#1A4731] hover:underline flex items-center gap-1">
+                    <ArrowRight size={12} /> Gouttière qui fuit : réparer ou remplacer ?
                   </Link>
                 </li>
               </ul>

@@ -3,11 +3,12 @@ import Link from "next/link";
 import { Phone, CheckCircle, ArrowRight, Droplets, Clock, Shield } from "lucide-react";
 import Breadcrumb from "@/components/Breadcrumb";
 import ContactForm from "@/components/ContactForm";
+import ServiceGuides from "@/components/ServiceGuides";
 
 export const metadata: Metadata = {
   title: { absolute: "Nettoyage complet de gouttières à Bruxelles" },
   description:
-    "Service de nettoyage de gouttières à Bruxelles. Évacuation feuilles, mousses, sédiments. Nettoyage gouttières + descentes pluviales. Devis gratuit.",
+    "Nettoyage de gouttières à Bruxelles dès 80 € : feuilles, mousses et boues retirées, descentes pluviales comprises, écoulement testé. Devis gratuit.",
   alternates: { canonical: "https://www.nettoyage-gouttieres-bruxelles.be/services/nettoyage-gouttieres" },
   keywords: ["nettoyage gouttières Bruxelles professionnel", "nettoyage gouttières prix Bruxelles", "entretien gouttières maison Bruxelles", "nettoyage haute pression gouttières"],
   openGraph: {
@@ -69,7 +70,7 @@ export default function NettoyageGouttieres() {
       <Breadcrumb
         items={[
           { label: "Accueil", href: "/" },
-          { label: "Services", href: "/" },
+          { label: "Services", href: "/services" },
           { label: "Nettoyage gouttières" },
         ]}
       />
@@ -234,6 +235,8 @@ export default function NettoyageGouttieres() {
       </section>
 
       {/* Devis */}
+      <ServiceGuides service="nettoyage-gouttieres" title="Guides sur le nettoyage des gouttières" />
+
       <section id="devis" className="py-16 bg-gray-50">
         <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl font-bold text-center text-gray-900 mb-8">Demandez votre devis gratuit</h2>

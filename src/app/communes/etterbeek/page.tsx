@@ -4,11 +4,13 @@ import GutterIllustration from "@/components/GutterIllustration"
 import { Phone, ArrowRight, MapPin, Leaf, Droplets, Wrench, AlertTriangle } from "lucide-react"
 import Breadcrumb from "@/components/Breadcrumb"
 import ContactForm from "@/components/ContactForm"
+import { CommuneConseils, NeighborCommunes } from "@/components/CommuneLocal"
+import { localFaqs, localFaqSchema } from "@/lib/communes"
 
 export const metadata: Metadata = {
   title: { absolute: "Nettoyage de gouttières à Etterbeek | Gouttières Bruxelles" },
   description:
-    "Nettoyage gouttières à Etterbeek : immeubles à appartements, maisons mitoyennes, toitures plates. Devis gratuit, intervention rapide.",
+    "Nettoyage de gouttières à Etterbeek dès 80 € : maisons divisées en appartements, toits plats, copropriétés. Devis gratuit, intervention sous 48h.",
   alternates: { canonical: "https://www.nettoyage-gouttieres-bruxelles.be/communes/etterbeek" },
   keywords: ["nettoyage gouttières Etterbeek", "débouchage gouttières Etterbeek", "gouttières bouchées Etterbeek", "prix nettoyage gouttières Etterbeek"],
   openGraph: {
@@ -28,13 +30,14 @@ export default function EtterbeekPage() {
       { "@type": "Question", name: "Pouvez-vous intervenir dans un immeuble de 4 étages sans échafaudage ?", acceptedAnswer: { "@type": "Answer", text: "Oui, pour la grande majorité des immeubles d'Etterbeek (R+3 ou R+4). Notre matériel comprend des échelles professionnelles homologuées et des perches télescopiques. Au-delà de 15m, une nacelle peut être nécessaire — on vous prévient à l'avance." } },
       { "@type": "Question", name: "La copropriété doit-elle donner son accord ?", acceptedAnswer: { "@type": "Answer", text: "Pour les parties communes, l'accord du syndic ou d'une majorité de copropriétaires est requis. On fournit un devis formel pour l'AG. Pour les terrasses privatives, seul le propriétaire doit valider." } },
       { "@type": "Question", name: "Ma toiture plate déborde lors de fortes pluies. Que faire ?", acceptedAnswer: { "@type": "Answer", text: "C'est typiquement un siphon bouché ou une évacuation obstruée. On le débouche en urgence et vérifie que la pente de la membrane est correcte. Si l'eau stagne régulièrement, c'est souvent un problème de pente à corriger." } },
-      { "@type": "Question", name: "Un nettoyage par an suffit-il à Etterbeek ?", acceptedAnswer: { "@type": "Answer", text: "En général oui. Le centre d'Etterbeek a peu d'arbres. Un nettoyage en octobre-novembre suffit. Si votre rue est bordée de tilleuls ou platanes, un second passage au printemps peut être utile." } }
+      { "@type": "Question", name: "Un nettoyage par an suffit-il à Etterbeek ?", acceptedAnswer: { "@type": "Answer", text: "En général oui. Le centre d'Etterbeek a peu d'arbres. Un nettoyage en octobre-novembre suffit. Si votre rue est bordée de tilleuls ou platanes, un second passage au printemps peut être utile." } },
+      ...localFaqSchema("etterbeek"),
     ],
   }
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-      <Breadcrumb items={[{ label: "Accueil", href: "/" }, { label: "Communes", href: "/" }, { label: "Etterbeek" }]} />
+      <Breadcrumb items={[{ label: "Accueil", href: "/" }, { label: "Communes", href: "/communes" }, { label: "Etterbeek" }]} />
 
       <section className="bg-white border-b border-gray-100 py-12 lg:py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -164,6 +167,7 @@ export default function EtterbeekPage() {
               { q: "La copropriété doit-elle donner son accord ?", a: "Pour les parties communes, l'accord du syndic ou d'une majorité de copropriétaires est requis. On fournit un devis formel pour l'AG. Pour les terrasses privatives, seul le propriétaire doit valider." },
               { q: "Ma toiture plate déborde lors de fortes pluies. Que faire ?", a: "C'est typiquement un siphon bouché ou une évacuation obstruée. On le débouche en urgence et vérifie que la pente de la membrane est correcte. Si l'eau stagne régulièrement, c'est souvent un problème de pente à corriger." },
               { q: "Un nettoyage par an suffit-il à Etterbeek ?", a: "En général oui. Le centre d'Etterbeek a peu d'arbres. Un nettoyage en octobre-novembre suffit. Si votre rue est bordée de tilleuls ou platanes, un second passage au printemps peut être utile." },
+              ...localFaqs("etterbeek"),
             ].map((faq, i) => (
               <div key={i} className="bg-white rounded-xl border border-gray-100 p-6">
                 <p className="font-bold text-gray-900 mb-2 flex items-start gap-2">
@@ -176,6 +180,8 @@ export default function EtterbeekPage() {
           </div>
         </div>
       </section>
+
+      <CommuneConseils slug="etterbeek" />
 
       <section id="devis" className="py-14 bg-white">
         <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -196,19 +202,7 @@ export default function EtterbeekPage() {
           </p>
         </div>
       </section>
-
-      <section className="py-8 bg-gray-50 border-t border-gray-100">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <p className="text-sm font-semibold text-gray-500 mb-3">Communes voisines desservies</p>
-          <div className="flex flex-wrap gap-2">
-            {[{ name: "Ixelles", slug: "ixelles" }, { name: "Woluwe-Saint-Lambert", slug: "woluwe-saint-lambert" }, { name: "Schaerbeek", slug: "schaerbeek" }].map((c) => (
-              <Link key={c.slug} href={`/communes/${c.slug}`} className="inline-flex items-center gap-1.5 bg-white border border-gray-200 hover:border-[#1A4731] hover:text-[#1A4731] text-gray-600 rounded-lg px-3 py-2 text-sm font-medium transition-colors">
-                <MapPin size={12} className="text-[#F97316]" />{c.name}
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
+      <NeighborCommunes slug="etterbeek" />
     </>
   )
 }

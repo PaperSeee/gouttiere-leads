@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Breadcrumb from "@/components/Breadcrumb";
 import BlogCard from "@/components/BlogCard";
-import { blogPosts } from "@/lib/blog";
+import { blogPosts, getRecentPosts } from "@/lib/blog";
 
 export const metadata: Metadata = {
   title: { absolute: "Conseils gouttières à Bruxelles | Gouttières Bruxelles" },
@@ -46,7 +46,7 @@ export default function Blog() {
             <p className="text-gray-500 text-center py-12">Aucun article pour le moment. Revenez bientôt.</p>
           ) : (
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-              {blogPosts.map((post) => (
+              {getRecentPosts(blogPosts.length).map((post) => (
                 <BlogCard key={post.slug} post={post} />
               ))}
             </div>

@@ -4,11 +4,13 @@ import GutterIllustration from "@/components/GutterIllustration"
 import { Phone, ArrowRight, MapPin, Leaf, Droplets, Wrench, AlertTriangle } from "lucide-react"
 import Breadcrumb from "@/components/Breadcrumb"
 import ContactForm from "@/components/ContactForm"
+import { CommuneConseils, NeighborCommunes } from "@/components/CommuneLocal"
+import { localFaqs, localFaqSchema } from "@/lib/communes"
 
 export const metadata: Metadata = {
   title: { absolute: "Nettoyage de gouttières à Forest | Gouttières Bruxelles" },
   description:
-    "Nettoyage gouttières à Forest : maisons mitoyennes brique rouge, zinc d'époque, parc de Forest. Devis gratuit, intervention 48h.",
+    "Nettoyage de gouttières à Forest dès 80 € : rangées de maisons en brique, zinc d'époque, parcs Duden et de Forest. Devis gratuit, sous 48h.",
   alternates: { canonical: "https://www.nettoyage-gouttieres-bruxelles.be/communes/forest" },
   keywords: ["nettoyage gouttières Forest", "débouchage gouttières Forest", "gouttières bouchées Forest", "prix nettoyage gouttières Forest"],
   openGraph: {
@@ -28,13 +30,14 @@ export default function ForestPage() {
       { "@type": "Question", name: "Peut-on coordonner le nettoyage avec notre voisin mitoyen ?", acceptedAnswer: { "@type": "Answer", text: "Oui, et c'est même conseillé ! Pour les maisons mitoyennes, on propose un tarif légèrement réduit quand on fait deux maisons le même jour. Cela permet aussi de traiter les descentes partagées en une seule intervention efficace." } },
       { "@type": "Question", name: "Nos gouttières en zinc des années 30 valent-elles encore la peine ?", acceptedAnswer: { "@type": "Answer", text: "Ça dépend de l'état. Le zinc des années 30 peut encore durer 10–20 ans si l'oxydation est légère et les profils rectilignes. Un diagnostic gratuit permet de trancher — si 60% du linéaire est en bon état, une réparation ciblée reste économique." } },
       { "@type": "Question", name: "Les ardoises du toit causent-elles des problèmes de gouttières ?", acceptedAnswer: { "@type": "Answer", text: "Les mousses sur ardoises migrent vers les gouttières et forment des bouchons compacts. Les ardoises brisées créent aussi des points d'infiltration. Un démoussage préventif protège les deux à la fois." } },
-      { "@type": "Question", name: "Intervenez-vous avenue Van Volxem et avenue Besme ?", acceptedAnswer: { "@type": "Answer", text: "Oui, dans toutes les rues de Forest, y compris les avenues bordées d'arbres qui génèrent le plus de feuilles. On connaît bien ces zones et leurs spécificités d'accès." } }
+      { "@type": "Question", name: "Intervenez-vous près du parc de Forest et du parc Duden ?", acceptedAnswer: { "@type": "Answer", text: "Oui, dans toutes les rues de Forest, y compris les avenues bordées d'arbres qui génèrent le plus de feuilles. On connaît bien ces zones et leurs spécificités d'accès." } },
+      ...localFaqSchema("forest"),
     ],
   }
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-      <Breadcrumb items={[{ label: "Accueil", href: "/" }, { label: "Communes", href: "/" }, { label: "Forest" }]} />
+      <Breadcrumb items={[{ label: "Accueil", href: "/" }, { label: "Communes", href: "/communes" }, { label: "Forest" }]} />
 
       <section className="bg-white border-b border-gray-100 py-12 lg:py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -97,7 +100,7 @@ export default function ForestPage() {
                 <p>
                   Le <strong>Parc de Forest</strong> et ses grands arbres — tilleuls, marronniers,
                   frênes — génèrent d&apos;importants volumes de feuilles en automne. Les propriétés
-                  des rues adjacentes (avenue Van Volxem, avenue Besme) sont particulièrement
+                  des rues voisines du parc et du parc Duden sont particulièrement
                   exposées et nécessitent un nettoyage annuel systématique.
                 </p>
                 <p>
@@ -165,7 +168,8 @@ export default function ForestPage() {
               { q: "Peut-on coordonner le nettoyage avec notre voisin mitoyen ?", a: "Oui, et c'est même conseillé ! Pour les maisons mitoyennes, on propose un tarif légèrement réduit quand on fait deux maisons le même jour. Cela permet aussi de traiter les descentes partagées en une seule intervention efficace." },
               { q: "Nos gouttières en zinc des années 30 valent-elles encore la peine ?", a: "Ça dépend de l'état. Le zinc des années 30 peut encore durer 10–20 ans si l'oxydation est légère et les profils rectilignes. Un diagnostic gratuit permet de trancher — si 60% du linéaire est en bon état, une réparation ciblée reste économique." },
               { q: "Les ardoises du toit causent-elles des problèmes de gouttières ?", a: "Les mousses sur ardoises migrent vers les gouttières et forment des bouchons compacts. Les ardoises brisées créent aussi des points d'infiltration. Un démoussage préventif protège les deux à la fois." },
-              { q: "Intervenez-vous avenue Van Volxem et avenue Besme ?", a: "Oui, dans toutes les rues de Forest, y compris les avenues bordées d'arbres qui génèrent le plus de feuilles. On connaît bien ces zones et leurs spécificités d'accès." },
+              { q: "Intervenez-vous près du parc de Forest et du parc Duden ?", a: "Oui, dans toutes les rues de Forest, y compris les avenues bordées d'arbres qui génèrent le plus de feuilles. On connaît bien ces zones et leurs spécificités d'accès." },
+              ...localFaqs("forest"),
             ].map((faq, i) => (
               <div key={i} className="bg-white rounded-xl border border-gray-100 p-6">
                 <p className="font-bold text-gray-900 mb-2 flex items-start gap-2">
@@ -178,6 +182,8 @@ export default function ForestPage() {
           </div>
         </div>
       </section>
+
+      <CommuneConseils slug="forest" />
 
       <section id="devis" className="py-14 bg-white">
         <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -198,19 +204,7 @@ export default function ForestPage() {
           </p>
         </div>
       </section>
-
-      <section className="py-8 bg-gray-50 border-t border-gray-100">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <p className="text-sm font-semibold text-gray-500 mb-3">Communes voisines desservies</p>
-          <div className="flex flex-wrap gap-2">
-            {[{ name: "Uccle", slug: "uccle" }, { name: "Ixelles", slug: "ixelles" }, { name: "Saint-Gilles", slug: "saint-gilles" }].map((c) => (
-              <Link key={c.slug} href={`/communes/${c.slug}`} className="inline-flex items-center gap-1.5 bg-white border border-gray-200 hover:border-[#1A4731] hover:text-[#1A4731] text-gray-600 rounded-lg px-3 py-2 text-sm font-medium transition-colors">
-                <MapPin size={12} className="text-[#F97316]" />{c.name}
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
+      <NeighborCommunes slug="forest" />
     </>
   )
 }

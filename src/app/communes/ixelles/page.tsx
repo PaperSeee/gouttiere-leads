@@ -4,11 +4,13 @@ import GutterIllustration from "@/components/GutterIllustration"
 import { Phone, ArrowRight, MapPin, Leaf, Droplets, Wrench, AlertTriangle } from "lucide-react"
 import Breadcrumb from "@/components/Breadcrumb"
 import ContactForm from "@/components/ContactForm"
+import { CommuneConseils, NeighborCommunes } from "@/components/CommuneLocal"
+import { localFaqs, localFaqSchema } from "@/lib/communes"
 
 export const metadata: Metadata = {
   title: { absolute: "Nettoyage de gouttières à Ixelles | Gouttières Bruxelles" },
   description:
-    "Nettoyage gouttières à Ixelles : maisons de maître Art nouveau, immeubles, zinc historique. Devis gratuit, intervention 48h.",
+    "Nettoyage de gouttières à Ixelles dès 80 € : zinc Art nouveau, maisons de maître, copropriétés, étangs. Devis gratuit, intervention sous 48h.",
   alternates: { canonical: "https://www.nettoyage-gouttieres-bruxelles.be/communes/ixelles" },
   keywords: ["nettoyage gouttières Ixelles", "débouchage gouttières Ixelles", "gouttières bouchées Ixelles", "prix nettoyage gouttières Ixelles"],
   openGraph: {
@@ -28,13 +30,14 @@ export default function IxellesPage() {
       { "@type": "Question", name: "Peut-on nettoyer du zinc Art nouveau sans l'abîmer ?", acceptedAnswer: { "@type": "Answer", text: "Oui, avec les bons outils. On travaille manuellement et utilise des brosses non-abrasives dans les zones ornementales. Pas de nettoyeur haute pression sur du zinc historique — trop de risque de déformation ou d'arrachage des reliefs." } },
       { "@type": "Question", name: "Notre descente pluviale est partagée avec le voisin. Comment procédez-vous ?", acceptedAnswer: { "@type": "Answer", text: "Dans les maisons mitoyennes d'Ixelles, les descentes partagées nécessitent l'accord des deux parties. On peut intervenir sur l'ensemble du système si vous avez l'accord voisin, ou uniquement sur votre partie avec rapport pour faciliter la démarche." } },
       { "@type": "Question", name: "À quelle fréquence nettoyer à Ixelles ?", acceptedAnswer: { "@type": "Answer", text: "Une fois par an en automne suffit généralement. Les propriétés proches du Bois de la Cambre ou des étangs peuvent nécessiter un second passage au printemps pour évacuer algues et sédiments." } },
-      { "@type": "Question", name: "Intervenez-vous en copropriété ?", acceptedAnswer: { "@type": "Answer", text: "Oui. On intervient pour les copropriétés avec devis global, rapport d'état et facture pour le syndic. On coordonne les interventions pour minimiser les perturbations." } }
+      { "@type": "Question", name: "Intervenez-vous en copropriété ?", acceptedAnswer: { "@type": "Answer", text: "Oui. On intervient pour les copropriétés avec devis global, rapport d'état et facture pour le syndic. On coordonne les interventions pour minimiser les perturbations." } },
+      ...localFaqSchema("ixelles"),
     ],
   }
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-      <Breadcrumb items={[{ label: "Accueil", href: "/" }, { label: "Communes", href: "/" }, { label: "Ixelles" }]} />
+      <Breadcrumb items={[{ label: "Accueil", href: "/" }, { label: "Communes", href: "/communes" }, { label: "Ixelles" }]} />
 
       <section className="bg-white border-b border-gray-100 py-12 lg:py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -165,6 +168,7 @@ export default function IxellesPage() {
               { q: "Notre descente pluviale est partagée avec le voisin. Comment procédez-vous ?", a: "Dans les maisons mitoyennes d'Ixelles, les descentes partagées nécessitent l'accord des deux parties. On peut intervenir sur l'ensemble du système si vous avez l'accord voisin, ou uniquement sur votre partie avec rapport pour faciliter la démarche." },
               { q: "À quelle fréquence nettoyer à Ixelles ?", a: "Une fois par an en automne suffit généralement. Les propriétés proches du Bois de la Cambre ou des étangs peuvent nécessiter un second passage au printemps pour évacuer algues et sédiments." },
               { q: "Intervenez-vous en copropriété ?", a: "Oui. On intervient pour les copropriétés avec devis global, rapport d'état et facture pour le syndic. On coordonne les interventions pour minimiser les perturbations." },
+              ...localFaqs("ixelles"),
             ].map((faq, i) => (
               <div key={i} className="bg-white rounded-xl border border-gray-100 p-6">
                 <p className="font-bold text-gray-900 mb-2 flex items-start gap-2">
@@ -177,6 +181,8 @@ export default function IxellesPage() {
           </div>
         </div>
       </section>
+
+      <CommuneConseils slug="ixelles" />
 
       <section id="devis" className="py-14 bg-white">
         <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -197,19 +203,7 @@ export default function IxellesPage() {
           </p>
         </div>
       </section>
-
-      <section className="py-8 bg-gray-50 border-t border-gray-100">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <p className="text-sm font-semibold text-gray-500 mb-3">Communes voisines desservies</p>
-          <div className="flex flex-wrap gap-2">
-            {[{ name: "Uccle", slug: "uccle" }, { name: "Etterbeek", slug: "etterbeek" }, { name: "Forest", slug: "forest" }].map((c) => (
-              <Link key={c.slug} href={`/communes/${c.slug}`} className="inline-flex items-center gap-1.5 bg-white border border-gray-200 hover:border-[#1A4731] hover:text-[#1A4731] text-gray-600 rounded-lg px-3 py-2 text-sm font-medium transition-colors">
-                <MapPin size={12} className="text-[#F97316]" />{c.name}
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
+      <NeighborCommunes slug="ixelles" />
     </>
   )
 }

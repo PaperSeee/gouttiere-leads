@@ -4,11 +4,13 @@ import GutterIllustration from "@/components/GutterIllustration"
 import { Phone, ArrowRight, MapPin, Leaf, Droplets, Wrench, AlertTriangle } from "lucide-react"
 import Breadcrumb from "@/components/Breadcrumb"
 import ContactForm from "@/components/ContactForm"
+import { CommuneConseils, NeighborCommunes } from "@/components/CommuneLocal"
+import { localFaqs, localFaqSchema } from "@/lib/communes"
 
 export const metadata: Metadata = {
   title: { absolute: "Nettoyage de gouttières à Koekelberg | Gouttières Bruxelles" },
   description:
-    "Nettoyage gouttières à Koekelberg : habitat compact, Basilique du Sacré-Cœur, maisons mitoyennes zinc. Devis gratuit.",
+    "Nettoyage de gouttières à Koekelberg dès 80 € : maisons mitoyennes étroites, zinc d'époque, parc Élisabeth. Devis gratuit, intervention sous 48h.",
   alternates: { canonical: "https://www.nettoyage-gouttieres-bruxelles.be/communes/koekelberg" },
   keywords: ["nettoyage gouttières Koekelberg", "débouchage gouttières Koekelberg", "gouttières bouchées Koekelberg", "prix nettoyage gouttières Koekelberg"],
   openGraph: {
@@ -28,13 +30,14 @@ export default function KoekelbergPage() {
       { "@type": "Question", name: "Le zinc de nos maisons des années 20 mérite-t-il encore d'être réparé ?", acceptedAnswer: { "@type": "Answer", text: "Un zinc des années 20 bien conservé peut encore durer 10 à 15 ans. Si les soudures tiennent et que les profils sont rectilignes, une réparation ponctuelle des zones défaillantes est économiquement pertinente. On fait un diagnostic gratuit pour évaluer la situation." } },
       { "@type": "Question", name: "Comment accédez-vous aux gouttières arrière à Koekelberg ?", acceptedAnswer: { "@type": "Answer", text: "Généralement par la cour intérieure avec des échelles légères ou des perches télescopiques. Dans les cours particulièrement étroites, on utilise exclusivement des perches depuis le sol pour ne pas risquer d'abîmer les façades voisines." } },
       { "@type": "Question", name: "Faut-il prévenir les voisins pour l'accès aux cours partagées ?", acceptedAnswer: { "@type": "Answer", text: "C'est recommandé. Dans les maisons mitoyennes de Koekelberg avec cours partagées, on vous conseille de prévenir les voisins au moins 24h à l'avance. Si plusieurs voisins souhaitent un nettoyage le même jour, on propose un tarif groupé avantageux." } },
-      { "@type": "Question", name: "Intervenez-vous avenue de la Basilique et rue Schmitz ?", acceptedAnswer: { "@type": "Answer", text: "Oui, dans toutes les rues de Koekelberg. La commune est petite et bien connue de notre équipe. Délai d'intervention habituel : 48 à 72 heures après contact." } }
+      { "@type": "Question", name: "Intervenez-vous autour de la basilique et de la place Simonis ?", acceptedAnswer: { "@type": "Answer", text: "Oui, dans toutes les rues de Koekelberg. La commune est petite et bien connue de notre équipe. Délai d'intervention habituel : 48 à 72 heures après contact." } },
+      ...localFaqSchema("koekelberg"),
     ],
   }
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-      <Breadcrumb items={[{ label: "Accueil", href: "/" }, { label: "Communes", href: "/" }, { label: "Koekelberg" }]} />
+      <Breadcrumb items={[{ label: "Accueil", href: "/" }, { label: "Communes", href: "/communes" }, { label: "Koekelberg" }]} />
 
       <section className="bg-white border-b border-gray-100 py-12 lg:py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -166,7 +169,8 @@ export default function KoekelbergPage() {
               { q: "Le zinc de nos maisons des années 20 mérite-t-il encore d'être réparé ?", a: "Un zinc des années 20 bien conservé peut encore durer 10 à 15 ans. Si les soudures tiennent et que les profils sont rectilignes, une réparation ponctuelle des zones défaillantes est économiquement pertinente. On fait un diagnostic gratuit pour évaluer la situation." },
               { q: "Comment accédez-vous aux gouttières arrière à Koekelberg ?", a: "Généralement par la cour intérieure avec des échelles légères ou des perches télescopiques. Dans les cours particulièrement étroites, on utilise exclusivement des perches depuis le sol pour ne pas risquer d'abîmer les façades voisines." },
               { q: "Faut-il prévenir les voisins pour l'accès aux cours partagées ?", a: "C'est recommandé. Dans les maisons mitoyennes de Koekelberg avec cours partagées, on vous conseille de prévenir les voisins au moins 24h à l'avance. Si plusieurs voisins souhaitent un nettoyage le même jour, on propose un tarif groupé avantageux." },
-              { q: "Intervenez-vous avenue de la Basilique et rue Schmitz ?", a: "Oui, dans toutes les rues de Koekelberg. La commune est petite et bien connue de notre équipe. Délai d'intervention habituel : 48 à 72 heures après contact." },
+              { q: "Intervenez-vous autour de la basilique et de la place Simonis ?", a: "Oui, dans toutes les rues de Koekelberg. La commune est petite et bien connue de notre équipe. Délai d'intervention habituel : 48 à 72 heures après contact." },
+              ...localFaqs("koekelberg"),
             ].map((faq, i) => (
               <div key={i} className="bg-white rounded-xl border border-gray-100 p-6">
                 <p className="font-bold text-gray-900 mb-2 flex items-start gap-2">
@@ -179,6 +183,8 @@ export default function KoekelbergPage() {
           </div>
         </div>
       </section>
+
+      <CommuneConseils slug="koekelberg" />
 
       <section id="devis" className="py-14 bg-white">
         <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -199,19 +205,7 @@ export default function KoekelbergPage() {
           </p>
         </div>
       </section>
-
-      <section className="py-8 bg-gray-50 border-t border-gray-100">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <p className="text-sm font-semibold text-gray-500 mb-3">Communes voisines desservies</p>
-          <div className="flex flex-wrap gap-2">
-            {[{ name: "Ganshoren", slug: "ganshoren" }, { name: "Jette", slug: "jette" }, { name: "Molenbeek-Saint-Jean", slug: "molenbeek-saint-jean" }].map((c) => (
-              <Link key={c.slug} href={`/communes/${c.slug}`} className="inline-flex items-center gap-1.5 bg-white border border-gray-200 hover:border-[#1A4731] hover:text-[#1A4731] text-gray-600 rounded-lg px-3 py-2 text-sm font-medium transition-colors">
-                <MapPin size={12} className="text-[#F97316]" />{c.name}
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
+      <NeighborCommunes slug="koekelberg" />
     </>
   )
 }

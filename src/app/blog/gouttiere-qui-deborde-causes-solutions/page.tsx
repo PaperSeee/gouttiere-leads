@@ -50,14 +50,6 @@ export default function BlogDebordementPage() {
         keywords: "gouttière qui déborde, gouttière débordement, gouttière bouchée Bruxelles, débouchage urgence",
       },
       {
-        "@type": "BreadcrumbList",
-        itemListElement: [
-          { "@type": "ListItem", position: 1, name: "Accueil", item: DOMAIN },
-          { "@type": "ListItem", position: 2, name: "Blog", item: `${DOMAIN}/blog` },
-          { "@type": "ListItem", position: 3, name: "Gouttière qui déborde", item: `${DOMAIN}/blog/gouttiere-qui-deborde-causes-solutions` },
-        ],
-      },
-      {
         "@type": "FAQPage",
         mainEntity: [
           {
@@ -433,6 +425,7 @@ export default function BlogDebordementPage() {
               { label: "Nettoyage de gouttières", href: "/services/nettoyage-gouttieres" },
               { label: "Réparation gouttières", href: "/services/reparation-gouttieres" },
               { label: "Préparer ses gouttières pour l'automne", href: "/blog/preparer-gouttieres-automne-bruxelles" },
+              { label: "Descente pluviale bouchée", href: "/blog/descente-pluviale-bouchee" },
             ].map((link) => (
               <Link
                 key={link.href}

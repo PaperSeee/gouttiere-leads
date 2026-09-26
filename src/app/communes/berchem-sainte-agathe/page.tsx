@@ -4,11 +4,13 @@ import GutterIllustration from "@/components/GutterIllustration"
 import { Phone, ArrowRight, MapPin, Leaf, Droplets, Wrench, AlertTriangle } from "lucide-react"
 import Breadcrumb from "@/components/Breadcrumb"
 import ContactForm from "@/components/ContactForm"
+import { CommuneConseils, NeighborCommunes } from "@/components/CommuneLocal"
+import { localFaqs, localFaqSchema } from "@/lib/communes"
 
 export const metadata: Metadata = {
   title: { absolute: "Nettoyage de gouttières à Berchem-Sainte-Agathe, Bruxelles" },
   description:
-    "Nettoyage gouttières à Berchem-Sainte-Agathe : villas lotissements années 60–70, aluminium vieillissant, jardins arborés. Devis gratuit.",
+    "Nettoyage de gouttières à Berchem-Sainte-Agathe dès 80 € : villas des années 60–70, garages à toit plat. Devis gratuit, sous 48h.",
   alternates: { canonical: "https://www.nettoyage-gouttieres-bruxelles.be/communes/berchem-sainte-agathe" },
   keywords: ["nettoyage gouttières Berchem-Sainte-Agathe", "débouchage gouttières Berchem-Sainte-Agathe", "gouttières bouchées Berchem-Sainte-Agathe", "prix nettoyage gouttières Berchem-Sainte-Agathe"],
   openGraph: {
@@ -28,13 +30,14 @@ export default function BerchemSainteAgathePage() {
       { "@type": "Question", name: "Notre villa des années 70 a des gouttières d'origine — faut-il tout changer ?", acceptedAnswer: { "@type": "Answer", text: "Pas forcément tout. On inspecte d'abord : si les crochets tiennent, les joints sont étanches et le profil est droit, une réparation ciblée et un nettoyage peuvent suffire. Si plus de 40% du linéaire présente des problèmes, un remplacement complet est plus économique sur le long terme." } },
       { "@type": "Question", name: "Peut-on choisir la couleur des nouvelles gouttières ?", acceptedAnswer: { "@type": "Answer", text: "Oui, l'aluminium laqué est disponible dans de nombreuses teintes RAL. On s'assure que la nouvelle couleur s'harmonise avec votre façade et vos menuiseries. La teinte gris anthracite (RAL 7016) et le blanc cassé (RAL 9010) sont les plus demandées à Berchem." } },
       { "@type": "Question", name: "Combien de temps dure une intervention à Berchem-Sainte-Agathe ?", acceptedAnswer: { "@type": "Answer", text: "Pour une villa quatre façades standard, le nettoyage dure environ 2 à 3 heures. Un remplacement complet de gouttières prend généralement une journée complète. On vous donne une estimation précise lors du devis." } },
-      { "@type": "Question", name: "Intervenez-vous dans les lotissements de la chaussée de Gand ?", acceptedAnswer: { "@type": "Answer", text: "Oui, dans tout Berchem-Sainte-Agathe, y compris les lotissements le long de la chaussée de Gand et les rues résidentielles plus calmes. Délai habituel : 48 à 72 heures après contact." } }
+      { "@type": "Question", name: "Intervenez-vous dans les lotissements de la chaussée de Gand ?", acceptedAnswer: { "@type": "Answer", text: "Oui, dans tout Berchem-Sainte-Agathe, y compris les lotissements le long de la chaussée de Gand et les rues résidentielles plus calmes. Délai habituel : 48 à 72 heures après contact." } },
+      ...localFaqSchema("berchem-sainte-agathe"),
     ],
   }
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-      <Breadcrumb items={[{ label: "Accueil", href: "/" }, { label: "Communes", href: "/" }, { label: "Berchem-Sainte-Agathe" }]} />
+      <Breadcrumb items={[{ label: "Accueil", href: "/" }, { label: "Communes", href: "/communes" }, { label: "Berchem-Sainte-Agathe" }]} />
 
       <section className="bg-white border-b border-gray-100 py-12 lg:py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -168,6 +171,7 @@ export default function BerchemSainteAgathePage() {
               { q: "Peut-on choisir la couleur des nouvelles gouttières ?", a: "Oui, l'aluminium laqué est disponible dans de nombreuses teintes RAL. On s'assure que la nouvelle couleur s'harmonise avec votre façade et vos menuiseries. La teinte gris anthracite (RAL 7016) et le blanc cassé (RAL 9010) sont les plus demandées à Berchem." },
               { q: "Combien de temps dure une intervention à Berchem-Sainte-Agathe ?", a: "Pour une villa quatre façades standard, le nettoyage dure environ 2 à 3 heures. Un remplacement complet de gouttières prend généralement une journée complète. On vous donne une estimation précise lors du devis." },
               { q: "Intervenez-vous dans les lotissements de la chaussée de Gand ?", a: "Oui, dans tout Berchem-Sainte-Agathe, y compris les lotissements le long de la chaussée de Gand et les rues résidentielles plus calmes. Délai habituel : 48 à 72 heures après contact." },
+              ...localFaqs("berchem-sainte-agathe"),
             ].map((faq, i) => (
               <div key={i} className="bg-white rounded-xl border border-gray-100 p-6">
                 <p className="font-bold text-gray-900 mb-2 flex items-start gap-2">
@@ -180,6 +184,8 @@ export default function BerchemSainteAgathePage() {
           </div>
         </div>
       </section>
+
+      <CommuneConseils slug="berchem-sainte-agathe" />
 
       <section id="devis" className="py-14 bg-white">
         <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -200,19 +206,7 @@ export default function BerchemSainteAgathePage() {
           </p>
         </div>
       </section>
-
-      <section className="py-8 bg-gray-50 border-t border-gray-100">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <p className="text-sm font-semibold text-gray-500 mb-3">Communes voisines desservies</p>
-          <div className="flex flex-wrap gap-2">
-            {[{ name: "Jette", slug: "jette" }, { name: "Ganshoren", slug: "ganshoren" }, { name: "Molenbeek-Saint-Jean", slug: "molenbeek-saint-jean" }].map((c) => (
-              <Link key={c.slug} href={`/communes/${c.slug}`} className="inline-flex items-center gap-1.5 bg-white border border-gray-200 hover:border-[#1A4731] hover:text-[#1A4731] text-gray-600 rounded-lg px-3 py-2 text-sm font-medium transition-colors">
-                <MapPin size={12} className="text-[#F97316]" />{c.name}
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
+      <NeighborCommunes slug="berchem-sainte-agathe" />
     </>
   )
 }

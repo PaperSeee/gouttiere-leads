@@ -51,14 +51,6 @@ export default function BlogEntretienGouttieresMomentPage() {
         keywords: "entretien gouttières bruxelles, quand nettoyer gouttières, fréquence nettoyage gouttières",
       },
       {
-        "@type": "BreadcrumbList",
-        itemListElement: [
-          { "@type": "ListItem", position: 1, name: "Accueil", item: DOMAIN },
-          { "@type": "ListItem", position: 2, name: "Blog", item: `${DOMAIN}/blog` },
-          { "@type": "ListItem", position: 3, name: "Quand nettoyer ses gouttières", item: `${DOMAIN}/blog/entretien-gouttieres-quand-faire` },
-        ],
-      },
-      {
         "@type": "FAQPage",
         mainEntity: [
           {
@@ -466,6 +458,7 @@ export default function BlogEntretienGouttieresMomentPage() {
               { label: "Préparer ses gouttières pour l'automne", href: "/blog/preparer-gouttieres-automne-bruxelles" },
               { label: "Gouttière qui déborde", href: "/blog/gouttiere-qui-deborde-causes-solutions" },
               { label: "Démoussage de toiture", href: "/services/demoussage-toiture" },
+              { label: "Nettoyer ses gouttières soi-même", href: "/blog/nettoyer-gouttieres-soi-meme" },
             ].map((link) => (
               <Link
                 key={link.href}

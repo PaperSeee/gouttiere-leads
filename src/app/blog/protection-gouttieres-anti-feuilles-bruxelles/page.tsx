@@ -52,14 +52,6 @@ export default function BlogProtectionGouttieresAntiFeuilles() {
         articleSection: "Conseils",
       },
       {
-        "@type": "BreadcrumbList",
-        itemListElement: [
-          { "@type": "ListItem", position: 1, name: "Accueil", item: DOMAIN },
-          { "@type": "ListItem", position: 2, name: "Blog", item: `${DOMAIN}/blog` },
-          { "@type": "ListItem", position: 3, name: "Protections anti-feuilles", item: `${DOMAIN}/blog/protection-gouttieres-anti-feuilles-bruxelles` },
-        ],
-      },
-      {
         "@type": "FAQPage",
         mainEntity: [
           {
@@ -228,7 +220,7 @@ export default function BlogProtectionGouttieresAntiFeuilles() {
       {/* Liens internes */}
       <section className="py-10 bg-white border-t border-gray-100">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-lg font-bold text-gray-900 mb-4">Articles liés</h2>
+          <h2 className="text-lg font-bold text-gray-900 mb-4">À lire aussi</h2>
           <div className="flex flex-wrap gap-3">
             {[
               { label: "Pose de protections anti-feuilles", href: "/services/protection-gouttieres" },
@@ -237,6 +229,7 @@ export default function BlogProtectionGouttieresAntiFeuilles() {
               { label: "Gouttière qui déborde", href: "/blog/gouttiere-qui-deborde-causes-solutions" },
               { label: "Matériaux gouttières", href: "/types-gouttieres" },
               { label: "Gouttières et gel en hiver", href: "/blog/gouttiere-gel-hiver-bruxelles-protection" },
+              { label: "Descente pluviale bouchée", href: "/blog/descente-pluviale-bouchee" },
             ].map((link) => (
               <Link
                 key={link.href}

@@ -4,11 +4,13 @@ import GutterIllustration from "@/components/GutterIllustration"
 import { Phone, ArrowRight, CheckCircle, MapPin, Leaf, Droplets, Wrench, AlertTriangle, Euro } from "lucide-react"
 import Breadcrumb from "@/components/Breadcrumb"
 import ContactForm from "@/components/ContactForm"
+import { CommuneConseils, NeighborCommunes } from "@/components/CommuneLocal"
+import { localFaqs, localFaqSchema } from "@/lib/communes"
 
 export const metadata: Metadata = {
   title: { absolute: "Nettoyage de gouttières à Uccle | Gouttières Bruxelles" },
   description:
-    "Nettoyage de gouttières à Uccle : villas, maisons 4 façades, zinc oxydé. Intervention rapide avenue Molière, Brugmann. Devis gratuit.",
+    "Nettoyage de gouttières à Uccle dès 80 € : villas sous les arbres, zinc ancien, grands linéaires. Devis gratuit, intervention sous 48h.",
   alternates: { canonical: "https://www.nettoyage-gouttieres-bruxelles.be/communes/uccle" },
   keywords: ["nettoyage gouttières Uccle", "débouchage gouttières Uccle", "gouttières bouchées Uccle", "prix nettoyage gouttières Uccle"],
   openGraph: {
@@ -26,9 +28,10 @@ export default function UcclePage() {
     "@type": "FAQPage",
     mainEntity: [
       { "@type": "Question", name: "À quelle fréquence faut-il nettoyer les gouttières à Uccle ?", acceptedAnswer: { "@type": "Answer", text: "À Uccle, deux nettoyages par an sont souvent nécessaires — mai après les floraisons printanières, novembre après la chute des feuilles. Les propriétés avec de grands jardins arborés (platanes, chênes, hêtres) peuvent nécessiter trois passages." } },
-      { "@type": "Question", name: "Intervenez-vous avenue Molière et avenue Brugmann ?", acceptedAnswer: { "@type": "Answer", text: "Oui, nous intervenons régulièrement dans toutes les avenues d'Uccle — Molière, Brugmann, Winston Churchill, Delleur et le quartier du Bois. Notre matériel est adapté aux villas haut de gamme avec façades hautes." } },
+      { "@type": "Question", name: "Intervenez-vous avenue Molière et avenue Brugmann ?", acceptedAnswer: { "@type": "Answer", text: "Oui, nous intervenons régulièrement dans toutes les avenues d'Uccle — Molière, Brugmann, Winston Churchill, et jusqu'à Saint-Job et Fort-Jaco. Notre matériel est adapté aux villas haut de gamme avec façades hautes." } },
       { "@type": "Question", name: "Mes gouttières en zinc d'époque peuvent-elles être réparées ?", acceptedAnswer: { "@type": "Answer", text: "Les gouttières en zinc des villas des années 30–60 peuvent souvent être réparées par soudure ou reprise de joints si l'oxydation n'est pas trop avancée. Sinon, remplacement par zinc neuf ou aluminium laqué qui s'intègre parfaitement à l'architecture d'époque." } },
-      { "@type": "Question", name: "La pente de mon jardin aggrave-t-elle les risques ?", acceptedAnswer: { "@type": "Answer", text: "Oui. Les terrains en pente typiques d'Uccle concentrent les eaux pluviales vers les fondations en cas de débordement. C'est pourquoi l'entretien régulier est encore plus crucial ici — un bouchon peut causer des infiltrations de fondations en quelques heures." } }
+      { "@type": "Question", name: "La pente de mon jardin aggrave-t-elle les risques ?", acceptedAnswer: { "@type": "Answer", text: "Oui. Les terrains en pente typiques d'Uccle concentrent les eaux pluviales vers les fondations en cas de débordement. C'est pourquoi l'entretien régulier est encore plus crucial ici — un bouchon peut causer des infiltrations de fondations en quelques heures." } },
+      ...localFaqSchema("uccle"),
     ],
   }
   return (
@@ -36,7 +39,7 @@ export default function UcclePage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <Breadcrumb items={[
         { label: "Accueil", href: "/" },
-        { label: "Communes", href: "/" },
+        { label: "Communes", href: "/communes" },
         { label: "Uccle" },
       ]} />
 
@@ -228,7 +231,7 @@ export default function UcclePage() {
               },
               {
                 q: "Intervenez-vous avenue Molière et avenue Brugmann ?",
-                a: "Oui, nous intervenons régulièrement dans toutes les avenues d'Uccle — Molière, Brugmann, Winston Churchill, Delleur et le quartier du Bois. Notre matériel est adapté aux villas haut de gamme avec façades hautes.",
+                a: "Oui, nous intervenons régulièrement dans toutes les avenues d'Uccle — Molière, Brugmann, Winston Churchill, et jusqu'à Saint-Job et Fort-Jaco. Notre matériel est adapté aux villas haut de gamme avec façades hautes.",
               },
               {
                 q: "Mes gouttières en zinc d'époque peuvent-elles être réparées ?",
@@ -238,6 +241,7 @@ export default function UcclePage() {
                 q: "La pente de mon jardin aggrave-t-elle les risques ?",
                 a: "Oui. Les terrains en pente typiques d'Uccle concentrent les eaux pluviales vers les fondations en cas de débordement. C'est pourquoi l'entretien régulier est encore plus crucial ici — un bouchon peut causer des infiltrations de fondations en quelques heures.",
               },
+              ...localFaqs("uccle"),
             ].map((faq, i) => (
               <div key={i} className="bg-white rounded-xl border border-gray-100 p-6">
                 <p className="font-bold text-gray-900 mb-2 flex items-start gap-2">
@@ -252,6 +256,8 @@ export default function UcclePage() {
       </section>
 
       {/* Devis — centré, sobre */}
+      <CommuneConseils slug="uccle" />
+
       <section id="devis" className="py-14 bg-white">
         <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8">
@@ -277,28 +283,7 @@ export default function UcclePage() {
           </p>
         </div>
       </section>
-
-      <section className="py-8 bg-gray-50 border-t border-gray-100">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <p className="text-sm font-semibold text-gray-500 mb-3">Communes voisines desservies</p>
-          <div className="flex flex-wrap gap-2">
-            {[
-              { name: "Forest", slug: "forest" },
-              { name: "Ixelles", slug: "ixelles" },
-              { name: "Watermael-Boitsfort", slug: "watermael-boitsfort" },
-            ].map((c) => (
-              <Link
-                key={c.slug}
-                href={`/communes/${c.slug}`}
-                className="inline-flex items-center gap-1.5 bg-white border border-gray-200 hover:border-[#1A4731] hover:text-[#1A4731] text-gray-600 rounded-lg px-3 py-2 text-sm font-medium transition-colors"
-              >
-                <MapPin size={12} className="text-[#F97316]" />
-                {c.name}
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
+      <NeighborCommunes slug="uccle" />
     </>
   )
 }

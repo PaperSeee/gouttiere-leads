@@ -4,11 +4,13 @@ import GutterIllustration from "@/components/GutterIllustration"
 import { Phone, ArrowRight, MapPin, Leaf, Droplets, Wrench, AlertTriangle } from "lucide-react"
 import Breadcrumb from "@/components/Breadcrumb"
 import ContactForm from "@/components/ContactForm"
+import { CommuneConseils, NeighborCommunes } from "@/components/CommuneLocal"
+import { localFaqs, localFaqSchema } from "@/lib/communes"
 
 export const metadata: Metadata = {
   title: { absolute: "Nettoyage de gouttières à Saint-Gilles, Bruxelles" },
   description:
-    "Nettoyage gouttières à Saint-Gilles : maisons de maître Art nouveau, zinc ornemental, parvis. Devis gratuit, intervention rapide.",
+    "Nettoyage de gouttières à Saint-Gilles dès 80 € : chéneaux de corniche, zinc Art nouveau, cours étroites. Devis gratuit, intervention sous 48h.",
   alternates: { canonical: "https://www.nettoyage-gouttieres-bruxelles.be/communes/saint-gilles" },
   keywords: ["nettoyage gouttières Saint-Gilles", "débouchage gouttières Saint-Gilles", "gouttières bouchées Saint-Gilles", "prix nettoyage gouttières Saint-Gilles"],
   openGraph: {
@@ -26,15 +28,16 @@ export default function SaintGillesPage() {
     "@type": "FAQPage",
     mainEntity: [
       { "@type": "Question", name: "Comment nettoyer le zinc ornemental sans l'endommager ?", acceptedAnswer: { "@type": "Answer", text: "On utilise exclusivement des outils en plastique souple ou des brosses non-abrasives. Aucun métal sur le zinc — les rayures accélèrent la corrosion. Pour les profils complexes, un nettoyage à la main avec des chiffons humides et un aspirateur industriel." } },
-      { "@type": "Question", name: "Nos gouttières en zinc de 1905 sont-elles classées ?", acceptedAnswer: { "@type": "Answer", text: "Les façades peuvent être classées, mais les gouttières elles-mêmes rarement. Cependant, pour les biens à valeur patrimoniale, on recommande de consulter le permis d'urbanisme avant tout remplacement et de privilégier les matériaux d'origine (zinc à la place de zinc)." } },
+      { "@type": "Question", name: "Nos gouttières en zinc de 1905 sont-elles classées ?", acceptedAnswer: { "@type": "Answer", text: "Les façades peuvent être classées, mais les gouttières elles-mêmes rarement. Cependant, pour les biens à valeur patrimoniale, on recommande de consulter le permis d'urbanisme avant tout remplacement et de privilégier les matériaux d'origine (du zinc plutôt que du PVC)." } },
       { "@type": "Question", name: "Intervenez-vous au Parvis de Saint-Gilles et chaussée de Waterloo ?", acceptedAnswer: { "@type": "Answer", text: "Oui, dans toute la commune. On connaît bien les contraintes du bâti saint-gillois — ruelles étroites, cours intérieures partagées, accès en étage depuis l'intérieur. On s'adapte à chaque configuration." } },
-      { "@type": "Question", name: "Les acacias de nos rues bouchent-ils vraiment les gouttières au printemps ?", acceptedAnswer: { "@type": "Answer", text: "Oui, leurs petites fleurs blanches tombent en masse en mai et forment des bouchons compacts. Combiné aux bourgeons collants des tilleuls voisins, un nettoyage de mai après la floraison est souvent aussi important que celui de novembre." } }
+      { "@type": "Question", name: "Les acacias de nos rues bouchent-ils vraiment les gouttières au printemps ?", acceptedAnswer: { "@type": "Answer", text: "Oui, leurs petites fleurs blanches tombent en masse en mai et forment des bouchons compacts. Combiné aux bourgeons collants des tilleuls voisins, un nettoyage de mai après la floraison est souvent aussi important que celui de novembre." } },
+      ...localFaqSchema("saint-gilles"),
     ],
   }
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-      <Breadcrumb items={[{ label: "Accueil", href: "/" }, { label: "Communes", href: "/" }, { label: "Saint-Gilles" }]} />
+      <Breadcrumb items={[{ label: "Accueil", href: "/" }, { label: "Communes", href: "/communes" }, { label: "Saint-Gilles" }]} />
 
       <section className="bg-white border-b border-gray-100 py-12 lg:py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -164,9 +167,10 @@ export default function SaintGillesPage() {
           <div className="space-y-5">
             {[
               { q: "Comment nettoyer le zinc ornemental sans l'endommager ?", a: "On utilise exclusivement des outils en plastique souple ou des brosses non-abrasives. Aucun métal sur le zinc — les rayures accélèrent la corrosion. Pour les profils complexes, un nettoyage à la main avec des chiffons humides et un aspirateur industriel." },
-              { q: "Nos gouttières en zinc de 1905 sont-elles classées ?", a: "Les façades peuvent être classées, mais les gouttières elles-mêmes rarement. Cependant, pour les biens à valeur patrimoniale, on recommande de consulter le permis d'urbanisme avant tout remplacement et de privilégier les matériaux d'origine (zinc à la place de zinc)." },
+              { q: "Nos gouttières en zinc de 1905 sont-elles classées ?", a: "Les façades peuvent être classées, mais les gouttières elles-mêmes rarement. Cependant, pour les biens à valeur patrimoniale, on recommande de consulter le permis d'urbanisme avant tout remplacement et de privilégier les matériaux d'origine (du zinc plutôt que du PVC)." },
               { q: "Intervenez-vous au Parvis de Saint-Gilles et chaussée de Waterloo ?", a: "Oui, dans toute la commune. On connaît bien les contraintes du bâti saint-gillois — ruelles étroites, cours intérieures partagées, accès en étage depuis l'intérieur. On s'adapte à chaque configuration." },
               { q: "Les acacias de nos rues bouchent-ils vraiment les gouttières au printemps ?", a: "Oui, leurs petites fleurs blanches tombent en masse en mai et forment des bouchons compacts. Combiné aux bourgeons collants des tilleuls voisins, un nettoyage de mai après la floraison est souvent aussi important que celui de novembre." },
+              ...localFaqs("saint-gilles"),
             ].map((faq, i) => (
               <div key={i} className="bg-white rounded-xl border border-gray-100 p-6">
                 <p className="font-bold text-gray-900 mb-2 flex items-start gap-2">
@@ -179,6 +183,8 @@ export default function SaintGillesPage() {
           </div>
         </div>
       </section>
+
+      <CommuneConseils slug="saint-gilles" />
 
       <section id="devis" className="py-14 bg-white">
         <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -199,19 +205,7 @@ export default function SaintGillesPage() {
           </p>
         </div>
       </section>
-
-      <section className="py-8 bg-gray-50 border-t border-gray-100">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <p className="text-sm font-semibold text-gray-500 mb-3">Communes voisines desservies</p>
-          <div className="flex flex-wrap gap-2">
-            {[{ name: "Ixelles", slug: "ixelles" }, { name: "Forest", slug: "forest" }, { name: "Anderlecht", slug: "anderlecht" }].map((c) => (
-              <Link key={c.slug} href={`/communes/${c.slug}`} className="inline-flex items-center gap-1.5 bg-white border border-gray-200 hover:border-[#1A4731] hover:text-[#1A4731] text-gray-600 rounded-lg px-3 py-2 text-sm font-medium transition-colors">
-                <MapPin size={12} className="text-[#F97316]" />{c.name}
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
+      <NeighborCommunes slug="saint-gilles" />
     </>
   )
 }

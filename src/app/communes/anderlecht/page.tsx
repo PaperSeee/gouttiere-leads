@@ -4,11 +4,13 @@ import GutterIllustration from "@/components/GutterIllustration"
 import { Phone, ArrowRight, MapPin, Leaf, Droplets, Wrench, AlertTriangle } from "lucide-react"
 import Breadcrumb from "@/components/Breadcrumb"
 import ContactForm from "@/components/ContactForm"
+import { CommuneConseils, NeighborCommunes } from "@/components/CommuneLocal"
+import { localFaqs, localFaqSchema } from "@/lib/communes"
 
 export const metadata: Metadata = {
   title: { absolute: "Nettoyage de gouttières à Anderlecht | Gouttières Bruxelles" },
   description:
-    "Nettoyage gouttières à Anderlecht : maisons ouvrières brique, canal de Charleroi, humidité canal. Devis gratuit, intervention rapide.",
+    "Nettoyage de gouttières à Anderlecht dès 80 € : maisons ouvrières, Cureghem, bords du canal, Neerpede. Devis gratuit, intervention sous 48h.",
   alternates: { canonical: "https://www.nettoyage-gouttieres-bruxelles.be/communes/anderlecht" },
   keywords: ["nettoyage gouttières Anderlecht", "débouchage gouttières Anderlecht", "gouttières bouchées Anderlecht", "prix nettoyage gouttières Anderlecht"],
   openGraph: {
@@ -25,16 +27,17 @@ export default function AnderlechtPage() {
     "@context": "https://schema.org",
     "@type": "FAQPage",
     mainEntity: [
-      { "@type": "Question", name: "L'humidité du canal affecte-t-elle vraiment les gouttières ?", acceptedAnswer: { "@type": "Answer", text: "Oui, significativement. Les propriétés dans un rayon de 300 mètres du canal de Charleroi connaissent une croissance des mousses nettement plus rapide. Un démoussage préventif annuel est recommandé plutôt qu'un nettoyage curatif tous les 3 ans." } },
+      { "@type": "Question", name: "L'humidité du canal affecte-t-elle vraiment les gouttières ?", acceptedAnswer: { "@type": "Answer", text: "Oui. Les maisons les plus proches du canal de Charleroi, dans un air plus humide, voient souvent les mousses repousser plus vite. Un démoussage préventif annuel est recommandé plutôt qu'un nettoyage curatif tous les 3 ans." } },
       { "@type": "Question", name: "Le zinc de nos maisons des années 40 est-il encore récupérable ?", acceptedAnswer: { "@type": "Answer", text: "Dans la moitié des cas, oui. Un zinc des années 40 bien conservé peut encore durer 15 à 20 ans si les profils sont droits et les soudures tiennent. On fait un diagnostic gratuit avant toute décision de remplacement." } },
       { "@type": "Question", name: "Intervenez-vous dans les quartiers Cureghem et Neerpede ?", acceptedAnswer: { "@type": "Answer", text: "Oui, dans toute la commune d'Anderlecht sans exception. On connaît bien les particularités d'accès du bâti ouvrier local — cours étroites, passages latéraux, mitoyenneté complexe." } },
-      { "@type": "Question", name: "Peut-on coordonner le nettoyage avec les voisins mitoyens ?", acceptedAnswer: { "@type": "Answer", text: "Absolument, c'est même conseillé. On propose un tarif réduit pour les interventions groupées sur deux maisons mitoyennes le même jour. Cela permet aussi de traiter les descentes partagées en une seule fois." } }
+      { "@type": "Question", name: "Peut-on coordonner le nettoyage avec les voisins mitoyens ?", acceptedAnswer: { "@type": "Answer", text: "Absolument, c'est même conseillé. On propose un tarif réduit pour les interventions groupées sur deux maisons mitoyennes le même jour. Cela permet aussi de traiter les descentes partagées en une seule fois." } },
+      ...localFaqSchema("anderlecht"),
     ],
   }
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-      <Breadcrumb items={[{ label: "Accueil", href: "/" }, { label: "Communes", href: "/" }, { label: "Anderlecht" }]} />
+      <Breadcrumb items={[{ label: "Accueil", href: "/" }, { label: "Communes", href: "/communes" }, { label: "Anderlecht" }]} />
 
       <section className="bg-white border-b border-gray-100 py-12 lg:py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -90,9 +93,9 @@ export default function AnderlechtPage() {
               <div className="space-y-4 text-gray-600 leading-relaxed">
                 <p>
                   Anderlecht est une commune aux multiples visages : quartiers populaires denses
-                  autour de la <strong>Grand-Place d&apos;Anderlecht</strong>, zones industrielles
-                  en reconversion le long du canal, et poches résidentielles plus calmes vers
-                  Cureghem et Neerpede.
+                  à <strong>Cureghem</strong> et autour de la place de la Vaillance, zones
+                  industrielles en reconversion le long du canal, et quartiers plus verts à
+                  l&apos;ouest, vers Neerpede.
                 </p>
                 <p>
                   La proximité du <strong>canal de Charleroi-Bruxelles</strong> crée une humidité
@@ -163,10 +166,11 @@ export default function AnderlechtPage() {
           <h2 className="text-2xl font-bold text-gray-900 mb-8">Questions fréquentes — Anderlecht</h2>
           <div className="space-y-5">
             {[
-              { q: "L'humidité du canal affecte-t-elle vraiment les gouttières ?", a: "Oui, significativement. Les propriétés dans un rayon de 300 mètres du canal de Charleroi connaissent une croissance des mousses nettement plus rapide. Un démoussage préventif annuel est recommandé plutôt qu'un nettoyage curatif tous les 3 ans." },
+              { q: "L'humidité du canal affecte-t-elle vraiment les gouttières ?", a: "Oui. Les maisons les plus proches du canal de Charleroi, dans un air plus humide, voient souvent les mousses repousser plus vite. Un démoussage préventif annuel est recommandé plutôt qu'un nettoyage curatif tous les 3 ans." },
               { q: "Le zinc de nos maisons des années 40 est-il encore récupérable ?", a: "Dans la moitié des cas, oui. Un zinc des années 40 bien conservé peut encore durer 15 à 20 ans si les profils sont droits et les soudures tiennent. On fait un diagnostic gratuit avant toute décision de remplacement." },
               { q: "Intervenez-vous dans les quartiers Cureghem et Neerpede ?", a: "Oui, dans toute la commune d'Anderlecht sans exception. On connaît bien les particularités d'accès du bâti ouvrier local — cours étroites, passages latéraux, mitoyenneté complexe." },
               { q: "Peut-on coordonner le nettoyage avec les voisins mitoyens ?", a: "Absolument, c'est même conseillé. On propose un tarif réduit pour les interventions groupées sur deux maisons mitoyennes le même jour. Cela permet aussi de traiter les descentes partagées en une seule fois." },
+              ...localFaqs("anderlecht"),
             ].map((faq, i) => (
               <div key={i} className="bg-white rounded-xl border border-gray-100 p-6">
                 <p className="font-bold text-gray-900 mb-2 flex items-start gap-2">
@@ -179,6 +183,8 @@ export default function AnderlechtPage() {
           </div>
         </div>
       </section>
+
+      <CommuneConseils slug="anderlecht" />
 
       <section id="devis" className="py-14 bg-white">
         <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -199,19 +205,7 @@ export default function AnderlechtPage() {
           </p>
         </div>
       </section>
-
-      <section className="py-8 bg-gray-50 border-t border-gray-100">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <p className="text-sm font-semibold text-gray-500 mb-3">Communes voisines desservies</p>
-          <div className="flex flex-wrap gap-2">
-            {[{ name: "Molenbeek-Saint-Jean", slug: "molenbeek-saint-jean" }, { name: "Forest", slug: "forest" }, { name: "Saint-Gilles", slug: "saint-gilles" }].map((c) => (
-              <Link key={c.slug} href={`/communes/${c.slug}`} className="inline-flex items-center gap-1.5 bg-white border border-gray-200 hover:border-[#1A4731] hover:text-[#1A4731] text-gray-600 rounded-lg px-3 py-2 text-sm font-medium transition-colors">
-                <MapPin size={12} className="text-[#F97316]" />{c.name}
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
+      <NeighborCommunes slug="anderlecht" />
     </>
   )
 }

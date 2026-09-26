@@ -52,14 +52,6 @@ export default function BlogGouttiereGelHiver() {
         articleSection: "Saisonnier",
       },
       {
-        "@type": "BreadcrumbList",
-        itemListElement: [
-          { "@type": "ListItem", position: 1, name: "Accueil", item: DOMAIN },
-          { "@type": "ListItem", position: 2, name: "Blog", item: `${DOMAIN}/blog` },
-          { "@type": "ListItem", position: 3, name: "Gouttières et gel", item: `${DOMAIN}/blog/gouttiere-gel-hiver-bruxelles-protection` },
-        ],
-      },
-      {
         "@type": "FAQPage",
         mainEntity: [
           {
@@ -214,7 +206,7 @@ export default function BlogGouttiereGelHiver() {
       {/* Liens internes */}
       <section className="py-10 bg-white border-t border-gray-100">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-lg font-bold text-gray-900 mb-4">Articles liés</h2>
+          <h2 className="text-lg font-bold text-gray-900 mb-4">À lire aussi</h2>
           <div className="flex flex-wrap gap-3">
             {[
               { label: "Préparer l'automne", href: "/blog/preparer-gouttieres-automne-bruxelles" },
@@ -222,6 +214,8 @@ export default function BlogGouttiereGelHiver() {
               { label: "Gouttière qui déborde", href: "/blog/gouttiere-qui-deborde-causes-solutions" },
               { label: "Protections anti-feuilles", href: "/blog/protection-gouttieres-anti-feuilles-bruxelles" },
               { label: "Infiltrations façade", href: "/blog/infiltration-eau-facade-gouttieres" },
+              { label: "Gouttière qui fuit : trouver la fuite", href: "/blog/gouttiere-qui-fuit" },
+              { label: "Gouttière décrochée ou qui penche", href: "/blog/gouttiere-decrochee-qui-penche" },
             ].map((link) => (
               <Link
                 key={link.href}

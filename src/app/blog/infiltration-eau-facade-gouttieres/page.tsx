@@ -51,14 +51,6 @@ export default function BlogInfiltrationEauFacadeGouttieres() {
         keywords: "infiltration eau façade, gouttière défectueuse, humidité façade bruxelles",
         articleSection: "Urgence",
       },
-      {
-        "@type": "BreadcrumbList",
-        itemListElement: [
-          { "@type": "ListItem", position: 1, name: "Accueil", item: DOMAIN },
-          { "@type": "ListItem", position: 2, name: "Blog", item: `${DOMAIN}/blog` },
-          { "@type": "ListItem", position: 3, name: "Infiltrations façade", item: `${DOMAIN}/blog/infiltration-eau-facade-gouttieres` },
-        ],
-      },
     ],
   }
 
@@ -210,7 +202,7 @@ export default function BlogInfiltrationEauFacadeGouttieres() {
       {/* Liens internes */}
       <section className="py-10 bg-white border-t border-gray-100">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-lg font-bold text-gray-900 mb-4">Articles liés</h2>
+          <h2 className="text-lg font-bold text-gray-900 mb-4">À lire aussi</h2>
           <div className="flex flex-wrap gap-3">
             {[
               { label: "Gouttière qui déborde", href: "/blog/gouttiere-qui-deborde-causes-solutions" },
@@ -218,6 +210,8 @@ export default function BlogInfiltrationEauFacadeGouttieres() {
               { label: "Prix nettoyage gouttières", href: "/tarifs" },
               { label: "Préparer l'automne", href: "/blog/preparer-gouttieres-automne-bruxelles" },
               { label: "Matériaux gouttières", href: "/types-gouttieres" },
+              { label: "Chéneau et corniche : l'entretien", href: "/blog/chenau-corniche-entretien" },
+              { label: "Gouttière qui fuit ou qui goutte", href: "/blog/gouttiere-qui-fuit" },
             ].map((link) => (
               <Link
                 key={link.href}

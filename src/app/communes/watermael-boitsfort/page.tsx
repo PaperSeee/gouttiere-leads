@@ -4,11 +4,13 @@ import GutterIllustration from "@/components/GutterIllustration"
 import { Phone, ArrowRight, MapPin, Leaf, Droplets, Wrench, AlertTriangle } from "lucide-react"
 import Breadcrumb from "@/components/Breadcrumb"
 import ContactForm from "@/components/ContactForm"
+import { CommuneConseils, NeighborCommunes } from "@/components/CommuneLocal"
+import { localFaqs, localFaqSchema } from "@/lib/communes"
 
 export const metadata: Metadata = {
   title: { absolute: "Nettoyage de gouttières à Watermael-Boitsfort, Bruxelles" },
   description:
-    "Nettoyage gouttières à Watermael-Boitsfort : cités-jardins Le Logis & Floréal, Forêt de Soignes, mousses tenaces. Devis gratuit.",
+    "Nettoyage de gouttières à Watermael-Boitsfort dès 80 € : cités-jardins, Forêt de Soignes, mousses. Devis gratuit, sous 48h.",
   alternates: { canonical: "https://www.nettoyage-gouttieres-bruxelles.be/communes/watermael-boitsfort" },
   keywords: ["nettoyage gouttières Watermael-Boitsfort", "débouchage gouttières Watermael-Boitsfort", "gouttières bouchées Watermael-Boitsfort", "prix nettoyage gouttières Watermael-Boitsfort"],
   openGraph: {
@@ -28,13 +30,14 @@ export default function WatermealBoitsfortPage() {
       { "@type": "Question", name: "Combien de nettoyages par an à Watermael-Boitsfort ?", acceptedAnswer: { "@type": "Answer", text: "2 à 3 selon votre exposition. Les cités Le Logis et Floréal entourées d'arbres bénéficient d'un passage en mai, novembre et janvier-février (hêtres tardifs). On propose des abonnements annuels avec planning préétabli." } },
       { "@type": "Question", name: "Nos gouttières en cuivre des cités-jardins — comment les entretenir ?", acceptedAnswer: { "@type": "Answer", text: "Le cuivre se nettoie avec des outils non-abrasifs pour ne pas rayer la surface et préserver la patine naturelle. Si des fissures apparaissent, on répare par soudure à l'étain. Un cuivre bien entretenu peut durer 80 à 100 ans." } },
       { "@type": "Question", name: "Les mousses dans nos gouttières sont particulièrement épaisses — pourquoi ?", acceptedAnswer: { "@type": "Answer", text: "L'humidité permanente et l'ombrage des grands arbres créent les conditions idéales. À Watermael-Boitsfort, sans traitement préventif, les mousses peuvent atteindre une couche épaisse en quelques années, qui réduit fortement la capacité d'écoulement." } },
-      { "@type": "Question", name: "Proposez-vous des contrats d'entretien annuels ?", acceptedAnswer: { "@type": "Answer", text: "Oui, particulièrement recommandé ici. On établit un planning annuel de 2 à 3 visites avec tarif préférentiel. Vous n'avez plus à y penser — on vous contacte avant chaque intervention selon le calendrier convenu." } }
+      { "@type": "Question", name: "Proposez-vous des contrats d'entretien annuels ?", acceptedAnswer: { "@type": "Answer", text: "Oui, particulièrement recommandé ici. On établit un planning annuel de 2 à 3 visites avec tarif préférentiel. Vous n'avez plus à y penser — on vous contacte avant chaque intervention selon le calendrier convenu." } },
+      ...localFaqSchema("watermael-boitsfort"),
     ],
   }
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-      <Breadcrumb items={[{ label: "Accueil", href: "/" }, { label: "Communes", href: "/" }, { label: "Watermael-Boitsfort" }]} />
+      <Breadcrumb items={[{ label: "Accueil", href: "/" }, { label: "Communes", href: "/communes" }, { label: "Watermael-Boitsfort" }]} />
 
       <section className="bg-white border-b border-gray-100 py-12 lg:py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -166,6 +169,7 @@ export default function WatermealBoitsfortPage() {
               { q: "Nos gouttières en cuivre des cités-jardins — comment les entretenir ?", a: "Le cuivre se nettoie avec des outils non-abrasifs pour ne pas rayer la surface et préserver la patine naturelle. Si des fissures apparaissent, on répare par soudure à l'étain. Un cuivre bien entretenu peut durer 80 à 100 ans." },
               { q: "Les mousses dans nos gouttières sont particulièrement épaisses — pourquoi ?", a: "L'humidité permanente et l'ombrage des grands arbres créent les conditions idéales. À Watermael-Boitsfort, sans traitement préventif, les mousses peuvent atteindre une couche épaisse en quelques années, qui réduit fortement la capacité d'écoulement." },
               { q: "Proposez-vous des contrats d'entretien annuels ?", a: "Oui, particulièrement recommandé ici. On établit un planning annuel de 2 à 3 visites avec tarif préférentiel. Vous n'avez plus à y penser — on vous contacte avant chaque intervention selon le calendrier convenu." },
+              ...localFaqs("watermael-boitsfort"),
             ].map((faq, i) => (
               <div key={i} className="bg-white rounded-xl border border-gray-100 p-6">
                 <p className="font-bold text-gray-900 mb-2 flex items-start gap-2">
@@ -186,6 +190,8 @@ export default function WatermealBoitsfortPage() {
         </div>
       </section>
 
+      <CommuneConseils slug="watermael-boitsfort" />
+
       <section id="devis" className="py-14 bg-white">
         <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8">
@@ -205,19 +211,7 @@ export default function WatermealBoitsfortPage() {
           </p>
         </div>
       </section>
-
-      <section className="py-8 bg-gray-50 border-t border-gray-100">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <p className="text-sm font-semibold text-gray-500 mb-3">Communes voisines desservies</p>
-          <div className="flex flex-wrap gap-2">
-            {[{ name: "Auderghem", slug: "auderghem" }, { name: "Uccle", slug: "uccle" }, { name: "Woluwe-Saint-Pierre", slug: "woluwe-saint-pierre" }].map((c) => (
-              <Link key={c.slug} href={`/communes/${c.slug}`} className="inline-flex items-center gap-1.5 bg-white border border-gray-200 hover:border-[#1A4731] hover:text-[#1A4731] text-gray-600 rounded-lg px-3 py-2 text-sm font-medium transition-colors">
-                <MapPin size={12} className="text-[#F97316]" />{c.name}
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
+      <NeighborCommunes slug="watermael-boitsfort" />
     </>
   )
 }

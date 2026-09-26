@@ -4,11 +4,13 @@ import GutterIllustration from "@/components/GutterIllustration"
 import { Phone, ArrowRight, MapPin, Leaf, Droplets, Wrench, AlertTriangle } from "lucide-react"
 import Breadcrumb from "@/components/Breadcrumb"
 import ContactForm from "@/components/ContactForm"
+import { CommuneConseils, NeighborCommunes } from "@/components/CommuneLocal"
+import { localFaqs, localFaqSchema } from "@/lib/communes"
 
 export const metadata: Metadata = {
   title: { absolute: "Nettoyage de gouttières à Ganshoren | Gouttières Bruxelles" },
   description:
-    "Nettoyage gouttières à Ganshoren : maisons des années 50–60, jardins arborés, commune résidentielle calme. Devis gratuit.",
+    "Nettoyage de gouttières à Ganshoren dès 80 € : maisons des années 50–60, jardins arborés, descentes à contrôler. Devis gratuit, sous 48h.",
   alternates: { canonical: "https://www.nettoyage-gouttieres-bruxelles.be/communes/ganshoren" },
   keywords: ["nettoyage gouttières Ganshoren", "débouchage gouttières Ganshoren", "gouttières bouchées Ganshoren", "prix nettoyage gouttières Ganshoren"],
   openGraph: {
@@ -27,14 +29,15 @@ export default function GanshorenPage() {
     mainEntity: [
       { "@type": "Question", name: "Comment savoir si nos gouttières des années 60 doivent être remplacées ?", acceptedAnswer: { "@type": "Answer", text: "Trois signes clairs : des fuites visibles lors des pluies, des fixations (crochets) qui se détachent du fascia, et des déformations ou affaissements du chenal. Si deux de ces trois signes sont présents, un remplacement est préférable à une réparation ponctuelle." } },
       { "@type": "Question", name: "Un nettoyage par an est-il vraiment suffisant à Ganshoren ?", acceptedAnswer: { "@type": "Answer", text: "Pour la plupart des propriétés de Ganshoren, oui. La commune n'est pas exposée aux grands arbres forestiers ni aux avenues de platanes. Un nettoyage automnal en novembre, après la chute des feuilles, suffit généralement à maintenir le système en bon état." } },
-      { "@type": "Question", name: "Intervenez-vous avenue du Château et avenue de la Réforme ?", acceptedAnswer: { "@type": "Answer", text: "Oui, dans toutes les rues de Ganshoren. La petite taille de la commune nous permet d'intervenir rapidement — souvent sous 48 heures — sans frais de déplacement supplémentaires." } },
-      { "@type": "Question", name: "Peut-on avoir un devis sans s'engager ?", acceptedAnswer: { "@type": "Answer", text: "Bien sûr, le devis est entièrement gratuit et sans engagement. On peut l'établir par téléphone ou lors d'un passage sur place. On vous présente les différentes options et vous décidez librement." } }
+      { "@type": "Question", name: "Intervenez-vous dans toutes les rues de Ganshoren ?", acceptedAnswer: { "@type": "Answer", text: "Oui, dans toutes les rues de Ganshoren. La petite taille de la commune nous permet d'intervenir rapidement — souvent sous 48 heures — sans frais de déplacement supplémentaires." } },
+      { "@type": "Question", name: "Peut-on avoir un devis sans s'engager ?", acceptedAnswer: { "@type": "Answer", text: "Bien sûr, le devis est entièrement gratuit et sans engagement. On peut l'établir par téléphone ou lors d'un passage sur place. On vous présente les différentes options et vous décidez librement." } },
+      ...localFaqSchema("ganshoren"),
     ],
   }
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-      <Breadcrumb items={[{ label: "Accueil", href: "/" }, { label: "Communes", href: "/" }, { label: "Ganshoren" }]} />
+      <Breadcrumb items={[{ label: "Accueil", href: "/" }, { label: "Communes", href: "/communes" }, { label: "Ganshoren" }]} />
 
       <section className="bg-white border-b border-gray-100 py-12 lg:py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -48,7 +51,7 @@ export default function GanshorenPage() {
                 Nettoyage Gouttières<br /><span className="text-[#1A4731]">Ganshoren</span>
               </h1>
               <p className="text-gray-600 text-lg leading-relaxed mb-7 max-w-xl">
-                La plus petite commune de Bruxelles, mais avec un caractère résidentiel
+                L&apos;une des plus petites communes de Bruxelles, avec un caractère résidentiel
                 très marqué. Ses maisons des années 50 et 60 ont des gouttières qui
                 commencent à montrer leur âge et nécessitent une attention particulière.
               </p>
@@ -65,7 +68,7 @@ export default function GanshorenPage() {
               <p className="text-green-300 text-xs font-semibold uppercase tracking-wide mb-4">Ganshoren en pratique</p>
               <div className="space-y-4">
                 {[
-                  { val: "2,4 km²", label: "plus petite commune", detail: "entièrement résidentielle" },
+                  { val: "2,4 km²", label: "petite commune", detail: "entièrement résidentielle" },
                   { val: "60–70 ans", label: "âge moyen du bâti", detail: "gouttières en fin de vie" },
                   { val: "1×/an", label: "nettoyage suffisant", detail: "automne, après les feuilles" },
                 ].map((s) => (
@@ -166,8 +169,9 @@ export default function GanshorenPage() {
             {[
               { q: "Comment savoir si nos gouttières des années 60 doivent être remplacées ?", a: "Trois signes clairs : des fuites visibles lors des pluies, des fixations (crochets) qui se détachent du fascia, et des déformations ou affaissements du chenal. Si deux de ces trois signes sont présents, un remplacement est préférable à une réparation ponctuelle." },
               { q: "Un nettoyage par an est-il vraiment suffisant à Ganshoren ?", a: "Pour la plupart des propriétés de Ganshoren, oui. La commune n'est pas exposée aux grands arbres forestiers ni aux avenues de platanes. Un nettoyage automnal en novembre, après la chute des feuilles, suffit généralement à maintenir le système en bon état." },
-              { q: "Intervenez-vous avenue du Château et avenue de la Réforme ?", a: "Oui, dans toutes les rues de Ganshoren. La petite taille de la commune nous permet d'intervenir rapidement — souvent sous 48 heures — sans frais de déplacement supplémentaires." },
+              { q: "Intervenez-vous dans toutes les rues de Ganshoren ?", a: "Oui, dans toutes les rues de Ganshoren. La petite taille de la commune nous permet d'intervenir rapidement — souvent sous 48 heures — sans frais de déplacement supplémentaires." },
               { q: "Peut-on avoir un devis sans s'engager ?", a: "Bien sûr, le devis est entièrement gratuit et sans engagement. On peut l'établir par téléphone ou lors d'un passage sur place. On vous présente les différentes options et vous décidez librement." },
+              ...localFaqs("ganshoren"),
             ].map((faq, i) => (
               <div key={i} className="bg-white rounded-xl border border-gray-100 p-6">
                 <p className="font-bold text-gray-900 mb-2 flex items-start gap-2">
@@ -180,6 +184,8 @@ export default function GanshorenPage() {
           </div>
         </div>
       </section>
+
+      <CommuneConseils slug="ganshoren" />
 
       <section id="devis" className="py-14 bg-white">
         <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -200,19 +206,7 @@ export default function GanshorenPage() {
           </p>
         </div>
       </section>
-
-      <section className="py-8 bg-gray-50 border-t border-gray-100">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <p className="text-sm font-semibold text-gray-500 mb-3">Communes voisines desservies</p>
-          <div className="flex flex-wrap gap-2">
-            {[{ name: "Jette", slug: "jette" }, { name: "Koekelberg", slug: "koekelberg" }, { name: "Berchem-Sainte-Agathe", slug: "berchem-sainte-agathe" }].map((c) => (
-              <Link key={c.slug} href={`/communes/${c.slug}`} className="inline-flex items-center gap-1.5 bg-white border border-gray-200 hover:border-[#1A4731] hover:text-[#1A4731] text-gray-600 rounded-lg px-3 py-2 text-sm font-medium transition-colors">
-                <MapPin size={12} className="text-[#F97316]" />{c.name}
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
+      <NeighborCommunes slug="ganshoren" />
     </>
   )
 }

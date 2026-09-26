@@ -1,3 +1,5 @@
+import { guides } from "./guides"
+
 export interface BlogPost {
   slug: string
   title: string
@@ -9,6 +11,7 @@ export interface BlogPost {
   imageUrl: string
   imageAlt: string
   excerpt: string     // 2-3 phrases résumé
+  services: string[]  // slugs des pages /services/… concernées
 }
 
 export const blogPosts: BlogPost[] = [
@@ -23,6 +26,7 @@ export const blogPosts: BlogPost[] = [
     imageUrl: "https://images.unsplash.com/photo-1500674425229-f692875b0ab7?w=800&q=80",
     imageAlt: "Orage d'été au-dessus de toitures bruxelloises",
     excerpt: "Fleurs, graines et mousses s'accumulent dans les chéneaux dès mai-juin — et l'orage de juillet fait déborder ce qu'une pluie fine tolérait encore. Checklist complète en 7 points, et les bons réflexes si l'orage est déjà annoncé.",
+    services: ["debouchage-gouttieres", "nettoyage-gouttieres"],
   },
   {
     slug: "degat-des-eaux-gouttiere-assurance-bruxelles",
@@ -35,6 +39,7 @@ export const blogPosts: BlogPost[] = [
     imageUrl: "https://images.unsplash.com/photo-1517490232338-06b912a786b5?w=800&q=80",
     imageAlt: "Dégât des eaux sur plafond causé par une gouttière bouchée à Bruxelles",
     excerpt: "Une gouttière négligée qui provoque une infiltration peut coûter cher — et l'assurance ne couvre pas toujours. Voici ce que prévoit l'assurance habitation à Bruxelles et comment éviter un refus d'indemnisation lié au défaut d'entretien.",
+    services: ["contrat-entretien-gouttieres", "debouchage-gouttieres"],
   },
   {
     slug: "protection-gouttieres-anti-feuilles-bruxelles",
@@ -47,6 +52,7 @@ export const blogPosts: BlogPost[] = [
     imageUrl: "https://images.unsplash.com/photo-1632759145351-1d592919f522?w=800&q=80",
     imageAlt: "Grille de protection anti-feuilles installée sur une gouttière à Bruxelles",
     excerpt: "Marre de nettoyer vos gouttières chaque automne ? Les systèmes anti-feuilles promettent d'espacer les interventions. Grilles, brosses, filets, mousses : on compare leur efficacité réelle, leurs limites et leur prix pour les maisons bruxelloises.",
+    services: ["protection-gouttieres"],
   },
   {
     slug: "gouttiere-gel-hiver-bruxelles-protection",
@@ -59,6 +65,7 @@ export const blogPosts: BlogPost[] = [
     imageUrl: "https://images.unsplash.com/photo-1483921020237-2ff51e8e4b22?w=800&q=80",
     imageAlt: "Gouttière prise dans la glace et la neige en hiver à Bruxelles",
     excerpt: "L'hiver bruxellois met les gouttières à rude épreuve : eau stagnante qui gèle, fissures, descentes bouchées par la glace et barrières de glace en bord de toit. Voici les risques réels et comment préparer vos gouttières au froid.",
+    services: ["reparation-gouttieres", "nettoyage-gouttieres"],
   },
   {
     slug: "demoussage-toiture-bruxelles-quand-comment-prix",
@@ -71,6 +78,7 @@ export const blogPosts: BlogPost[] = [
     imageUrl: "https://images.unsplash.com/photo-1632759145351-1d592919f522?w=800&q=80",
     imageAlt: "Démoussage de toiture sur une maison bruxelloise — traitement anti-mousse",
     excerpt: "Le climat humide de Bruxelles favorise les mousses et lichens sur les toitures. Au-delà de l'esthétique, ces végétaux bouchent vos gouttières et abîment vos tuiles. Voici quand intervenir, comment et à quel prix en 2026.",
+    services: ["demoussage-toiture"],
   },
   {
     slug: "prix-remplacement-gouttieres-bruxelles-2026",
@@ -83,6 +91,7 @@ export const blogPosts: BlogPost[] = [
     imageUrl: "https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=800&q=80",
     imageAlt: "Remplacement de gouttières sur maison bruxelloise — tarifs 2026",
     excerpt: "Quand le nettoyage ne suffit plus, le remplacement s'impose. Ce guide détaille les tarifs 2026 du remplacement de gouttières à Bruxelles selon le matériau (zinc, aluminium, PVC), la longueur et le type de maison.",
+    services: ["reparation-gouttieres"],
   },
   {
     slug: "produits-nettoyage-gouttieres-bruxelles",
@@ -95,6 +104,7 @@ export const blogPosts: BlogPost[] = [
     imageUrl: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=800&q=80",
     imageAlt: "Produits de nettoyage pour gouttières — démoussants et anti-algues",
     excerpt: "Démoussants, dégraissants, traitements anti-algues : tous les produits ne se valent pas, et certains abîment vos gouttières. Voici ce qui fonctionne vraiment et ce qu'il faut éviter pour vos gouttières à Bruxelles.",
+    services: ["nettoyage-gouttieres", "demoussage-toiture"],
   },
   {
     slug: "entretien-gouttieres-quand-faire",
@@ -107,6 +117,7 @@ export const blogPosts: BlogPost[] = [
     imageUrl: "https://images.unsplash.com/photo-1504510533704-35680f356dfd?w=800&q=80",
     imageAlt: "Calendrier entretien gouttières Bruxelles — nettoyage 2x par an",
     excerpt: "Beaucoup de propriétaires bruxellois ne savent pas à quelle fréquence entretenir leurs gouttières. La règle à Bruxelles : 2 nettoyages par an minimum — après l'automne et avant le printemps. Voici le calendrier complet.",
+    services: ["nettoyage-gouttieres", "contrat-entretien-gouttieres"],
   },
   {
     slug: "gouttiere-qui-deborde-causes-solutions",
@@ -119,6 +130,7 @@ export const blogPosts: BlogPost[] = [
     imageUrl: "https://images.unsplash.com/photo-1516455590571-18256e5bb9ff?w=800&q=80",
     imageAlt: "Gouttière qui déborde sous la pluie — dégâts sur façade",
     excerpt: "Une gouttière qui déborde n'est jamais anodine. En quelques heures de pluie intense, l'eau peut infiltrer votre façade, saturer vos fondations ou endommager vos combles. Voici comment identifier la cause et réagir vite.",
+    services: ["debouchage-gouttieres"],
   },
   {
     slug: "preparer-gouttieres-automne-bruxelles",
@@ -131,6 +143,7 @@ export const blogPosts: BlogPost[] = [
     imageUrl: "https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=800&q=80",
     imageAlt: "Toiture et gouttières d'une maison bruxelloise en automne",
     excerpt: "L'automne bruxellois est la saison la plus critique pour vos gouttières. Feuilles de platanes, marrons et frênes obstruent les descentes en quelques semaines. Voici comment anticiper et éviter les dégâts des eaux.",
+    services: ["nettoyage-gouttieres", "protection-gouttieres", "contrat-entretien-gouttieres"],
   },
   {
     slug: "infiltration-eau-facade-gouttieres",
@@ -143,8 +156,20 @@ export const blogPosts: BlogPost[] = [
     imageUrl: "https://images.unsplash.com/photo-1516455590571-18256e5bb9ff?w=800&q=80",
     imageAlt: "Infiltration d'eau sur façade bruxelloise — rôle des gouttières",
     excerpt: "Si votre façade présente des traces d'humidité, des moisissures ou une peinture qui s'écaille, vos gouttières sont peut-être en cause. Voici comment identifier le problème et les solutions pour l'éliminer définitivement.",
+    services: ["reparation-gouttieres", "debouchage-gouttieres"],
   },
 ]
+
+// Guides pratiques (route /blog/[slug]) ajoutés à la liste du blog.
+blogPosts.push(
+  ...guides.map(({ slug, h1, description, date, dateLabel, category, readTime, imageUrl, imageAlt, excerpt, services }) => ({
+    slug, title: h1, description, date, dateLabel, category, readTime, imageUrl, imageAlt, excerpt, services,
+  })),
+)
+
+export function getPostsForService(service: string): BlogPost[] {
+  return blogPosts.filter((p) => p.services.includes(service))
+}
 
 export function getPostBySlug(slug: string): BlogPost | undefined {
   return blogPosts.find(p => p.slug === slug)

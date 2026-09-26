@@ -4,11 +4,13 @@ import GutterIllustration from "@/components/GutterIllustration"
 import { Phone, ArrowRight, MapPin, Leaf, Droplets, Wrench, AlertTriangle } from "lucide-react"
 import Breadcrumb from "@/components/Breadcrumb"
 import ContactForm from "@/components/ContactForm"
+import { CommuneConseils, NeighborCommunes } from "@/components/CommuneLocal"
+import { localFaqs, localFaqSchema } from "@/lib/communes"
 
 export const metadata: Metadata = {
   title: { absolute: "Nettoyage de gouttières à Auderghem | Gouttières Bruxelles" },
   description:
-    "Nettoyage gouttières à Auderghem : maisons 4 façades, Forêt de Soignes, aluminium à remplacer. Rouge-Cloître. Devis gratuit.",
+    "Nettoyage de gouttières à Auderghem dès 80 € : feuilles de hêtres de la Forêt de Soignes, maisons 4 façades. Devis gratuit, intervention sous 48h.",
   alternates: { canonical: "https://www.nettoyage-gouttieres-bruxelles.be/communes/auderghem" },
   keywords: ["nettoyage gouttières Auderghem", "débouchage gouttières Auderghem", "gouttières bouchées Auderghem", "prix nettoyage gouttières Auderghem"],
   openGraph: {
@@ -28,7 +30,8 @@ export default function AuderghemPage() {
       { "@type": "Question", name: "La Forêt de Soignes impacte-t-elle vraiment les gouttières à Auderghem ?", acceptedAnswer: { "@type": "Answer", text: "Oui, très significativement. Composée majoritairement de hêtres à feuilles caduques tardives, la forêt génère des apports de feuilles jusqu'en janvier-février. Un nettoyage en novembre ne suffit pas — un passage hivernal ou en début d'année est souvent nécessaire pour les propriétés proches du Soignes." } },
       { "@type": "Question", name: "Mes gouttières en aluminium des années 80 sont-elles à remplacer ?", acceptedAnswer: { "@type": "Answer", text: "À 35–45 ans, les gouttières en aluminium des années 80 dépassent leur durée de vie théorique. Si les profils se déforment, si les clips se décrochent ou si les joints sèchent, un remplacement s'impose. Un diagnostic gratuit permet de trancher entre réparation ciblée ou remplacement complet." } },
       { "@type": "Question", name: "Intervenez-vous dans le quartier Rouge-Cloître ?", acceptedAnswer: { "@type": "Answer", text: "Oui, nous intervenons dans tout Auderghem, y compris Rouge-Cloître, un quartier particulièrement boisé et humide. L'accès est facile et les propriétés y ont généralement des jardins arborés qui nécessitent un entretien régulier des gouttières." } },
-      { "@type": "Question", name: "Proposez-vous des devis pour les grandes propriétés ?", acceptedAnswer: { "@type": "Answer", text: "Absolument. Les maisons 4 façades d'Auderghem peuvent avoir 50 à 80 mètres de gouttières. Nous établissons systématiquement un devis sur mesure tenant compte du linéaire total, de l'accessibilité et de l'état général de l'installation." } }
+      { "@type": "Question", name: "Proposez-vous des devis pour les grandes propriétés ?", acceptedAnswer: { "@type": "Answer", text: "Absolument. Les maisons 4 façades d'Auderghem peuvent avoir 50 à 80 mètres de gouttières. Nous établissons systématiquement un devis sur mesure tenant compte du linéaire total, de l'accessibilité et de l'état général de l'installation." } },
+      ...localFaqSchema("auderghem"),
     ],
   }
   return (
@@ -36,7 +39,7 @@ export default function AuderghemPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <Breadcrumb items={[
         { label: "Accueil", href: "/" },
-        { label: "Communes", href: "/" },
+        { label: "Communes", href: "/communes" },
         { label: "Auderghem" },
       ]} />
 
@@ -173,6 +176,7 @@ export default function AuderghemPage() {
               { q: "Mes gouttières en aluminium des années 80 sont-elles à remplacer ?", a: "À 35–45 ans, les gouttières en aluminium des années 80 dépassent leur durée de vie théorique. Si les profils se déforment, si les clips se décrochent ou si les joints sèchent, un remplacement s'impose. Un diagnostic gratuit permet de trancher entre réparation ciblée ou remplacement complet." },
               { q: "Intervenez-vous dans le quartier Rouge-Cloître ?", a: "Oui, nous intervenons dans tout Auderghem, y compris Rouge-Cloître, un quartier particulièrement boisé et humide. L'accès est facile et les propriétés y ont généralement des jardins arborés qui nécessitent un entretien régulier des gouttières." },
               { q: "Proposez-vous des devis pour les grandes propriétés ?", a: "Absolument. Les maisons 4 façades d'Auderghem peuvent avoir 50 à 80 mètres de gouttières. Nous établissons systématiquement un devis sur mesure tenant compte du linéaire total, de l'accessibilité et de l'état général de l'installation." },
+              ...localFaqs("auderghem"),
             ].map((faq, i) => (
               <div key={i} className="bg-white rounded-xl border border-gray-100 p-6">
                 <p className="font-bold text-gray-900 mb-2 flex items-start gap-2">
@@ -185,6 +189,8 @@ export default function AuderghemPage() {
           </div>
         </div>
       </section>
+
+      <CommuneConseils slug="auderghem" />
 
       <section id="devis" className="py-14 bg-white">
         <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -207,19 +213,7 @@ export default function AuderghemPage() {
           </p>
         </div>
       </section>
-
-      <section className="py-8 bg-gray-50 border-t border-gray-100">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <p className="text-sm font-semibold text-gray-500 mb-3">Communes voisines desservies</p>
-          <div className="flex flex-wrap gap-2">
-            {[{ name: "Watermael-Boitsfort", slug: "watermael-boitsfort" }, { name: "Woluwe-Saint-Pierre", slug: "woluwe-saint-pierre" }, { name: "Ixelles", slug: "ixelles" }].map((c) => (
-              <Link key={c.slug} href={`/communes/${c.slug}`} className="inline-flex items-center gap-1.5 bg-white border border-gray-200 hover:border-[#1A4731] hover:text-[#1A4731] text-gray-600 rounded-lg px-3 py-2 text-sm font-medium transition-colors">
-                <MapPin size={12} className="text-[#F97316]" />{c.name}
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
+      <NeighborCommunes slug="auderghem" />
     </>
   )
 }

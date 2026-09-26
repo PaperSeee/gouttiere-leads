@@ -4,11 +4,13 @@ import GutterIllustration from "@/components/GutterIllustration"
 import { Phone, ArrowRight, MapPin, Leaf, Droplets, Wrench, AlertTriangle } from "lucide-react"
 import Breadcrumb from "@/components/Breadcrumb"
 import ContactForm from "@/components/ContactForm"
+import { CommuneConseils, NeighborCommunes } from "@/components/CommuneLocal"
+import { localFaqs, localFaqSchema } from "@/lib/communes"
 
 export const metadata: Metadata = {
   title: { absolute: "Nettoyage de gouttières à Evere | Gouttières Bruxelles" },
   description:
-    "Nettoyage gouttières à Evere : quartiers résidentiels OTAN, maisons des années 60, peupliers. Devis gratuit, intervention rapide.",
+    "Nettoyage de gouttières à Evere dès 80 € : maisons des années 50–70, graines de peupliers, descentes bouchées. Devis gratuit, intervention sous 48h.",
   alternates: { canonical: "https://www.nettoyage-gouttieres-bruxelles.be/communes/evere" },
   keywords: ["nettoyage gouttières Evere", "débouchage gouttières Evere", "gouttières bouchées Evere", "prix nettoyage gouttières Evere"],
   openGraph: {
@@ -27,14 +29,15 @@ export default function EverePage() {
     mainEntity: [
       { "@type": "Question", name: "Le coton de peupliers est-il vraiment problématique pour les gouttières ?", acceptedAnswer: { "@type": "Answer", text: "C'est l'un des phénomènes les plus surprenants. En mai-juin, les peupliers libèrent leurs aigrettes cotonneuses qui s'accumulent dans les gouttières et descentes en quelques jours. Humidifiées par la pluie, elles se compactent et bloquent complètement l'écoulement. Un nettoyage de juin est indispensable pour les propriétés exposées." } },
       { "@type": "Question", name: "Comment savoir si mon crochet de fixation est défaillant ?", acceptedAnswer: { "@type": "Answer", text: "Le signe le plus visible est une gouttière qui 'penche' ou s'éloigne de la façade. Vous pouvez aussi vérifier en regardant si l'eau s'accumule dans un recoin plutôt que de s'écouler vers la descente. Un crochet qui cède peut provoquer l'arrachage d'une section entière lors d'une forte pluie." } },
-      { "@type": "Question", name: "Intervenez-vous avenue de l'Héliport et chaussée de Louvain ?", acceptedAnswer: { "@type": "Answer", text: "Oui, dans toute la commune d'Evere, y compris les axes principaux et les rues résidentielles calmes autour du parc Walckiers. Délai habituel : 48 à 72 heures après contact." } },
-      { "@type": "Question", name: "Peut-on remplacer seulement les crochets sans changer toute la gouttière ?", acceptedAnswer: { "@type": "Answer", text: "Oui, si la gouttière est en bon état, on peut remplacer uniquement les crochets défaillants. C'est bien moins coûteux qu'un remplacement complet. On évalue ce qui peut être conservé lors du diagnostic gratuit." } }
+      { "@type": "Question", name: "Intervenez-vous dans tous les quartiers d'Evere ?", acceptedAnswer: { "@type": "Answer", text: "Oui, dans toute la commune d'Evere, des abords du cimetière de Bruxelles aux rues résidentielles proches du Moeraske. Délai habituel : 48 à 72 heures après contact." } },
+      { "@type": "Question", name: "Peut-on remplacer seulement les crochets sans changer toute la gouttière ?", acceptedAnswer: { "@type": "Answer", text: "Oui, si la gouttière est en bon état, on peut remplacer uniquement les crochets défaillants. C'est bien moins coûteux qu'un remplacement complet. On évalue ce qui peut être conservé lors du diagnostic gratuit." } },
+      ...localFaqSchema("evere"),
     ],
   }
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-      <Breadcrumb items={[{ label: "Accueil", href: "/" }, { label: "Communes", href: "/" }, { label: "Evere" }]} />
+      <Breadcrumb items={[{ label: "Accueil", href: "/" }, { label: "Communes", href: "/communes" }, { label: "Evere" }]} />
 
       <section className="bg-white border-b border-gray-100 py-12 lg:py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -90,7 +93,7 @@ export default function EverePage() {
               <div className="space-y-4 text-gray-600 leading-relaxed">
                 <p>
                   Evere est une commune du nord-est de Bruxelles qui associe des <strong>quartiers
-                  résidentiels calmes</strong> — notamment autour du parc Walckiers — et des zones
+                  résidentiels calmes</strong> — notamment près du Moeraske — et des zones
                   d&apos;activité importantes avec la présence de l&apos;OTAN et du Ring.
                 </p>
                 <p>
@@ -165,8 +168,9 @@ export default function EverePage() {
             {[
               { q: "Le coton de peupliers est-il vraiment problématique pour les gouttières ?", a: "C'est l'un des phénomènes les plus surprenants. En mai-juin, les peupliers libèrent leurs aigrettes cotonneuses qui s'accumulent dans les gouttières et descentes en quelques jours. Humidifiées par la pluie, elles se compactent et bloquent complètement l'écoulement. Un nettoyage de juin est indispensable pour les propriétés exposées." },
               { q: "Comment savoir si mon crochet de fixation est défaillant ?", a: "Le signe le plus visible est une gouttière qui 'penche' ou s'éloigne de la façade. Vous pouvez aussi vérifier en regardant si l'eau s'accumule dans un recoin plutôt que de s'écouler vers la descente. Un crochet qui cède peut provoquer l'arrachage d'une section entière lors d'une forte pluie." },
-              { q: "Intervenez-vous avenue de l'Héliport et chaussée de Louvain ?", a: "Oui, dans toute la commune d'Evere, y compris les axes principaux et les rues résidentielles calmes autour du parc Walckiers. Délai habituel : 48 à 72 heures après contact." },
+              { q: "Intervenez-vous dans tous les quartiers d'Evere ?", a: "Oui, dans toute la commune d'Evere, des abords du cimetière de Bruxelles aux rues résidentielles proches du Moeraske. Délai habituel : 48 à 72 heures après contact." },
               { q: "Peut-on remplacer seulement les crochets sans changer toute la gouttière ?", a: "Oui, si la gouttière est en bon état, on peut remplacer uniquement les crochets défaillants. C'est bien moins coûteux qu'un remplacement complet. On évalue ce qui peut être conservé lors du diagnostic gratuit." },
+              ...localFaqs("evere"),
             ].map((faq, i) => (
               <div key={i} className="bg-white rounded-xl border border-gray-100 p-6">
                 <p className="font-bold text-gray-900 mb-2 flex items-start gap-2">
@@ -179,6 +183,8 @@ export default function EverePage() {
           </div>
         </div>
       </section>
+
+      <CommuneConseils slug="evere" />
 
       <section id="devis" className="py-14 bg-white">
         <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -199,19 +205,7 @@ export default function EverePage() {
           </p>
         </div>
       </section>
-
-      <section className="py-8 bg-gray-50 border-t border-gray-100">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <p className="text-sm font-semibold text-gray-500 mb-3">Communes voisines desservies</p>
-          <div className="flex flex-wrap gap-2">
-            {[{ name: "Schaerbeek", slug: "schaerbeek" }, { name: "Woluwe-Saint-Lambert", slug: "woluwe-saint-lambert" }, { name: "Bruxelles-Ville", slug: "bruxelles" }].map((c) => (
-              <Link key={c.slug} href={`/communes/${c.slug}`} className="inline-flex items-center gap-1.5 bg-white border border-gray-200 hover:border-[#1A4731] hover:text-[#1A4731] text-gray-600 rounded-lg px-3 py-2 text-sm font-medium transition-colors">
-                <MapPin size={12} className="text-[#F97316]" />{c.name}
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
+      <NeighborCommunes slug="evere" />
     </>
   )
 }

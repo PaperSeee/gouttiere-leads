@@ -4,11 +4,13 @@ import GutterIllustration from "@/components/GutterIllustration"
 import { Phone, ArrowRight, MapPin, Leaf, Droplets, Wrench, AlertTriangle } from "lucide-react"
 import Breadcrumb from "@/components/Breadcrumb"
 import ContactForm from "@/components/ContactForm"
+import { CommuneConseils, NeighborCommunes } from "@/components/CommuneLocal"
+import { localFaqs, localFaqSchema } from "@/lib/communes"
 
 export const metadata: Metadata = {
   title: { absolute: "Nettoyage de gouttières à Woluwe-Saint-Lambert, Bruxelles" },
   description:
-    "Nettoyage gouttières à Woluwe-Saint-Lambert : villas résidentielles, immeubles, platanes des avenues. Devis gratuit, intervention 48h.",
+    "Nettoyage de gouttières à Woluwe-Saint-Lambert dès 80 € : villas, immeubles, parc Malou, Kapelleveld. Devis gratuit, sous 48h.",
   alternates: { canonical: "https://www.nettoyage-gouttieres-bruxelles.be/communes/woluwe-saint-lambert" },
   keywords: ["nettoyage gouttières Woluwe-Saint-Lambert", "débouchage gouttières Woluwe-Saint-Lambert", "gouttières bouchées Woluwe-Saint-Lambert", "prix nettoyage gouttières Woluwe-Saint-Lambert"],
   openGraph: {
@@ -26,15 +28,16 @@ export default function WoluweStLambertPage() {
     "@type": "FAQPage",
     mainEntity: [
       { "@type": "Question", name: "Intervenez-vous aussi pour les immeubles à appartements ?", acceptedAnswer: { "@type": "Answer", text: "Oui, avec un devis formel pour le syndic ou les copropriétaires. On établit un rapport d'état complet et peut revenir annuellement selon un planning préétabli pour assurer la continuité de l'entretien." } },
-      { "@type": "Question", name: "Les platanes de l'avenue de Tervueren — quelle fréquence de nettoyage ?", acceptedAnswer: { "@type": "Answer", text: "Pour les propriétés directement bordées de platanes, deux nettoyages annuels sont recommandés : novembre (chute des grandes feuilles) et mai (débris printaniers). Hors alignement de platanes, un passage automnal suffit généralement." } },
+      { "@type": "Question", name: "Les platanes des grandes avenues — quelle fréquence de nettoyage ?", acceptedAnswer: { "@type": "Answer", text: "Pour les propriétés directement bordées de platanes, deux nettoyages annuels sont recommandés : novembre (chute des grandes feuilles) et mai (débris printaniers). Hors alignement de platanes, un passage automnal suffit généralement." } },
       { "@type": "Question", name: "Quelle est la différence entre un nettoyage villa et un nettoyage immeuble ?", acceptedAnswer: { "@type": "Answer", text: "Pour une villa, on intervient depuis l'extérieur avec des échelles et on nettoie l'ensemble du système. Pour un immeuble, on accède souvent à la toiture et on nettoie les gouttières communes. La facturation immeuble inclut un rapport d'état pour le dossier de copropriété." } },
-      { "@type": "Question", name: "Nos gouttières en PVC des années 70 sont-elles à remplacer ?", acceptedAnswer: { "@type": "Answer", text: "Le PVC des années 70 a 50 ans — au-delà de la durée de vie standard de 25–30 ans. Si elles sont cassantes, fissurées ou si les fixations cèdent, un remplacement s'impose. On peut aussi remplacer uniquement les tronçons défaillants pour réduire le coût." } }
+      { "@type": "Question", name: "Nos gouttières en PVC des années 70 sont-elles à remplacer ?", acceptedAnswer: { "@type": "Answer", text: "Le PVC des années 70 a 50 ans — au-delà de la durée de vie standard de 25–30 ans. Si elles sont cassantes, fissurées ou si les fixations cèdent, un remplacement s'impose. On peut aussi remplacer uniquement les tronçons défaillants pour réduire le coût." } },
+      ...localFaqSchema("woluwe-saint-lambert"),
     ],
   }
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-      <Breadcrumb items={[{ label: "Accueil", href: "/" }, { label: "Communes", href: "/" }, { label: "Woluwe-Saint-Lambert" }]} />
+      <Breadcrumb items={[{ label: "Accueil", href: "/" }, { label: "Communes", href: "/communes" }, { label: "Woluwe-Saint-Lambert" }]} />
 
       <section className="bg-white border-b border-gray-100 py-12 lg:py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -91,8 +94,8 @@ export default function WoluweStLambertPage() {
                 <p>
                   Woluwe-Saint-Lambert présente deux réalités bien distinctes : les
                   <strong> quartiers résidentiels calmes</strong> avec villas des années 60–70 —
-                  notamment autour du Chant d&apos;Oiseau — et les zones plus urbaines et
-                  commerciales autour de l&apos;avenue de Tervueren.
+                  notamment autour de Kapelleveld et du parc de Roodebeek — et les zones plus
+                  urbaines et commerciales autour du Woluwe Shopping.
                 </p>
                 <p>
                   Les <strong>grandes avenues bordées de platanes</strong> génèrent des volumes
@@ -164,9 +167,10 @@ export default function WoluweStLambertPage() {
           <div className="space-y-5">
             {[
               { q: "Intervenez-vous aussi pour les immeubles à appartements ?", a: "Oui, avec un devis formel pour le syndic ou les copropriétaires. On établit un rapport d'état complet et peut revenir annuellement selon un planning préétabli pour assurer la continuité de l'entretien." },
-              { q: "Les platanes de l'avenue de Tervueren — quelle fréquence de nettoyage ?", a: "Pour les propriétés directement bordées de platanes, deux nettoyages annuels sont recommandés : novembre (chute des grandes feuilles) et mai (débris printaniers). Hors alignement de platanes, un passage automnal suffit généralement." },
+              { q: "Les platanes des grandes avenues — quelle fréquence de nettoyage ?", a: "Pour les propriétés directement bordées de platanes, deux nettoyages annuels sont recommandés : novembre (chute des grandes feuilles) et mai (débris printaniers). Hors alignement de platanes, un passage automnal suffit généralement." },
               { q: "Quelle est la différence entre un nettoyage villa et un nettoyage immeuble ?", a: "Pour une villa, on intervient depuis l'extérieur avec des échelles et on nettoie l'ensemble du système. Pour un immeuble, on accède souvent à la toiture et on nettoie les gouttières communes. La facturation immeuble inclut un rapport d'état pour le dossier de copropriété." },
               { q: "Nos gouttières en PVC des années 70 sont-elles à remplacer ?", a: "Le PVC des années 70 a 50 ans — au-delà de la durée de vie standard de 25–30 ans. Si elles sont cassantes, fissurées ou si les fixations cèdent, un remplacement s'impose. On peut aussi remplacer uniquement les tronçons défaillants pour réduire le coût." },
+              ...localFaqs("woluwe-saint-lambert"),
             ].map((faq, i) => (
               <div key={i} className="bg-white rounded-xl border border-gray-100 p-6">
                 <p className="font-bold text-gray-900 mb-2 flex items-start gap-2">
@@ -179,6 +183,8 @@ export default function WoluweStLambertPage() {
           </div>
         </div>
       </section>
+
+      <CommuneConseils slug="woluwe-saint-lambert" />
 
       <section id="devis" className="py-14 bg-white">
         <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -199,19 +205,7 @@ export default function WoluweStLambertPage() {
           </p>
         </div>
       </section>
-
-      <section className="py-8 bg-gray-50 border-t border-gray-100">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <p className="text-sm font-semibold text-gray-500 mb-3">Communes voisines desservies</p>
-          <div className="flex flex-wrap gap-2">
-            {[{ name: "Woluwe-Saint-Pierre", slug: "woluwe-saint-pierre" }, { name: "Etterbeek", slug: "etterbeek" }, { name: "Schaerbeek", slug: "schaerbeek" }].map((c) => (
-              <Link key={c.slug} href={`/communes/${c.slug}`} className="inline-flex items-center gap-1.5 bg-white border border-gray-200 hover:border-[#1A4731] hover:text-[#1A4731] text-gray-600 rounded-lg px-3 py-2 text-sm font-medium transition-colors">
-                <MapPin size={12} className="text-[#F97316]" />{c.name}
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
+      <NeighborCommunes slug="woluwe-saint-lambert" />
     </>
   )
 }

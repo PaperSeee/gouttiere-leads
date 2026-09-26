@@ -47,8 +47,8 @@ export default function APropos() {
                 Bruxelles présente des défis particuliers pour les propriétaires. La densité des
                 arbres dans des communes comme Uccle, Watermael-Boitsfort ou Woluwe-Saint-Pierre
                 génère des quantités importantes de feuilles et de débris végétaux qui obstruent
-                rapidement les gouttières en automne. Les immeubles haussmanniens d&apos;Etterbeek et
-                les maisons Art Nouveau de Schaerbeek ont des gouttières en zinc qui nécessitent
+                rapidement les gouttières en automne. Les immeubles à appartements d&apos;Etterbeek et
+                les maisons Belle Époque de Schaerbeek ont des gouttières en zinc qui nécessitent
                 une attention et un savoir-faire particuliers.
               </p>
               <p className="text-gray-600 leading-relaxed mb-4">

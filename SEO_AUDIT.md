@@ -140,3 +140,39 @@ Aucune donnée fournie. Conséquences :
 
 Non fait, faute d'information : pages périphérie, version NL, adresse/GPS/Google Business Profile
 dans le balisage, pages « service + commune ».
+
+---
+
+## 8. Mise en œuvre (26 septembre 2026)
+
+Vérification : `npm run build` (TypeScript inclus) OK, `npx tsc --noEmit` OK, crawl `scripts/seo-check.py` :
+**54 URL du sitemap en 200, 0 lien interne cassé, 0 title en double, 1 H1 par page, titles ≤ 60,
+descriptions ≤ 155**. Pas de script lint dans le dépôt.
+
+| Action du plan | Fait |
+|---|---|
+| 1. robots.txt | `/_next/` n'est plus bloqué |
+| 2. Faits locaux / voisines | 13 erreurs corrigées ; voisines centralisées dans `src/lib/communes.ts` |
+| 3. Mesure | `src/components/Analytics.tsx` : GA4 si `NEXT_PUBLIC_GA_ID` est défini (Consent Mode v2), événements `phone_click` et `whatsapp_click` vers GA4 **et** Clarity (actif dès maintenant) |
+| 4. 404 | `src/app/not-found.tsx` (téléphone + 6 liens, `noindex`) |
+| 5. Hubs | `/communes` et `/services` créés, fil d'Ariane corrigé sur 25 pages |
+| 6. Données structurées | `geo.position`/`ICBM`, `SearchAction`, hreflang et canonical par défaut du layout supprimés ; BreadcrumbList en double retiré des 11 articles |
+| 7. Guides | 8 guides (≈ 600–720 mots de texte chacun, 2 FAQ en FAQPage, « À lire aussi », liens vers le service et 2–3 articles) |
+| 8. Maillage service ↔ blog | Bloc « Guides pratiques » sur les 6 pages service ; 11 anciens articles reliés aux nouveaux guides |
+| 9. Communes | 19 pages : « Nos conseils pour les habitants de… » (2 paragraphes), 2 FAQ locales (visibles + FAQPage), guides utiles, voisines réelles avec ancres « Nettoyage de gouttières à … » |
+| 10. Meta | 19 communes + 4 services : prix réel dans la description (« dès 80 € », « 120–160 € », « 3 à 6 €/m² », « joint dès 40 € ») |
+| 11. Mentions légales | Section cookies rendue exacte (Clarity/GA4, consentement). BCE/TVA : **à fournir** |
+
+Pages communes après enrichissement : 759–851 mots (contre 477–571), **85–90 % de texte propre**
+par rapport aux 18 autres pages communes (shingles de 5 mots, contenu principal hors menu et footer).
+
+### À confirmer par le propriétaire
+
+- Numéro d'entreprise (BCE), forme juridique et adresse du siège pour les mentions légales et le balisage.
+- « Certifié » (footer), « garantie satisfaction », « garantie 20 ans » (Berchem), « éco-responsable / déchets recyclés » (À propos) : quelle certification ou garantie exacte ?
+- WhatsApp +32 477 23 41 87 différent du numéro d'appel : est-ce voulu ?
+- « Nous couvrons aussi la périphérie » (accueil, formulaire) : quelles communes, le cas échéant ?
+- Version néerlandaise : aucune créée (le site est 100 % FR) ; à décider.
+- Voisinages moins évidents gardés : Ixelles–Watermael-Boitsfort, Ixelles–Auderghem, Uccle–Watermael-Boitsfort, Berchem–Koekelberg.
+- Rues citées sans vérification possible, conservées dans les pages : avenue de la Réforme (retirée), chaussée de Haecht (Saint-Josse), avenues Molière/Brugmann/Winston Churchill (Uccle), rue de Birmingham/rue Ransfort (Molenbeek), chaussée de Gand (Berchem).
+- Protection patrimoniale des cités-jardins du Logis et de Floréal, et « liste non limitative des réparations locatives » bruxelloise : formulées prudemment, à faire relire si besoin.

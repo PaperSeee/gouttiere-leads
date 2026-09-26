@@ -52,14 +52,6 @@ export default function BlogOragesEteGouttieres() {
         articleSection: "Saisonnier",
       },
       {
-        "@type": "BreadcrumbList",
-        itemListElement: [
-          { "@type": "ListItem", position: 1, name: "Accueil", item: DOMAIN },
-          { "@type": "ListItem", position: 2, name: "Blog", item: `${DOMAIN}/blog` },
-          { "@type": "ListItem", position: 3, name: "Orages d'été : checklist gouttières", item: `${DOMAIN}/blog/orages-ete-gouttieres-bruxelles-checklist` },
-        ],
-      },
-      {
         "@type": "FAQPage",
         mainEntity: [
           {
@@ -203,7 +195,7 @@ export default function BlogOragesEteGouttieres() {
       {/* Liens internes */}
       <section className="py-10 bg-white border-t border-gray-100">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-lg font-bold text-gray-900 mb-4">Articles liés</h2>
+          <h2 className="text-lg font-bold text-gray-900 mb-4">À lire aussi</h2>
           <div className="flex flex-wrap gap-3">
             {[
               { label: "Gouttière qui déborde : causes et solutions", href: "/blog/gouttiere-qui-deborde-causes-solutions" },
@@ -211,6 +203,7 @@ export default function BlogOragesEteGouttieres() {
               { label: "Infiltrations façade et gouttières", href: "/blog/infiltration-eau-facade-gouttieres" },
               { label: "Prix nettoyage gouttières", href: "/tarifs" },
               { label: "Protections anti-feuilles", href: "/blog/protection-gouttieres-anti-feuilles-bruxelles" },
+              { label: "Descente pluviale bouchée : que faire", href: "/blog/descente-pluviale-bouchee" },
             ].map((link) => (
               <Link
                 key={link.href}

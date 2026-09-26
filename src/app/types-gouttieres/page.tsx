@@ -53,7 +53,7 @@ const types = [
       "Sensible aux eaux acides (conifères)",
       "Pose plus complexe",
     ],
-    desc: "Le zinc est le matériau historique des toitures bruxelloises. Les maisons Art Nouveau de Schaerbeek, les villas haussmanniennes d'Etterbeek et les maisons de maître d'Ixelles arborent souvent des gouttières et des cornières en zinc patinées. Ce matériau, lorsqu'il est bien entretenu, peut durer plusieurs générations. À Woluwe-Saint-Lambert, de nombreuses copropriétés construites dans les années 1960-1970 ont encore leurs gouttières en zinc d'origine, mais qui nécessitent maintenant inspection et souvent remplacement.",
+    desc: "Le zinc est le matériau historique des toitures bruxelloises. Les maisons Belle Époque de Schaerbeek, les maisons bourgeoises d'Etterbeek et les maisons de maître d'Ixelles arborent souvent des gouttières et des chéneaux en zinc patinés. Ce matériau, lorsqu'il est bien entretenu, peut durer plusieurs générations. À Woluwe-Saint-Lambert, de nombreuses copropriétés construites dans les années 1960-1970 ont encore leurs gouttières en zinc d'origine, mais qui nécessitent maintenant inspection et souvent remplacement.",
     price: "35–55€/ml",
     durée: "50–80 ans",
   },

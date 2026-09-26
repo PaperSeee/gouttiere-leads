@@ -4,11 +4,13 @@ import GutterIllustration from "@/components/GutterIllustration"
 import { Phone, ArrowRight, MapPin, Leaf, Droplets, Wrench, AlertTriangle } from "lucide-react"
 import Breadcrumb from "@/components/Breadcrumb"
 import ContactForm from "@/components/ContactForm"
+import { CommuneConseils, NeighborCommunes } from "@/components/CommuneLocal"
+import { localFaqs, localFaqSchema } from "@/lib/communes"
 
 export const metadata: Metadata = {
   title: { absolute: "Nettoyage de gouttières à Saint-Josse-ten-Noode, Bruxelles" },
   description:
-    "Nettoyage gouttières à Saint-Josse-ten-Noode : immeubles denses, accès hauteur, toitures plates. Devis gratuit, intervention rapide.",
+    "Nettoyage de gouttières à Saint-Josse dès 80 € : immeubles hauts, toits plats, avaloirs. Devis gratuit, intervention sous 48h.",
   alternates: { canonical: "https://www.nettoyage-gouttieres-bruxelles.be/communes/saint-josse-ten-noode" },
   keywords: ["nettoyage gouttières Saint-Josse", "débouchage gouttières Saint-Josse", "gouttières bouchées Saint-Josse", "prix nettoyage gouttières Saint-Josse"],
   openGraph: {
@@ -28,13 +30,14 @@ export default function SaintJossePage() {
       { "@type": "Question", name: "Comment accédez-vous aux gouttières d'un immeuble de 5 étages ?", acceptedAnswer: { "@type": "Answer", text: "Selon la configuration : trappe de toit interne (la plus simple), accès par l'immeuble voisin si accord possible, ou nacelle élévatrice pour les façades sans accès interne. On évalue l'accessibilité avant de donner un devis — l'accès est parfois le facteur de coût le plus important." } },
       { "@type": "Question", name: "Notre gargouille de toiture plate est bouchée — est-ce urgent ?", acceptedAnswer: { "@type": "Answer", text: "Très urgent, oui. Une gargouille bouchée sur toiture plate peut provoquer une accumulation d'eau qui infiltre l'étanchéité et cause des dégâts majeurs à l'immeuble sous-jacent en quelques heures. C'est une intervention d'urgence prioritaire." } },
       { "@type": "Question", name: "Le syndic doit-il donner son accord avant votre intervention ?", acceptedAnswer: { "@type": "Answer", text: "Pour les parties communes d'un immeuble, oui — il faut l'accord du syndic ou d'une assemblée générale pour les travaux importants. On peut vous fournir un devis formel et un rapport d'état préalable pour faciliter la prise de décision en AG." } },
-      { "@type": "Question", name: "Intervenez-vous chaussée de Haecht et rue Royale Sainte-Marie ?", acceptedAnswer: { "@type": "Answer", text: "Oui, dans toute la commune de Saint-Josse, y compris les axes principaux et les rues intérieures. La densité du bâti demande parfois une logistique particulière pour le stationnement du matériel, mais on s'adapte." } }
+      { "@type": "Question", name: "Intervenez-vous chaussée de Haecht et autour de la place Madou ?", acceptedAnswer: { "@type": "Answer", text: "Oui, dans toute la commune de Saint-Josse, y compris les axes principaux et les rues intérieures. La densité du bâti demande parfois une logistique particulière pour le stationnement du matériel, mais on s'adapte." } },
+      ...localFaqSchema("saint-josse-ten-noode"),
     ],
   }
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-      <Breadcrumb items={[{ label: "Accueil", href: "/" }, { label: "Communes", href: "/" }, { label: "Saint-Josse-ten-Noode" }]} />
+      <Breadcrumb items={[{ label: "Accueil", href: "/" }, { label: "Communes", href: "/communes" }, { label: "Saint-Josse-ten-Noode" }]} />
 
       <section className="bg-white border-b border-gray-100 py-12 lg:py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -167,7 +170,8 @@ export default function SaintJossePage() {
               { q: "Comment accédez-vous aux gouttières d'un immeuble de 5 étages ?", a: "Selon la configuration : trappe de toit interne (la plus simple), accès par l'immeuble voisin si accord possible, ou nacelle élévatrice pour les façades sans accès interne. On évalue l'accessibilité avant de donner un devis — l'accès est parfois le facteur de coût le plus important." },
               { q: "Notre gargouille de toiture plate est bouchée — est-ce urgent ?", a: "Très urgent, oui. Une gargouille bouchée sur toiture plate peut provoquer une accumulation d'eau qui infiltre l'étanchéité et cause des dégâts majeurs à l'immeuble sous-jacent en quelques heures. C'est une intervention d'urgence prioritaire." },
               { q: "Le syndic doit-il donner son accord avant votre intervention ?", a: "Pour les parties communes d'un immeuble, oui — il faut l'accord du syndic ou d'une assemblée générale pour les travaux importants. On peut vous fournir un devis formel et un rapport d'état préalable pour faciliter la prise de décision en AG." },
-              { q: "Intervenez-vous chaussée de Haecht et rue Royale Sainte-Marie ?", a: "Oui, dans toute la commune de Saint-Josse, y compris les axes principaux et les rues intérieures. La densité du bâti demande parfois une logistique particulière pour le stationnement du matériel, mais on s'adapte." },
+              { q: "Intervenez-vous chaussée de Haecht et autour de la place Madou ?", a: "Oui, dans toute la commune de Saint-Josse, y compris les axes principaux et les rues intérieures. La densité du bâti demande parfois une logistique particulière pour le stationnement du matériel, mais on s'adapte." },
+              ...localFaqs("saint-josse-ten-noode"),
             ].map((faq, i) => (
               <div key={i} className="bg-white rounded-xl border border-gray-100 p-6">
                 <p className="font-bold text-gray-900 mb-2 flex items-start gap-2">
@@ -180,6 +184,8 @@ export default function SaintJossePage() {
           </div>
         </div>
       </section>
+
+      <CommuneConseils slug="saint-josse-ten-noode" />
 
       <section id="devis" className="py-14 bg-white">
         <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -200,19 +206,7 @@ export default function SaintJossePage() {
           </p>
         </div>
       </section>
-
-      <section className="py-8 bg-gray-50 border-t border-gray-100">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <p className="text-sm font-semibold text-gray-500 mb-3">Communes voisines desservies</p>
-          <div className="flex flex-wrap gap-2">
-            {[{ name: "Schaerbeek", slug: "schaerbeek" }, { name: "Etterbeek", slug: "etterbeek" }, { name: "Bruxelles-Ville", slug: "bruxelles" }].map((c) => (
-              <Link key={c.slug} href={`/communes/${c.slug}`} className="inline-flex items-center gap-1.5 bg-white border border-gray-200 hover:border-[#1A4731] hover:text-[#1A4731] text-gray-600 rounded-lg px-3 py-2 text-sm font-medium transition-colors">
-                <MapPin size={12} className="text-[#F97316]" />{c.name}
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
+      <NeighborCommunes slug="saint-josse-ten-noode" />
     </>
   )
 }

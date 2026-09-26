@@ -52,14 +52,6 @@ export default function BlogAutomneGouttieresBruxellesPage() {
         inLanguage: "fr-BE",
         keywords: "nettoyage gouttières automne Bruxelles, préparer gouttières, entretien gouttières",
       },
-      {
-        "@type": "BreadcrumbList",
-        itemListElement: [
-          { "@type": "ListItem", position: 1, name: "Accueil", item: DOMAIN },
-          { "@type": "ListItem", position: 2, name: "Blog", item: `${DOMAIN}/blog` },
-          { "@type": "ListItem", position: 3, name: "Préparer gouttières automne Bruxelles", item: `${DOMAIN}/blog/preparer-gouttieres-automne-bruxelles` },
-        ],
-      },
     ],
   }
 
@@ -444,6 +436,8 @@ export default function BlogAutomneGouttieresBruxellesPage() {
               { label: "Gouttières à Watermael-Boitsfort", href: "/communes/watermael-boitsfort" },
               { label: "Gouttières à Woluwe-Saint-Pierre", href: "/communes/woluwe-saint-pierre" },
               { label: "Gouttières à Auderghem", href: "/communes/auderghem" },
+              { label: "Nettoyer ses gouttières soi-même", href: "/blog/nettoyer-gouttieres-soi-meme" },
+              { label: "Choisir une entreprise de gouttières", href: "/blog/choisir-entreprise-gouttieres-bruxelles" },
             ].map((link) => (
               <Link
                 key={link.href}

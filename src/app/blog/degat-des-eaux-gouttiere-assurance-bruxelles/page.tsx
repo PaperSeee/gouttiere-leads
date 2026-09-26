@@ -52,14 +52,6 @@ export default function BlogDegatDesEauxGouttiereAssurance() {
         articleSection: "Conseils",
       },
       {
-        "@type": "BreadcrumbList",
-        itemListElement: [
-          { "@type": "ListItem", position: 1, name: "Accueil", item: DOMAIN },
-          { "@type": "ListItem", position: 2, name: "Blog", item: `${DOMAIN}/blog` },
-          { "@type": "ListItem", position: 3, name: "Dégât des eaux et assurance", item: `${DOMAIN}/blog/degat-des-eaux-gouttiere-assurance-bruxelles` },
-        ],
-      },
-      {
         "@type": "FAQPage",
         mainEntity: [
           {
@@ -228,7 +220,7 @@ export default function BlogDegatDesEauxGouttiereAssurance() {
       {/* Liens internes */}
       <section className="py-10 bg-white border-t border-gray-100">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-lg font-bold text-gray-900 mb-4">Articles liés</h2>
+          <h2 className="text-lg font-bold text-gray-900 mb-4">À lire aussi</h2>
           <div className="flex flex-wrap gap-3">
             {[
               { label: "Infiltrations façade et gouttières", href: "/blog/infiltration-eau-facade-gouttieres" },
@@ -236,6 +228,8 @@ export default function BlogDegatDesEauxGouttiereAssurance() {
               { label: "Quand nettoyer ses gouttières ?", href: "/blog/entretien-gouttieres-quand-faire" },
               { label: "Prix nettoyage gouttières", href: "/tarifs" },
               { label: "Protections anti-feuilles", href: "/blog/protection-gouttieres-anti-feuilles-bruxelles" },
+              { label: "Locataire ou propriétaire : qui paie l'entretien ?", href: "/blog/entretien-gouttieres-locataire-proprietaire" },
+              { label: "Gouttières en copropriété", href: "/blog/gouttieres-copropriete-bruxelles" },
             ].map((link) => (
               <Link
                 key={link.href}

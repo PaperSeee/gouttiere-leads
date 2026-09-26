@@ -3,11 +3,12 @@ import Link from "next/link";
 import { Phone, CheckCircle, ArrowRight, Wrench } from "lucide-react";
 import Breadcrumb from "@/components/Breadcrumb";
 import ContactForm from "@/components/ContactForm";
+import ServiceGuides from "@/components/ServiceGuides";
 
 export const metadata: Metadata = {
   title: { absolute: "Réparation de gouttières à Bruxelles | Gouttières Bruxelles" },
   description:
-    "Réparation et remplacement de gouttières à Bruxelles. PVC, zinc, aluminium, cuivre. Fissures, joints, fixations. Devis gratuit.",
+    "Réparation de gouttières à Bruxelles : joint dès 40 €, crochet dès 8 €, tronçon zinc, PVC ou alu au mètre. Fuites, soudures, fixations. Devis gratuit.",
   alternates: { canonical: "https://www.nettoyage-gouttieres-bruxelles.be/services/reparation-gouttieres" },
   keywords: ["réparation gouttières Bruxelles", "gouttières qui fuient Bruxelles", "fixation gouttières Bruxelles", "remplacement gouttières endommagées"],
   openGraph: {
@@ -69,7 +70,7 @@ export default function ReparationGouttieres() {
       <Breadcrumb
         items={[
           { label: "Accueil", href: "/" },
-          { label: "Services", href: "/" },
+          { label: "Services", href: "/services" },
           { label: "Réparation gouttières" },
         ]}
       />
@@ -240,6 +241,7 @@ export default function ReparationGouttieres() {
           </div>
         </div>
       </section>
+      <ServiceGuides service="reparation-gouttieres" title="Guides : fuites, gouttière qui penche, remplacement" />
     </>
   );
 }

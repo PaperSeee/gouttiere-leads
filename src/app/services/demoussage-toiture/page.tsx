@@ -3,11 +3,12 @@ import Link from "next/link";
 import { Phone, CheckCircle, ArrowRight, Leaf } from "lucide-react";
 import Breadcrumb from "@/components/Breadcrumb";
 import ContactForm from "@/components/ContactForm";
+import ServiceGuides from "@/components/ServiceGuides";
 
 export const metadata: Metadata = {
   title: { absolute: "Démoussage de toiture à Bruxelles | Gouttières Bruxelles" },
   description:
-    "Démoussage et traitement anti-mousse de toiture à Bruxelles. Prolongez la vie de vos tuiles. Devis gratuit.",
+    "Démoussage de toiture à Bruxelles de 3 à 6 €/m², traitement anti-mousse inclus. Moins de débris dans vos gouttières. Devis gratuit.",
   alternates: { canonical: "https://www.nettoyage-gouttieres-bruxelles.be/services/demoussage-toiture" },
   keywords: ["démoussage toiture Bruxelles", "mousses toiture Bruxelles", "traitement anti-mousse toiture", "démoussage toiture prix Bruxelles"],
   openGraph: {
@@ -69,7 +70,7 @@ export default function DemoussageToiture() {
       <Breadcrumb
         items={[
           { label: "Accueil", href: "/" },
-          { label: "Services", href: "/" },
+          { label: "Services", href: "/services" },
           { label: "Démoussage toiture" },
         ]}
       />
@@ -236,6 +237,7 @@ export default function DemoussageToiture() {
           </div>
         </div>
       </section>
+      <ServiceGuides service="demoussage-toiture" title="Guides sur le démoussage de toiture" />
     </>
   );
 }

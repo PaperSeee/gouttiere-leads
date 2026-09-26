@@ -4,11 +4,13 @@ import GutterIllustration from "@/components/GutterIllustration"
 import { Phone, ArrowRight, MapPin, Leaf, Droplets, Wrench, AlertTriangle } from "lucide-react"
 import Breadcrumb from "@/components/Breadcrumb"
 import ContactForm from "@/components/ContactForm"
+import { CommuneConseils, NeighborCommunes } from "@/components/CommuneLocal"
+import { localFaqs, localFaqSchema } from "@/lib/communes"
 
 export const metadata: Metadata = {
   title: { absolute: "Nettoyage de gouttières à Bruxelles-Ville, Bruxelles" },
   description:
-    "Nettoyage gouttières à Bruxelles-Ville : Pentagone, Laeken, Neder-Over-Heembeek, immeubles et maisons de maître. Devis gratuit.",
+    "Nettoyage de gouttières à Bruxelles-Ville dès 80 € : Pentagone, Laeken, Neder-Over-Heembeek, immeubles et chéneaux. Devis gratuit, sous 48h.",
   alternates: { canonical: "https://www.nettoyage-gouttieres-bruxelles.be/communes/bruxelles" },
   keywords: ["nettoyage gouttières Bruxelles", "débouchage gouttières Bruxelles", "gouttières bouchées Bruxelles", "prix nettoyage gouttières Bruxelles"],
   openGraph: {
@@ -28,13 +30,14 @@ export default function BruxellesPage() {
       { "@type": "Question", name: "Comment accédez-vous aux toits des immeubles du centre ?", acceptedAnswer: { "@type": "Answer", text: "Selon la configuration : trappe de toit intérieure, accès par un immeuble voisin, ou nacelle pour les immeubles sans accès interne. On évalue gratuitement l'accessibilité avant toute intervention pour donner un devis précis." } },
       { "@type": "Question", name: "Notre villa à Laeken est proche du parc royal — quelle fréquence ?", acceptedAnswer: { "@type": "Answer", text: "Deux passages annuels sont recommandés pour les propriétés proches des grands espaces verts : novembre après la chute des feuilles et mai après la libération des samares d'érables et des pollens printaniers." } },
       { "@type": "Question", name: "Intervenez-vous à Neder-Over-Heembeek et Haren ?", acceptedAnswer: { "@type": "Answer", text: "Oui, dans toute la commune de Bruxelles-Ville, y compris les extensions nord. Ces zones ont moins de contraintes d'accès mais des propriétés souvent plus exposées à la végétation. Devis gratuit sur place." } },
-      { "@type": "Question", name: "L'immeuble de notre syndic n'a jamais eu de nettoyage de gouttières — par où commencer ?", acceptedAnswer: { "@type": "Answer", text: "On commence par un diagnostic complet : état des gouttières, descentes, évacuations. Ensuite on propose un programme de mise à niveau puis un planning d'entretien annuel. On fournit un rapport formel pour le dossier de copropriété." } }
+      { "@type": "Question", name: "L'immeuble de notre syndic n'a jamais eu de nettoyage de gouttières — par où commencer ?", acceptedAnswer: { "@type": "Answer", text: "On commence par un diagnostic complet : état des gouttières, descentes, évacuations. Ensuite on propose un programme de mise à niveau puis un planning d'entretien annuel. On fournit un rapport formel pour le dossier de copropriété." } },
+      ...localFaqSchema("bruxelles"),
     ],
   }
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-      <Breadcrumb items={[{ label: "Accueil", href: "/" }, { label: "Communes", href: "/" }, { label: "Bruxelles-Ville" }]} />
+      <Breadcrumb items={[{ label: "Accueil", href: "/" }, { label: "Communes", href: "/communes" }, { label: "Bruxelles-Ville" }]} />
 
       <section className="bg-white border-b border-gray-100 py-12 lg:py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -65,7 +68,7 @@ export default function BruxellesPage() {
               <p className="text-green-300 text-xs font-semibold uppercase tracking-wide mb-4">Bruxelles-Ville en chiffres</p>
               <div className="space-y-4">
                 {[
-                  { val: "19 km²", label: "la plus grande commune", detail: "3 zones aux besoins distincts" },
+                  { val: "≈ 33 km²", label: "la plus grande commune", detail: "3 zones aux besoins distincts" },
                   { val: "Laeken", label: "villas & parcs royaux", detail: "grands arbres, feuilles abondantes" },
                   { val: "1–2×/an", label: "selon le quartier", detail: "centre vs zone verte" },
                 ].map((s) => (
@@ -167,6 +170,7 @@ export default function BruxellesPage() {
               { q: "Notre villa à Laeken est proche du parc royal — quelle fréquence ?", a: "Deux passages annuels sont recommandés pour les propriétés proches des grands espaces verts : novembre après la chute des feuilles et mai après la libération des samares d'érables et des pollens printaniers." },
               { q: "Intervenez-vous à Neder-Over-Heembeek et Haren ?", a: "Oui, dans toute la commune de Bruxelles-Ville, y compris les extensions nord. Ces zones ont moins de contraintes d'accès mais des propriétés souvent plus exposées à la végétation. Devis gratuit sur place." },
               { q: "L'immeuble de notre syndic n'a jamais eu de nettoyage de gouttières — par où commencer ?", a: "On commence par un diagnostic complet : état des gouttières, descentes, évacuations. Ensuite on propose un programme de mise à niveau puis un planning d'entretien annuel. On fournit un rapport formel pour le dossier de copropriété." },
+              ...localFaqs("bruxelles"),
             ].map((faq, i) => (
               <div key={i} className="bg-white rounded-xl border border-gray-100 p-6">
                 <p className="font-bold text-gray-900 mb-2 flex items-start gap-2">
@@ -179,6 +183,8 @@ export default function BruxellesPage() {
           </div>
         </div>
       </section>
+
+      <CommuneConseils slug="bruxelles" />
 
       <section id="devis" className="py-14 bg-white">
         <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -199,19 +205,7 @@ export default function BruxellesPage() {
           </p>
         </div>
       </section>
-
-      <section className="py-8 bg-gray-50 border-t border-gray-100">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <p className="text-sm font-semibold text-gray-500 mb-3">Communes voisines desservies</p>
-          <div className="flex flex-wrap gap-2">
-            {[{ name: "Molenbeek-Saint-Jean", slug: "molenbeek-saint-jean" }, { name: "Schaerbeek", slug: "schaerbeek" }, { name: "Anderlecht", slug: "anderlecht" }].map((c) => (
-              <Link key={c.slug} href={`/communes/${c.slug}`} className="inline-flex items-center gap-1.5 bg-white border border-gray-200 hover:border-[#1A4731] hover:text-[#1A4731] text-gray-600 rounded-lg px-3 py-2 text-sm font-medium transition-colors">
-                <MapPin size={12} className="text-[#F97316]" />{c.name}
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
+      <NeighborCommunes slug="bruxelles" />
     </>
   )
 }

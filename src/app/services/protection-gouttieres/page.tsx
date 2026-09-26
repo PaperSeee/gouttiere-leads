@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Phone, CheckCircle, ArrowRight, Shield, Clock, Leaf } from "lucide-react";
 import Breadcrumb from "@/components/Breadcrumb";
 import ContactForm from "@/components/ContactForm";
+import ServiceGuides from "@/components/ServiceGuides";
 
 export const metadata: Metadata = {
   title: { absolute: "Protection anti-feuilles à Bruxelles | Gouttières Bruxelles" },
@@ -69,7 +70,7 @@ export default function ProtectionGouttieres() {
       <Breadcrumb
         items={[
           { label: "Accueil", href: "/" },
-          { label: "Services", href: "/" },
+          { label: "Services", href: "/services" },
           { label: "Protection anti-feuilles" },
         ]}
       />
@@ -220,6 +221,8 @@ export default function ProtectionGouttieres() {
       </section>
 
       {/* Devis */}
+      <ServiceGuides service="protection-gouttieres" title="Guides sur les protections anti-feuilles" />
+
       <section id="devis" className="py-16 bg-gray-50">
         <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl font-bold text-center text-gray-900 mb-8">Demandez votre devis gratuit</h2>

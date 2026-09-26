@@ -4,11 +4,13 @@ import GutterIllustration from "@/components/GutterIllustration"
 import { Phone, ArrowRight, MapPin, Leaf, Droplets, Wrench, AlertTriangle } from "lucide-react"
 import Breadcrumb from "@/components/Breadcrumb"
 import ContactForm from "@/components/ContactForm"
+import { CommuneConseils, NeighborCommunes } from "@/components/CommuneLocal"
+import { localFaqs, localFaqSchema } from "@/lib/communes"
 
 export const metadata: Metadata = {
   title: { absolute: "Nettoyage de gouttières à Molenbeek-Saint-Jean, Bruxelles" },
   description:
-    "Nettoyage gouttières à Molenbeek-Saint-Jean : habitat dense, canal, rénovation bâti ancien. Devis gratuit, intervention rapide.",
+    "Nettoyage de gouttières à Molenbeek dès 80 € : maisons de rapport, bords du canal, rénovations. Devis gratuit, intervention sous 48h.",
   alternates: { canonical: "https://www.nettoyage-gouttieres-bruxelles.be/communes/molenbeek-saint-jean" },
   keywords: ["nettoyage gouttières Molenbeek", "débouchage gouttières Molenbeek", "gouttières bouchées Molenbeek", "prix nettoyage gouttières Molenbeek"],
   openGraph: {
@@ -28,13 +30,14 @@ export default function MolenbeekSaintJeanPage() {
       { "@type": "Question", name: "On rénove notre immeuble de rapport — quand faut-il s'occuper des gouttières ?", acceptedAnswer: { "@type": "Answer", text: "Idéalement avant les travaux de façade et de toiture. Des gouttières défectueuses peuvent ruiner une réfection de façade en quelques mois. On s'intègre dans le planning de rénovation pour coordonner avec les autres corps de métier." } },
       { "@type": "Question", name: "Les gouttières de notre maison canal n'ont pas été nettoyées depuis 5 ans — que faire ?", acceptedAnswer: { "@type": "Answer", text: "Pas de panique, mais il faut agir vite. Après 5 ans sans entretien, on trouve généralement des mousses épaisses, des dépôts de sédiments compactés et parfois des plantes installées. On peut tout traiter en une intervention avec du matériel adapté." } },
       { "@type": "Question", name: "Comment s'organise le paiement pour une maison de rapport avec plusieurs propriétaires ?", acceptedAnswer: { "@type": "Answer", text: "On établit une facture unique au nom du gestionnaire ou de la copropriété. Si nécessaire, on peut diviser la facture par unité pour faciliter la répartition des charges entre copropriétaires." } },
-      { "@type": "Question", name: "Intervenez-vous rue de Birmingham et rue Ransfort ?", acceptedAnswer: { "@type": "Answer", text: "Oui, dans toute Molenbeek-Saint-Jean. On connaît bien la configuration des rues étroites et des cours intérieures de la commune. On s'adapte à chaque situation d'accès." } }
+      { "@type": "Question", name: "Intervenez-vous rue de Birmingham et rue Ransfort ?", acceptedAnswer: { "@type": "Answer", text: "Oui, dans toute Molenbeek-Saint-Jean. On connaît bien la configuration des rues étroites et des cours intérieures de la commune. On s'adapte à chaque situation d'accès." } },
+      ...localFaqSchema("molenbeek-saint-jean"),
     ],
   }
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-      <Breadcrumb items={[{ label: "Accueil", href: "/" }, { label: "Communes", href: "/" }, { label: "Molenbeek-Saint-Jean" }]} />
+      <Breadcrumb items={[{ label: "Accueil", href: "/" }, { label: "Communes", href: "/communes" }, { label: "Molenbeek-Saint-Jean" }]} />
 
       <section className="bg-white border-b border-gray-100 py-12 lg:py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -65,7 +68,7 @@ export default function MolenbeekSaintJeanPage() {
               <p className="text-green-300 text-xs font-semibold uppercase tracking-wide mb-4">Molenbeek en pratique</p>
               <div className="space-y-4">
                 {[
-                  { val: "Canal", label: "humidité côté nord", detail: "mousses renforcées" },
+                  { val: "Canal", label: "humidité côté canal", detail: "mousses renforcées" },
                   { val: "Rénov.", label: "bâti ancien prioritaire", detail: "gouttières souvent à remplacer" },
                   { val: "1×/an", label: "minimum conseillé", detail: "nettoyage automnal systématique" },
                 ].map((s) => (
@@ -95,7 +98,7 @@ export default function MolenbeekSaintJeanPage() {
                   sont souvent l&apos;une des premières causes de dommages à traiter.
                 </p>
                 <p>
-                  La partie nord de la commune, longeant le <strong>canal de Bruxelles-Charleroi</strong>,
+                  La partie est de la commune, le long du <strong>canal de Bruxelles-Charleroi</strong>,
                   cumule les effets de l&apos;humidité ambiante et d&apos;un entretien parfois
                   longtemps différé. Les gouttières y sont fréquemment obstruées, avec des
                   mousses épaisses et des dépôts de sédiments accumulés sur plusieurs années.
@@ -114,7 +117,7 @@ export default function MolenbeekSaintJeanPage() {
               </div>
               <div className="grid grid-cols-2 gap-3">
                 {[
-                  { icon: <Droplets size={18} className="text-[#1A4731]" />, text: "Canal & humidité nord", bg: "bg-green-50" },
+                  { icon: <Droplets size={18} className="text-[#1A4731]" />, text: "Canal & humidité", bg: "bg-green-50" },
                   { icon: <Wrench size={18} className="text-blue-600" />, text: "Maisons de rapport", bg: "bg-blue-50" },
                   { icon: <Leaf size={18} className="text-[#F97316]" />, text: "Bâti 1880–1940 à rénover", bg: "bg-orange-50" },
                   { icon: <AlertTriangle size={18} className="text-red-500" />, text: "Sédiments accumulés", bg: "bg-red-50" },
@@ -167,6 +170,7 @@ export default function MolenbeekSaintJeanPage() {
               { q: "Les gouttières de notre maison canal n'ont pas été nettoyées depuis 5 ans — que faire ?", a: "Pas de panique, mais il faut agir vite. Après 5 ans sans entretien, on trouve généralement des mousses épaisses, des dépôts de sédiments compactés et parfois des plantes installées. On peut tout traiter en une intervention avec du matériel adapté." },
               { q: "Comment s'organise le paiement pour une maison de rapport avec plusieurs propriétaires ?", a: "On établit une facture unique au nom du gestionnaire ou de la copropriété. Si nécessaire, on peut diviser la facture par unité pour faciliter la répartition des charges entre copropriétaires." },
               { q: "Intervenez-vous rue de Birmingham et rue Ransfort ?", a: "Oui, dans toute Molenbeek-Saint-Jean. On connaît bien la configuration des rues étroites et des cours intérieures de la commune. On s'adapte à chaque situation d'accès." },
+              ...localFaqs("molenbeek-saint-jean"),
             ].map((faq, i) => (
               <div key={i} className="bg-white rounded-xl border border-gray-100 p-6">
                 <p className="font-bold text-gray-900 mb-2 flex items-start gap-2">
@@ -179,6 +183,8 @@ export default function MolenbeekSaintJeanPage() {
           </div>
         </div>
       </section>
+
+      <CommuneConseils slug="molenbeek-saint-jean" />
 
       <section id="devis" className="py-14 bg-white">
         <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -199,19 +205,7 @@ export default function MolenbeekSaintJeanPage() {
           </p>
         </div>
       </section>
-
-      <section className="py-8 bg-gray-50 border-t border-gray-100">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <p className="text-sm font-semibold text-gray-500 mb-3">Communes voisines desservies</p>
-          <div className="flex flex-wrap gap-2">
-            {[{ name: "Anderlecht", slug: "anderlecht" }, { name: "Koekelberg", slug: "koekelberg" }, { name: "Jette", slug: "jette" }].map((c) => (
-              <Link key={c.slug} href={`/communes/${c.slug}`} className="inline-flex items-center gap-1.5 bg-white border border-gray-200 hover:border-[#1A4731] hover:text-[#1A4731] text-gray-600 rounded-lg px-3 py-2 text-sm font-medium transition-colors">
-                <MapPin size={12} className="text-[#F97316]" />{c.name}
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
+      <NeighborCommunes slug="molenbeek-saint-jean" />
     </>
   )
 }
