@@ -49,6 +49,7 @@ export default function Clarity({ id, storageKey, ownBanner = !storageKey }: Pro
   const choose = (v: "granted" | "denied") => {
     try { localStorage.setItem(key, v); } catch {}
     apply(v);
+    window.dispatchEvent(new Event(CONSENT_EVENT));
     setShow(false);
   };
 

@@ -28,7 +28,6 @@ export const metadata: Metadata = {
   keywords: ["nettoyage gouttières Bruxelles", "débouchage gouttières urgence Bruxelles", "réparation gouttières Bruxelles", "démoussage toiture Bruxelles", "gouttières bouchées intervention rapide"],
   alternates: {
     canonical: "https://www.nettoyage-gouttieres-bruxelles.be/",
-    languages: { "fr-BE": "/", "fr": "/", "x-default": "/" },
   },
   openGraph: {
     title: "Nettoyage gouttières Bruxelles dès 80€ | Devis gratuit",

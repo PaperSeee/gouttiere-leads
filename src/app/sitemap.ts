@@ -1,5 +1,6 @@
 import { MetadataRoute } from "next";
 import { blogPosts } from "@/lib/blog";
+import { communes } from "@/lib/communes";
 
 const BASE_URL = "https://www.nettoyage-gouttieres-bruxelles.be";
 // Pages statiques/commune/service sans date de modification naturelle :
@@ -7,27 +8,7 @@ const BASE_URL = "https://www.nettoyage-gouttieres-bruxelles.be";
 const STATIC_LAST_MODIFIED = new Date();
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const communes = [
-    "anderlecht",
-    "auderghem",
-    "berchem-sainte-agathe",
-    "bruxelles",
-    "etterbeek",
-    "evere",
-    "forest",
-    "ganshoren",
-    "ixelles",
-    "jette",
-    "koekelberg",
-    "molenbeek-saint-jean",
-    "saint-gilles",
-    "saint-josse-ten-noode",
-    "schaerbeek",
-    "uccle",
-    "watermael-boitsfort",
-    "woluwe-saint-lambert",
-    "woluwe-saint-pierre",
-  ];
+  const communeSlugs = communes.map((c) => c.slug);
 
   const staticPages = [
     "",
@@ -39,9 +20,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/mentions-legales",
   ];
 
-  const communePages = communes.map((slug) => `/communes/${slug}`);
+  const communePages = ["/communes", ...communeSlugs.map((slug) => `/communes/${slug}`)];
 
   const servicePages = [
+    "/services",
     "/services/nettoyage-gouttieres",
     "/services/debouchage-gouttieres",
     "/services/reparation-gouttieres",

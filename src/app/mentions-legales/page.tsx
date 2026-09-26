@@ -76,8 +76,10 @@ export default function MentionsLegales() {
             <section>
               <h2 className="text-xl font-bold text-gray-900 mb-3">5. Cookies</h2>
               <p className="text-gray-600 leading-relaxed">
-                Ce site utilise uniquement des cookies techniques essentiels au fonctionnement du site.
-                Aucun cookie de traçage ou de publicité n&apos;est utilisé sans votre consentement explicite.
+                Ce site mesure sa fréquentation avec Microsoft Clarity et, le cas échéant, Google Analytics 4.
+                Sans votre accord via le bandeau affiché lors de la première visite, ces outils fonctionnent
+                sans cookie de mesure d&apos;audience. Aucun cookie publicitaire n&apos;est utilisé. Vous pouvez
+                changer d&apos;avis en effaçant les données du site dans votre navigateur.
               </p>
             </section>
 

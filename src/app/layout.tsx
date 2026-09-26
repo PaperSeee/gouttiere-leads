@@ -1,4 +1,5 @@
 import ClarityTag from "@/components/Clarity";
+import Analytics from "@/components/Analytics";
 import type { Metadata, Viewport } from "next";
 import { Inter, Sora } from "next/font/google";
 import "./globals.css";
@@ -38,14 +39,6 @@ export const metadata: Metadata = {
     "nettoyage descentes pluviales Bruxelles",
   ],
   metadataBase: new URL(DOMAIN),
-  alternates: {
-    canonical: "/",
-    languages: {
-      "fr-BE": "/",
-      "fr": "/",
-      "x-default": "/",
-    },
-  },
   icons: {
     icon: [
       { url: "/favicon.ico", sizes: "any" },
@@ -129,12 +122,8 @@ const websiteSchema = {
   url: DOMAIN,
   name: "Nettoyage Gouttières Bruxelles",
   description: "Nettoyage de gouttières à Bruxelles. Débouchage, réparation, démoussage toiture.",
+  inLanguage: "fr-BE",
   publisher: { "@id": `${DOMAIN}/#business` },
-  potentialAction: {
-    "@type": "SearchAction",
-    target: { "@type": "EntryPoint", urlTemplate: `${DOMAIN}/?s={search_term_string}` },
-    "query-input": "required name=search_term_string",
-  },
 };
 
 export default function RootLayout({
@@ -152,8 +141,6 @@ export default function RootLayout({
         <link rel="manifest" href="/site.webmanifest" />
         <meta name="geo.region" content="BE-BRU" />
         <meta name="geo.placename" content="Bruxelles" />
-        <meta name="geo.position" content="50.8503;4.3517" />
-        <meta name="ICBM" content="50.8503, 4.3517" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
@@ -187,7 +174,9 @@ export default function RootLayout({
             Devis gratuit
           </a>
         </div>
-      <ClarityTag id="yntj10qd01" /></body>
+        <ClarityTag id="yntj10qd01" />
+        <Analytics gaId={process.env.NEXT_PUBLIC_GA_ID} />
+      </body>
     </html>
   );
 }
