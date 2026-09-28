@@ -18,7 +18,7 @@ import {
 import ContactForm from "@/components/ContactForm";
 import FAQAccordion from "@/components/FAQAccordion";
 import BlogCard from "@/components/BlogCard";
-import { getRecentPosts } from "@/lib/blog";
+import { blogPosts, getRecentPosts } from "@/lib/blog";
 import GutterIllustration from "@/components/GutterIllustration";
 
 export const metadata: Metadata = {
@@ -116,6 +116,20 @@ function RecentPostsSection() {
             <BlogCard key={post.slug} post={post} featured />
           ))}
         </div>
+        <ul className="mt-10 grid gap-2 sm:grid-cols-2">
+          {blogPosts.map((post) => (
+            <li key={post.slug}>
+              <Link href={`/blog/${post.slug}`} className="text-gray-700 underline underline-offset-2 hover:text-[#F97316]">
+                {post.title}
+              </Link>
+            </li>
+          ))}
+        </ul>
+        <p className="mt-6 flex flex-wrap gap-6 text-sm font-semibold">
+          <Link href="/services" className="text-[#1A4731] hover:text-[#F97316]">Tous nos services</Link>
+          <Link href="/communes" className="text-[#1A4731] hover:text-[#F97316]">Toutes les communes desservies</Link>
+          <Link href="/types-gouttieres" className="text-[#1A4731] hover:text-[#F97316]">Types de gouttières</Link>
+        </p>
         <div className="mt-8 text-center sm:hidden">
           <Link
             href="/blog"
