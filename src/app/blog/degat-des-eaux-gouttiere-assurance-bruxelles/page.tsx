@@ -5,9 +5,9 @@ import Breadcrumb from "@/components/Breadcrumb"
 import ContactForm from "@/components/ContactForm"
 
 export const metadata: Metadata = {
-  title: { absolute: "Dégât des eaux et gouttière : que couvre l'assurance ?" },
+  title: { absolute: "Dégât des eaux et gouttière : l'assurance paie-t-elle ?" },
   description:
-    "Une gouttière bouchée a causé un dégât des eaux à Bruxelles ? Découvrez si votre assurance couvre le sinistre et évitez un refus pour défaut d'entretien.",
+    "Gouttière bouchée et dégât des eaux à Bruxelles : ce que couvre votre assurance, le piège du défaut d'entretien et comment l'éviter.",
   keywords: ["dégât des eaux gouttière assurance", "gouttière bouchée assurance habitation", "défaut entretien gouttière", "infiltration assurance Bruxelles", "indemnisation dégât des eaux toiture"],
   alternates: { canonical: "https://www.nettoyage-gouttieres-bruxelles.be/blog/degat-des-eaux-gouttiere-assurance-bruxelles" },
   openGraph: {
@@ -44,7 +44,7 @@ export default function BlogDegatDesEauxGouttiereAssurance() {
           logo: { "@type": "ImageObject", url: `${DOMAIN}/logo.svg` },
         },
         datePublished: "2026-06-14",
-        dateModified: "2026-06-14",
+        dateModified: "2026-10-04",
         image: "https://images.unsplash.com/photo-1517490232338-06b912a786b5?w=1200&q=80",
         mainEntityOfPage: { "@type": "WebPage", "@id": `${DOMAIN}/blog/degat-des-eaux-gouttiere-assurance-bruxelles` },
         inLanguage: "fr-BE",
@@ -109,7 +109,7 @@ export default function BlogDegatDesEauxGouttiereAssurance() {
             Dégât des Eaux dû à une Gouttière : Êtes-vous Couvert par votre Assurance ?
           </h1>
           <p className="text-green-200 text-base leading-relaxed max-w-2xl">
-            Une gouttière négligée peut coûter cher — et l&apos;assurance ne couvre pas toujours. Voici ce que prévoit l&apos;assurance habitation à Bruxelles et comment éviter un refus d&apos;indemnisation.
+            Un dégât des eaux causé par une gouttière bouchée est couvert s&apos;il est soudain et accidentel. En cas de défaut d&apos;entretien, l&apos;assureur peut réduire ou refuser l&apos;indemnisation. À Bruxelles, conservez les factures de nettoyage : elles prouvent que vos gouttières étaient entretenues et pèsent en votre faveur.
           </p>
         </div>
       </section>
@@ -156,6 +156,9 @@ export default function BlogDegatDesEauxGouttiereAssurance() {
             </p>
             <p>
               La logique de l&apos;assurance est simple : elle couvre l&apos;imprévu, pas la négligence. Une gouttière qu&apos;on n&apos;a jamais nettoyée et qui finit par déborder n&apos;est pas un « accident » aux yeux de l&apos;assureur — c&apos;est une conséquence prévisible.
+            </p>
+            <p>
+              Pour limiter ce risque, faites réaliser un <Link href="/">nettoyage de gouttières à Bruxelles</Link> une à deux fois par an : les <Link href="/tarifs">tarifs</Link> sont publics et le prix est fixé avant l&apos;intervention.
             </p>
 
             <h2>Les 5 signes que vos gouttières causent des infiltrations</h2>

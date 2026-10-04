@@ -69,7 +69,7 @@ export default async function GuidePage({ params }: PageProps<"/blog/[slug]">) {
         author: { "@type": "Organization", name: "Nettoyage Gouttières Bruxelles", url: DOMAIN },
         publisher: { "@id": `${DOMAIN}/#business` },
         datePublished: g.date,
-        dateModified: g.date,
+        dateModified: g.dateModified ?? g.date,
         image: g.imageUrl.replace("w=800", "w=1200"),
         mainEntityOfPage: { "@type": "WebPage", "@id": url },
         inLanguage: "fr-BE",

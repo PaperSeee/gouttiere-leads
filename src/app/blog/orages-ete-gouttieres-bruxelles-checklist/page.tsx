@@ -5,9 +5,9 @@ import Breadcrumb from "@/components/Breadcrumb"
 import ContactForm from "@/components/ContactForm"
 
 export const metadata: Metadata = {
-  title: { absolute: "Orages d'été : la checklist gouttières à Bruxelles" },
+  title: { absolute: "Orage à Bruxelles : préparer ses gouttières en 7 points" },
   description:
-    "Un orage d'été déverse en 20 minutes l'équivalent de plusieurs jours de pluie. La checklist complète pour préparer vos gouttières avant l'orage à…",
+    "Un orage d'été déverse en 20 minutes l'équivalent de plusieurs jours de pluie. La checklist en 7 points pour préparer vos gouttières avant les intempéries.",
   keywords: ["orage gouttière bruxelles", "gouttière déborde orage", "pluie intense gouttière bouchée", "préparer gouttières été", "intempéries toiture Bruxelles"],
   alternates: { canonical: "https://www.nettoyage-gouttieres-bruxelles.be/blog/orages-ete-gouttieres-bruxelles-checklist" },
   openGraph: {
@@ -44,7 +44,7 @@ export default function BlogOragesEteGouttieres() {
           logo: { "@type": "ImageObject", url: `${DOMAIN}/logo.svg` },
         },
         datePublished: "2026-07-03",
-        dateModified: "2026-07-03",
+        dateModified: "2026-10-04",
         image: "https://images.unsplash.com/photo-1500674425229-f692875b0ab7?w=1200&q=80",
         mainEntityOfPage: { "@type": "WebPage", "@id": `${DOMAIN}/blog/orages-ete-gouttieres-bruxelles-checklist` },
         inLanguage: "fr-BE",
@@ -109,7 +109,7 @@ export default function BlogOragesEteGouttieres() {
             Orages d&apos;Été à Bruxelles : la Checklist Gouttières Avant les Intempéries
           </h1>
           <p className="text-green-200 text-base leading-relaxed max-w-2xl">
-            Un orage d&apos;été peut déverser en vingt minutes l&apos;équivalent de plusieurs jours de pluie. Si vos gouttières sont encrassées, c&apos;est le débordement assuré — au pire moment. Voici comment vous y préparer.
+            Un orage d&apos;été peut déverser 20 à 40 litres d&apos;eau par m² en moins d&apos;une heure, un débit qu&apos;une gouttière encrassée n&apos;évacue pas. À Bruxelles, vérifiez crapaudines, descentes et regards avant la saison, et faites nettoyer le chéneau s&apos;il n&apos;a pas été entretenu depuis six mois.
           </p>
         </div>
       </section>
@@ -171,6 +171,9 @@ export default function BlogOragesEteGouttieres() {
             <h2>Combien ça coûte — et combien ça évite</h2>
             <p>
               Un nettoyage professionnel de gouttières à Bruxelles coûte généralement <strong>entre 80 et 200 €</strong> selon la longueur et l&apos;accessibilité (détail dans notre <Link href="/tarifs">guide des prix</Link>). Un dégât des eaux après débordement — plafonds, peintures, parquet — se chiffre vite en milliers d&apos;euros, avec le risque d&apos;un refus d&apos;indemnisation pour défaut d&apos;entretien. L&apos;arbitrage est vite fait.
+            </p>
+            <p>
+              Un <Link href="/">nettoyage de gouttières à Bruxelles</Link> réalisé avant la saison des orages, facture d&apos;entretien à l&apos;appui, vous couvre à la fois contre le débordement et face à votre assureur.
             </p>
 
           </article>

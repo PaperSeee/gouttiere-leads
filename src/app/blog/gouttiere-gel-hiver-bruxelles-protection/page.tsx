@@ -5,7 +5,7 @@ import Breadcrumb from "@/components/Breadcrumb"
 import ContactForm from "@/components/ContactForm"
 
 export const metadata: Metadata = {
-  title: { absolute: "Gouttières et gel en hiver : risques et protection" },
+  title: { absolute: "Gel en hiver : protéger ses gouttières à Bruxelles" },
   description:
     "Gel et neige fondue endommagent les gouttières en hiver à Bruxelles. Découvrez les risques (fissures, descentes bouchées) et comment les protéger du froid.",
   keywords: ["gouttière gel hiver", "gouttière gelée Bruxelles", "barrière de glace toiture", "descente gouttière bouchée glace", "protéger gouttière froid"],
@@ -44,7 +44,7 @@ export default function BlogGouttiereGelHiver() {
           logo: { "@type": "ImageObject", url: `${DOMAIN}/logo.svg` },
         },
         datePublished: "2026-06-10",
-        dateModified: "2026-06-10",
+        dateModified: "2026-10-04",
         image: "https://images.unsplash.com/photo-1483921020237-2ff51e8e4b22?w=1200&q=80",
         mainEntityOfPage: { "@type": "WebPage", "@id": `${DOMAIN}/blog/gouttiere-gel-hiver-bruxelles-protection` },
         inLanguage: "fr-BE",
@@ -101,7 +101,7 @@ export default function BlogGouttiereGelHiver() {
             Gouttières et Gel en Hiver à Bruxelles : Risques et Comment les Protéger
           </h1>
           <p className="text-green-200 text-base leading-relaxed max-w-2xl">
-            L&apos;hiver bruxellois met les gouttières à rude épreuve : eau qui gèle, fissures, descentes bouchées par la glace. Voici les risques réels et comment préparer vos gouttières au froid.
+            Quand l&apos;eau gèle dans une gouttière encombrée, elle gonfle et fissure le zinc ou le PVC, bouche les descentes et forme des barrières de glace en bord de toit. À Bruxelles, la protection la plus efficace reste un nettoyage complet avant l&apos;hiver : une gouttière propre et bien pentée évacue l&apos;eau au lieu de la laisser stagner.
           </p>
         </div>
       </section>
@@ -175,6 +175,9 @@ export default function BlogGouttiereGelHiver() {
             <h2>Le bon réflexe à Bruxelles</h2>
             <p>
               La meilleure protection contre le gel n&apos;est pas un gadget mais un <strong>nettoyage complet à l&apos;automne</strong>. Une gouttière propre, bien pentée et avec des descentes dégagées évacue l&apos;eau au lieu de la laisser stagner et geler. C&apos;est le geste le plus efficace — et le moins cher — pour traverser l&apos;hiver bruxellois sans dégâts.
+            </p>
+            <p>
+              Un <Link href="/">nettoyage de gouttières à Bruxelles</Link> avant les premières gelées coûte dès 80 € ; la grille complète est sur la page <Link href="/tarifs">tarifs</Link>.
             </p>
 
             <div className="not-prose bg-green-50 border border-green-200 rounded-xl p-5 mb-6">

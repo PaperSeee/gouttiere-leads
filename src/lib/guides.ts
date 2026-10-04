@@ -18,6 +18,8 @@ export interface Guide {
   description: string;
   date: string;
   dateLabel: string;
+  /** Optionnel : à renseigner quand le guide est mis à jour après publication. */
+  dateModified?: string;
   category: string;
   readTime: string;
   imageUrl: string;
@@ -284,11 +286,12 @@ export const guides: Guide[] = [
   },
   {
     slug: "gouttieres-copropriete-bruxelles",
-    title: "Gouttières et copropriété à Bruxelles",
+    title: "Gouttière en copropriété : qui paie ?",
     h1: "Gouttières en copropriété à Bruxelles : syndic, assemblée générale et répartition des frais",
     description:
-      "Gouttières en copropriété : partie commune ou privative, rôle du syndic et de l'AG, répartition des frais et devis à présenter.",
+      "Gouttières en copropriété à Bruxelles : partie commune ou privative, rôle du syndic et de l'AG, répartition des frais et devis à présenter.",
     ...PUBLISHED,
+    dateModified: "2026-10-04",
     category: "Conseils",
     readTime: "7 min",
     imageUrl: "https://images.unsplash.com/photo-1517490232338-06b912a786b5?w=800&q=80",
@@ -297,7 +300,7 @@ export const guides: Guide[] = [
       "Dans un immeuble, personne ne se sent responsable de la gouttière… jusqu'au dégât des eaux. Qui décide, qui paie, et comment faire voter un entretien régulier en assemblée générale.",
     services: ["contrat-entretien-gouttieres"],
     intro:
-      "À Bruxelles, une grande partie des logements se trouve dans des immeubles en copropriété : immeubles à appartements, mais aussi maisons de maître divisées en plusieurs lots. Les gouttières y posent un problème classique : tout le monde en profite, personne ne s'en occupe. Voici comment la copropriété doit s'organiser.",
+      "Dans un immeuble bruxellois, la gouttière et les descentes pluviales sont presque toujours des parties communes : c'est le syndic ou l'assemblée générale qui décide de leur entretien, et la facture se répartit selon les quotités. Un contrat d'entretien annuel évite d'en rediscuter chaque année.",
     sections: [
       {
         h2: "Gouttière : partie commune ou privative ?",
@@ -350,7 +353,7 @@ export const guides: Guide[] = [
       {
         h2: "La solution la plus simple : un contrat d'entretien",
         paragraphs: [
-          "Plutôt que de revoter chaque année, l'assemblée peut approuver un [contrat d'entretien annuel des gouttières](/services/contrat-entretien-gouttieres) : passages planifiés, rapport pour le dossier de copropriété et remise sur le tarif standard. Pour les immeubles à corniche, notre guide sur le [chéneau de corniche](/blog/chenau-corniche-entretien) explique les points à faire vérifier en priorité.",
+          "Plutôt que de revoter chaque année, l'assemblée peut approuver un [contrat d'entretien annuel des gouttières](/services/contrat-entretien-gouttieres) : passages planifiés, rapport pour le dossier de copropriété et remise sur le tarif standard. Pour les immeubles à corniche, notre guide sur le [chéneau de corniche](/blog/chenau-corniche-entretien) explique les points à faire vérifier en priorité. Sinon, un [nettoyage de gouttières à Bruxelles](/) ponctuel suffit, au tarif publié sur la page [tarifs](/tarifs).",
         ],
       },
     ],
