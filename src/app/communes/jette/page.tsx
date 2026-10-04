@@ -8,7 +8,7 @@ import { CommuneConseils, NeighborCommunes } from "@/components/CommuneLocal"
 import { localFaqs, localFaqSchema } from "@/lib/communes"
 
 export const metadata: Metadata = {
-  title: { absolute: "Nettoyage de gouttières à Jette | Gouttières Bruxelles" },
+  title: { absolute: "Nettoyage de gouttières à Jette dès 80 €" },
   description:
     "Nettoyage de gouttières à Jette dès 80 € : villas des années 50–70, bouleaux, bordure du Laerbeek. Devis gratuit, intervention sous 48h.",
   alternates: { canonical: "https://www.nettoyage-gouttieres-bruxelles.be/communes/jette" },
@@ -48,7 +48,7 @@ export default function JettePage() {
                 <span>Jette · Résidentiel calme, nord-ouest de Bruxelles</span>
               </div>
               <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-gray-900 leading-tight mb-5">
-                Nettoyage Gouttières<br /><span className="text-[#1A4731]">Jette</span>
+                Nettoyage de gouttières à <span className="text-[#1A4731]">Jette</span>
               </h1>
               <p className="text-gray-600 text-lg leading-relaxed mb-7 max-w-xl">
                 Commune résidentielle calme avec ses maisons quatre façades des années 50

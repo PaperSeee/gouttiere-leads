@@ -8,7 +8,7 @@ import { CommuneConseils, NeighborCommunes } from "@/components/CommuneLocal"
 import { localFaqs, localFaqSchema } from "@/lib/communes"
 
 export const metadata: Metadata = {
-  title: { absolute: "Nettoyage de gouttières à Saint-Gilles, Bruxelles" },
+  title: { absolute: "Nettoyage de gouttières à Saint-Gilles dès 80 €" },
   description:
     "Nettoyage de gouttières à Saint-Gilles dès 80 € : chéneaux de corniche, zinc Art nouveau, cours étroites. Devis gratuit, intervention sous 48h.",
   alternates: { canonical: "https://www.nettoyage-gouttieres-bruxelles.be/communes/saint-gilles" },
@@ -48,7 +48,7 @@ export default function SaintGillesPage() {
                 <span>Saint-Gilles · Art nouveau & parvis</span>
               </div>
               <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-gray-900 leading-tight mb-5">
-                Nettoyage Gouttières<br /><span className="text-[#1A4731]">Saint-Gilles</span>
+                Nettoyage de gouttières à <span className="text-[#1A4731]">Saint-Gilles</span>
               </h1>
               <p className="text-gray-600 text-lg leading-relaxed mb-7 max-w-xl">
                 Saint-Gilles abrite un patrimoine Art nouveau exceptionnel avec ses maisons

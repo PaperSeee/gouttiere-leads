@@ -22,7 +22,7 @@ import { blogPosts, getRecentPosts } from "@/lib/blog";
 import GutterIllustration from "@/components/GutterIllustration";
 
 export const metadata: Metadata = {
-  title: { absolute: "Nettoyage gouttières Bruxelles dès 80€ | Devis gratuit" },
+  title: { absolute: "Nettoyage de gouttières à Bruxelles dès 80€ | Devis gratuit" },
   description:
     "Nettoyage de gouttières à Bruxelles dès 80€ : feuilles, mousse et descentes pluviales. Intervention sous 48h, urgences 7j/7. Devis gratuit.",
   keywords: ["nettoyage gouttières Bruxelles", "débouchage gouttières urgence Bruxelles", "réparation gouttières Bruxelles", "démoussage toiture Bruxelles", "gouttières bouchées intervention rapide"],
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     canonical: "https://www.nettoyage-gouttieres-bruxelles.be/",
   },
   openGraph: {
-    title: "Nettoyage gouttières Bruxelles dès 80€ | Devis gratuit",
+    title: "Nettoyage de gouttières à Bruxelles dès 80€ | Devis gratuit",
     description: "Nettoyage de gouttières à Bruxelles dès 80€ : feuilles, mousse, descentes pluviales. Devis gratuit, intervention sous 48h.",
     url: "https://www.nettoyage-gouttieres-bruxelles.be/",
     type: "website",
@@ -129,6 +129,7 @@ function RecentPostsSection() {
           <Link href="/services" className="text-[#1A4731] hover:text-[#F97316]">Tous nos services</Link>
           <Link href="/communes" className="text-[#1A4731] hover:text-[#F97316]">Toutes les communes desservies</Link>
           <Link href="/types-gouttieres" className="text-[#1A4731] hover:text-[#F97316]">Types de gouttières</Link>
+          <Link href="/a-propos" className="text-[#1A4731] hover:text-[#F97316]">À propos de nous</Link>
         </p>
         <div className="mt-8 text-center sm:hidden">
           <Link
@@ -203,8 +204,9 @@ export default function HomePage() {
               Nettoyage de gouttières à <span className="text-[#7fd8a4]">Bruxelles</span>
             </h1>
             <p className="mt-5 max-w-xl text-lg leading-relaxed text-green-50/80">
-              Gouttières bouchées, qui débordent ou fissurées ? Nous intervenons sous 48h dans les 19 communes :
-              nettoyage, débouchage, réparation zinc et PVC, démoussage. Prix fixé avant l&apos;intervention.
+              Le nettoyage de gouttières à Bruxelles consiste à retirer feuilles, mousse et sédiments du chéneau
+              et des descentes pluviales, puis à tester l&apos;écoulement. Nous intervenons dans les 19 communes de la
+              Région bruxelloise sous 48h, dès 80 €, avec un prix fixé avant l&apos;intervention.
             </p>
             <ul className="mt-6 grid gap-2.5 sm:grid-cols-2">
               {["Devis gratuit, prix fixé à l'avance", "Intervention sous 48h", "Urgences 7j/7", "Assuré RC Pro"].map((c) => (

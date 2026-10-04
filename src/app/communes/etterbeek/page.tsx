@@ -8,7 +8,7 @@ import { CommuneConseils, NeighborCommunes } from "@/components/CommuneLocal"
 import { localFaqs, localFaqSchema } from "@/lib/communes"
 
 export const metadata: Metadata = {
-  title: { absolute: "Nettoyage de gouttières à Etterbeek | Gouttières Bruxelles" },
+  title: { absolute: "Nettoyage de gouttières à Etterbeek dès 80 €" },
   description:
     "Nettoyage de gouttières à Etterbeek dès 80 € : maisons divisées en appartements, toits plats, copropriétés. Devis gratuit, intervention sous 48h.",
   alternates: { canonical: "https://www.nettoyage-gouttieres-bruxelles.be/communes/etterbeek" },
@@ -48,7 +48,7 @@ export default function EtterbeekPage() {
                 <span>Commune d&apos;Etterbeek · Centre-Bruxelles</span>
               </div>
               <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-gray-900 leading-tight mb-5">
-                Nettoyage Gouttières<br /><span className="text-[#1A4731]">Etterbeek</span>
+                Nettoyage de gouttières à <span className="text-[#1A4731]">Etterbeek</span>
               </h1>
               <p className="text-gray-600 text-lg leading-relaxed mb-7 max-w-xl">
                 Commune dense et urbaine dominée par les immeubles à appartements

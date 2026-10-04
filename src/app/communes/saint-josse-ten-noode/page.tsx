@@ -8,7 +8,7 @@ import { CommuneConseils, NeighborCommunes } from "@/components/CommuneLocal"
 import { localFaqs, localFaqSchema } from "@/lib/communes"
 
 export const metadata: Metadata = {
-  title: { absolute: "Nettoyage de gouttières à Saint-Josse-ten-Noode, Bruxelles" },
+  title: { absolute: "Nettoyage de gouttières à Saint-Josse-ten-Noode dès 80 €" },
   description:
     "Nettoyage de gouttières à Saint-Josse dès 80 € : immeubles hauts, toits plats, avaloirs. Devis gratuit, intervention sous 48h.",
   alternates: { canonical: "https://www.nettoyage-gouttieres-bruxelles.be/communes/saint-josse-ten-noode" },
@@ -48,7 +48,7 @@ export default function SaintJossePage() {
                 <span>Saint-Josse-ten-Noode · Centre-ville dense</span>
               </div>
               <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-gray-900 leading-tight mb-5">
-                Nettoyage Gouttières<br /><span className="text-[#1A4731]">Saint-Josse-ten-Noode</span>
+                Nettoyage de gouttières à <span className="text-[#1A4731]">Saint-Josse-ten-Noode</span>
               </h1>
               <p className="text-gray-600 text-lg leading-relaxed mb-7 max-w-xl">
                 La commune la plus densément peuplée de Belgique. Son bâti urbain

@@ -8,7 +8,7 @@ import { CommuneConseils, NeighborCommunes } from "@/components/CommuneLocal"
 import { localFaqs, localFaqSchema } from "@/lib/communes"
 
 export const metadata: Metadata = {
-  title: { absolute: "Nettoyage de gouttières à Woluwe-Saint-Pierre, Bruxelles" },
+  title: { absolute: "Nettoyage de gouttières à Woluwe-Saint-Pierre dès 80 €" },
   description:
     "Nettoyage de gouttières à Woluwe-Saint-Pierre dès 80 € : grandes villas, parc de Woluwe, Stockel. Devis gratuit, sous 48h.",
   alternates: { canonical: "https://www.nettoyage-gouttieres-bruxelles.be/communes/woluwe-saint-pierre" },
@@ -48,7 +48,7 @@ export default function WoluweStPierrePage() {
                 <span>Woluwe-Saint-Pierre · Parcs de Woluwe & Parmentier</span>
               </div>
               <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-gray-900 leading-tight mb-5">
-                Nettoyage Gouttières<br /><span className="text-[#1A4731]">Woluwe-Saint-Pierre</span>
+                Nettoyage de gouttières à <span className="text-[#1A4731]">Woluwe-Saint-Pierre</span>
               </h1>
               <p className="text-gray-600 text-lg leading-relaxed mb-7 max-w-xl">
                 L&apos;une des communes les plus résidentielles de Bruxelles avec de grandes villas.

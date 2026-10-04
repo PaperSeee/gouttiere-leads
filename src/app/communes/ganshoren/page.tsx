@@ -8,7 +8,7 @@ import { CommuneConseils, NeighborCommunes } from "@/components/CommuneLocal"
 import { localFaqs, localFaqSchema } from "@/lib/communes"
 
 export const metadata: Metadata = {
-  title: { absolute: "Nettoyage de gouttières à Ganshoren | Gouttières Bruxelles" },
+  title: { absolute: "Nettoyage de gouttières à Ganshoren dès 80 €" },
   description:
     "Nettoyage de gouttières à Ganshoren dès 80 € : maisons des années 50–60, jardins arborés, descentes à contrôler. Devis gratuit, sous 48h.",
   alternates: { canonical: "https://www.nettoyage-gouttieres-bruxelles.be/communes/ganshoren" },
@@ -48,7 +48,7 @@ export default function GanshorenPage() {
                 <span>Ganshoren · Petite commune paisible du nord-ouest</span>
               </div>
               <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-gray-900 leading-tight mb-5">
-                Nettoyage Gouttières<br /><span className="text-[#1A4731]">Ganshoren</span>
+                Nettoyage de gouttières à <span className="text-[#1A4731]">Ganshoren</span>
               </h1>
               <p className="text-gray-600 text-lg leading-relaxed mb-7 max-w-xl">
                 L&apos;une des plus petites communes de Bruxelles, avec un caractère résidentiel

@@ -8,7 +8,7 @@ import { CommuneConseils, NeighborCommunes } from "@/components/CommuneLocal"
 import { localFaqs, localFaqSchema } from "@/lib/communes"
 
 export const metadata: Metadata = {
-  title: { absolute: "Nettoyage de gouttières à Anderlecht | Gouttières Bruxelles" },
+  title: { absolute: "Nettoyage de gouttières à Anderlecht dès 80 €" },
   description:
     "Nettoyage de gouttières à Anderlecht dès 80 € : maisons ouvrières, Cureghem, bords du canal, Neerpede. Devis gratuit, intervention sous 48h.",
   alternates: { canonical: "https://www.nettoyage-gouttieres-bruxelles.be/communes/anderlecht" },
@@ -48,7 +48,7 @@ export default function AnderlechtPage() {
                 <span>Anderlecht · Canal de Charleroi & brique rouge</span>
               </div>
               <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-gray-900 leading-tight mb-5">
-                Nettoyage Gouttières<br /><span className="text-[#1A4731]">Anderlecht</span>
+                Nettoyage de gouttières à <span className="text-[#1A4731]">Anderlecht</span>
               </h1>
               <p className="text-gray-600 text-lg leading-relaxed mb-7 max-w-xl">
                 Anderlecht concentre un habitat ouvrier dense et des zones industrielles

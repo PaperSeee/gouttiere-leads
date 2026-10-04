@@ -5,13 +5,13 @@ import Breadcrumb from "@/components/Breadcrumb";
 import FAQAccordion from "@/components/FAQAccordion";
 
 export const metadata: Metadata = {
-  title: { absolute: "FAQ gouttières et toiture à Bruxelles : prix, délais" },
+  title: { absolute: "FAQ gouttières à Bruxelles : prix, entretien, urgences" },
   description:
     "Prix, fréquence, urgences, nettoyage de toiture : 16 réponses sur l'entretien des gouttières à Bruxelles. Devis gratuit.",
   keywords: ["FAQ gouttières Bruxelles", "questions nettoyage gouttières", "fréquence nettoyage gouttières", "nettoyage toiture Bruxelles", "prix gouttières Bruxelles"],
   alternates: { canonical: "https://www.nettoyage-gouttieres-bruxelles.be/faq" },
   openGraph: {
-    title: "FAQ gouttières et toiture à Bruxelles : prix, délais",
+    title: "FAQ gouttières à Bruxelles : prix, entretien, urgences",
     description: "Prix, fréquence, urgences, nettoyage de toiture — toutes les réponses sur l'entretien des gouttières à Bruxelles.",
     url: "https://www.nettoyage-gouttieres-bruxelles.be/faq",
     type: "website",
@@ -113,7 +113,7 @@ export default function FAQ() {
       <section className="bg-[#1A4731] text-white py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h1 className="text-3xl sm:text-4xl font-bold mb-4">
-            FAQ gouttières : prix, fréquence, urgences
+            FAQ gouttières à Bruxelles : prix, fréquence, urgences
           </h1>
           <p className="text-gray-300 text-lg max-w-2xl">
             16 questions fréquentes sur le nettoyage, le débouchage et l&apos;entretien de vos gouttières à Bruxelles.
@@ -145,6 +145,11 @@ export default function FAQ() {
                 </Link>
               ))}
             </div>
+            <p className="mt-4 text-sm text-gray-600">
+              Vue d&apos;ensemble de nos <Link href="/services" className="font-semibold text-[#1A4731] underline hover:text-[#F97316]">services de nettoyage de gouttières à Bruxelles</Link>,
+              guides saisonniers sur notre <Link href="/blog" className="font-semibold text-[#1A4731] underline hover:text-[#F97316]">blog gouttières</Link> et présentation de l&apos;entreprise
+              sur la page <Link href="/a-propos" className="font-semibold text-[#1A4731] underline hover:text-[#F97316]">à propos</Link>.
+            </p>
           </div>
 
           <div className="mt-12 bg-[#1A4731] text-white rounded-2xl p-8 text-center">

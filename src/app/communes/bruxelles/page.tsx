@@ -8,14 +8,14 @@ import { CommuneConseils, NeighborCommunes } from "@/components/CommuneLocal"
 import { localFaqs, localFaqSchema } from "@/lib/communes"
 
 export const metadata: Metadata = {
-  title: { absolute: "Nettoyage de gouttières à Bruxelles-Ville, Bruxelles" },
+  title: { absolute: "Nettoyage de gouttières à Bruxelles-Ville dès 80 €" },
   description:
     "Nettoyage de gouttières à Bruxelles-Ville dès 80 € : Pentagone, Laeken, Neder-Over-Heembeek, immeubles et chéneaux. Devis gratuit, sous 48h.",
   alternates: { canonical: "https://www.nettoyage-gouttieres-bruxelles.be/communes/bruxelles" },
   keywords: ["nettoyage gouttières Bruxelles", "débouchage gouttières Bruxelles", "gouttières bouchées Bruxelles", "prix nettoyage gouttières Bruxelles"],
   openGraph: {
-    title: "Nettoyage Gouttières Bruxelles — Devis Gratuit",
-    description: "Expert nettoyage gouttières à Bruxelles. Débouchage urgent, réparation, démoussage. Devis gratuit, intervention rapide.",
+    title: "Nettoyage Gouttières Bruxelles-Ville — Devis Gratuit",
+    description: "Expert nettoyage gouttières à Bruxelles-Ville. Débouchage urgent, réparation, démoussage. Devis gratuit, intervention rapide.",
     url: "https://www.nettoyage-gouttieres-bruxelles.be/communes/bruxelles",
     type: "website",
     images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "Nettoyage gouttières Bruxelles" }],
@@ -48,7 +48,7 @@ export default function BruxellesPage() {
                 <span>Bruxelles-Ville · Pentagone, Laeken & extensions</span>
               </div>
               <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-gray-900 leading-tight mb-5">
-                Nettoyage Gouttières<br /><span className="text-[#1A4731]">Bruxelles-Ville</span>
+                Nettoyage de gouttières à <span className="text-[#1A4731]">Bruxelles-Ville</span>
               </h1>
               <p className="text-gray-600 text-lg leading-relaxed mb-7 max-w-xl">
                 La commune la plus étendue de la Région, avec des réalités très différentes :

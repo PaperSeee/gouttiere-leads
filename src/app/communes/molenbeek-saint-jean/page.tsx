@@ -8,7 +8,7 @@ import { CommuneConseils, NeighborCommunes } from "@/components/CommuneLocal"
 import { localFaqs, localFaqSchema } from "@/lib/communes"
 
 export const metadata: Metadata = {
-  title: { absolute: "Nettoyage de gouttières à Molenbeek-Saint-Jean, Bruxelles" },
+  title: { absolute: "Nettoyage de gouttières à Molenbeek-Saint-Jean dès 80 €" },
   description:
     "Nettoyage de gouttières à Molenbeek dès 80 € : maisons de rapport, bords du canal, rénovations. Devis gratuit, intervention sous 48h.",
   alternates: { canonical: "https://www.nettoyage-gouttieres-bruxelles.be/communes/molenbeek-saint-jean" },
@@ -48,7 +48,7 @@ export default function MolenbeekSaintJeanPage() {
                 <span>Molenbeek-Saint-Jean · Canal & habitat populaire</span>
               </div>
               <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-gray-900 leading-tight mb-5">
-                Nettoyage Gouttières<br /><span className="text-[#1A4731]">Molenbeek-Saint-Jean</span>
+                Nettoyage de gouttières à <span className="text-[#1A4731]">Molenbeek-Saint-Jean</span>
               </h1>
               <p className="text-gray-600 text-lg leading-relaxed mb-7 max-w-xl">
                 Commune en pleine transformation avec un bâti ancien souvent négligé.

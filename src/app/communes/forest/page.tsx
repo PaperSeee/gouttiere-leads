@@ -8,7 +8,7 @@ import { CommuneConseils, NeighborCommunes } from "@/components/CommuneLocal"
 import { localFaqs, localFaqSchema } from "@/lib/communes"
 
 export const metadata: Metadata = {
-  title: { absolute: "Nettoyage de gouttières à Forest | Gouttières Bruxelles" },
+  title: { absolute: "Nettoyage de gouttières à Forest dès 80 €" },
   description:
     "Nettoyage de gouttières à Forest dès 80 € : rangées de maisons en brique, zinc d'époque, parcs Duden et de Forest. Devis gratuit, sous 48h.",
   alternates: { canonical: "https://www.nettoyage-gouttieres-bruxelles.be/communes/forest" },
@@ -48,7 +48,7 @@ export default function ForestPage() {
                 <span>Commune de Forest · Parc et cottages</span>
               </div>
               <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-gray-900 leading-tight mb-5">
-                Nettoyage Gouttières<br /><span className="text-[#1A4731]">Forest</span>
+                Nettoyage de gouttières à <span className="text-[#1A4731]">Forest</span>
               </h1>
               <p className="text-gray-600 text-lg leading-relaxed mb-7 max-w-xl">
                 Forest allie des rangées de maisons mitoyennes en brique rouge et des cottages

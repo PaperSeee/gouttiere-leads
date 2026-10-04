@@ -8,7 +8,7 @@ import { CommuneConseils, NeighborCommunes } from "@/components/CommuneLocal"
 import { localFaqs, localFaqSchema } from "@/lib/communes"
 
 export const metadata: Metadata = {
-  title: { absolute: "Nettoyage de gouttières à Uccle | Gouttières Bruxelles" },
+  title: { absolute: "Nettoyage de gouttières à Uccle dès 80 €" },
   description:
     "Nettoyage de gouttières à Uccle dès 80 € : villas sous les arbres, zinc ancien, grands linéaires. Devis gratuit, intervention sous 48h.",
   alternates: { canonical: "https://www.nettoyage-gouttieres-bruxelles.be/communes/uccle" },
@@ -53,8 +53,7 @@ export default function UcclePage() {
                 <span>Commune d&apos;Uccle · Région bruxelloise</span>
               </div>
               <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-gray-900 leading-tight mb-5">
-                Nettoyage Gouttières<br />
-                <span className="text-[#1A4731]">Uccle</span>
+                Nettoyage de gouttières à <span className="text-[#1A4731]">Uccle</span>
               </h1>
               <p className="text-gray-600 text-lg leading-relaxed mb-7 max-w-xl">
                 Villas 4 façades, maisons de maître, zinc centenaire — Uccle est une
