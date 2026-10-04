@@ -219,7 +219,7 @@ export default function Tarifs() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
           <div className="flex items-start gap-2 text-sm text-blue-700">
             <Info size={16} className="flex-shrink-0 mt-0.5" />
-            <span>Les prix ci-dessous sont des fourchettes indicatives pour Bruxelles-Capitale. Le tarif exact est fixé après visite gratuite selon la longueur, la hauteur et l&apos;accessibilité.</span>
+            <span>Les prix ci-dessous sont des fourchettes indicatives pour Bruxelles-Capitale. Le tarif exact est fixé après visite gratuite selon la longueur, la hauteur et l&apos;accessibilité. Informations légales sur la page <Link href="/mentions-legales" className="font-semibold underline hover:text-blue-900">mentions légales</Link>.</span>
           </div>
         </div>
       </div>

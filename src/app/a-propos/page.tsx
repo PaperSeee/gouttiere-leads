@@ -57,6 +57,11 @@ export default function APropos() {
                 d&apos;un devis gratuit et transparent. Pas de frais cachés, pas de surprises sur la
                 facture finale.
               </p>
+              <p className="text-gray-600 leading-relaxed mb-4">
+                Le détail de nos <Link href="/services" className="font-semibold text-[#1A4731] underline hover:text-[#F97316]">prestations de nettoyage de gouttières à Bruxelles</Link>{" "}
+                et nos <Link href="/blog" className="font-semibold text-[#1A4731] underline hover:text-[#F97316]">guides d&apos;entretien</Link> complètent cette présentation ; les informations
+                légales se trouvent dans les <Link href="/mentions-legales" className="font-semibold text-[#1A4731] underline hover:text-[#F97316]">mentions légales</Link>.
+              </p>
 
               <h2 className="text-2xl font-bold text-gray-900 mb-4 mt-8">Nos engagements</h2>
               <ul className="space-y-3">

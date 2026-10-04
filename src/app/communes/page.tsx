@@ -99,6 +99,12 @@ export default function CommunesPage() {
             Les prix sont les mêmes dans toute la Région : nettoyage dès 80 €, débouchage dès 120 €. Détail sur la page{" "}
             <Link href="/tarifs" className="font-semibold text-[#1A4731] underline hover:text-[#F97316]">tarifs du nettoyage de gouttières</Link>.
           </p>
+          <p className="text-gray-600">
+            Selon votre besoin, retrouvez le détail de nos{" "}
+            <Link href="/services" className="font-semibold text-[#1A4731] underline hover:text-[#F97316]">services de nettoyage de gouttières à Bruxelles</Link>{" "}
+            (nettoyage, débouchage, réparation, démoussage) et nos conseils d&apos;entretien sur le{" "}
+            <Link href="/blog" className="font-semibold text-[#1A4731] underline hover:text-[#F97316]">blog gouttières</Link>.
+          </p>
         </div>
       </section>
     </>

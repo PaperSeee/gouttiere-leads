@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { Phone, Mail, MapPin, Clock, MessageCircle } from "lucide-react";
 import Breadcrumb from "@/components/Breadcrumb";
 import ContactForm from "@/components/ContactForm";
@@ -126,6 +127,12 @@ export default function Contact() {
                 <p className="text-gray-600 text-sm">
                   Nous ne facturons jamais le déplacement pour établir un devis.
                   Votre visite d&apos;inspection est entièrement gratuite et sans engagement.
+                </p>
+                <p className="mt-3 text-sm text-gray-600">
+                  Pour en savoir plus sur notre entreprise, consultez la page{" "}
+                  <Link href="/a-propos" className="font-semibold text-[#1A4731] underline hover:text-[#F97316]">à propos</Link> ; les
+                  informations légales figurent dans les{" "}
+                  <Link href="/mentions-legales" className="font-semibold text-[#1A4731] underline hover:text-[#F97316]">mentions légales</Link>.
                 </p>
               </div>
             </div>
