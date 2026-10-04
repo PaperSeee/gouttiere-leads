@@ -18,6 +18,17 @@ export interface Commune {
   conseils: string[];
   faqs: CommuneFaq[];
   guides: string[];
+  /** Section longue propre aux communes retravaillées : question locale + paragraphes. */
+  detail?: CommuneDetailBlock;
+}
+
+/** Portion de paragraphe : texte simple, ou lien interne contextuel. */
+export type DetailSegment = { text: string } | { link: { href: string; label: string } };
+
+export interface CommuneDetailBlock {
+  kicker: string;
+  question: string;
+  paragraphs: DetailSegment[][];
 }
 
 export const communes: Commune[] = [
@@ -60,7 +71,32 @@ export const communes: Commune[] = [
         q: "La vallée de la Woluwe a-t-elle un effet sur la toiture ?",
         a: "Oui, indirectement : l'humidité plus élevée en fond de vallée favorise mousses et algues, surtout sur les pans de toit orientés au nord ou à l'ombre des arbres. Ces mousses finissent dans la gouttière. Un démoussage suivi d'un traitement limite ces apports pendant plusieurs années.",
       },
+      {
+        q: "Une nacelle est-elle utile sur une villa d'Auderghem en bordure de forêt ?",
+        a: "Pas systématiquement. Sur beaucoup de villas, un accès par l'échelle et le toit suffit ; la nacelle devient utile quand la façade est haute, le sol en pente ou l'emplacement trop juste pour poser une échelle. On tranche lors du devis gratuit, en fonction de la configuration.",
+      },
     ],
+    detail: {
+      kicker: "Le calendrier du Soignes",
+      question: "Quand nettoyer les gouttières d'une villa à Auderghem quand la forêt reste feuillue ?",
+      paragraphs: [
+        [
+          { text: "Auderghem est bordée par la Forêt de Soignes, et le versant boisé ne perd pas ses feuilles en même temps que la ville. Les hêtres lâchent l'essentiel en novembre, mais une partie tient encore en janvier et en février : un nettoyage calé uniquement sur octobre est donc souvent annulé par la chute suivante." },
+        ],
+        [
+          { text: "Les villas et maisons quatre façades, courantes autour du Rouge-Cloître et vers la vallée de la Woluwe, ont de longs chenaux qui suivent les quatre pans du toit. Chaque angle retient un peu de feuilles et de mousses, et sur ces volumes l'accès se prépare : la nacelle, quand elle est nécessaire, se gare sur la voirie avec une autorisation de la commune. Ce sont des gouttières en zinc ancien, à nettoyer à la main dans les angles pour ne pas déformer les profils." },
+        ],
+        [
+          { text: "Le bon réflexe reste un passage principal en fin d'automne, complété par un contrôle en début d'année pour les toits directement sous les arbres. Deux communes boisées voisines suivent le même rythme : " },
+          { link: { href: "/communes/watermael-boitsfort", label: "Watermael-Boitsfort" } },
+          { text: " et " },
+          { link: { href: "/communes/woluwe-saint-pierre", label: "Woluwe-Saint-Pierre" } },
+          { text: "; notre " },
+          { link: { href: "/services/nettoyage-gouttieres", label: "service de nettoyage de gouttières" } },
+          { text: " détaille le nettoyage des longs chenaux." },
+        ],
+      ],
+    },
     guides: ["gouttiere-decrochee-qui-penche", "demoussage-toiture-bruxelles-quand-comment-prix"],
   },
   {
@@ -102,7 +138,32 @@ export const communes: Commune[] = [
         q: "À Laeken, quand nettoyer les gouttières d'une maison proche du parc ?",
         a: "Fin novembre ou début décembre, quand les marronniers et les érables ont perdu l'essentiel de leurs feuilles. Un nettoyage en octobre est vite annulé par les chutes suivantes. Si la maison est directement sous les arbres, un contrôle au printemps enlève graines et fleurs.",
       },
+      {
+        q: "Comment se passe le stationnement d'une nacelle devant une maison du centre ?",
+        a: "Elle occupe une partie de la chaussée ou du trottoir, ce qui suppose une autorisation d'occupation de la voie publique demandée à la Ville de Bruxelles. On évalue l'accès lors du devis gratuit et on vous indique si une nacelle est réellement nécessaire ou si le travail se fait à l'échelle, depuis le toit, à la perche.",
+      },
     ],
+    detail: {
+      kicker: "Accès et hauteur dans le centre",
+      question: "Pourquoi les gouttières des maisons hautes du centre de Bruxelles exigent-elles souvent une nacelle ?",
+      paragraphs: [
+        [
+          { text: "Le cœur de Bruxelles-Ville est fait de maisons mitoyennes de trois ou quatre niveaux, serrées derrière une même ligne de corniche. Leur gouttière de façade court au-dessus du trottoir et se vide dans une descente fixée au mur. Quand un bouchon s'y forme, l'eau déborde sur la brique et sur le passant plutôt que dans votre jardin : d'où l'intérêt de ne pas laisser passer une saison entière." },
+        ],
+        [
+          { text: "Sous ces hauteurs, l'échelle simple n'est pas toujours posable. Dans les Marolles ou autour du Sablon, les rues sont trop étroites pour écarter les pieds de l'échelle, et une nacelle doit alors occuper une partie de la voirie. Cette occupation du domaine public se demande à la Ville, en général quelques jours à l'avance, surtout si un marché ou une zone piétonne complique l'accès." },
+        ],
+        [
+          { text: "Beaucoup d'immeubles du centre et du quartier européen relèvent d'une copropriété : la gouttière et la descente sont des parties communes, et c'est le syndic qui commande le nettoyage et fait voter le devis en assemblée. Pour situer le voisinage, voyez " },
+          { link: { href: "/communes/ixelles", label: "nettoyage de gouttières à Ixelles" } },
+          { text: " et " },
+          { link: { href: "/communes/schaerbeek", label: "Schaerbeek" } },
+          { text: ", ou le détail de notre " },
+          { link: { href: "/services/nettoyage-gouttieres", label: "service de nettoyage de gouttières" } },
+          { text: "." },
+        ],
+      ],
+    },
     guides: ["gouttieres-copropriete-bruxelles", "chenau-corniche-entretien"],
   },
   {
@@ -123,7 +184,32 @@ export const communes: Commune[] = [
         q: "Notre rue près du parc Jean-Félix Hap est bordée d'arbres : faut-il deux passages ?",
         a: "Souvent un seul suffit, s'il est bien placé : fin novembre, après la chute des feuilles. Un second contrôle au printemps n'est utile que si des arbres surplombent directement la toiture ou si la gouttière a déjà débordé l'hiver précédent.",
       },
+      {
+        q: "Notre immeuble d'Etterbeek a une toiture plate : faut-il la nettoyer aussi souvent ?",
+        a: "Elle réclame un contrôle au moins une fois par an, en même temps que la gouttière. L'avaloir d'une toiture plate est petit et se bouche vite ; s'il déborde, l'eau stagne sur la membrane et peut finir par s'infiltrer. Quand un trop-plein existe, il doit rester dégagé pour jouer son rôle de secours.",
+      },
     ],
+    detail: {
+      kicker: "Copropriété et toits plats",
+      question: "Toits plats et gouttières cachées : comment savoir qu'un immeuble d'Etterbeek doit être nettoyé ?",
+      paragraphs: [
+        [
+          { text: "Etterbeek est dense, et beaucoup de maisons des années 50 à 70 y ont été divisées en appartements. Sur ces immeubles, la gouttière longe la façade au niveau du dernier étage, parfois en retrait derrière une corniche, et la descente est encastrée dans le mur, si bien que l'obstruction reste invisible depuis le trottoir." },
+        ],
+        [
+          { text: "Les indices sont indirects. Après une forte averse, regardez si l'eau passe par-dessus la gouttière au lieu de rejoindre la descente, si la corniche se tache, ou si un liseré sombre se dessine sous le débord du toit. Beaucoup d'immeubles ont aussi une toiture plate avec un avaloir et un trop-plein : si l'avaloir se bouche, l'eau stagne sur la membrane et finit par s'infiltrer. Ces deux points se contrôlent en même temps." },
+        ],
+        [
+          { text: "Comme la gouttière est souvent une partie commune, l'intervention se décide en assemblée et le syndic en commande l'exécution ; un devis chiffré facilite la décision. Le stationnement de l'échelle compte aussi ici : entre arbres d'alignement et voitures le long des trottoirs, mieux vaut repérer l'accès avant de monter. Les mêmes contraintes reviennent côté " },
+          { link: { href: "/communes/ixelles", label: "Ixelles" } },
+          { text: " et " },
+          { link: { href: "/communes/bruxelles", label: "Bruxelles-Ville" } },
+          { text: ", tandis que notre " },
+          { link: { href: "/services/nettoyage-gouttieres", label: "service de nettoyage de gouttières" } },
+          { text: " précise le matériel employé sur les façades hautes." },
+        ],
+      ],
+    },
     guides: ["gouttieres-copropriete-bruxelles", "entretien-gouttieres-locataire-proprietaire"],
   },
   {
@@ -207,7 +293,32 @@ export const communes: Commune[] = [
         q: "Maison de maître divisée en appartements à Ixelles : qui paie la gouttière ?",
         a: "En copropriété, la gouttière et les descentes sont en principe des parties communes : l'entretien est décidé par le syndic ou l'assemblée générale et réparti selon les quotités de l'acte de base. Vérifiez ce que prévoit votre acte, certaines copropriétés fixant d'autres règles.",
       },
+      {
+        q: "La corniche d'une maison de maître d'Ixelles cache-t-elle toujours la gouttière ?",
+        a: "Pas toujours, mais c'est fréquent sur ce type de façade. On juge alors sur des signes indirects : corniche tachée, peinture qui cloque, écoulement faible de la descente. En cas de doute, une inspection depuis le toit tranche avant toute réparation de la corniche.",
+      },
     ],
+    detail: {
+      kicker: "Corniches et chéneaux cachés",
+      question: "Comment repérer une gouttière bouchée derrière la corniche d'une maison d'Ixelles ?",
+      paragraphs: [
+        [
+          { text: "Ixelles compte beaucoup de maisons de maître, souvent divisées en appartements autour du quartier Châtelain, de Flagey ou de Saint-Boniface. Sur ces façades, la gouttière est fréquemment un chéneau en zinc placé en retrait, caché derrière une corniche : depuis la rue, on ne voit pas qu'il est plein." },
+        ],
+        [
+          { text: "Les indices arrivent par la corniche elle-même : un bois qui se tache, une peinture qui cloque, un liseré noir sous le nez de la corniche, ou une descente qui ne coule presque plus pendant une averse. Ces signes disent que l'eau passe déjà par-dessus le chéneau et imbibe le bois, et non qu'il s'agit d'un simple défaut d'aspect." },
+        ],
+        [
+          { text: "La gouttière et la corniche relevant des parties communes, c'est au syndic ou à l'assemblée de décider du nettoyage, devis à l'appui. L'accès mérite aussi d'être anticipé : sur les rues bordées d'arbres d'alignement et de voitures stationnées, il faut savoir où poser l'échelle avant de monter. Voir aussi les pages " },
+          { link: { href: "/communes/bruxelles", label: "Bruxelles-Ville" } },
+          { text: " et " },
+          { link: { href: "/communes/etterbeek", label: "Etterbeek" } },
+          { text: ", et notre " },
+          { link: { href: "/services/nettoyage-gouttieres", label: "service de nettoyage de gouttières" } },
+          { text: "." },
+        ],
+      ],
+    },
     guides: ["chenau-corniche-entretien", "gouttieres-copropriete-bruxelles"],
   },
   {
@@ -354,7 +465,32 @@ export const communes: Commune[] = [
         q: "Notre gouttière passe au-dessus d'une véranda : faut-il la nettoyer aussi ?",
         a: "Oui. Le toit d'une véranda reçoit les débris qui glissent de la toiture principale et ses petites gouttières se bouchent vite. Si elles débordent, l'eau coule le long des profilés et peut entrer par les joints. Elles se nettoient lors du même passage.",
       },
+      {
+        q: "Faut-il vérifier toutes les descentes d'une villa d'Uccle ?",
+        a: "Oui, dans l'idéal. Sur une quatre façades, chaque pan de toit a son point bas et sa descente ; un nettoyage limité à la façade visible laisse souvent un angle bouché de l'autre côté. Un contrôle complet évite qu'une section oubliée ne déborde à la prochaine averse.",
+      },
     ],
+    detail: {
+      kicker: "Villas, chenaux et pentes",
+      question: "Pourquoi les villas quatre façades d'Uccle demandent-elles plus d'entretien de gouttières ?",
+      paragraphs: [
+        [
+          { text: "Beaucoup de villas d'Uccle sont des quatre façades : le toit descend de tous les côtés et la gouttière en fait le tour, avec des chenaux dans les angles et parfois un chéneau encaissé. Plus la maison est large, plus le linéaire à parcourir est long et plus les creux où se déposent feuilles et mousses se multiplient." },
+        ],
+        [
+          { text: "S'ajoute la végétation. Les avenues plantées et les jardins denses du sud de la commune, vers Saint-Job ou Fort-Jaco, lâchent des feuilles larges et des samares qui s'agglutinent dans les angles. Or sur ces façades hautes, mieux vaut organiser l'accès à l'avance : l'échelle réclame de la place au sol, et une nacelle doit parfois immobiliser un emplacement, avec l'autorisation communale correspondante." },
+        ],
+        [
+          { text: "Le relief compte aussi. Sur un terrain en pente, l'eau d'une gouttière qui déborde file vers le bas et longe les fondations du côté aval : mieux vaut un entretien suivi qu'une réparation d'urgence. Les configurations voisines sont décrites côté " },
+          { link: { href: "/communes/ixelles", label: "Ixelles" } },
+          { text: " et " },
+          { link: { href: "/communes/watermael-boitsfort", label: "Watermael-Boitsfort" } },
+          { text: " ; notre " },
+          { link: { href: "/services/nettoyage-gouttieres", label: "service de nettoyage de gouttières" } },
+          { text: " explique le traitement des longs linéaires." },
+        ],
+      ],
+    },
     guides: ["entretien-gouttieres-quand-faire", "protection-gouttieres-anti-feuilles-bruxelles"],
   },
   {
@@ -375,7 +511,32 @@ export const communes: Commune[] = [
         q: "Près de la place Keym, faut-il aussi deux ou trois passages par an ?",
         a: "Rarement. Loin de la forêt et des grands parcs, un nettoyage fin novembre couvre l'essentiel. Les passages multiples concernent surtout les maisons en lisière de la Forêt de Soignes ou autour des étangs.",
       },
+      {
+        q: "Peut-on souder une gouttière en cuivre des cités-jardins au lieu de la remplacer ?",
+        a: "Souvent, oui, tant que le métal n'est pas percé et que les fixations tiennent. On nettoie sans abrasif puis on reprend la soudure au lieu de tout déposer, ce qui préserve la patine. Un remplacement ne se justifie que là où le cuivre est franchement troué ou arraché.",
+      },
     ],
+    detail: {
+      kicker: "Cités-jardins et gouttières en cuivre",
+      question: "Comment entretenir les gouttières en cuivre des cités-jardins de Watermael-Boitsfort ?",
+      paragraphs: [
+        [
+          { text: "Dans les cités-jardins du Logis et de Floréal, les maisons basses se suivent en rangées et leurs gouttières forment parfois une seule ligne continue d'un pignon à l'autre. Nettoyer une habitation sans ses voisines revient souvent à laisser le bouchon glisser plus loin sur la même ligne d'écoulement." },
+        ],
+        [
+          { text: "Beaucoup de ces maisons ont gardé des gouttières en zinc ou en cuivre d'époque. Le cuivre se nettoie sans abrasif pour ne pas rayer la patine, et une soudure peut suffire là où le métal reste sain. Ces quartiers étant protégés, mieux vaut interroger le service de l'urbanisme avant de changer un matériau ou une teinte visible depuis la rue." },
+        ],
+        [
+          { text: "Plus près de la place Keym et de la gare de Watermael, le bâti est plus serré et les arbres moins présents : un passage annuel y suffit souvent, alors qu'en lisière des étangs de Boitsfort et de la Forêt de Soignes, les hêtres continuent de lâcher des feuilles une partie de l'hiver. Le même bâti de rangée se retrouve côté " },
+          { link: { href: "/communes/auderghem", label: "Auderghem" } },
+          { text: " et " },
+          { link: { href: "/communes/uccle", label: "Uccle" } },
+          { text: " ; notre " },
+          { link: { href: "/services/nettoyage-gouttieres", label: "service de nettoyage de gouttières" } },
+          { text: " explique comment nous traitons le zinc et le cuivre anciens." },
+        ],
+      ],
+    },
     guides: ["protection-gouttieres-anti-feuilles-bruxelles", "demoussage-toiture-bruxelles-quand-comment-prix"],
   },
   {

@@ -4,7 +4,7 @@ import GutterIllustration from "@/components/GutterIllustration"
 import { Phone, ArrowRight, CheckCircle, MapPin, Leaf, Droplets, Wrench, AlertTriangle, Euro } from "lucide-react"
 import Breadcrumb from "@/components/Breadcrumb"
 import ContactForm from "@/components/ContactForm"
-import { CommuneConseils, NeighborCommunes } from "@/components/CommuneLocal"
+import { CommuneConseils, CommuneDetail, NeighborCommunes } from "@/components/CommuneLocal"
 import { localFaqs, localFaqSchema } from "@/lib/communes"
 
 export const metadata: Metadata = {
@@ -255,6 +255,8 @@ export default function UcclePage() {
       </section>
 
       {/* Devis — centré, sobre */}
+      <CommuneDetail slug="uccle" />
+
       <CommuneConseils slug="uccle" />
 
       <section id="devis" className="py-14 bg-white">

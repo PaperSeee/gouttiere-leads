@@ -4,7 +4,7 @@ import GutterIllustration from "@/components/GutterIllustration"
 import { Phone, ArrowRight, MapPin, Leaf, Droplets, Wrench, AlertTriangle } from "lucide-react"
 import Breadcrumb from "@/components/Breadcrumb"
 import ContactForm from "@/components/ContactForm"
-import { CommuneConseils, NeighborCommunes } from "@/components/CommuneLocal"
+import { CommuneConseils, CommuneDetail, NeighborCommunes } from "@/components/CommuneLocal"
 import { localFaqs, localFaqSchema } from "@/lib/communes"
 
 export const metadata: Metadata = {
@@ -183,6 +183,8 @@ export default function BruxellesPage() {
           </div>
         </div>
       </section>
+
+      <CommuneDetail slug="bruxelles" />
 
       <CommuneConseils slug="bruxelles" />
 

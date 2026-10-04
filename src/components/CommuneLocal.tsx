@@ -41,6 +41,35 @@ export function CommuneConseils({ slug }: { slug: string }) {
   );
 }
 
+/** Section longue propre à une commune : question locale + paragraphes, avec liens internes contextuels. */
+export function CommuneDetail({ slug }: { slug: string }) {
+  const d = getCommune(slug).detail;
+  if (!d) return null;
+  return (
+    <section className="py-14 bg-white">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <p className="text-[#F97316] font-semibold text-sm uppercase tracking-wide mb-3">{d.kicker}</p>
+        <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-5">{d.question}</h2>
+        <div className="space-y-4 text-gray-600 leading-relaxed">
+          {d.paragraphs.map((segments, i) => (
+            <p key={i}>
+              {segments.map((s, j) =>
+                "link" in s ? (
+                  <Link key={j} href={s.link.href} className="font-semibold text-[#1A4731] hover:text-[#F97316]">
+                    {s.link.label}
+                  </Link>
+                ) : (
+                  <span key={j}>{s.text}</span>
+                )
+              )}
+            </p>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
 /** Communes limitrophes réelles, avec ancres descriptives. */
 export function NeighborCommunes({ slug }: { slug: string }) {
   const c = getCommune(slug);
