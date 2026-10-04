@@ -22,6 +22,8 @@ const nextConfig: NextConfig = {
       { source: "/blog/prix-nettoyage-gouttieres-bruxelles", destination: "/tarifs", permanent: true },
       { source: "/blog/materiaux-gouttieres-zinc-pvc-aluminium", destination: "/types-gouttieres", permanent: true },
       { source: "/blog/nettoyage-gouttieres-bruxelles-guide-complet", destination: "/", permanent: true },
+      // Ancienne URL devenue 404 (vue par Google), redirigée vers l'article équivalent — 2026-10-04
+      { source: "/blog/gouttieres-copropriete-bruxelles-qui-paie-entretien", destination: "/blog/gouttieres-copropriete-bruxelles", permanent: true },
     ];
   },
   async headers() {
