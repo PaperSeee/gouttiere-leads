@@ -7,6 +7,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import LocalBusinessSchema from "@/components/LocalBusinessSchema";
 import { Phone, MessageCircle } from "lucide-react";
+import Umami from "@/components/Umami";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -176,6 +177,7 @@ export default function RootLayout({
         </div>
         <ClarityTag id="yntj10qd01" />
         <Analytics gaId={process.env.NEXT_PUBLIC_GA_ID} />
+        <Umami id="9abc2d7f-e1ed-4ffa-8e98-bc9ae981a757" />
       </body>
     </html>
   );

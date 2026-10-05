@@ -1,0 +1,9 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "rewrites": [
+    {
+      "source": "/u/:path*",
+      "destination": "https://umami-stats-tau.vercel.app/:path*"
+    }
+  ]
+}
