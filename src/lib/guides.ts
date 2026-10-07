@@ -371,11 +371,12 @@ export const guides: Guide[] = [
   },
   {
     slug: "chenau-corniche-entretien",
-    title: "Chéneau de corniche : l'entretien",
+    title: "Nettoyage de corniche et chéneau",
     h1: "Chéneau et corniche : entretenir la gouttière cachée des maisons bruxelloises",
     description:
-      "Le chéneau en zinc caché derrière la corniche des maisons bruxelloises : signes d'alerte, entretien, réparation et façades protégées.",
+      "Nettoyage de corniche et de chéneau en zinc à Bruxelles : signes d'un chéneau bouché, entretien par le haut, réparation du zinc et façades protégées.",
     ...PUBLISHED,
+    dateModified: "2026-10-07",
     category: "Entretien",
     readTime: "7 min",
     imageUrl: "https://images.unsplash.com/photo-1632759145351-1d592919f522?w=800&q=80",
@@ -394,7 +395,7 @@ export const guides: Guide[] = [
         ],
       },
       {
-        h2: "Les signes d'un chéneau bouché ou percé",
+        h2: "Quels sont les signes d'un chéneau bouché ou percé ?",
         list: [
           "**coulures noires ou vertes** sur la façade, sous la corniche ;",
           "**peinture de la corniche qui cloque** ou s'écaille, bois qui noircit ou s'effrite ;",
@@ -407,7 +408,7 @@ export const guides: Guide[] = [
         ],
       },
       {
-        h2: "L'entretien : plus technique qu'une gouttière pendante",
+        h2: "Comment se passe le nettoyage d'une corniche et de son chéneau ?",
         paragraphs: [
           "Un chéneau se nettoie par le haut : depuis le toit, une lucarne ou une nacelle. Sur une maison de trois ou quatre niveaux, ce n'est pas un travail à faire soi-même. Un bon entretien comprend :",
         ],
@@ -423,14 +424,14 @@ export const guides: Guide[] = [
         ],
       },
       {
-        h2: "Réparer ou remplacer le zinc",
+        h2: "Faut-il réparer ou remplacer le zinc du chéneau ?",
         paragraphs: [
           "Une fissure ou une soudure qui a lâché se répare par ressoudure à l'étain, à condition que le zinc autour soit encore sain. Quand le métal est piqué sur une grande longueur ou que le fond est déformé, le remplacement du chéneau s'impose. À titre indicatif, un tronçon en zinc posé coûte **35 à 55 € le mètre linéaire**, et une réparation de joint ou de collet **40 à 80 €** (voir nos [tarifs](/tarifs) et le guide sur le [prix du remplacement de gouttières](/blog/prix-remplacement-gouttieres-bruxelles-2026)).",
           "Si le bois de la corniche est pourri, il faut le traiter ou le remplacer avant de reposer le zinc : un chéneau neuf sur un support affaibli ne tiendra pas sa pente. Pour les fuites ponctuelles, notre guide [gouttière qui fuit](/blog/gouttiere-qui-fuit) décrit les réparations possibles. Toutes ces interventions font partie de notre service de [réparation de gouttières](/services/reparation-gouttieres).",
         ],
       },
       {
-        h2: "Façades protégées : se renseigner avant de changer",
+        h2: "Faut-il une autorisation pour modifier une corniche ?",
         paragraphs: [
           "La corniche fait partie de la façade. Sur un bien classé, inscrit à l'inventaire du patrimoine ou situé dans une zone protégée, modifier son aspect — matériau, profil, couleur — peut nécessiter un permis d'urbanisme. En cas de doute, interrogez le service de l'urbanisme de votre commune avant les travaux. Remplacer le zinc par du zinc, à l'identique, reste la solution la plus simple et la plus durable.",
         ],

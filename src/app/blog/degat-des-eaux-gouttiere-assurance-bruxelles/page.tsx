@@ -129,7 +129,7 @@ export default function BlogDegatDesEauxGouttiereAssurance() {
               </div>
             </div>
 
-            <h2>Gouttière, infiltration et assurance : comprendre le mécanisme</h2>
+            <h2>Comment une gouttière provoque-t-elle une infiltration ?</h2>
             <p>
               Une gouttière bouchée ou percée laisse l&apos;eau ruisseler là où elle ne devrait pas : sur la façade, dans les combles, le long des fondations. Quand cette eau finit par pénétrer dans l&apos;habitation, on parle de dégât des eaux. La question qui suit, immanquablement : <strong>qui paie ?</strong>
             </p>
@@ -137,7 +137,7 @@ export default function BlogDegatDesEauxGouttiereAssurance() {
               La réponse dépend d&apos;un critère central que tous les assureurs examinent : le sinistre était-il <strong>accidentel et soudain</strong>, ou résulte-t-il d&apos;un <strong>défaut d&apos;entretien</strong> de votre part ? C&apos;est cette distinction qui détermine, en grande partie, si vous serez indemnisé.
             </p>
 
-            <h2>Ce que couvre généralement l&apos;assurance habitation</h2>
+            <h2>Que couvre généralement l&apos;assurance habitation ?</h2>
             <p>
               La plupart des contrats d&apos;assurance habitation en Belgique comportent une garantie « dégâts des eaux » qui couvre les dommages causés par une infiltration soudaine. Sont souvent pris en charge :
             </p>
@@ -150,7 +150,7 @@ export default function BlogDegatDesEauxGouttiereAssurance() {
               Attention : les conditions, plafonds et exclusions varient fortement d&apos;un contrat à l&apos;autre. Seule la lecture de vos conditions générales fait foi.
             </p>
 
-            <h2>Le piège : le défaut d&apos;entretien</h2>
+            <h2>L&apos;assurance peut-elle refuser pour défaut d&apos;entretien ?</h2>
             <p>
               C&apos;est ici que beaucoup de propriétaires bruxellois sont surpris. Si l&apos;expert mandaté par l&apos;assureur constate que la gouttière était <strong>manifestement bouchée depuis longtemps</strong>, encombrée de feuilles, de mousse et de terre, il peut conclure à un défaut d&apos;entretien. Dans ce cas, l&apos;assureur est en droit de <strong>réduire l&apos;indemnisation, voire de la refuser</strong>.
             </p>
