@@ -28,7 +28,8 @@ export default function MentionsLegales() {
               <p className="text-gray-600 leading-relaxed">
                 <strong>Dénomination :</strong> Nettoyage Gouttières Bruxelles<br />
                 <strong>Domaine :</strong> nettoyage-gouttieres-bruxelles.be<br />
-                <strong>Adresse :</strong> Bruxelles, Belgique<br />
+                <strong>Éditeur :</strong> Ilias Dorhmi, entreprise individuelle sous le nom HqDigital, numéro d&apos;entreprise (BCE) BE 1043.624.483, Hof ter Lokerenstraat, 9320 Aalst (Belgique)<br />
+                <strong>Zone d&apos;activité :</strong> Bruxelles, Belgique<br />
                 <strong>Téléphone :</strong> 0451 05 33 70<br />
                 <strong>Email :</strong> contact@nettoyage-gouttieres-bruxelles.be<br />
                 <strong>Activité :</strong> Nettoyage, débouchage, réparation et entretien de gouttières
