@@ -4,13 +4,13 @@ import GutterIllustration from "@/components/GutterIllustration"
 import { Phone, ArrowRight, MapPin, Leaf, Droplets, Wrench, AlertTriangle } from "lucide-react"
 import Breadcrumb from "@/components/Breadcrumb"
 import ContactForm from "@/components/ContactForm"
-import { CommuneConseils, NeighborCommunes } from "@/components/CommuneLocal"
+import { CommuneConseils, CommuneDetail, NeighborCommunes } from "@/components/CommuneLocal"
 import { localFaqs, localFaqSchema } from "@/lib/communes"
 
 export const metadata: Metadata = {
-  title: { absolute: "Nettoyage de gouttières à Anderlecht dès 80 €" },
+  title: { absolute: "Nettoyage de gouttières à Anderlecht dès 80 € — devis gratuit" },
   description:
-    "Nettoyage de gouttières à Anderlecht dès 80 € : maisons ouvrières, Cureghem, bords du canal, Neerpede. Devis gratuit, intervention sous 48h.",
+    "Nettoyage de gouttières à Anderlecht : Cureghem, Neerpede et le long du canal. Maisons ouvrières en brique, zinc d'époque, humidité élevée. Devis gratuit, intervention sous 48h.",
   alternates: { canonical: "https://www.nettoyage-gouttieres-bruxelles.be/communes/anderlecht" },
   keywords: ["nettoyage gouttières Anderlecht", "débouchage gouttières Anderlecht", "gouttières bouchées Anderlecht", "prix nettoyage gouttières Anderlecht"],
   openGraph: {
@@ -183,6 +183,8 @@ export default function AnderlechtPage() {
           </div>
         </div>
       </section>
+
+      <CommuneDetail slug="anderlecht" />
 
       <CommuneConseils slug="anderlecht" />
 

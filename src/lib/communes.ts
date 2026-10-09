@@ -51,6 +51,27 @@ export const communes: Commune[] = [
         a: "Pas forcément plus souvent, mais pas pour les mêmes raisons. Sans grands arbres au-dessus du toit, l'automne pèse moins ; ce sont surtout les mousses et les dépôts apportés par le vent qui s'accumulent au fil de l'année. Un contrôle annuel, complété d'un démoussage si la toiture verdit, suffit dans la plupart des cas.",
       },
     ],
+    detail: {
+      kicker: "Canal, brique et accès",
+      question: "Pourquoi les gouttières des maisons d'Anderlecht s'entretiennent-elles plus souvent près du canal ?",
+      paragraphs: [
+        [
+          { text: "Le bâti ouvrier d'Anderlecht — maisons mitoyennes de briques rouges des années 1900 à 1950 — n'a souvent qu'une descente en façade avant, qui déverse directement sur le trottoir. Quand un bouchon s'y forme, l'eau ruisselle sur la brique et sur le mur du voisin plutôt que dans le jardin : d'où l'intérêt de ne pas laisser passer une saison entière." },
+        ],
+        [
+          { text: "Le long du canal de Charleroi, l'air plus humide favorise les mousses, qui reviennent plus vite que sur les hauteurs de la commune. Le zinc d'origine, quand il est droit et que les soudures tiennent, se nettoie sans être remplacé ; c'est l'inspection, faite en même temps que le nettoyage, qui tranche entre réparation et remplacement d'une section." },
+        ],
+        [
+          { text: "Entre Cureghem et Neerpede, l'accès change : cours arrière étroites au centre, jardins larges à l'ouest. Deux configurations voisines suivent le même rythme côté " },
+          { link: { href: "/communes/forest", label: "Forest" } },
+          { text: " et " },
+          { link: { href: "/communes/molenbeek-saint-jean", label: "Molenbeek-Saint-Jean" } },
+          { text: " ; notre " },
+          { link: { href: "/services/nettoyage-gouttieres", label: "service de nettoyage de gouttières" } },
+          { text: " détaille le matériel utilisé sur ces façades." },
+        ],
+      ],
+    },
     guides: ["descente-pluviale-bouchee", "gouttiere-decrochee-qui-penche"],
   },
   {
@@ -424,6 +445,27 @@ export const communes: Commune[] = [
         a: "Pour les immeubles directement sous les arbres, un passage fin novembre est conseillé chaque année. Ailleurs dans la commune, les gouttières reçoivent surtout des poussières et des sédiments : un contrôle annuel des gouttières et des avaloirs suffit en général.",
       },
     ],
+    detail: {
+      kicker: "Immeubles hauts, toits plats",
+      question: "Comment nettoyer les gouttières d'un immeuble à toit plat à Saint-Josse-ten-Noode ?",
+      paragraphs: [
+        [
+          { text: "Saint-Josse-ten-Noode est la commune la plus densément peuplée de Belgique : son bâti se compose d'immeubles de rapport de 4 à 6 étages, souvent sans trappe d'accès facile au toit. Les gouttières y accumulent surtout des sédiments urbains et des poussières plutôt que des feuilles, car les arbres sont rares." },
+        ],
+        [
+          { text: "Sur les toitures plates et les terrasses, l'évacuation passe par des gargouilles et des avaloirs qui se colmatent vite. Un avaloir bouché laisse l'eau stagner sur la membrane et infiltrer en quelques heures : ces points se contrôlent en priorité, avec le trop-plein qui sert de secours." },
+        ],
+        [
+          { text: "La gouttière et les descentes d'un immeuble relèvent le plus souvent des parties communes : c'est le syndic qui commande l'entretien, sur devis. Un rapport d'état détaillé facilite la décision en assemblée. Les contraintes d'accès sont proches côté " },
+          { link: { href: "/communes/schaerbeek", label: "Schaerbeek" } },
+          { text: " et " },
+          { link: { href: "/communes/bruxelles", label: "Bruxelles-Ville" } },
+          { text: " ; notre " },
+          { link: { href: "/services/nettoyage-gouttieres", label: "service de nettoyage de gouttières" } },
+          { text: " précise le matériel employé sur les façades hautes." },
+        ],
+      ],
+    },
     guides: ["gouttieres-copropriete-bruxelles", "choisir-entreprise-gouttieres-bruxelles"],
   },
   {

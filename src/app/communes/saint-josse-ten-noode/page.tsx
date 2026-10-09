@@ -4,13 +4,13 @@ import GutterIllustration from "@/components/GutterIllustration"
 import { Phone, ArrowRight, MapPin, Leaf, Droplets, Wrench, AlertTriangle } from "lucide-react"
 import Breadcrumb from "@/components/Breadcrumb"
 import ContactForm from "@/components/ContactForm"
-import { CommuneConseils, NeighborCommunes } from "@/components/CommuneLocal"
+import { CommuneConseils, CommuneDetail, NeighborCommunes } from "@/components/CommuneLocal"
 import { localFaqs, localFaqSchema } from "@/lib/communes"
 
 export const metadata: Metadata = {
-  title: { absolute: "Nettoyage de gouttières à Saint-Josse-ten-Noode dès 80 €" },
+  title: { absolute: "Nettoyage de gouttières à Saint-Josse-ten-Noode — dès 80 €, 48h" },
   description:
-    "Nettoyage de gouttières à Saint-Josse dès 80 € : immeubles hauts, toits plats, avaloirs. Devis gratuit, intervention sous 48h.",
+    "Nettoyage de gouttières à Saint-Josse : immeubles hauts, toits plats et avaloirs. Rapport d'état pour le syndic. Devis gratuit, intervention sous 48h dans la commune.",
   alternates: { canonical: "https://www.nettoyage-gouttieres-bruxelles.be/communes/saint-josse-ten-noode" },
   keywords: ["nettoyage gouttières Saint-Josse", "débouchage gouttières Saint-Josse", "gouttières bouchées Saint-Josse", "prix nettoyage gouttières Saint-Josse"],
   openGraph: {
@@ -184,6 +184,8 @@ export default function SaintJossePage() {
           </div>
         </div>
       </section>
+
+      <CommuneDetail slug="saint-josse-ten-noode" />
 
       <CommuneConseils slug="saint-josse-ten-noode" />
 
