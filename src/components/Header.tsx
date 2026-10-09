@@ -32,6 +32,7 @@ const servicesNav = [
   { name: "Débouchage urgence", href: "/services/debouchage-gouttieres" },
   { name: "Réparation / remplacement", href: "/services/reparation-gouttieres" },
   { name: "Démoussage toiture", href: "/services/demoussage-toiture" },
+  { name: "Nettoyage de toiture", href: "/services/nettoyage-toiture" },
   { name: "Protection anti-feuilles", href: "/services/protection-gouttieres" },
   { name: "Contrat d'entretien annuel", href: "/services/contrat-entretien-gouttieres" },
 ];

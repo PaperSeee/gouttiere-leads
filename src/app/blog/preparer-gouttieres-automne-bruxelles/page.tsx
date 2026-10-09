@@ -428,6 +428,7 @@ export default function BlogAutomneGouttieresBruxellesPage() {
             {[
               { label: "Nettoyage de gouttières", href: "/services/nettoyage-gouttieres" },
               { label: "Démoussage de toiture", href: "/services/demoussage-toiture" },
+              { label: "Nettoyage de toiture", href: "/services/nettoyage-toiture" },
               { label: "Quand nettoyer ses gouttières ?", href: "/blog/entretien-gouttieres-quand-faire" },
               { label: "Gouttières et gel en hiver", href: "/blog/gouttiere-gel-hiver-bruxelles-protection" },
               { label: "Protections anti-feuilles", href: "/blog/protection-gouttieres-anti-feuilles-bruxelles" },

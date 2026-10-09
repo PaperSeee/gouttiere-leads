@@ -132,6 +132,11 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="/services/nettoyage-toiture" className="hover:text-accent transition-colors">
+                  Nettoyage de toiture
+                </Link>
+              </li>
+              <li>
                 <Link href="/services/protection-gouttieres" className="hover:text-accent transition-colors">
                   Protection anti-feuilles
                 </Link>

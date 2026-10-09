@@ -132,6 +132,7 @@ export default function FAQ() {
                 { label: "Nettoyage de gouttières", href: "/services/nettoyage-gouttieres" },
                 { label: "Débouchage de gouttières en urgence", href: "/services/debouchage-gouttieres" },
                 { label: "Nettoyage et démoussage de toiture", href: "/services/demoussage-toiture" },
+                { label: "Nettoyage de toiture", href: "/services/nettoyage-toiture" },
                 { label: "Réparation de gouttières", href: "/services/reparation-gouttieres" },
                 { label: "Tarifs 2026 du nettoyage de gouttières", href: "/tarifs" },
                 { label: "Types de gouttières : PVC, zinc, aluminium", href: "/types-gouttieres" },
