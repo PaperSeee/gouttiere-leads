@@ -6,9 +6,9 @@ import ContactForm from "@/components/ContactForm";
 import ServiceGuides from "@/components/ServiceGuides";
 
 export const metadata: Metadata = {
-  title: { absolute: "Démoussage de toiture à Bruxelles | Gouttières Bruxelles" },
+  title: { absolute: "Démoussage de toiture à Bruxelles — 3 à 6 €/m², traitement inclus" },
   description:
-    "Démoussage de toiture à Bruxelles de 3 à 6 €/m², traitement anti-mousse inclus. Moins de débris dans vos gouttières. Devis gratuit.",
+    "Démoussage de toiture à Bruxelles : brossage des tuiles et ardoises, traitement anti-mousse biodégradable, gouttières nettoyées le même jour. 3 à 6 €/m², devis gratuit.",
   alternates: { canonical: "https://www.nettoyage-gouttieres-bruxelles.be/services/demoussage-toiture" },
   keywords: ["démoussage toiture Bruxelles", "mousses toiture Bruxelles", "traitement anti-mousse toiture", "démoussage toiture prix Bruxelles"],
   openGraph: {
@@ -48,6 +48,24 @@ const communes = [
   { name: "Woluwe-Saint-Pierre", slug: "woluwe-saint-pierre" },
 ];
 
+const demoussageFaqs = [
+  {
+    question: "Quand faire démousser sa toiture à Bruxelles ?",
+    answer:
+      "À la fin de l'été ou au début de l'automne, avant l'hiver, quand la mousse est encore sèche. Évitez les périodes de gel et les jours de pluie : le traitement doit sécher.",
+  },
+  {
+    question: "Quelle est la différence entre nettoyage et démoussage ?",
+    answer:
+      "Le nettoyage enlève les débris (feuilles, dépôts) et vide les gouttières ; le démoussage traite la mousse et les lichens qui restent accrochés aux tuiles. Les deux se combinent souvent en une seule visite.",
+  },
+  {
+    question: "Le démoussage abîme-t-il les tuiles ?",
+    answer:
+      "Non, quand il est fait au brossage doux, sans nettoyeur haute pression sur les tuiles fragiles ou l'ardoise. La haute pression peut casser les tuiles et déplacer les solins.",
+  },
+];
+
 export default function DemoussageToiture() {
   const serviceSchema = {
     "@context": "https://schema.org",
@@ -64,9 +82,20 @@ export default function DemoussageToiture() {
     },
   };
 
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: demoussageFaqs.map((f) => ({
+      "@type": "Question",
+      name: f.question,
+      acceptedAnswer: { "@type": "Answer", text: f.answer },
+    })),
+  };
+
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <Breadcrumb
         items={[
           { label: "Accueil", href: "/" },
@@ -86,9 +115,10 @@ export default function DemoussageToiture() {
               Démoussage de Toiture à Bruxelles
             </h1>
             <p className="text-gray-300 text-lg mb-6 leading-relaxed">
-              La mousse qui colonise vos tuiles n&apos;est pas qu&apos;inesthétique : elle retient l&apos;humidité,
-              dégrade les tuiles et alimente directement vos gouttières en débris. Un démoussage
-              professionnel associé à un traitement préventif protège votre toiture pendant plusieurs années.
+              Le démoussage de toiture à Bruxelles retire mousses et lichens des tuiles ou ardoises
+              au brossage, puis applique un traitement anti-mousse biodégradable qui protège la
+              couverture 3 à 5 ans. Comptez 3 à 6 €/m², gouttières nettoyées le jour même. Devis
+              gratuit, prix fixé avant travaux.
             </p>
             <a href="tel:0451053370" className="inline-flex items-center gap-2 bg-[#F97316] hover:bg-orange-500 text-white font-bold px-6 py-3 rounded-xl transition-colors">
               <Phone size={18} /> 0451 05 33 70
@@ -176,6 +206,16 @@ export default function DemoussageToiture() {
                 </p>
               </div>
 
+              <h2 className="text-2xl font-bold text-gray-900 mb-4 mt-8">Questions fréquentes sur le démoussage</h2>
+              <div className="not-prose space-y-4 mb-6">
+                {demoussageFaqs.map((f) => (
+                  <div key={f.question} className="rounded-xl border border-gray-200 p-5">
+                    <p className="font-semibold text-gray-900 mb-2">{f.question}</p>
+                    <p className="text-gray-600 text-sm leading-relaxed">{f.answer}</p>
+                  </div>
+                ))}
+              </div>
+
               <h2 className="text-2xl font-bold text-gray-900 mb-4 mt-8">Nos communes d&apos;intervention</h2>
               <div className="grid grid-cols-3 gap-2">
                 {communes.map((c) => (
@@ -214,6 +254,7 @@ export default function DemoussageToiture() {
                   <li><Link href="/services/nettoyage-gouttieres" className="text-gray-700 hover:text-[#F97316]">→ Nettoyage gouttières</Link></li>
                   <li><Link href="/services/debouchage-gouttieres" className="text-gray-700 hover:text-[#F97316]">→ Débouchage urgence</Link></li>
                   <li><Link href="/services/reparation-gouttieres" className="text-gray-700 hover:text-[#F97316]">→ Réparation gouttières</Link></li>
+                  <li><Link href="/services/nettoyage-toiture" className="text-gray-700 hover:text-[#F97316]">→ Nettoyage toiture</Link></li>
                 </ul>
               </div>
 

@@ -11,6 +11,7 @@ import {
   CheckCircle,
   ArrowRight,
   Euro,
+  Home,
   ThumbsUp,
   ShieldCheck,
   CalendarCheck,
@@ -22,16 +23,16 @@ import { blogPosts, getRecentPosts } from "@/lib/blog";
 import GutterIllustration from "@/components/GutterIllustration";
 
 export const metadata: Metadata = {
-  title: { absolute: "Nettoyage de gouttières à Bruxelles dès 80€ | Devis gratuit" },
+  title: { absolute: "Nettoyage de gouttières à Bruxelles dès 80 € — devis gratuit" },
   description:
-    "Nettoyage de gouttières à Bruxelles dès 80€ : feuilles, mousse et descentes pluviales. Intervention sous 48h, urgences 7j/7. Devis gratuit.",
+    "Nettoyage de gouttières à Bruxelles dès 80 € : feuilles, mousses et boues retirées du chéneau et des descentes, écoulement testé. Assuré RC Pro, intervention sous 48h dans les 19 communes.",
   keywords: ["nettoyage gouttières Bruxelles", "débouchage gouttières urgence Bruxelles", "réparation gouttières Bruxelles", "démoussage toiture Bruxelles", "gouttières bouchées intervention rapide"],
   alternates: {
     canonical: "https://www.nettoyage-gouttieres-bruxelles.be/",
   },
   openGraph: {
-    title: "Nettoyage de gouttières à Bruxelles dès 80€ | Devis gratuit",
-    description: "Nettoyage de gouttières à Bruxelles dès 80€ : feuilles, mousse, descentes pluviales. Devis gratuit, intervention sous 48h.",
+    title: "Nettoyage de gouttières à Bruxelles dès 80 € — devis gratuit",
+    description: "Nettoyage de gouttières à Bruxelles dès 80 € : feuilles, mousses et boues retirées, descentes débouchées, écoulement testé. Devis gratuit, intervention sous 48h.",
     url: "https://www.nettoyage-gouttieres-bruxelles.be/",
     type: "website",
     images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "Nettoyage Gouttières Bruxelles" }],
@@ -149,6 +150,7 @@ const services = [
   { icon: AlertTriangle, title: "Débouchage en urgence", desc: "Débordement pendant la pluie ? Intervention 7j/7, souvent le jour même.", href: "/services/debouchage-gouttieres", price: "dès 120€" },
   { icon: Wrench, title: "Réparation & remplacement", desc: "Gouttière fissurée, décrochée ou à remplacer : zinc, PVC, aluminium.", href: "/services/reparation-gouttieres", price: "devis gratuit" },
   { icon: Leaf, title: "Démoussage de toiture", desc: "Brossage et traitement anti-mousse : moins de débris dans les gouttières.", href: "/services/demoussage-toiture", price: "3–6€/m²" },
+  { icon: Home, title: "Nettoyage de toiture", desc: "Feuilles, mousses et débris dégagés du toit — souvent avec le nettoyage des gouttières.", href: "/services/nettoyage-toiture", price: "sur devis" },
   { icon: ShieldCheck, title: "Protection anti-feuilles", desc: "Grilles et crapaudines pour espacer les nettoyages sous les grands arbres.", href: "/services/protection-gouttieres", price: "devis gratuit" },
   { icon: CalendarCheck, title: "Contrat d'entretien", desc: "Un passage planifié chaque année, sans avoir à y penser.", href: "/services/contrat-entretien-gouttieres", price: "sur mesure" },
 ];

@@ -6,9 +6,9 @@ import ContactForm from "@/components/ContactForm";
 import ServiceGuides from "@/components/ServiceGuides";
 
 export const metadata: Metadata = {
-  title: { absolute: "Nettoyage complet de gouttières à Bruxelles" },
+  title: { absolute: "Nettoyage complet de gouttières à Bruxelles — descentes incluses" },
   description:
-    "Nettoyage de gouttières à Bruxelles dès 80 € : feuilles, mousses et boues retirées, descentes pluviales comprises, écoulement testé. Devis gratuit.",
+    "Ce que comprend un nettoyage de gouttières à Bruxelles : feuilles, mousses et boues retirées du chéneau et des descentes, écoulement testé, déchets évacués. Dès 80 €, devis gratuit.",
   alternates: { canonical: "https://www.nettoyage-gouttieres-bruxelles.be/services/nettoyage-gouttieres" },
   keywords: ["nettoyage gouttières Bruxelles professionnel", "nettoyage gouttières prix Bruxelles", "entretien gouttières maison Bruxelles", "nettoyage haute pression gouttières"],
   openGraph: {
@@ -48,6 +48,24 @@ const communes = [
   { name: "Woluwe-Saint-Pierre", slug: "woluwe-saint-pierre" },
 ];
 
+const nettoyageFaqs = [
+  {
+    question: "Combien de temps dure un nettoyage de gouttières ?",
+    answer:
+      "De 45 minutes à 1h30 pour une maison 2 façades, et jusqu'à 2 à 3 heures pour une villa 4 façades dans les communes boisées comme Anderlecht, Uccle ou Woluwe-Saint-Pierre. La durée est précisée lors du devis gratuit.",
+  },
+  {
+    question: "Faut-il un accès particulier ?",
+    answer:
+      "Sur la plupart des maisons bruxelloises, une échelle posée sur sol plat et un passage par le toit suffisent. Une nacelle est parfois nécessaire pour les façades hautes sans accès arrière ; ce point est tranché lors du devis gratuit, selon la configuration réelle.",
+  },
+  {
+    question: "Nettoyez-vous aussi les descentes pluviales ?",
+    answer:
+      "Oui, systématiquement : les descentes sont débouchées et rincées, et le débit est contrôlé au pied de chaque tuyau avant de partir.",
+  },
+];
+
 export default function NettoyageGouttieres() {
   const serviceSchema = {
     "@context": "https://schema.org",
@@ -64,9 +82,20 @@ export default function NettoyageGouttieres() {
     },
   };
 
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: nettoyageFaqs.map((f) => ({
+      "@type": "Question",
+      name: f.question,
+      acceptedAnswer: { "@type": "Answer", text: f.answer },
+    })),
+  };
+
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <Breadcrumb
         items={[
           { label: "Accueil", href: "/" },
@@ -87,9 +116,10 @@ export default function NettoyageGouttieres() {
               Nettoyage de Gouttières à Bruxelles
             </h1>
             <p className="text-gray-300 text-lg mb-6 leading-relaxed">
-              Un nettoyage professionnel de vos gouttières une à deux fois par an suffit à prévenir
-              la grande majorité des problèmes liés aux eaux pluviales. Nos techniciens interviennent
-              sur tous types de toitures et de gouttières dans les 19 communes de Bruxelles.
+              Un nettoyage de gouttières à Bruxelles consiste à retirer feuilles, mousses et sédiments
+              du chéneau puis à déboucher et rincer les descentes pluviales, avec un test d&apos;écoulement
+              à la fin. Comptez 80 à 150 € pour une maison bruxelloise, descentes comprises. Devis
+              gratuit, prix fixé avant l&apos;intervention.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <a href="tel:0451053370" className="flex items-center justify-center gap-2 bg-[#F97316] hover:bg-orange-500 text-white font-bold px-6 py-3 rounded-xl transition-colors">
@@ -165,6 +195,16 @@ export default function NettoyageGouttieres() {
                 entretenues que celles des maisons individuelles.
               </p>
 
+              <h2 className="text-2xl font-bold text-gray-900 mb-4 mt-8">Questions fréquentes sur le nettoyage de gouttières</h2>
+              <div className="not-prose space-y-4 mb-6">
+                {nettoyageFaqs.map((f) => (
+                  <div key={f.question} className="rounded-xl border border-gray-200 p-5">
+                    <p className="font-semibold text-gray-900 mb-2">{f.question}</p>
+                    <p className="text-gray-600 text-sm leading-relaxed">{f.answer}</p>
+                  </div>
+                ))}
+              </div>
+
               <h2 className="text-2xl font-bold text-gray-900 mb-4 mt-8">Nos communes d&apos;intervention</h2>
               <div className="grid grid-cols-3 gap-2">
                 {communes.map((c) => (
@@ -219,6 +259,7 @@ export default function NettoyageGouttieres() {
                   <li><Link href="/services/debouchage-gouttieres" className="text-sm text-gray-700 hover:text-[#F97316]">→ Débouchage urgence</Link></li>
                   <li><Link href="/services/reparation-gouttieres" className="text-sm text-gray-700 hover:text-[#F97316]">→ Réparation gouttières</Link></li>
                   <li><Link href="/services/demoussage-toiture" className="text-sm text-gray-700 hover:text-[#F97316]">→ Démoussage toiture</Link></li>
+                  <li><Link href="/services/nettoyage-toiture" className="text-sm text-gray-700 hover:text-[#F97316]">→ Nettoyage toiture</Link></li>
                 </ul>
               </div>
 
