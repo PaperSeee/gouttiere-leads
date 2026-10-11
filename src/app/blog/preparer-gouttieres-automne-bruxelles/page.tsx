@@ -3,6 +3,8 @@ import Link from "next/link"
 import { Phone, ArrowRight, CheckCircle, Calendar, Clock, Tag } from "lucide-react"
 import Breadcrumb from "@/components/Breadcrumb"
 import ContactForm from "@/components/ContactForm"
+import Byline from "@/components/Byline"
+import { EDITOR_REF, PUBLISHER_REF } from "@/lib/schema"
 
 export const metadata: Metadata = {
   title: { absolute: "Préparer ses gouttières avant l'automne à Bruxelles" },
@@ -34,17 +36,8 @@ export default function BlogAutomneGouttieresBruxellesPage() {
         "@id": `${DOMAIN}/blog/preparer-gouttieres-automne-bruxelles`,
         headline: "Comment Préparer ses Gouttières Avant l'Automne à Bruxelles",
         description: "Guide complet pour préparer vos gouttières avant l'automne à Bruxelles : checklist d'inspection, arbres à risque et quand appeler un professionnel.",
-        author: {
-          "@type": "Organization",
-          name: "Nettoyage Gouttières Bruxelles",
-          url: DOMAIN,
-        },
-        publisher: {
-          "@type": "Organization",
-          name: "Nettoyage Gouttières Bruxelles",
-          url: DOMAIN,
-          logo: { "@type": "ImageObject", url: `${DOMAIN}/logo.svg` },
-        },
+        author: EDITOR_REF,
+        publisher: PUBLISHER_REF,
         datePublished: "2026-05-20",
         dateModified: "2026-05-20",
         image: "https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=1200&q=80",
@@ -82,6 +75,7 @@ export default function BlogAutomneGouttieresBruxellesPage() {
               <Clock size={12} />7 min de lecture
             </span>
           </div>
+          <Byline date="2026-05-20" className="mb-3" />
           <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold leading-tight mb-4">
             Comment Préparer ses Gouttières Avant l'Automne à Bruxelles
           </h1>

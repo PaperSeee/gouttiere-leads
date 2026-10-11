@@ -8,6 +8,7 @@ import Footer from "@/components/Footer";
 import LocalBusinessSchema from "@/components/LocalBusinessSchema";
 import { Phone, MessageCircle } from "lucide-react";
 import Umami from "@/components/Umami";
+import { EDITOR_ID, editorSchema } from "@/lib/schema";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -103,8 +104,9 @@ const organizationSchema = {
   url: DOMAIN,
   logo: {
     "@type": "ImageObject",
-    url: `${DOMAIN}/favicon.svg`,
+    url: `${DOMAIN}/logo.svg`,
   },
+  founder: { "@id": EDITOR_ID },
   contactPoint: {
     "@type": "ContactPoint",
     telephone: "+32451053370",
@@ -124,7 +126,7 @@ const websiteSchema = {
   name: "Nettoyage Gouttières Bruxelles",
   description: "Nettoyage de gouttières à Bruxelles. Débouchage, réparation, démoussage toiture.",
   inLanguage: "fr-BE",
-  publisher: { "@id": `${DOMAIN}/#business` },
+  publisher: { "@id": `${DOMAIN}/#organization` },
 };
 
 export default function RootLayout({
@@ -149,6 +151,10 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(editorSchema) }}
         />
         <LocalBusinessSchema />
       </head>

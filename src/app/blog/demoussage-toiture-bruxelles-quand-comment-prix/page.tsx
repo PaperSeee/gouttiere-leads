@@ -3,6 +3,8 @@ import Link from "next/link"
 import { ArrowRight, CheckCircle, Clock, Tag, AlertTriangle } from "lucide-react"
 import Breadcrumb from "@/components/Breadcrumb"
 import ContactForm from "@/components/ContactForm"
+import Byline from "@/components/Byline"
+import { EDITOR_REF, PUBLISHER_REF } from "@/lib/schema"
 
 export const metadata: Metadata = {
   title: { absolute: "Démoussage de toiture à Bruxelles : quand et à quel prix" },
@@ -37,13 +39,8 @@ export default function BlogDemoussageToitureBruxellesPage() {
         "@id": `${DOMAIN}/blog/${SLUG}`,
         headline: "Démoussage de Toiture à Bruxelles : Quand, Comment et à Quel Prix en 2026",
         description: "Mousses, lichens et algues sur votre toit ? Quand faire un démoussage à Bruxelles, les méthodes professionnelles, les prix 2026 et le lien direct avec vos gouttières.",
-        author: { "@type": "Organization", name: "Nettoyage Gouttières Bruxelles", url: DOMAIN },
-        publisher: {
-          "@type": "Organization",
-          name: "Nettoyage Gouttières Bruxelles",
-          url: DOMAIN,
-          logo: { "@type": "ImageObject", url: `${DOMAIN}/logo.svg` },
-        },
+        author: EDITOR_REF,
+        publisher: PUBLISHER_REF,
         datePublished: "2026-06-09",
         dateModified: "2026-06-09",
         image: "https://images.unsplash.com/photo-1632759145351-1d592919f522?w=1200&q=80",
@@ -77,6 +74,7 @@ export default function BlogDemoussageToitureBruxellesPage() {
               <Clock size={11} /> 7 min de lecture
             </span>
           </div>
+          <Byline date="2026-06-09" className="mb-3" />
           <h1 className="text-3xl sm:text-4xl font-extrabold text-white leading-tight mb-4">
             Démoussage de Toiture à Bruxelles : Quand, Comment et à Quel Prix
           </h1>

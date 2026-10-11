@@ -4,8 +4,9 @@ import GutterIllustration from "@/components/GutterIllustration"
 import { Phone, ArrowRight, MapPin, Leaf, Droplets, Wrench, AlertTriangle } from "lucide-react"
 import Breadcrumb from "@/components/Breadcrumb"
 import ContactForm from "@/components/ContactForm"
-import { CommuneConseils, NeighborCommunes } from "@/components/CommuneLocal"
-import { localFaqs, localFaqSchema } from "@/lib/communes"
+import TrustNote from "@/components/TrustNote"
+import { CommuneConseils, CommuneDetail, NeighborCommunes } from "@/components/CommuneLocal"
+import { localFaqs, localFaqSchema, getCommune } from "@/lib/communes"
 
 export const metadata: Metadata = {
   title: { absolute: "Nettoyage de gouttières à Evere dès 80 €" },
@@ -51,9 +52,7 @@ export default function EverePage() {
                 Nettoyage de gouttières à <span className="text-[#1A4731]">Evere</span>
               </h1>
               <p className="text-gray-600 text-lg leading-relaxed mb-7 max-w-xl">
-                Evere mélange des quartiers résidentiels tranquilles et des zones d&apos;activité
-                importantes. Ses maisons des années 50 à 70 ont des gouttières en aluminium
-                qui nécessitent un contrôle régulier.
+                {getCommune("evere").answer}
               </p>
               <div className="flex flex-wrap gap-3">
                 <a href="tel:0451053370" className="inline-flex items-center gap-2 bg-[#F97316] hover:bg-orange-500 text-white font-bold px-6 py-3.5 rounded-xl transition-colors shadow-md shadow-orange-100">
@@ -63,6 +62,7 @@ export default function EverePage() {
                   Devis gratuit <ArrowRight size={16} />
                 </a>
               </div>
+              <TrustNote className="mt-5" />
             </div>
             <div className="lg:w-72 bg-[#1A4731] text-white rounded-2xl p-6 flex-shrink-0 w-full">
               <p className="text-green-300 text-xs font-semibold uppercase tracking-wide mb-4">Evere en pratique</p>
@@ -183,6 +183,8 @@ export default function EverePage() {
           </div>
         </div>
       </section>
+
+      <CommuneDetail slug="evere" />
 
       <CommuneConseils slug="evere" />
 

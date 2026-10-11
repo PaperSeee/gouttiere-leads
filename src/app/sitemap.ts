@@ -1,6 +1,7 @@
 import { MetadataRoute } from "next";
 import { blogPosts } from "@/lib/blog";
 import { communes } from "@/lib/communes";
+import { guides } from "@/lib/guides";
 
 const BASE_URL = "https://www.nettoyage-gouttieres-bruxelles.be";
 
@@ -11,31 +12,46 @@ const BASE_URL = "https://www.nettoyage-gouttieres-bruxelles.be";
  * Les articles de blog utilisent leur date de publication (voir plus bas).
  */
 const LAST_MODIFIED: Record<string, string> = {
-  "": "2026-10-10",
-  "/types-gouttieres": "2026-09-26",
-  "/tarifs": "2026-10-04",
+  "": "2026-10-11",
+  "/types-gouttieres": "2026-10-11",
+  "/tarifs": "2026-10-11",
   "/faq": "2026-10-10",
   "/contact": "2026-10-04",
-  "/a-propos": "2026-10-04",
-  "/mentions-legales": "2026-10-07",
+  "/a-propos": "2026-10-11",
   "/communes": "2026-10-04",
   "/blog": "2026-09-26",
   "/services": "2026-10-10",
-  "/services/nettoyage-gouttieres": "2026-10-10",
-  "/services/debouchage-gouttieres": "2026-09-26",
-  "/services/reparation-gouttieres": "2026-09-26",
-  "/services/demoussage-toiture": "2026-10-10",
-  "/services/nettoyage-toiture": "2026-10-10",
-  "/services/protection-gouttieres": "2026-09-26",
-  "/services/contrat-entretien-gouttieres": "2026-09-26",
+  "/services/nettoyage-gouttieres": "2026-10-11",
+  "/services/debouchage-gouttieres": "2026-10-11",
+  "/services/reparation-gouttieres": "2026-10-11",
+  "/services/demoussage-toiture": "2026-10-11",
+  "/services/nettoyage-toiture": "2026-10-11",
+  "/services/protection-gouttieres": "2026-10-11",
+  "/services/contrat-entretien-gouttieres": "2026-10-11",
 };
 
 /** Pages commune : date propre aux communes retravaillées, défaut pour les autres. */
-const COMMUNE_LAST_MODIFIED: Record<string, string> = {
-  "anderlecht": "2026-10-10",
-  "saint-josse-ten-noode": "2026-10-10",
+// Les 19 pages commune ont reçu une réponse directe sous le H1 le 2026-10-11.
+const COMMUNE_LAST_MODIFIED: Record<string, string> = {};
+const COMMUNE_DEFAULT_LAST_MODIFIED = "2026-10-11";
+
+/**
+ * Articles de blog : date de dernière modification réelle (même valeur que
+ * dateModified du schema de chaque article), sinon date de publication.
+ */
+const BLOG_LAST_MODIFIED: Record<string, string> = {
+  "degat-des-eaux-gouttiere-assurance-bruxelles": "2026-10-04",
+  "demoussage-toiture-bruxelles-quand-comment-prix": "2026-06-09",
+  "entretien-gouttieres-quand-faire": "2026-05-29",
+  "gouttiere-gel-hiver-bruxelles-protection": "2026-10-04",
+  "gouttiere-qui-deborde-causes-solutions": "2026-10-11",
+  "infiltration-eau-facade-gouttieres": "2026-10-11",
+  "orages-ete-gouttieres-bruxelles-checklist": "2026-10-04",
+  "preparer-gouttieres-automne-bruxelles": "2026-05-20",
+  "prix-remplacement-gouttieres-bruxelles-2026": "2026-06-05",
+  "produits-nettoyage-gouttieres-bruxelles": "2026-06-05",
+  "protection-gouttieres-anti-feuilles-bruxelles": "2026-10-11",
 };
-const COMMUNE_DEFAULT_LAST_MODIFIED = "2026-10-04";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const communeSlugs = communes.map((c) => c.slug);
@@ -47,7 +63,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/faq",
     "/contact",
     "/a-propos",
-    "/mentions-legales",
+    // /mentions-legales : page légale, hors sitemap (standard de la flotte).
   ];
 
   const communePages = ["/communes", ...communeSlugs.map((slug) => `/communes/${slug}`)];
@@ -91,7 +107,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const blogEntries = blogPosts.map((post) => ({
     url: `${BASE_URL}/blog/${post.slug}`,
-    lastModified: new Date(post.date),
+    lastModified: new Date(
+      BLOG_LAST_MODIFIED[post.slug] ?? guides.find((g) => g.slug === post.slug)?.dateModified ?? post.date
+    ),
     changeFrequency: "monthly" as const,
     priority: 0.6,
   }));

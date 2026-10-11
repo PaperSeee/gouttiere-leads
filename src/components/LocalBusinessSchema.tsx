@@ -7,6 +7,7 @@ export default function LocalBusinessSchema() {
     "@context": "https://schema.org",
     "@type": "RoofingContractor",
     "@id": `${DOMAIN}/#business`,
+    parentOrganization: { "@id": `${DOMAIN}/#organization` },
     name: "Nettoyage Gouttières Bruxelles",
     description:
       "Nettoyage de gouttières à Bruxelles. Débouchage, réparation, démoussage toiture. Devis gratuit, intervention sous 48h, garantie satisfaction.",

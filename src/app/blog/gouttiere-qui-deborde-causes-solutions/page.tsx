@@ -3,6 +3,8 @@ import Link from "next/link"
 import { Phone, ArrowRight, CheckCircle, Calendar, Clock, Tag, AlertTriangle } from "lucide-react"
 import Breadcrumb from "@/components/Breadcrumb"
 import ContactForm from "@/components/ContactForm"
+import Byline from "@/components/Byline"
+import { EDITOR_REF, PUBLISHER_REF } from "@/lib/schema"
 
 export const metadata: Metadata = {
   title: { absolute: "Gouttière qui déborde : causes et solutions" },
@@ -35,15 +37,10 @@ export default function BlogDebordementPage() {
         "@id": `${DOMAIN}/blog/gouttiere-qui-deborde-causes-solutions`,
         headline: "Gouttière qui déborde : causes, dangers et solutions immédiates",
         description: "Votre gouttière déborde lors des pluies ? Découvrez les 6 causes les plus fréquentes, les risques pour votre maison et ce qu'il faut faire immédiatement.",
-        author: { "@type": "Organization", name: "Nettoyage Gouttières Bruxelles", url: DOMAIN },
-        publisher: {
-          "@type": "Organization",
-          name: "Nettoyage Gouttières Bruxelles",
-          url: DOMAIN,
-          logo: { "@type": "ImageObject", url: `${DOMAIN}/logo.svg` },
-        },
+        author: EDITOR_REF,
+        publisher: PUBLISHER_REF,
         datePublished: "2026-05-26",
-        dateModified: "2026-05-26",
+        dateModified: "2026-10-11",
         image: "https://images.unsplash.com/photo-1516455590571-18256e5bb9ff?w=1200&q=80",
         mainEntityOfPage: { "@type": "WebPage", "@id": `${DOMAIN}/blog/gouttiere-qui-deborde-causes-solutions` },
         inLanguage: "fr-BE",
@@ -96,11 +93,12 @@ export default function BlogDebordementPage() {
               <Clock size={12} />6 min de lecture
             </span>
           </div>
+          <Byline date="2026-10-11" className="mb-3" />
           <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold leading-tight mb-4">
             Gouttière qui déborde : causes, dangers et solutions immédiates
           </h1>
           <p className="text-lg text-gray-200 leading-relaxed">
-            Une gouttière qui déborde n&apos;est jamais anodine. En quelques heures de pluie intense, l&apos;eau peut infiltrer votre façade, saturer vos fondations ou endommager vos combles. Voici comment identifier la cause et réagir vite.
+            Une gouttière déborde le plus souvent parce qu&apos;elle est bouchée par des feuilles et des mousses, ou parce que sa descente pluviale est obstruée. Viennent ensuite une pente incorrecte, un joint défaillant, une gouttière décrochée ou trop petite. L&apos;eau qui passe par-dessus abîme la façade et sature le pied du mur : faites déboucher sans attendre la prochaine averse.
           </p>
           <div className="mt-6">
             <a

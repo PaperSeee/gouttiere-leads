@@ -3,6 +3,8 @@ import Link from "next/link"
 import { ArrowRight, CheckCircle, Clock, Tag, AlertTriangle } from "lucide-react"
 import Breadcrumb from "@/components/Breadcrumb"
 import ContactForm from "@/components/ContactForm"
+import Byline from "@/components/Byline"
+import { EDITOR_REF, PUBLISHER_REF } from "@/lib/schema"
 
 export const metadata: Metadata = {
   title: { absolute: "Produits de nettoyage de gouttières : lesquels choisir ?" },
@@ -37,13 +39,8 @@ export default function BlogProduitsNettoyageGouttieresBruxellesPage() {
         "@id": `${DOMAIN}/blog/${SLUG}`,
         headline: "Produits Nettoyage Gouttières Bruxelles : Lesquels Choisir et Éviter ?",
         description: "Guide complet sur les produits pour nettoyer vos gouttières à Bruxelles : démoussants, dégraissants, traitements anti-algues.",
-        author: { "@type": "Organization", name: "Nettoyage Gouttières Bruxelles", url: DOMAIN },
-        publisher: {
-          "@type": "Organization",
-          name: "Nettoyage Gouttières Bruxelles",
-          url: DOMAIN,
-          logo: { "@type": "ImageObject", url: `${DOMAIN}/logo.svg` },
-        },
+        author: EDITOR_REF,
+        publisher: PUBLISHER_REF,
         datePublished: "2026-06-05",
         dateModified: "2026-06-05",
         image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200&q=80",
@@ -77,6 +74,7 @@ export default function BlogProduitsNettoyageGouttieresBruxellesPage() {
               <Clock size={11} /> 7 min de lecture
             </span>
           </div>
+          <Byline date="2026-06-05" className="mb-3" />
           <h1 className="text-3xl sm:text-4xl font-extrabold text-white leading-tight mb-4">
             Produits Nettoyage Gouttières à Bruxelles : Lesquels Choisir et Éviter ?
           </h1>

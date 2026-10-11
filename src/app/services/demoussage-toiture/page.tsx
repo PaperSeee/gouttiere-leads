@@ -6,9 +6,9 @@ import ContactForm from "@/components/ContactForm";
 import ServiceGuides from "@/components/ServiceGuides";
 
 export const metadata: Metadata = {
-  title: { absolute: "Démoussage de toiture à Bruxelles — 3 à 6 €/m², traitement inclus" },
+  title: { absolute: "Démoussage de toiture à Bruxelles — 3 à 6 €/m²" },
   description:
-    "Démoussage de toiture à Bruxelles : brossage des tuiles et ardoises, traitement anti-mousse biodégradable, gouttières nettoyées le même jour. 3 à 6 €/m², devis gratuit.",
+    "Démoussage de toiture à Bruxelles : brossage des tuiles et ardoises, anti-mousse biodégradable, gouttières nettoyées le même jour. 3 à 6 €/m².",
   alternates: { canonical: "https://www.nettoyage-gouttieres-bruxelles.be/services/demoussage-toiture" },
   keywords: ["démoussage toiture Bruxelles", "mousses toiture Bruxelles", "traitement anti-mousse toiture", "démoussage toiture prix Bruxelles"],
   openGraph: {

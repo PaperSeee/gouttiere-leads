@@ -17,6 +17,7 @@ import {
   CalendarCheck,
 } from "lucide-react";
 import ContactForm from "@/components/ContactForm";
+import TrustNote from "@/components/TrustNote";
 import FAQAccordion from "@/components/FAQAccordion";
 import BlogCard from "@/components/BlogCard";
 import { blogPosts, getRecentPosts } from "@/lib/blog";
@@ -25,7 +26,7 @@ import GutterIllustration from "@/components/GutterIllustration";
 export const metadata: Metadata = {
   title: { absolute: "Nettoyage de gouttières à Bruxelles dès 80 € — devis gratuit" },
   description:
-    "Nettoyage de gouttières à Bruxelles dès 80 € : feuilles, mousses et boues retirées du chéneau et des descentes, écoulement testé. Assuré RC Pro, intervention sous 48h dans les 19 communes.",
+    "Nettoyage de gouttières à Bruxelles dès 80 € : chéneau et descentes vidés, écoulement testé, dans les 19 communes. Devis gratuit, prix fixé à l'avance.",
   keywords: ["nettoyage gouttières Bruxelles", "débouchage gouttières urgence Bruxelles", "réparation gouttières Bruxelles", "démoussage toiture Bruxelles", "gouttières bouchées intervention rapide"],
   alternates: {
     canonical: "https://www.nettoyage-gouttieres-bruxelles.be/",
@@ -81,6 +82,11 @@ const homeFaqs = [
     question: "Intervenez-vous en urgence en cas de débordement ?",
     answer:
       "Oui, notre service de débouchage d'urgence est disponible 7j/7. En cas de débordement actif lors de fortes pluies, appelez-nous directement au 0451 05 33 70. Nous intervenons généralement dans les 24 heures, souvent le jour même en haute saison automnale.",
+  },
+  {
+    question: "Nettoyez-vous aussi les corniches et les chéneaux ?",
+    answer:
+      "Oui. Beaucoup de maisons bruxelloises ont un chéneau en zinc caché derrière une corniche en bois : il se vide depuis le toit ou depuis une échelle, comme une gouttière pendante, puis la descente est contrôlée. Des coulures ou une peinture qui cloque sous la corniche indiquent souvent que le chéneau est plein.",
   },
   {
     question: "Nettoyez-vous aussi les descentes pluviales ?",
@@ -238,6 +244,7 @@ export default function HomePage() {
             <div className="mt-5">
               <ContactForm compact />
             </div>
+            <TrustNote className="mt-4 border-t border-gray-100 pt-4" />
           </div>
         </div>
       </section>
@@ -403,6 +410,12 @@ export default function HomePage() {
           <Link href="/faq" className="inline-flex items-center gap-1.5 font-bold text-[#1F7A55] hover:text-[#F97316]">
             Voir toutes nos FAQ <ArrowRight size={16} />
           </Link>
+          <p className="mt-4 text-sm text-gray-600">
+            Maison avec corniche ? Lisez notre guide sur le{" "}
+            <Link href="/blog/chenau-corniche-entretien" className="font-semibold text-[#1F7A55] underline hover:text-[#F97316]">nettoyage de corniche et de chéneau</Link>
+            , ou consultez les{" "}
+            <Link href="/tarifs" className="font-semibold text-[#1F7A55] underline hover:text-[#F97316]">prix du nettoyage de gouttières</Link>.
+          </p>
         </div>
       </section>
 
@@ -453,6 +466,7 @@ export default function HomePage() {
                 </li>
               ))}
             </ul>
+            <TrustNote className="mt-6" />
           </div>
           <div className="rounded-3xl bg-white p-6 shadow-xl ring-1 ring-gray-200/70 sm:p-8">
             <ContactForm />

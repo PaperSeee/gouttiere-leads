@@ -120,9 +120,7 @@ export default function TypesGouttieres() {
               Guide Complet des Types de Gouttières
             </h1>
             <p className="text-gray-300 text-lg leading-relaxed">
-              Zinc, PVC, aluminium ou cuivre : chaque matériau a ses avantages, ses inconvénients
-              et sa durée de vie propre. Ce guide vous aide à choisir le bon type de gouttière
-              selon votre habitation, votre budget et votre environnement bruxellois.
+              Il existe quatre grands types de gouttières : PVC (15 à 25 €/ml posé, 20 à 30 ans de durée de vie), aluminium (25 à 40 €/ml, 30 à 50 ans), zinc (35 à 55 €/ml, 50 à 80 ans) et cuivre (à partir de 80 €/ml, 80 à 100 ans). Le zinc est le matériau historique des maisons bruxelloises, le PVC le plus économique. Prix indicatifs.
             </p>
           </div>
         </div>

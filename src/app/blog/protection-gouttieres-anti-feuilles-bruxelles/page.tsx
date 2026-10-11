@@ -3,6 +3,8 @@ import Link from "next/link"
 import { ArrowRight, AlertTriangle, CheckCircle, Clock, Tag } from "lucide-react"
 import Breadcrumb from "@/components/Breadcrumb"
 import ContactForm from "@/components/ContactForm"
+import Byline from "@/components/Byline"
+import { EDITOR_REF, PUBLISHER_REF } from "@/lib/schema"
 
 export const metadata: Metadata = {
   title: { absolute: "Protections anti-feuilles : grilles, brosses ou filets ?" },
@@ -36,15 +38,10 @@ export default function BlogProtectionGouttieresAntiFeuilles() {
         "@id": `${DOMAIN}/blog/protection-gouttieres-anti-feuilles-bruxelles`,
         headline: "Protections anti-feuilles pour gouttières : grilles, brosses ou filets — que choisir ?",
         description: "Comparatif des systèmes anti-feuilles pour gouttières à Bruxelles : grilles, brosses, filets, mousses — efficacité, limites et prix.",
-        author: { "@type": "Organization", name: "Nettoyage Gouttières Bruxelles", url: DOMAIN },
-        publisher: {
-          "@type": "Organization",
-          name: "Nettoyage Gouttières Bruxelles",
-          url: DOMAIN,
-          logo: { "@type": "ImageObject", url: `${DOMAIN}/logo.svg` },
-        },
+        author: EDITOR_REF,
+        publisher: PUBLISHER_REF,
         datePublished: "2026-06-12",
-        dateModified: "2026-06-12",
+        dateModified: "2026-10-11",
         image: "https://images.unsplash.com/photo-1632759145351-1d592919f522?w=1200&q=80",
         mainEntityOfPage: { "@type": "WebPage", "@id": `${DOMAIN}/blog/protection-gouttieres-anti-feuilles-bruxelles` },
         inLanguage: "fr-BE",
@@ -97,11 +94,12 @@ export default function BlogProtectionGouttieresAntiFeuilles() {
               <Clock size={11} /> 7 min de lecture
             </span>
           </div>
+          <Byline date="2026-10-11" className="mb-3" />
           <h1 className="text-3xl sm:text-4xl font-extrabold text-white leading-tight mb-4">
             Protections Anti-Feuilles pour Gouttières : Grilles, Brosses ou Filets ?
           </h1>
           <p className="text-green-200 text-base leading-relaxed max-w-2xl">
-            Marre de nettoyer vos gouttières chaque automne ? On compare l&apos;efficacité réelle, les limites et le prix des principaux systèmes anti-feuilles pour les maisons bruxelloises.
+            Contre les feuilles dans les gouttières, il existe quatre systèmes : grilles métalliques ou plastiques, brosses, filets et boudins en mousse. Les grilles rigides bien posées sont les plus durables ; filets et mousses sont les moins chers mais s&apos;usent vite. Aucun n&apos;est autonettoyant : sous les arbres bruxellois, une inspection annuelle reste nécessaire.
           </p>
         </div>
       </section>

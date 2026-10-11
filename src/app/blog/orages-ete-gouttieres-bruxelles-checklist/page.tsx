@@ -3,6 +3,8 @@ import Link from "next/link"
 import { ArrowRight, AlertTriangle, CheckCircle, Clock, Tag } from "lucide-react"
 import Breadcrumb from "@/components/Breadcrumb"
 import ContactForm from "@/components/ContactForm"
+import Byline from "@/components/Byline"
+import { EDITOR_REF, PUBLISHER_REF } from "@/lib/schema"
 
 export const metadata: Metadata = {
   title: { absolute: "Orage à Bruxelles : préparer ses gouttières en 7 points" },
@@ -36,13 +38,8 @@ export default function BlogOragesEteGouttieres() {
         "@id": `${DOMAIN}/blog/orages-ete-gouttieres-bruxelles-checklist`,
         headline: "Orages d'été à Bruxelles : la checklist gouttières avant les intempéries",
         description: "Pourquoi les orages d'été sont le pire scénario pour une gouttière encrassée, et la checklist en 7 points pour préparer votre toiture à Bruxelles.",
-        author: { "@type": "Organization", name: "Nettoyage Gouttières Bruxelles", url: DOMAIN },
-        publisher: {
-          "@type": "Organization",
-          name: "Nettoyage Gouttières Bruxelles",
-          url: DOMAIN,
-          logo: { "@type": "ImageObject", url: `${DOMAIN}/logo.svg` },
-        },
+        author: EDITOR_REF,
+        publisher: PUBLISHER_REF,
         datePublished: "2026-07-03",
         dateModified: "2026-10-04",
         image: "https://images.unsplash.com/photo-1500674425229-f692875b0ab7?w=1200&q=80",
@@ -105,6 +102,7 @@ export default function BlogOragesEteGouttieres() {
               <Clock size={11} /> 6 min de lecture
             </span>
           </div>
+          <Byline date="2026-10-04" className="mb-3" />
           <h1 className="text-3xl sm:text-4xl font-extrabold text-white leading-tight mb-4">
             Orages d&apos;Été à Bruxelles : la Checklist Gouttières Avant les Intempéries
           </h1>

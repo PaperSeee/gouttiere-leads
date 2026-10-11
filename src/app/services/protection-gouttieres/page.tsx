@@ -4,6 +4,7 @@ import { Phone, CheckCircle, ArrowRight, Shield, Clock, Leaf } from "lucide-reac
 import Breadcrumb from "@/components/Breadcrumb";
 import ContactForm from "@/components/ContactForm";
 import ServiceGuides from "@/components/ServiceGuides";
+import TrustNote from "@/components/TrustNote";
 
 export const metadata: Metadata = {
   title: { absolute: "Protection anti-feuilles à Bruxelles | Gouttières Bruxelles" },
@@ -87,9 +88,7 @@ export default function ProtectionGouttieres() {
               Protection Anti-Feuilles pour Gouttières à Bruxelles
             </h1>
             <p className="text-gray-300 text-lg mb-6 leading-relaxed">
-              Grilles, brosses ou filets : nous posons des protections anti-feuilles adaptées à votre
-              habitation pour espacer nettement les nettoyages de gouttières, sans les supprimer
-              complètement. Intervention dans les 19 communes de Bruxelles.
+              Une protection anti-feuilles — grille, brosse ou filet — retient les feuilles au-dessus ou à l&apos;intérieur de la gouttière et permet d&apos;espacer les nettoyages, sans les supprimer : débris fins et mousses passent ou s&apos;accumulent sur la protection. Elle se justifie surtout sous de grands arbres ; le système adapté est choisi lors d&apos;un devis gratuit, dans les 19 communes.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <a href="tel:0451053370" className="flex items-center justify-center gap-2 bg-[#F97316] hover:bg-orange-500 text-white font-bold px-6 py-3 rounded-xl transition-colors">
@@ -99,6 +98,7 @@ export default function ProtectionGouttieres() {
                 Devis gratuit <ArrowRight size={18} />
               </a>
             </div>
+            <TrustNote className="mt-5" tone="dark" />
           </div>
         </div>
       </section>

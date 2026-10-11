@@ -3,6 +3,8 @@ import Link from "next/link"
 import { ArrowRight, AlertTriangle, CheckCircle, Clock, Tag } from "lucide-react"
 import Breadcrumb from "@/components/Breadcrumb"
 import ContactForm from "@/components/ContactForm"
+import Byline from "@/components/Byline"
+import { EDITOR_REF, PUBLISHER_REF } from "@/lib/schema"
 
 export const metadata: Metadata = {
   title: { absolute: "Dégât des eaux et gouttière : l'assurance paie-t-elle ?" },
@@ -36,13 +38,8 @@ export default function BlogDegatDesEauxGouttiereAssurance() {
         "@id": `${DOMAIN}/blog/degat-des-eaux-gouttiere-assurance-bruxelles`,
         headline: "Dégât des eaux dû à une gouttière : êtes-vous couvert par votre assurance ?",
         description: "Si votre assurance habitation couvre un dégât des eaux causé par une gouttière à Bruxelles, et comment éviter un refus pour défaut d'entretien.",
-        author: { "@type": "Organization", name: "Nettoyage Gouttières Bruxelles", url: DOMAIN },
-        publisher: {
-          "@type": "Organization",
-          name: "Nettoyage Gouttières Bruxelles",
-          url: DOMAIN,
-          logo: { "@type": "ImageObject", url: `${DOMAIN}/logo.svg` },
-        },
+        author: EDITOR_REF,
+        publisher: PUBLISHER_REF,
         datePublished: "2026-06-14",
         dateModified: "2026-10-04",
         image: "https://images.unsplash.com/photo-1517490232338-06b912a786b5?w=1200&q=80",
@@ -105,6 +102,7 @@ export default function BlogDegatDesEauxGouttiereAssurance() {
               <Clock size={11} /> 7 min de lecture
             </span>
           </div>
+          <Byline date="2026-10-04" className="mb-3" />
           <h1 className="text-3xl sm:text-4xl font-extrabold text-white leading-tight mb-4">
             Dégât des Eaux dû à une Gouttière : Êtes-vous Couvert par votre Assurance ?
           </h1>

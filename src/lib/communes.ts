@@ -14,6 +14,8 @@ export interface Commune {
   name: string;
   /** « d'Ixelles », « de Forest » : pour « les habitants de… » */
   de: string;
+  /** Réponse directe sous le H1 (40-60 mots) : prix indicatif, contexte local, devis. */
+  answer: string;
   neighbors: string[];
   conseils: string[];
   faqs: CommuneFaq[];
@@ -36,6 +38,7 @@ export const communes: Commune[] = [
     slug: "anderlecht",
     name: "Anderlecht",
     de: "d'Anderlecht",
+    answer: "À Anderlecht, un nettoyage de gouttières coûte en général 80 à 150 € pour une maison, descentes pluviales comprises. L'essentiel des demandes concerne les maisons ouvrières mitoyennes de Cureghem et du bord du canal de Charleroi, où l'humidité fait revenir les mousses plus vite. Le devis est gratuit et le prix est annoncé avant l'intervention.",
     neighbors: ["molenbeek-saint-jean", "bruxelles", "saint-gilles", "forest"],
     conseils: [
       "À Cureghem et autour des Abattoirs, les maisons de rapport sont mitoyennes et leur gouttière de façade surplombe directement le trottoir : un débordement y abîme à la fois votre brique et le mur du voisin. Faites contrôler la descente jusqu'au regard au pied du mur, souvent encombré par les déchets de rue.",
@@ -78,6 +81,7 @@ export const communes: Commune[] = [
     slug: "auderghem",
     name: "Auderghem",
     de: "d'Auderghem",
+    answer: "Pour une maison à Auderghem, comptez en général 80 à 150 € pour nettoyer gouttières et descentes ; les villas quatre façades aux longs chenaux se situent plutôt dans le haut de la fourchette. En bordure de la Forêt de Soignes, les hêtres perdent leurs feuilles tard : un passage fin novembre, parfois complété en début d'année, donne le meilleur résultat.",
     neighbors: ["watermael-boitsfort", "woluwe-saint-pierre", "ixelles"],
     conseils: [
       "Près du Rouge-Cloître et en lisière de la Forêt de Soignes, programmez le nettoyage en deux temps : fin novembre pour les feuilles de chênes et des arbres de jardin, puis en fin d'hiver pour les feuilles de hêtres restées accrochées. Un seul passage en octobre laisse passer l'essentiel des chutes de la forêt.",
@@ -124,6 +128,7 @@ export const communes: Commune[] = [
     slug: "berchem-sainte-agathe",
     name: "Berchem-Sainte-Agathe",
     de: "de Berchem-Sainte-Agathe",
+    answer: "À Berchem-Sainte-Agathe, un nettoyage de gouttières revient en général à 80 à 150 € par maison, descentes comprises. Les villas des lotissements d'après-guerre ont de longues gouttières, et beaucoup de maisons ont un garage ou une annexe à toit plat dont l'avaloir se contrôle lors du même passage. Le prix est fixé dans un devis gratuit.",
     neighbors: ["ganshoren", "koekelberg", "molenbeek-saint-jean"],
     conseils: [
       "Dans les lotissements de Berchem-Sainte-Agathe, beaucoup de villas ont un garage accolé à toit plat : sa petite évacuation se bouche aussi vite que la gouttière principale et on l'oublie souvent. Faites-la contrôler lors du même passage.",
@@ -139,12 +144,36 @@ export const communes: Commune[] = [
         a: "Un passage en novembre suffit en général. Si des arbres fruitiers ou de grandes haies surplombent le toit, ajoutez un contrôle en fin d'été : les petites feuilles et les fruits tombés bouchent surtout les descentes.",
       },
     ],
+    detail: {
+      kicker: "Toits plats et lotissements",
+      question: "Pourquoi les toits plats de Berchem-Sainte-Agathe demandent-ils autant d'attention que les gouttières ?",
+      paragraphs: [
+        [
+          { text: "Berchem-Sainte-Agathe compte un ensemble rare à Bruxelles : la Cité Moderne, construite dans les années 1920 par l'architecte Victor Bourgeois, aux maisons cubiques couvertes de toits plats. Sur ce type de toiture, il n'y a pas de gouttière pendante : l'eau rejoint un avaloir, puis une descente. Si cet avaloir se bouche, l'eau stagne sur la membrane au lieu de déborder visiblement." },
+        ],
+        [
+          { text: "Dans les lotissements plus récents de la commune, villas et maisons jumelées ont une gouttière classique sur le toit principal, mais aussi un garage ou une annexe à toit plat. C'est ce petit avaloir qui est le plus souvent oublié, alors qu'il reçoit les feuilles qui glissent du grand toit. Un contrôle complet regarde donc les deux : la gouttière, et chaque évacuation de toit plat." },
+        ],
+        [
+          { text: "Les communes voisines de l'ouest, " },
+          { link: { href: "/communes/ganshoren", label: "Ganshoren" } },
+          { text: " et " },
+          { link: { href: "/communes/koekelberg", label: "Koekelberg" } },
+          { text: ", présentent des configurations proches. Si l'eau stagne déjà sur un toit plat ou remonte par le regard, le " },
+          { link: { href: "/services/debouchage-gouttieres", label: "débouchage de la descente" } },
+          { text: " passe avant le nettoyage ; les questions les plus courantes sont rassemblées dans notre " },
+          { link: { href: "/faq", label: "FAQ sur l'entretien des gouttières" } },
+          { text: "." },
+        ],
+      ],
+    },
     guides: ["gouttiere-decrochee-qui-penche", "gouttiere-qui-fuit"],
   },
   {
     slug: "bruxelles",
     name: "Bruxelles-Ville",
     de: "de Bruxelles-Ville",
+    answer: "Sur le territoire de la Ville de Bruxelles, nettoyer les gouttières d'une maison coûte en général 80 à 150 €, descentes comprises. Dans le Pentagone, l'enjeu est le chéneau caché derrière la corniche et l'accès depuis la rue ; à Laeken, Neder-Over-Heembeek et Haren, ce sont surtout les feuilles des jardins. Devis gratuit avant toute intervention.",
     neighbors: ["saint-josse-ten-noode", "schaerbeek", "ixelles", "etterbeek", "molenbeek-saint-jean", "anderlecht"],
     conseils: [
       "Dans le Pentagone, et en particulier autour de la Grand-Place, beaucoup de façades sont protégées ou reprises à l'inventaire du patrimoine : avant de remplacer une gouttière en zinc par un autre matériau, renseignez-vous auprès du service de l'urbanisme de la Ville. Dans les Marolles et autour du Sablon, les rues étroites compliquent l'accès ; si une nacelle doit stationner sur la voirie, l'autorisation communale se demande quelques jours à l'avance.",
@@ -191,6 +220,7 @@ export const communes: Commune[] = [
     slug: "etterbeek",
     name: "Etterbeek",
     de: "d'Etterbeek",
+    answer: "À Etterbeek, comptez en général 80 à 150 € pour nettoyer les gouttières et les descentes d'une maison. La commune est dense : maisons mitoyennes et immeubles à appartements, où la gouttière est une partie commune gérée par le syndic. L'accès se fait souvent en hauteur depuis la rue ; il est évalué lors du devis, qui est gratuit.",
     neighbors: ["ixelles", "bruxelles", "woluwe-saint-lambert", "woluwe-saint-pierre"],
     conseils: [
       "Autour de la place Jourdan et dans le quartier de La Chasse, beaucoup d'anciennes maisons unifamiliales ont été divisées en appartements : la gouttière de façade devient alors une partie commune, même si elle ne dessert qu'un toit. Avant de commander un nettoyage, vérifiez dans l'acte de base qui en a la charge.",
@@ -237,6 +267,7 @@ export const communes: Commune[] = [
     slug: "evere",
     name: "Evere",
     de: "d'Evere",
+    answer: "À Evere, un nettoyage de gouttières coûte en général 80 à 150 € pour une maison, descentes comprises. Les maisons semi-mitoyennes d'après-guerre ont des descentes souvent raccordées directement à l'égout, et les abords du Moeraske et du cimetière de Bruxelles apportent beaucoup de feuilles et de graines. Le devis est gratuit et le prix connu à l'avance.",
     neighbors: ["schaerbeek", "woluwe-saint-lambert", "bruxelles"],
     conseils: [
       "Près du Moeraske, la végétation spontanée — saules, peupliers, ronces — produit graines cotonneuses et feuilles fines qui atterrissent dans les gouttières dès la fin du printemps. Un contrôle en juin évite qu'elles ne se compactent avec les pluies d'été. Autour du cimetière de Bruxelles, les grands alignements d'arbres donnent un pic de feuilles en novembre : attendez qu'ils soient dénudés avant de nettoyer.",
@@ -252,12 +283,34 @@ export const communes: Commune[] = [
         a: "Le bouchon se trouve dans la partie enterrée : coude au pied de la descente, raccord ou conduite vers l'égout. Nettoyer la gouttière ne changera rien ; il faut déboucher la descente et vérifier l'écoulement jusqu'au raccordement.",
       },
     ],
+    detail: {
+      kicker: "Moeraske et maisons d'après-guerre",
+      question: "Faut-il nettoyer la toiture en même temps que les gouttières à Evere ?",
+      paragraphs: [
+        [
+          { text: "Souvent, oui. Une bonne partie d'Evere a été bâtie après la Seconde Guerre mondiale : maisons semi-mitoyennes et petits immeubles couverts de tuiles. Sur ces toitures, les mousses s'installent dans les recouvrements, puis se détachent par plaques à chaque grosse pluie et finissent dans la gouttière. Nettoyer la gouttière sans regarder le toit, c'est la retrouver encombrée quelques mois plus tard." },
+        ],
+        [
+          { text: "Près du Moeraske, site naturel humide que la commune partage avec Schaerbeek, la végétation spontanée apporte graines cotonneuses et feuilles fines dès le début de l'été. Autour du cimetière de Bruxelles, ce sont les grands alignements d'arbres qui donnent un pic de feuilles en novembre. Les deux secteurs justifient un contrôle de la toiture lors du nettoyage d'automne." },
+        ],
+        [
+          { text: "Quand le toit verdit, le " },
+          { link: { href: "/services/nettoyage-toiture", label: "nettoyage de toiture" } },
+          { text: " se fait lors du même passage que les gouttières. Les maisons voisines de " },
+          { link: { href: "/communes/schaerbeek", label: "Schaerbeek" } },
+          { text: " et de " },
+          { link: { href: "/communes/woluwe-saint-lambert", label: "Woluwe-Saint-Lambert" } },
+          { text: " suivent le même calendrier." },
+        ],
+      ],
+    },
     guides: ["descente-pluviale-bouchee", "gouttiere-decrochee-qui-penche"],
   },
   {
     slug: "forest",
     name: "Forest",
     de: "de Forest",
+    answer: "À Forest, nettoyer les gouttières d'une maison coûte en général 80 à 150 €, descentes comprises. Les rangées de maisons en brique partagent souvent une corniche continue, et les arbres des parcs Duden et de Forest font de novembre le mois le plus chargé. Le prix est fixé dans un devis gratuit ; un nettoyage le même jour chez plusieurs voisins se demande à ce moment-là.",
     neighbors: ["saint-gilles", "uccle", "anderlecht"],
     conseils: [
       "Autour du parc Duden et du parc de Forest, les grands arbres font de novembre le mois critique ; les rues qui montent vers Altitude Cent reçoivent en plus les feuilles portées par le vent. Attendez la fin de la chute pour nettoyer, sinon le travail est à refaire.",
@@ -273,12 +326,34 @@ export const communes: Commune[] = [
         a: "Fin novembre ou début décembre, quand les grands arbres du parc ont perdu leurs feuilles. Si la maison est sur la pente, un contrôle rapide après les grosses tempêtes d'automne permet de dégager la crapaudine avant qu'elle ne bloque la descente.",
       },
     ],
+    detail: {
+      kicker: "Corniches partagées et pentes",
+      question: "Comment éviter qu'une gouttière bouchée chez le voisin fasse déborder la vôtre à Forest ?",
+      paragraphs: [
+        [
+          { text: "Dans le bas de Forest, autour de l'abbaye et de l'ancienne brasserie Wielemans devenue le Wiels, beaucoup de maisons du début du XXe siècle forment des rangées continues. La gouttière, ou le chéneau derrière la corniche, court d'une façade à l'autre avec une descente toutes les deux ou trois maisons. Un bouchon chez un voisin bloque alors l'eau de toute la portion, y compris la vôtre." },
+        ],
+        [
+          { text: "La solution la plus simple est de nettoyer la rangée le même jour : chaque propriétaire paie sa partie, mais l'eau circule enfin sur tout le linéaire. Dans le haut de la commune, vers Altitude Cent et les parcs Duden et de Forest, le problème est différent : les grands arbres chargent les gouttières en novembre, et sur les rues en pente l'eau d'un débordement descend vers les jardins situés plus bas." },
+        ],
+        [
+          { text: "Sous les arbres des parcs, une " },
+          { link: { href: "/services/protection-gouttieres", label: "protection anti-feuilles" } },
+          { text: " peut espacer les nettoyages sans les supprimer. Les maisons voisines de " },
+          { link: { href: "/communes/saint-gilles", label: "Saint-Gilles" } },
+          { text: " et d'" },
+          { link: { href: "/communes/uccle", label: "Uccle" } },
+          { text: " ont des corniches comparables." },
+        ],
+      ],
+    },
     guides: ["chenau-corniche-entretien", "gouttiere-qui-fuit"],
   },
   {
     slug: "ganshoren",
     name: "Ganshoren",
     de: "de Ganshoren",
+    answer: "À Ganshoren, comptez en général 80 à 150 € pour le nettoyage des gouttières et des descentes d'une maison. Commune résidentielle et verte, autour du parc du château de Rivieren notamment, elle reçoit surtout des feuilles fines qui se tassent dans les coudes des descentes : le test d'écoulement compte autant que le ramassage. Devis gratuit, prix annoncé à l'avance.",
     neighbors: ["jette", "koekelberg", "berchem-sainte-agathe"],
     conseils: [
       "Ganshoren garde de nombreux espaces verts, à commencer par le parc du château de Rivieren, et beaucoup de jardins en intérieur d'îlot. Les maisons qui les bordent reçoivent surtout des feuilles fines de bouleaux, charmes et arbres fruitiers, qui se tassent dans les coudes des descentes plus que dans le chéneau. Demandez donc un contrôle de l'écoulement complet, pas seulement un ramassage des feuilles visibles.",
@@ -294,12 +369,34 @@ export const communes: Commune[] = [
         a: "Le bouchon est probablement dans la descente, souvent au niveau d'un coude ou du raccord au sol. Les feuilles fines passent la crapaudine puis s'y compactent. Un test d'écoulement à l'eau permet de le localiser avant de déboucher.",
       },
     ],
+    detail: {
+      kicker: "Feuilles fines et descentes",
+      question: "Pourquoi une gouttière propre en apparence déborde-t-elle encore à Ganshoren ?",
+      paragraphs: [
+        [
+          { text: "Ganshoren est une petite commune résidentielle où les jardins occupent une grande place, entre le parc du château de Rivieren et les intérieurs d'îlot. Les arbres de jardin — bouleaux, charmes, fruitiers — perdent des feuilles petites et légères, qui ne restent pas dans le chéneau : elles passent la crapaudine et se compactent plus bas, dans le coude de la descente ou au raccord avec l'égout." },
+        ],
+        [
+          { text: "Résultat : vue d'en bas, la gouttière semble propre, mais l'eau monte et déborde à la première averse forte. C'est pour cela qu'un nettoyage sérieux se termine par un test d'écoulement, eau versée en haut de chaque descente, pour vérifier qu'elle ressort franchement au pied du mur. Sur les toits couverts de mousse, un nettoyage de la toiture évite que de nouveaux débris redescendent dès l'hiver." },
+        ],
+        [
+          { text: "Le " },
+          { link: { href: "/services/nettoyage-toiture", label: "nettoyage de toiture" } },
+          { text: " peut se faire dans la même intervention. Les communes voisines de " },
+          { link: { href: "/communes/jette", label: "Jette" } },
+          { text: " et de " },
+          { link: { href: "/communes/berchem-sainte-agathe", label: "Berchem-Sainte-Agathe" } },
+          { text: " connaissent les mêmes feuilles fines." },
+        ],
+      ],
+    },
     guides: ["descente-pluviale-bouchee", "gouttiere-qui-fuit"],
   },
   {
     slug: "ixelles",
     name: "Ixelles",
     de: "d'Ixelles",
+    answer: "À Ixelles, un nettoyage de gouttières coûte en général 80 à 150 € pour une maison, descentes comprises. Les maisons de maître et immeubles Art nouveau ont souvent un chéneau en zinc caché derrière la corniche, et les abords des étangs d'Ixelles et de l'abbaye de la Cambre apportent feuilles et mousses. Le prix est fixé dans un devis gratuit.",
     neighbors: ["bruxelles", "saint-gilles", "uccle", "etterbeek", "watermael-boitsfort", "auderghem"],
     conseils: [
       "Autour des étangs d'Ixelles et de l'abbaye de la Cambre, les grands arbres et l'humidité du fond de vallée entretiennent mousses et algues : faites inspecter le versant nord de la toiture autant que la gouttière. À Boondael et près des campus du Solbosch et de la Plaine, les maisons avec jardin reçoivent davantage de feuilles que le centre : un passage fin novembre est le plus rentable.",
@@ -346,6 +443,7 @@ export const communes: Commune[] = [
     slug: "jette",
     name: "Jette",
     de: "de Jette",
+    answer: "À Jette, comptez en général 80 à 150 € pour nettoyer les gouttières d'une maison, descentes comprises. Côté vert — parc Roi Baudouin, bois du Laerbeek — chênes et hêtres imposent un passage fin novembre ; près de la place Cardinal Mercier, les maisons mitoyennes ont leur descente en façade avant. Devis gratuit, prix annoncé avant l'intervention.",
     neighbors: ["ganshoren", "koekelberg", "bruxelles"],
     conseils: [
       "Autour du bois du Laerbeek, du parc Roi Baudouin et de l'abbaye de Dieleghem, les maisons côté vert reçoivent des feuilles de chênes et de hêtres en plus de celles de leurs propres jardins : un nettoyage fin novembre y est plus efficace qu'en octobre.",
@@ -361,12 +459,34 @@ export const communes: Commune[] = [
         a: "Regardez la façade par temps de pluie : un filet d'eau qui passe par-dessus la gouttière, des coulures sombres sous la corniche ou une descente qui ne débite presque rien au pied du mur. À l'intérieur, une tache au plafond sous la toiture doit aussi alerter.",
       },
     ],
+    detail: {
+      kicker: "Entre bois et quartiers mitoyens",
+      question: "Une protection anti-feuilles vaut-elle la peine pour une maison de Jette proche du bois ?",
+      paragraphs: [
+        [
+          { text: "Jette a deux visages. En bordure de commune, le parc Roi Baudouin, le bois du Laerbeek et le site de l'abbaye de Dieleghem forment un ensemble boisé où chênes et hêtres chargent les gouttières des maisons voisines chaque automne. Au centre, autour de la place Cardinal Mercier et de la gare, les maisons mitoyennes ont leur descente en façade avant et reçoivent surtout les feuilles des arbres d'alignement." },
+        ],
+        [
+          { text: "Pour une maison directement sous de grands arbres, une grille ou une brosse anti-feuilles retient le gros des feuilles et espace les nettoyages. Elle ne les supprime pas : les débris fins, les chatons de bouleau au printemps et les mousses passent ou s'accumulent sur la protection, qu'il faut dégager. En rue mitoyenne, loin des bois, un nettoyage annuel bien placé suffit généralement." },
+        ],
+        [
+          { text: "Notre page " },
+          { link: { href: "/services/protection-gouttieres", label: "protection anti-feuilles pour gouttières" } },
+          { text: " compare grilles, brosses et filets. Les maisons voisines de " },
+          { link: { href: "/communes/ganshoren", label: "Ganshoren" } },
+          { text: " et de " },
+          { link: { href: "/communes/koekelberg", label: "Koekelberg" } },
+          { text: " présentent les mêmes situations." },
+        ],
+      ],
+    },
     guides: ["descente-pluviale-bouchee", "entretien-gouttieres-quand-faire"],
   },
   {
     slug: "koekelberg",
     name: "Koekelberg",
     de: "de Koekelberg",
+    answer: "À Koekelberg, un nettoyage de gouttières coûte en général 80 à 150 € pour une maison, descentes comprises. Le bâti est compact : maisons mitoyennes étroites avec souvent une seule descente en façade, et alignements d'arbres autour de la basilique et du parc Élisabeth. Le devis, gratuit, précise aussi l'accès, le plus souvent depuis la rue.",
     neighbors: ["ganshoren", "jette", "molenbeek-saint-jean", "berchem-sainte-agathe"],
     conseils: [
       "Autour de la basilique et du parc Élisabeth, les alignements d'arbres envoient leurs feuilles dans les gouttières des rues voisines dès les premiers coups de vent d'automne : un passage fin novembre est le bon compromis.",
@@ -382,12 +502,34 @@ export const communes: Commune[] = [
         a: "Ce n'est pas un défaut en soi, mais c'est un point faible : si cette descente se bouche, toute l'eau de la toiture n'a plus d'issue. Elle doit être contrôlée à chaque nettoyage, crapaudine comprise, et débouchée au moindre ralentissement.",
       },
     ],
+    detail: {
+      kicker: "Maisons étroites et zinc",
+      question: "Faut-il remplacer la vieille gouttière en zinc d'une maison de Koekelberg ?",
+      paragraphs: [
+        [
+          { text: "Pas forcément. Une grande partie des maisons mitoyennes de Koekelberg date de la première moitié du XXe siècle, et beaucoup ont gardé un chéneau ou une gouttière en zinc. Le zinc vieillit lentement : tant que les soudures tiennent, que le fond n'est pas percé et que la pente reste régulière, un nettoyage et quelques réparations ponctuelles suffisent." },
+        ],
+        [
+          { text: "Le nettoyage est le bon moment pour en juger, car le chéneau est enfin vide. Une tache d'humidité au plafond sous la toiture, des coulures sur la façade ou un fond qui ne sèche jamais orientent vers une réparation ; un fond percé en plusieurs endroits, vers le remplacement d'une section. Sur une maison étroite avec une seule descente, cette descente doit être contrôlée en priorité." },
+        ],
+        [
+          { text: "Les différences entre zinc, PVC et aluminium sont détaillées dans notre guide des " },
+          { link: { href: "/types-gouttieres", label: "types de gouttières" } },
+          { text: ". Les maisons voisines de " },
+          { link: { href: "/communes/molenbeek-saint-jean", label: "Molenbeek-Saint-Jean" } },
+          { text: " et de " },
+          { link: { href: "/communes/jette", label: "Jette" } },
+          { text: " ont souvent le même zinc d'origine." },
+        ],
+      ],
+    },
     guides: ["chenau-corniche-entretien", "descente-pluviale-bouchee"],
   },
   {
     slug: "molenbeek-saint-jean",
     name: "Molenbeek-Saint-Jean",
     de: "de Molenbeek-Saint-Jean",
+    answer: "À Molenbeek-Saint-Jean, nettoyer les gouttières d'une maison coûte en général 80 à 150 €, descentes comprises ; les maisons de rapport de trois ou quatre niveaux du vieux Molenbeek se situent plutôt dans le haut de la fourchette. Avant une rénovation de façade ou de toiture, faites d'abord déboucher les descentes. Le devis est gratuit.",
     neighbors: ["anderlecht", "bruxelles", "koekelberg", "berchem-sainte-agathe"],
     conseils: [
       "Dans le vieux Molenbeek, entre le canal et la chaussée de Gand, les maisons de rapport de trois ou quatre niveaux ont des gouttières hautes, parfois jamais nettoyées depuis des années. Avant de rénover une façade ou une toiture, faites d'abord déboucher et contrôler les descentes : sinon l'eau abîmera les travaux neufs.",
@@ -403,12 +545,34 @@ export const communes: Commune[] = [
         a: "Aucun certificat n'est exigé, mais en cas de dégât des eaux, l'assureur peut vérifier que l'entretien a été fait. Une facture datée décrivant l'intervention est la preuve la plus simple. Qui paie l'entretien entre locataire et propriétaire dépend du bail et de la nature du travail.",
       },
     ],
+    detail: {
+      kicker: "Canal, maisons hautes et rénovations",
+      question: "Combien coûte le nettoyage des gouttières d'une maison de rapport à Molenbeek ?",
+      paragraphs: [
+        [
+          { text: "Le prix dépend d'abord de la hauteur et de l'accès, plus que de la commune. Dans le vieux Molenbeek, entre le canal et la chaussée de Gand, beaucoup de maisons de rapport ont trois ou quatre niveaux et une gouttière qui n'a parfois pas été nettoyée depuis des années : le travail est plus long que sur une maison basse, et le devis en tient compte." },
+        ],
+        [
+          { text: "Avant une rénovation, l'ordre des travaux compte. Déboucher et contrôler les descentes avant de refaire une façade ou une toiture évite que l'eau abîme le travail neuf. Plus à l'ouest, autour du Scheutbos, du parc Marie-José et du château du Karreveld, les maisons avec jardin ont un autre problème : les feuilles, qui imposent un passage en fin d'automne." },
+        ],
+        [
+          { text: "Les fourchettes de prix par type de maison sont sur notre page " },
+          { link: { href: "/tarifs", label: "prix du nettoyage de gouttières" } },
+          { text: ". Les communes voisines d'" },
+          { link: { href: "/communes/anderlecht", label: "Anderlecht" } },
+          { text: " et de " },
+          { link: { href: "/communes/koekelberg", label: "Koekelberg" } },
+          { text: " ont un bâti comparable." },
+        ],
+      ],
+    },
     guides: ["entretien-gouttieres-locataire-proprietaire", "degat-des-eaux-gouttiere-assurance-bruxelles"],
   },
   {
     slug: "saint-gilles",
     name: "Saint-Gilles",
     de: "de Saint-Gilles",
+    answer: "À Saint-Gilles, un nettoyage de gouttières coûte en général 80 à 150 € pour une maison, descentes comprises. Beaucoup de maisons de maître ont un chéneau en zinc caché derrière une corniche en bois, invisible depuis la rue : des coulures sous la corniche sont souvent le premier signe d'un bouchon. Le devis gratuit précise l'accès, parfois par l'intérieur.",
     neighbors: ["ixelles", "forest", "anderlecht", "bruxelles"],
     conseils: [
       "Autour du Parvis, de la Barrière et de l'hôtel de ville, les maisons de maître ont souvent une corniche en bois avec un chéneau en zinc posé derrière : de la rue, on ne voit pas qu'il est plein. Des coulures sous la corniche ou une peinture qui cloque sont les premiers signes.",
@@ -424,12 +588,34 @@ export const communes: Commune[] = [
         a: "Dans beaucoup de maisons du bas de Saint-Gilles, la cour arrière est trop étroite pour y dresser une échelle à bonne inclinaison. L'accès se fait alors par une fenêtre d'étage ou par le toit, ce qui demande l'accord et la présence des occupants.",
       },
     ],
+    detail: {
+      kicker: "Corniches, zinc et patrimoine",
+      question: "Peut-on remplacer librement une gouttière sur une façade protégée à Saint-Gilles ?",
+      paragraphs: [
+        [
+          { text: "Pas toujours. Saint-Gilles compte beaucoup de maisons Art nouveau et de maisons de maître, dont certaines sont classées ou inscrites sur la liste de sauvegarde. Un nettoyage ou une réparation à l'identique ne pose en général pas de question ; un changement de matériau, de profil ou de couleur sur une façade protégée peut en revanche demander un permis. En cas de doute, le service d'urbanisme de la commune vous renseigne avant les travaux." },
+        ],
+        [
+          { text: "Techniquement, ces maisons ont souvent un chéneau en zinc posé derrière une corniche en bois. Quand il déborde, l'eau part vers l'arrière et imbibe le bois : peinture qui cloque et corniche qui s'effrite sont les signes à surveiller. Le zinc, s'il est encore sain, se répare par soudure plutôt que de se remplacer." },
+        ],
+        [
+          { text: "Les écarts de durée de vie entre zinc, aluminium et PVC sont présentés dans notre guide des " },
+          { link: { href: "/types-gouttieres", label: "types de gouttières" } },
+          { text: ". Les communes voisines d'" },
+          { link: { href: "/communes/ixelles", label: "Ixelles" } },
+          { text: " et de " },
+          { link: { href: "/communes/forest", label: "Forest" } },
+          { text: " ont des corniches comparables." },
+        ],
+      ],
+    },
     guides: ["chenau-corniche-entretien", "gouttiere-qui-fuit"],
   },
   {
     slug: "saint-josse-ten-noode",
     name: "Saint-Josse-ten-Noode",
     de: "de Saint-Josse-ten-Noode",
+    answer: "À Saint-Josse-ten-Noode, commune la plus densément peuplée de Belgique, un nettoyage de gouttières coûte en général 80 à 150 € pour une maison, descentes comprises. Immeubles hauts, toits plats et maisons de rapport demandent un accès réfléchi, depuis la rue ou par le toit. Un démoussage de toiture peut se faire lors du même passage, sur devis gratuit.",
     neighbors: ["schaerbeek", "bruxelles"],
     conseils: [
       "Autour de la place Madou et le long de la chaussée de Louvain, beaucoup d'immeubles sont mitoyens sur toute leur hauteur et leurs toits plats se touchent : une évacuation bouchée chez le voisin peut renvoyer l'eau chez vous. Faites vérifier les avaloirs et les trop-pleins en même temps que les gouttières.",
@@ -472,6 +658,7 @@ export const communes: Commune[] = [
     slug: "schaerbeek",
     name: "Schaerbeek",
     de: "de Schaerbeek",
+    answer: "À Schaerbeek, comptez en général 80 à 150 € pour nettoyer les gouttières et les descentes d'une maison. Les maisons Belle Époque des grandes avenues cachent souvent leur chéneau derrière une corniche ornée, et les abords du parc Josaphat demandent parfois deux passages par an. Dans une maison divisée en appartements, la gouttière relève de la copropriété. Devis gratuit.",
     neighbors: ["saint-josse-ten-noode", "bruxelles", "evere", "woluwe-saint-lambert"],
     conseils: [
       "Autour du parc Josaphat, les grands arbres et l'humidité de la vallée du parc chargent les gouttières des avenues voisines en feuilles et en mousses : c'est le secteur de la commune où deux passages par an sont le plus souvent nécessaires.",
@@ -487,12 +674,34 @@ export const communes: Commune[] = [
         a: "De la rue, on ne voit pas l'intérieur d'un chéneau caché. Les signes sont indirects : coulures ou mousse sur la corniche, peinture qui s'écaille sous le débord du toit, descente qui ne débite presque rien pendant une averse. En cas de doute, une inspection depuis le toit tranche.",
       },
     ],
+    detail: {
+      kicker: "Belle Époque et copropriétés",
+      question: "Un contrat d'entretien est-il utile pour une maison divisée en appartements à Schaerbeek ?",
+      paragraphs: [
+        [
+          { text: "Souvent, oui. Une grande partie des maisons Belle Époque de Schaerbeek, autour de la place Colignon, de Dailly ou des avenues Louis Bertrand et Rogier, ont été divisées en appartements. La gouttière devient alors une partie commune : personne ne s'en occupe spontanément, et elle n'est nettoyée qu'après un dégât des eaux chez le dernier étage." },
+        ],
+        [
+          { text: "Un passage planifié chaque année, voté une fois en assemblée générale, règle la question : la date est fixée, la facture est répartie entre copropriétaires, et chacun dispose d'une trace écrite de l'entretien en cas de sinistre. C'est d'autant plus utile près du parc Josaphat, où les grands arbres et l'humidité de la vallée imposent parfois deux passages par an." },
+        ],
+        [
+          { text: "Le fonctionnement d'un " },
+          { link: { href: "/services/contrat-entretien-gouttieres", label: "contrat d'entretien annuel des gouttières" } },
+          { text: " est détaillé sur sa page. Les maisons voisines de " },
+          { link: { href: "/communes/saint-josse-ten-noode", label: "Saint-Josse-ten-Noode" } },
+          { text: " et d'" },
+          { link: { href: "/communes/evere", label: "Evere" } },
+          { text: " sont souvent dans la même situation." },
+        ],
+      ],
+    },
     guides: ["chenau-corniche-entretien", "gouttieres-copropriete-bruxelles"],
   },
   {
     slug: "uccle",
     name: "Uccle",
     de: "d'Uccle",
+    answer: "À Uccle, un nettoyage de gouttières coûte en général 80 à 150 € pour une maison, descentes comprises ; sur les grandes villas quatre façades, le prix dépend surtout du linéaire et se fixe dans un devis gratuit. Près de la Forêt de Soignes, du bois de Verrewinkel et des grands parcs, les feuilles tardives justifient un passage fin novembre.",
     neighbors: ["forest", "ixelles", "watermael-boitsfort"],
     conseils: [
       "Uccle se partage entre des quartiers plus bâtis, autour de la chaussée d'Alsemberg et du centre, et le sud de la commune — Saint-Job, Fort-Jaco, Verrewinkel, le Kauwberg — où les villas sont entourées de grands arbres. Dans ce sud boisé, une maison sous des chênes ou des hêtres demande souvent deux passages par an.",
@@ -539,6 +748,7 @@ export const communes: Commune[] = [
     slug: "watermael-boitsfort",
     name: "Watermael-Boitsfort",
     de: "de Watermael-Boitsfort",
+    answer: "À Watermael-Boitsfort, commune très boisée, nettoyer les gouttières d'une maison coûte en général 80 à 150 €, descentes comprises. Les hêtres de la Forêt de Soignes et les arbres des cités-jardins Le Logis et Floréal chargent les gouttières jusqu'en hiver : deux passages par an sont souvent utiles. Le prix est fixé dans un devis gratuit.",
     neighbors: ["auderghem", "uccle", "ixelles"],
     conseils: [
       "Dans les cités-jardins du Logis et de Floréal, les maisons basses se suivent en rangées et partagent souvent une même ligne de gouttière : un nettoyage coordonné avec vos voisins évite de laisser un bouchon au milieu du linéaire. Ces ensembles font l'objet de mesures de protection : renseignez-vous avant de changer matériaux ou teintes.",
@@ -585,6 +795,7 @@ export const communes: Commune[] = [
     slug: "woluwe-saint-lambert",
     name: "Woluwe-Saint-Lambert",
     de: "de Woluwe-Saint-Lambert",
+    answer: "À Woluwe-Saint-Lambert, un nettoyage de gouttières coûte en général 80 à 150 € pour une maison, descentes comprises. Autour du parc Malou, du parc de Roodebeek et dans la vallée de la Woluwe, feuilles et mousses s'accumulent vite ; à Kapelleveld, les maisons en rangée partagent souvent la même ligne de gouttière. Le prix est fixé dans un devis gratuit.",
     neighbors: ["woluwe-saint-pierre", "etterbeek", "schaerbeek", "evere"],
     conseils: [
       "Autour du parc Malou, du parc de Roodebeek et le long de la vallée de la Woluwe, les grands arbres et l'humidité du fond de vallée chargent les gouttières en feuilles et en mousses : un passage fin novembre est le plus efficace, complété d'un démoussage si la toiture verdit.",
@@ -600,12 +811,34 @@ export const communes: Commune[] = [
         a: "C'est conseillé quand plusieurs maisons partagent une gouttière continue : un bouchon chez un voisin peut faire déborder votre partie. Nettoyer la rangée le même jour règle le problème pour tout le monde.",
       },
     ],
+    detail: {
+      kicker: "Vallée de la Woluwe et cités-jardins",
+      question: "Quand programmer le nettoyage des gouttières dans la vallée de la Woluwe ?",
+      paragraphs: [
+        [
+          { text: "Fin novembre, dans la plupart des cas. Woluwe-Saint-Lambert est traversée par la vallée de la Woluwe, avec le parc Malou, le parc de Roodebeek et le moulin de Lindekemale : grands arbres et fond de vallée humide se combinent, ce qui charge les gouttières en feuilles à l'automne puis en mousses pendant l'hiver." },
+        ],
+        [
+          { text: "Dans la cité-jardin de Kapelleveld, les maisons en rangée partagent souvent une même ligne de gouttière ; un nettoyage organisé le même jour pour toute la rangée évite qu'un bouchon chez un voisin fasse déborder les autres. Pour les immeubles proches du Woluwe Shopping ou de l'hôpital Saint-Luc, c'est le syndic qui planifie, et un passage annuel fixé à l'avance est le plus simple." },
+        ],
+        [
+          { text: "Un " },
+          { link: { href: "/services/contrat-entretien-gouttieres", label: "contrat d'entretien annuel" } },
+          { text: " convient bien aux copropriétés et aux rangées. Les communes voisines de " },
+          { link: { href: "/communes/woluwe-saint-pierre", label: "Woluwe-Saint-Pierre" } },
+          { text: " et d'" },
+          { link: { href: "/communes/evere", label: "Evere" } },
+          { text: " suivent le même calendrier." },
+        ],
+      ],
+    },
     guides: ["gouttieres-copropriete-bruxelles", "preparer-gouttieres-automne-bruxelles"],
   },
   {
     slug: "woluwe-saint-pierre",
     name: "Woluwe-Saint-Pierre",
     de: "de Woluwe-Saint-Pierre",
+    answer: "À Woluwe-Saint-Pierre, comptez en général 80 à 150 € pour nettoyer les gouttières et descentes d'une maison ; les villas quatre façades de Stockel et du Chant d'Oiseau, aux longs linéaires, se situent plutôt dans le haut de la fourchette. Autour du parc de Woluwe et des étangs Mellaerts, un passage fin novembre est le plus efficace. Devis gratuit.",
     neighbors: ["auderghem", "woluwe-saint-lambert", "etterbeek"],
     conseils: [
       "Autour du parc de Woluwe, des étangs Mellaerts et du parc Parmentier, les villas reçoivent les feuilles des grands chênes, hêtres et marronniers : prévoyez un nettoyage fin novembre, puis un contrôle au printemps si des érables lâchent leurs samares au-dessus du toit.",
@@ -621,6 +854,27 @@ export const communes: Commune[] = [
         a: "Fin novembre, après la chute des feuilles des grands arbres. L'humidité autour des étangs favorise aussi les mousses sur les toitures : si le toit verdit, un démoussage avant l'hiver réduit ce qui finira dans la gouttière.",
       },
     ],
+    detail: {
+      kicker: "Villas, parcs et étangs",
+      question: "Une villa de Woluwe-Saint-Pierre sous les grands arbres doit-elle être nettoyée deux fois par an ?",
+      paragraphs: [
+        [
+          { text: "C'est fréquent. Autour du parc de Woluwe, des étangs Mellaerts et du parc Parmentier, chênes, hêtres et marronniers perdent leurs feuilles en novembre, et les érables lâchent leurs samares au printemps. Une villa dont le toit est directement sous ces arbres gagne à être contrôlée deux fois : fin novembre pour les feuilles, puis au printemps avant les orages." },
+        ],
+        [
+          { text: "À Stockel et au Chant d'Oiseau, les maisons quatre façades ont de longs linéaires et souvent des annexes à toit plat. Le long de l'avenue de Tervueren, où se trouve le palais Stoclet, les grandes maisons ont des gouttières hautes, parfois cachées derrière une corniche. Sur ces volumes, une protection anti-feuilles peut espacer les nettoyages, à condition de la dégager elle aussi." },
+        ],
+        [
+          { text: "Notre page " },
+          { link: { href: "/services/protection-gouttieres", label: "grilles et brosses anti-feuilles" } },
+          { text: " explique ce qu'elles retiennent et ce qu'elles laissent passer. Les communes voisines d'" },
+          { link: { href: "/communes/auderghem", label: "Auderghem" } },
+          { text: " et de " },
+          { link: { href: "/communes/woluwe-saint-lambert", label: "Woluwe-Saint-Lambert" } },
+          { text: " sont aussi très boisées." },
+        ],
+      ],
+    },
     guides: ["protection-gouttieres-anti-feuilles-bruxelles", "gouttiere-decrochee-qui-penche"],
   },
 ];

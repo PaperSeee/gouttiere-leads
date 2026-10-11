@@ -4,6 +4,7 @@ import { Phone, CheckCircle, ArrowRight, CalendarCheck, Clock, Shield, Percent }
 import Breadcrumb from "@/components/Breadcrumb";
 import ContactForm from "@/components/ContactForm";
 import ServiceGuides from "@/components/ServiceGuides";
+import TrustNote from "@/components/TrustNote";
 
 export const metadata: Metadata = {
   title: { absolute: "Contrat d'entretien de gouttières à Bruxelles" },
@@ -87,10 +88,7 @@ export default function ContratEntretienGouttieres() {
               Contrat d&apos;Entretien Annuel pour Gouttières à Bruxelles
             </h1>
             <p className="text-gray-300 text-lg mb-6 leading-relaxed">
-              Plutôt qu&apos;une intervention ponctuelle à chaque fois que vous y pensez, confiez-nous
-              l&apos;entretien régulier de vos gouttières : passages programmés à l&apos;avance, tarif
-              préférentiel et priorité de planning en haute saison. Vous n&apos;avez plus à surveiller
-              vos gouttières — on s&apos;en occupe.
+              Un contrat d&apos;entretien de gouttières prévoit un ou deux passages planifiés chaque année — à l&apos;automne après la chute des feuilles, et au printemps si de grands arbres surplombent le toit — avec nettoyage, test d&apos;écoulement et contrôle de l&apos;état. Il convient surtout aux copropriétés et aux maisons sous les arbres ; les conditions figurent dans un devis gratuit.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <a href="tel:0451053370" className="flex items-center justify-center gap-2 bg-[#F97316] hover:bg-orange-500 text-white font-bold px-6 py-3 rounded-xl transition-colors">
@@ -100,6 +98,7 @@ export default function ContratEntretienGouttieres() {
                 Devis gratuit <ArrowRight size={18} />
               </a>
             </div>
+            <TrustNote className="mt-5" tone="dark" />
           </div>
         </div>
       </section>

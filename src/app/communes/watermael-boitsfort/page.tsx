@@ -4,8 +4,9 @@ import GutterIllustration from "@/components/GutterIllustration"
 import { Phone, ArrowRight, MapPin, Leaf, Droplets, Wrench, AlertTriangle } from "lucide-react"
 import Breadcrumb from "@/components/Breadcrumb"
 import ContactForm from "@/components/ContactForm"
+import TrustNote from "@/components/TrustNote"
 import { CommuneConseils, CommuneDetail, NeighborCommunes } from "@/components/CommuneLocal"
-import { localFaqs, localFaqSchema } from "@/lib/communes"
+import { localFaqs, localFaqSchema, getCommune } from "@/lib/communes"
 
 export const metadata: Metadata = {
   title: { absolute: "Nettoyage de gouttières à Watermael-Boitsfort dès 80 €" },
@@ -51,9 +52,7 @@ export default function WatermealBoitsfortPage() {
                 Nettoyage de gouttières à <span className="text-[#1A4731]">Watermael-Boitsfort</span>
               </h1>
               <p className="text-gray-600 text-lg leading-relaxed mb-7 max-w-xl">
-                La commune la plus boisée de Bruxelles. Hêtres du Soignes, bouleaux des cités-jardins,
-                mousses omniprésentes — Watermael-Boitsfort réclame le plus d&apos;attention
-                pour l&apos;entretien des gouttières.
+                {getCommune("watermael-boitsfort").answer}
               </p>
               <div className="flex flex-wrap gap-3">
                 <a href="tel:0451053370" className="inline-flex items-center gap-2 bg-[#F97316] hover:bg-orange-500 text-white font-bold px-6 py-3.5 rounded-xl transition-colors shadow-md shadow-orange-100">
@@ -63,6 +62,7 @@ export default function WatermealBoitsfortPage() {
                   Devis gratuit <ArrowRight size={16} />
                 </a>
               </div>
+              <TrustNote className="mt-5" />
             </div>
             <div className="lg:w-72 bg-[#1A4731] text-white rounded-2xl p-6 flex-shrink-0 w-full">
               <p className="text-green-300 text-xs font-semibold uppercase tracking-wide mb-4">Watermael-Boitsfort</p>

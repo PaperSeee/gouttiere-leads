@@ -7,6 +7,8 @@ import ContactForm from "@/components/ContactForm"
 import RichText from "@/components/RichText"
 import { guides, getGuide } from "@/lib/guides"
 import { blogPosts } from "@/lib/blog"
+import Byline from "@/components/Byline"
+import { EDITOR_REF, PUBLISHER_REF } from "@/lib/schema"
 
 const DOMAIN = "https://www.nettoyage-gouttieres-bruxelles.be"
 
@@ -66,8 +68,8 @@ export default async function GuidePage({ params }: PageProps<"/blog/[slug]">) {
         "@id": url,
         headline: g.h1,
         description: g.description,
-        author: { "@type": "Organization", name: "Nettoyage Gouttières Bruxelles", url: DOMAIN },
-        publisher: { "@id": `${DOMAIN}/#business` },
+        author: EDITOR_REF,
+        publisher: PUBLISHER_REF,
         datePublished: g.date,
         dateModified: g.dateModified ?? g.date,
         image: g.imageUrl.replace("w=800", "w=1200"),
@@ -101,6 +103,7 @@ export default async function GuidePage({ params }: PageProps<"/blog/[slug]">) {
               <Clock size={11} /> {g.readTime} de lecture · {g.dateLabel}
             </span>
           </div>
+          <Byline date={g.dateModified ?? g.date} className="mb-3" />
           <h1 className="text-3xl sm:text-4xl font-extrabold text-white leading-tight mb-4">{g.h1}</h1>
           <p className="text-green-200 text-base leading-relaxed max-w-2xl">{g.intro}</p>
         </div>

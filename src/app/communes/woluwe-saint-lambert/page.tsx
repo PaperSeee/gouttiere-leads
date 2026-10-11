@@ -4,8 +4,9 @@ import GutterIllustration from "@/components/GutterIllustration"
 import { Phone, ArrowRight, MapPin, Leaf, Droplets, Wrench, AlertTriangle } from "lucide-react"
 import Breadcrumb from "@/components/Breadcrumb"
 import ContactForm from "@/components/ContactForm"
-import { CommuneConseils, NeighborCommunes } from "@/components/CommuneLocal"
-import { localFaqs, localFaqSchema } from "@/lib/communes"
+import TrustNote from "@/components/TrustNote"
+import { CommuneConseils, CommuneDetail, NeighborCommunes } from "@/components/CommuneLocal"
+import { localFaqs, localFaqSchema, getCommune } from "@/lib/communes"
 
 export const metadata: Metadata = {
   title: { absolute: "Nettoyage de gouttières à Woluwe-Saint-Lambert dès 80 €" },
@@ -51,9 +52,7 @@ export default function WoluweStLambertPage() {
                 Nettoyage de gouttières à <span className="text-[#1A4731]">Woluwe-Saint-Lambert</span>
               </h1>
               <p className="text-gray-600 text-lg leading-relaxed mb-7 max-w-xl">
-                Commune mixte entre quartiers résidentiels avec villas et zones commerciales.
-                Les platanes des grandes avenues génèrent des obstructions saisonnières
-                importantes dans les gouttières.
+                {getCommune("woluwe-saint-lambert").answer}
               </p>
               <div className="flex flex-wrap gap-3">
                 <a href="tel:0451053370" className="inline-flex items-center gap-2 bg-[#F97316] hover:bg-orange-500 text-white font-bold px-6 py-3.5 rounded-xl transition-colors shadow-md shadow-orange-100">
@@ -63,6 +62,7 @@ export default function WoluweStLambertPage() {
                   Devis gratuit <ArrowRight size={16} />
                 </a>
               </div>
+              <TrustNote className="mt-5" />
             </div>
             <div className="lg:w-72 bg-[#1A4731] text-white rounded-2xl p-6 flex-shrink-0 w-full">
               <p className="text-green-300 text-xs font-semibold uppercase tracking-wide mb-4">WSL en pratique</p>
@@ -183,6 +183,8 @@ export default function WoluweStLambertPage() {
           </div>
         </div>
       </section>
+
+      <CommuneDetail slug="woluwe-saint-lambert" />
 
       <CommuneConseils slug="woluwe-saint-lambert" />
 

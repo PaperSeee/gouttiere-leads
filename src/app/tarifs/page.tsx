@@ -2,12 +2,13 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Phone, CheckCircle, ArrowRight, AlertTriangle, Info } from "lucide-react";
 import Breadcrumb from "@/components/Breadcrumb";
+import TrustNote from "@/components/TrustNote";
 import ContactForm from "@/components/ContactForm";
 
 export const metadata: Metadata = {
-  title: { absolute: "Prix du nettoyage de gouttières à Bruxelles" },
+  title: { absolute: "Prix du nettoyage de gouttières à Bruxelles : 80 à 150 €" },
   description:
-    "Prix détaillés pour le nettoyage, débouchage et réparation de gouttières à Bruxelles en 2026. Nettoyage dès 80€, débouchage dès 120€, démoussage 3–6€/m².",
+    "Prix du nettoyage de gouttières à Bruxelles : 80 à 150 € pour une maison, descentes comprises. Débouchage dès 120 €, démoussage 3 à 6 €/m². Devis gratuit.",
   keywords: ["prix nettoyage gouttières Bruxelles", "tarifs débouchage gouttières", "coût réparation gouttières Bruxelles", "devis gouttières Bruxelles 2026", "tarif démoussage toiture Bruxelles"],
   alternates: { canonical: "https://www.nettoyage-gouttieres-bruxelles.be/tarifs" },
   openGraph: {
@@ -195,12 +196,14 @@ export default function Tarifs() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
             <h1 className="text-3xl sm:text-4xl font-bold mb-4">
-              Tarifs Nettoyage Gouttières Bruxelles — Prix 2026
+              Prix du nettoyage de gouttières à Bruxelles
             </h1>
             <p className="text-gray-300 text-lg leading-relaxed mb-6">
-              Tous nos tarifs sont transparents et fixés avant intervention. Devis gratuit
-              sur place — vous connaissez le prix exact avant de donner votre accord.
-              Aucune mauvaise surprise.
+              Un nettoyage de gouttières à Bruxelles coûte en général 80 à 150 € pour une maison,
+              descentes pluviales comprises : 80 à 100 € pour une maison deux façades, 100 à 150 €
+              pour une maison trois ou quatre façades. Un débouchage urgent revient à 120 à 200 €,
+              un démoussage de toiture à 3 à 6 €/m². Ces prix sont indicatifs ; le prix exact est
+              fixé dans un devis gratuit, avant l&apos;intervention.
             </p>
             <div className="flex flex-col sm:flex-row gap-3">
               <a href="tel:0451053370" className="flex items-center justify-center gap-2 bg-[#F97316] hover:bg-orange-500 text-white font-bold px-6 py-3 rounded-xl transition-colors">
@@ -210,6 +213,7 @@ export default function Tarifs() {
                 Formulaire de devis <ArrowRight size={16} />
               </a>
             </div>
+            <TrustNote className="mt-5" tone="dark" />
           </div>
         </div>
       </section>

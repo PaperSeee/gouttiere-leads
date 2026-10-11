@@ -3,11 +3,12 @@ import Link from "next/link";
 import { Phone, CheckCircle, ArrowRight, Home, Clock, Shield, Leaf } from "lucide-react";
 import Breadcrumb from "@/components/Breadcrumb";
 import ContactForm from "@/components/ContactForm";
+import TrustNote from "@/components/TrustNote";
 
 export const metadata: Metadata = {
   title: { absolute: "Nettoyage de toiture à Bruxelles — débris et mousses retirés" },
   description:
-    "Nettoyage de toiture à Bruxelles : feuilles, mousses et débris dégagés des tuiles et ardoises, rives et solins contrôlés, gouttières nettoyées en même temps. Devis gratuit.",
+    "Nettoyage de toiture à Bruxelles : feuilles, mousses et débris dégagés des tuiles et ardoises, gouttières nettoyées en même temps. Devis gratuit.",
   alternates: { canonical: "https://www.nettoyage-gouttieres-bruxelles.be/services/nettoyage-toiture" },
   keywords: ["nettoyage toiture Bruxelles", "nettoyage de toiture Bruxelles", "entretien toiture Bruxelles", "nettoyage toiture prix Bruxelles"],
   openGraph: {
@@ -128,6 +129,7 @@ export default function NettoyageToiture() {
                 Devis gratuit <ArrowRight size={18} />
               </a>
             </div>
+            <TrustNote className="mt-5" tone="dark" />
           </div>
         </div>
       </section>

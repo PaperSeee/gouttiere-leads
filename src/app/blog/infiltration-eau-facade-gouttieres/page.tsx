@@ -3,6 +3,8 @@ import Link from "next/link"
 import { ArrowRight, AlertTriangle, CheckCircle, Clock, Tag } from "lucide-react"
 import Breadcrumb from "@/components/Breadcrumb"
 import ContactForm from "@/components/ContactForm"
+import Byline from "@/components/Byline"
+import { EDITOR_REF, PUBLISHER_REF } from "@/lib/schema"
 
 export const metadata: Metadata = {
   title: { absolute: "Infiltrations en façade : le rôle des gouttières" },
@@ -36,15 +38,10 @@ export default function BlogInfiltrationEauFacadeGouttieres() {
         "@id": `${DOMAIN}/blog/infiltration-eau-facade-gouttieres`,
         headline: "Infiltrations d'eau sur façade : le rôle méconnu des gouttières",
         description: "Les gouttières défectueuses sont souvent à l'origine des infiltrations de façade. Guide de diagnostic et solutions.",
-        author: { "@type": "Organization", name: "Nettoyage Gouttières Bruxelles", url: DOMAIN },
-        publisher: {
-          "@type": "Organization",
-          name: "Nettoyage Gouttières Bruxelles",
-          url: DOMAIN,
-          logo: { "@type": "ImageObject", url: `${DOMAIN}/logo.svg` },
-        },
+        author: EDITOR_REF,
+        publisher: PUBLISHER_REF,
         datePublished: "2026-06-02",
-        dateModified: "2026-06-02",
+        dateModified: "2026-10-11",
         image: "https://images.unsplash.com/photo-1516455590571-18256e5bb9ff?w=1200&q=80",
         mainEntityOfPage: { "@type": "WebPage", "@id": `${DOMAIN}/blog/infiltration-eau-facade-gouttieres` },
         inLanguage: "fr-BE",
@@ -76,11 +73,12 @@ export default function BlogInfiltrationEauFacadeGouttieres() {
               <Clock size={11} /> 5 min de lecture
             </span>
           </div>
+          <Byline date="2026-10-11" className="mb-3" />
           <h1 className="text-3xl sm:text-4xl font-extrabold text-white leading-tight mb-4">
             Infiltrations d&apos;Eau sur Façade : le Rôle Méconnu des Gouttières
           </h1>
           <p className="text-green-200 text-base leading-relaxed max-w-2xl">
-            Si votre façade présente des taches d&apos;humidité ou des moisissures, vos gouttières sont peut-être en cause. Voici comment diagnostiquer et résoudre le problème.
+            Des taches d&apos;humidité en haut d&apos;un mur, une peinture qui s&apos;écaille ou de la mousse juste sous la gouttière signalent souvent une gouttière bouchée, percée ou mal positionnée : l&apos;eau déborde et ruisselle sur la façade. Pour le vérifier, observez la gouttière pendant une averse ; la nettoyer ou la réparer suffit souvent à stopper l&apos;infiltration.
           </p>
         </div>
       </section>

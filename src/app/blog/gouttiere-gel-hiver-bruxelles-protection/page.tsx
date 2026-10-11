@@ -3,6 +3,8 @@ import Link from "next/link"
 import { ArrowRight, AlertTriangle, CheckCircle, Clock, Tag } from "lucide-react"
 import Breadcrumb from "@/components/Breadcrumb"
 import ContactForm from "@/components/ContactForm"
+import Byline from "@/components/Byline"
+import { EDITOR_REF, PUBLISHER_REF } from "@/lib/schema"
 
 export const metadata: Metadata = {
   title: { absolute: "Gel en hiver : protéger ses gouttières à Bruxelles" },
@@ -36,13 +38,8 @@ export default function BlogGouttiereGelHiver() {
         "@id": `${DOMAIN}/blog/gouttiere-gel-hiver-bruxelles-protection`,
         headline: "Gouttières et gel en hiver à Bruxelles : risques et comment les protéger",
         description: "Les risques du gel pour les gouttières en hiver à Bruxelles et les bons gestes pour les protéger du froid.",
-        author: { "@type": "Organization", name: "Nettoyage Gouttières Bruxelles", url: DOMAIN },
-        publisher: {
-          "@type": "Organization",
-          name: "Nettoyage Gouttières Bruxelles",
-          url: DOMAIN,
-          logo: { "@type": "ImageObject", url: `${DOMAIN}/logo.svg` },
-        },
+        author: EDITOR_REF,
+        publisher: PUBLISHER_REF,
         datePublished: "2026-06-10",
         dateModified: "2026-10-04",
         image: "https://images.unsplash.com/photo-1483921020237-2ff51e8e4b22?w=1200&q=80",
@@ -97,6 +94,7 @@ export default function BlogGouttiereGelHiver() {
               <Clock size={11} /> 6 min de lecture
             </span>
           </div>
+          <Byline date="2026-10-04" className="mb-3" />
           <h1 className="text-3xl sm:text-4xl font-extrabold text-white leading-tight mb-4">
             Gouttières et Gel en Hiver à Bruxelles : Risques et Comment les Protéger
           </h1>

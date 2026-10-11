@@ -4,8 +4,9 @@ import GutterIllustration from "@/components/GutterIllustration"
 import { Phone, ArrowRight, CheckCircle, MapPin, Leaf, Droplets, Wrench, AlertTriangle, Euro } from "lucide-react"
 import Breadcrumb from "@/components/Breadcrumb"
 import ContactForm from "@/components/ContactForm"
+import TrustNote from "@/components/TrustNote"
 import { CommuneConseils, CommuneDetail, NeighborCommunes } from "@/components/CommuneLocal"
-import { localFaqs, localFaqSchema } from "@/lib/communes"
+import { localFaqs, localFaqSchema, getCommune } from "@/lib/communes"
 
 export const metadata: Metadata = {
   title: { absolute: "Nettoyage de gouttières à Uccle dès 80 €" },
@@ -56,9 +57,7 @@ export default function UcclePage() {
                 Nettoyage de gouttières à <span className="text-[#1A4731]">Uccle</span>
               </h1>
               <p className="text-gray-600 text-lg leading-relaxed mb-7 max-w-xl">
-                Villas 4 façades, maisons de maître, zinc centenaire — Uccle est une
-                commune à fort entretien pour les gouttières. On intervient dans tout Uccle
-                avec dévis gratuit et délai d&apos;intervention sous 48h.
+                {getCommune("uccle").answer}
               </p>
               <div className="flex flex-wrap gap-3">
                 <a
@@ -75,6 +74,7 @@ export default function UcclePage() {
                   Devis gratuit <ArrowRight size={16} />
                 </a>
               </div>
+              <TrustNote className="mt-5" />
             </div>
             {/* Panneau stats */}
             <div className="lg:w-72 bg-[#1A4731] text-white rounded-2xl p-6 flex-shrink-0 w-full">

@@ -4,11 +4,12 @@ import { Phone, CheckCircle, ArrowRight, Droplets, Clock, Shield } from "lucide-
 import Breadcrumb from "@/components/Breadcrumb";
 import ContactForm from "@/components/ContactForm";
 import ServiceGuides from "@/components/ServiceGuides";
+import TrustNote from "@/components/TrustNote";
 
 export const metadata: Metadata = {
-  title: { absolute: "Nettoyage complet de gouttières à Bruxelles — descentes incluses" },
+  title: { absolute: "Nettoyage complet de gouttières — descentes incluses" },
   description:
-    "Ce que comprend un nettoyage de gouttières à Bruxelles : feuilles, mousses et boues retirées du chéneau et des descentes, écoulement testé, déchets évacués. Dès 80 €, devis gratuit.",
+    "Ce que comprend un nettoyage de gouttières : feuilles, mousses et boues retirées du chéneau et des descentes, écoulement testé. Dès 80 €, devis gratuit.",
   alternates: { canonical: "https://www.nettoyage-gouttieres-bruxelles.be/services/nettoyage-gouttieres" },
   keywords: ["nettoyage gouttières Bruxelles professionnel", "nettoyage gouttières prix Bruxelles", "entretien gouttières maison Bruxelles", "nettoyage haute pression gouttières"],
   openGraph: {
@@ -129,6 +130,7 @@ export default function NettoyageGouttieres() {
                 Devis gratuit <ArrowRight size={18} />
               </a>
             </div>
+            <TrustNote className="mt-5" tone="dark" />
           </div>
         </div>
       </section>

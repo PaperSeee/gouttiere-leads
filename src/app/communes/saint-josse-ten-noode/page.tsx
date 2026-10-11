@@ -4,13 +4,14 @@ import GutterIllustration from "@/components/GutterIllustration"
 import { Phone, ArrowRight, MapPin, Leaf, Droplets, Wrench, AlertTriangle } from "lucide-react"
 import Breadcrumb from "@/components/Breadcrumb"
 import ContactForm from "@/components/ContactForm"
+import TrustNote from "@/components/TrustNote"
 import { CommuneConseils, CommuneDetail, NeighborCommunes } from "@/components/CommuneLocal"
-import { localFaqs, localFaqSchema } from "@/lib/communes"
+import { localFaqs, localFaqSchema, getCommune } from "@/lib/communes"
 
 export const metadata: Metadata = {
-  title: { absolute: "Nettoyage de gouttières à Saint-Josse-ten-Noode — dès 80 €, 48h" },
+  title: { absolute: "Gouttières et démoussage à Saint-Josse-ten-Noode dès 80 €" },
   description:
-    "Nettoyage de gouttières à Saint-Josse : immeubles hauts, toits plats et avaloirs. Rapport d'état pour le syndic. Devis gratuit, intervention sous 48h dans la commune.",
+    "Nettoyage de gouttières à Saint-Josse dès 80 €, démoussage de toiture lors du même passage : immeubles hauts, toits plats, avaloirs. Devis gratuit.",
   alternates: { canonical: "https://www.nettoyage-gouttieres-bruxelles.be/communes/saint-josse-ten-noode" },
   keywords: ["nettoyage gouttières Saint-Josse", "débouchage gouttières Saint-Josse", "gouttières bouchées Saint-Josse", "prix nettoyage gouttières Saint-Josse"],
   openGraph: {
@@ -51,9 +52,7 @@ export default function SaintJossePage() {
                 Nettoyage de gouttières à <span className="text-[#1A4731]">Saint-Josse-ten-Noode</span>
               </h1>
               <p className="text-gray-600 text-lg leading-relaxed mb-7 max-w-xl">
-                La commune la plus densément peuplée de Belgique. Son bâti urbain
-                très compact — immeubles, maisons de rapport — présente des défis
-                d&apos;accès uniques pour l&apos;entretien des gouttières.
+                {getCommune("saint-josse-ten-noode").answer}
               </p>
               <div className="flex flex-wrap gap-3">
                 <a href="tel:0451053370" className="inline-flex items-center gap-2 bg-[#F97316] hover:bg-orange-500 text-white font-bold px-6 py-3.5 rounded-xl transition-colors shadow-md shadow-orange-100">
@@ -63,6 +62,7 @@ export default function SaintJossePage() {
                   Devis gratuit <ArrowRight size={16} />
                 </a>
               </div>
+              <TrustNote className="mt-5" />
             </div>
             <div className="lg:w-72 bg-[#1A4731] text-white rounded-2xl p-6 flex-shrink-0 w-full">
               <p className="text-green-300 text-xs font-semibold uppercase tracking-wide mb-4">Saint-Josse en chiffres</p>

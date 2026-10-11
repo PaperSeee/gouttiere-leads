@@ -4,6 +4,7 @@ import { Phone, CheckCircle, ArrowRight, AlertTriangle, Clock } from "lucide-rea
 import Breadcrumb from "@/components/Breadcrumb";
 import ContactForm from "@/components/ContactForm";
 import ServiceGuides from "@/components/ServiceGuides";
+import TrustNote from "@/components/TrustNote";
 
 const communes = [
   { name: "Anderlecht", slug: "anderlecht" },
@@ -86,15 +87,14 @@ export default function DebouchageGouttieres() {
               Débouchage Gouttières en Urgence à Bruxelles
             </h1>
             <p className="text-red-100 text-lg mb-6 leading-relaxed">
-              Vos gouttières débordent lors de fortes pluies ? L&apos;eau ruisselle le long de votre
-              façade ? Nos techniciens interviennent en urgence 7j/7 pour déboucher vos gouttières
-              et descentes pluviales avant que les dégâts ne s&apos;aggravent.
+              Le débouchage d&apos;une gouttière ou d&apos;une descente pluviale à Bruxelles coûte en général 120 à 160 € en semaine et 160 à 200 € le week-end ou un jour férié, test d&apos;écoulement compris. Il se demande 7j/7 dès que l&apos;eau passe par-dessus la gouttière pendant la pluie, avant qu&apos;elle n&apos;atteigne la façade ou les fondations.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <a href="tel:0451053370" className="flex items-center justify-center gap-2 bg-yellow-400 hover:bg-yellow-300 text-red-900 font-bold px-6 py-4 rounded-xl text-lg transition-colors">
                 <Phone size={20} /> Urgence : 0451 05 33 70
               </a>
             </div>
+            <TrustNote className="mt-5" tone="dark" />
             <div className="flex items-center gap-2 mt-4 text-red-200 text-sm">
               <Clock size={16} />
               <span>Disponible 7j/7 — Intervention généralement le jour même en haute saison</span>

@@ -86,10 +86,7 @@ export default function ReparationGouttieres() {
               Réparation et Remplacement de Gouttières à Bruxelles
             </h1>
             <p className="text-gray-300 text-lg mb-6 leading-relaxed">
-              Une gouttière fissurée, déboîtée ou rouillée ne se contente pas de mal fonctionner :
-              elle endommage progressivement votre façade et vos fondations. Nos techniciens évaluent
-              l&apos;état de vos gouttières et vous proposent la solution la plus adaptée, de la simple
-              réparation au remplacement complet.
+              Réparer une gouttière à Bruxelles coûte en général 40 à 80 € pour un joint ou un collet qui fuit, et 8 à 15 € par crochet remplacé ; un tronçon se remplace au mètre, de 15 à 25 €/ml en PVC à 35 à 55 €/ml en zinc, pose comprise. Le devis gratuit tranche entre réparation ciblée et remplacement.
             </p>
             <a href="tel:0451053370" className="inline-flex items-center gap-2 bg-[#F97316] hover:bg-orange-500 text-white font-bold px-6 py-3 rounded-xl transition-colors">
               <Phone size={18} /> 0451 05 33 70
