@@ -53,7 +53,7 @@ export default function BlogEntretienGouttieresMomentPage() {
           {
             "@type": "Question",
             name: "À quelle fréquence faut-il nettoyer ses gouttières à Bruxelles ?",
-            acceptedAnswer: { "@type": "Answer", text: "La fréquence recommandée est de 2 fois par an à Bruxelles : une fois à la fin de l'automne (novembre–décembre) après la chute des feuilles, et une fois au printemps (mars–avril) pour éliminer les mousses et débris hivernaux. Les maisons proches d'arbres peuvent nécessiter 3 interventions par an." },
+            acceptedAnswer: { "@type": "Answer", text: "Pour la plupart des maisons bruxelloises, un nettoyage par an suffit, fin novembre, une fois les feuilles tombées. Si des arbres surplombent la toiture, ajoutez un passage au printemps (mars–avril) ; sous de grands arbres ou en lisière de forêt, trois passages peuvent être utiles." },
           },
           {
             "@type": "Question",
@@ -117,7 +117,7 @@ export default function BlogEntretienGouttieresMomentPage() {
               Les gouttières sont le premier système de protection de votre maison contre les eaux de pluie. Elles collectent l&apos;eau de toiture et la dirigent loin des fondations, des façades et des murs. Lorsqu&apos;elles ne fonctionnent plus correctement, c&apos;est toute votre maison qui en subit les conséquences.
             </p>
             <p>
-              À Bruxelles, les conditions climatiques sont particulièrement exigeantes pour les gouttières. La ville reçoit en moyenne 850 mm de pluie par an, avec des périodes de précipitations intenses en automne et au printemps. Combinées à la densité arborée exceptionnelle de la région bruxelloise — 3,8 millions d&apos;arbres pour 19 communes — ces conditions génèrent un encrassement rapide des systèmes d&apos;évacuation.
+              À Bruxelles, les conditions climatiques sont particulièrement exigeantes pour les gouttières. La ville reçoit en moyenne 850 mm de pluie par an, avec des périodes de précipitations intenses en automne et au printemps. Combinées aux nombreux arbres de la région — forêt de Soignes, parcs et arbres d&apos;alignement — ces conditions encrassent vite les gouttières des maisons qui en sont proches.
             </p>
             <p>
               Un entretien régulier et correctement planifié permet de maintenir vos gouttières en parfait état de fonctionnement à l&apos;année, d&apos;éviter les interventions d&apos;urgence coûteuses et de prolonger significativement la durée de vie de votre installation.
@@ -125,26 +125,26 @@ export default function BlogEntretienGouttieresMomentPage() {
 
             {/* Section 2 */}
             <h2 className="text-2xl font-bold text-gray-900 mt-10 mb-4">
-              La fréquence recommandée : 2 fois par an minimum
+              La fréquence recommandée : une fois par an, deux sous les arbres
             </h2>
             <p>
-              La règle générale pour Bruxelles est de nettoyer ses gouttières <strong>au moins 2 fois par an</strong>. Cette fréquence est la recommandation minimale pour la grande majorité des maisons bruxelloises. Elle peut augmenter selon votre situation spécifique.
+              Pour la plupart des maisons bruxelloises, <strong>un nettoyage par an</strong> suffit, à condition de bien le placer : fin novembre, une fois les feuilles tombées. Si des arbres surplombent votre toiture, prévoyez un deuxième passage au printemps.
             </p>
 
             <div className="grid sm:grid-cols-3 gap-4 my-6 not-prose">
               {[
                 {
                   freq: "1 fois par an",
-                  profil: "Maison sans arbres proches, gouttières en excellent état, PVC récent",
+                  profil: "Cas le plus courant à Bruxelles : pas d'arbre au-dessus du toit. Passage fin novembre",
                   color: "bg-green-50 border-green-200",
-                  badge: "Minimum",
+                  badge: "Recommandé",
                   badgeColor: "bg-green-100 text-green-700",
                 },
                 {
                   freq: "2 fois par an",
-                  profil: "Cas le plus courant à Bruxelles. Arbres à proximité modérée, maison standard",
+                  profil: "Arbres qui surplombent la toiture : fin novembre, puis au printemps",
                   color: "bg-[#1A4731]/5 border-[#1A4731]/20",
-                  badge: "Recommandé",
+                  badge: "Sous les arbres",
                   badgeColor: "bg-[#1A4731] text-white",
                 },
                 {
@@ -321,9 +321,9 @@ export default function BlogEntretienGouttieresMomentPage() {
             </p>
             <div className="space-y-3 my-5 not-prose">
               {[
-                { title: "Densité arborée exceptionnelle", desc: "Avec 3,8 millions d'arbres pour 1,2 million d'habitants, Bruxelles est l'une des capitales les plus vertes d'Europe. Cette richesse végétale se traduit par un encrassement des gouttières 2 à 3 fois plus rapide qu'en zone peu boisée." },
+                { title: "Une ville très arborée", desc: "Forêt de Soignes, grands parcs, avenues plantées de platanes et de tilleuls : de nombreuses maisons bruxelloises ont des arbres à proximité. Ce sont elles qui ont besoin de plus d'un nettoyage par an." },
                 { title: "Végétation variée avec chutes étalées", desc: "Les différentes espèces d'arbres bruxellois ne perdent pas leurs feuilles en même temps. Les platanes tombent en octobre, les chênes en novembre, les hêtres parfois jusqu'en janvier. Dans certaines communes proches de la forêt, l'apport de feuilles s'étale sur 4 mois." },
-                { title: "Pluviométrie importante en automne", desc: "Les mois d'octobre à décembre sont les plus pluvieux à Bruxelles, avec des précipitations 40% supérieures à la moyenne annuelle. C'est précisément la période où les gouttières sont le plus sollicitées — et le plus encrassées." },
+                { title: "Des pluies toute l'année", desc: "Il pleut à Bruxelles en toute saison, et les pluies d'automne tombent au moment où les gouttières sont pleines de feuilles. C'est la période où une gouttière bouchée déborde le plus souvent." },
                 { title: "Bâti dense avec accès parfois difficile", desc: "Les maisons mitoyennes bruxelloises avec cours arrière étroites, impasses ou rues à circulation limitée nécessitent parfois du matériel spécialisé pour accéder aux gouttières. Cela plaide pour un entretien régulier plutôt que des interventions d'urgence sous la pluie." },
               ].map((item) => (
                 <div key={item.title} className="flex gap-3 bg-gray-50 rounded-xl p-4 border border-gray-100">
@@ -342,7 +342,7 @@ export default function BlogEntretienGouttieresMomentPage() {
               {[
                 {
                   q: "À quelle fréquence faut-il nettoyer ses gouttières à Bruxelles ?",
-                  a: "La fréquence recommandée est de 2 fois par an : en novembre–décembre après la chute des feuilles, et en mars–avril avant les pluies de printemps. Les maisons proches de grands arbres peuvent nécessiter 3 interventions par an.",
+                  a: "Pour la plupart des maisons, un nettoyage par an suffit, fin novembre, une fois les feuilles tombées. Si des arbres surplombent la toiture, ajoutez un passage en mars–avril ; sous de grands arbres, trois passages peuvent être utiles.",
                 },
                 {
                   q: "Quels sont les signes que mes gouttières doivent être nettoyées ?",
@@ -374,7 +374,7 @@ export default function BlogEntretienGouttieresMomentPage() {
             {/* Conclusion */}
             <h2 className="text-2xl font-bold text-gray-900 mt-10 mb-4">Conclusion : planifiez, n&apos;attendez pas</h2>
             <p>
-              À Bruxelles, la règle est simple : <strong>2 nettoyages par an</strong>, l&apos;un en fin d&apos;automne (novembre–décembre) et l&apos;autre au printemps (mars–avril). Cette routine simple protège efficacement votre maison et vous évite les coûteuses interventions d&apos;urgence.
+              À Bruxelles, la règle est simple : <strong>un nettoyage par an</strong>, fin novembre, et un deuxième au printemps (mars–avril) si des arbres surplombent la toiture. Cette routine simple protège efficacement votre maison et vous évite les coûteuses interventions d&apos;urgence.
             </p>
             <p>
               Le meilleur moment pour planifier un nettoyage, c&apos;est avant d&apos;en avoir besoin. Un entretien préventif régulier coûte entre 80 et 200€ — contre plusieurs milliers d&apos;euros pour réparer les dégâts causés par des gouttières négligées. L&apos;investissement est évident.

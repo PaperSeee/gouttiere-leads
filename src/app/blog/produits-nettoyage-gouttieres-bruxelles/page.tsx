@@ -95,7 +95,7 @@ export default function BlogProduitsNettoyageGouttieresBruxellesPage() {
               À Bruxelles, le climat humide favorise le développement de mousses, lichens et algues vertes dans les gouttières. En quelques mois, une gouttière non traitée peut se boucher partiellement et provoquer des débordements sur les façades. Mais tous les produits de nettoyage ne se valent pas — et certains peuvent attaquer le zinc ou abîmer les joints de vos gouttières en PVC ou aluminium.
             </p>
             <p>
-              Avant de choisir un produit, identifiez le matériau de vos gouttières (zinc, aluminium, PVC, cuivre) et le type de dépôt à traiter (feuilles, mousse, dépôts calcaires, algues noires).
+              Avant de choisir un produit, identifiez le matériau de vos gouttières (zinc, aluminium, PVC, cuivre) et le type de dépôt à traiter (feuilles, mousse, algues noires).
             </p>
 
             <h2>Les 4 types de produits pour gouttières</h2>
@@ -125,12 +125,12 @@ export default function BlogProduitsNettoyageGouttieresBruxellesPage() {
               </p>
             </div>
 
-            <h3>3. Les traitements anti-calcaire</h3>
+            <h3>3. Les traces blanches : pas besoin d&apos;anti-calcaire</h3>
             <p>
-              En Région bruxelloise, l&apos;eau est modérément calcaire (entre 20 et 30°F). Les dépôts blancs dans le fond des gouttières et sur les descentes d&apos;eaux pluviales sont fréquents, notamment près des sorties de toiture avec ardoise naturelle.
+              Une gouttière ne reçoit que de l&apos;eau de pluie, qui n&apos;est pas calcaire : l&apos;eau du robinet, plus dure, n&apos;y passe pas. Les traces blanches sur une gouttière en zinc sont le plus souvent de la « rouille blanche », une oxydation du zinc resté longtemps humide (débris qui retiennent l&apos;eau, pente insuffisante).
             </p>
             <p>
-              Un traitement à l&apos;acide citrique dilué (1 cuillère à soupe par litre d&apos;eau) dissout efficacement le calcaire sans risque pour les matériaux. C&apos;est une alternative naturelle aux produits détartrants chimiques.
+              Elles ne se traitent pas avec un acide, même doux comme l&apos;acide citrique ou le vinaigre : les acides attaquent le zinc. Retirez les débris, rincez à l&apos;eau claire et faites vérifier la pente pour que l&apos;eau ne stagne plus.
             </p>
             <div className="not-prose bg-red-50 border border-red-200 rounded-xl p-4 my-4">
               <h4 className="font-bold text-red-800 mb-2 flex items-center gap-2"><AlertTriangle size={16} className="text-red-500" /> À éviter absolument</h4>

@@ -115,8 +115,8 @@ export const blogPosts: BlogPost[] = [
     category: "Entretien",
     readTime: "7 min",
     imageUrl: "https://images.unsplash.com/photo-1504510533704-35680f356dfd?w=800&q=80",
-    imageAlt: "Calendrier entretien gouttières Bruxelles — nettoyage 2x par an",
-    excerpt: "Beaucoup de propriétaires bruxellois ne savent pas à quelle fréquence entretenir leurs gouttières. La règle à Bruxelles : 2 nettoyages par an minimum — après l'automne et avant le printemps. Voici le calendrier complet.",
+    imageAlt: "Calendrier d'entretien des gouttières à Bruxelles",
+    excerpt: "Beaucoup de propriétaires bruxellois ne savent pas à quelle fréquence entretenir leurs gouttières. La règle à Bruxelles : un nettoyage par an, fin novembre, et un deuxième au printemps si des arbres surplombent le toit. Voici le calendrier complet.",
     services: ["nettoyage-gouttieres", "contrat-entretien-gouttieres"],
   },
   {

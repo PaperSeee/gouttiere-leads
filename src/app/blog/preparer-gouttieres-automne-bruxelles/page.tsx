@@ -95,16 +95,16 @@ export default function BlogAutomneGouttieresBruxellesPage() {
               Pourquoi l'automne est critique pour les gouttières à Bruxelles
             </h2>
             <p>
-              Bruxelles est une ville exceptionnellement arborée pour une capitale européenne. Ses 3,8 millions d'arbres — dont une grande partie dans ses 19 communes — font la fierté des Bruxellois. Mais chaque automne, ces mêmes arbres transforment les gouttières de la ville en véritable piège à feuilles.
+              Bruxelles est une ville très arborée pour une capitale : forêt de Soignes, grands parcs, avenues plantées de platanes et de tilleuls. Mais chaque automne, ces mêmes arbres transforment les gouttières de la ville en véritable piège à feuilles.
             </p>
             <p>
               Entre mi-septembre et fin novembre, c'est une véritable avalanche végétale qui s'abat sur les toitures bruxelloises. Les feuilles mortes, mais aussi les samares, les bogues de châtaigniers, les graines ailées d'érables et les inflorescences séchées viennent obstruer les gouttières en quelques semaines seulement. Une gouttière non entretenue peut être complètement bouchée en moins d'un mois pendant cette période.
             </p>
             <p>
-              Le problème ne se limite pas à l'obstruction visible. L'eau qui stagne dans une gouttière bouchée exerce une pression sur les fixations, surcharge le système et peut remonter sous les tuiles. Lors des premières pluies intenses d'automne — fréquentes à Bruxelles où les précipitations augmentent significativement en septembre-octobre — une gouttière bouchée peut causer des dégâts des eaux importants en quelques heures seulement.
+              Le problème ne se limite pas à l'obstruction visible. L'eau qui stagne dans une gouttière bouchée exerce une pression sur les fixations, surcharge le système et peut remonter sous les tuiles. Lors des premières pluies intenses d'automne — une gouttière bouchée peut causer des dégâts des eaux importants en quelques heures seulement.
             </p>
             <p>
-              <strong>La solution ? Anticiper.</strong> Plutôt que d'attendre le premier débordement pour agir, une inspection et un nettoyage préventif à la fin de l'été constituent le meilleur investissement pour protéger votre habitation.
+              <strong>La solution ? Anticiper.</strong> Plutôt que d'attendre le premier débordement pour agir, un contrôle à la fin de l'été (descentes et crapaudines dégagées avant les pluies), puis le nettoyage principal fin novembre, une fois les feuilles tombées, sont le meilleur investissement pour protéger votre habitation.
             </p>
 
             {/* Section 2 */}
@@ -347,7 +347,7 @@ export default function BlogAutomneGouttieresBruxellesPage() {
               Conclusion : anticipez avant le mois de septembre
             </h2>
             <p>
-              La règle d'or pour protéger vos gouttières en automne bruxellois est simple : <strong>n'attendez pas que le problème se manifeste</strong>. Un nettoyage préventif réalisé fin août ou début septembre vous assure d'aborder l'automne avec un système d'évacuation en parfait état, capable de gérer les volumes importants de feuilles et les pluies intenses de la saison.
+              La règle d'or pour protéger vos gouttières en automne bruxellois est simple : <strong>n'attendez pas que le problème se manifeste</strong>. Un contrôle fin août ou début septembre permet d'aborder l'automne avec des descentes dégagées ; le nettoyage complet se fait ensuite fin novembre, quand la plupart des arbres ont perdu leurs feuilles, pour ne pas devoir recommencer.
             </p>
             <p>
               Le coût d'un nettoyage préventif — entre 80 et 200€ selon le type de bâtiment — est sans commune mesure avec celui d'une intervention d'urgence suite à des dégâts des eaux, qui peut rapidement atteindre plusieurs milliers d'euros (réparation de plafond, traitement contre les moisissures, séchage des murs, etc.).

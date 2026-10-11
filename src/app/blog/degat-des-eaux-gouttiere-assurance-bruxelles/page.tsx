@@ -64,7 +64,7 @@ export default function BlogDegatDesEauxGouttiereAssurance() {
             name: "Comment éviter un refus d'indemnisation pour défaut d'entretien à Bruxelles ?",
             acceptedAnswer: {
               "@type": "Answer",
-              text: "Faites nettoyer vos gouttières au moins deux fois par an et conservez les factures. Ces documents prouvent que vous avez entretenu votre installation et facilitent l'indemnisation en cas de sinistre.",
+              text: "Faites nettoyer vos gouttières au moins une fois par an (deux fois si des arbres surplombent le toit) et conservez les factures. Ces documents prouvent que vous avez entretenu votre installation et facilitent l'indemnisation en cas de sinistre.",
             },
           },
           {
@@ -163,7 +163,7 @@ export default function BlogDegatDesEauxGouttiereAssurance() {
             <div className="not-prose space-y-3 mb-6">
               {[
                 { num: "1", titre: "Conservez vos factures de nettoyage", desc: "Une facture d'un professionnel datée prouve que vous avez entretenu vos gouttières. C'est votre meilleure pièce justificative en cas de litige." },
-                { num: "2", titre: "Faites nettoyer 2 fois par an", desc: "À Bruxelles, le rythme recommandé est de deux nettoyages annuels (après l'automne et avant le printemps), compte tenu des nombreux arbres en ville." },
+                { num: "2", titre: "Faites nettoyer chaque année", desc: "À Bruxelles, un nettoyage par an fin novembre suffit pour la plupart des maisons ; ajoutez un passage au printemps si des arbres surplombent la toiture." },
                 { num: "3", titre: "Photographiez l'état de vos gouttières", desc: "Quelques photos régulières montrant des gouttières propres constituent une preuve d'entretien complémentaire." },
                 { num: "4", titre: "Déclarez vite le sinistre", desc: "Respectez les délais de déclaration prévus à votre contrat. Un retard peut être un motif de réduction d'indemnité." },
                 { num: "5", titre: "Réparez sans tarder", desc: "Une fois la cause identifiée, faites réparer la gouttière rapidement pour éviter l'aggravation — un dommage qui s'aggrave faute de réparation peut être exclu." },
