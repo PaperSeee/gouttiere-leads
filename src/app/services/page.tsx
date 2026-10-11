@@ -6,7 +6,7 @@ import Breadcrumb from "@/components/Breadcrumb";
 export const metadata: Metadata = {
   title: { absolute: "Services gouttières à Bruxelles | Gouttières Bruxelles" },
   description:
-    "Nettoyage dès 80 €, débouchage dès 120 €, réparation, démoussage 3–6 €/m², protection anti-feuilles et contrat d'entretien. Devis gratuit à Bruxelles.",
+    "Nettoyage dès 80 €, débouchage dès 120 €, réparation, démoussage 8–20 €/m², protection anti-feuilles et contrat d'entretien. Devis gratuit à Bruxelles.",
   alternates: { canonical: "https://www.nettoyage-gouttieres-bruxelles.be/services" },
 };
 
@@ -14,7 +14,7 @@ const services = [
   { href: "/services/nettoyage-gouttieres", title: "Nettoyage de gouttières", price: "dès 80 €", desc: "Feuilles, mousses et boues retirées, descentes pluviales comprises, écoulement testé avant de partir." },
   { href: "/services/debouchage-gouttieres", title: "Débouchage de gouttières et descentes", price: "120 – 200 €", desc: "Gouttière qui déborde ou descente bouchée : intervention 7j/7, test d'écoulement inclus." },
   { href: "/services/reparation-gouttieres", title: "Réparation et remplacement", price: "joint dès 40 €", desc: "Joints, soudures, crochets, tronçons en PVC, aluminium ou zinc, chéneaux de corniche." },
-  { href: "/services/demoussage-toiture", title: "Démoussage de toiture", price: "3 – 6 €/m²", desc: "Brossage et traitement anti-mousse : moins de débris dans les gouttières." },
+  { href: "/services/demoussage-toiture", title: "Démoussage de toiture", price: "8 – 20 €/m²", desc: "Brossage et traitement anti-mousse : moins de débris dans les gouttières." },
   { href: "/services/nettoyage-toiture", title: "Nettoyage de toiture", price: "sur devis", desc: "Dégagement des feuilles, mousses et débris des tuiles et ardoises, gouttières nettoyées le même jour." },
   { href: "/services/protection-gouttieres", title: "Protection anti-feuilles", price: "sur devis", desc: "Grilles et crapaudines pour espacer les nettoyages sous les grands arbres." },
   { href: "/services/contrat-entretien-gouttieres", title: "Contrat d'entretien annuel", price: "-10 % sur le tarif", desc: "Passages planifiés chaque année, idéal pour les copropriétés et les maisons sous les arbres." },

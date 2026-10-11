@@ -145,12 +145,12 @@ export default function BlogDemoussageToitureBruxellesPage() {
               Les tarifs varient selon la surface, l&apos;accessibilité, la pente et les prestations incluses. Voici les fourchettes constatées sur le marché bruxellois :
             </p>
             <ul>
-              <li><strong>Nettoyage + démoussage simple :</strong> 8 à 15 €/m²</li>
-              <li><strong>Nettoyage + traitement anti-mousse :</strong> 12 à 20 €/m²</li>
-              <li><strong>Nettoyage + anti-mousse + hydrofuge :</strong> 20 à 35 €/m²</li>
+              <li><strong>Nettoyage + démoussage simple :</strong> 5 à 15 €/m²</li>
+              <li><strong>Nettoyage + traitement anti-mousse :</strong> 8 à 20 €/m²</li>
+              <li><strong>Nettoyage + anti-mousse + hydrofuge :</strong> 15 à 30 €/m²</li>
             </ul>
             <p>
-              Pour une maison bruxelloise type (toiture de 60 à 90 m²), comptez généralement entre <strong>600 € et 1 500 €</strong> pour un traitement complet. L&apos;accès difficile (maison de ville étroite, toiture pentue) et la nécessité d&apos;un échafaudage peuvent faire grimper la facture.
+              Pour une maison bruxelloise type (toiture de 60 à 90 m²), comptez généralement entre <strong>500 € et 1 800 €</strong> pour un démoussage avec traitement anti-mousse (prix observés en Belgique, relevé le 11/10/2026 : <a href="https://www.bobex.be/fr-be/nettoyage-de-toiture/" rel="nofollow noopener" target="_blank">Bobex</a>, <a href="https://www.comparerdevis.be/combien-ca-coute/demoussage-toiture/index.html" rel="nofollow noopener" target="_blank">Comparerdevis.be</a>). L&apos;accès difficile (maison de ville étroite, toiture pentue) et la nécessité d&apos;un échafaudage peuvent faire grimper la facture.
             </p>
 
             <h2>Démoussage et gouttières : un entretien indissociable</h2>

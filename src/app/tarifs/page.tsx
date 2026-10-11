@@ -8,12 +8,12 @@ import ContactForm from "@/components/ContactForm";
 export const metadata: Metadata = {
   title: { absolute: "Prix du nettoyage de gouttières à Bruxelles : 80 à 150 €" },
   description:
-    "Prix du nettoyage de gouttières à Bruxelles : 80 à 150 € pour une maison, descentes comprises. Débouchage dès 120 €, démoussage 3 à 6 €/m². Devis gratuit.",
+    "Prix du nettoyage de gouttières à Bruxelles : 80 à 150 € pour une maison, descentes comprises. Débouchage dès 120 €, démoussage 8 à 20 €/m². Devis gratuit.",
   keywords: ["prix nettoyage gouttières Bruxelles", "tarifs débouchage gouttières", "coût réparation gouttières Bruxelles", "devis gouttières Bruxelles 2026", "tarif démoussage toiture Bruxelles"],
   alternates: { canonical: "https://www.nettoyage-gouttieres-bruxelles.be/tarifs" },
   openGraph: {
     title: "Tarifs Nettoyage Gouttières Bruxelles — Prix 2026",
-    description: "Nettoyage dès 80€, débouchage dès 120€, démoussage 3–6€/m². Devis gratuit, intervention sous 48h.",
+    description: "Nettoyage dès 80€, débouchage dès 120€, démoussage 8–20€/m². Devis gratuit, intervention sous 48h.",
     url: "https://www.nettoyage-gouttieres-bruxelles.be/tarifs",
     type: "website",
     images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "Tarifs nettoyage gouttières Bruxelles 2026" }],
@@ -116,7 +116,7 @@ const tarifsReparation = [
 const tarifsDemoussage = [
   {
     service: "Démoussage mécanique toiture",
-    fourchette: "3 – 6€/m²",
+    fourchette: "8 – 20€/m²",
     detail: "Brossage + traitement anti-mousse biodégradable inclus",
     color: "border-yellow-200 bg-yellow-50",
     badge: null,
@@ -202,7 +202,7 @@ export default function Tarifs() {
               Un nettoyage de gouttières à Bruxelles coûte en général 80 à 150 € pour une maison,
               descentes pluviales comprises : 80 à 100 € pour une maison deux façades, 100 à 150 €
               pour une maison trois ou quatre façades. Un débouchage urgent revient à 120 à 200 €,
-              un démoussage de toiture à 3 à 6 €/m². Ces prix sont indicatifs ; le prix exact est
+              un démoussage de toiture à 8 à 20 €/m² traitement anti-mousse compris. Ces prix sont indicatifs ; le prix exact est
               fixé dans un devis gratuit, avant l&apos;intervention.
             </p>
             <div className="flex flex-col sm:flex-row gap-3">

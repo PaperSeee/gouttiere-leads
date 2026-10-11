@@ -62,7 +62,7 @@ const faqs = [
   },
   {
     question: "Proposez-vous aussi le nettoyage de toiture à Bruxelles ?",
-    answer: "Oui, le nettoyage et le démoussage de toiture font partie de nos services complémentaires à Bruxelles. Comptez 3 à 6€/m² pour un démoussage mécanique, traitement anti-mousse compris. La mousse sur les tuiles retient l'humidité, dégrade les tuiles et alimente les gouttières en débris. Un démoussage associé à un traitement anti-mousse préventif protège votre toiture pendant 3 à 5 ans. Nous proposons un tarif avantageux lorsque le démoussage est combiné au nettoyage des gouttières lors d'une même visite.",
+    answer: "Oui, le nettoyage et le démoussage de toiture font partie de nos services complémentaires à Bruxelles. Comptez 8 à 20 €/m² pour un démoussage mécanique, traitement anti-mousse compris. La mousse sur les tuiles retient l'humidité, dégrade les tuiles et alimente les gouttières en débris. Un démoussage associé à un traitement anti-mousse préventif protège votre toiture pendant 3 à 5 ans. Nous proposons un tarif avantageux lorsque le démoussage est combiné au nettoyage des gouttières lors d'une même visite.",
   },
   {
     question: "Mon assurance couvre-t-elle les dégâts dus aux gouttières bouchées ?",

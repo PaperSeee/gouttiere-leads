@@ -120,25 +120,25 @@ export default function BlogPrixRemplacementGouttieresBruxelles2026Page() {
                 <tbody className="divide-y divide-gray-100">
                   <tr className="hover:bg-gray-50">
                     <td className="px-4 py-3 font-semibold">PVC</td>
-                    <td className="px-4 py-3 text-center">10 – 25 €</td>
+                    <td className="px-4 py-3 text-center">15 – 25 €</td>
                     <td className="px-4 py-3 text-center">15–25 ans</td>
                     <td className="px-4 py-3 text-center">Faible</td>
                   </tr>
                   <tr className="hover:bg-gray-50">
                     <td className="px-4 py-3 font-semibold">Aluminium</td>
-                    <td className="px-4 py-3 text-center">25 – 55 €</td>
+                    <td className="px-4 py-3 text-center">25 – 40 €</td>
                     <td className="px-4 py-3 text-center">30–50 ans</td>
                     <td className="px-4 py-3 text-center">Faible</td>
                   </tr>
                   <tr className="hover:bg-gray-50">
                     <td className="px-4 py-3 font-semibold">Zinc</td>
-                    <td className="px-4 py-3 text-center">40 – 80 €</td>
+                    <td className="px-4 py-3 text-center">35 – 55 €</td>
                     <td className="px-4 py-3 text-center">50–80 ans</td>
                     <td className="px-4 py-3 text-center">Modéré</td>
                   </tr>
                   <tr className="hover:bg-gray-50">
                     <td className="px-4 py-3 font-semibold">Cuivre</td>
-                    <td className="px-4 py-3 text-center">80 – 150 €</td>
+                    <td className="px-4 py-3 text-center">80 € et plus</td>
                     <td className="px-4 py-3 text-center">100+ ans</td>
                     <td className="px-4 py-3 text-center">Très faible</td>
                   </tr>
@@ -155,16 +155,14 @@ export default function BlogPrixRemplacementGouttieresBruxelles2026Page() {
               <div className="grid grid-cols-2 gap-2 text-sm">
                 <span className="text-gray-600">Dépose des anciennes gouttières</span>
                 <span className="font-semibold text-right">150 €</span>
-                <span className="text-gray-600">Fourniture gouttière alu (25 ml × 35 €)</span>
+                <span className="text-gray-600">Gouttière alu posée, crochets compris (25 ml × 35 €)</span>
                 <span className="font-semibold text-right">875 €</span>
                 <span className="text-gray-600">Descentes d&apos;eaux pluviales (2 × 3 ml)</span>
                 <span className="font-semibold text-right">160 €</span>
-                <span className="text-gray-600">Main d&apos;œuvre et crochets</span>
-                <span className="font-semibold text-right">320 €</span>
-                <span className="text-gray-600">TVA 21%</span>
-                <span className="font-semibold text-right">311 €</span>
+                <span className="text-gray-600">TVA 6% (logement de plus de 10 ans)</span>
+                <span className="font-semibold text-right">71 €</span>
                 <span className="font-bold text-gray-900 border-t border-gray-300 pt-2">Total TTC</span>
-                <span className="font-bold text-[#1A4731] border-t border-gray-300 pt-2 text-right">1.816 €</span>
+                <span className="font-bold text-[#1A4731] border-t border-gray-300 pt-2 text-right">1.256 €</span>
               </div>
             </div>
 
@@ -173,16 +171,14 @@ export default function BlogPrixRemplacementGouttieresBruxelles2026Page() {
               <div className="grid grid-cols-2 gap-2 text-sm">
                 <span className="text-gray-600">Dépose des anciennes gouttières</span>
                 <span className="font-semibold text-right">280 €</span>
-                <span className="text-gray-600">Fourniture gouttière zinc (60 ml × 60 €)</span>
-                <span className="font-semibold text-right">3.600 €</span>
+                <span className="text-gray-600">Gouttière zinc posée, supports compris (60 ml × 50 €)</span>
+                <span className="font-semibold text-right">3.000 €</span>
                 <span className="text-gray-600">Descentes d&apos;eaux pluviales (4 × 4 ml)</span>
                 <span className="font-semibold text-right">480 €</span>
-                <span className="text-gray-600">Main d&apos;œuvre et supports</span>
-                <span className="font-semibold text-right">850 €</span>
                 <span className="text-gray-600">TVA 6% (travaux bâtiment &gt; 10 ans)</span>
-                <span className="font-semibold text-right">313 €</span>
+                <span className="font-semibold text-right">226 €</span>
                 <span className="font-bold text-gray-900 border-t border-gray-300 pt-2">Total TTC</span>
-                <span className="font-bold text-[#1A4731] border-t border-gray-300 pt-2 text-right">5.523 €</span>
+                <span className="font-bold text-[#1A4731] border-t border-gray-300 pt-2 text-right">3.986 €</span>
               </div>
               <p className="text-xs text-gray-500 mt-2">* TVA à 6% applicable sur les travaux de rénovation dans les logements de plus de 10 ans en Belgique.</p>
             </div>

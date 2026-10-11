@@ -155,7 +155,7 @@ const services = [
   { icon: Droplets, title: "Nettoyage de gouttières", desc: "Feuilles, mousses et sédiments évacués, descentes pluviales comprises.", href: "/services/nettoyage-gouttieres", price: "dès 80€" },
   { icon: AlertTriangle, title: "Débouchage en urgence", desc: "Débordement pendant la pluie ? Intervention 7j/7, souvent le jour même.", href: "/services/debouchage-gouttieres", price: "dès 120€" },
   { icon: Wrench, title: "Réparation & remplacement", desc: "Gouttière fissurée, décrochée ou à remplacer : zinc, PVC, aluminium.", href: "/services/reparation-gouttieres", price: "devis gratuit" },
-  { icon: Leaf, title: "Démoussage de toiture", desc: "Brossage et traitement anti-mousse : moins de débris dans les gouttières.", href: "/services/demoussage-toiture", price: "3–6€/m²" },
+  { icon: Leaf, title: "Démoussage de toiture", desc: "Brossage et traitement anti-mousse : moins de débris dans les gouttières.", href: "/services/demoussage-toiture", price: "8–20€/m²" },
   { icon: Home, title: "Nettoyage de toiture", desc: "Feuilles, mousses et débris dégagés du toit — souvent avec le nettoyage des gouttières.", href: "/services/nettoyage-toiture", price: "sur devis" },
   { icon: ShieldCheck, title: "Protection anti-feuilles", desc: "Grilles et crapaudines pour espacer les nettoyages sous les grands arbres.", href: "/services/protection-gouttieres", price: "devis gratuit" },
   { icon: CalendarCheck, title: "Contrat d'entretien", desc: "Un passage planifié chaque année, sans avoir à y penser.", href: "/services/contrat-entretien-gouttieres", price: "sur mesure" },

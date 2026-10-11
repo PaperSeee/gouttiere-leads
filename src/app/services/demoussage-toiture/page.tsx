@@ -6,9 +6,9 @@ import ContactForm from "@/components/ContactForm";
 import ServiceGuides from "@/components/ServiceGuides";
 
 export const metadata: Metadata = {
-  title: { absolute: "Démoussage de toiture à Bruxelles — 3 à 6 €/m²" },
+  title: { absolute: "Démoussage de toiture à Bruxelles — 8 à 20 €/m²" },
   description:
-    "Démoussage de toiture à Bruxelles : brossage des tuiles et ardoises, anti-mousse biodégradable, gouttières nettoyées le même jour. 3 à 6 €/m².",
+    "Démoussage de toiture à Bruxelles : brossage des tuiles et ardoises, anti-mousse biodégradable, gouttières nettoyées le même jour. 8 à 20 €/m².",
   alternates: { canonical: "https://www.nettoyage-gouttieres-bruxelles.be/services/demoussage-toiture" },
   keywords: ["démoussage toiture Bruxelles", "mousses toiture Bruxelles", "traitement anti-mousse toiture", "démoussage toiture prix Bruxelles"],
   openGraph: {
@@ -78,7 +78,7 @@ export default function DemoussageToiture() {
     description: "Démoussage et traitement anti-mousse de toiture à Bruxelles. Prolonge la vie des tuiles et protège les gouttières des débris.",
     offers: {
       "@type": "Offer",
-      priceRange: "3-6€/m²",
+      priceRange: "8-20€/m²",
     },
   };
 
@@ -117,7 +117,7 @@ export default function DemoussageToiture() {
             <p className="text-gray-300 text-lg mb-6 leading-relaxed">
               Le démoussage de toiture à Bruxelles retire mousses et lichens des tuiles ou ardoises
               au brossage, puis applique un traitement anti-mousse biodégradable qui protège la
-              couverture 3 à 5 ans. Comptez 3 à 6 €/m², gouttières nettoyées le jour même. Devis
+              couverture 3 à 5 ans. Comptez 8 à 20 €/m² (prix observés en Belgique, relevé le 11/10/2026), gouttières nettoyées le jour même. Devis
               gratuit, prix fixé avant travaux.
             </p>
             <a href="tel:0451053370" className="inline-flex items-center gap-2 bg-[#F97316] hover:bg-orange-500 text-white font-bold px-6 py-3 rounded-xl transition-colors">
@@ -232,7 +232,7 @@ export default function DemoussageToiture() {
                 <div className="space-y-3 text-sm mb-5">
                   <div className="flex justify-between border-b border-white/20 pb-2">
                     <span className="text-gray-300">Démoussage (par m²)</span>
-                    <span className="font-bold">3–6€/m²</span>
+                    <span className="font-bold">8–20€/m²</span>
                   </div>
                   <div className="flex justify-between border-b border-white/20 pb-2">
                     <span className="text-gray-300">Traitement anti-mousse inclus</span>
