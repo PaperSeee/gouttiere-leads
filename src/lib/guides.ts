@@ -376,7 +376,7 @@ export const guides: Guide[] = [
     description:
       "Nettoyage de corniche et de chéneau en zinc à Bruxelles : signes d'un chéneau bouché, entretien par le haut, réparation du zinc et façades protégées.",
     ...PUBLISHED,
-    dateModified: "2026-10-07",
+    dateModified: "2026-10-12",
     category: "Entretien",
     readTime: "7 min",
     imageUrl: "https://images.unsplash.com/photo-1632759145351-1d592919f522?w=800&q=80",
@@ -385,11 +385,12 @@ export const guides: Guide[] = [
       "Sur beaucoup de maisons de ville bruxelloises, la gouttière ne se voit pas : c'est un chéneau en zinc posé derrière la corniche. Quand il se bouche ou se perce, c'est la corniche et la façade qui trinquent.",
     services: ["reparation-gouttieres", "nettoyage-gouttieres"],
     intro:
-      "Levez les yeux dans n'importe quelle rue de Saint-Gilles, d'Ixelles ou de Schaerbeek : la plupart des maisons de ville du XIXe et du début du XXe siècle se terminent par une corniche, souvent en bois peint, parfois ornée de consoles. Derrière elle, invisible de la rue, un chéneau en zinc recueille l'eau du toit. C'est l'élément le plus négligé de ces maisons, et l'un des plus coûteux quand il cède.",
+      "Nettoyer une corniche, c'est vider par le haut le chéneau en zinc caché derrière elle (feuilles, mousses, boues), dégager la naissance, tester l'écoulement jusqu'au pied de la descente et contrôler soudures et pente. Sur la plupart des maisons de ville bruxelloises, un passage par an suffit ; sous de grands arbres, prévoyez-en un à l'automne et un au printemps.",
     sections: [
       {
         h2: "Chéneau, corniche, gouttière : de quoi parle-t-on ?",
         paragraphs: [
+          "Levez les yeux dans n'importe quelle rue de Saint-Gilles, d'Ixelles ou de Schaerbeek : la plupart des maisons de ville du XIXe et du début du XXe siècle se terminent par une corniche, souvent en bois peint, parfois ornée de consoles. Derrière elle, invisible de la rue, un chéneau en zinc recueille l'eau du toit. C'est l'élément le plus négligé de ces maisons, et l'un des plus coûteux quand il cède.",
           "La **gouttière pendante** est accrochée sous le bord du toit par des crochets : on la voit de la rue. Le **chéneau** est un canal posé sur la corniche ou intégré à celle-ci, habillé de zinc et souvent caché par la moulure. L'eau y est recueillie puis évacuée par une **naissance** vers la descente pluviale.",
           "Le chéneau a un avantage esthétique évident, mais il cumule les points faibles : on ne le voit pas se remplir, il est souvent d'origine, et une fuite s'y écoule directement dans le bois de la corniche ou dans la maçonnerie.",
         ],

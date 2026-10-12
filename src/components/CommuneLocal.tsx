@@ -77,6 +77,10 @@ export function NeighborCommunes({ slug }: { slug: string }) {
   return (
     <section className="py-8 bg-gray-50 border-t border-gray-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <p className="text-sm text-gray-600 mb-4">
+          Cette page détaille l&apos;intervention à {c.name}. Pour le service dans toute la Région, voir notre page{" "}
+          <Link href="/" className="font-semibold text-[#1A4731] underline hover:text-[#F97316]">nettoyage de gouttières à Bruxelles</Link>.
+        </p>
         <p className="text-sm font-semibold text-gray-500 mb-3">Communes voisines {c.de}</p>
         <div className="flex flex-wrap gap-2">
           {neighbors.map((n) => (

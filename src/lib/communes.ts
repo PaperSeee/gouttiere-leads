@@ -93,7 +93,7 @@ export const communes: Commune[] = [
         a: "Deux passages valent mieux qu'un : fin novembre, quand la plupart des arbres sont dénudés, puis en février-mars pour les feuilles de hêtres qui tombent tardivement. Un nettoyage unique en octobre est vite annulé par les chutes suivantes.",
       },
       {
-        q: "La vallée de la Woluwe a-t-elle un effet sur la toiture ?",
+        q: "Démoussage de toiture à Auderghem : la vallée de la Woluwe joue-t-elle un rôle ?",
         a: "Oui, indirectement : l'humidité plus élevée en fond de vallée favorise mousses et algues, surtout sur les pans de toit orientés au nord ou à l'ombre des arbres. Ces mousses finissent dans la gouttière. Un démoussage suivi d'un traitement limite ces apports pendant plusieurs années.",
       },
       {
@@ -227,6 +227,10 @@ export const communes: Commune[] = [
       "Dans les rues arborées proches du parc Jean-Félix Hap et du Cinquantenaire, les arbres d'alignement remplissent les chéneaux en quelques semaines d'automne : un passage fin novembre est plus efficace qu'en octobre. Sur les toits plats des immeubles, faites vérifier le trop-plein en même temps que l'avaloir : s'il manque ou s'il est bouché, l'eau n'a plus aucune issue pendant un orage.",
     ],
     faqs: [
+      {
+        q: "Démoussage de toiture à Etterbeek : quand faut-il y penser ?",
+        a: "Quand un pan de toit verdit ou que des touffes de mousse apparaissent au bord de la gouttière. Dans les rues bordées d'arbres, près du parc Jean-Félix Hap ou du Cinquantenaire, les versants à l'ombre restent humides plus longtemps et se couvrent plus vite. Le démoussage se fait au brossage doux, sans haute pression, et se combine facilement avec le nettoyage des gouttières.",
+      },
       {
         q: "Maison divisée en appartements à Etterbeek : qui commande le nettoyage ?",
         a: "Si la gouttière est une partie commune, c'est le syndic (ou, sans syndic, l'ensemble des copropriétaires) qui décide et répartit la facture selon les quotités de l'acte de base. Un devis écrit détaillé permet de faire voter l'entretien en assemblée générale.",
@@ -623,6 +627,10 @@ export const communes: Commune[] = [
     ],
     faqs: [
       {
+        q: "Démoussage de toiture à Saint-Josse : est-ce utile sur un immeuble ?",
+        a: "Sur les toitures en pente des maisons de rapport, oui quand un versant verdit : les mousses retiennent l'humidité et finissent dans la gouttière. Sur les toits plats, le plus utile est de dégager les dépôts autour des avaloirs, là où l'eau stagne. Le démoussage se fait au brossage doux, sans haute pression, et peut être combiné au nettoyage des gouttières lors du même passage.",
+      },
+      {
         q: "Faut-il une autorisation pour une nacelle à Saint-Josse ?",
         a: "Oui, dès qu'une nacelle ou un échafaudage occupe la voirie ou le trottoir, une autorisation d'occupation de la voie publique doit être demandée à la commune de Saint-Josse-ten-Noode. Comptez quelques jours de délai et prévoyez-le dans le planning.",
       },
@@ -755,6 +763,10 @@ export const communes: Commune[] = [
       "Autour des étangs de Boitsfort et en lisière de la Forêt de Soignes, les hêtres gardent une partie de leurs feuilles tout l'hiver : un passage en fin d'hiver complète celui d'automne. Près de la place Keym et de la gare de Watermael, le bâti est plus serré et les arbres moins présents : un seul passage annuel suffit souvent.",
     ],
     faqs: [
+      {
+        q: "Démoussage de toiture à Watermael-Boitsfort : pourquoi les toits verdissent-ils vite ?",
+        a: "Parce que beaucoup de toitures y sont à l'ombre des hêtres de la Forêt de Soignes ou des arbres des cités-jardins : elles sèchent lentement après la pluie, ce qui favorise mousses et algues, qui finissent ensuite dans les gouttières. Un démoussage au brossage doux, sans haute pression, se programme utilement avec le nettoyage d'automne.",
+      },
       {
         q: "Nous habitons au Logis ou à Floréal : peut-on changer la couleur des gouttières ?",
         a: "Pas librement. Les cités-jardins du Logis et de Floréal sont protégées, et l'aspect des façades — gouttières comprises — y est encadré. Avant tout remplacement, renseignez-vous auprès du service de l'urbanisme de la commune ; pour un simple nettoyage, aucune démarche n'est nécessaire.",
