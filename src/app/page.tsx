@@ -15,6 +15,7 @@ import {
   ThumbsUp,
   ShieldCheck,
   CalendarCheck,
+  Landmark,
 } from "lucide-react";
 import ContactForm from "@/components/ContactForm";
 import TrustNote from "@/components/TrustNote";
@@ -156,6 +157,7 @@ const services = [
   { icon: AlertTriangle, title: "Débouchage en urgence", desc: "Débordement pendant la pluie ? Descentes débouchées à haute pression, test d'écoulement inclus.", href: "/services/debouchage-gouttieres", price: "dès 120€" },
   { icon: Wrench, title: "Réparation & remplacement", desc: "Gouttière fissurée, décrochée ou à remplacer : zinc, PVC, aluminium.", href: "/services/reparation-gouttieres", price: "devis gratuit" },
   { icon: Leaf, title: "Démoussage de toiture", desc: "Brossage et traitement anti-mousse : moins de débris dans les gouttières.", href: "/services/demoussage-toiture", price: "8–20€/m²" },
+  { icon: Landmark, title: "Nettoyage de corniche", desc: "Chéneau en zinc caché derrière la corniche : vidé par le haut, descente débouchée.", href: "/services/nettoyage-corniche", price: "dès 80€" },
   { icon: Home, title: "Nettoyage de toiture", desc: "Feuilles, mousses et débris dégagés du toit — souvent avec le nettoyage des gouttières.", href: "/services/nettoyage-toiture", price: "sur devis" },
   { icon: ShieldCheck, title: "Protection anti-feuilles", desc: "Grilles et crapaudines pour espacer les nettoyages sous les grands arbres.", href: "/services/protection-gouttieres", price: "devis gratuit" },
   { icon: CalendarCheck, title: "Contrat d'entretien", desc: "Un passage planifié chaque année, sans avoir à y penser.", href: "/services/contrat-entretien-gouttieres", price: "sur mesure" },
@@ -411,8 +413,10 @@ export default function HomePage() {
             Voir toutes nos FAQ <ArrowRight size={16} />
           </Link>
           <p className="mt-4 text-sm text-gray-600">
-            Maison avec corniche ? Lisez notre guide sur le{" "}
-            <Link href="/blog/chenau-corniche-entretien" className="font-semibold text-[#1F7A55] underline hover:text-[#F97316]">nettoyage de corniche et de chéneau</Link>
+            Maison avec corniche ? Voyez notre page{" "}
+            <Link href="/services/nettoyage-corniche" className="font-semibold text-[#1F7A55] underline hover:text-[#F97316]">nettoyage de corniche à Bruxelles</Link>
+            {" "}et le guide{" "}
+            <Link href="/blog/chenau-corniche-entretien" className="font-semibold text-[#1F7A55] underline hover:text-[#F97316]">chéneau et corniche</Link>
             , ou consultez les{" "}
             <Link href="/tarifs" className="font-semibold text-[#1F7A55] underline hover:text-[#F97316]">prix du nettoyage de gouttières</Link>.
           </p>

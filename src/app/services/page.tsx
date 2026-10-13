@@ -15,6 +15,7 @@ const services = [
   { href: "/services/debouchage-gouttieres", title: "Débouchage de gouttières et descentes", price: "120 – 200 €", desc: "Gouttière qui déborde ou descente bouchée : débouchage haute pression, test d'écoulement inclus." },
   { href: "/services/reparation-gouttieres", title: "Réparation et remplacement", price: "joint dès 40 €", desc: "Joints, soudures, crochets, tronçons en PVC, aluminium ou zinc, chéneaux de corniche." },
   { href: "/services/demoussage-toiture", title: "Démoussage de toiture", price: "8 – 20 €/m²", desc: "Brossage et traitement anti-mousse : moins de débris dans les gouttières." },
+  { href: "/services/nettoyage-corniche", title: "Nettoyage de corniche", price: "dès 80 €", desc: "Chéneau en zinc vidé par le haut, descente débouchée, pente et soudures contrôlées." },
   { href: "/services/nettoyage-toiture", title: "Nettoyage de toiture", price: "sur devis", desc: "Dégagement des feuilles, mousses et débris des tuiles et ardoises, gouttières nettoyées le même jour." },
   { href: "/services/protection-gouttieres", title: "Protection anti-feuilles", price: "sur devis", desc: "Grilles et crapaudines pour espacer les nettoyages sous les grands arbres." },
   { href: "/services/contrat-entretien-gouttieres", title: "Contrat d'entretien annuel", price: "sur devis", desc: "Passages planifiés chaque année, idéal pour les copropriétés et les maisons sous les arbres." },

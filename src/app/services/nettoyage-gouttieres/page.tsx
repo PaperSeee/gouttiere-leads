@@ -261,6 +261,7 @@ export default function NettoyageGouttieres() {
                   <li><Link href="/services/debouchage-gouttieres" className="text-sm text-gray-700 hover:text-[#F97316]">→ Débouchage urgence</Link></li>
                   <li><Link href="/services/reparation-gouttieres" className="text-sm text-gray-700 hover:text-[#F97316]">→ Réparation gouttières</Link></li>
                   <li><Link href="/services/demoussage-toiture" className="text-sm text-gray-700 hover:text-[#F97316]">→ Démoussage toiture</Link></li>
+                  <li><Link href="/services/nettoyage-corniche" className="text-sm text-gray-700 hover:text-[#F97316]">→ Nettoyage de corniche</Link></li>
                   <li><Link href="/services/nettoyage-toiture" className="text-sm text-gray-700 hover:text-[#F97316]">→ Nettoyage toiture</Link></li>
                 </ul>
               </div>

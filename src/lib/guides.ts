@@ -371,12 +371,12 @@ export const guides: Guide[] = [
   },
   {
     slug: "chenau-corniche-entretien",
-    title: "Nettoyage de corniche et chéneau",
+    title: "Chéneau et corniche : signes, entretien et réparation",
     h1: "Chéneau et corniche : entretenir la gouttière cachée des maisons bruxelloises",
     description:
-      "Nettoyage de corniche et de chéneau en zinc à Bruxelles : signes d'un chéneau bouché, entretien par le haut, réparation du zinc et façades protégées.",
+      "Chéneau caché derrière la corniche : les signes qu'il est bouché ou percé, comment il s'entretient, quand réparer le zinc et quand un permis s'impose à Bruxelles.",
     ...PUBLISHED,
-    dateModified: "2026-10-12",
+    dateModified: "2026-10-13",
     category: "Entretien",
     readTime: "7 min",
     imageUrl: "https://images.unsplash.com/photo-1632759145351-1d592919f522?w=800&q=80",
@@ -421,7 +421,7 @@ export const guides: Guide[] = [
           "un coup d'œil à l'état du bois de la corniche et des ardoises ou tuiles de rive.",
         ],
         after: [
-          "Une fois par an suffit pour la plupart des maisons ; sous de grands arbres, prévoyez un passage à l'automne et un au printemps. Notre [nettoyage de gouttières](/services/nettoyage-gouttieres) inclut chéneaux et descentes.",
+          "Une fois par an suffit pour la plupart des maisons ; sous de grands arbres, prévoyez un passage à l'automne et un au printemps. Prix, accès et étapes sont détaillés sur notre page [nettoyage de corniche à Bruxelles](/services/nettoyage-corniche) ; le [nettoyage de gouttières](/services/nettoyage-gouttieres) inclut lui aussi chéneaux et descentes.",
         ],
       },
       {

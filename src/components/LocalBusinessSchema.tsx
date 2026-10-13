@@ -55,6 +55,7 @@ export default function LocalBusinessSchema() {
       name: "Services nettoyage gouttières Bruxelles",
       itemListElement: [
         { "@type": "Offer", itemOffered: { "@type": "Service", name: "Nettoyage gouttières", url: `${DOMAIN}/services/nettoyage-gouttieres` } },
+        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Nettoyage de corniche", url: `${DOMAIN}/services/nettoyage-corniche` } },
         { "@type": "Offer", itemOffered: { "@type": "Service", name: "Débouchage gouttières", url: `${DOMAIN}/services/debouchage-gouttieres` } },
         { "@type": "Offer", itemOffered: { "@type": "Service", name: "Réparation gouttières", url: `${DOMAIN}/services/reparation-gouttieres` } },
         { "@type": "Offer", itemOffered: { "@type": "Service", name: "Démoussage toiture", url: `${DOMAIN}/services/demoussage-toiture` } },
