@@ -39,7 +39,7 @@ export default function BlogAutomneGouttieresBruxellesPage() {
         author: EDITOR_REF,
         publisher: PUBLISHER_REF,
         datePublished: "2026-05-20",
-        dateModified: "2026-05-20",
+        dateModified: "2026-10-13",
         image: "https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=1200&q=80",
         mainEntityOfPage: { "@type": "WebPage", "@id": `${DOMAIN}/blog/preparer-gouttieres-automne-bruxelles` },
         inLanguage: "fr-BE",

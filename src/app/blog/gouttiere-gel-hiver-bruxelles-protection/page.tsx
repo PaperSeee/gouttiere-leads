@@ -41,7 +41,7 @@ export default function BlogGouttiereGelHiver() {
         author: EDITOR_REF,
         publisher: PUBLISHER_REF,
         datePublished: "2026-06-10",
-        dateModified: "2026-10-04",
+        dateModified: "2026-10-13",
         image: "https://images.unsplash.com/photo-1483921020237-2ff51e8e4b22?w=1200&q=80",
         mainEntityOfPage: { "@type": "WebPage", "@id": `${DOMAIN}/blog/gouttiere-gel-hiver-bruxelles-protection` },
         inLanguage: "fr-BE",

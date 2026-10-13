@@ -40,7 +40,7 @@ export default function BlogDebordementPage() {
         author: EDITOR_REF,
         publisher: PUBLISHER_REF,
         datePublished: "2026-05-26",
-        dateModified: "2026-10-11",
+        dateModified: "2026-10-13",
         image: "https://images.unsplash.com/photo-1516455590571-18256e5bb9ff?w=1200&q=80",
         mainEntityOfPage: { "@type": "WebPage", "@id": `${DOMAIN}/blog/gouttiere-qui-deborde-causes-solutions` },
         inLanguage: "fr-BE",

@@ -41,7 +41,7 @@ export default function BlogInfiltrationEauFacadeGouttieres() {
         author: EDITOR_REF,
         publisher: PUBLISHER_REF,
         datePublished: "2026-06-02",
-        dateModified: "2026-10-11",
+        dateModified: "2026-10-13",
         image: "https://images.unsplash.com/photo-1516455590571-18256e5bb9ff?w=1200&q=80",
         mainEntityOfPage: { "@type": "WebPage", "@id": `${DOMAIN}/blog/infiltration-eau-facade-gouttieres` },
         inLanguage: "fr-BE",

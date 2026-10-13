@@ -291,7 +291,7 @@ export const guides: Guide[] = [
     description:
       "Gouttières en copropriété à Bruxelles : partie commune ou privative, rôle du syndic et de l'AG, répartition des frais et devis à présenter.",
     ...PUBLISHED,
-    dateModified: "2026-10-04",
+    dateModified: "2026-10-13",
     category: "Conseils",
     readTime: "7 min",
     imageUrl: "https://images.unsplash.com/photo-1517490232338-06b912a786b5?w=800&q=80",

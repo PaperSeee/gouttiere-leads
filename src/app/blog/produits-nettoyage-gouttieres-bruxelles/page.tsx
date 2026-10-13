@@ -42,7 +42,7 @@ export default function BlogProduitsNettoyageGouttieresBruxellesPage() {
         author: EDITOR_REF,
         publisher: PUBLISHER_REF,
         datePublished: "2026-06-05",
-        dateModified: "2026-06-05",
+        dateModified: "2026-10-13",
         image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200&q=80",
         mainEntityOfPage: { "@type": "WebPage", "@id": `${DOMAIN}/blog/${SLUG}` },
         inLanguage: "fr-BE",

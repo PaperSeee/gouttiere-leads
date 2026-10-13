@@ -41,7 +41,7 @@ export default function BlogDegatDesEauxGouttiereAssurance() {
         author: EDITOR_REF,
         publisher: PUBLISHER_REF,
         datePublished: "2026-06-14",
-        dateModified: "2026-10-04",
+        dateModified: "2026-10-13",
         image: "https://images.unsplash.com/photo-1517490232338-06b912a786b5?w=1200&q=80",
         mainEntityOfPage: { "@type": "WebPage", "@id": `${DOMAIN}/blog/degat-des-eaux-gouttiere-assurance-bruxelles` },
         inLanguage: "fr-BE",

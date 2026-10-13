@@ -41,7 +41,7 @@ export default function BlogEntretienGouttieresMomentPage() {
         author: EDITOR_REF,
         publisher: PUBLISHER_REF,
         datePublished: "2026-05-29",
-        dateModified: "2026-05-29",
+        dateModified: "2026-10-13",
         image: "https://images.unsplash.com/photo-1504510533704-35680f356dfd?w=1200&q=80",
         mainEntityOfPage: { "@type": "WebPage", "@id": `${DOMAIN}/blog/entretien-gouttieres-quand-faire` },
         inLanguage: "fr-BE",

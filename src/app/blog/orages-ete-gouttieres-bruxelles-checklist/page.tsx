@@ -41,7 +41,7 @@ export default function BlogOragesEteGouttieres() {
         author: EDITOR_REF,
         publisher: PUBLISHER_REF,
         datePublished: "2026-07-03",
-        dateModified: "2026-10-04",
+        dateModified: "2026-10-13",
         image: "https://images.unsplash.com/photo-1500674425229-f692875b0ab7?w=1200&q=80",
         mainEntityOfPage: { "@type": "WebPage", "@id": `${DOMAIN}/blog/orages-ete-gouttieres-bruxelles-checklist` },
         inLanguage: "fr-BE",

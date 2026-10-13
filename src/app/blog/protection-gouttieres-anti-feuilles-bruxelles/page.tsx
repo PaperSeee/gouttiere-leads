@@ -41,7 +41,7 @@ export default function BlogProtectionGouttieresAntiFeuilles() {
         author: EDITOR_REF,
         publisher: PUBLISHER_REF,
         datePublished: "2026-06-12",
-        dateModified: "2026-10-11",
+        dateModified: "2026-10-13",
         image: "https://images.unsplash.com/photo-1632759145351-1d592919f522?w=1200&q=80",
         mainEntityOfPage: { "@type": "WebPage", "@id": `${DOMAIN}/blog/protection-gouttieres-anti-feuilles-bruxelles` },
         inLanguage: "fr-BE",
