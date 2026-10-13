@@ -211,11 +211,11 @@ export default function NettoyageCorniche() {
                     </tr>
                   </thead>
                   <tbody className="divide-y divide-gray-100 text-gray-600">
-                    <tr><td className="p-3">Maison 2 façades, accès normal</td><td className="p-3 font-semibold">80 – 100 €</td></tr>
-                    <tr><td className="p-3">Maison mitoyenne, accès difficile</td><td className="p-3 font-semibold">90 – 130 €</td></tr>
-                    <tr><td className="p-3">Maison 3–4 façades</td><td className="p-3 font-semibold">100 – 150 €</td></tr>
-                    <tr><td className="p-3">Réparation d&apos;un joint ou d&apos;un collet</td><td className="p-3 font-semibold">40 – 80 €</td></tr>
-                    <tr><td className="p-3">Chéneau en zinc à remplacer (posé)</td><td className="p-3 font-semibold">35 – 55 € / ml</td></tr>
+                    <tr><td className="p-3">Maison 2 façades, accès normal</td><td className="p-3 font-semibold">80 – 100€</td></tr>
+                    <tr><td className="p-3">Maison mitoyenne, accès difficile</td><td className="p-3 font-semibold">90 – 130€</td></tr>
+                    <tr><td className="p-3">Maison 3–4 façades</td><td className="p-3 font-semibold">100 – 150€</td></tr>
+                    <tr><td className="p-3">Réparation d&apos;un joint ou d&apos;un collet</td><td className="p-3 font-semibold">40 – 80€</td></tr>
+                    <tr><td className="p-3">Chéneau en zinc à remplacer (posé)</td><td className="p-3 font-semibold">35 – 55€/ml</td></tr>
                   </tbody>
                 </table>
               </div>
