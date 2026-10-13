@@ -67,7 +67,7 @@ const homeFaqs = [
   {
     question: "Combien coûte le nettoyage de gouttières à Bruxelles ?",
     answer:
-      "Le prix d'un nettoyage de gouttières à Bruxelles varie entre 80 et 150€ selon la longueur des gouttières, la hauteur du bâtiment et l'accessibilité. Nous établissons toujours un devis gratuit avant toute intervention. Le débouchage d'urgence est facturé entre 120 et 200€.",
+      "Un nettoyage de gouttières à Bruxelles coûte en général 80 à 150 € pour une maison, descentes pluviales comprises : 80 à 100 € pour une maison deux façades, 100 à 150 € pour trois ou quatre façades. Le prix exact, fixé selon la longueur, la hauteur et l'accès, figure dans un devis gratuit avant l'intervention. Un débouchage urgent coûte 120 à 200 €.",
   },
   {
     question: "À quelle fréquence faut-il nettoyer ses gouttières ?",

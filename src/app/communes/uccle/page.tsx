@@ -5,7 +5,7 @@ import { Phone, ArrowRight, CheckCircle, MapPin, Leaf, Droplets, Wrench, AlertTr
 import Breadcrumb from "@/components/Breadcrumb"
 import ContactForm from "@/components/ContactForm"
 import TrustNote from "@/components/TrustNote"
-import { CommuneConseils, CommuneDetail, NeighborCommunes } from "@/components/CommuneLocal"
+import { CommuneConseils, CommuneDetail, CommuneQuickLinks, NeighborCommunes } from "@/components/CommuneLocal"
 import { localFaqs, localFaqSchema, getCommune } from "@/lib/communes"
 
 export const metadata: Metadata = {
@@ -75,6 +75,7 @@ export default function UcclePage() {
                 </a>
               </div>
               <TrustNote className="mt-5" />
+              <CommuneQuickLinks slug="uccle" />
             </div>
             {/* Panneau stats */}
             <div className="lg:w-72 bg-[#1A4731] text-white rounded-2xl p-6 flex-shrink-0 w-full">

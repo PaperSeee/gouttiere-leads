@@ -41,6 +41,20 @@ export function CommuneConseils({ slug }: { slug: string }) {
   );
 }
 
+/** Liens utiles sous les boutons d'appel : prix détaillés et contenu de la prestation. */
+export function CommuneQuickLinks({ slug }: { slug: string }) {
+  const c = getCommune(slug);
+  const l = "font-semibold text-[#1A4731] underline decoration-[#F97316]/60 hover:text-[#F97316]";
+  return (
+    <p className="mt-3 text-sm text-gray-600">
+      Avant de demander un devis à {c.name}, voyez les{" "}
+      <Link href="/tarifs" className={l}>prix du nettoyage de gouttières</Link>, ce que comprend un{" "}
+      <Link href="/services/nettoyage-gouttieres" className={l}>nettoyage complet</Link> et, pour les façades à corniche, le{" "}
+      <Link href="/services/nettoyage-corniche" className={l}>nettoyage de corniche</Link>.
+    </p>
+  );
+}
+
 /** Section longue propre à une commune : question locale + paragraphes, avec liens internes contextuels. */
 export function CommuneDetail({ slug }: { slug: string }) {
   const d = getCommune(slug).detail;
