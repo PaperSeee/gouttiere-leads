@@ -11,12 +11,12 @@ import { localFaqs, localFaqSchema, getCommune } from "@/lib/communes"
 export const metadata: Metadata = {
   title: { absolute: "Nettoyage de gouttières à Koekelberg dès 80 €" },
   description:
-    "Nettoyage de gouttières à Koekelberg dès 80 € : maisons mitoyennes étroites, zinc d'époque, parc Élisabeth. Devis gratuit, intervention sous 48h.",
+    "Nettoyage de gouttières à Koekelberg dès 80 € : maisons mitoyennes étroites, zinc d'époque, parc Élisabeth. Devis gratuit, prix fixé à l'avance.",
   alternates: { canonical: "https://www.nettoyage-gouttieres-bruxelles.be/communes/koekelberg" },
   keywords: ["nettoyage gouttières Koekelberg", "débouchage gouttières Koekelberg", "gouttières bouchées Koekelberg", "prix nettoyage gouttières Koekelberg"],
   openGraph: {
     title: "Nettoyage Gouttières Koekelberg — Devis Gratuit",
-    description: "Expert nettoyage gouttières à Koekelberg. Débouchage urgent, réparation, démoussage. Devis gratuit, intervention rapide.",
+    description: "Nettoyage de gouttières à Koekelberg : chéneaux et descentes vidés, écoulement testé. Devis gratuit, prix fixé à l'avance.",
     url: "https://www.nettoyage-gouttieres-bruxelles.be/communes/koekelberg",
     type: "website",
     images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "Nettoyage gouttières Koekelberg" }],
@@ -30,8 +30,8 @@ export default function KoekelbergPage() {
     mainEntity: [
       { "@type": "Question", name: "Le zinc de nos maisons des années 20 mérite-t-il encore d'être réparé ?", acceptedAnswer: { "@type": "Answer", text: "Un zinc des années 20 bien conservé peut encore durer 10 à 15 ans. Si les soudures tiennent et que les profils sont rectilignes, une réparation ponctuelle des zones défaillantes est économiquement pertinente. On fait un diagnostic gratuit pour évaluer la situation." } },
       { "@type": "Question", name: "Comment accédez-vous aux gouttières arrière à Koekelberg ?", acceptedAnswer: { "@type": "Answer", text: "Généralement par la cour intérieure avec des échelles légères ou des perches télescopiques. Dans les cours particulièrement étroites, on utilise exclusivement des perches depuis le sol pour ne pas risquer d'abîmer les façades voisines." } },
-      { "@type": "Question", name: "Faut-il prévenir les voisins pour l'accès aux cours partagées ?", acceptedAnswer: { "@type": "Answer", text: "C'est recommandé. Dans les maisons mitoyennes de Koekelberg avec cours partagées, on vous conseille de prévenir les voisins au moins 24h à l'avance. Si plusieurs voisins souhaitent un nettoyage le même jour, on propose un tarif groupé avantageux." } },
-      { "@type": "Question", name: "Intervenez-vous autour de la basilique et de la place Simonis ?", acceptedAnswer: { "@type": "Answer", text: "Oui, dans toutes les rues de Koekelberg. La commune est petite et bien connue de notre équipe. Délai d'intervention habituel : 48 à 72 heures après contact." } },
+      { "@type": "Question", name: "Faut-il prévenir les voisins pour l'accès aux cours partagées ?", acceptedAnswer: { "@type": "Answer", text: "C'est recommandé. Dans les maisons mitoyennes de Koekelberg avec cours partagées, on vous conseille de prévenir les voisins au moins 24h à l'avance. Si plusieurs voisins souhaitent un nettoyage le même jour, demandez un devis groupé." } },
+      { "@type": "Question", name: "Intervenez-vous autour de la basilique et de la place Simonis ?", acceptedAnswer: { "@type": "Answer", text: "Oui, dans toutes les rues de Koekelberg. Le délai d'intervention vous est annoncé lors du premier appel." } },
       ...localFaqSchema("koekelberg"),
     ],
   }
@@ -138,7 +138,7 @@ export default function KoekelbergPage() {
           <div className="divide-y divide-gray-100 border border-gray-100 rounded-2xl overflow-hidden">
             {[
               { icon: <Droplets size={22} className="text-[#1A4731]" />, href: "/services/nettoyage-gouttieres", title: "Nettoyage maisons mitoyennes", desc: "Nettoyage façades avant et arrière. Accès cours étroites avec matériel adapté. On nettoie les chenaux et teste chaque descente.", price: "dès 80€", tag: null },
-              { icon: <AlertTriangle size={22} className="text-red-500" />, href: "/services/debouchage-gouttieres", title: "Débouchage urgence 7j/7", desc: "Débordement en cours ? On intervient 7j/7 à Koekelberg pour stopper rapidement les dégâts sur vos façades et votre intérieur.", price: "dès 120€", tag: "7j/7" },
+              { icon: <AlertTriangle size={22} className="text-red-500" />, href: "/services/debouchage-gouttieres", title: "Débouchage en urgence", desc: "Débordement en cours ? Débouchage à Koekelberg pour stopper les dégâts sur vos façades et votre intérieur.", price: "dès 120€", tag: "Urgence" },
               { icon: <Wrench size={22} className="text-blue-600" />, href: "/services/reparation-gouttieres", title: "Réparation zinc historique", desc: "Soudure et réparation des gouttières en zinc d'époque. Si l'état est trop dégradé, remplacement par zinc neuf ou aluminium assorti.", price: "devis gratuit", tag: null },
               { icon: <Leaf size={22} className="text-yellow-600" />, href: "/services/demoussage-toiture", title: "Démoussage toitures ardoises", desc: "Traitement préventif anti-mousse sur les toits en ardoises des maisons de Koekelberg. Prolonge la durée de vie de votre couverture.", price: "devis gratuit", tag: null },
             ].map((s) => (
@@ -168,8 +168,8 @@ export default function KoekelbergPage() {
             {[
               { q: "Le zinc de nos maisons des années 20 mérite-t-il encore d'être réparé ?", a: "Un zinc des années 20 bien conservé peut encore durer 10 à 15 ans. Si les soudures tiennent et que les profils sont rectilignes, une réparation ponctuelle des zones défaillantes est économiquement pertinente. On fait un diagnostic gratuit pour évaluer la situation." },
               { q: "Comment accédez-vous aux gouttières arrière à Koekelberg ?", a: "Généralement par la cour intérieure avec des échelles légères ou des perches télescopiques. Dans les cours particulièrement étroites, on utilise exclusivement des perches depuis le sol pour ne pas risquer d'abîmer les façades voisines." },
-              { q: "Faut-il prévenir les voisins pour l'accès aux cours partagées ?", a: "C'est recommandé. Dans les maisons mitoyennes de Koekelberg avec cours partagées, on vous conseille de prévenir les voisins au moins 24h à l'avance. Si plusieurs voisins souhaitent un nettoyage le même jour, on propose un tarif groupé avantageux." },
-              { q: "Intervenez-vous autour de la basilique et de la place Simonis ?", a: "Oui, dans toutes les rues de Koekelberg. La commune est petite et bien connue de notre équipe. Délai d'intervention habituel : 48 à 72 heures après contact." },
+              { q: "Faut-il prévenir les voisins pour l'accès aux cours partagées ?", a: "C'est recommandé. Dans les maisons mitoyennes de Koekelberg avec cours partagées, on vous conseille de prévenir les voisins au moins 24h à l'avance. Si plusieurs voisins souhaitent un nettoyage le même jour, demandez un devis groupé." },
+              { q: "Intervenez-vous autour de la basilique et de la place Simonis ?", a: "Oui, dans toutes les rues de Koekelberg. Le délai d'intervention vous est annoncé lors du premier appel." },
               ...localFaqs("koekelberg"),
             ].map((faq, i) => (
               <div key={i} className="bg-white rounded-xl border border-gray-100 p-6">
@@ -192,7 +192,7 @@ export default function KoekelbergPage() {
         <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8">
             <h2 className="text-2xl font-bold text-gray-900 mb-2">Devis gratuit — Koekelberg</h2>
-            <p className="text-gray-500 text-sm">Réponse sous 2h · ou appelez le <a href="tel:0451053370" className="font-bold text-[#1A4731] hover:text-[#F97316]">0451 05 33 70</a></p>
+            <p className="text-gray-500 text-sm">Devis gratuit et sans engagement · ou appelez le <a href="tel:0451053370" className="font-bold text-[#1A4731] hover:text-[#F97316]">0451 05 33 70</a></p>
           </div>
           <div className="bg-gray-50 border border-gray-200 rounded-2xl p-6 sm:p-8"><ContactForm defaultCommune="Koekelberg" /></div>
         </div>

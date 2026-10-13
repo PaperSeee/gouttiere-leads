@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   alternates: { canonical: `${SITE_URL}/a-propos` },
 };
 
-const UPDATED = "2026-10-11";
+const UPDATED = "2026-10-13";
 
 const steps = [
   {
@@ -30,7 +30,7 @@ const steps = [
 
 const criteria = [
   "Un numéro d'entreprise actif à la Banque-Carrefour des Entreprises, vérifiable gratuitement en ligne",
-  "Une assurance en responsabilité civile professionnelle pour le travail en hauteur",
+  "Une assurance en responsabilité civile professionnelle pour le travail en hauteur (attestation à demander avec le devis)",
   "Un prix annoncé avant l'intervention, sur la base d'un devis",
   "Une intervention possible dans les 19 communes de la Région bruxelloise",
 ];

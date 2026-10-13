@@ -195,7 +195,7 @@ export default function TypesGouttieres() {
           <div className="mt-12 bg-[#1A4731] text-white rounded-2xl p-8">
             <h2 className="text-xl font-bold mb-3">Besoin d&apos;un conseil personnalisé ?</h2>
             <p className="text-gray-300 mb-4">
-              Nos techniciens évaluent gratuitement l&apos;état de vos gouttières actuelles et vous recommandent
+              Le professionnel évalue gratuitement l&apos;état de vos gouttières actuelles et vous recommandent
               le matériau le plus adapté à votre situation. Chaque habitation est différente : type de toiture,
               environnement, budget et esthétique souhaitée.
             </p>

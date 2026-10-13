@@ -9,20 +9,20 @@ import TrustNote from "@/components/TrustNote";
 export const metadata: Metadata = {
   title: { absolute: "Contrat d'entretien de gouttières à Bruxelles" },
   description:
-    "Contrat d'entretien annuel pour vos gouttières à Bruxelles : passages programmés en octobre et mars, -10% sur le tarif standard, priorité de planning.",
+    "Contrat d'entretien annuel de gouttières à Bruxelles : un passage programmé en octobre et, si besoin, un second en mars. Conditions fixées dans le devis gratuit.",
   alternates: { canonical: "https://www.nettoyage-gouttieres-bruxelles.be/services/contrat-entretien-gouttieres" },
   keywords: ["contrat entretien gouttières Bruxelles", "abonnement nettoyage gouttières", "entretien annuel gouttières prix", "forfait entretien gouttières Bruxelles"],
   openGraph: {
     type: "website",
     title: "Contrat d'Entretien Annuel Gouttières Bruxelles",
-    description: "Passages programmés en octobre et mars, -10% sur le tarif standard, priorité de planning. Devis gratuit.",
+    description: "Passages programmés en octobre et, si besoin, en mars. Conditions fixées dans le devis gratuit.",
     url: "https://www.nettoyage-gouttieres-bruxelles.be/services/contrat-entretien-gouttieres",
     images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "Contrat d'entretien annuel gouttières Bruxelles" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Contrat d'Entretien Annuel Gouttières Bruxelles",
-    description: "Passages programmés en octobre et mars, -10% sur le tarif standard. Devis gratuit.",
+    description: "Passages programmés en octobre et, si besoin, en mars. Devis gratuit.",
     images: ["/opengraph-image"],
   },
 };
@@ -58,7 +58,7 @@ export default function ContratEntretienGouttieres() {
       "@id": "https://www.nettoyage-gouttieres-bruxelles.be/#business",
     },
     areaServed: "Bruxelles",
-    description: "Contrat d'entretien annuel des gouttières à Bruxelles : passages programmés, remise de 10% sur le tarif standard, priorité de planning en haute saison.",
+    description: "Contrat d'entretien annuel des gouttières à Bruxelles : passages programmés en octobre et, si besoin, en mars, conditions fixées dans le devis.",
     offers: {
       "@type": "Offer",
       priceRange: "sur devis",
@@ -128,10 +128,10 @@ export default function ContratEntretienGouttieres() {
                 {[
                   "Passage programmé en octobre (avant l'hiver)",
                   "Passage optionnel en mars (avant le printemps)",
-                  "Remise de 10% sur le tarif standard",
-                  "Priorité de planning en haute saison",
+                  "Prix par passage fixé dans le devis",
+                  "Dates de passage convenues à l'avance",
                   "Nettoyage gouttières + descentes pluviales",
-                  "Rapport d'état à chaque passage",
+                  "État des gouttières constaté à chaque passage",
                 ].map((item) => (
                   <div key={item} className="flex items-start gap-2 text-gray-600 text-sm">
                     <CheckCircle size={16} className="text-[#1A4731] flex-shrink-0 mt-0.5" />
@@ -169,7 +169,7 @@ export default function ContratEntretienGouttieres() {
                 <h3 className="font-bold text-lg mb-4">Devis contrat d&apos;entretien</h3>
                 <p className="text-gray-300 text-sm mb-4">
                   Le tarif du contrat dépend de la fréquence choisie et se calcule sur la base de votre
-                  tarif de nettoyage habituel, avec 10% de remise. Devis gratuit, sans engagement.
+                  tarif de nettoyage habituel ; ses conditions sont fixées dans le devis. Devis gratuit, sans engagement.
                 </p>
                 <a href="tel:0451053370" className="flex items-center justify-center gap-2 bg-[#F97316] text-white font-bold px-4 py-3 rounded-lg w-full hover:bg-orange-500 transition-colors">
                   <Phone size={16} /> 0451 05 33 70
@@ -180,9 +180,9 @@ export default function ContratEntretienGouttieres() {
                 <h3 className="font-bold text-gray-900 mb-4">Avantages du contrat</h3>
                 <div className="space-y-3">
                   {[
-                    { icon: <Percent size={16} className="text-[#F97316]" />, text: "-10% sur le tarif standard" },
-                    { icon: <Clock size={16} className="text-[#F97316]" />, text: "Priorité de planning" },
-                    { icon: <Shield size={16} className="text-[#F97316]" />, text: "Assurance RC Pro" },
+                    { icon: <Percent size={16} className="text-[#F97316]" />, text: "Prix fixé dans le devis" },
+                    { icon: <Clock size={16} className="text-[#F97316]" />, text: "Dates convenues à l'avance" },
+                    { icon: <Shield size={16} className="text-[#F97316]" />, text: "Mise en relation gratuite" },
                     { icon: <CalendarCheck size={16} className="text-[#F97316]" />, text: "Passages programmés à l'avance" },
                   ].map((item) => (
                     <div key={item.text} className="flex items-center gap-2 text-sm text-gray-600">

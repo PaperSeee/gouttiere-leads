@@ -11,12 +11,12 @@ import { localFaqs, localFaqSchema, getCommune } from "@/lib/communes"
 export const metadata: Metadata = {
   title: { absolute: "Nettoyage de gouttières à Jette dès 80 €" },
   description:
-    "Nettoyage de gouttières à Jette dès 80 € : villas des années 50–70, bouleaux, bordure du Laerbeek. Devis gratuit, intervention sous 48h.",
+    "Nettoyage de gouttières à Jette dès 80 € : villas des années 50–70, bouleaux, bordure du Laerbeek. Devis gratuit, prix fixé à l'avance.",
   alternates: { canonical: "https://www.nettoyage-gouttieres-bruxelles.be/communes/jette" },
   keywords: ["nettoyage gouttières Jette", "débouchage gouttières Jette", "gouttières bouchées Jette", "prix nettoyage gouttières Jette"],
   openGraph: {
     title: "Nettoyage Gouttières Jette — Devis Gratuit",
-    description: "Expert nettoyage gouttières à Jette. Débouchage urgent, réparation, démoussage. Devis gratuit, intervention rapide.",
+    description: "Nettoyage de gouttières à Jette : chéneaux et descentes vidés, écoulement testé. Devis gratuit, prix fixé à l'avance.",
     url: "https://www.nettoyage-gouttieres-bruxelles.be/communes/jette",
     type: "website",
     images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "Nettoyage gouttières Jette" }],
@@ -31,7 +31,7 @@ export default function JettePage() {
       { "@type": "Question", name: "Les chatons de bouleaux sont-ils vraiment problématiques ?", acceptedAnswer: { "@type": "Answer", text: "Oui, c'est l'une des surprises printanières pour les propriétaires de Jette. Les chatons tombent en avril-mai et sont suffisamment petits pour pénétrer dans les descentes, où ils se collent et forment des bouchons denses. Un nettoyage de mai complète utilement le nettoyage automnal pour les jardins avec bouleaux." } },
       { "@type": "Question", name: "Nos gouttières en aluminium des années 60 tiennent-elles encore ?", acceptedAnswer: { "@type": "Answer", text: "L'aluminium des années 60 est en fin de vie standard (25–30 ans) depuis longtemps. Si elles fuient ou si les crochets cèdent, un remplacement s'impose. Si elles sont simplement encrassées et bien fixées, un nettoyage + démoussage peut encore prolonger leur vie de 3–5 ans." } },
       { "@type": "Question", name: "Les grands espaces verts voisins apportent-ils des feuilles chez nous ?", acceptedAnswer: { "@type": "Answer", text: "Oui. Les maisons en bordure du bois du Laerbeek ou du parc Roi Baudouin reçoivent, par coups de vent, des feuilles qui ne viennent pas de leur propre jardin. Ce sont elles qui justifient le plus souvent un second passage." } },
-      { "@type": "Question", name: "Intervenez-vous dans tous les quartiers de Jette ?", acceptedAnswer: { "@type": "Answer", text: "Oui, dans toute la commune — autour de la place Cardinal Mercier, près du bois du Laerbeek et vers Ganshoren. On connaît bien les configurations des maisons quatre façades de Jette et leurs spécificités d'accès." } },
+      { "@type": "Question", name: "Intervenez-vous dans tous les quartiers de Jette ?", acceptedAnswer: { "@type": "Answer", text: "Oui, dans toute la commune — autour de la place Cardinal Mercier, près du bois du Laerbeek et vers Ganshoren. L'accès aux maisons quatre façades est vérifié lors du devis." } },
       ...localFaqSchema("jette"),
     ],
   }
@@ -139,7 +139,7 @@ export default function JettePage() {
           <div className="divide-y divide-gray-100 border border-gray-100 rounded-2xl overflow-hidden">
             {[
               { icon: <Droplets size={22} className="text-[#1A4731]" />, href: "/services/nettoyage-gouttieres", title: "Nettoyage villas quatre façades", desc: "Nettoyage complet des 4 façades, toutes descentes incluses. Rapport d'état pour identifier les sections à remplacer prochainement.", price: "dès 80€", tag: null },
-              { icon: <AlertTriangle size={22} className="text-red-500" />, href: "/services/debouchage-gouttieres", title: "Débouchage chatons & urgence", desc: "Les chatons de bouleaux bouchent les descentes même en dehors de l'automne. Intervention 7j/7 pour les obstructions urgentes.", price: "dès 120€", tag: "7j/7" },
+              { icon: <AlertTriangle size={22} className="text-red-500" />, href: "/services/debouchage-gouttieres", title: "Débouchage chatons & urgence", desc: "Les chatons de bouleaux bouchent les descentes même en dehors de l'automne. Débouchage des descentes en cas d'obstruction.", price: "dès 120€", tag: "Urgence" },
               { icon: <Wrench size={22} className="text-blue-600" />, href: "/services/reparation-gouttieres", title: "Remplacement aluminium vieillissant", desc: "Les gouttières en aluminium des années 60–70 de Jette arrivent en fin de vie. Remplacement complet ou par sections avec aluminium moderne laqué.", price: "devis gratuit", tag: null },
               { icon: <Leaf size={22} className="text-yellow-600" />, href: "/services/demoussage-toiture", title: "Démoussage toitures résidentielles", desc: "Traitement anti-mousse préventif après nettoyage pour protéger les tuiles et gouttières de votre villa jettoise.", price: "devis gratuit", tag: null },
             ].map((s) => (
@@ -170,7 +170,7 @@ export default function JettePage() {
               { q: "Les chatons de bouleaux sont-ils vraiment problématiques ?", a: "Oui, c'est l'une des surprises printanières pour les propriétaires de Jette. Les chatons tombent en avril-mai et sont suffisamment petits pour pénétrer dans les descentes, où ils se collent et forment des bouchons denses. Un nettoyage de mai complète utilement le nettoyage automnal pour les jardins avec bouleaux." },
               { q: "Nos gouttières en aluminium des années 60 tiennent-elles encore ?", a: "L'aluminium des années 60 est en fin de vie standard (25–30 ans) depuis longtemps. Si elles fuient ou si les crochets cèdent, un remplacement s'impose. Si elles sont simplement encrassées et bien fixées, un nettoyage + démoussage peut encore prolonger leur vie de 3–5 ans." },
               { q: "Les grands espaces verts voisins apportent-ils des feuilles chez nous ?", a: "Oui. Les maisons en bordure du bois du Laerbeek ou du parc Roi Baudouin reçoivent, par coups de vent, des feuilles qui ne viennent pas de leur propre jardin. Ce sont elles qui justifient le plus souvent un second passage." },
-              { q: "Intervenez-vous dans tous les quartiers de Jette ?", a: "Oui, dans toute la commune — autour de la place Cardinal Mercier, près du bois du Laerbeek et vers Ganshoren. On connaît bien les configurations des maisons quatre façades de Jette et leurs spécificités d'accès." },
+              { q: "Intervenez-vous dans tous les quartiers de Jette ?", a: "Oui, dans toute la commune — autour de la place Cardinal Mercier, près du bois du Laerbeek et vers Ganshoren. L'accès aux maisons quatre façades est vérifié lors du devis." },
               ...localFaqs("jette"),
             ].map((faq, i) => (
               <div key={i} className="bg-white rounded-xl border border-gray-100 p-6">
@@ -193,7 +193,7 @@ export default function JettePage() {
         <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8">
             <h2 className="text-2xl font-bold text-gray-900 mb-2">Devis gratuit — Jette</h2>
-            <p className="text-gray-500 text-sm">Réponse sous 2h · ou appelez le <a href="tel:0451053370" className="font-bold text-[#1A4731] hover:text-[#F97316]">0451 05 33 70</a></p>
+            <p className="text-gray-500 text-sm">Devis gratuit et sans engagement · ou appelez le <a href="tel:0451053370" className="font-bold text-[#1A4731] hover:text-[#F97316]">0451 05 33 70</a></p>
           </div>
           <div className="bg-gray-50 border border-gray-200 rounded-2xl p-6 sm:p-8"><ContactForm defaultCommune="Jette" /></div>
         </div>

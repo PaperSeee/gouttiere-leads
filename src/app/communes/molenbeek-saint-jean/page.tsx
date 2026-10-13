@@ -11,12 +11,12 @@ import { localFaqs, localFaqSchema, getCommune } from "@/lib/communes"
 export const metadata: Metadata = {
   title: { absolute: "Nettoyage de gouttières à Molenbeek-Saint-Jean dès 80 €" },
   description:
-    "Nettoyage de gouttières à Molenbeek dès 80 € : maisons de rapport, bords du canal, rénovations. Devis gratuit, intervention sous 48h.",
+    "Nettoyage de gouttières à Molenbeek dès 80 € : maisons de rapport, bords du canal, rénovations. Devis gratuit, prix fixé à l'avance.",
   alternates: { canonical: "https://www.nettoyage-gouttieres-bruxelles.be/communes/molenbeek-saint-jean" },
   keywords: ["nettoyage gouttières Molenbeek", "débouchage gouttières Molenbeek", "gouttières bouchées Molenbeek", "prix nettoyage gouttières Molenbeek"],
   openGraph: {
     title: "Nettoyage Gouttières Molenbeek — Devis Gratuit",
-    description: "Expert nettoyage gouttières à Molenbeek. Débouchage urgent, réparation, démoussage. Devis gratuit, intervention rapide.",
+    description: "Nettoyage de gouttières à Molenbeek : chéneaux et descentes vidés, écoulement testé. Devis gratuit, prix fixé à l'avance.",
     url: "https://www.nettoyage-gouttieres-bruxelles.be/communes/molenbeek-saint-jean",
     type: "website",
     images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "Nettoyage gouttières Molenbeek" }],
@@ -31,7 +31,7 @@ export default function MolenbeekSaintJeanPage() {
       { "@type": "Question", name: "On rénove notre immeuble de rapport — quand faut-il s'occuper des gouttières ?", acceptedAnswer: { "@type": "Answer", text: "Idéalement avant les travaux de façade et de toiture. Des gouttières défectueuses peuvent ruiner une réfection de façade en quelques mois. On s'intègre dans le planning de rénovation pour coordonner avec les autres corps de métier." } },
       { "@type": "Question", name: "Les gouttières de notre maison canal n'ont pas été nettoyées depuis 5 ans — que faire ?", acceptedAnswer: { "@type": "Answer", text: "Pas de panique, mais il faut agir vite. Après 5 ans sans entretien, on trouve généralement des mousses épaisses, des dépôts de sédiments compactés et parfois des plantes installées. On peut tout traiter en une intervention avec du matériel adapté." } },
       { "@type": "Question", name: "Comment s'organise le paiement pour une maison de rapport avec plusieurs propriétaires ?", acceptedAnswer: { "@type": "Answer", text: "On établit une facture unique au nom du gestionnaire ou de la copropriété. Si nécessaire, on peut diviser la facture par unité pour faciliter la répartition des charges entre copropriétaires." } },
-      { "@type": "Question", name: "Intervenez-vous rue de Birmingham et rue Ransfort ?", acceptedAnswer: { "@type": "Answer", text: "Oui, dans toute Molenbeek-Saint-Jean. On connaît bien la configuration des rues étroites et des cours intérieures de la commune. On s'adapte à chaque situation d'accès." } },
+      { "@type": "Question", name: "Intervenez-vous rue de Birmingham et rue Ransfort ?", acceptedAnswer: { "@type": "Answer", text: "Oui, dans toute Molenbeek-Saint-Jean. Rues étroites et cours intérieures : l'accès est vérifié lors du devis." } },
       ...localFaqSchema("molenbeek-saint-jean"),
     ],
   }
@@ -138,7 +138,7 @@ export default function MolenbeekSaintJeanPage() {
           <div className="divide-y divide-gray-100 border border-gray-100 rounded-2xl overflow-hidden">
             {[
               { icon: <Droplets size={22} className="text-[#1A4731]" />, href: "/services/nettoyage-gouttieres", title: "Nettoyage maisons de rapport", desc: "Intervention complète sur les systèmes collectifs des immeubles de rapport. Rapport d'état inclus pour le propriétaire ou gestionnaire.", price: "dès 80€", tag: null },
-              { icon: <AlertTriangle size={22} className="text-red-500" />, href: "/services/debouchage-gouttieres", title: "Débouchage urgence 7j/7", desc: "Débordements actifs sur bâti ancien ? On intervient 7j/7 pour stopper rapidement les dégâts sur les façades et les intérieurs.", price: "dès 120€", tag: "7j/7" },
+              { icon: <AlertTriangle size={22} className="text-red-500" />, href: "/services/debouchage-gouttieres", title: "Débouchage en urgence", desc: "Débordements actifs sur bâti ancien ? Le débouchage stoppe les dégâts sur les façades et les intérieurs.", price: "dès 120€", tag: "Urgence" },
               { icon: <Wrench size={22} className="text-blue-600" />, href: "/services/reparation-gouttieres", title: "Remplacement bâti ancien", desc: "Pour les projets de rénovation, on intègre le remplacement des gouttières en coordination avec les autres corps de métier.", price: "devis gratuit", tag: null },
               { icon: <Leaf size={22} className="text-yellow-600" />, href: "/services/demoussage-toiture", title: "Démoussage canal & humidité", desc: "Traitement préventif adapté aux zones à forte humidité ambiante près du canal. Efficace 3 à 5 ans selon l'exposition.", price: "devis gratuit", tag: null },
             ].map((s) => (
@@ -169,7 +169,7 @@ export default function MolenbeekSaintJeanPage() {
               { q: "On rénove notre immeuble de rapport — quand faut-il s'occuper des gouttières ?", a: "Idéalement avant les travaux de façade et de toiture. Des gouttières défectueuses peuvent ruiner une réfection de façade en quelques mois. On s'intègre dans le planning de rénovation pour coordonner avec les autres corps de métier." },
               { q: "Les gouttières de notre maison canal n'ont pas été nettoyées depuis 5 ans — que faire ?", a: "Pas de panique, mais il faut agir vite. Après 5 ans sans entretien, on trouve généralement des mousses épaisses, des dépôts de sédiments compactés et parfois des plantes installées. On peut tout traiter en une intervention avec du matériel adapté." },
               { q: "Comment s'organise le paiement pour une maison de rapport avec plusieurs propriétaires ?", a: "On établit une facture unique au nom du gestionnaire ou de la copropriété. Si nécessaire, on peut diviser la facture par unité pour faciliter la répartition des charges entre copropriétaires." },
-              { q: "Intervenez-vous rue de Birmingham et rue Ransfort ?", a: "Oui, dans toute Molenbeek-Saint-Jean. On connaît bien la configuration des rues étroites et des cours intérieures de la commune. On s'adapte à chaque situation d'accès." },
+              { q: "Intervenez-vous rue de Birmingham et rue Ransfort ?", a: "Oui, dans toute Molenbeek-Saint-Jean. Rues étroites et cours intérieures : l'accès est vérifié lors du devis." },
               ...localFaqs("molenbeek-saint-jean"),
             ].map((faq, i) => (
               <div key={i} className="bg-white rounded-xl border border-gray-100 p-6">
@@ -192,7 +192,7 @@ export default function MolenbeekSaintJeanPage() {
         <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8">
             <h2 className="text-2xl font-bold text-gray-900 mb-2">Devis gratuit — Molenbeek-Saint-Jean</h2>
-            <p className="text-gray-500 text-sm">Réponse sous 2h · ou appelez le <a href="tel:0451053370" className="font-bold text-[#1A4731] hover:text-[#F97316]">0451 05 33 70</a></p>
+            <p className="text-gray-500 text-sm">Devis gratuit et sans engagement · ou appelez le <a href="tel:0451053370" className="font-bold text-[#1A4731] hover:text-[#F97316]">0451 05 33 70</a></p>
           </div>
           <div className="bg-gray-50 border border-gray-200 rounded-2xl p-6 sm:p-8"><ContactForm defaultCommune="Molenbeek-Saint-Jean" /></div>
         </div>

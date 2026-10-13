@@ -163,7 +163,7 @@ export default function BlogDemoussageToitureBruxellesPage() {
 
             <h2>Faut-il faire le démoussage soi-même ?</h2>
             <p>
-              Le démoussage de toiture implique un travail en hauteur sur une surface glissante — c&apos;est l&apos;une des interventions domestiques les plus dangereuses. À moins d&apos;être correctement équipé et formé, il est fortement déconseillé de monter sur son toit. Une intervention professionnelle inclut l&apos;assurance, le matériel de sécurité et la garantie d&apos;un travail durable.
+              Le démoussage de toiture implique un travail en hauteur sur une surface glissante — c&apos;est l&apos;une des interventions domestiques les plus dangereuses. À moins d&apos;être correctement équipé et formé, il est fortement déconseillé de monter sur son toit. Un professionnel travaille avec un matériel de sécurité adapté ; demandez son attestation d&apos;assurance en responsabilité civile avec le devis.
             </p>
 
           </article>
@@ -173,7 +173,7 @@ export default function BlogDemoussageToitureBruxellesPage() {
             <div className="bg-[#1A4731] rounded-2xl p-6 text-white sticky top-6">
               <h3 className="font-bold text-lg mb-2">Démoussage + gouttières</h3>
               <p className="text-green-200 text-sm mb-4">
-                Nos équipes interviennent dans toute la Région bruxelloise sous 48h. Devis gratuit, sans engagement.
+                Un professionnel indépendant intervient dans toute la Région bruxelloise. Devis gratuit, sans engagement.
               </p>
               <a href="tel:0451053370" className="flex items-center justify-center gap-2 bg-white text-[#1A4731] font-bold py-3 px-4 rounded-xl text-sm hover:bg-green-50 transition mb-3">
                 0451 05 33 70
@@ -221,7 +221,7 @@ export default function BlogDemoussageToitureBruxellesPage() {
       <section className="py-12 px-4 bg-gray-50 border-t border-gray-100">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-2xl font-bold text-gray-900 mb-2">Besoin d&apos;un démoussage à Bruxelles ?</h2>
-          <p className="text-gray-600 mb-6">Devis gratuit sous 24h, intervention garantie sous 48h dans toute la Région bruxelloise.</p>
+          <p className="text-gray-600 mb-6">Devis gratuit et sans engagement, dans toute la Région bruxelloise.</p>
           <ContactForm />
         </div>
       </section>

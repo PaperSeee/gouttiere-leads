@@ -11,12 +11,12 @@ import { localFaqs, localFaqSchema, getCommune } from "@/lib/communes"
 export const metadata: Metadata = {
   title: { absolute: "Nettoyage de gouttières à Ganshoren dès 80 €" },
   description:
-    "Nettoyage de gouttières à Ganshoren dès 80 € : maisons des années 50–60, jardins arborés, descentes à contrôler. Devis gratuit, sous 48h.",
+    "Nettoyage de gouttières à Ganshoren dès 80 € : maisons des années 50–60, jardins arborés, descentes à contrôler. Devis gratuit, prix fixé à l'avance.",
   alternates: { canonical: "https://www.nettoyage-gouttieres-bruxelles.be/communes/ganshoren" },
   keywords: ["nettoyage gouttières Ganshoren", "débouchage gouttières Ganshoren", "gouttières bouchées Ganshoren", "prix nettoyage gouttières Ganshoren"],
   openGraph: {
     title: "Nettoyage Gouttières Ganshoren — Devis Gratuit",
-    description: "Expert nettoyage gouttières à Ganshoren. Débouchage urgent, réparation, démoussage. Devis gratuit, intervention rapide.",
+    description: "Nettoyage de gouttières à Ganshoren : chéneaux et descentes vidés, écoulement testé. Devis gratuit, prix fixé à l'avance.",
     url: "https://www.nettoyage-gouttieres-bruxelles.be/communes/ganshoren",
     type: "website",
     images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "Nettoyage gouttières Ganshoren" }],
@@ -30,7 +30,7 @@ export default function GanshorenPage() {
     mainEntity: [
       { "@type": "Question", name: "Comment savoir si nos gouttières des années 60 doivent être remplacées ?", acceptedAnswer: { "@type": "Answer", text: "Trois signes clairs : des fuites visibles lors des pluies, des fixations (crochets) qui se détachent du fascia, et des déformations ou affaissements du chenal. Si deux de ces trois signes sont présents, un remplacement est préférable à une réparation ponctuelle." } },
       { "@type": "Question", name: "Un nettoyage par an est-il vraiment suffisant à Ganshoren ?", acceptedAnswer: { "@type": "Answer", text: "Pour la plupart des propriétés de Ganshoren, oui. La commune n'est pas exposée aux grands arbres forestiers ni aux avenues de platanes. Un nettoyage automnal en novembre, après la chute des feuilles, suffit généralement à maintenir le système en bon état." } },
-      { "@type": "Question", name: "Intervenez-vous dans toutes les rues de Ganshoren ?", acceptedAnswer: { "@type": "Answer", text: "Oui, dans toutes les rues de Ganshoren. La petite taille de la commune nous permet d'intervenir rapidement — souvent sous 48 heures — sans frais de déplacement supplémentaires." } },
+      { "@type": "Question", name: "Intervenez-vous dans toutes les rues de Ganshoren ?", acceptedAnswer: { "@type": "Answer", text: "Oui, dans toutes les rues de Ganshoren. Le délai d'intervention et le déplacement sont précisés dans le devis." } },
       { "@type": "Question", name: "Peut-on avoir un devis sans s'engager ?", acceptedAnswer: { "@type": "Answer", text: "Bien sûr, le devis est entièrement gratuit et sans engagement. On peut l'établir par téléphone ou lors d'un passage sur place. On vous présente les différentes options et vous décidez librement." } },
       ...localFaqSchema("ganshoren"),
     ],
@@ -139,7 +139,7 @@ export default function GanshorenPage() {
           <div className="divide-y divide-gray-100 border border-gray-100 rounded-2xl overflow-hidden">
             {[
               { icon: <Droplets size={22} className="text-[#1A4731]" />, href: "/services/nettoyage-gouttieres", title: "Nettoyage villas résidentielles", desc: "Nettoyage annuel efficace pour les maisons quatre façades de Ganshoren. Toutes les descentes et tous les chenaux en une seule visite.", price: "dès 80€", tag: null },
-              { icon: <AlertTriangle size={22} className="text-red-500" />, href: "/services/debouchage-gouttieres", title: "Débouchage urgence 7j/7", desc: "Débordement inattendu ? On intervient 7j/7 à Ganshoren pour stopper les dégâts et nettoyer le système en une seule intervention.", price: "dès 120€", tag: "7j/7" },
+              { icon: <AlertTriangle size={22} className="text-red-500" />, href: "/services/debouchage-gouttieres", title: "Débouchage en urgence", desc: "Débordement inattendu ? Débouchage à Ganshoren pour stopper les dégâts et nettoyer le système en une seule intervention.", price: "dès 120€", tag: "Urgence" },
               { icon: <Wrench size={22} className="text-blue-600" />, href: "/services/reparation-gouttieres", title: "Remplacement vieilles gouttières", desc: "Diagnostic gratuit pour évaluer si vos gouttières des années 50–60 nécessitent un remplacement partiel ou complet.", price: "devis gratuit", tag: null },
               { icon: <Leaf size={22} className="text-yellow-600" />, href: "/services/demoussage-toiture", title: "Démoussage toitures résidentielles", desc: "Traitement anti-mousse préventif après nettoyage. Protège votre toiture et prolonge la vie des nouvelles gouttières.", price: "devis gratuit", tag: null },
             ].map((s) => (
@@ -169,7 +169,7 @@ export default function GanshorenPage() {
             {[
               { q: "Comment savoir si nos gouttières des années 60 doivent être remplacées ?", a: "Trois signes clairs : des fuites visibles lors des pluies, des fixations (crochets) qui se détachent du fascia, et des déformations ou affaissements du chenal. Si deux de ces trois signes sont présents, un remplacement est préférable à une réparation ponctuelle." },
               { q: "Un nettoyage par an est-il vraiment suffisant à Ganshoren ?", a: "Pour la plupart des propriétés de Ganshoren, oui. La commune n'est pas exposée aux grands arbres forestiers ni aux avenues de platanes. Un nettoyage automnal en novembre, après la chute des feuilles, suffit généralement à maintenir le système en bon état." },
-              { q: "Intervenez-vous dans toutes les rues de Ganshoren ?", a: "Oui, dans toutes les rues de Ganshoren. La petite taille de la commune nous permet d'intervenir rapidement — souvent sous 48 heures — sans frais de déplacement supplémentaires." },
+              { q: "Intervenez-vous dans toutes les rues de Ganshoren ?", a: "Oui, dans toutes les rues de Ganshoren. Le délai d'intervention et le déplacement sont précisés dans le devis." },
               { q: "Peut-on avoir un devis sans s'engager ?", a: "Bien sûr, le devis est entièrement gratuit et sans engagement. On peut l'établir par téléphone ou lors d'un passage sur place. On vous présente les différentes options et vous décidez librement." },
               ...localFaqs("ganshoren"),
             ].map((faq, i) => (
@@ -193,7 +193,7 @@ export default function GanshorenPage() {
         <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8">
             <h2 className="text-2xl font-bold text-gray-900 mb-2">Devis gratuit — Ganshoren</h2>
-            <p className="text-gray-500 text-sm">Réponse sous 2h · ou appelez le <a href="tel:0451053370" className="font-bold text-[#1A4731] hover:text-[#F97316]">0451 05 33 70</a></p>
+            <p className="text-gray-500 text-sm">Devis gratuit et sans engagement · ou appelez le <a href="tel:0451053370" className="font-bold text-[#1A4731] hover:text-[#F97316]">0451 05 33 70</a></p>
           </div>
           <div className="bg-gray-50 border border-gray-200 rounded-2xl p-6 sm:p-8"><ContactForm defaultCommune="Ganshoren" /></div>
         </div>

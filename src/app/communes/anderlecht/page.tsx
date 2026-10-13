@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   keywords: ["nettoyage gouttières Anderlecht", "débouchage gouttières Anderlecht", "gouttières bouchées Anderlecht", "prix nettoyage gouttières Anderlecht"],
   openGraph: {
     title: "Nettoyage Gouttières Anderlecht — Devis Gratuit",
-    description: "Expert nettoyage gouttières à Anderlecht. Débouchage urgent, réparation, démoussage. Devis gratuit, intervention rapide.",
+    description: "Nettoyage de gouttières à Anderlecht : chéneaux et descentes vidés, écoulement testé. Devis gratuit, prix fixé à l'avance.",
     url: "https://www.nettoyage-gouttieres-bruxelles.be/communes/anderlecht",
     type: "website",
     images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "Nettoyage gouttières Anderlecht" }],
@@ -29,9 +29,9 @@ export default function AnderlechtPage() {
     "@type": "FAQPage",
     mainEntity: [
       { "@type": "Question", name: "L'humidité du canal affecte-t-elle vraiment les gouttières ?", acceptedAnswer: { "@type": "Answer", text: "Oui. Les maisons les plus proches du canal de Charleroi, dans un air plus humide, voient souvent les mousses repousser plus vite. Un démoussage préventif annuel est recommandé plutôt qu'un nettoyage curatif tous les 3 ans." } },
-      { "@type": "Question", name: "Le zinc de nos maisons des années 40 est-il encore récupérable ?", acceptedAnswer: { "@type": "Answer", text: "Dans la moitié des cas, oui. Un zinc des années 40 bien conservé peut encore durer 15 à 20 ans si les profils sont droits et les soudures tiennent. On fait un diagnostic gratuit avant toute décision de remplacement." } },
-      { "@type": "Question", name: "Intervenez-vous dans les quartiers Cureghem et Neerpede ?", acceptedAnswer: { "@type": "Answer", text: "Oui, dans toute la commune d'Anderlecht sans exception. On connaît bien les particularités d'accès du bâti ouvrier local — cours étroites, passages latéraux, mitoyenneté complexe." } },
-      { "@type": "Question", name: "Peut-on coordonner le nettoyage avec les voisins mitoyens ?", acceptedAnswer: { "@type": "Answer", text: "Absolument, c'est même conseillé. On propose un tarif réduit pour les interventions groupées sur deux maisons mitoyennes le même jour. Cela permet aussi de traiter les descentes partagées en une seule fois." } },
+      { "@type": "Question", name: "Le zinc de nos maisons des années 40 est-il encore récupérable ?", acceptedAnswer: { "@type": "Answer", text: "Souvent, oui : un zinc ancien aux profils droits et aux soudures saines se nettoie et se répare plutôt qu'il ne se remplace. Son état est constaté lors du devis gratuit, avant toute décision de remplacement." } },
+      { "@type": "Question", name: "Intervenez-vous dans les quartiers Cureghem et Neerpede ?", acceptedAnswer: { "@type": "Answer", text: "Oui, dans toute la commune d'Anderlecht sans exception. Cours étroites, passages latéraux, mitoyenneté : l'accès est vérifié lors du devis." } },
+      { "@type": "Question", name: "Peut-on coordonner le nettoyage avec les voisins mitoyens ?", acceptedAnswer: { "@type": "Answer", text: "Oui, c'est même conseillé : deux maisons mitoyennes nettoyées le même jour permettent de traiter les descentes partagées en une seule fois. Demandez un devis groupé, qui indique le prix de chaque maison." } },
       ...localFaqSchema("anderlecht"),
     ],
   }
@@ -138,7 +138,7 @@ export default function AnderlechtPage() {
           <div className="divide-y divide-gray-100 border border-gray-100 rounded-2xl overflow-hidden">
             {[
               { icon: <Droplets size={22} className="text-[#1A4731]" />, href: "/services/nettoyage-gouttieres", title: "Nettoyage maisons ouvrières", desc: "Nettoyage adapté aux maisons mitoyennes d'Anderlecht. Accès cours arrière, façade avant et arrière traitées en une intervention.", price: "dès 80€", tag: null },
-              { icon: <AlertTriangle size={22} className="text-red-500" />, href: "/services/debouchage-gouttieres", title: "Débouchage urgence canal", desc: "Les zones proches du canal accumulent rapidement les débris. Intervention 7j/7 pour protéger vos façades en brique des débordements.", price: "dès 120€", tag: "7j/7" },
+              { icon: <AlertTriangle size={22} className="text-red-500" />, href: "/services/debouchage-gouttieres", title: "Débouchage urgence canal", desc: "Les zones proches du canal accumulent rapidement les débris. Un débouchage se demande dès le premier débordement pour protéger vos façades en brique.", price: "dès 120€", tag: "Urgence" },
               { icon: <Wrench size={22} className="text-blue-600" />, href: "/services/reparation-gouttieres", title: "Réparation zinc historique", desc: "Diagnostic et réparation ciblée du zinc d'époque. Si l'état le permet, on prolonge la vie des gouttières existantes par soudure.", price: "devis gratuit", tag: null },
               { icon: <Leaf size={22} className="text-yellow-600" />, href: "/services/demoussage-toiture", title: "Démoussage anti-humidité", desc: "En zone canal, le démoussage est particulièrement critique. Traitement préventif longue durée pour contrer l'humidité ambiante.", price: "devis gratuit", tag: null },
             ].map((s) => (
@@ -167,9 +167,9 @@ export default function AnderlechtPage() {
           <div className="space-y-5">
             {[
               { q: "L'humidité du canal affecte-t-elle vraiment les gouttières ?", a: "Oui. Les maisons les plus proches du canal de Charleroi, dans un air plus humide, voient souvent les mousses repousser plus vite. Un démoussage préventif annuel est recommandé plutôt qu'un nettoyage curatif tous les 3 ans." },
-              { q: "Le zinc de nos maisons des années 40 est-il encore récupérable ?", a: "Dans la moitié des cas, oui. Un zinc des années 40 bien conservé peut encore durer 15 à 20 ans si les profils sont droits et les soudures tiennent. On fait un diagnostic gratuit avant toute décision de remplacement." },
-              { q: "Intervenez-vous dans les quartiers Cureghem et Neerpede ?", a: "Oui, dans toute la commune d'Anderlecht sans exception. On connaît bien les particularités d'accès du bâti ouvrier local — cours étroites, passages latéraux, mitoyenneté complexe." },
-              { q: "Peut-on coordonner le nettoyage avec les voisins mitoyens ?", a: "Absolument, c'est même conseillé. On propose un tarif réduit pour les interventions groupées sur deux maisons mitoyennes le même jour. Cela permet aussi de traiter les descentes partagées en une seule fois." },
+              { q: "Le zinc de nos maisons des années 40 est-il encore récupérable ?", a: "Souvent, oui : un zinc ancien aux profils droits et aux soudures saines se nettoie et se répare plutôt qu'il ne se remplace. Son état est constaté lors du devis gratuit, avant toute décision de remplacement." },
+              { q: "Intervenez-vous dans les quartiers Cureghem et Neerpede ?", a: "Oui, dans toute la commune d'Anderlecht sans exception. Cours étroites, passages latéraux, mitoyenneté : l'accès est vérifié lors du devis." },
+              { q: "Peut-on coordonner le nettoyage avec les voisins mitoyens ?", a: "Oui, c'est même conseillé : deux maisons mitoyennes nettoyées le même jour permettent de traiter les descentes partagées en une seule fois. Demandez un devis groupé, qui indique le prix de chaque maison." },
               ...localFaqs("anderlecht"),
             ].map((faq, i) => (
               <div key={i} className="bg-white rounded-xl border border-gray-100 p-6">
@@ -192,7 +192,7 @@ export default function AnderlechtPage() {
         <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8">
             <h2 className="text-2xl font-bold text-gray-900 mb-2">Devis gratuit — Anderlecht</h2>
-            <p className="text-gray-500 text-sm">Réponse sous 2h · ou appelez le <a href="tel:0451053370" className="font-bold text-[#1A4731] hover:text-[#F97316]">0451 05 33 70</a></p>
+            <p className="text-gray-500 text-sm">Devis gratuit et sans engagement · ou appelez le <a href="tel:0451053370" className="font-bold text-[#1A4731] hover:text-[#F97316]">0451 05 33 70</a></p>
           </div>
           <div className="bg-gray-50 border border-gray-200 rounded-2xl p-6 sm:p-8"><ContactForm defaultCommune="Anderlecht" /></div>
         </div>

@@ -11,12 +11,12 @@ import { localFaqs, localFaqSchema, getCommune } from "@/lib/communes"
 export const metadata: Metadata = {
   title: { absolute: "Nettoyage de gouttières à Ixelles dès 80 €" },
   description:
-    "Nettoyage de gouttières à Ixelles dès 80 € : zinc Art nouveau, maisons de maître, copropriétés, étangs. Devis gratuit, intervention sous 48h.",
+    "Nettoyage de gouttières à Ixelles dès 80 € : zinc Art nouveau, maisons de maître, copropriétés, étangs. Devis gratuit, prix fixé à l'avance.",
   alternates: { canonical: "https://www.nettoyage-gouttieres-bruxelles.be/communes/ixelles" },
   keywords: ["nettoyage gouttières Ixelles", "débouchage gouttières Ixelles", "gouttières bouchées Ixelles", "prix nettoyage gouttières Ixelles"],
   openGraph: {
     title: "Nettoyage Gouttières Ixelles — Devis Gratuit",
-    description: "Expert nettoyage gouttières à Ixelles. Débouchage urgent, réparation, démoussage. Devis gratuit, intervention rapide.",
+    description: "Nettoyage de gouttières à Ixelles : chéneaux et descentes vidés, écoulement testé. Devis gratuit, prix fixé à l'avance.",
     url: "https://www.nettoyage-gouttieres-bruxelles.be/communes/ixelles",
     type: "website",
     images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "Nettoyage gouttières Ixelles" }],
@@ -136,7 +136,7 @@ export default function IxellesPage() {
           <div className="divide-y divide-gray-100 border border-gray-100 rounded-2xl overflow-hidden">
             {[
               { icon: <Droplets size={22} className="text-[#1A4731]" />, href: "/services/nettoyage-gouttieres", title: "Nettoyage zinc & PVC", desc: "Nettoyage doux des gouttières en zinc Art nouveau. Matériel non-abrasif pour préserver l'ornementation. Nettoyage gouttières + descentes inclus.", price: "dès 80€", tag: "Zinc inclus" },
-              { icon: <AlertTriangle size={22} className="text-red-500" />, href: "/services/debouchage-gouttieres", title: "Débouchage descentes partagées", desc: "Descente pluviale commune bouchée ? Intervention coordonnée pour débloquer sans perturber les voisins mitoyens d'Ixelles.", price: "dès 120€", tag: "7j/7" },
+              { icon: <AlertTriangle size={22} className="text-red-500" />, href: "/services/debouchage-gouttieres", title: "Débouchage descentes partagées", desc: "Descente pluviale commune bouchée ? Intervention coordonnée pour débloquer sans perturber les voisins mitoyens d'Ixelles.", price: "dès 120€", tag: "Urgence" },
               { icon: <Wrench size={22} className="text-blue-600" />, href: "/services/reparation-gouttieres", title: "Réparation zinc historique", desc: "Soudure, reprise de joints d'époque, remplacement de tronçons. Respect de l'esthétique Art nouveau avec matériaux assortis.", price: "devis gratuit", tag: null },
               { icon: <Leaf size={22} className="text-yellow-600" />, href: "/services/demoussage-toiture", title: "Nettoyage terrasses & toits plats", desc: "Les immeubles d'Ixelles ont souvent des terrasses ou toitures plates encrassées. Nettoyage complet, évacuations débouchées.", price: "devis gratuit", tag: null },
             ].map((s) => (
@@ -190,7 +190,7 @@ export default function IxellesPage() {
         <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8">
             <h2 className="text-2xl font-bold text-gray-900 mb-2">Devis gratuit — Ixelles</h2>
-            <p className="text-gray-500 text-sm">Réponse sous 2h · ou appelez le <a href="tel:0451053370" className="font-bold text-[#1A4731] hover:text-[#F97316]">0451 05 33 70</a></p>
+            <p className="text-gray-500 text-sm">Devis gratuit et sans engagement · ou appelez le <a href="tel:0451053370" className="font-bold text-[#1A4731] hover:text-[#F97316]">0451 05 33 70</a></p>
           </div>
           <div className="bg-gray-50 border border-gray-200 rounded-2xl p-6 sm:p-8"><ContactForm defaultCommune="Ixelles" /></div>
         </div>

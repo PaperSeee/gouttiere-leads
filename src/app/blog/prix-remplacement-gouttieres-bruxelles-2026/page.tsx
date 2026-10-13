@@ -202,11 +202,11 @@ export default function BlogPrixRemplacementGouttieresBruxelles2026Page() {
 
             <h2>Comment obtenir le meilleur tarif ?</h2>
             <ol>
-              <li><strong>Demandez 2 à 3 devis comparatifs</strong> — les prix varient de 20 à 30% entre entrepreneurs pour un même chantier</li>
+              <li><strong>Demandez 2 à 3 devis comparatifs</strong> — les prix varient d&apos;un entrepreneur à l&apos;autre pour un même chantier</li>
               <li><strong>Vérifiez que le devis inclut la dépose des anciennes gouttières</strong> — souvent non incluse dans les devis &quot;entrée de gamme&quot;</li>
-              <li><strong>Demandez la garantie décennale</strong> — obligatoire pour les travaux sur l&apos;enveloppe du bâtiment en Belgique</li>
+              <li><strong>Demandez les garanties par écrit</strong> — durée et ce qu&apos;elles couvrent (matériau, pose, soudures)</li>
               <li><strong>Combinez avec un nettoyage de toiture</strong> si celle-ci en a besoin — vous économisez sur le déplacement et l&apos;échafaudage</li>
-              <li><strong>Planifiez hors automne</strong> — les prix augmentent de 10 à 15% en septembre-novembre, haute saison des chantiers gouttières</li>
+              <li><strong>Planifiez hors automne</strong> — septembre à novembre est la haute saison des chantiers gouttières, les agendas y sont plus chargés</li>
             </ol>
 
             <h2>Remplacement partiel vs remplacement total</h2>
@@ -214,7 +214,7 @@ export default function BlogPrixRemplacementGouttieresBruxelles2026Page() {
               Si seulement un tronçon de 3 à 5 mètres est endommagé, un remplacement partiel est envisageable à condition que le reste des gouttières soit en bon état et du même matériau. Sur des gouttières en zinc ancien, il est parfois impossible de trouver un profil identique — dans ce cas, le remplacement total s&apos;impose pour maintenir l&apos;étanchéité des jonctions.
             </p>
             <p>
-              Demandez à notre équipe une inspection visuelle gratuite avant de décider. Nous photographions l&apos;état de vos gouttières depuis le sol et en hauteur pour vous faire une recommandation honnête.
+              Demandez une inspection avant de décider, avec des photos de l&apos;état de vos gouttières prises en hauteur : elles permettent de comparer les devis sur une base concrète.
             </p>
 
           </article>
@@ -224,7 +224,7 @@ export default function BlogPrixRemplacementGouttieresBruxelles2026Page() {
             <div className="bg-[#1A4731] rounded-2xl p-6 text-white sticky top-6">
               <h3 className="font-bold text-lg mb-2">Devis remplacement gratuit</h3>
               <p className="text-green-200 text-sm mb-4">
-                Estimation sous 24h pour toute la Région bruxelloise. Sans engagement.
+                Estimation gratuite pour toute la Région bruxelloise. Sans engagement.
               </p>
               <a href="tel:0451053370" className="flex items-center justify-center gap-2 bg-white text-[#1A4731] font-bold py-3 px-4 rounded-xl text-sm hover:bg-green-50 transition mb-3">
                 0451 05 33 70
@@ -267,7 +267,7 @@ export default function BlogPrixRemplacementGouttieresBruxelles2026Page() {
       <section className="py-12 px-4 bg-gray-50 border-t border-gray-100">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-2xl font-bold text-gray-900 mb-2">Demandez votre devis de remplacement</h2>
-          <p className="text-gray-600 mb-6">Réponse sous 24h, intervention dans toute la Région bruxelloise.</p>
+          <p className="text-gray-600 mb-6">Devis gratuit, intervention dans toute la Région bruxelloise.</p>
           <ContactForm />
         </div>
       </section>

@@ -34,7 +34,7 @@ const faqs = [
   },
   {
     question: "Intervenez-vous en urgence en cas de débordement ?",
-    answer: "Oui, notre service de débouchage d'urgence est disponible 7 jours sur 7. En cas de débordement actif lors de fortes pluies, appelez-nous directement au 0451 05 33 70. Nous intervenons généralement dans les 24 heures, parfois le jour même en haute saison automnale. Le tarif urgence est de 120 à 200€ selon le jour et l'heure d'intervention.",
+    answer: "Oui. En cas de débordement actif lors de fortes pluies, appelez directement le 0451 05 33 70 : votre demande est transmise au professionnel indépendant qui intervient dans votre commune, et le délai d'intervention vous est annoncé au téléphone. Le tarif urgence est de 120 à 200€ selon le jour et l'heure d'intervention.",
   },
   {
     question: "Quelle est la durée d'un nettoyage de gouttières ?",
@@ -50,15 +50,15 @@ const faqs = [
   },
   {
     question: "Nettoyez-vous aussi les descentes pluviales ?",
-    answer: "Absolument. Nos interventions incluent systématiquement le nettoyage des gouttières ET des descentes pluviales (tuyaux de chute). Une descente bouchée est souvent aussi problématique qu'une gouttière obstruée, voire plus dangereuse car le problème est moins visible. Nous vérifions également les collets de jonction, les coudes et raccords pour garantir un écoulement optimal sur toute la longueur.",
+    answer: "Oui. Un nettoyage complet inclut le nettoyage des gouttières ET des descentes pluviales (tuyaux de chute). Une descente bouchée est souvent aussi problématique qu'une gouttière obstruée, voire plus dangereuse car le problème est moins visible. Les collets de jonction, les coudes et les raccords sont aussi contrôlés pour vérifier l'écoulement sur toute la longueur.",
   },
   {
-    question: "Quelle garantie sur le nettoyage ?",
-    answer: "Nous garantissons le bon écoulement de vos gouttières à l'issue de notre intervention. Si un problème de débordement survient dans les 30 jours suivant notre nettoyage et est directement lié à notre intervention (et non à un événement climatique exceptionnel ou à une panne structurelle), nous revenons gratuitement. Nous sommes également couverts par une assurance RC Professionnelle.",
+    question: "Que faire si la gouttière déborde encore après le nettoyage ?",
+    answer: "Un test d'écoulement est fait en fin d'intervention, descente par descente. Si un débordement réapparaît, signalez-le au professionnel qui est intervenu : les conditions de reprise sont celles de son devis. Demandez-les par écrit avant d'accepter, avec son attestation d'assurance en responsabilité civile professionnelle.",
   },
   {
     question: "Intervenez-vous sur des toitures hautes ?",
-    answer: "Oui, nos techniciens sont formés et équipés pour les travaux en hauteur : échelles professionnelles, nacelles (selon accessibilité) et équipements de sécurité certifiés. Nous intervenons sur des bâtiments jusqu'à R+3 standard. Au-delà ou pour des configurations très particulières (toitures mansardées, accès restreint), nous évaluons la situation lors de la visite de devis.",
+    answer: "Oui, avec un matériel adapté au travail en hauteur : échelles professionnelles, nacelle selon l'accès, équipements de sécurité. Au-delà d'un rez + 3 étages ou pour une configuration particulière (toiture mansardée, accès restreint), la faisabilité est évaluée lors de la visite de devis.",
   },
   {
     question: "Proposez-vous aussi le nettoyage de toiture à Bruxelles ?",
@@ -82,7 +82,7 @@ const faqs = [
   },
   {
     question: "Comment se passe le devis ?",
-    answer: "Le processus est simple : vous nous contactez par téléphone (0451 05 33 70) ou via notre formulaire en ligne. Nous convenons d'un rendez-vous pour une visite gratuite de votre bien. Sur place, nos techniciens inspectent l'état de vos gouttières et vous remettent un devis écrit détaillé, fixant le prix exact avant toute intervention. Vous acceptez ou refusez librement. Si vous acceptez, l'intervention est planifiée selon vos disponibilités.",
+    answer: "Le processus est simple : vous nous contactez par téléphone (0451 05 33 70) ou via notre formulaire en ligne. Nous convenons d'un rendez-vous pour une visite gratuite de votre bien. Sur place, le professionnel inspecte l'état de vos gouttières et vous remet un devis écrit détaillé, fixant le prix exact avant toute intervention. Vous acceptez ou refusez librement. Si vous acceptez, l'intervention est planifiée selon vos disponibilités.",
   },
 ];
 

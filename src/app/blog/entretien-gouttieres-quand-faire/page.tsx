@@ -384,7 +384,7 @@ export default function BlogEntretienGouttieresMomentPage() {
               <Link href="/services/contrat-entretien-gouttieres" className="text-[#F97316] font-semibold">
                 contrat d&apos;entretien annuel
               </Link>{" "}
-              : passages programmés en octobre et mars, -10% sur le tarif standard.
+              : passages programmés en octobre et, si besoin, en mars.
             </p>
           </div>
 
@@ -393,7 +393,7 @@ export default function BlogEntretienGouttieresMomentPage() {
             <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
               <div>
                 <h3 className="text-xl font-bold mb-2">Planifiez votre entretien maintenant</h3>
-                <p className="text-gray-300 text-sm">Devis gratuit · Intervention sous 48h · Techniciens RC Pro à Bruxelles</p>
+                <p className="text-gray-300 text-sm">Devis gratuit · Prix fixé à l'avance · 19 communes de Bruxelles</p>
               </div>
               <a
                 href="tel:0451053370"
@@ -414,13 +414,13 @@ export default function BlogEntretienGouttieresMomentPage() {
             <div>
               <h2 className="text-2xl font-bold text-gray-900 mb-4">Planifier un entretien</h2>
               <p className="text-gray-600 mb-6 leading-relaxed">
-                Prêt à planifier l&apos;entretien de vos gouttières ? Remplissez le formulaire ou appelez-nous. Devis gratuit sous 2h en heures ouvrables.
+                Prêt à planifier l&apos;entretien de vos gouttières ? Remplissez le formulaire ou appelez-nous. Devis gratuit et sans engagement.
               </p>
               <div className="space-y-3">
                 {[
                   "Nettoyage complet gouttières + descentes",
-                  "Rapport d'état inclus",
-                  "Intervention sous 48h garantie",
+                  "État des gouttières constaté sur place",
+                  "Date d'intervention convenue avec vous",
                   "Devis 100% gratuit et sans engagement",
                 ].map((item) => (
                   <div key={item} className="flex items-center gap-3">
@@ -434,7 +434,7 @@ export default function BlogEntretienGouttieresMomentPage() {
                 <a href="tel:0451053370" className="flex items-center gap-2 text-[#F97316] font-bold text-lg hover:text-orange-400 transition-colors">
                   <Phone size={20} />0451 05 33 70
                 </a>
-                <p className="text-gray-400 text-xs mt-1">Lun–Ven 7h30–18h | Sam 8h–14h | Urgences 7j/7</p>
+                <p className="text-gray-400 text-xs mt-1">Lun–Ven 7h30–18h | Sam 8h–14h</p>
               </div>
             </div>
             <div className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100">

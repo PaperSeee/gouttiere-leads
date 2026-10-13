@@ -11,12 +11,12 @@ import { localFaqs, localFaqSchema, getCommune } from "@/lib/communes"
 export const metadata: Metadata = {
   title: { absolute: "Nettoyage de gouttières à Auderghem dès 80 €" },
   description:
-    "Nettoyage de gouttières à Auderghem dès 80 € : feuilles de hêtres de la Forêt de Soignes, maisons 4 façades. Devis gratuit, intervention sous 48h.",
+    "Nettoyage de gouttières à Auderghem dès 80 € : feuilles de hêtres de la Forêt de Soignes, maisons 4 façades. Devis gratuit, prix fixé à l'avance.",
   alternates: { canonical: "https://www.nettoyage-gouttieres-bruxelles.be/communes/auderghem" },
   keywords: ["nettoyage gouttières Auderghem", "débouchage gouttières Auderghem", "gouttières bouchées Auderghem", "prix nettoyage gouttières Auderghem"],
   openGraph: {
     title: "Nettoyage Gouttières Auderghem — Devis Gratuit",
-    description: "Expert nettoyage gouttières à Auderghem. Débouchage urgent, réparation, démoussage. Devis gratuit, intervention rapide.",
+    description: "Nettoyage de gouttières à Auderghem : chéneaux et descentes vidés, écoulement testé. Devis gratuit, prix fixé à l'avance.",
     url: "https://www.nettoyage-gouttieres-bruxelles.be/communes/auderghem",
     type: "website",
     images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "Nettoyage gouttières Auderghem" }],
@@ -143,7 +143,7 @@ export default function AuderghemPage() {
           <div className="divide-y divide-gray-100 border border-gray-100 rounded-2xl overflow-hidden">
             {[
               { icon: <Droplets size={22} className="text-[#1A4731]" />, href: "/services/nettoyage-gouttieres", title: "Nettoyage complet", desc: "Feuilles de hêtres tardives et débris végétaux évacués. Nettoyage post-hivernal recommandé à Auderghem pour traiter les apports de janvier-février.", price: "dès 80€", tag: "Le plus demandé" },
-              { icon: <AlertTriangle size={22} className="text-red-500" />, href: "/services/debouchage-gouttieres", title: "Débouchage urgence 7j/7", desc: "Débordement actif ? On intervient rapidement. Les jardins plats d'Auderghem retiennent l'eau près des fondations en cas d'obstruction.", price: "dès 120€", tag: "Urgence" },
+              { icon: <AlertTriangle size={22} className="text-red-500" />, href: "/services/debouchage-gouttieres", title: "Débouchage en urgence", desc: "Débordement actif ? Demandez un débouchage sans attendre. Les jardins plats d'Auderghem retiennent l'eau près des fondations en cas d'obstruction.", price: "dès 120€", tag: "Urgence" },
               { icon: <Wrench size={22} className="text-blue-600" />, href: "/services/reparation-gouttieres", title: "Remplacement aluminium", desc: "Diagnostic et remplacement des gouttières en aluminium des années 80 arrivées en fin de vie. Devis sur mesure selon les linéaires.", price: "devis gratuit", tag: null },
               { icon: <Leaf size={22} className="text-yellow-600" />, href: "/services/demoussage-toiture", title: "Démoussage toiture", desc: "Particulièrement recommandé à Auderghem. Le traitement anti-mousse préventif après démoussage limite la recolonisation à 3–5 ans.", price: "devis gratuit", tag: null },
             ].map((s) => (
@@ -197,7 +197,7 @@ export default function AuderghemPage() {
         <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8">
             <h2 className="text-2xl font-bold text-gray-900 mb-2">Devis gratuit — Auderghem</h2>
-            <p className="text-gray-500 text-sm">Réponse sous 2h · ou appelez le <a href="tel:0451053370" className="font-bold text-[#1A4731] hover:text-[#F97316]">0451 05 33 70</a></p>
+            <p className="text-gray-500 text-sm">Devis gratuit et sans engagement · ou appelez le <a href="tel:0451053370" className="font-bold text-[#1A4731] hover:text-[#F97316]">0451 05 33 70</a></p>
           </div>
           <div className="bg-gray-50 border border-gray-200 rounded-2xl p-6 sm:p-8">
             <ContactForm defaultCommune="Auderghem" />

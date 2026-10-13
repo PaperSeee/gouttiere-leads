@@ -353,7 +353,7 @@ export const guides: Guide[] = [
       {
         h2: "La solution la plus simple : un contrat d'entretien",
         paragraphs: [
-          "Plutôt que de revoter chaque année, l'assemblée peut approuver un [contrat d'entretien annuel des gouttières](/services/contrat-entretien-gouttieres) : passages planifiés, rapport pour le dossier de copropriété et remise sur le tarif standard. Pour les immeubles à corniche, notre guide sur le [chéneau de corniche](/blog/chenau-corniche-entretien) explique les points à faire vérifier en priorité. Sinon, un [nettoyage de gouttières à Bruxelles](/) ponctuel suffit, au tarif publié sur la page [tarifs](/tarifs).",
+          "Plutôt que de revoter chaque année, l'assemblée peut approuver un [contrat d'entretien annuel des gouttières](/services/contrat-entretien-gouttieres) : passages planifiés et compte rendu pour le dossier de copropriété, aux conditions fixées dans le devis. Pour les immeubles à corniche, notre guide sur le [chéneau de corniche](/blog/chenau-corniche-entretien) explique les points à faire vérifier en priorité. Sinon, un [nettoyage de gouttières à Bruxelles](/) ponctuel suffit, au tarif publié sur la page [tarifs](/tarifs).",
         ],
       },
     ],

@@ -7,12 +7,12 @@ import ContactForm from "@/components/ContactForm";
 export const metadata: Metadata = {
   title: { absolute: "Contact et devis gratuit | Gouttières Bruxelles" },
   description:
-    "Devis gratuit pour vos gouttières à Bruxelles : appelez le 0451 05 33 70 ou remplissez le formulaire. Réponse en moins de 2h en heures ouvrables.",
+    "Devis gratuit pour vos gouttières à Bruxelles : appelez le 0451 05 33 70 ou remplissez le formulaire. Un professionnel indépendant vous rappelle pour le devis.",
   keywords: ["contact nettoyage gouttières Bruxelles", "devis gouttières Bruxelles gratuit", "0451 05 33 70", "demande devis gouttières"],
   alternates: { canonical: "https://www.nettoyage-gouttieres-bruxelles.be/contact" },
   openGraph: {
     title: "Contact — Devis Gratuit Nettoyage Gouttières Bruxelles",
-    description: "Demandez votre devis gratuit. Réponse en moins de 2h. Téléphone : 0451 05 33 70.",
+    description: "Demandez votre devis gratuit, sans engagement. Téléphone : 0451 05 33 70.",
     url: "https://www.nettoyage-gouttieres-bruxelles.be/contact",
     type: "website",
     images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "Contact nettoyage gouttières Bruxelles" }],
@@ -33,8 +33,7 @@ export default function Contact() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h1 className="text-3xl sm:text-4xl font-bold mb-4">Contactez-nous</h1>
           <p className="text-gray-300 text-lg max-w-2xl">
-            Demandez votre devis gratuit ou posez-nous vos questions. Nous répondons dans les 2 heures
-            en heures ouvrables.
+            Demandez votre devis gratuit ou posez-nous vos questions. Votre demande est transmise à un professionnel indépendant qui vous rappelle.
           </p>
         </div>
       </section>
@@ -117,7 +116,7 @@ export default function Contact() {
                     <p className="font-semibold text-gray-900">Horaires</p>
                     <p className="text-gray-600 text-sm">Lundi – Vendredi : 7h30 – 18h00</p>
                     <p className="text-gray-600 text-sm">Samedi : 8h00 – 14h00</p>
-                    <p className="text-[#F97316] text-sm font-semibold mt-1">Urgences débouchage : 7j/7</p>
+                    <p className="text-[#F97316] text-sm font-semibold mt-1">Débouchage : délai annoncé au téléphone</p>
                   </div>
                 </div>
               </div>

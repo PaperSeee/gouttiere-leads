@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     title: "Nettoyage de toiture à Bruxelles — avec le nettoyage des gouttières",
-    description: "Feuilles, mousses et débris dégagés des tuiles et ardoises, gouttières nettoyées en même temps. Devis gratuit, intervention sous 48h.",
+    description: "Feuilles, mousses et débris dégagés des tuiles et ardoises, gouttières nettoyées en même temps. Devis gratuit, prix fixé à l'avance.",
     url: "https://www.nettoyage-gouttieres-bruxelles.be/services/nettoyage-toiture",
     images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "Nettoyage toiture Bruxelles" }],
   },
@@ -236,8 +236,8 @@ export default function NettoyageToiture() {
                 <h3 className="font-bold text-gray-900 mb-4">Pourquoi nous choisir ?</h3>
                 <div className="space-y-3">
                   {[
-                    { icon: <Clock size={16} className="text-[#F97316]" />, text: "Intervention sous 48h" },
-                    { icon: <Shield size={16} className="text-[#F97316]" />, text: "Assurance RC Pro" },
+                    { icon: <Clock size={16} className="text-[#F97316]" />, text: "Prix fixé à l'avance" },
+                    { icon: <Shield size={16} className="text-[#F97316]" />, text: "Mise en relation gratuite" },
                     { icon: <CheckCircle size={16} className="text-[#F97316]" />, text: "Devis gratuit" },
                     { icon: <Leaf size={16} className="text-[#F97316]" />, text: "Déchets évacués" },
                   ].map((item) => (

@@ -33,18 +33,18 @@ export default function Footer() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
             <div className="flex flex-col items-center gap-2">
               <Shield size={24} className="text-accent" />
-              <span className="text-sm font-semibold text-white">Certifié</span>
-              <span className="text-xs">Nettoyage gouttières</span>
+              <span className="text-sm font-semibold text-white">Mise en relation</span>
+              <span className="text-xs">Gratuite, sans engagement</span>
             </div>
             <div className="flex flex-col items-center gap-2">
               <Award size={24} className="text-accent" />
-              <span className="text-sm font-semibold text-white">Assurance RC Pro</span>
-              <span className="text-xs">Couverture complète</span>
+              <span className="text-sm font-semibold text-white">Prix fixé</span>
+              <span className="text-xs">Avant l&apos;intervention</span>
             </div>
             <div className="flex flex-col items-center gap-2">
               <Clock size={24} className="text-accent" />
-              <span className="text-sm font-semibold text-white">Intervention 48h</span>
-              <span className="text-xs">Réponse rapide</span>
+              <span className="text-sm font-semibold text-white">19 communes</span>
+              <span className="text-xs">Région bruxelloise</span>
             </div>
             <div className="flex flex-col items-center gap-2">
               <Droplets size={24} className="text-accent" />
@@ -64,8 +64,8 @@ export default function Footer() {
               <Logo tone="light" />
             </div>
             <p className="text-sm mb-4 text-gray-400">
-              Vos gouttières nettoyées avant l&apos;automne — Devis gratuit, intervention
-              rapide, garantie satisfaction.
+              Mise en relation gratuite avec un professionnel indépendant du nettoyage de
+              gouttières, dans les 19 communes de Bruxelles. Devis gratuit.
             </p>
             <address className="not-italic space-y-2 text-sm">
               <div className="flex items-start gap-2">
@@ -194,7 +194,7 @@ export default function Footer() {
               <p className="text-xs mt-1">Lun–Ven : 7h30–18h</p>
               <p className="text-xs">Sam : 8h–14h</p>
               <p className="text-xs text-accent font-medium mt-1">
-                Urgences débouchage 7j/7
+                Débouchage : délai annoncé au téléphone
               </p>
             </div>
           </div>

@@ -11,12 +11,12 @@ import { localFaqs, localFaqSchema, getCommune } from "@/lib/communes"
 export const metadata: Metadata = {
   title: { absolute: "Nettoyage de gouttières à Woluwe-Saint-Lambert dès 80 €" },
   description:
-    "Nettoyage de gouttières à Woluwe-Saint-Lambert dès 80 € : villas, immeubles, parc Malou, Kapelleveld. Devis gratuit, sous 48h.",
+    "Nettoyage de gouttières à Woluwe-Saint-Lambert dès 80 € : villas, immeubles, parc Malou, Kapelleveld. Devis gratuit, prix fixé à l'avance.",
   alternates: { canonical: "https://www.nettoyage-gouttieres-bruxelles.be/communes/woluwe-saint-lambert" },
   keywords: ["nettoyage gouttières Woluwe-Saint-Lambert", "débouchage gouttières Woluwe-Saint-Lambert", "gouttières bouchées Woluwe-Saint-Lambert", "prix nettoyage gouttières Woluwe-Saint-Lambert"],
   openGraph: {
     title: "Nettoyage Gouttières Woluwe-Saint-Lambert — Devis Gratuit",
-    description: "Expert nettoyage gouttières à Woluwe-Saint-Lambert. Débouchage urgent, réparation, démoussage. Devis gratuit, intervention rapide.",
+    description: "Nettoyage de gouttières à Woluwe-Saint-Lambert : chéneaux et descentes vidés, écoulement testé. Devis gratuit, prix fixé à l'avance.",
     url: "https://www.nettoyage-gouttieres-bruxelles.be/communes/woluwe-saint-lambert",
     type: "website",
     images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "Nettoyage gouttières Woluwe-Saint-Lambert" }],
@@ -138,7 +138,7 @@ export default function WoluweStLambertPage() {
           <div className="divide-y divide-gray-100 border border-gray-100 rounded-2xl overflow-hidden">
             {[
               { icon: <Droplets size={22} className="text-[#1A4731]" />, href: "/services/nettoyage-gouttieres", title: "Nettoyage villas & immeubles", desc: "Nettoyage adapté à chaque type de bien : villa individuelle avec devis standard ou immeuble collectif avec rapport pour le syndic.", price: "dès 80€", tag: null },
-              { icon: <AlertTriangle size={22} className="text-red-500" />, href: "/services/debouchage-gouttieres", title: "Débouchage platanes urgence", desc: "Les feuilles de platanes forment des bouchons tenaces. Intervention 7j/7 pour les débordements actifs à Woluwe-Saint-Lambert.", price: "dès 120€", tag: "7j/7" },
+              { icon: <AlertTriangle size={22} className="text-red-500" />, href: "/services/debouchage-gouttieres", title: "Débouchage platanes urgence", desc: "Les feuilles de platanes forment des bouchons tenaces. Débouchage des descentes en cas de débordement à Woluwe-Saint-Lambert.", price: "dès 120€", tag: "Urgence" },
               { icon: <Wrench size={22} className="text-blue-600" />, href: "/services/reparation-gouttieres", title: "Réparation & remplacement", desc: "Gouttières vieillissantes des villas des années 60–70 ou systèmes collectifs d'immeubles. Devis sur mesure selon l'état et les matériaux.", price: "devis gratuit", tag: null },
               { icon: <Leaf size={22} className="text-yellow-600" />, href: "/services/demoussage-toiture", title: "Démoussage toitures", desc: "Traitement anti-mousse préventif après nettoyage. Protège votre toiture et prolonge la durée de vie des gouttières.", price: "devis gratuit", tag: null },
             ].map((s) => (
@@ -192,7 +192,7 @@ export default function WoluweStLambertPage() {
         <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8">
             <h2 className="text-2xl font-bold text-gray-900 mb-2">Devis gratuit — Woluwe-Saint-Lambert</h2>
-            <p className="text-gray-500 text-sm">Réponse sous 2h · ou appelez le <a href="tel:0451053370" className="font-bold text-[#1A4731] hover:text-[#F97316]">0451 05 33 70</a></p>
+            <p className="text-gray-500 text-sm">Devis gratuit et sans engagement · ou appelez le <a href="tel:0451053370" className="font-bold text-[#1A4731] hover:text-[#F97316]">0451 05 33 70</a></p>
           </div>
           <div className="bg-gray-50 border border-gray-200 rounded-2xl p-6 sm:p-8"><ContactForm defaultCommune="Woluwe-Saint-Lambert" /></div>
         </div>

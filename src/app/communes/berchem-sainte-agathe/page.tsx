@@ -11,12 +11,12 @@ import { localFaqs, localFaqSchema, getCommune } from "@/lib/communes"
 export const metadata: Metadata = {
   title: { absolute: "Nettoyage de gouttières à Berchem-Sainte-Agathe dès 80 €" },
   description:
-    "Nettoyage de gouttières à Berchem-Sainte-Agathe dès 80 € : villas des années 60–70, garages à toit plat. Devis gratuit, sous 48h.",
+    "Nettoyage de gouttières à Berchem-Sainte-Agathe dès 80 € : villas des années 60–70, garages à toit plat. Devis gratuit, prix fixé à l'avance.",
   alternates: { canonical: "https://www.nettoyage-gouttieres-bruxelles.be/communes/berchem-sainte-agathe" },
   keywords: ["nettoyage gouttières Berchem-Sainte-Agathe", "débouchage gouttières Berchem-Sainte-Agathe", "gouttières bouchées Berchem-Sainte-Agathe", "prix nettoyage gouttières Berchem-Sainte-Agathe"],
   openGraph: {
     title: "Nettoyage Gouttières Berchem-Sainte-Agathe — Devis Gratuit",
-    description: "Expert nettoyage gouttières à Berchem-Sainte-Agathe. Débouchage urgent, réparation, démoussage. Devis gratuit, intervention rapide.",
+    description: "Nettoyage de gouttières à Berchem-Sainte-Agathe : chéneaux et descentes vidés, écoulement testé. Devis gratuit, prix fixé à l'avance.",
     url: "https://www.nettoyage-gouttieres-bruxelles.be/communes/berchem-sainte-agathe",
     type: "website",
     images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "Nettoyage gouttières Berchem-Sainte-Agathe" }],
@@ -31,7 +31,7 @@ export default function BerchemSainteAgathePage() {
       { "@type": "Question", name: "Notre villa des années 70 a des gouttières d'origine — faut-il tout changer ?", acceptedAnswer: { "@type": "Answer", text: "Pas forcément tout. On inspecte d'abord : si les crochets tiennent, les joints sont étanches et le profil est droit, une réparation ciblée et un nettoyage peuvent suffire. Si plus de 40% du linéaire présente des problèmes, un remplacement complet est plus économique sur le long terme." } },
       { "@type": "Question", name: "Peut-on choisir la couleur des nouvelles gouttières ?", acceptedAnswer: { "@type": "Answer", text: "Oui, l'aluminium laqué est disponible dans de nombreuses teintes RAL. On s'assure que la nouvelle couleur s'harmonise avec votre façade et vos menuiseries. La teinte gris anthracite (RAL 7016) et le blanc cassé (RAL 9010) sont les plus demandées à Berchem." } },
       { "@type": "Question", name: "Combien de temps dure une intervention à Berchem-Sainte-Agathe ?", acceptedAnswer: { "@type": "Answer", text: "Pour une villa quatre façades standard, le nettoyage dure environ 2 à 3 heures. Un remplacement complet de gouttières prend généralement une journée complète. On vous donne une estimation précise lors du devis." } },
-      { "@type": "Question", name: "Intervenez-vous dans les lotissements de la chaussée de Gand ?", acceptedAnswer: { "@type": "Answer", text: "Oui, dans tout Berchem-Sainte-Agathe, y compris les lotissements le long de la chaussée de Gand et les rues résidentielles plus calmes. Délai habituel : 48 à 72 heures après contact." } },
+      { "@type": "Question", name: "Intervenez-vous dans les lotissements de la chaussée de Gand ?", acceptedAnswer: { "@type": "Answer", text: "Oui, dans tout Berchem-Sainte-Agathe, y compris les lotissements le long de la chaussée de Gand et les rues résidentielles plus calmes. Le délai d'intervention vous est annoncé lors du premier appel." } },
       ...localFaqSchema("berchem-sainte-agathe"),
     ],
   }
@@ -139,8 +139,8 @@ export default function BerchemSainteAgathePage() {
           <div className="divide-y divide-gray-100 border border-gray-100 rounded-2xl overflow-hidden">
             {[
               { icon: <Droplets size={22} className="text-[#1A4731]" />, href: "/services/nettoyage-gouttieres", title: "Nettoyage villas 4 façades", desc: "Nettoyage complet des 4 côtés de la villa, toutes descentes incluses. Rapport d'état pour identifier les sections en fin de vie.", price: "dès 80€", tag: null },
-              { icon: <AlertTriangle size={22} className="text-red-500" />, href: "/services/debouchage-gouttieres", title: "Débouchage urgence 7j/7", desc: "Intervention rapide 7j/7 pour les débordements actifs à Berchem-Sainte-Agathe. On protège vos façades et fondations contre les dégâts des eaux.", price: "dès 120€", tag: "7j/7" },
-              { icon: <Wrench size={22} className="text-blue-600" />, href: "/services/reparation-gouttieres", title: "Remplacement aluminium vieillissant", desc: "Remplacement complet ou par sections de vos anciennes gouttières en aluminium. Aluminium moderne laqué, garantie 20 ans.", price: "devis gratuit", tag: null },
+              { icon: <AlertTriangle size={22} className="text-red-500" />, href: "/services/debouchage-gouttieres", title: "Débouchage en urgence", desc: "Débouchage en cas de débordement à Berchem-Sainte-Agathe, pour protéger façades et fondations des dégâts des eaux.", price: "dès 120€", tag: "Urgence" },
+              { icon: <Wrench size={22} className="text-blue-600" />, href: "/services/reparation-gouttieres", title: "Remplacement aluminium vieillissant", desc: "Remplacement complet ou par sections de vos anciennes gouttières en aluminium. Aluminium laqué, garanties précisées dans le devis.", price: "devis gratuit", tag: null },
               { icon: <Leaf size={22} className="text-yellow-600" />, href: "/services/demoussage-toiture", title: "Démoussage après nettoyage", desc: "Traitement anti-mousse préventif après nettoyage. Idéal pour les nouvelles gouttières posées — protège l'investissement 3 à 5 ans.", price: "devis gratuit", tag: null },
             ].map((s) => (
               <Link key={s.href} href={s.href} className="flex items-start gap-5 p-5 hover:bg-gray-50 transition-colors group">
@@ -170,7 +170,7 @@ export default function BerchemSainteAgathePage() {
               { q: "Notre villa des années 70 a des gouttières d'origine — faut-il tout changer ?", a: "Pas forcément tout. On inspecte d'abord : si les crochets tiennent, les joints sont étanches et le profil est droit, une réparation ciblée et un nettoyage peuvent suffire. Si plus de 40% du linéaire présente des problèmes, un remplacement complet est plus économique sur le long terme." },
               { q: "Peut-on choisir la couleur des nouvelles gouttières ?", a: "Oui, l'aluminium laqué est disponible dans de nombreuses teintes RAL. On s'assure que la nouvelle couleur s'harmonise avec votre façade et vos menuiseries. La teinte gris anthracite (RAL 7016) et le blanc cassé (RAL 9010) sont les plus demandées à Berchem." },
               { q: "Combien de temps dure une intervention à Berchem-Sainte-Agathe ?", a: "Pour une villa quatre façades standard, le nettoyage dure environ 2 à 3 heures. Un remplacement complet de gouttières prend généralement une journée complète. On vous donne une estimation précise lors du devis." },
-              { q: "Intervenez-vous dans les lotissements de la chaussée de Gand ?", a: "Oui, dans tout Berchem-Sainte-Agathe, y compris les lotissements le long de la chaussée de Gand et les rues résidentielles plus calmes. Délai habituel : 48 à 72 heures après contact." },
+              { q: "Intervenez-vous dans les lotissements de la chaussée de Gand ?", a: "Oui, dans tout Berchem-Sainte-Agathe, y compris les lotissements le long de la chaussée de Gand et les rues résidentielles plus calmes. Le délai d'intervention vous est annoncé lors du premier appel." },
               ...localFaqs("berchem-sainte-agathe"),
             ].map((faq, i) => (
               <div key={i} className="bg-white rounded-xl border border-gray-100 p-6">
@@ -193,7 +193,7 @@ export default function BerchemSainteAgathePage() {
         <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8">
             <h2 className="text-2xl font-bold text-gray-900 mb-2">Devis gratuit — Berchem-Sainte-Agathe</h2>
-            <p className="text-gray-500 text-sm">Réponse sous 2h · ou appelez le <a href="tel:0451053370" className="font-bold text-[#1A4731] hover:text-[#F97316]">0451 05 33 70</a></p>
+            <p className="text-gray-500 text-sm">Devis gratuit et sans engagement · ou appelez le <a href="tel:0451053370" className="font-bold text-[#1A4731] hover:text-[#F97316]">0451 05 33 70</a></p>
           </div>
           <div className="bg-gray-50 border border-gray-200 rounded-2xl p-6 sm:p-8"><ContactForm defaultCommune="Berchem-Sainte-Agathe" /></div>
         </div>

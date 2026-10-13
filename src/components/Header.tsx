@@ -49,7 +49,7 @@ export default function Header() {
         <div className="mx-auto flex max-w-7xl items-center justify-center gap-6 px-4 py-2 sm:px-6 md:justify-between lg:px-8">
           <p className="flex items-center gap-2">
             <span className="h-1.5 w-1.5 rounded-full bg-[#F97316]" aria-hidden />
-            Devis gratuit · intervention sous 48h · urgences 7j/7
+            Devis gratuit · prix fixé à l'avance · 19 communes
           </p>
           <div className="hidden items-center gap-5 md:flex">
             <span className="flex items-center gap-1.5"><Clock size={13} className="text-[#7fd8a4]" />Lun–ven 7h30–18h · sam 8h–14h</span>

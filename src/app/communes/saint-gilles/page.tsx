@@ -11,12 +11,12 @@ import { localFaqs, localFaqSchema, getCommune } from "@/lib/communes"
 export const metadata: Metadata = {
   title: { absolute: "Nettoyage de gouttières à Saint-Gilles dès 80 €" },
   description:
-    "Nettoyage de gouttières à Saint-Gilles dès 80 € : chéneaux de corniche, zinc Art nouveau, cours étroites. Devis gratuit, intervention sous 48h.",
+    "Nettoyage de gouttières à Saint-Gilles dès 80 € : chéneaux de corniche, zinc Art nouveau, cours étroites. Devis gratuit, prix fixé à l'avance.",
   alternates: { canonical: "https://www.nettoyage-gouttieres-bruxelles.be/communes/saint-gilles" },
   keywords: ["nettoyage gouttières Saint-Gilles", "débouchage gouttières Saint-Gilles", "gouttières bouchées Saint-Gilles", "prix nettoyage gouttières Saint-Gilles"],
   openGraph: {
     title: "Nettoyage Gouttières Saint-Gilles — Devis Gratuit",
-    description: "Expert nettoyage gouttières à Saint-Gilles. Débouchage urgent, réparation, démoussage. Devis gratuit, intervention rapide.",
+    description: "Nettoyage de gouttières à Saint-Gilles : chéneaux et descentes vidés, écoulement testé. Devis gratuit, prix fixé à l'avance.",
     url: "https://www.nettoyage-gouttieres-bruxelles.be/communes/saint-gilles",
     type: "website",
     images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "Nettoyage gouttières Saint-Gilles" }],
@@ -30,7 +30,7 @@ export default function SaintGillesPage() {
     mainEntity: [
       { "@type": "Question", name: "Comment nettoyer le zinc ornemental sans l'endommager ?", acceptedAnswer: { "@type": "Answer", text: "On utilise exclusivement des outils en plastique souple ou des brosses non-abrasives. Aucun métal sur le zinc — les rayures accélèrent la corrosion. Pour les profils complexes, un nettoyage à la main avec des chiffons humides et un aspirateur industriel." } },
       { "@type": "Question", name: "Nos gouttières en zinc de 1905 sont-elles classées ?", acceptedAnswer: { "@type": "Answer", text: "Les façades peuvent être classées, mais les gouttières elles-mêmes rarement. Cependant, pour les biens à valeur patrimoniale, on recommande de consulter le permis d'urbanisme avant tout remplacement et de privilégier les matériaux d'origine (du zinc plutôt que du PVC)." } },
-      { "@type": "Question", name: "Intervenez-vous au Parvis de Saint-Gilles et chaussée de Waterloo ?", acceptedAnswer: { "@type": "Answer", text: "Oui, dans toute la commune. On connaît bien les contraintes du bâti saint-gillois — ruelles étroites, cours intérieures partagées, accès en étage depuis l'intérieur. On s'adapte à chaque configuration." } },
+      { "@type": "Question", name: "Intervenez-vous au Parvis de Saint-Gilles et chaussée de Waterloo ?", acceptedAnswer: { "@type": "Answer", text: "Oui, dans toute la commune. Ruelles étroites, cours intérieures partagées, accès en étage depuis l'intérieur : l'accès est vérifié lors du devis." } },
       { "@type": "Question", name: "Les acacias de nos rues bouchent-ils vraiment les gouttières au printemps ?", acceptedAnswer: { "@type": "Answer", text: "Oui, leurs petites fleurs blanches tombent en masse en mai et forment des bouchons compacts. Combiné aux bourgeons collants des tilleuls voisins, un nettoyage de mai après la floraison est souvent aussi important que celui de novembre." } },
       ...localFaqSchema("saint-gilles"),
     ],
@@ -138,7 +138,7 @@ export default function SaintGillesPage() {
           <div className="divide-y divide-gray-100 border border-gray-100 rounded-2xl overflow-hidden">
             {[
               { icon: <Droplets size={22} className="text-[#1A4731]" />, href: "/services/nettoyage-gouttieres", title: "Nettoyage façades patrimoine", desc: "Nettoyage soigneux des gouttières ornementales. Outils non-abrasifs, accès cours arrière étroites, aucun risque pour les façades classées.", price: "dès 80€", tag: null },
-              { icon: <AlertTriangle size={22} className="text-red-500" />, href: "/services/debouchage-gouttieres", title: "Débouchage urgence 7j/7", desc: "En cas de débordement menaçant les façades Art nouveau, on intervient le jour même. Chaque minute compte pour protéger le zinc ornemental.", price: "dès 120€", tag: "7j/7" },
+              { icon: <AlertTriangle size={22} className="text-red-500" />, href: "/services/debouchage-gouttieres", title: "Débouchage en urgence", desc: "En cas de débordement menaçant les façades Art nouveau, appelez sans attendre : le délai d'intervention vous est annoncé au téléphone.", price: "dès 120€", tag: "Urgence" },
               { icon: <Wrench size={22} className="text-blue-600" />, href: "/services/reparation-gouttieres", title: "Restauration zinc Art nouveau", desc: "Soudure à l'étain, réparation des joints, remplacement de sections avec profils assortis. On préserve l'authenticité architecturale de votre bien.", price: "devis gratuit", tag: null },
               { icon: <Leaf size={22} className="text-yellow-600" />, href: "/services/demoussage-toiture", title: "Démoussage toitures ardoises", desc: "Traitement préventif sur les toits en ardoises des maisons de maître. Protège la couverture et les gouttières ornementales en zinc.", price: "devis gratuit", tag: null },
             ].map((s) => (
@@ -168,7 +168,7 @@ export default function SaintGillesPage() {
             {[
               { q: "Comment nettoyer le zinc ornemental sans l'endommager ?", a: "On utilise exclusivement des outils en plastique souple ou des brosses non-abrasives. Aucun métal sur le zinc — les rayures accélèrent la corrosion. Pour les profils complexes, un nettoyage à la main avec des chiffons humides et un aspirateur industriel." },
               { q: "Nos gouttières en zinc de 1905 sont-elles classées ?", a: "Les façades peuvent être classées, mais les gouttières elles-mêmes rarement. Cependant, pour les biens à valeur patrimoniale, on recommande de consulter le permis d'urbanisme avant tout remplacement et de privilégier les matériaux d'origine (du zinc plutôt que du PVC)." },
-              { q: "Intervenez-vous au Parvis de Saint-Gilles et chaussée de Waterloo ?", a: "Oui, dans toute la commune. On connaît bien les contraintes du bâti saint-gillois — ruelles étroites, cours intérieures partagées, accès en étage depuis l'intérieur. On s'adapte à chaque configuration." },
+              { q: "Intervenez-vous au Parvis de Saint-Gilles et chaussée de Waterloo ?", a: "Oui, dans toute la commune. Ruelles étroites, cours intérieures partagées, accès en étage depuis l'intérieur : l'accès est vérifié lors du devis." },
               { q: "Les acacias de nos rues bouchent-ils vraiment les gouttières au printemps ?", a: "Oui, leurs petites fleurs blanches tombent en masse en mai et forment des bouchons compacts. Combiné aux bourgeons collants des tilleuls voisins, un nettoyage de mai après la floraison est souvent aussi important que celui de novembre." },
               ...localFaqs("saint-gilles"),
             ].map((faq, i) => (
@@ -192,7 +192,7 @@ export default function SaintGillesPage() {
         <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8">
             <h2 className="text-2xl font-bold text-gray-900 mb-2">Devis gratuit — Saint-Gilles</h2>
-            <p className="text-gray-500 text-sm">Réponse sous 2h · ou appelez le <a href="tel:0451053370" className="font-bold text-[#1A4731] hover:text-[#F97316]">0451 05 33 70</a></p>
+            <p className="text-gray-500 text-sm">Devis gratuit et sans engagement · ou appelez le <a href="tel:0451053370" className="font-bold text-[#1A4731] hover:text-[#F97316]">0451 05 33 70</a></p>
           </div>
           <div className="bg-gray-50 border border-gray-200 rounded-2xl p-6 sm:p-8"><ContactForm defaultCommune="Saint-Gilles" /></div>
         </div>

@@ -245,7 +245,7 @@ export default function BlogAutomneGouttieresBruxellesPage() {
               ))}
             </ul>
             <p>
-              Un professionnel dispose du matériel adapté (échelles, équipement de sécurité, outils spécialisés), de l'expertise pour diagnostiquer les problèmes cachés, et de l'assurance RC professionnelle qui vous protège en cas d'incident. Investir dans un nettoyage professionnel une fois par an coûte généralement 10 à 20 fois moins cher que les réparations de dégâts des eaux causés par des gouttières négligées.
+              Un professionnel dispose du matériel adapté (échelles, équipement de sécurité, outils spécialisés), de l'expertise pour diagnostiquer les problèmes cachés, et normalement d'une assurance en responsabilité civile professionnelle (demandez l'attestation avec le devis). Un nettoyage annuel coûte bien moins cher que la réparation de dégâts des eaux causés par des gouttières négligées.
             </p>
             <p>
               Pour faciliter votre démarche, notre article sur le{" "}
@@ -286,8 +286,8 @@ export default function BlogAutomneGouttieresBruxellesPage() {
                 },
                 {
                   type: "Débouchage urgence",
-                  price: "120 — 220 €",
-                  detail: "Intervention prioritaire 7j/7, descentes haute pression",
+                  price: "120 — 200 €",
+                  detail: "Descentes débouchées à haute pression, test d\'écoulement",
                 },
               ].map((item) => (
                 <div key={item.type} className="bg-gray-50 rounded-xl p-4 border border-gray-100">
@@ -353,7 +353,7 @@ export default function BlogAutomneGouttieresBruxellesPage() {
               Le coût d'un nettoyage préventif — entre 80 et 200€ selon le type de bâtiment — est sans commune mesure avec celui d'une intervention d'urgence suite à des dégâts des eaux, qui peut rapidement atteindre plusieurs milliers d'euros (réparation de plafond, traitement contre les moisissures, séchage des murs, etc.).
             </p>
             <p>
-              Vous souhaitez planifier un nettoyage avant l'automne ? Contactez-nous dès maintenant pour un devis gratuit. Notre équipe intervient dans les 19 communes de la région bruxelloise et peut planifier votre intervention dans les 48 heures.
+              Vous souhaitez planifier un nettoyage avant l'automne ? Contactez-nous dès maintenant pour un devis gratuit. Votre demande est transmise à un professionnel indépendant qui intervient dans les 19 communes de la région bruxelloise ; la date d'intervention se fixe avec lui.
             </p>
           </div>
 
@@ -362,7 +362,7 @@ export default function BlogAutomneGouttieresBruxellesPage() {
             <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
               <div>
                 <h3 className="text-xl font-bold mb-2">Planifiez votre nettoyage avant l'automne</h3>
-                <p className="text-gray-300 text-sm">Devis gratuit — intervention dans les 48h — techniciens certifiés RC Pro</p>
+                <p className="text-gray-300 text-sm">Devis gratuit — prix fixé à l'avance — 19 communes de Bruxelles</p>
               </div>
               <a
                 href="tel:0451053370"
@@ -383,13 +383,13 @@ export default function BlogAutomneGouttieresBruxellesPage() {
             <div>
               <h2 className="text-2xl font-bold text-gray-900 mb-4">Demander un devis gratuit</h2>
               <p className="text-gray-600 mb-6 leading-relaxed">
-                Prêt à préparer vos gouttières avant l'automne ? Remplissez le formulaire ou appelez-nous directement. Un expert vous répond sous 2h en heures ouvrables.
+                Prêt à préparer vos gouttières avant l'automne ? Remplissez le formulaire ou appelez-nous directement. Un professionnel indépendant vous rappelle pour établir le devis.
               </p>
               <div className="space-y-3">
                 {[
                   "Nettoyage complet gouttières + descentes",
-                  "Inspection et rapport d'état inclus",
-                  "Intervention sous 48h garantie",
+                  "État des gouttières constaté sur place",
+                  "Date d'intervention convenue avec vous",
                   "Devis 100% gratuit et sans engagement",
                 ].map((item) => (
                   <div key={item} className="flex items-center gap-3">
@@ -403,7 +403,7 @@ export default function BlogAutomneGouttieresBruxellesPage() {
                 <a href="tel:0451053370" className="flex items-center gap-2 text-[#F97316] font-bold text-lg hover:text-orange-400 transition-colors">
                   <Phone size={20} />0451 05 33 70
                 </a>
-                <p className="text-gray-400 text-xs mt-1">Lun–Ven 7h30–18h | Sam 8h–14h | Urgences 7j/7</p>
+                <p className="text-gray-400 text-xs mt-1">Lun–Ven 7h30–18h | Sam 8h–14h</p>
               </div>
             </div>
             <div className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100">

@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     template: "%s | Gouttières Bruxelles",
   },
   description:
-    "Nettoyage de gouttières à Bruxelles. Prix dès 80 € — débouchage, réparation, démoussage toiture. Devis gratuit, intervention sous 48h. Appelez le 0451 05 33 70.",
+    "Nettoyage de gouttières à Bruxelles. Prix dès 80 € — débouchage, réparation, démoussage toiture. Devis gratuit, prix fixé à l'avance. Appelez le 0451 05 33 70.",
   keywords: [
     "nettoyage gouttières Bruxelles", "débouchage gouttières Bruxelles", "réparation gouttières Bruxelles",
     "démoussage toiture Bruxelles", "gouttières bouchées Bruxelles", "nettoyage gouttières urgence",
@@ -56,7 +56,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Nettoyage Gouttières Bruxelles | Devis Gratuit",
     description:
-      "Expert nettoyage gouttières à Bruxelles. Devis gratuit, intervention 48h, garantie satisfaction.",
+      "Nettoyage de gouttières à Bruxelles dès 80 € : chéneaux et descentes vidés, écoulement testé. Devis gratuit.",
     url: DOMAIN,
     siteName: "Nettoyage Gouttières Bruxelles",
     locale: "fr_BE",
@@ -66,14 +66,14 @@ export const metadata: Metadata = {
         url: "/opengraph-image",
         width: 1200,
         height: 630,
-        alt: "Nettoyage Gouttières Bruxelles — Devis Gratuit, Intervention 48h",
+        alt: "Nettoyage Gouttières Bruxelles — Devis Gratuit",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Nettoyage Gouttières Bruxelles | Devis Gratuit",
-    description: "Expert nettoyage gouttières à Bruxelles. Devis gratuit, intervention 48h.",
+    description: "Nettoyage de gouttières à Bruxelles dès 80 €, descentes comprises. Devis gratuit.",
     images: ["/opengraph-image"],
   },
   robots: {

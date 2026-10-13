@@ -1,6 +1,6 @@
 import { ImageResponse } from "next/og";
 
-export const alt = "Nettoyage Gouttières Bruxelles — devis gratuit, intervention sous 48h";
+export const alt = "Nettoyage Gouttières Bruxelles — devis gratuit, prix fixé à l'avance";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -59,7 +59,7 @@ export default function OgImage() {
             Devis gratuit
           </div>
           <div style={{ display: "flex", border: "2px solid rgba(255,255,255,0.3)", color: "white", borderRadius: "18px", padding: "16px 30px", fontSize: "30px", fontWeight: 700 }}>
-            Intervention sous 48h
+            19 communes de Bruxelles
           </div>
         </div>
       </div>

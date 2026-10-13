@@ -117,7 +117,7 @@ export default function DemoussageToiture() {
             <p className="text-gray-300 text-lg mb-6 leading-relaxed">
               Le démoussage de toiture à Bruxelles retire mousses et lichens des tuiles ou ardoises
               au brossage, puis applique un traitement anti-mousse biodégradable qui protège la
-              couverture 3 à 5 ans. Comptez 8 à 20 €/m² (prix observés en Belgique, relevé le 11/10/2026), gouttières nettoyées le jour même. Devis
+              couverture 3 à 5 ans. Comptez 8 à 20 €/m² (prix observés en Belgique, relevé le 11/10/2026), gouttières nettoyées lors de la même visite. Devis
               gratuit, prix fixé avant travaux.
             </p>
             <a href="tel:0451053370" className="inline-flex items-center gap-2 bg-[#F97316] hover:bg-orange-500 text-white font-bold px-6 py-3 rounded-xl transition-colors">

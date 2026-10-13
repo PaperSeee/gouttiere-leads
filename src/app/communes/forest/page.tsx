@@ -11,12 +11,12 @@ import { localFaqs, localFaqSchema, getCommune } from "@/lib/communes"
 export const metadata: Metadata = {
   title: { absolute: "Nettoyage de gouttières à Forest dès 80 €" },
   description:
-    "Nettoyage de gouttières à Forest dès 80 € : rangées de maisons en brique, zinc d'époque, parcs Duden et de Forest. Devis gratuit, sous 48h.",
+    "Nettoyage de gouttières à Forest dès 80 € : rangées de maisons en brique, zinc d'époque, parcs Duden et de Forest. Devis gratuit, prix fixé à l'avance.",
   alternates: { canonical: "https://www.nettoyage-gouttieres-bruxelles.be/communes/forest" },
   keywords: ["nettoyage gouttières Forest", "débouchage gouttières Forest", "gouttières bouchées Forest", "prix nettoyage gouttières Forest"],
   openGraph: {
     title: "Nettoyage Gouttières Forest — Devis Gratuit",
-    description: "Expert nettoyage gouttières à Forest. Débouchage urgent, réparation, démoussage. Devis gratuit, intervention rapide.",
+    description: "Nettoyage de gouttières à Forest : chéneaux et descentes vidés, écoulement testé. Devis gratuit, prix fixé à l'avance.",
     url: "https://www.nettoyage-gouttieres-bruxelles.be/communes/forest",
     type: "website",
     images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "Nettoyage gouttières Forest" }],
@@ -31,7 +31,7 @@ export default function ForestPage() {
       { "@type": "Question", name: "Peut-on coordonner le nettoyage avec notre voisin mitoyen ?", acceptedAnswer: { "@type": "Answer", text: "Oui, et c'est même conseillé ! Pour les maisons mitoyennes, on propose un tarif légèrement réduit quand on fait deux maisons le même jour. Cela permet aussi de traiter les descentes partagées en une seule intervention efficace." } },
       { "@type": "Question", name: "Nos gouttières en zinc des années 30 valent-elles encore la peine ?", acceptedAnswer: { "@type": "Answer", text: "Ça dépend de l'état. Le zinc des années 30 peut encore durer 10–20 ans si l'oxydation est légère et les profils rectilignes. Un diagnostic gratuit permet de trancher — si 60% du linéaire est en bon état, une réparation ciblée reste économique." } },
       { "@type": "Question", name: "Les ardoises du toit causent-elles des problèmes de gouttières ?", acceptedAnswer: { "@type": "Answer", text: "Les mousses sur ardoises migrent vers les gouttières et forment des bouchons compacts. Les ardoises brisées créent aussi des points d'infiltration. Un démoussage préventif protège les deux à la fois." } },
-      { "@type": "Question", name: "Intervenez-vous près du parc de Forest et du parc Duden ?", acceptedAnswer: { "@type": "Answer", text: "Oui, dans toutes les rues de Forest, y compris les avenues bordées d'arbres qui génèrent le plus de feuilles. On connaît bien ces zones et leurs spécificités d'accès." } },
+      { "@type": "Question", name: "Intervenez-vous près du parc de Forest et du parc Duden ?", acceptedAnswer: { "@type": "Answer", text: "Oui, dans toutes les rues de Forest, y compris les avenues bordées d'arbres qui génèrent le plus de feuilles. L'accès est vérifié lors du devis." } },
       ...localFaqSchema("forest"),
     ],
   }
@@ -137,7 +137,7 @@ export default function ForestPage() {
           <div className="divide-y divide-gray-100 border border-gray-100 rounded-2xl overflow-hidden">
             {[
               { icon: <Droplets size={22} className="text-[#1A4731]" />, href: "/services/nettoyage-gouttieres", title: "Nettoyage maisons mitoyennes", desc: "Nettoyage complet gouttières et descentes. Tarif groupé disponible si vous vous coordonnez avec votre voisin — idéal pour les maisons mitoyennes.", price: "dès 80€", tag: "Tarif groupé dispo" },
-              { icon: <AlertTriangle size={22} className="text-red-500" />, href: "/services/debouchage-gouttieres", title: "Débouchage urgence 7j/7", desc: "Intervention rapide pour protéger les façades en brique rouge, particulièrement sensibles aux taches d'humidité en cas de débordement.", price: "dès 120€", tag: "7j/7" },
+              { icon: <AlertTriangle size={22} className="text-red-500" />, href: "/services/debouchage-gouttieres", title: "Débouchage en urgence", desc: "Intervention rapide pour protéger les façades en brique rouge, particulièrement sensibles aux taches d'humidité en cas de débordement.", price: "dès 120€", tag: "Urgence" },
               { icon: <Wrench size={22} className="text-blue-600" />, href: "/services/reparation-gouttieres", title: "Réparation zinc 1900–1940", desc: "Soudure et réparation du zinc historique. Si l'oxydation est trop avancée, remplacement par aluminium laqué assorti à l'esthétique originale.", price: "devis gratuit", tag: null },
               { icon: <Leaf size={22} className="text-yellow-600" />, href: "/services/demoussage-toiture", title: "Démoussage toitures ardoises", desc: "Les toitures en ardoises de Forest accumulent les mousses qui migrent vers les gouttières. Démoussage mécanique doux + traitement préventif.", price: "devis gratuit", tag: null },
             ].map((s) => (
@@ -168,7 +168,7 @@ export default function ForestPage() {
               { q: "Peut-on coordonner le nettoyage avec notre voisin mitoyen ?", a: "Oui, et c'est même conseillé ! Pour les maisons mitoyennes, on propose un tarif légèrement réduit quand on fait deux maisons le même jour. Cela permet aussi de traiter les descentes partagées en une seule intervention efficace." },
               { q: "Nos gouttières en zinc des années 30 valent-elles encore la peine ?", a: "Ça dépend de l'état. Le zinc des années 30 peut encore durer 10–20 ans si l'oxydation est légère et les profils rectilignes. Un diagnostic gratuit permet de trancher — si 60% du linéaire est en bon état, une réparation ciblée reste économique." },
               { q: "Les ardoises du toit causent-elles des problèmes de gouttières ?", a: "Les mousses sur ardoises migrent vers les gouttières et forment des bouchons compacts. Les ardoises brisées créent aussi des points d'infiltration. Un démoussage préventif protège les deux à la fois." },
-              { q: "Intervenez-vous près du parc de Forest et du parc Duden ?", a: "Oui, dans toutes les rues de Forest, y compris les avenues bordées d'arbres qui génèrent le plus de feuilles. On connaît bien ces zones et leurs spécificités d'accès." },
+              { q: "Intervenez-vous près du parc de Forest et du parc Duden ?", a: "Oui, dans toutes les rues de Forest, y compris les avenues bordées d'arbres qui génèrent le plus de feuilles. L'accès est vérifié lors du devis." },
               ...localFaqs("forest"),
             ].map((faq, i) => (
               <div key={i} className="bg-white rounded-xl border border-gray-100 p-6">
@@ -191,7 +191,7 @@ export default function ForestPage() {
         <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8">
             <h2 className="text-2xl font-bold text-gray-900 mb-2">Devis gratuit — Forest</h2>
-            <p className="text-gray-500 text-sm">Réponse sous 2h · ou appelez le <a href="tel:0451053370" className="font-bold text-[#1A4731] hover:text-[#F97316]">0451 05 33 70</a></p>
+            <p className="text-gray-500 text-sm">Devis gratuit et sans engagement · ou appelez le <a href="tel:0451053370" className="font-bold text-[#1A4731] hover:text-[#F97316]">0451 05 33 70</a></p>
           </div>
           <div className="bg-gray-50 border border-gray-200 rounded-2xl p-6 sm:p-8"><ContactForm defaultCommune="Forest" /></div>
         </div>

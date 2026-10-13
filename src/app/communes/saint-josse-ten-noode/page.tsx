@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   keywords: ["nettoyage gouttières Saint-Josse", "débouchage gouttières Saint-Josse", "gouttières bouchées Saint-Josse", "prix nettoyage gouttières Saint-Josse"],
   openGraph: {
     title: "Nettoyage Gouttières Saint-Josse — Devis Gratuit",
-    description: "Expert nettoyage gouttières à Saint-Josse. Débouchage urgent, réparation, démoussage. Devis gratuit, intervention rapide.",
+    description: "Nettoyage de gouttières à Saint-Josse : chéneaux et descentes vidés, écoulement testé. Devis gratuit, prix fixé à l'avance.",
     url: "https://www.nettoyage-gouttieres-bruxelles.be/communes/saint-josse-ten-noode",
     type: "website",
     images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "Nettoyage gouttières Saint-Josse" }],
@@ -139,7 +139,7 @@ export default function SaintJossePage() {
           <div className="divide-y divide-gray-100 border border-gray-100 rounded-2xl overflow-hidden">
             {[
               { icon: <Droplets size={22} className="text-[#1A4731]" />, href: "/services/nettoyage-gouttieres", title: "Nettoyage immeubles en hauteur", desc: "Intervention adaptée aux immeubles R+4 et R+5. Rapport d'état complet pour le syndic ou propriétaire. Accès toiture évalué en amont.", price: "dès 80€", tag: null },
-              { icon: <AlertTriangle size={22} className="text-red-500" />, href: "/services/debouchage-gouttieres", title: "Débouchage gargouilles urgence", desc: "Gargouille bouchée sur toiture plate ? L'eau s'accumule et infiltre en quelques heures. On intervient 7j/7 en urgence.", price: "dès 120€", tag: "7j/7" },
+              { icon: <AlertTriangle size={22} className="text-red-500" />, href: "/services/debouchage-gouttieres", title: "Débouchage gargouilles urgence", desc: "Gargouille bouchée sur toiture plate ? L'eau s'accumule et infiltre en quelques heures. Un débouchage se demande sans attendre.", price: "dès 120€", tag: "Urgence" },
               { icon: <Wrench size={22} className="text-blue-600" />, href: "/services/reparation-gouttieres", title: "Réparation systèmes collectifs", desc: "Remplacement de sections de gouttières ou de descentes sur immeubles. Coordination avec le syndic et rapport pour la copropriété.", price: "devis gratuit", tag: null },
               { icon: <Leaf size={22} className="text-yellow-600" />, href: "/services/demoussage-toiture", title: "Démoussage toiture et toits plats à Saint-Josse", desc: "Nettoyage et traitement des toitures plates ou terrasses : évacuation des sédiments, démoussage des acrotères, test des gargouilles.", price: "devis gratuit", tag: null },
             ].map((s) => (
@@ -193,7 +193,7 @@ export default function SaintJossePage() {
         <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8">
             <h2 className="text-2xl font-bold text-gray-900 mb-2">Devis gratuit — Saint-Josse-ten-Noode</h2>
-            <p className="text-gray-500 text-sm">Réponse sous 2h · ou appelez le <a href="tel:0451053370" className="font-bold text-[#1A4731] hover:text-[#F97316]">0451 05 33 70</a></p>
+            <p className="text-gray-500 text-sm">Devis gratuit et sans engagement · ou appelez le <a href="tel:0451053370" className="font-bold text-[#1A4731] hover:text-[#F97316]">0451 05 33 70</a></p>
           </div>
           <div className="bg-gray-50 border border-gray-200 rounded-2xl p-6 sm:p-8"><ContactForm defaultCommune="Saint-Josse-ten-Noode" /></div>
         </div>

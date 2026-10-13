@@ -11,12 +11,12 @@ import { localFaqs, localFaqSchema, getCommune } from "@/lib/communes"
 export const metadata: Metadata = {
   title: { absolute: "Nettoyage de gouttières à Woluwe-Saint-Pierre dès 80 €" },
   description:
-    "Nettoyage de gouttières à Woluwe-Saint-Pierre dès 80 € : grandes villas, parc de Woluwe, Stockel. Devis gratuit, sous 48h.",
+    "Nettoyage de gouttières à Woluwe-Saint-Pierre dès 80 € : grandes villas, parc de Woluwe, Stockel. Devis gratuit, prix fixé à l'avance.",
   alternates: { canonical: "https://www.nettoyage-gouttieres-bruxelles.be/communes/woluwe-saint-pierre" },
   keywords: ["nettoyage gouttières Woluwe-Saint-Pierre", "débouchage gouttières Woluwe-Saint-Pierre", "gouttières bouchées Woluwe-Saint-Pierre", "prix nettoyage gouttières Woluwe-Saint-Pierre"],
   openGraph: {
     title: "Nettoyage Gouttières Woluwe-Saint-Pierre — Devis Gratuit",
-    description: "Expert nettoyage gouttières à Woluwe-Saint-Pierre. Débouchage urgent, réparation, démoussage. Devis gratuit, intervention rapide.",
+    description: "Nettoyage de gouttières à Woluwe-Saint-Pierre : chéneaux et descentes vidés, écoulement testé. Devis gratuit, prix fixé à l'avance.",
     url: "https://www.nettoyage-gouttieres-bruxelles.be/communes/woluwe-saint-pierre",
     type: "website",
     images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "Nettoyage gouttières Woluwe-Saint-Pierre" }],
@@ -30,7 +30,7 @@ export default function WoluweStPierrePage() {
     mainEntity: [
       { "@type": "Question", name: "Les samares d'érables causent-elles vraiment des bouchons ?", acceptedAnswer: { "@type": "Answer", text: "Oui, c'est l'un des débris végétaux les plus problématiques. Les samares sont assez petites pour pénétrer dans les descentes et y former des bouchons compacts. Elles tombent au printemps puis en automne — deux passages annuels sont recommandés pour les propriétés proches des parcs." } },
       { "@type": "Question", name: "Notre villa a plus de 80 mètres de gouttières. Quel tarif ?", acceptedAnswer: { "@type": "Answer", text: "Pour les grandes propriétés, on établit un devis sur mesure tenant compte du linéaire exact, de la hauteur, des matériaux et de l'accessibilité. Deux techniciens pour les grandes interventions. Appelez pour un diagnostic gratuit." } },
-      { "@type": "Question", name: "Intervenez-vous avenue de Tervueren et avenue de Broqueville ?", acceptedAnswer: { "@type": "Answer", text: "Oui, dans toute Woluwe-Saint-Pierre, y compris les grandes avenues résidentielles. On connaît bien les propriétés de cette commune et leurs spécificités d'accès." } },
+      { "@type": "Question", name: "Intervenez-vous avenue de Tervueren et avenue de Broqueville ?", acceptedAnswer: { "@type": "Answer", text: "Oui, dans toute Woluwe-Saint-Pierre, y compris les grandes avenues résidentielles. L'accès est vérifié lors du devis." } },
       { "@type": "Question", name: "Faut-il aussi nettoyer au printemps à WSP ?", acceptedAnswer: { "@type": "Answer", text: "Pour les propriétés proches des parcs, oui. Les marronniers du parc de Woluwe et les érables libèrent des pollens, bourgeons et graines en mai qui s'accumulent dans les gouttières. Un passage de printemps complète utilement le nettoyage automnal." } },
       ...localFaqSchema("woluwe-saint-pierre"),
     ],
@@ -137,7 +137,7 @@ export default function WoluweStPierrePage() {
           <div className="divide-y divide-gray-100 border border-gray-100 rounded-2xl overflow-hidden">
             {[
               { icon: <Droplets size={22} className="text-[#1A4731]" />, href: "/services/nettoyage-gouttieres", title: "Nettoyage grandes villas", desc: "Devis sur mesure pour grands linéaires. Equipe de 2 techniciens si nécessaire. Nettoyage gouttières + descentes + rapport d'état complet inclus.", price: "dès 80€", tag: "Sur mesure" },
-              { icon: <AlertTriangle size={22} className="text-red-500" />, href: "/services/debouchage-gouttieres", title: "Débouchage samares & urgence", desc: "Les samares d'érables bouchent les descentes même hors saison automnale. On intervient 7j/7 pour désobstruer rapidement.", price: "dès 120€", tag: "7j/7" },
+              { icon: <AlertTriangle size={22} className="text-red-500" />, href: "/services/debouchage-gouttieres", title: "Débouchage samares & urgence", desc: "Les samares d'érables bouchent les descentes même hors saison automnale. Le débouchage rétablit l'écoulement des descentes.", price: "dès 120€", tag: "Urgence" },
               { icon: <Wrench size={22} className="text-blue-600" />, href: "/services/reparation-gouttieres", title: "Remplacement grandes propriétés", desc: "Devis détaillé par section pour les grandes villas. Zinc, aluminium ou PVC selon les matériaux existants et l'architecture de la propriété.", price: "devis gratuit", tag: null },
               { icon: <Leaf size={22} className="text-yellow-600" />, href: "/services/demoussage-toiture", title: "Démoussage grandes toitures", desc: "Les grandes toitures des villas de WSP accumulent les mousses. Démoussage mécanique et traitement préventif longue durée (3–5 ans).", price: "devis gratuit", tag: null },
             ].map((s) => (
@@ -167,7 +167,7 @@ export default function WoluweStPierrePage() {
             {[
               { q: "Les samares d'érables causent-elles vraiment des bouchons ?", a: "Oui, c'est l'un des débris végétaux les plus problématiques. Les samares sont assez petites pour pénétrer dans les descentes et y former des bouchons compacts. Elles tombent au printemps puis en automne — deux passages annuels sont recommandés pour les propriétés proches des parcs." },
               { q: "Notre villa a plus de 80 mètres de gouttières. Quel tarif ?", a: "Pour les grandes propriétés, on établit un devis sur mesure tenant compte du linéaire exact, de la hauteur, des matériaux et de l'accessibilité. Deux techniciens pour les grandes interventions. Appelez pour un diagnostic gratuit." },
-              { q: "Intervenez-vous avenue de Tervueren et avenue de Broqueville ?", a: "Oui, dans toute Woluwe-Saint-Pierre, y compris les grandes avenues résidentielles. On connaît bien les propriétés de cette commune et leurs spécificités d'accès." },
+              { q: "Intervenez-vous avenue de Tervueren et avenue de Broqueville ?", a: "Oui, dans toute Woluwe-Saint-Pierre, y compris les grandes avenues résidentielles. L'accès est vérifié lors du devis." },
               { q: "Faut-il aussi nettoyer au printemps à WSP ?", a: "Pour les propriétés proches des parcs, oui. Les marronniers du parc de Woluwe et les érables libèrent des pollens, bourgeons et graines en mai qui s'accumulent dans les gouttières. Un passage de printemps complète utilement le nettoyage automnal." },
               ...localFaqs("woluwe-saint-pierre"),
             ].map((faq, i) => (
@@ -191,7 +191,7 @@ export default function WoluweStPierrePage() {
         <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8">
             <h2 className="text-2xl font-bold text-gray-900 mb-2">Devis gratuit — Woluwe-Saint-Pierre</h2>
-            <p className="text-gray-500 text-sm">Réponse sous 2h · ou appelez le <a href="tel:0451053370" className="font-bold text-[#1A4731] hover:text-[#F97316]">0451 05 33 70</a></p>
+            <p className="text-gray-500 text-sm">Devis gratuit et sans engagement · ou appelez le <a href="tel:0451053370" className="font-bold text-[#1A4731] hover:text-[#F97316]">0451 05 33 70</a></p>
           </div>
           <div className="bg-gray-50 border border-gray-200 rounded-2xl p-6 sm:p-8"><ContactForm defaultCommune="Woluwe-Saint-Pierre" /></div>
         </div>

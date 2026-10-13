@@ -15,14 +15,14 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     title: "Nettoyage Gouttières Bruxelles — Service Complet",
-    description: "Évacuation feuilles, mousses, sédiments. Nettoyage gouttières + descentes pluviales. Devis gratuit, intervention 48h.",
+    description: "Évacuation feuilles, mousses, sédiments. Nettoyage gouttières + descentes pluviales. Devis gratuit, prix fixé à l'avance.",
     url: "https://www.nettoyage-gouttieres-bruxelles.be/services/nettoyage-gouttieres",
     images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "Nettoyage gouttières Bruxelles" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Nettoyage Gouttières Bruxelles — Devis Gratuit",
-    description: "Nettoyage professionnel gouttières + descentes pluviales à Bruxelles. Intervention 48h.",
+    description: "Nettoyage professionnel gouttières + descentes pluviales à Bruxelles. Devis gratuit.",
     images: ["/opengraph-image"],
   },
 };
@@ -143,7 +143,7 @@ export default function NettoyageGouttieres() {
               <h2 className="text-2xl font-bold text-gray-900 mb-4">En quoi consiste un nettoyage complet de gouttières ?</h2>
               <p className="text-gray-600 leading-relaxed mb-4">
                 Un nettoyage professionnel de gouttières à Bruxelles comprend plusieurs étapes distinctes.
-                Nos techniciens commencent par inspecter visuellement l&apos;ensemble de votre installation :
+                Le professionnel commence par inspecter visuellement l&apos;ensemble de votre installation :
                 gouttières, crochets de fixation, joints, collets de jonction et descentes pluviales.
                 Cette inspection permet d&apos;identifier non seulement les obstructions, mais aussi les
                 défauts structurels qui pourraient causer des problèmes à moyen terme.
@@ -243,8 +243,8 @@ export default function NettoyageGouttieres() {
                 <h3 className="font-bold text-gray-900 mb-4">Pourquoi nous choisir ?</h3>
                 <div className="space-y-3">
                   {[
-                    { icon: <Clock size={16} className="text-[#F97316]" />, text: "Intervention sous 48h" },
-                    { icon: <Shield size={16} className="text-[#F97316]" />, text: "Assurance RC Pro" },
+                    { icon: <Clock size={16} className="text-[#F97316]" />, text: "Prix fixé à l'avance" },
+                    { icon: <Shield size={16} className="text-[#F97316]" />, text: "Mise en relation gratuite" },
                     { icon: <CheckCircle size={16} className="text-[#F97316]" />, text: "Devis gratuit" },
                     { icon: <Droplets size={16} className="text-[#F97316]" />, text: "Déchets évacués" },
                   ].map((item) => (

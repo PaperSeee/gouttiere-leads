@@ -33,7 +33,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "Nettoyage de gouttières à Bruxelles dès 80 € — devis gratuit",
-    description: "Nettoyage de gouttières à Bruxelles dès 80 € : feuilles, mousses et boues retirées, descentes débouchées, écoulement testé. Devis gratuit, intervention sous 48h.",
+    description: "Nettoyage de gouttières à Bruxelles dès 80 € : feuilles, mousses et boues retirées, descentes débouchées, écoulement testé. Devis gratuit, prix fixé à l'avance.",
     url: "https://www.nettoyage-gouttieres-bruxelles.be/",
     type: "website",
     images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "Nettoyage Gouttières Bruxelles" }],
@@ -81,7 +81,7 @@ const homeFaqs = [
   {
     question: "Intervenez-vous en urgence en cas de débordement ?",
     answer:
-      "Oui, notre service de débouchage d'urgence est disponible 7j/7. En cas de débordement actif lors de fortes pluies, appelez-nous directement au 0451 05 33 70. Nous intervenons généralement dans les 24 heures, souvent le jour même en haute saison automnale.",
+      "Oui. En cas de débordement actif lors de fortes pluies, appelez directement le 0451 05 33 70 : votre demande est transmise au professionnel indépendant qui intervient dans votre commune, et le délai d'intervention vous est annoncé au téléphone. Un débouchage urgent coûte en général 120 à 200 € selon le jour et l'heure.",
   },
   {
     question: "Nettoyez-vous aussi les corniches et les chéneaux ?",
@@ -91,7 +91,7 @@ const homeFaqs = [
   {
     question: "Nettoyez-vous aussi les descentes pluviales ?",
     answer:
-      "Absolument. Nos interventions incluent systématiquement le nettoyage des gouttières ET des descentes pluviales (ou tuyaux de chute). Une descente bouchée est aussi problématique qu'une gouttière obstruée. Nous vérifions également les collets de jonction et les raccords pour garantir un écoulement optimal.",
+      "Oui. Un nettoyage complet inclut le nettoyage des gouttières ET des descentes pluviales (ou tuyaux de chute). Une descente bouchée est aussi problématique qu'une gouttière obstruée. Les collets de jonction et les raccords sont aussi contrôlés pour vérifier l'écoulement.",
   },
 ];
 
@@ -153,7 +153,7 @@ function RecentPostsSection() {
 
 const services = [
   { icon: Droplets, title: "Nettoyage de gouttières", desc: "Feuilles, mousses et sédiments évacués, descentes pluviales comprises.", href: "/services/nettoyage-gouttieres", price: "dès 80€" },
-  { icon: AlertTriangle, title: "Débouchage en urgence", desc: "Débordement pendant la pluie ? Intervention 7j/7, souvent le jour même.", href: "/services/debouchage-gouttieres", price: "dès 120€" },
+  { icon: AlertTriangle, title: "Débouchage en urgence", desc: "Débordement pendant la pluie ? Descentes débouchées à haute pression, test d'écoulement inclus.", href: "/services/debouchage-gouttieres", price: "dès 120€" },
   { icon: Wrench, title: "Réparation & remplacement", desc: "Gouttière fissurée, décrochée ou à remplacer : zinc, PVC, aluminium.", href: "/services/reparation-gouttieres", price: "devis gratuit" },
   { icon: Leaf, title: "Démoussage de toiture", desc: "Brossage et traitement anti-mousse : moins de débris dans les gouttières.", href: "/services/demoussage-toiture", price: "8–20€/m²" },
   { icon: Home, title: "Nettoyage de toiture", desc: "Feuilles, mousses et débris dégagés du toit — souvent avec le nettoyage des gouttières.", href: "/services/nettoyage-toiture", price: "sur devis" },
@@ -179,8 +179,8 @@ const risks = [
 
 const steps = [
   { t: "Vous nous contactez", d: "Par téléphone ou via le formulaire : longueur approximative, hauteur, urgence." },
-  { t: "Devis gratuit, prix fixé", d: "Le prix est fixé à l'avance, sans engagement. Rappel sous 2h en heures ouvrables." },
-  { t: "Intervention sous 48h", d: "Gouttières et descentes nettoyées, écoulement vérifié avant de partir." },
+  { t: "Devis gratuit, prix fixé", d: "Un professionnel indépendant vous rappelle et fixe le prix à l'avance, sans engagement." },
+  { t: "Intervention au jour convenu", d: "Gouttières et descentes nettoyées, écoulement vérifié avant de partir." },
 ];
 
 export default function HomePage() {
@@ -212,12 +212,12 @@ export default function HomePage() {
               Nettoyage de gouttières à <span className="text-[#7fd8a4]">Bruxelles</span>
             </h1>
             <p className="mt-5 max-w-xl text-lg leading-relaxed text-green-50/80">
-              Le nettoyage de gouttières à Bruxelles consiste à retirer feuilles, mousse et sédiments du chéneau
-              et des descentes pluviales, puis à tester l&apos;écoulement. Nous intervenons dans les 19 communes de la
-              Région bruxelloise sous 48h, dès 80 €, avec un prix fixé avant l&apos;intervention.
+              Le nettoyage de gouttières à Bruxelles retire feuilles, mousse et boues de la gouttière ou du chéneau
+              de corniche, débouche les descentes pluviales et teste l&apos;écoulement. Comptez 80 à 150 € pour une
+              maison, dans les 19 communes, avec un prix fixé avant l&apos;intervention.
             </p>
             <ul className="mt-6 grid gap-2.5 sm:grid-cols-2">
-              {["Devis gratuit, prix fixé à l'avance", "Intervention sous 48h", "Urgences 7j/7", "Assuré RC Pro"].map((c) => (
+              {["Devis gratuit, prix fixé à l'avance", "Descentes pluviales comprises", "Chéneaux de corniche aussi", "19 communes de Bruxelles"].map((c) => (
                 <li key={c} className="flex items-center gap-2.5 font-semibold">
                   <CheckCircle size={18} className="shrink-0 text-[#7fd8a4]" />
                   {c}
@@ -234,13 +234,13 @@ export default function HomePage() {
                 <ArrowRight size={20} />
               </a>
             </div>
-            <p className="mt-3 text-sm text-green-50/60">Lun–ven 7h30–18h · sam 8h–14h · urgences 7j/7</p>
+            <p className="mt-3 text-sm text-green-50/60">Lun–ven 7h30–18h · sam 8h–14h</p>
           </div>
 
           <div id="devis-rapide" className="scroll-mt-32 rounded-3xl bg-white p-6 text-gray-800 shadow-2xl shadow-black/30 sm:p-7">
             <p className="text-xs font-extrabold uppercase tracking-[0.14em] text-[#1F7A55]">Devis gratuit</p>
             <h2 className="mt-1 text-2xl font-extrabold text-[#133826]">Recevez votre prix</h2>
-            <p className="mt-1 text-sm text-gray-500">Rappel sous 2h en heures ouvrables.</p>
+            <p className="mt-1 text-sm text-gray-500">Un professionnel indépendant vous rappelle pour le devis.</p>
             <div className="mt-5">
               <ContactForm compact />
             </div>
@@ -253,9 +253,9 @@ export default function HomePage() {
       <section className="border-b border-gray-100 bg-white">
         <div className="mx-auto grid max-w-7xl grid-cols-2 gap-6 px-4 py-8 sm:px-6 lg:grid-cols-4 lg:px-8">
           {[
-            { icon: Shield, t: "Assuré RC Pro", d: "Couverture complète pendant l'intervention" },
+            { icon: Shield, t: "Mise en relation gratuite", d: "Aucun frais pour la demande de devis" },
             { icon: Euro, t: "Devis gratuit", d: "Sans engagement, prix fixé à l'avance" },
-            { icon: Clock, t: "48h maximum", d: "Urgences traitées le jour même, 7j/7" },
+            { icon: Clock, t: "Délai annoncé au téléphone", d: "Selon la saison et l'urgence" },
             { icon: ThumbsUp, t: "Écoulement vérifié", d: "Test d'écoulement avant de partir" },
           ].map(({ icon: Icon, t, d }) => (
             <div key={t} className="flex gap-3">
@@ -426,8 +426,8 @@ export default function HomePage() {
             <p className="text-xs font-extrabold uppercase tracking-[0.14em] text-[#7fd8a4]">Zone d&apos;intervention</p>
             <h2 className="mt-2 text-3xl font-extrabold md:text-4xl">Gouttières Bruxelles — 19 communes couvertes</h2>
             <p className="mt-4 text-green-50/75">
-              Nous intervenons dans toutes les communes de la région bruxelloise, déplacement inclus dans le devis.
-              Votre commune n&apos;est pas listée ? Nous couvrons aussi la périphérie.
+              Les demandes sont traitées dans les 19 communes de la Région bruxelloise, déplacement compris dans
+              le devis. Chaque commune a sa page : bâti, arbres et accès y sont décrits.
             </p>
             <a href="tel:0451053370" className="mt-7 inline-flex items-center gap-2 rounded-xl bg-[#F97316] px-6 py-3.5 font-extrabold text-white hover:bg-[#EA580C]">
               <Phone size={18} />
@@ -452,14 +452,14 @@ export default function HomePage() {
         <div className="mx-auto grid max-w-6xl items-center gap-10 px-4 py-16 sm:px-6 md:py-20 lg:grid-cols-[0.9fr_1.1fr] lg:px-8">
           <div>
             <p className="text-xs font-extrabold uppercase tracking-[0.14em] text-[#F97316]">Devis gratuit</p>
-            <h2 className="mt-2 text-3xl font-extrabold text-[#133826] md:text-4xl">Recevez votre prix en 2h</h2>
+            <h2 className="mt-2 text-3xl font-extrabold text-[#133826] md:text-4xl">Recevez votre prix</h2>
             <p className="mt-4 text-lg text-gray-600">
               Remplissez le formulaire ou appelez directement le{" "}
               <a href="tel:0451053370" className="font-bold text-[#133826] underline decoration-[#F97316]">0451 05 33 70</a>.
-              Rappel sous 2h en heures ouvrables.
+              Un professionnel indépendant vous rappelle pour fixer le prix.
             </p>
             <ul className="mt-6 space-y-2.5">
-              {["Prix fixé avant l'intervention", "Aucun engagement", "Intervention sous 48h"].map((c) => (
+              {["Prix fixé avant l'intervention", "Aucun engagement", "Intervention au jour convenu"].map((c) => (
                 <li key={c} className="flex items-center gap-2.5 font-semibold text-gray-800">
                   <CheckCircle size={18} className="text-[#1F7A55]" />
                   {c}

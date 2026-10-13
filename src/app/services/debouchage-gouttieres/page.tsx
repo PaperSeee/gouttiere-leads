@@ -31,20 +31,20 @@ const communes = [
 export const metadata: Metadata = {
   title: { absolute: "Débouchage de gouttières à Bruxelles | Gouttières Bruxelles" },
   description:
-    "Débouchage de gouttières et descentes pluviales à Bruxelles : 120–160 € en semaine, 7j/7 en urgence. Test d'écoulement inclus, devis gratuit.",
+    "Débouchage de gouttières et descentes pluviales à Bruxelles : 120 à 160 € en semaine, 160 à 200 € le week-end. Test d'écoulement inclus, devis gratuit.",
   alternates: { canonical: "https://www.nettoyage-gouttieres-bruxelles.be/services/debouchage-gouttieres" },
-  keywords: ["débouchage gouttières urgence Bruxelles", "gouttières bouchées Bruxelles", "débouchage descentes pluviales", "urgence gouttières 7j/7 Bruxelles"],
+  keywords: ["débouchage gouttières urgence Bruxelles", "gouttières bouchées Bruxelles", "débouchage descentes pluviales", "urgence gouttières Bruxelles"],
   openGraph: {
     type: "website",
-    title: "Débouchage Gouttières Bruxelles — Urgence 7j/7",
-    description: "Débouchage urgent gouttières et descentes pluviales à Bruxelles. Intervention 7j/7. Appelez le 0451 05 33 70.",
+    title: "Débouchage de gouttières à Bruxelles — urgence",
+    description: "Débouchage urgent gouttières et descentes pluviales à Bruxelles, test d'écoulement inclus. Appelez le 0451 05 33 70.",
     url: "https://www.nettoyage-gouttieres-bruxelles.be/services/debouchage-gouttieres",
     images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "Débouchage gouttières urgence Bruxelles" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Débouchage Gouttières Bruxelles — Urgence 7j/7",
-    description: "Débouchage urgent gouttières Bruxelles. Intervention 7j/7.",
+    title: "Débouchage de gouttières à Bruxelles — urgence",
+    description: "Débouchage urgent de gouttières à Bruxelles, test d'écoulement inclus.",
     images: ["/opengraph-image"],
   },
 };
@@ -58,7 +58,7 @@ export default function DebouchageGouttieres() {
       "@id": "https://www.nettoyage-gouttieres-bruxelles.be/#business",
     },
     areaServed: "Bruxelles",
-    description: "Service de débouchage d'urgence de gouttières et descentes pluviales à Bruxelles. Disponible 7j/7.",
+    description: "Service de débouchage d'urgence de gouttières et descentes pluviales à Bruxelles, test d'écoulement inclus.",
     offers: {
       "@type": "Offer",
       priceRange: "120-200€",
@@ -87,7 +87,7 @@ export default function DebouchageGouttieres() {
               Débouchage Gouttières en Urgence à Bruxelles
             </h1>
             <p className="text-red-100 text-lg mb-6 leading-relaxed">
-              Le débouchage d&apos;une gouttière ou d&apos;une descente pluviale à Bruxelles coûte en général 120 à 160 € en semaine et 160 à 200 € le week-end ou un jour férié, test d&apos;écoulement compris. Il se demande 7j/7 dès que l&apos;eau passe par-dessus la gouttière pendant la pluie, avant qu&apos;elle n&apos;atteigne la façade ou les fondations.
+              Le débouchage d&apos;une gouttière ou d&apos;une descente pluviale à Bruxelles coûte en général 120 à 160 € en semaine et 160 à 200 € le week-end ou un jour férié, test d&apos;écoulement compris. Il se demande dès que l&apos;eau passe par-dessus la gouttière pendant la pluie, avant qu&apos;elle n&apos;atteigne la façade ou les fondations.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <a href="tel:0451053370" className="flex items-center justify-center gap-2 bg-yellow-400 hover:bg-yellow-300 text-red-900 font-bold px-6 py-4 rounded-xl text-lg transition-colors">
@@ -97,7 +97,7 @@ export default function DebouchageGouttieres() {
             <TrustNote className="mt-5" tone="dark" />
             <div className="flex items-center gap-2 mt-4 text-red-200 text-sm">
               <Clock size={16} />
-              <span>Disponible 7j/7 — Intervention généralement le jour même en haute saison</span>
+              <span>Délai d&apos;intervention annoncé au téléphone</span>
             </div>
           </div>
         </div>
@@ -169,7 +169,7 @@ export default function DebouchageGouttieres() {
             <div className="space-y-6">
               <div className="bg-red-700 text-white rounded-2xl p-6">
                 <h3 className="font-bold text-lg mb-2">Urgence débouchage</h3>
-                <p className="text-red-200 text-sm mb-4">Disponible 7j/7 — Intervention rapide</p>
+                <p className="text-red-200 text-sm mb-4">Délai d&apos;intervention annoncé au téléphone</p>
                 <div className="space-y-2 mb-5">
                   <div className="flex justify-between border-b border-white/20 pb-2">
                     <span className="text-sm text-red-200">Débouchage standard</span>

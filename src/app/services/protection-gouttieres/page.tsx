@@ -15,14 +15,14 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     title: "Protection Anti-Feuilles Gouttières Bruxelles",
-    description: "Pose de grilles, brosses et filets anti-feuilles pour gouttières à Bruxelles. Devis gratuit, intervention 48h.",
+    description: "Pose de grilles, brosses et filets anti-feuilles pour gouttières à Bruxelles. Devis gratuit, prix fixé à l'avance.",
     url: "https://www.nettoyage-gouttieres-bruxelles.be/services/protection-gouttieres",
     images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "Protection anti-feuilles gouttières Bruxelles" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Protection Anti-Feuilles Gouttières Bruxelles",
-    description: "Pose de grilles, brosses et filets anti-feuilles. Devis gratuit, intervention 48h.",
+    description: "Pose de grilles, brosses et filets anti-feuilles. Devis gratuit, prix fixé à l'avance.",
     images: ["/opengraph-image"],
   },
 };
@@ -186,8 +186,8 @@ export default function ProtectionGouttieres() {
                 <h3 className="font-bold text-gray-900 mb-4">Pourquoi nous choisir ?</h3>
                 <div className="space-y-3">
                   {[
-                    { icon: <Clock size={16} className="text-[#F97316]" />, text: "Intervention sous 48h" },
-                    { icon: <Shield size={16} className="text-[#F97316]" />, text: "Assurance RC Pro" },
+                    { icon: <Clock size={16} className="text-[#F97316]" />, text: "Prix fixé à l'avance" },
+                    { icon: <Shield size={16} className="text-[#F97316]" />, text: "Mise en relation gratuite" },
                     { icon: <CheckCircle size={16} className="text-[#F97316]" />, text: "Devis gratuit" },
                     { icon: <Leaf size={16} className="text-[#F97316]" />, text: "Diagnostic personnalisé" },
                   ].map((item) => (

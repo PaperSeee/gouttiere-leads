@@ -11,12 +11,12 @@ import { localFaqs, localFaqSchema, getCommune } from "@/lib/communes"
 export const metadata: Metadata = {
   title: { absolute: "Nettoyage de gouttières à Evere dès 80 €" },
   description:
-    "Nettoyage de gouttières à Evere dès 80 € : maisons des années 50–70, graines de peupliers, descentes bouchées. Devis gratuit, intervention sous 48h.",
+    "Nettoyage de gouttières à Evere dès 80 € : maisons des années 50–70, graines de peupliers, descentes bouchées. Devis gratuit, prix fixé à l'avance.",
   alternates: { canonical: "https://www.nettoyage-gouttieres-bruxelles.be/communes/evere" },
   keywords: ["nettoyage gouttières Evere", "débouchage gouttières Evere", "gouttières bouchées Evere", "prix nettoyage gouttières Evere"],
   openGraph: {
     title: "Nettoyage Gouttières Evere — Devis Gratuit",
-    description: "Expert nettoyage gouttières à Evere. Débouchage urgent, réparation, démoussage. Devis gratuit, intervention rapide.",
+    description: "Nettoyage de gouttières à Evere : chéneaux et descentes vidés, écoulement testé. Devis gratuit, prix fixé à l'avance.",
     url: "https://www.nettoyage-gouttieres-bruxelles.be/communes/evere",
     type: "website",
     images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "Nettoyage gouttières Evere" }],
@@ -30,7 +30,7 @@ export default function EverePage() {
     mainEntity: [
       { "@type": "Question", name: "Le coton de peupliers est-il vraiment problématique pour les gouttières ?", acceptedAnswer: { "@type": "Answer", text: "C'est l'un des phénomènes les plus surprenants. En mai-juin, les peupliers libèrent leurs aigrettes cotonneuses qui s'accumulent dans les gouttières et descentes en quelques jours. Humidifiées par la pluie, elles se compactent et bloquent complètement l'écoulement. Un nettoyage de juin est indispensable pour les propriétés exposées." } },
       { "@type": "Question", name: "Comment savoir si mon crochet de fixation est défaillant ?", acceptedAnswer: { "@type": "Answer", text: "Le signe le plus visible est une gouttière qui 'penche' ou s'éloigne de la façade. Vous pouvez aussi vérifier en regardant si l'eau s'accumule dans un recoin plutôt que de s'écouler vers la descente. Un crochet qui cède peut provoquer l'arrachage d'une section entière lors d'une forte pluie." } },
-      { "@type": "Question", name: "Intervenez-vous dans tous les quartiers d'Evere ?", acceptedAnswer: { "@type": "Answer", text: "Oui, dans toute la commune d'Evere, des abords du cimetière de Bruxelles aux rues résidentielles proches du Moeraske. Délai habituel : 48 à 72 heures après contact." } },
+      { "@type": "Question", name: "Intervenez-vous dans tous les quartiers d'Evere ?", acceptedAnswer: { "@type": "Answer", text: "Oui, dans toute la commune d'Evere, des abords du cimetière de Bruxelles aux rues résidentielles proches du Moeraske. Le délai d'intervention vous est annoncé lors du premier appel." } },
       { "@type": "Question", name: "Peut-on remplacer seulement les crochets sans changer toute la gouttière ?", acceptedAnswer: { "@type": "Answer", text: "Oui, si la gouttière est en bon état, on peut remplacer uniquement les crochets défaillants. C'est bien moins coûteux qu'un remplacement complet. On évalue ce qui peut être conservé lors du diagnostic gratuit." } },
       ...localFaqSchema("evere"),
     ],
@@ -138,7 +138,7 @@ export default function EverePage() {
           <div className="divide-y divide-gray-100 border border-gray-100 rounded-2xl overflow-hidden">
             {[
               { icon: <Droplets size={22} className="text-[#1A4731]" />, href: "/services/nettoyage-gouttieres", title: "Nettoyage maisons résidentielles", desc: "Nettoyage automnal complet pour les maisons d'Evere. Pour les propriétés avec peupliers, on recommande aussi un passage en juin.", price: "dès 80€", tag: null },
-              { icon: <AlertTriangle size={22} className="text-red-500" />, href: "/services/debouchage-gouttieres", title: "Débouchage coton peupliers", desc: "Le coton de peupliers bouche en quelques jours les descentes en plein été. On intervient 7j/7 pour déboucher rapidement.", price: "dès 120€", tag: "7j/7" },
+              { icon: <AlertTriangle size={22} className="text-red-500" />, href: "/services/debouchage-gouttieres", title: "Débouchage coton peupliers", desc: "Le coton de peupliers bouche en quelques jours les descentes en plein été. Le débouchage rétablit l'écoulement avant que l'eau n'atteigne la façade.", price: "dès 120€", tag: "Urgence" },
               { icon: <Wrench size={22} className="text-blue-600" />, href: "/services/reparation-gouttieres", title: "Remplacement crochets & gouttières", desc: "Remplacement des crochets défaillants ou des gouttières en fin de vie. Devis détaillé par section pour maîtriser votre budget.", price: "devis gratuit", tag: null },
               { icon: <Leaf size={22} className="text-yellow-600" />, href: "/services/demoussage-toiture", title: "Démoussage après intervention", desc: "Traitement préventif pour protéger la couverture et les nouvelles gouttières. Efficace 3 à 5 ans selon l'exposition.", price: "devis gratuit", tag: null },
             ].map((s) => (
@@ -168,7 +168,7 @@ export default function EverePage() {
             {[
               { q: "Le coton de peupliers est-il vraiment problématique pour les gouttières ?", a: "C'est l'un des phénomènes les plus surprenants. En mai-juin, les peupliers libèrent leurs aigrettes cotonneuses qui s'accumulent dans les gouttières et descentes en quelques jours. Humidifiées par la pluie, elles se compactent et bloquent complètement l'écoulement. Un nettoyage de juin est indispensable pour les propriétés exposées." },
               { q: "Comment savoir si mon crochet de fixation est défaillant ?", a: "Le signe le plus visible est une gouttière qui 'penche' ou s'éloigne de la façade. Vous pouvez aussi vérifier en regardant si l'eau s'accumule dans un recoin plutôt que de s'écouler vers la descente. Un crochet qui cède peut provoquer l'arrachage d'une section entière lors d'une forte pluie." },
-              { q: "Intervenez-vous dans tous les quartiers d'Evere ?", a: "Oui, dans toute la commune d'Evere, des abords du cimetière de Bruxelles aux rues résidentielles proches du Moeraske. Délai habituel : 48 à 72 heures après contact." },
+              { q: "Intervenez-vous dans tous les quartiers d'Evere ?", a: "Oui, dans toute la commune d'Evere, des abords du cimetière de Bruxelles aux rues résidentielles proches du Moeraske. Le délai d'intervention vous est annoncé lors du premier appel." },
               { q: "Peut-on remplacer seulement les crochets sans changer toute la gouttière ?", a: "Oui, si la gouttière est en bon état, on peut remplacer uniquement les crochets défaillants. C'est bien moins coûteux qu'un remplacement complet. On évalue ce qui peut être conservé lors du diagnostic gratuit." },
               ...localFaqs("evere"),
             ].map((faq, i) => (
@@ -192,7 +192,7 @@ export default function EverePage() {
         <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8">
             <h2 className="text-2xl font-bold text-gray-900 mb-2">Devis gratuit — Evere</h2>
-            <p className="text-gray-500 text-sm">Réponse sous 2h · ou appelez le <a href="tel:0451053370" className="font-bold text-[#1A4731] hover:text-[#F97316]">0451 05 33 70</a></p>
+            <p className="text-gray-500 text-sm">Devis gratuit et sans engagement · ou appelez le <a href="tel:0451053370" className="font-bold text-[#1A4731] hover:text-[#F97316]">0451 05 33 70</a></p>
           </div>
           <div className="bg-gray-50 border border-gray-200 rounded-2xl p-6 sm:p-8"><ContactForm defaultCommune="Evere" /></div>
         </div>

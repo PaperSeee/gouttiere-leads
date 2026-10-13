@@ -151,7 +151,7 @@ export default function BlogProduitsNettoyageGouttieresBruxellesPage() {
 
             <h2>Ce que les professionnels utilisent à Bruxelles</h2>
             <p>
-              Dans notre équipe, nous utilisons systématiquement une approche en deux temps pour les gouttières bruxelloises :
+              Les professionnels procèdent en général en deux temps pour les gouttières bruxelloises :
             </p>
             <ol>
               <li><strong>Nettoyage mécanique</strong> — évacuation manuelle des feuilles et débris accumulés. Aucun produit chimique n&apos;est efficace si la gouttière est physiquement bouchée.</li>
@@ -179,7 +179,7 @@ export default function BlogProduitsNettoyageGouttieresBruxellesPage() {
             <div className="bg-[#1A4731] rounded-2xl p-6 text-white sticky top-6">
               <h3 className="font-bold text-lg mb-2">Nettoyage par un professionnel</h3>
               <p className="text-green-200 text-sm mb-4">
-                Nos équipes interviennent dans toute la Région bruxelloise sous 48h. Devis gratuit, sans engagement.
+                Un professionnel indépendant intervient dans toute la Région bruxelloise. Devis gratuit, sans engagement.
               </p>
               <a href="tel:0451053370" className="flex items-center justify-center gap-2 bg-white text-[#1A4731] font-bold py-3 px-4 rounded-xl text-sm hover:bg-green-50 transition mb-3">
                 0451 05 33 70
@@ -222,7 +222,7 @@ export default function BlogProduitsNettoyageGouttieresBruxellesPage() {
       <section className="py-12 px-4 bg-gray-50 border-t border-gray-100">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-2xl font-bold text-gray-900 mb-2">Besoin d&apos;un nettoyage professionnel à Bruxelles ?</h2>
-          <p className="text-gray-600 mb-6">Devis gratuit sous 24h, intervention garantie sous 48h dans toute la Région bruxelloise.</p>
+          <p className="text-gray-600 mb-6">Devis gratuit et sans engagement, dans toute la Région bruxelloise.</p>
           <ContactForm />
         </div>
       </section>

@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "https://www.nettoyage-gouttieres-bruxelles.be/tarifs" },
   openGraph: {
     title: "Tarifs Nettoyage Gouttières Bruxelles — Prix 2026",
-    description: "Nettoyage dès 80€, débouchage dès 120€, démoussage 8–20€/m². Devis gratuit, intervention sous 48h.",
+    description: "Nettoyage dès 80€, débouchage dès 120€, démoussage 8–20€/m². Devis gratuit, prix fixé à l'avance.",
     url: "https://www.nettoyage-gouttieres-bruxelles.be/tarifs",
     type: "website",
     images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "Tarifs nettoyage gouttières Bruxelles 2026" }],
@@ -62,7 +62,7 @@ const tarifsDebouchage = [
   {
     service: "Débouchage urgent — weekend / férié",
     fourchette: "160 – 200€",
-    detail: "Disponible 7j/7 — majoration hors heures ouvrables",
+    detail: "Selon disponibilité — majoration hors heures ouvrables",
     color: "border-red-200 bg-red-50",
     badge: null,
   },
@@ -149,7 +149,7 @@ const faqTarifs = [
   },
   {
     q: "Proposez-vous un abonnement entretien annuel ?",
-    a: "Oui. Pour les clients qui souhaitent un entretien régulier, nous proposons un contrat annuel avec passage programmé en octobre et (optionnellement) en mars. Ce contrat donne droit à une remise de 10% sur le tarif standard et priorité de planning en haute saison.",
+    a: "Oui. Un contrat annuel prévoit un passage programmé en octobre et, si besoin, un second en mars. Ses conditions (prix par passage, dates) sont fixées dans le devis.",
   },
   {
     q: "Le paiement s'effectue comment ?",
@@ -260,7 +260,7 @@ export default function Tarifs() {
             <AlertTriangle size={22} className="text-red-500 flex-shrink-0 mt-0.5" />
             <div>
               <h2 className="text-2xl font-bold text-gray-900 mb-1">Débouchage d&apos;urgence</h2>
-              <p className="text-gray-500 text-sm">Disponible 7j/7 — Intervention souvent le jour même. Haute pression + test écoulement inclus.</p>
+              <p className="text-gray-500 text-sm">Délai annoncé au téléphone selon la disponibilité. Haute pression + test écoulement inclus.</p>
             </div>
           </div>
           <div className="space-y-3 mb-4">
@@ -334,12 +334,12 @@ export default function Tarifs() {
       <section className="py-14 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl font-bold text-gray-900 mb-2">Contrat d&apos;entretien annuel</h2>
-          <p className="text-gray-500 text-sm mb-6">Passages programmés en octobre et mars, -10% sur le tarif standard, priorité de planning en haute saison.</p>
+          <p className="text-gray-500 text-sm mb-6">Passages programmés en octobre et, si besoin, en mars. Conditions fixées dans le devis.</p>
           <div className="flex flex-col sm:flex-row sm:items-center justify-between p-4 sm:p-5 rounded-xl border border-green-200 bg-green-50 gap-2 mb-4">
             <div>
               <div className="flex items-center gap-2 flex-wrap">
                 <p className="font-semibold text-gray-900">Contrat 1 ou 2 passages/an</p>
-                <span className="text-xs bg-[#1A4731] text-white px-2 py-0.5 rounded-full">-10% sur le tarif standard</span>
+                <span className="text-xs bg-[#1A4731] text-white px-2 py-0.5 rounded-full">Passages planifiés</span>
               </div>
               <p className="text-gray-500 text-xs mt-0.5">Calculé sur la base du tarif nettoyage habituel de votre bien</p>
             </div>
@@ -426,9 +426,9 @@ export default function Tarifs() {
       {/* CTA devis */}
       <section className="py-14 bg-[#1A4731]">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
-          <h2 className="text-2xl font-bold mb-3">Votre devis en 2h — toujours gratuit</h2>
+          <h2 className="text-2xl font-bold mb-3">Votre devis — toujours gratuit</h2>
           <p className="text-green-200 mb-8 max-w-xl mx-auto">
-            Appelez-nous ou remplissez le formulaire. On revient vers vous sous 2h en heures ouvrables avec un prix précis, adapté à votre maison.
+            Appelez-nous ou remplissez le formulaire. Un professionnel indépendant vous rappelle avec un prix précis, adapté à votre maison.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <a href="tel:0451053370" className="flex items-center justify-center gap-2 bg-[#F97316] hover:bg-orange-500 text-white font-bold px-7 py-3.5 rounded-xl transition-colors">
@@ -445,7 +445,7 @@ export default function Tarifs() {
       <section id="devis" className="py-14 bg-gray-50">
         <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl font-bold text-gray-900 mb-2 text-center">Demandez votre devis gratuit</h2>
-          <p className="text-center text-gray-500 text-sm mb-8">Réponse sous 2h · Aucun engagement</p>
+          <p className="text-center text-gray-500 text-sm mb-8">Devis gratuit · Aucun engagement</p>
           <div className="bg-white rounded-2xl border border-gray-200 p-6 sm:p-8">
             <ContactForm />
           </div>

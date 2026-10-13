@@ -11,12 +11,12 @@ import { localFaqs, localFaqSchema, getCommune } from "@/lib/communes"
 export const metadata: Metadata = {
   title: { absolute: "Nettoyage de gouttières à Schaerbeek dès 80 €" },
   description:
-    "Nettoyage de gouttières à Schaerbeek dès 80 € : maisons Belle Époque, chéneaux cachés, parc Josaphat. Devis gratuit, intervention sous 48h.",
+    "Nettoyage de gouttières à Schaerbeek dès 80 € : maisons Belle Époque, chéneaux cachés, parc Josaphat. Devis gratuit, prix fixé à l'avance.",
   alternates: { canonical: "https://www.nettoyage-gouttieres-bruxelles.be/communes/schaerbeek" },
   keywords: ["nettoyage gouttières Schaerbeek", "débouchage gouttières Schaerbeek", "gouttières bouchées Schaerbeek", "prix nettoyage gouttières Schaerbeek"],
   openGraph: {
     title: "Nettoyage Gouttières Schaerbeek — Devis Gratuit",
-    description: "Expert nettoyage gouttières à Schaerbeek. Débouchage urgent, réparation, démoussage. Devis gratuit, intervention rapide.",
+    description: "Nettoyage de gouttières à Schaerbeek : chéneaux et descentes vidés, écoulement testé. Devis gratuit, prix fixé à l'avance.",
     url: "https://www.nettoyage-gouttieres-bruxelles.be/communes/schaerbeek",
     type: "website",
     images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "Nettoyage gouttières Schaerbeek" }],
@@ -31,7 +31,7 @@ export default function SchaerbeekPage() {
       { "@type": "Question", name: "Les tilleuls de l'avenue Rogier bouchent vraiment les gouttières ?", acceptedAnswer: { "@type": "Answer", text: "Oui, les tilleuls sont parmi les arbres les plus problématiques. Leurs bourgeons collants et petites fleurs forment des masses compactes qui obstruent rapidement au printemps. En automne, leurs feuilles s'accumulent. Deux nettoyages annuels (mai et novembre) sont recommandés." } },
       { "@type": "Question", name: "Comment accédez-vous aux gouttières de façade arrière ?", acceptedAnswer: { "@type": "Answer", text: "Via la cour intérieure. Nos échelles légères passent par la porte de cave ou le couloir latéral dans la plupart des maisons mitoyennes de Schaerbeek. Pour les cours vraiment exiguës, on utilise des perches télescopiques depuis le sol." } },
       { "@type": "Question", name: "Le zinc de 1900 — est-ce encore récupérable ?", acceptedAnswer: { "@type": "Answer", text: "Du zinc bien conservé de 1900 peut encore durer 10–20 ans. Si l'installation est étanche et bien fixée, une soudure et reprise des joints peut suffire. Un diagnostic gratuit permet de trancher sur la meilleure approche." } },
-      { "@type": "Question", name: "Êtes-vous habitués au bâti schaerbeekois ?", acceptedAnswer: { "@type": "Answer", text: "Oui, on intervient régulièrement à Schaerbeek dans les grandes avenues et les rues résidentielles du quartier de la Maison des Arts. On connaît bien les contraintes d'accès et les spécificités architecturales locales." } },
+      { "@type": "Question", name: "Êtes-vous habitués au bâti schaerbeekois ?", acceptedAnswer: { "@type": "Answer", text: "Oui, dans toute la commune, des grandes avenues et les rues résidentielles du quartier de la Maison des Arts. L'accès est vérifié lors du devis." } },
       ...localFaqSchema("schaerbeek"),
     ],
   }
@@ -106,8 +106,8 @@ export default function SchaerbeekPage() {
                 </p>
                 <p>
                   La densité du bâti schaerbeekois — quasi 100% mitoyen — implique que les
-                  gouttières de façade arrière sont souvent difficiles d&apos;accès. Notre équipe
-                  est équipée pour intervenir en toute sécurité même dans les cours étroites.
+                  gouttières de façade arrière sont souvent difficiles d&apos;accès. Les cours étroites
+                  demandent un matériel adapté, prévu lors du devis.
                 </p>
               </div>
             </div>
@@ -138,7 +138,7 @@ export default function SchaerbeekPage() {
           <div className="divide-y divide-gray-100 border border-gray-100 rounded-2xl overflow-hidden">
             {[
               { icon: <Droplets size={22} className="text-[#1A4731]" />, href: "/services/nettoyage-gouttieres", title: "Nettoyage façades & cours arrière", desc: "Nettoyage complet façade avant et arrière. Matériel adapté aux cours étroites de Schaerbeek. Deux nettoyages annuels conseillés pour les avenues avec tilleuls.", price: "dès 80€", tag: null },
-              { icon: <AlertTriangle size={22} className="text-red-500" />, href: "/services/debouchage-gouttieres", title: "Débouchage urgence 7j/7", desc: "Graines collantes de tilleuls, bouchons par fortes pluies ? On intervient en urgence le jour même lors des épisodes intenses à Schaerbeek.", price: "dès 120€", tag: "7j/7" },
+              { icon: <AlertTriangle size={22} className="text-red-500" />, href: "/services/debouchage-gouttieres", title: "Débouchage en urgence", desc: "Graines collantes de tilleuls, bouchons par fortes pluies ? Le débouchage se demande dès le premier débordement à Schaerbeek.", price: "dès 120€", tag: "Urgence" },
               { icon: <Wrench size={22} className="text-blue-600" />, href: "/services/reparation-gouttieres", title: "Restauration zinc Belle Époque", desc: "Réparation délicate du zinc ornemental des maisons historiques. On préserve les détails architecturaux. Remplacement si nécessaire avec matériaux assortis.", price: "devis gratuit", tag: null },
               { icon: <Leaf size={22} className="text-yellow-600" />, href: "/services/demoussage-toiture", title: "Démoussage toitures ardoises", desc: "Toitures à forte pente avec ardoises : traitement anti-mousse préventif après nettoyage pour limiter la recolonisation.", price: "devis gratuit", tag: null },
             ].map((s) => (
@@ -169,7 +169,7 @@ export default function SchaerbeekPage() {
               { q: "Les tilleuls de l'avenue Rogier bouchent vraiment les gouttières ?", a: "Oui, les tilleuls sont parmi les arbres les plus problématiques. Leurs bourgeons collants et petites fleurs forment des masses compactes qui obstruent rapidement au printemps. En automne, leurs feuilles s'accumulent. Deux nettoyages annuels (mai et novembre) sont recommandés." },
               { q: "Comment accédez-vous aux gouttières de façade arrière ?", a: "Via la cour intérieure. Nos échelles légères passent par la porte de cave ou le couloir latéral dans la plupart des maisons mitoyennes de Schaerbeek. Pour les cours vraiment exiguës, on utilise des perches télescopiques depuis le sol." },
               { q: "Le zinc de 1900 — est-ce encore récupérable ?", a: "Du zinc bien conservé de 1900 peut encore durer 10–20 ans. Si l'installation est étanche et bien fixée, une soudure et reprise des joints peut suffire. Un diagnostic gratuit permet de trancher sur la meilleure approche." },
-              { q: "Êtes-vous habitués au bâti schaerbeekois ?", a: "Oui, on intervient régulièrement à Schaerbeek dans les grandes avenues et les rues résidentielles du quartier de la Maison des Arts. On connaît bien les contraintes d'accès et les spécificités architecturales locales." },
+              { q: "Êtes-vous habitués au bâti schaerbeekois ?", a: "Oui, dans toute la commune, des grandes avenues et les rues résidentielles du quartier de la Maison des Arts. L'accès est vérifié lors du devis." },
               ...localFaqs("schaerbeek"),
             ].map((faq, i) => (
               <div key={i} className="bg-white rounded-xl border border-gray-100 p-6">
@@ -192,7 +192,7 @@ export default function SchaerbeekPage() {
         <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8">
             <h2 className="text-2xl font-bold text-gray-900 mb-2">Devis gratuit — Schaerbeek</h2>
-            <p className="text-gray-500 text-sm">Réponse sous 2h · ou appelez le <a href="tel:0451053370" className="font-bold text-[#1A4731] hover:text-[#F97316]">0451 05 33 70</a></p>
+            <p className="text-gray-500 text-sm">Devis gratuit et sans engagement · ou appelez le <a href="tel:0451053370" className="font-bold text-[#1A4731] hover:text-[#F97316]">0451 05 33 70</a></p>
           </div>
           <div className="bg-gray-50 border border-gray-200 rounded-2xl p-6 sm:p-8"><ContactForm defaultCommune="Schaerbeek" /></div>
         </div>

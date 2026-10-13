@@ -11,12 +11,12 @@ import { localFaqs, localFaqSchema, getCommune } from "@/lib/communes"
 export const metadata: Metadata = {
   title: { absolute: "Nettoyage de gouttières à Uccle dès 80 €" },
   description:
-    "Nettoyage de gouttières à Uccle dès 80 € : villas sous les arbres, zinc ancien, grands linéaires. Devis gratuit, intervention sous 48h.",
+    "Nettoyage de gouttières à Uccle dès 80 € : villas sous les arbres, zinc ancien, grands linéaires. Devis gratuit, prix fixé à l'avance.",
   alternates: { canonical: "https://www.nettoyage-gouttieres-bruxelles.be/communes/uccle" },
   keywords: ["nettoyage gouttières Uccle", "débouchage gouttières Uccle", "gouttières bouchées Uccle", "prix nettoyage gouttières Uccle"],
   openGraph: {
     title: "Nettoyage Gouttières Uccle — Devis Gratuit",
-    description: "Expert nettoyage gouttières à Uccle. Débouchage urgent, réparation, démoussage. Devis gratuit, intervention rapide.",
+    description: "Nettoyage de gouttières à Uccle : chéneaux et descentes vidés, écoulement testé. Devis gratuit, prix fixé à l'avance.",
     url: "https://www.nettoyage-gouttieres-bruxelles.be/communes/uccle",
     type: "website",
     images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "Nettoyage gouttières Uccle" }],
@@ -170,9 +170,9 @@ export default function UcclePage() {
                 icon: <AlertTriangle size={22} className="text-red-500" />,
                 href: "/services/debouchage-gouttieres",
                 title: "Débouchage urgence",
-                desc: "En cas de débordement actif sur votre propriété uccloise. Intervention haute pression 7j/7. Terrains en pente : on agit vite pour protéger les fondations.",
+                desc: "En cas de débordement actif sur votre propriété uccloise. Débouchage haute pression. Sur les terrains en pente, un débordement atteint vite les fondations.",
                 price: "dès 120€",
-                tag: "7j/7",
+                tag: "Urgence",
               },
               {
                 icon: <Wrench size={22} className="text-blue-600" />,
@@ -264,7 +264,7 @@ export default function UcclePage() {
           <div className="text-center mb-8">
             <h2 className="text-2xl font-bold text-gray-900 mb-2">Devis gratuit pour Uccle</h2>
             <p className="text-gray-500 text-sm">
-              Réponse sous 2h · ou appelez le{" "}
+              Devis gratuit et sans engagement · ou appelez le{" "}
               <a href="tel:0451053370" className="font-bold text-[#1A4731] hover:text-[#F97316]">0451 05 33 70</a>
             </p>
           </div>

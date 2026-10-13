@@ -180,7 +180,7 @@ export default function BlogOragesEteGouttieres() {
           <aside className="lg:col-span-1">
             <div className="bg-[#1A4731] rounded-2xl p-6 text-white mb-6">
               <h3 className="font-bold text-lg mb-3">Avant le prochain orage</h3>
-              <p className="text-green-100 text-sm mb-4">Contrôle + nettoyage complet avec facture d&apos;entretien. Intervention dans toute la Région bruxelloise. Devis gratuit sous 24h.</p>
+              <p className="text-green-100 text-sm mb-4">Contrôle + nettoyage complet avec facture d&apos;entretien. Intervention dans toute la Région bruxelloise. Devis gratuit.</p>
               <Link href="/contact" className="w-full bg-white text-[#1A4731] font-bold text-sm py-3 px-4 rounded-xl flex items-center justify-center gap-2 hover:bg-green-50 transition-colors">
                 Devis gratuit <ArrowRight size={14} />
               </Link>

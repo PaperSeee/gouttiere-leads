@@ -111,7 +111,7 @@ export default function ReparationGouttieres() {
                 Dans les maisons ouvrières de Forest ou les immeubles Art Nouveau de Schaerbeek, les
                 gouttières en PVC posées lors de rénovations des années 1990 sont souvent fragilisées
                 par les variations thermiques et présentent des fissures longitudinales typiques.
-                Nos techniciens évaluent chaque situation individuellement pour vous conseiller
+                Le professionnel évalue chaque situation individuellement pour vous conseiller
                 objectivement.
               </p>
 

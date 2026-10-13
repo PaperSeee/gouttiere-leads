@@ -9,7 +9,7 @@ import { EDITOR_REF, PUBLISHER_REF } from "@/lib/schema"
 export const metadata: Metadata = {
   title: { absolute: "Gouttière qui déborde : causes et solutions" },
   description:
-    "Votre gouttière déborde sous la pluie ? Les 6 causes les plus fréquentes, les risques pour votre maison et ce qu'il faut faire immédiatement. Urgence 7j/7.",
+    "Votre gouttière déborde sous la pluie ? Les 6 causes les plus fréquentes, les risques pour votre maison et ce qu'il faut faire immédiatement.",
   alternates: { canonical: "https://www.nettoyage-gouttieres-bruxelles.be/blog/gouttiere-qui-deborde-causes-solutions" },
   openGraph: {
     type: "article",
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Gouttière qui Déborde : Causes et Solutions",
-    description: "Les 6 causes + les risques + quoi faire maintenant. Intervention urgence 7j/7 à Bruxelles.",
+    description: "Les 6 causes + les risques + quoi faire maintenant. Débouchage en urgence à Bruxelles.",
     images: ["https://images.unsplash.com/photo-1516455590571-18256e5bb9ff?w=1200&q=80"],
   },
 }
@@ -62,7 +62,7 @@ export default function BlogDebordementPage() {
           {
             "@type": "Question",
             name: "Combien coûte un débouchage d'urgence à Bruxelles ?",
-            acceptedAnswer: { "@type": "Answer", text: "Le débouchage d'urgence est facturé entre 120 et 200€ selon l'accessibilité et la nature du bouchon. Nous intervenons 7j/7 à Bruxelles, souvent le jour même. Devis gratuit au 0451 05 33 70." },
+            acceptedAnswer: { "@type": "Answer", text: "Le débouchage d'urgence est facturé entre 120 et 200€ selon l'accessibilité et la nature du bouchon. Le délai d'intervention vous est annoncé au téléphone. Devis gratuit au 0451 05 33 70." },
           },
         ],
       },
@@ -120,7 +120,7 @@ export default function BlogDebordementPage() {
             <p className="text-red-800 text-sm">
               <strong>Débordement actif en ce moment ?</strong> N&apos;attendez pas — chaque heure de pluie aggrave les dégâts. Appelez le{" "}
               <a href="tel:0451053370" className="font-bold underline">0451 05 33 70</a>
-              {" "}— intervention 7j/7, souvent le jour même.
+              {" "}— le délai d&apos;intervention vous est annoncé au téléphone.
             </p>
           </div>
         </div>
@@ -175,7 +175,7 @@ export default function BlogDebordementPage() {
                   urgency: "Très fréquent",
                   urgencyColor: "bg-red-100 text-red-700",
                   desc: "La gouttière elle-même peut être dégagée, mais si la descente (le tuyau vertical) est bouchée, l'eau n'a nulle part où aller. Le signe révélateur : l'eau déborde à l'endroit exact où se trouve la descente, ou vous entendez un gargouillis puis un débordement.",
-                  solution: "Débouchage haute pression descente pluviale. Intervention urgence 7j/7.",
+                  solution: "Débouchage haute pression de la descente pluviale.",
                 },
                 {
                   num: "03",
@@ -285,7 +285,7 @@ export default function BlogDebordementPage() {
             <div className="grid sm:grid-cols-2 gap-4 my-5 not-prose">
               {[
                 { service: "Nettoyage gouttières + descentes", price: "dès 80€", detail: "Maison mitoyenne 1–2 étages, accès normal" },
-                { service: "Débouchage urgence 7j/7", price: "dès 120€", detail: "Intervention haute pression, prioritaire" },
+                { service: "Débouchage en urgence", price: "dès 120€", detail: "Intervention haute pression, prioritaire" },
                 { service: "Remplacement joint ou raccord", price: "dès 60€", detail: "Par tronçon, hors remplacement gouttière" },
                 { service: "Réparation crochet + reprise pente", price: "dès 80€", detail: "Par tronçon, inclut matériel et pose" },
               ].map((item) => (
@@ -336,7 +336,7 @@ export default function BlogDebordementPage() {
                 },
                 {
                   q: "Combien coûte un débouchage d'urgence à Bruxelles ?",
-                  a: "Le débouchage d'urgence est facturé entre 120 et 200€ selon l'accessibilité et la nature du bouchon. Nous intervenons 7j/7 à Bruxelles, souvent le jour même. Devis gratuit au 0451 05 33 70.",
+                  a: "Le débouchage d'urgence est facturé entre 120 et 200€ selon l'accessibilité et la nature du bouchon. Le délai d'intervention vous est annoncé au téléphone. Devis gratuit au 0451 05 33 70.",
                 },
               ].map((faq, i) => (
                 <div key={i} className="bg-gray-50 rounded-xl border border-gray-100 p-5">
@@ -360,8 +360,8 @@ export default function BlogDebordementPage() {
           <div className="mt-10 bg-[#1A4731] rounded-2xl p-6 sm:p-8 text-white">
             <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
               <div>
-                <h3 className="text-xl font-bold mb-2">Gouttière qui déborde ? On intervient sous 48h</h3>
-                <p className="text-gray-300 text-sm">Urgences 7j/7 · Devis gratuit · Intervention haute pression</p>
+                <h3 className="text-xl font-bold mb-2">Gouttière qui déborde ? Demandez un débouchage</h3>
+                <p className="text-gray-300 text-sm">Devis gratuit · Prix fixé à l'avance · Débouchage haute pression</p>
               </div>
               <a
                 href="tel:0451053370"
@@ -382,13 +382,13 @@ export default function BlogDebordementPage() {
             <div>
               <h2 className="text-2xl font-bold text-gray-900 mb-4">Demander une intervention rapide</h2>
               <p className="text-gray-600 mb-6 leading-relaxed">
-                Gouttière qui déborde ? Remplissez le formulaire ou appelez directement. Un technicien vous rappelle sous 2h.
+                Gouttière qui déborde ? Remplissez le formulaire ou appelez directement. Un professionnel indépendant vous rappelle.
               </p>
               <div className="space-y-3">
                 {[
                   "Diagnostic gratuit sur place",
-                  "Intervention sous 48h garantie",
-                  "Urgences traitées le jour même",
+                  "Date d'intervention convenue avec vous",
+                  "Délai annoncé au téléphone",
                   "Devis 100% gratuit et sans engagement",
                 ].map((item) => (
                   <div key={item} className="flex items-center gap-3">
@@ -398,11 +398,11 @@ export default function BlogDebordementPage() {
                 ))}
               </div>
               <div className="mt-6 p-4 bg-[#1A4731] rounded-xl">
-                <p className="text-white font-semibold mb-1 text-sm">Appel direct — urgence 7j/7</p>
+                <p className="text-white font-semibold mb-1 text-sm">Appel direct</p>
                 <a href="tel:0451053370" className="flex items-center gap-2 text-[#F97316] font-bold text-lg hover:text-orange-400 transition-colors">
                   <Phone size={20} />0451 05 33 70
                 </a>
-                <p className="text-gray-400 text-xs mt-1">Lun–Ven 7h30–18h | Sam 8h–14h | Urgences 7j/7</p>
+                <p className="text-gray-400 text-xs mt-1">Lun–Ven 7h30–18h | Sam 8h–14h</p>
               </div>
             </div>
             <div className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100">
