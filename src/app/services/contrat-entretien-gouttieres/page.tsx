@@ -9,7 +9,7 @@ import TrustNote from "@/components/TrustNote";
 export const metadata: Metadata = {
   title: { absolute: "Contrat d'entretien de gouttières à Bruxelles" },
   description:
-    "Contrat d'entretien annuel de gouttières à Bruxelles : un passage programmé en octobre et, si besoin, un second en mars. Conditions fixées dans le devis gratuit.",
+    "Contrat d'entretien de gouttières à Bruxelles : un passage programmé en octobre et, si besoin, un second en mars. Conditions fixées dans le devis gratuit.",
   alternates: { canonical: "https://www.nettoyage-gouttieres-bruxelles.be/services/contrat-entretien-gouttieres" },
   keywords: ["contrat entretien gouttières Bruxelles", "abonnement nettoyage gouttières", "entretien annuel gouttières prix", "forfait entretien gouttières Bruxelles"],
   openGraph: {

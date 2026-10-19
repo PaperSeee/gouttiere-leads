@@ -374,9 +374,9 @@ export const guides: Guide[] = [
     title: "Chéneau et corniche : signes, entretien et réparation",
     h1: "Chéneau et corniche : entretenir la gouttière cachée des maisons bruxelloises",
     description:
-      "Chéneau caché derrière la corniche : les signes qu'il est bouché ou percé, comment il s'entretient, quand réparer le zinc et quand un permis s'impose à Bruxelles.",
+      "Chéneau caché derrière la corniche : signes qu'il est bouché ou percé, entretien, réparation du zinc et cas où un permis s'impose à Bruxelles.",
     ...PUBLISHED,
-    dateModified: "2026-10-13",
+    dateModified: "2026-10-19",
     category: "Entretien",
     readTime: "7 min",
     imageUrl: "https://images.unsplash.com/photo-1632759145351-1d592919f522?w=800&q=80",

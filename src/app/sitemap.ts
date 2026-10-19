@@ -28,7 +28,7 @@ const LAST_MODIFIED: Record<string, string> = {
   "/services/nettoyage-corniche": "2026-10-13",
   "/services/nettoyage-toiture": "2026-10-13",
   "/services/protection-gouttieres": "2026-10-13",
-  "/services/contrat-entretien-gouttieres": "2026-10-13",
+  "/services/contrat-entretien-gouttieres": "2026-10-19",
 };
 
 /** Pages commune : date propre aux communes retravaillées, défaut pour les autres. */
