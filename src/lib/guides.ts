@@ -347,7 +347,7 @@ export const guides: Guide[] = [
           "le prix TVA comprise et la périodicité proposée.",
         ],
         after: [
-          "Nos fourchettes de prix sont publiques sur la page [tarifs](/tarifs) ; pour un immeuble, le prix dépend du nombre d'étages, de façades et de descentes.",
+          "Nos fourchettes de prix sont publiques sur la page [prix du nettoyage de gouttières](/tarifs) ; pour un immeuble, le prix dépend du nombre d'étages, de façades et de descentes.",
         ],
       },
       {
@@ -499,7 +499,7 @@ export const guides: Guide[] = [
           "**Reprise de la pente** : en repositionnant ou en remplaçant les crochets (**8 à 15 € pièce**).",
         ],
         after: [
-          "Ces prix sont ceux de notre page [tarifs](/tarifs) ; le montant exact est fixé par un devis gratuit. Toutes ces interventions relèvent de notre service de [réparation de gouttières](/services/reparation-gouttieres).",
+          "Ces prix sont ceux de notre page [prix du nettoyage de gouttières à Bruxelles](/tarifs) ; le montant exact est fixé par un devis gratuit. Toutes ces interventions relèvent de notre service de [réparation de gouttières](/services/reparation-gouttieres).",
         ],
       },
       {
