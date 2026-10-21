@@ -162,7 +162,7 @@ export default function NettoyageGouttieres() {
                 pour nous assurer que l&apos;évacuation est parfaitement fonctionnelle.
               </p>
 
-              <h2 className="text-2xl font-bold text-gray-900 mb-4 mt-8">Que comprend notre prestation de nettoyage ?</h2>
+              <h2 className="text-2xl font-bold text-gray-900 mb-4 mt-8">Que comprend une prestation de nettoyage ?</h2>
               <ul className="space-y-2 mb-6">
                 {[
                   "Inspection complète de l'installation",

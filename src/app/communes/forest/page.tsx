@@ -28,10 +28,10 @@ export default function ForestPage() {
     "@context": "https://schema.org",
     "@type": "FAQPage",
     mainEntity: [
-      { "@type": "Question", name: "Peut-on coordonner le nettoyage avec notre voisin mitoyen ?", acceptedAnswer: { "@type": "Answer", text: "Oui, et c'est même conseillé ! Pour les maisons mitoyennes, on propose un tarif légèrement réduit quand on fait deux maisons le même jour. Cela permet aussi de traiter les descentes partagées en une seule intervention efficace." } },
+      { "@type": "Question", name: "Peut-on coordonner le nettoyage avec notre voisin mitoyen ?", acceptedAnswer: { "@type": "Answer", text: "Oui, et c'est même conseillé ! Pour les maisons mitoyennes, demandez un devis commun : deux maisons traitées le même jour, c'est un seul déplacement, ce que le professionnel peut prendre en compte. Cela permet aussi de traiter les descentes partagées en une seule intervention efficace." } },
       { "@type": "Question", name: "Nos gouttières en zinc des années 30 valent-elles encore la peine ?", acceptedAnswer: { "@type": "Answer", text: "Ça dépend de l'état. Le zinc des années 30 peut encore durer 10–20 ans si l'oxydation est légère et les profils rectilignes. Un diagnostic gratuit permet de trancher — si 60% du linéaire est en bon état, une réparation ciblée reste économique." } },
       { "@type": "Question", name: "Les ardoises du toit causent-elles des problèmes de gouttières ?", acceptedAnswer: { "@type": "Answer", text: "Les mousses sur ardoises migrent vers les gouttières et forment des bouchons compacts. Les ardoises brisées créent aussi des points d'infiltration. Un démoussage préventif protège les deux à la fois." } },
-      { "@type": "Question", name: "Intervenez-vous près du parc de Forest et du parc Duden ?", acceptedAnswer: { "@type": "Answer", text: "Oui, dans toutes les rues de Forest, y compris les avenues bordées d'arbres qui génèrent le plus de feuilles. L'accès est vérifié lors du devis." } },
+      { "@type": "Question", name: "Un professionnel peut-il intervenir près du parc de Forest et du parc Duden ?", acceptedAnswer: { "@type": "Answer", text: "Oui, dans toutes les rues de Forest, y compris les avenues bordées d'arbres qui génèrent le plus de feuilles. L'accès est vérifié lors du devis." } },
       ...localFaqSchema("forest"),
     ],
   }
@@ -166,10 +166,10 @@ export default function ForestPage() {
           <h2 className="text-2xl font-bold text-gray-900 mb-8">Questions fréquentes — Forest</h2>
           <div className="space-y-5">
             {[
-              { q: "Peut-on coordonner le nettoyage avec notre voisin mitoyen ?", a: "Oui, et c'est même conseillé ! Pour les maisons mitoyennes, on propose un tarif légèrement réduit quand on fait deux maisons le même jour. Cela permet aussi de traiter les descentes partagées en une seule intervention efficace." },
+              { q: "Peut-on coordonner le nettoyage avec notre voisin mitoyen ?", a: "Oui, et c'est même conseillé ! Pour les maisons mitoyennes, demandez un devis commun : deux maisons traitées le même jour, c'est un seul déplacement, ce que le professionnel peut prendre en compte. Cela permet aussi de traiter les descentes partagées en une seule intervention efficace." },
               { q: "Nos gouttières en zinc des années 30 valent-elles encore la peine ?", a: "Ça dépend de l'état. Le zinc des années 30 peut encore durer 10–20 ans si l'oxydation est légère et les profils rectilignes. Un diagnostic gratuit permet de trancher — si 60% du linéaire est en bon état, une réparation ciblée reste économique." },
               { q: "Les ardoises du toit causent-elles des problèmes de gouttières ?", a: "Les mousses sur ardoises migrent vers les gouttières et forment des bouchons compacts. Les ardoises brisées créent aussi des points d'infiltration. Un démoussage préventif protège les deux à la fois." },
-              { q: "Intervenez-vous près du parc de Forest et du parc Duden ?", a: "Oui, dans toutes les rues de Forest, y compris les avenues bordées d'arbres qui génèrent le plus de feuilles. L'accès est vérifié lors du devis." },
+              { q: "Un professionnel peut-il intervenir près du parc de Forest et du parc Duden ?", a: "Oui, dans toutes les rues de Forest, y compris les avenues bordées d'arbres qui génèrent le plus de feuilles. L'accès est vérifié lors du devis." },
               ...localFaqs("forest"),
             ].map((faq, i) => (
               <div key={i} className="bg-white rounded-xl border border-gray-100 p-6">

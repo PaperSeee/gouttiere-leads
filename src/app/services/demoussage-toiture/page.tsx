@@ -147,7 +147,7 @@ export default function DemoussageToiture() {
                 complémentaires qu&apos;il est judicieux de réaliser ensemble.
               </p>
 
-              <h2 className="text-2xl font-bold text-gray-900 mb-4 mt-8">Notre processus de démoussage</h2>
+              <h2 className="text-2xl font-bold text-gray-900 mb-4 mt-8">Le processus de démoussage</h2>
               <div className="space-y-4 mb-6">
                 {[
                   {
@@ -181,7 +181,7 @@ export default function DemoussageToiture() {
                 ))}
               </div>
 
-              <h2 className="text-2xl font-bold text-gray-900 mb-4 mt-8">Ce que comprend notre prestation</h2>
+              <h2 className="text-2xl font-bold text-gray-900 mb-4 mt-8">Ce que comprend la prestation</h2>
               <ul className="space-y-2 mb-6">
                 {[
                   "Inspection complète de la toiture",
@@ -201,8 +201,8 @@ export default function DemoussageToiture() {
               <div className="bg-green-50 border border-green-200 rounded-xl p-4 mt-6">
                 <h3 className="font-semibold text-[#1A4731] mb-2">Offre combinée recommandée</h3>
                 <p className="text-gray-600 text-sm">
-                  Nous proposons un tarif avantageux lorsque le démoussage toiture est combiné au
-                  nettoyage des gouttières lors d&apos;une même intervention. Contactez-nous pour un devis personnalisé.
+                  Combiner le démoussage toiture et le
+                  nettoyage des gouttières lors d&apos;une même intervention évite un second déplacement. Contactez-nous pour un devis personnalisé.
                 </p>
               </div>
 

@@ -306,14 +306,14 @@ export default function BlogAutomneGouttieresBruxellesPage() {
               Les communes bruxelloises les plus touchées par les feuilles d'automne
             </h2>
             <p>
-              Toutes les communes bruxelloises ne sont pas égales face aux problèmes de gouttières en automne. La densité végétale, la nature des arbres présents et la topographie locales créent des situations très différentes d'un quartier à l'autre. Voici les communes où nous intervenons le plus en période automnale.
+              Toutes les communes bruxelloises ne sont pas égales face aux problèmes de gouttières en automne. La densité végétale, la nature des arbres présents et la topographie locales créent des situations très différentes d'un quartier à l'autre. Voici les communes d'où viennent le plus de demandes en période automnale.
             </p>
 
             <div className="grid sm:grid-cols-2 gap-4 my-6 not-prose">
               {[
                 {
                   commune: "Uccle",
-                  desc: "Les grandes avenues plantées de platanes centenaires (Molière, Brugmann) et les vastes propriétés boisées font d'Uccle la commune où nos interventions automnales sont les plus nombreuses. Les villas des années 30-60 avec leurs gouttières en zinc exigent une expertise particulière.",
+                  desc: "Les grandes avenues plantées de platanes centenaires (Molière, Brugmann) et les vastes propriétés boisées font d'Uccle la commune où les demandes d'automne sont les plus nombreuses. Les villas des années 30-60 avec leurs gouttières en zinc exigent une expertise particulière.",
                   link: "/communes/uccle",
                 },
                 {

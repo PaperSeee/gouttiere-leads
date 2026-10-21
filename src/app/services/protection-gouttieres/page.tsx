@@ -121,7 +121,7 @@ export default function ProtectionGouttieres() {
                 reste recommandée, même avec une protection installée.
               </p>
 
-              <h2 className="text-2xl font-bold text-gray-900 mb-4 mt-8">Les systèmes que nous posons</h2>
+              <h2 className="text-2xl font-bold text-gray-900 mb-4 mt-8">Les systèmes posés</h2>
               <div className="space-y-4 mb-6">
                 <div className="border border-gray-100 rounded-xl p-4">
                   <h3 className="font-bold text-gray-900 mb-1">Grilles métalliques ou plastiques</h3>
@@ -155,7 +155,7 @@ export default function ProtectionGouttieres() {
                 Pour une maison bruxelloise très exposée aux arbres, nous recommandons généralement une
                 grille de qualité bien posée, combinée à une inspection annuelle. Vous ne supprimez pas
                 l&apos;entretien de vos gouttières, mais vous le réduisez nettement et vous évitez les
-                débordements liés aux feuilles accumulées. Nous établissons un diagnostic gratuit de
+                débordements liés aux feuilles accumulées. Le professionnel partenaire établit un diagnostic gratuit de
                 votre installation pour recommander le système le plus adapté à votre environnement
                 (essences d&apos;arbres à proximité, exposition, type de gouttière).
               </p>

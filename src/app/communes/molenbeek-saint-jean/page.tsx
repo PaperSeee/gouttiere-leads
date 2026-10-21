@@ -30,8 +30,8 @@ export default function MolenbeekSaintJeanPage() {
     mainEntity: [
       { "@type": "Question", name: "On rénove notre immeuble de rapport — quand faut-il s'occuper des gouttières ?", acceptedAnswer: { "@type": "Answer", text: "Idéalement avant les travaux de façade et de toiture. Des gouttières défectueuses peuvent ruiner une réfection de façade en quelques mois. On s'intègre dans le planning de rénovation pour coordonner avec les autres corps de métier." } },
       { "@type": "Question", name: "Les gouttières de notre maison canal n'ont pas été nettoyées depuis 5 ans — que faire ?", acceptedAnswer: { "@type": "Answer", text: "Pas de panique, mais il faut agir vite. Après 5 ans sans entretien, on trouve généralement des mousses épaisses, des dépôts de sédiments compactés et parfois des plantes installées. On peut tout traiter en une intervention avec du matériel adapté." } },
-      { "@type": "Question", name: "Comment s'organise le paiement pour une maison de rapport avec plusieurs propriétaires ?", acceptedAnswer: { "@type": "Answer", text: "On établit une facture unique au nom du gestionnaire ou de la copropriété. Si nécessaire, on peut diviser la facture par unité pour faciliter la répartition des charges entre copropriétaires." } },
-      { "@type": "Question", name: "Intervenez-vous rue de Birmingham et rue Ransfort ?", acceptedAnswer: { "@type": "Answer", text: "Oui, dans toute Molenbeek-Saint-Jean. Rues étroites et cours intérieures : l'accès est vérifié lors du devis." } },
+      { "@type": "Question", name: "Comment s'organise le paiement pour une maison de rapport avec plusieurs propriétaires ?", acceptedAnswer: { "@type": "Answer", text: "Le professionnel peut établir une facture unique au nom du gestionnaire ou de la copropriété. Si nécessaire, on peut diviser la facture par unité pour faciliter la répartition des charges entre copropriétaires." } },
+      { "@type": "Question", name: "Un professionnel peut-il intervenir rue de Birmingham et rue Ransfort ?", acceptedAnswer: { "@type": "Answer", text: "Oui, dans toute Molenbeek-Saint-Jean. Rues étroites et cours intérieures : l'accès est vérifié lors du devis." } },
       ...localFaqSchema("molenbeek-saint-jean"),
     ],
   }
@@ -169,8 +169,8 @@ export default function MolenbeekSaintJeanPage() {
             {[
               { q: "On rénove notre immeuble de rapport — quand faut-il s'occuper des gouttières ?", a: "Idéalement avant les travaux de façade et de toiture. Des gouttières défectueuses peuvent ruiner une réfection de façade en quelques mois. On s'intègre dans le planning de rénovation pour coordonner avec les autres corps de métier." },
               { q: "Les gouttières de notre maison canal n'ont pas été nettoyées depuis 5 ans — que faire ?", a: "Pas de panique, mais il faut agir vite. Après 5 ans sans entretien, on trouve généralement des mousses épaisses, des dépôts de sédiments compactés et parfois des plantes installées. On peut tout traiter en une intervention avec du matériel adapté." },
-              { q: "Comment s'organise le paiement pour une maison de rapport avec plusieurs propriétaires ?", a: "On établit une facture unique au nom du gestionnaire ou de la copropriété. Si nécessaire, on peut diviser la facture par unité pour faciliter la répartition des charges entre copropriétaires." },
-              { q: "Intervenez-vous rue de Birmingham et rue Ransfort ?", a: "Oui, dans toute Molenbeek-Saint-Jean. Rues étroites et cours intérieures : l'accès est vérifié lors du devis." },
+              { q: "Comment s'organise le paiement pour une maison de rapport avec plusieurs propriétaires ?", a: "Le professionnel peut établir une facture unique au nom du gestionnaire ou de la copropriété. Si nécessaire, on peut diviser la facture par unité pour faciliter la répartition des charges entre copropriétaires." },
+              { q: "Un professionnel peut-il intervenir rue de Birmingham et rue Ransfort ?", a: "Oui, dans toute Molenbeek-Saint-Jean. Rues étroites et cours intérieures : l'accès est vérifié lors du devis." },
               ...localFaqs("molenbeek-saint-jean"),
             ].map((faq, i) => (
               <div key={i} className="bg-white rounded-xl border border-gray-100 p-6">

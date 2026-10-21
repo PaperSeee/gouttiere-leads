@@ -30,7 +30,7 @@ export default function AnderlechtPage() {
     mainEntity: [
       { "@type": "Question", name: "L'humidité du canal affecte-t-elle vraiment les gouttières ?", acceptedAnswer: { "@type": "Answer", text: "Oui. Les maisons les plus proches du canal de Charleroi, dans un air plus humide, voient souvent les mousses repousser plus vite. Un démoussage préventif annuel est recommandé plutôt qu'un nettoyage curatif tous les 3 ans." } },
       { "@type": "Question", name: "Le zinc de nos maisons des années 40 est-il encore récupérable ?", acceptedAnswer: { "@type": "Answer", text: "Souvent, oui : un zinc ancien aux profils droits et aux soudures saines se nettoie et se répare plutôt qu'il ne se remplace. Son état est constaté lors du devis gratuit, avant toute décision de remplacement." } },
-      { "@type": "Question", name: "Intervenez-vous dans les quartiers Cureghem et Neerpede ?", acceptedAnswer: { "@type": "Answer", text: "Oui, dans toute la commune d'Anderlecht sans exception. Cours étroites, passages latéraux, mitoyenneté : l'accès est vérifié lors du devis." } },
+      { "@type": "Question", name: "Un professionnel peut-il intervenir dans les quartiers Cureghem et Neerpede ?", acceptedAnswer: { "@type": "Answer", text: "Oui, dans toute la commune d'Anderlecht sans exception. Cours étroites, passages latéraux, mitoyenneté : l'accès est vérifié lors du devis." } },
       { "@type": "Question", name: "Peut-on coordonner le nettoyage avec les voisins mitoyens ?", acceptedAnswer: { "@type": "Answer", text: "Oui, c'est même conseillé : deux maisons mitoyennes nettoyées le même jour permettent de traiter les descentes partagées en une seule fois. Demandez un devis groupé, qui indique le prix de chaque maison." } },
       ...localFaqSchema("anderlecht"),
     ],
@@ -169,7 +169,7 @@ export default function AnderlechtPage() {
             {[
               { q: "L'humidité du canal affecte-t-elle vraiment les gouttières ?", a: "Oui. Les maisons les plus proches du canal de Charleroi, dans un air plus humide, voient souvent les mousses repousser plus vite. Un démoussage préventif annuel est recommandé plutôt qu'un nettoyage curatif tous les 3 ans." },
               { q: "Le zinc de nos maisons des années 40 est-il encore récupérable ?", a: "Souvent, oui : un zinc ancien aux profils droits et aux soudures saines se nettoie et se répare plutôt qu'il ne se remplace. Son état est constaté lors du devis gratuit, avant toute décision de remplacement." },
-              { q: "Intervenez-vous dans les quartiers Cureghem et Neerpede ?", a: "Oui, dans toute la commune d'Anderlecht sans exception. Cours étroites, passages latéraux, mitoyenneté : l'accès est vérifié lors du devis." },
+              { q: "Un professionnel peut-il intervenir dans les quartiers Cureghem et Neerpede ?", a: "Oui, dans toute la commune d'Anderlecht sans exception. Cours étroites, passages latéraux, mitoyenneté : l'accès est vérifié lors du devis." },
               { q: "Peut-on coordonner le nettoyage avec les voisins mitoyens ?", a: "Oui, c'est même conseillé : deux maisons mitoyennes nettoyées le même jour permettent de traiter les descentes partagées en une seule fois. Demandez un devis groupé, qui indique le prix de chaque maison." },
               ...localFaqs("anderlecht"),
             ].map((faq, i) => (

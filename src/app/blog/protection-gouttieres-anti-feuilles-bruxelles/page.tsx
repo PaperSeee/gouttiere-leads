@@ -186,7 +186,7 @@ export default function BlogProtectionGouttieresAntiFeuilles() {
               Notre conseil pour une maison bruxelloise très exposée aux arbres : une <strong>grille de qualité bien posée</strong>, combinée à une <strong>inspection annuelle</strong>. Vous ne supprimez pas l&apos;entretien, mais vous le réduisez nettement et vous évitez les débordements.
             </p>
             <p>
-              Nous proposons la <Link href="/services/protection-gouttieres">pose professionnelle de protections anti-feuilles</Link> dans les 19 communes de Bruxelles, avec un diagnostic gratuit pour choisir le système le plus adapté à votre environnement.
+              Vous pouvez demander la <Link href="/services/protection-gouttieres">pose professionnelle de protections anti-feuilles</Link> dans les 19 communes de Bruxelles : la demande est transmise à un professionnel partenaire, qui fait un diagnostic gratuit pour choisir le système le plus adapté à votre environnement.
             </p>
 
             <div className="not-prose bg-green-50 border border-green-200 rounded-xl p-5 mb-6">

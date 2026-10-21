@@ -28,10 +28,10 @@ export default function IxellesPage() {
     "@context": "https://schema.org",
     "@type": "FAQPage",
     mainEntity: [
-      { "@type": "Question", name: "Peut-on nettoyer du zinc Art nouveau sans l'abîmer ?", acceptedAnswer: { "@type": "Answer", text: "Oui, avec les bons outils. On travaille manuellement et utilise des brosses non-abrasives dans les zones ornementales. Pas de nettoyeur haute pression sur du zinc historique — trop de risque de déformation ou d'arrachage des reliefs." } },
+      { "@type": "Question", name: "Peut-on nettoyer du zinc Art nouveau sans l'abîmer ?", acceptedAnswer: { "@type": "Answer", text: "Oui, avec les bons outils. Demandez un travail à la main, avec des brosses non abrasives, dans les zones ornementales. Pas de nettoyeur haute pression sur du zinc historique — trop de risque de déformation ou d'arrachage des reliefs." } },
       { "@type": "Question", name: "Notre descente pluviale est partagée avec le voisin. Comment procédez-vous ?", acceptedAnswer: { "@type": "Answer", text: "Dans les maisons mitoyennes d'Ixelles, les descentes partagées nécessitent l'accord des deux parties. On peut intervenir sur l'ensemble du système si vous avez l'accord voisin, ou uniquement sur votre partie avec rapport pour faciliter la démarche." } },
       { "@type": "Question", name: "À quelle fréquence nettoyer à Ixelles ?", acceptedAnswer: { "@type": "Answer", text: "Une fois par an en automne suffit généralement. Les propriétés proches du Bois de la Cambre ou des étangs peuvent nécessiter un second passage au printemps pour évacuer algues et sédiments." } },
-      { "@type": "Question", name: "Intervenez-vous en copropriété ?", acceptedAnswer: { "@type": "Answer", text: "Oui. On intervient pour les copropriétés avec devis global, rapport d'état et facture pour le syndic. On coordonne les interventions pour minimiser les perturbations." } },
+      { "@type": "Question", name: "Un professionnel peut-il intervenir en copropriété ?", acceptedAnswer: { "@type": "Answer", text: "Oui. Le professionnel partenaire peut établir un devis global, un rapport d'état et une facture au nom du syndic. Les passages se planifient avec le syndic pour limiter la gêne." } },
       ...localFaqSchema("ixelles"),
     ],
   }
@@ -165,10 +165,10 @@ export default function IxellesPage() {
           <h2 className="text-2xl font-bold text-gray-900 mb-8">Questions fréquentes — Ixelles</h2>
           <div className="space-y-5">
             {[
-              { q: "Peut-on nettoyer du zinc Art nouveau sans l'abîmer ?", a: "Oui, avec les bons outils. On travaille manuellement et utilise des brosses non-abrasives dans les zones ornementales. Pas de nettoyeur haute pression sur du zinc historique — trop de risque de déformation ou d'arrachage des reliefs." },
+              { q: "Peut-on nettoyer du zinc Art nouveau sans l'abîmer ?", a: "Oui, avec les bons outils. Demandez un travail à la main, avec des brosses non abrasives, dans les zones ornementales. Pas de nettoyeur haute pression sur du zinc historique — trop de risque de déformation ou d'arrachage des reliefs." },
               { q: "Notre descente pluviale est partagée avec le voisin. Comment procédez-vous ?", a: "Dans les maisons mitoyennes d'Ixelles, les descentes partagées nécessitent l'accord des deux parties. On peut intervenir sur l'ensemble du système si vous avez l'accord voisin, ou uniquement sur votre partie avec rapport pour faciliter la démarche." },
               { q: "À quelle fréquence nettoyer à Ixelles ?", a: "Une fois par an en automne suffit généralement. Les propriétés proches du Bois de la Cambre ou des étangs peuvent nécessiter un second passage au printemps pour évacuer algues et sédiments." },
-              { q: "Intervenez-vous en copropriété ?", a: "Oui. On intervient pour les copropriétés avec devis global, rapport d'état et facture pour le syndic. On coordonne les interventions pour minimiser les perturbations." },
+              { q: "Un professionnel peut-il intervenir en copropriété ?", a: "Oui. Le professionnel partenaire peut établir un devis global, un rapport d'état et une facture au nom du syndic. Les passages se planifient avec le syndic pour limiter la gêne." },
               ...localFaqs("ixelles"),
             ].map((faq, i) => (
               <div key={i} className="bg-white rounded-xl border border-gray-100 p-6">

@@ -785,7 +785,7 @@ export const communes: Commune[] = [
       },
       {
         q: "Peut-on souder une gouttière en cuivre des cités-jardins au lieu de la remplacer ?",
-        a: "Souvent, oui, tant que le métal n'est pas percé et que les fixations tiennent. On nettoie sans abrasif puis on reprend la soudure au lieu de tout déposer, ce qui préserve la patine. Un remplacement ne se justifie que là où le cuivre est franchement troué ou arraché.",
+        a: "Souvent, oui, tant que le métal n'est pas percé et que les fixations tiennent. Le professionnel nettoie sans abrasif puis reprend la soudure au lieu de tout déposer, ce qui préserve la patine. Un remplacement ne se justifie que là où le cuivre est franchement troué ou arraché.",
       },
     ],
     detail: {

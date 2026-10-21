@@ -28,10 +28,10 @@ export default function WatermealBoitsfortPage() {
     "@context": "https://schema.org",
     "@type": "FAQPage",
     mainEntity: [
-      { "@type": "Question", name: "Combien de nettoyages par an à Watermael-Boitsfort ?", acceptedAnswer: { "@type": "Answer", text: "2 à 3 selon votre exposition. Les cités Le Logis et Floréal entourées d'arbres bénéficient d'un passage en mai, novembre et janvier-février (hêtres tardifs). On propose des abonnements annuels avec planning préétabli." } },
-      { "@type": "Question", name: "Nos gouttières en cuivre des cités-jardins — comment les entretenir ?", acceptedAnswer: { "@type": "Answer", text: "Le cuivre se nettoie avec des outils non-abrasifs pour ne pas rayer la surface et préserver la patine naturelle. Si des fissures apparaissent, on répare par soudure à l'étain. Un cuivre bien entretenu peut durer 80 à 100 ans." } },
+      { "@type": "Question", name: "Combien de nettoyages par an à Watermael-Boitsfort ?", acceptedAnswer: { "@type": "Answer", text: "2 à 3 selon votre exposition. Les cités Le Logis et Floréal entourées d'arbres bénéficient d'un passage en mai, novembre et janvier-février (hêtres tardifs). Un contrat d'entretien annuel, avec un planning fixé à l'avance, est possible." } },
+      { "@type": "Question", name: "Nos gouttières en cuivre des cités-jardins — comment les entretenir ?", acceptedAnswer: { "@type": "Answer", text: "Le cuivre se nettoie avec des outils non-abrasifs pour ne pas rayer la surface et préserver la patine naturelle. Si des fissures apparaissent, la réparation se fait par soudure à l'étain. Un cuivre bien entretenu peut durer 80 à 100 ans." } },
       { "@type": "Question", name: "Les mousses dans nos gouttières sont particulièrement épaisses — pourquoi ?", acceptedAnswer: { "@type": "Answer", text: "L'humidité permanente et l'ombrage des grands arbres créent les conditions idéales. À Watermael-Boitsfort, sans traitement préventif, les mousses peuvent atteindre une couche épaisse en quelques années, qui réduit fortement la capacité d'écoulement." } },
-      { "@type": "Question", name: "Proposez-vous des contrats d'entretien annuels ?", acceptedAnswer: { "@type": "Answer", text: "Oui, particulièrement recommandé ici. On établit un planning annuel de 2 à 3 visites avec tarif préférentiel. Vous n'avez plus à y penser — on vous contacte avant chaque intervention selon le calendrier convenu." } },
+      { "@type": "Question", name: "Proposez-vous des contrats d'entretien annuels ?", acceptedAnswer: { "@type": "Answer", text: "Oui, particulièrement recommandé ici. Un planning annuel de 2 à 3 visites peut être fixé avec le professionnel, dans un même devis. Vous n'avez plus à y penser — on vous contacte avant chaque intervention selon le calendrier convenu." } },
       ...localFaqSchema("watermael-boitsfort"),
     ],
   }
@@ -166,10 +166,10 @@ export default function WatermealBoitsfortPage() {
           <h2 className="text-2xl font-bold text-gray-900 mb-8">Questions fréquentes — Watermael-Boitsfort</h2>
           <div className="space-y-5">
             {[
-              { q: "Combien de nettoyages par an à Watermael-Boitsfort ?", a: "2 à 3 selon votre exposition. Les cités Le Logis et Floréal entourées d'arbres bénéficient d'un passage en mai, novembre et janvier-février (hêtres tardifs). On propose des abonnements annuels avec planning préétabli." },
-              { q: "Nos gouttières en cuivre des cités-jardins — comment les entretenir ?", a: "Le cuivre se nettoie avec des outils non-abrasifs pour ne pas rayer la surface et préserver la patine naturelle. Si des fissures apparaissent, on répare par soudure à l'étain. Un cuivre bien entretenu peut durer 80 à 100 ans." },
+              { q: "Combien de nettoyages par an à Watermael-Boitsfort ?", a: "2 à 3 selon votre exposition. Les cités Le Logis et Floréal entourées d'arbres bénéficient d'un passage en mai, novembre et janvier-février (hêtres tardifs). Un contrat d'entretien annuel, avec un planning fixé à l'avance, est possible." },
+              { q: "Nos gouttières en cuivre des cités-jardins — comment les entretenir ?", a: "Le cuivre se nettoie avec des outils non-abrasifs pour ne pas rayer la surface et préserver la patine naturelle. Si des fissures apparaissent, la réparation se fait par soudure à l'étain. Un cuivre bien entretenu peut durer 80 à 100 ans." },
               { q: "Les mousses dans nos gouttières sont particulièrement épaisses — pourquoi ?", a: "L'humidité permanente et l'ombrage des grands arbres créent les conditions idéales. À Watermael-Boitsfort, sans traitement préventif, les mousses peuvent atteindre une couche épaisse en quelques années, qui réduit fortement la capacité d'écoulement." },
-              { q: "Proposez-vous des contrats d'entretien annuels ?", a: "Oui, particulièrement recommandé ici. On établit un planning annuel de 2 à 3 visites avec tarif préférentiel. Vous n'avez plus à y penser — on vous contacte avant chaque intervention selon le calendrier convenu." },
+              { q: "Proposez-vous des contrats d'entretien annuels ?", a: "Oui, particulièrement recommandé ici. Un planning annuel de 2 à 3 visites peut être fixé avec le professionnel, dans un même devis. Vous n'avez plus à y penser — on vous contacte avant chaque intervention selon le calendrier convenu." },
               ...localFaqs("watermael-boitsfort"),
             ].map((faq, i) => (
               <div key={i} className="bg-white rounded-xl border border-gray-100 p-6">

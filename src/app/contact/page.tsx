@@ -128,7 +128,7 @@ export default function Contact() {
                   Votre visite d&apos;inspection est entièrement gratuite et sans engagement.
                 </p>
                 <p className="mt-3 text-sm text-gray-600">
-                  Pour en savoir plus sur notre entreprise, consultez la page{" "}
+                  Pour en savoir plus sur ce site, consultez la page{" "}
                   <Link href="/a-propos" className="font-semibold text-[#1A4731] underline hover:text-[#F97316]">à propos</Link> ; les
                   informations légales figurent dans les{" "}
                   <Link href="/mentions-legales" className="font-semibold text-[#1A4731] underline hover:text-[#F97316]">mentions légales</Link>.

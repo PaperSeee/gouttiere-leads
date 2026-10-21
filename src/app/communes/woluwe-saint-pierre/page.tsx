@@ -29,8 +29,8 @@ export default function WoluweStPierrePage() {
     "@type": "FAQPage",
     mainEntity: [
       { "@type": "Question", name: "Les samares d'érables causent-elles vraiment des bouchons ?", acceptedAnswer: { "@type": "Answer", text: "Oui, c'est l'un des débris végétaux les plus problématiques. Les samares sont assez petites pour pénétrer dans les descentes et y former des bouchons compacts. Elles tombent au printemps puis en automne — deux passages annuels sont recommandés pour les propriétés proches des parcs." } },
-      { "@type": "Question", name: "Notre villa a plus de 80 mètres de gouttières. Quel tarif ?", acceptedAnswer: { "@type": "Answer", text: "Pour les grandes propriétés, on établit un devis sur mesure tenant compte du linéaire exact, de la hauteur, des matériaux et de l'accessibilité. Deux techniciens pour les grandes interventions. Appelez pour un diagnostic gratuit." } },
-      { "@type": "Question", name: "Intervenez-vous avenue de Tervueren et avenue de Broqueville ?", acceptedAnswer: { "@type": "Answer", text: "Oui, dans toute Woluwe-Saint-Pierre, y compris les grandes avenues résidentielles. L'accès est vérifié lors du devis." } },
+      { "@type": "Question", name: "Notre villa a plus de 80 mètres de gouttières. Quel tarif ?", acceptedAnswer: { "@type": "Answer", text: "Pour les grandes propriétés, le professionnel établit un devis sur mesure tenant compte du linéaire exact, de la hauteur, des matériaux et de l'accessibilité. Deux techniciens pour les grandes interventions. Appelez pour un diagnostic gratuit." } },
+      { "@type": "Question", name: "Un professionnel peut-il intervenir avenue de Tervueren et avenue de Broqueville ?", acceptedAnswer: { "@type": "Answer", text: "Oui, dans toute Woluwe-Saint-Pierre, y compris les grandes avenues résidentielles. L'accès est vérifié lors du devis." } },
       { "@type": "Question", name: "Faut-il aussi nettoyer au printemps à WSP ?", acceptedAnswer: { "@type": "Answer", text: "Pour les propriétés proches des parcs, oui. Les marronniers du parc de Woluwe et les érables libèrent des pollens, bourgeons et graines en mai qui s'accumulent dans les gouttières. Un passage de printemps complète utilement le nettoyage automnal." } },
       ...localFaqSchema("woluwe-saint-pierre"),
     ],
@@ -167,8 +167,8 @@ export default function WoluweStPierrePage() {
           <div className="space-y-5">
             {[
               { q: "Les samares d'érables causent-elles vraiment des bouchons ?", a: "Oui, c'est l'un des débris végétaux les plus problématiques. Les samares sont assez petites pour pénétrer dans les descentes et y former des bouchons compacts. Elles tombent au printemps puis en automne — deux passages annuels sont recommandés pour les propriétés proches des parcs." },
-              { q: "Notre villa a plus de 80 mètres de gouttières. Quel tarif ?", a: "Pour les grandes propriétés, on établit un devis sur mesure tenant compte du linéaire exact, de la hauteur, des matériaux et de l'accessibilité. Deux techniciens pour les grandes interventions. Appelez pour un diagnostic gratuit." },
-              { q: "Intervenez-vous avenue de Tervueren et avenue de Broqueville ?", a: "Oui, dans toute Woluwe-Saint-Pierre, y compris les grandes avenues résidentielles. L'accès est vérifié lors du devis." },
+              { q: "Notre villa a plus de 80 mètres de gouttières. Quel tarif ?", a: "Pour les grandes propriétés, le professionnel établit un devis sur mesure tenant compte du linéaire exact, de la hauteur, des matériaux et de l'accessibilité. Deux techniciens pour les grandes interventions. Appelez pour un diagnostic gratuit." },
+              { q: "Un professionnel peut-il intervenir avenue de Tervueren et avenue de Broqueville ?", a: "Oui, dans toute Woluwe-Saint-Pierre, y compris les grandes avenues résidentielles. L'accès est vérifié lors du devis." },
               { q: "Faut-il aussi nettoyer au printemps à WSP ?", a: "Pour les propriétés proches des parcs, oui. Les marronniers du parc de Woluwe et les érables libèrent des pollens, bourgeons et graines en mai qui s'accumulent dans les gouttières. Un passage de printemps complète utilement le nettoyage automnal." },
               ...localFaqs("woluwe-saint-pierre"),
             ].map((faq, i) => (

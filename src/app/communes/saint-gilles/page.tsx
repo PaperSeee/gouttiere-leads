@@ -28,9 +28,9 @@ export default function SaintGillesPage() {
     "@context": "https://schema.org",
     "@type": "FAQPage",
     mainEntity: [
-      { "@type": "Question", name: "Comment nettoyer le zinc ornemental sans l'endommager ?", acceptedAnswer: { "@type": "Answer", text: "On utilise exclusivement des outils en plastique souple ou des brosses non-abrasives. Aucun métal sur le zinc — les rayures accélèrent la corrosion. Pour les profils complexes, un nettoyage à la main avec des chiffons humides et un aspirateur industriel." } },
+      { "@type": "Question", name: "Comment nettoyer le zinc ornemental sans l'endommager ?", acceptedAnswer: { "@type": "Answer", text: "Demandez des outils en plastique souple ou des brosses non abrasives. Aucun métal sur le zinc — les rayures accélèrent la corrosion. Pour les profils complexes, un nettoyage à la main avec des chiffons humides et un aspirateur industriel." } },
       { "@type": "Question", name: "Nos gouttières en zinc de 1905 sont-elles classées ?", acceptedAnswer: { "@type": "Answer", text: "Les façades peuvent être classées, mais les gouttières elles-mêmes rarement. Cependant, pour les biens à valeur patrimoniale, on recommande de consulter le permis d'urbanisme avant tout remplacement et de privilégier les matériaux d'origine (du zinc plutôt que du PVC)." } },
-      { "@type": "Question", name: "Intervenez-vous au Parvis de Saint-Gilles et chaussée de Waterloo ?", acceptedAnswer: { "@type": "Answer", text: "Oui, dans toute la commune. Ruelles étroites, cours intérieures partagées, accès en étage depuis l'intérieur : l'accès est vérifié lors du devis." } },
+      { "@type": "Question", name: "Un professionnel peut-il intervenir au Parvis de Saint-Gilles et chaussée de Waterloo ?", acceptedAnswer: { "@type": "Answer", text: "Oui, dans toute la commune. Ruelles étroites, cours intérieures partagées, accès en étage depuis l'intérieur : l'accès est vérifié lors du devis." } },
       { "@type": "Question", name: "Les acacias de nos rues bouchent-ils vraiment les gouttières au printemps ?", acceptedAnswer: { "@type": "Answer", text: "Oui, leurs petites fleurs blanches tombent en masse en mai et forment des bouchons compacts. Combiné aux bourgeons collants des tilleuls voisins, un nettoyage de mai après la floraison est souvent aussi important que celui de novembre." } },
       ...localFaqSchema("saint-gilles"),
     ],
@@ -167,9 +167,9 @@ export default function SaintGillesPage() {
           <h2 className="text-2xl font-bold text-gray-900 mb-8">Questions fréquentes — Saint-Gilles</h2>
           <div className="space-y-5">
             {[
-              { q: "Comment nettoyer le zinc ornemental sans l'endommager ?", a: "On utilise exclusivement des outils en plastique souple ou des brosses non-abrasives. Aucun métal sur le zinc — les rayures accélèrent la corrosion. Pour les profils complexes, un nettoyage à la main avec des chiffons humides et un aspirateur industriel." },
+              { q: "Comment nettoyer le zinc ornemental sans l'endommager ?", a: "Demandez des outils en plastique souple ou des brosses non abrasives. Aucun métal sur le zinc — les rayures accélèrent la corrosion. Pour les profils complexes, un nettoyage à la main avec des chiffons humides et un aspirateur industriel." },
               { q: "Nos gouttières en zinc de 1905 sont-elles classées ?", a: "Les façades peuvent être classées, mais les gouttières elles-mêmes rarement. Cependant, pour les biens à valeur patrimoniale, on recommande de consulter le permis d'urbanisme avant tout remplacement et de privilégier les matériaux d'origine (du zinc plutôt que du PVC)." },
-              { q: "Intervenez-vous au Parvis de Saint-Gilles et chaussée de Waterloo ?", a: "Oui, dans toute la commune. Ruelles étroites, cours intérieures partagées, accès en étage depuis l'intérieur : l'accès est vérifié lors du devis." },
+              { q: "Un professionnel peut-il intervenir au Parvis de Saint-Gilles et chaussée de Waterloo ?", a: "Oui, dans toute la commune. Ruelles étroites, cours intérieures partagées, accès en étage depuis l'intérieur : l'accès est vérifié lors du devis." },
               { q: "Les acacias de nos rues bouchent-ils vraiment les gouttières au printemps ?", a: "Oui, leurs petites fleurs blanches tombent en masse en mai et forment des bouchons compacts. Combiné aux bourgeons collants des tilleuls voisins, un nettoyage de mai après la floraison est souvent aussi important que celui de novembre." },
               ...localFaqs("saint-gilles"),
             ].map((faq, i) => (

@@ -29,7 +29,7 @@ export default function UcclePage() {
     "@type": "FAQPage",
     mainEntity: [
       { "@type": "Question", name: "À quelle fréquence faut-il nettoyer les gouttières à Uccle ?", acceptedAnswer: { "@type": "Answer", text: "À Uccle, deux nettoyages par an sont souvent nécessaires — mai après les floraisons printanières, novembre après la chute des feuilles. Les propriétés avec de grands jardins arborés (platanes, chênes, hêtres) peuvent nécessiter trois passages." } },
-      { "@type": "Question", name: "Intervenez-vous avenue Molière et avenue Brugmann ?", acceptedAnswer: { "@type": "Answer", text: "Oui, nous intervenons régulièrement dans toutes les avenues d'Uccle — Molière, Brugmann, Winston Churchill, et jusqu'à Saint-Job et Fort-Jaco. Notre matériel est adapté aux villas haut de gamme avec façades hautes." } },
+      { "@type": "Question", name: "Un professionnel peut-il intervenir avenue Molière et avenue Brugmann ?", acceptedAnswer: { "@type": "Answer", text: "Oui, la demande est transmise pour toutes les avenues d'Uccle — Molière, Brugmann, Winston Churchill, et jusqu'à Saint-Job et Fort-Jaco. Pour une villa aux façades hautes, précisez la hauteur dans la demande : le professionnel prévoit le matériel adapté." } },
       { "@type": "Question", name: "Mes gouttières en zinc d'époque peuvent-elles être réparées ?", acceptedAnswer: { "@type": "Answer", text: "Les gouttières en zinc des villas des années 30–60 peuvent souvent être réparées par soudure ou reprise de joints si l'oxydation n'est pas trop avancée. Sinon, remplacement par zinc neuf ou aluminium laqué qui s'intègre parfaitement à l'architecture d'époque." } },
       { "@type": "Question", name: "La pente de mon jardin aggrave-t-elle les risques ?", acceptedAnswer: { "@type": "Answer", text: "Oui. Les terrains en pente typiques d'Uccle concentrent les eaux pluviales vers les fondations en cas de débordement. C'est pourquoi l'entretien régulier est encore plus crucial ici — un bouchon peut causer des infiltrations de fondations en quelques heures." } },
       ...localFaqSchema("uccle"),
@@ -230,8 +230,8 @@ export default function UcclePage() {
                 a: "À Uccle, deux nettoyages par an sont souvent nécessaires — mai après les floraisons printanières, novembre après la chute des feuilles. Les propriétés avec de grands jardins arborés (platanes, chênes, hêtres) peuvent nécessiter trois passages.",
               },
               {
-                q: "Intervenez-vous avenue Molière et avenue Brugmann ?",
-                a: "Oui, nous intervenons régulièrement dans toutes les avenues d'Uccle — Molière, Brugmann, Winston Churchill, et jusqu'à Saint-Job et Fort-Jaco. Notre matériel est adapté aux villas haut de gamme avec façades hautes.",
+                q: "Un professionnel peut-il intervenir avenue Molière et avenue Brugmann ?",
+                a: "Oui, la demande est transmise pour toutes les avenues d'Uccle — Molière, Brugmann, Winston Churchill, et jusqu'à Saint-Job et Fort-Jaco. Pour une villa aux façades hautes, précisez la hauteur dans la demande : le professionnel prévoit le matériel adapté.",
               },
               {
                 q: "Mes gouttières en zinc d'époque peuvent-elles être réparées ?",

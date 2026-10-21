@@ -30,7 +30,7 @@ export default function GanshorenPage() {
     mainEntity: [
       { "@type": "Question", name: "Comment savoir si nos gouttières des années 60 doivent être remplacées ?", acceptedAnswer: { "@type": "Answer", text: "Trois signes clairs : des fuites visibles lors des pluies, des fixations (crochets) qui se détachent du fascia, et des déformations ou affaissements du chenal. Si deux de ces trois signes sont présents, un remplacement est préférable à une réparation ponctuelle." } },
       { "@type": "Question", name: "Un nettoyage par an est-il vraiment suffisant à Ganshoren ?", acceptedAnswer: { "@type": "Answer", text: "Pour la plupart des propriétés de Ganshoren, oui. La commune n'est pas exposée aux grands arbres forestiers ni aux avenues de platanes. Un nettoyage automnal en novembre, après la chute des feuilles, suffit généralement à maintenir le système en bon état." } },
-      { "@type": "Question", name: "Intervenez-vous dans toutes les rues de Ganshoren ?", acceptedAnswer: { "@type": "Answer", text: "Oui, dans toutes les rues de Ganshoren. Le délai d'intervention et le déplacement sont précisés dans le devis." } },
+      { "@type": "Question", name: "Un professionnel peut-il intervenir dans toutes les rues de Ganshoren ?", acceptedAnswer: { "@type": "Answer", text: "Oui, dans toutes les rues de Ganshoren. Le délai d'intervention et le déplacement sont précisés dans le devis." } },
       { "@type": "Question", name: "Peut-on avoir un devis sans s'engager ?", acceptedAnswer: { "@type": "Answer", text: "Bien sûr, le devis est entièrement gratuit et sans engagement. On peut l'établir par téléphone ou lors d'un passage sur place. On vous présente les différentes options et vous décidez librement." } },
       ...localFaqSchema("ganshoren"),
     ],
@@ -170,7 +170,7 @@ export default function GanshorenPage() {
             {[
               { q: "Comment savoir si nos gouttières des années 60 doivent être remplacées ?", a: "Trois signes clairs : des fuites visibles lors des pluies, des fixations (crochets) qui se détachent du fascia, et des déformations ou affaissements du chenal. Si deux de ces trois signes sont présents, un remplacement est préférable à une réparation ponctuelle." },
               { q: "Un nettoyage par an est-il vraiment suffisant à Ganshoren ?", a: "Pour la plupart des propriétés de Ganshoren, oui. La commune n'est pas exposée aux grands arbres forestiers ni aux avenues de platanes. Un nettoyage automnal en novembre, après la chute des feuilles, suffit généralement à maintenir le système en bon état." },
-              { q: "Intervenez-vous dans toutes les rues de Ganshoren ?", a: "Oui, dans toutes les rues de Ganshoren. Le délai d'intervention et le déplacement sont précisés dans le devis." },
+              { q: "Un professionnel peut-il intervenir dans toutes les rues de Ganshoren ?", a: "Oui, dans toutes les rues de Ganshoren. Le délai d'intervention et le déplacement sont précisés dans le devis." },
               { q: "Peut-on avoir un devis sans s'engager ?", a: "Bien sûr, le devis est entièrement gratuit et sans engagement. On peut l'établir par téléphone ou lors d'un passage sur place. On vous présente les différentes options et vous décidez librement." },
               ...localFaqs("ganshoren"),
             ].map((faq, i) => (

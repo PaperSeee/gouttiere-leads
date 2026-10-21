@@ -22,7 +22,7 @@ export const metadata: Metadata = {
 const faqs = [
   {
     question: "Combien coûte le nettoyage de gouttières à Bruxelles ?",
-    answer: "Le prix d'un nettoyage de gouttières à Bruxelles se situe généralement entre 80 et 150€ pour une maison standard, selon la longueur des gouttières, la hauteur du bâtiment et l'accessibilité. Le débouchage d'urgence est facturé entre 120 et 200€ selon l'horaire d'intervention. Nous établissons toujours un devis gratuit avant toute intervention.",
+    answer: "Le prix d'un nettoyage de gouttières à Bruxelles se situe généralement entre 80 et 150€ pour une maison standard, selon la longueur des gouttières, la hauteur du bâtiment et l'accessibilité. Le débouchage d'urgence est facturé entre 120 et 200€ selon l'horaire d'intervention. Le professionnel établit toujours un devis gratuit avant toute intervention.",
   },
   {
     question: "À quelle fréquence faut-il nettoyer ses gouttières ?",
@@ -33,7 +33,7 @@ const faqs = [
     answer: "Des gouttières bouchées provoquent des débordements qui endommagent progressivement votre habitation : infiltrations dans la toiture et les combles, dégradation de la façade par ruissellement, saturation du sol autour des fondations, et développement de moisissures à l'intérieur. Les coûts de réparation de ces dégâts dépassent souvent 10 à 20 fois le prix d'un simple nettoyage préventif.",
   },
   {
-    question: "Intervenez-vous en urgence en cas de débordement ?",
+    question: "Un professionnel peut-il intervenir en urgence en cas de débordement ?",
     answer: "Oui. En cas de débordement actif lors de fortes pluies, appelez directement le 0451 05 33 70 : votre demande est transmise au professionnel indépendant qui intervient dans votre commune, et le délai d'intervention vous est annoncé au téléphone. Le tarif urgence est de 120 à 200€ selon le jour et l'heure d'intervention.",
   },
   {
@@ -57,16 +57,16 @@ const faqs = [
     answer: "Un test d'écoulement est fait en fin d'intervention, descente par descente. Si un débordement réapparaît, signalez-le au professionnel qui est intervenu : les conditions de reprise sont celles de son devis. Demandez-les par écrit avant d'accepter, avec son attestation d'assurance en responsabilité civile professionnelle.",
   },
   {
-    question: "Intervenez-vous sur des toitures hautes ?",
+    question: "Un professionnel peut-il intervenir sur des toitures hautes ?",
     answer: "Oui, avec un matériel adapté au travail en hauteur : échelles professionnelles, nacelle selon l'accès, équipements de sécurité. Au-delà d'un rez + 3 étages ou pour une configuration particulière (toiture mansardée, accès restreint), la faisabilité est évaluée lors de la visite de devis.",
   },
   {
     question: "Proposez-vous aussi le nettoyage de toiture à Bruxelles ?",
-    answer: "Oui, le nettoyage et le démoussage de toiture font partie de nos services complémentaires à Bruxelles. Comptez 8 à 20 €/m² pour un démoussage mécanique, traitement anti-mousse compris. La mousse sur les tuiles retient l'humidité, dégrade les tuiles et alimente les gouttières en débris. Un démoussage associé à un traitement anti-mousse préventif protège votre toiture pendant 3 à 5 ans. Nous proposons un tarif avantageux lorsque le démoussage est combiné au nettoyage des gouttières lors d'une même visite.",
+    answer: "Oui, le nettoyage et le démoussage de toiture font partie de nos services complémentaires à Bruxelles. Comptez 8 à 20 €/m² pour un démoussage mécanique, traitement anti-mousse compris. La mousse sur les tuiles retient l'humidité, dégrade les tuiles et alimente les gouttières en débris. Un démoussage associé à un traitement anti-mousse préventif protège votre toiture pendant 3 à 5 ans. Combiner le démoussage et le nettoyage des gouttières lors d'une même visite évite un second déplacement : demandez un devis commun.",
   },
   {
     question: "Mon assurance couvre-t-elle les dégâts dus aux gouttières bouchées ?",
-    answer: "En Belgique, les dégâts des eaux couverts par une assurance habitation sont généralement ceux d'origine soudaine et accidentelle (rupture de canalisation, tempête). Les dommages liés à des gouttières bouchées par négligence sont souvent considérés comme un défaut d'entretien et peuvent ne pas être couverts. Consultez votre assureur. Si vous avez besoin d'un rapport technique suite à des dégâts, nous pouvons vous en fournir un.",
+    answer: "En Belgique, les dégâts des eaux couverts par une assurance habitation sont généralement ceux d'origine soudaine et accidentelle (rupture de canalisation, tempête). Les dommages liés à des gouttières bouchées par négligence sont souvent considérés comme un défaut d'entretien et peuvent ne pas être couverts. Consultez votre assureur. Si vous avez besoin d'un rapport technique après des dégâts, signalez-le dans la demande : le professionnel peut en établir un.",
   },
   {
     question: "Quand est le meilleur moment pour nettoyer ses gouttières à Bruxelles ?",
@@ -77,8 +77,8 @@ const faqs = [
     answer: "Le PVC est le moins cher (15–25€/ml posé) avec une durée de vie de 20–30 ans. L'aluminium offre un bon équilibre qualité/prix (25–40€/ml) avec 30–50 ans de durée de vie. Le zinc est le matériau traditionnel bruxellois (35–55€/ml) avec une durée de vie de 50–80 ans et un aspect patrimonial apprécié. Le cuivre est réservé aux bâtiments haut de gamme (80€+/ml) avec une durée de vie centenaire. Consultez notre guide complet des types de gouttières.",
   },
   {
-    question: "Intervenez-vous en copropriété ?",
-    answer: "Oui, nous intervenons régulièrement pour des syndics de copropriété, des sociétés immobilières et des gestionnaires de patrimoine. Pour les copropriétés, nous établissons un rapport détaillé de l'état des gouttières communes, utile pour la planification des travaux et pour l'assemblée générale des copropriétaires. Contactez-nous pour un devis adapté.",
+    question: "Un professionnel peut-il intervenir en copropriété ?",
+    answer: "Oui, les demandes des syndics de copropriété, des sociétés immobilières et des gestionnaires de patrimoine sont transmises à un professionnel partenaire. Pour les copropriétés, le professionnel peut établir un rapport détaillé de l'état des gouttières communes, utile pour la planification des travaux et pour l'assemblée générale des copropriétaires. Contactez-nous pour un devis adapté.",
   },
   {
     question: "Comment se passe le devis ?",

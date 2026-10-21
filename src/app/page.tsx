@@ -80,7 +80,7 @@ const homeFaqs = [
       "Des gouttières bouchées peuvent causer des dégâts considérables : infiltrations d'eau dans la toiture, dégradation de la façade par ruissellement, détérioration des fondations par saturation du sol, et développement de moisissures à l'intérieur du bâtiment. Réparer ces dégâts coûte bien plus cher qu'un nettoyage préventif.",
   },
   {
-    question: "Intervenez-vous en urgence en cas de débordement ?",
+    question: "Un professionnel peut-il intervenir en urgence en cas de débordement ?",
     answer:
       "Oui. En cas de débordement actif lors de fortes pluies, appelez directement le 0451 05 33 70 : votre demande est transmise au professionnel indépendant qui intervient dans votre commune, et le délai d'intervention vous est annoncé au téléphone. Un débouchage urgent coûte en général 120 à 200 € selon le jour et l'heure.",
   },

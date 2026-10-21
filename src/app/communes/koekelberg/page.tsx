@@ -29,9 +29,9 @@ export default function KoekelbergPage() {
     "@type": "FAQPage",
     mainEntity: [
       { "@type": "Question", name: "Le zinc de nos maisons des années 20 mérite-t-il encore d'être réparé ?", acceptedAnswer: { "@type": "Answer", text: "Un zinc des années 20 bien conservé peut encore durer 10 à 15 ans. Si les soudures tiennent et que les profils sont rectilignes, une réparation ponctuelle des zones défaillantes est économiquement pertinente. On fait un diagnostic gratuit pour évaluer la situation." } },
-      { "@type": "Question", name: "Comment accédez-vous aux gouttières arrière à Koekelberg ?", acceptedAnswer: { "@type": "Answer", text: "Généralement par la cour intérieure avec des échelles légères ou des perches télescopiques. Dans les cours particulièrement étroites, on utilise exclusivement des perches depuis le sol pour ne pas risquer d'abîmer les façades voisines." } },
+      { "@type": "Question", name: "Comment accédez-vous aux gouttières arrière à Koekelberg ?", acceptedAnswer: { "@type": "Answer", text: "Généralement par la cour intérieure avec des échelles légères ou des perches télescopiques. Dans les cours particulièrement étroites, le nettoyage se fait plutôt avec des perches depuis le sol pour ne pas risquer d'abîmer les façades voisines." } },
       { "@type": "Question", name: "Faut-il prévenir les voisins pour l'accès aux cours partagées ?", acceptedAnswer: { "@type": "Answer", text: "C'est recommandé. Dans les maisons mitoyennes de Koekelberg avec cours partagées, on vous conseille de prévenir les voisins au moins 24h à l'avance. Si plusieurs voisins souhaitent un nettoyage le même jour, demandez un devis groupé." } },
-      { "@type": "Question", name: "Intervenez-vous autour de la basilique et de la place Simonis ?", acceptedAnswer: { "@type": "Answer", text: "Oui, dans toutes les rues de Koekelberg. Le délai d'intervention vous est annoncé lors du premier appel." } },
+      { "@type": "Question", name: "Un professionnel peut-il intervenir autour de la basilique et de la place Simonis ?", acceptedAnswer: { "@type": "Answer", text: "Oui, dans toutes les rues de Koekelberg. Le délai d'intervention vous est annoncé lors du premier appel." } },
       ...localFaqSchema("koekelberg"),
     ],
   }
@@ -138,7 +138,7 @@ export default function KoekelbergPage() {
           <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-8">Nos services à Koekelberg</h2>
           <div className="divide-y divide-gray-100 border border-gray-100 rounded-2xl overflow-hidden">
             {[
-              { icon: <Droplets size={22} className="text-[#1A4731]" />, href: "/services/nettoyage-gouttieres", title: "Nettoyage maisons mitoyennes", desc: "Nettoyage façades avant et arrière. Accès cours étroites avec matériel adapté. On nettoie les chenaux et teste chaque descente.", price: "dès 80€", tag: null },
+              { icon: <Droplets size={22} className="text-[#1A4731]" />, href: "/services/nettoyage-gouttieres", title: "Nettoyage maisons mitoyennes", desc: "Nettoyage façades avant et arrière. Accès cours étroites avec matériel adapté. Le nettoyage comprend les chenaux et un test de chaque descente.", price: "dès 80€", tag: null },
               { icon: <AlertTriangle size={22} className="text-red-500" />, href: "/services/debouchage-gouttieres", title: "Débouchage en urgence", desc: "Débordement en cours ? Débouchage à Koekelberg pour stopper les dégâts sur vos façades et votre intérieur.", price: "dès 120€", tag: "Urgence" },
               { icon: <Wrench size={22} className="text-blue-600" />, href: "/services/reparation-gouttieres", title: "Réparation zinc historique", desc: "Soudure et réparation des gouttières en zinc d'époque. Si l'état est trop dégradé, remplacement par zinc neuf ou aluminium assorti.", price: "devis gratuit", tag: null },
               { icon: <Leaf size={22} className="text-yellow-600" />, href: "/services/demoussage-toiture", title: "Démoussage toitures ardoises", desc: "Traitement préventif anti-mousse sur les toits en ardoises des maisons de Koekelberg. Prolonge la durée de vie de votre couverture.", price: "devis gratuit", tag: null },
@@ -168,9 +168,9 @@ export default function KoekelbergPage() {
           <div className="space-y-5">
             {[
               { q: "Le zinc de nos maisons des années 20 mérite-t-il encore d'être réparé ?", a: "Un zinc des années 20 bien conservé peut encore durer 10 à 15 ans. Si les soudures tiennent et que les profils sont rectilignes, une réparation ponctuelle des zones défaillantes est économiquement pertinente. On fait un diagnostic gratuit pour évaluer la situation." },
-              { q: "Comment accédez-vous aux gouttières arrière à Koekelberg ?", a: "Généralement par la cour intérieure avec des échelles légères ou des perches télescopiques. Dans les cours particulièrement étroites, on utilise exclusivement des perches depuis le sol pour ne pas risquer d'abîmer les façades voisines." },
+              { q: "Comment accédez-vous aux gouttières arrière à Koekelberg ?", a: "Généralement par la cour intérieure avec des échelles légères ou des perches télescopiques. Dans les cours particulièrement étroites, le nettoyage se fait plutôt avec des perches depuis le sol pour ne pas risquer d'abîmer les façades voisines." },
               { q: "Faut-il prévenir les voisins pour l'accès aux cours partagées ?", a: "C'est recommandé. Dans les maisons mitoyennes de Koekelberg avec cours partagées, on vous conseille de prévenir les voisins au moins 24h à l'avance. Si plusieurs voisins souhaitent un nettoyage le même jour, demandez un devis groupé." },
-              { q: "Intervenez-vous autour de la basilique et de la place Simonis ?", a: "Oui, dans toutes les rues de Koekelberg. Le délai d'intervention vous est annoncé lors du premier appel." },
+              { q: "Un professionnel peut-il intervenir autour de la basilique et de la place Simonis ?", a: "Oui, dans toutes les rues de Koekelberg. Le délai d'intervention vous est annoncé lors du premier appel." },
               ...localFaqs("koekelberg"),
             ].map((faq, i) => (
               <div key={i} className="bg-white rounded-xl border border-gray-100 p-6">

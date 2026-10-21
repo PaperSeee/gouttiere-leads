@@ -122,7 +122,7 @@ export default function DebouchageGouttieres() {
                 particulièrement néfastes en hiver lorsque l&apos;eau gèle et dilate.
               </p>
 
-              <h2 className="text-2xl font-bold text-gray-900 mb-4 mt-8">Notre méthode d&apos;intervention urgence</h2>
+              <h2 className="text-2xl font-bold text-gray-900 mb-4 mt-8">La méthode d&apos;intervention en urgence</h2>
               <div className="space-y-4">
                 {[
                   { n: "01", title: "Diagnostic sur place", desc: "Localisation précise de l'obstruction : gouttière, collet, coude ou descente." },

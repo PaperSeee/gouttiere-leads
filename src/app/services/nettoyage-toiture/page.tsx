@@ -183,7 +183,7 @@ export default function NettoyageToiture() {
                 et le nettoyage de toiture se combinent souvent en une seule intervention.
               </p>
 
-              <h2 className="text-2xl font-bold text-gray-900 mb-4 mt-8">Ce que comprend notre prestation</h2>
+              <h2 className="text-2xl font-bold text-gray-900 mb-4 mt-8">Ce que comprend la prestation</h2>
               <ul className="space-y-2 mb-6">
                 {[
                   "Inspection de l'état des tuiles, ardoises, rives et solins",
