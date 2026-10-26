@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import Breadcrumb from "@/components/Breadcrumb";
 import BlogCard from "@/components/BlogCard";
 import { blogPosts, getRecentPosts } from "@/lib/blog";
@@ -35,7 +36,12 @@ export default function Blog() {
           </h1>
           <p className="text-gray-300 text-lg max-w-2xl">
             Guides pratiques, conseils saisonniers et informations utiles pour l&apos;entretien
-            de vos gouttières et de votre toiture à Bruxelles.
+            de vos gouttières et de votre toiture à Bruxelles. Pour confier le travail à un
+            professionnel, voyez notre page{" "}
+            <Link href="/services/nettoyage-gouttieres" className="underline text-white hover:text-gray-200">
+              nettoyage de gouttière à Bruxelles
+            </Link>
+            .
           </p>
         </div>
       </section>
