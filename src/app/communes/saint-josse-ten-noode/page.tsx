@@ -9,7 +9,7 @@ import { CommuneConseils, CommuneDetail, CommuneQuickLinks, NeighborCommunes } f
 import { localFaqs, localFaqSchema, getCommune } from "@/lib/communes"
 
 export const metadata: Metadata = {
-  title: { absolute: "Gouttières et démoussage à Saint-Josse-ten-Noode dès 80 €" },
+  title: { absolute: "Nettoyage de gouttières à Saint-Josse-ten-Noode dès 80 €" },
   description:
     "Nettoyage de gouttières à Saint-Josse dès 80 €, démoussage de toiture lors du même passage : immeubles hauts, toits plats, avaloirs. Devis gratuit.",
   alternates: { canonical: "https://www.nettoyage-gouttieres-bruxelles.be/communes/saint-josse-ten-noode" },

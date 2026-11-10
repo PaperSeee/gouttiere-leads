@@ -7,7 +7,7 @@ import ServiceGuides from "@/components/ServiceGuides";
 import TrustNote from "@/components/TrustNote";
 
 export const metadata: Metadata = {
-  title: { absolute: "Nettoyage complet de gouttières — descentes incluses" },
+  title: { absolute: "Nettoyage complet de gouttières : ce qui est compris" },
   description:
     "Ce que comprend un nettoyage de gouttières : feuilles, mousses et boues retirées du chéneau et des descentes, écoulement testé. Dès 80 €, devis gratuit.",
   alternates: { canonical: "https://www.nettoyage-gouttieres-bruxelles.be/services/nettoyage-gouttieres" },
@@ -114,7 +114,7 @@ export default function NettoyageGouttieres() {
               <span className="text-[#F97316] font-semibold">Service nettoyage</span>
             </div>
             <h1 className="text-3xl sm:text-4xl font-bold mb-4">
-              Nettoyage de Gouttières à Bruxelles
+              Nettoyage complet de gouttières : ce qui est compris
             </h1>
             <p className="text-gray-300 text-lg mb-6 leading-relaxed">
               Un nettoyage de gouttières à Bruxelles consiste à retirer feuilles, mousses et sédiments

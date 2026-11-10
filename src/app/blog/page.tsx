@@ -5,7 +5,7 @@ import BlogCard from "@/components/BlogCard";
 import { blogPosts, getRecentPosts } from "@/lib/blog";
 
 export const metadata: Metadata = {
-  title: { absolute: "Conseils gouttières à Bruxelles | Gouttières Bruxelles" },
+  title: { absolute: "Conseils d'entretien des gouttières à Bruxelles" },
   description:
     "Articles et conseils pratiques sur l'entretien des gouttières à Bruxelles. Guides saisonniers, tutoriels et informations pour propriétaires bruxellois.",
   keywords: ["conseils gouttières Bruxelles", "entretien gouttières maison", "blog nettoyage gouttières", "guides gouttières propriétaires Bruxelles"],
@@ -32,16 +32,23 @@ export default function Blog() {
       <section className="bg-[#1A4731] text-white py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h1 className="text-3xl sm:text-4xl font-bold mb-4">
-            Blog — Conseils & Actualités
+            Conseils d&apos;entretien des gouttières à Bruxelles
           </h1>
           <p className="text-gray-300 text-lg max-w-2xl">
             Guides pratiques, conseils saisonniers et informations utiles pour l&apos;entretien
             de vos gouttières et de votre toiture à Bruxelles. Pour confier le travail à un
             professionnel, voyez notre page{" "}
-            <Link href="/services/nettoyage-gouttieres" className="underline text-white hover:text-gray-200">
+            <Link href="/" className="underline text-white hover:text-gray-200">
               nettoyage de gouttière à Bruxelles
             </Link>
             .
+          </p>
+          <p className="mt-4 text-gray-300 text-lg max-w-2xl">
+            Besoin d&apos;un devis ?{" "}
+            <Link href="/#devis" className="underline text-white font-semibold hover:text-gray-200">
+              Demandez le devis gratuit
+            </Link>
+            {" "}pour votre adresse à Bruxelles.
           </p>
         </div>
       </section>

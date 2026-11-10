@@ -6,7 +6,7 @@ import TrustNote from "@/components/TrustNote";
 import ContactForm from "@/components/ContactForm";
 
 export const metadata: Metadata = {
-  title: { absolute: "Prix du nettoyage de gouttières à Bruxelles : 80 à 150 €" },
+  title: { absolute: "Prix nettoyage gouttière à Bruxelles : 80 à 150 € indicatifs" },
   description:
     "Prix du nettoyage de gouttières à Bruxelles : 80 à 150 € pour une maison, descentes comprises. Débouchage dès 120 €, démoussage 8 à 20 €/m². Devis gratuit.",
   keywords: ["prix nettoyage gouttières Bruxelles", "tarifs débouchage gouttières", "coût réparation gouttières Bruxelles", "devis gouttières Bruxelles 2026", "tarif démoussage toiture Bruxelles"],

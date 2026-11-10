@@ -96,7 +96,11 @@ export default function AnderlechtPage() {
                   Anderlecht est une commune aux multiples visages : quartiers populaires denses
                   à <strong>Cureghem</strong> et autour de la place de la Vaillance, zones
                   industrielles en reconversion le long du canal, et quartiers plus verts à
-                  l&apos;ouest, vers Neerpede.
+                  l&apos;ouest, vers Neerpede. Pour les autres communes, voir le{" "}
+                  <Link href="/" className="font-semibold text-[#1A4731] underline hover:text-[#F97316]">
+                    nettoyage de gouttières à Bruxelles
+                  </Link>
+                  .
                 </p>
                 <p>
                   La proximité du <strong>canal de Charleroi-Bruxelles</strong> crée une humidité

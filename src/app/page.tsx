@@ -27,7 +27,7 @@ import GutterIllustration from "@/components/GutterIllustration";
 export const metadata: Metadata = {
   title: { absolute: "Nettoyage de gouttières à Bruxelles dès 80 € — devis gratuit" },
   description:
-    "Nettoyage de gouttières à Bruxelles dès 80 € : chéneau et descentes vidés, écoulement testé, dans les 19 communes. Devis gratuit, prix fixé à l'avance.",
+    "Nettoyage et entretien de gouttières à Bruxelles : chéneau et descentes vidés, écoulement testé, 19 communes. Devis gratuit, prix annoncé avant.",
   keywords: ["nettoyage gouttières Bruxelles", "débouchage gouttières urgence Bruxelles", "réparation gouttières Bruxelles", "démoussage toiture Bruxelles", "gouttières bouchées intervention rapide"],
   alternates: {
     canonical: "https://www.nettoyage-gouttieres-bruxelles.be/",
@@ -354,7 +354,7 @@ export default function HomePage() {
         <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
           <div>
             <p className="text-xs font-extrabold uppercase tracking-[0.14em] text-[#1F7A55]">Tarifs transparents</p>
-            <h2 className="mt-2 text-3xl font-extrabold text-[#133826] md:text-4xl">Prix du nettoyage de gouttières à Bruxelles</h2>
+            <h2 className="mt-2 text-3xl font-extrabold text-[#133826] md:text-4xl">Combien ça coûte ?</h2>
             <p className="mt-4 text-lg leading-relaxed text-gray-600">
               Le prix d&apos;un nettoyage de gouttières dépend de la longueur à nettoyer, de la hauteur du bâtiment
               et de l&apos;accès aux façades. Pour une maison bruxelloise, comptez en moyenne entre 80 et 150€,
@@ -381,6 +381,11 @@ export default function HomePage() {
                 <p className={`mt-2 text-xs ${row.highlight ? "text-green-50/70" : "text-gray-500"}`}>{row.detail}</p>
               </div>
             ))}
+            <div className="sm:col-span-3">
+              <Link href="/tarifs" className="inline-flex items-center gap-1.5 text-sm font-bold text-[#1F7A55] hover:text-[#F97316]">
+                Voir le prix du nettoyage de gouttières à Bruxelles <ArrowRight size={16} />
+              </Link>
+            </div>
           </div>
         </div>
       </section>
