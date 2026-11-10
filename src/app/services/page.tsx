@@ -30,7 +30,7 @@ export default function ServicesPage() {
           <h1 className="text-3xl sm:text-4xl font-bold mb-4">Nos services gouttières à Bruxelles</h1>
           <p className="text-green-100 text-lg max-w-3xl">
             Du nettoyage annuel au remplacement d&apos;un chéneau en zinc, tous nos services sont proposés sur devis gratuit,
-            avec un prix fixé avant l&apos;intervention, dans les 19 communes de la Région bruxelloise.
+            avec un prix annoncé avant l&apos;intervention, dans les 19 communes de la Région bruxelloise.
           </p>
           <a href="tel:0451053370" className="mt-6 inline-flex items-center gap-2 rounded-xl bg-[#F97316] px-6 py-3.5 font-bold text-white hover:bg-orange-500">
             <Phone size={18} /> 0451 05 33 70

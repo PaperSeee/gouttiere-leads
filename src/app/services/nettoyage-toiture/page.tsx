@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     title: "Nettoyage de toiture à Bruxelles — avec le nettoyage des gouttières",
-    description: "Feuilles, mousses et débris dégagés des tuiles et ardoises, gouttières nettoyées en même temps. Devis gratuit, prix fixé à l'avance.",
+    description: "Feuilles, mousses et débris dégagés des tuiles et ardoises, gouttières nettoyées en même temps. Devis gratuit, prix annoncé avant l'intervention.",
     url: "https://www.nettoyage-gouttieres-bruxelles.be/services/nettoyage-toiture",
     images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "Nettoyage toiture Bruxelles" }],
   },
@@ -57,7 +57,7 @@ const toitureFaqs = [
   {
     question: "Combien coûte un nettoyage de toiture à Bruxelles ?",
     answer:
-      "Le prix dépend de la surface à traiter, de la pente du toit et de l'accès. Il est chiffré dans un devis gratuit, prix fixé avant l'intervention.",
+      "Le prix dépend de la surface à traiter, de la pente du toit et de l'accès. Il est chiffré dans un devis gratuit, prix annoncé avant l'intervention.",
   },
   {
     question: "Faut-il nettoyer le toit et les gouttières lors de la même visite ?",
@@ -119,7 +119,7 @@ export default function NettoyageToiture() {
               Le nettoyage de toiture à Bruxelles consiste à dégager les feuilles, mousses et débris
               accumulés sur les tuiles ou ardoises, à rincer la couverture et à contrôler les rives et
               les solins, sans toucher à l&apos;étanchéité. Il se fait avec le nettoyage des gouttières,
-              puisque le toit les alimente. Devis gratuit, prix fixé avant l&apos;intervention.
+              puisque le toit les alimente. Devis gratuit, prix annoncé avant l&apos;intervention.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <a href="tel:0451053370" className="flex items-center justify-center gap-2 bg-[#F97316] hover:bg-orange-500 text-white font-bold px-6 py-3 rounded-xl transition-colors">
@@ -236,7 +236,7 @@ export default function NettoyageToiture() {
                 <h3 className="font-bold text-gray-900 mb-4">Pourquoi nous choisir ?</h3>
                 <div className="space-y-3">
                   {[
-                    { icon: <Clock size={16} className="text-[#F97316]" />, text: "Prix fixé à l'avance" },
+                    { icon: <Clock size={16} className="text-[#F97316]" />, text: "Prix annoncé avant l'intervention" },
                     { icon: <Shield size={16} className="text-[#F97316]" />, text: "Mise en relation gratuite" },
                     { icon: <CheckCircle size={16} className="text-[#F97316]" />, text: "Devis gratuit" },
                     { icon: <Leaf size={16} className="text-[#F97316]" />, text: "Déchets évacués" },

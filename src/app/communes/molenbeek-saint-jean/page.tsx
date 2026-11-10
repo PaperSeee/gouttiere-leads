@@ -11,12 +11,12 @@ import { localFaqs, localFaqSchema, getCommune } from "@/lib/communes"
 export const metadata: Metadata = {
   title: { absolute: "Nettoyage de gouttières à Molenbeek-Saint-Jean dès 80 €" },
   description:
-    "Nettoyage de gouttières à Molenbeek dès 80 € : maisons de rapport, bords du canal, rénovations. Devis gratuit, prix fixé à l'avance.",
+    "Nettoyage de gouttières à Molenbeek dès 80 € : maisons de rapport, bords du canal, rénovations. Devis gratuit, prix annoncé avant l'intervention.",
   alternates: { canonical: "https://www.nettoyage-gouttieres-bruxelles.be/communes/molenbeek-saint-jean" },
   keywords: ["nettoyage gouttières Molenbeek", "débouchage gouttières Molenbeek", "gouttières bouchées Molenbeek", "prix nettoyage gouttières Molenbeek"],
   openGraph: {
     title: "Nettoyage Gouttières Molenbeek — Devis Gratuit",
-    description: "Nettoyage de gouttières à Molenbeek : chéneaux et descentes vidés, écoulement testé. Devis gratuit, prix fixé à l'avance.",
+    description: "Nettoyage de gouttières à Molenbeek : chéneaux et descentes vidés, écoulement testé. Devis gratuit, prix annoncé avant l'intervention.",
     url: "https://www.nettoyage-gouttieres-bruxelles.be/communes/molenbeek-saint-jean",
     type: "website",
     images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "Nettoyage gouttières Molenbeek" }],

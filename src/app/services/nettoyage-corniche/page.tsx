@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     title: "Nettoyage de corniche à Bruxelles — chéneau vidé, dès 80 €",
-    description: "Chéneau en zinc vidé par le haut, naissance et descente débouchées, pente et soudures contrôlées. Devis gratuit, prix fixé à l'avance.",
+    description: "Chéneau en zinc vidé par le haut, naissance et descente débouchées, pente et soudures contrôlées. Devis gratuit, prix annoncé avant l'intervention.",
     url: URL,
     images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "Nettoyage de corniche à Bruxelles" }],
   },
@@ -76,7 +76,7 @@ export default function NettoyageCorniche() {
     areaServed: { "@type": "AdministrativeArea", name: "Région de Bruxelles-Capitale" },
     description:
       "Nettoyage de corniche à Bruxelles : vidage du chéneau en zinc par le haut, dégagement de la naissance, débouchage de la descente, test d'écoulement, contrôle de la pente, des soudures et de l'état du bois.",
-    offers: { "@type": "Offer", priceCurrency: "EUR", price: "80", description: "À partir de 80 € pour une maison, prix fixé dans un devis gratuit" },
+    offers: { "@type": "Offer", priceCurrency: "EUR", price: "80", description: "À partir de 80 € pour une maison, prix annoncé dans un devis gratuit" },
   };
 
   const faqSchema = {
@@ -115,7 +115,7 @@ export default function NettoyageCorniche() {
             <p className="text-gray-300 text-lg mb-6 leading-relaxed">
               Nettoyer une corniche, c&apos;est vider par le haut le chéneau en zinc qu&apos;elle porte, déboucher la
               naissance et la descente, puis contrôler la pente et les soudures. À faire une fois par an, à la fin
-              de l&apos;automne. Dès 80 € pour une maison, prix fixé dans un devis gratuit.
+              de l&apos;automne. Dès 80 € pour une maison, prix annoncé dans un devis gratuit.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <a href="tel:0451053370" className="flex items-center justify-center gap-2 bg-[#F97316] hover:bg-orange-500 text-white font-bold px-6 py-3 rounded-xl transition-colors">
@@ -293,7 +293,7 @@ export default function NettoyageCorniche() {
                 <h3 className="font-bold text-lg mb-4">Devis nettoyage de corniche</h3>
                 <p className="text-gray-300 text-sm mb-4">
                   Le prix dépend de la hauteur, de la longueur du chéneau et de l&apos;accès. Devis gratuit, sans
-                  engagement, prix fixé avant l&apos;intervention.
+                  engagement, prix annoncé avant l&apos;intervention.
                 </p>
                 <a href="tel:0451053370" className="flex items-center justify-center gap-2 bg-[#F97316] text-white font-bold px-4 py-3 rounded-lg w-full hover:bg-orange-500 transition-colors">
                   <Phone size={16} /> 0451 05 33 70
@@ -306,7 +306,7 @@ export default function NettoyageCorniche() {
                   {[
                     { icon: <Euro size={16} className="text-[#F97316]" />, text: "Dès 80 € pour une maison" },
                     { icon: <CheckCircle size={16} className="text-[#F97316]" />, text: "Descente et test d'écoulement compris" },
-                    { icon: <Shield size={16} className="text-[#F97316]" />, text: "Prix fixé à l'avance" },
+                    { icon: <Shield size={16} className="text-[#F97316]" />, text: "Prix annoncé avant l'intervention" },
                     { icon: <Leaf size={16} className="text-[#F97316]" />, text: "Déchets évacués" },
                   ].map((item) => (
                     <div key={item.text} className="flex items-center gap-2 text-sm text-gray-600">

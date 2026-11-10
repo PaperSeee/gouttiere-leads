@@ -38,7 +38,7 @@ export default function Footer() {
             </div>
             <div className="flex flex-col items-center gap-2">
               <Award size={24} className="text-accent" />
-              <span className="text-sm font-semibold text-white">Prix fixé</span>
+              <span className="text-sm font-semibold text-white">Prix annoncé</span>
               <span className="text-xs">Avant l&apos;intervention</span>
             </div>
             <div className="flex flex-col items-center gap-2">

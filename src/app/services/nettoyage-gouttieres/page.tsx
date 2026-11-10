@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     title: "Nettoyage Gouttières Bruxelles — Service Complet",
-    description: "Évacuation feuilles, mousses, sédiments. Nettoyage gouttières + descentes pluviales. Devis gratuit, prix fixé à l'avance.",
+    description: "Évacuation feuilles, mousses, sédiments. Nettoyage gouttières + descentes pluviales. Devis gratuit, prix annoncé avant l'intervention.",
     url: "https://www.nettoyage-gouttieres-bruxelles.be/services/nettoyage-gouttieres",
     images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "Nettoyage gouttières Bruxelles" }],
   },
@@ -120,7 +120,7 @@ export default function NettoyageGouttieres() {
               Un nettoyage de gouttières à Bruxelles consiste à retirer feuilles, mousses et sédiments
               du chéneau puis à déboucher et rincer les descentes pluviales, avec un test d&apos;écoulement
               à la fin. Comptez 80 à 150 € pour une maison bruxelloise, descentes comprises. Devis
-              gratuit, prix fixé avant l&apos;intervention.
+              gratuit, prix annoncé avant l&apos;intervention.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <a href="tel:0451053370" className="flex items-center justify-center gap-2 bg-[#F97316] hover:bg-orange-500 text-white font-bold px-6 py-3 rounded-xl transition-colors">
@@ -243,7 +243,7 @@ export default function NettoyageGouttieres() {
                 <h3 className="font-bold text-gray-900 mb-4">Pourquoi nous choisir ?</h3>
                 <div className="space-y-3">
                   {[
-                    { icon: <Clock size={16} className="text-[#F97316]" />, text: "Prix fixé à l'avance" },
+                    { icon: <Clock size={16} className="text-[#F97316]" />, text: "Prix annoncé avant l'intervention" },
                     { icon: <Shield size={16} className="text-[#F97316]" />, text: "Mise en relation gratuite" },
                     { icon: <CheckCircle size={16} className="text-[#F97316]" />, text: "Devis gratuit" },
                     { icon: <Droplets size={16} className="text-[#F97316]" />, text: "Déchets évacués" },

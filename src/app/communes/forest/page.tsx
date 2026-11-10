@@ -11,12 +11,12 @@ import { localFaqs, localFaqSchema, getCommune } from "@/lib/communes"
 export const metadata: Metadata = {
   title: { absolute: "Nettoyage de gouttières à Forest dès 80 €" },
   description:
-    "Nettoyage de gouttières à Forest dès 80 € : rangées de maisons en brique, zinc d'époque, parcs Duden et de Forest. Devis gratuit, prix fixé à l'avance.",
+    "Nettoyage de gouttières à Forest dès 80 € : maisons en brique, zinc d'époque, parcs Duden et de Forest. Devis gratuit, prix annoncé avant l'intervention.",
   alternates: { canonical: "https://www.nettoyage-gouttieres-bruxelles.be/communes/forest" },
   keywords: ["nettoyage gouttières Forest", "débouchage gouttières Forest", "gouttières bouchées Forest", "prix nettoyage gouttières Forest"],
   openGraph: {
     title: "Nettoyage Gouttières Forest — Devis Gratuit",
-    description: "Nettoyage de gouttières à Forest : chéneaux et descentes vidés, écoulement testé. Devis gratuit, prix fixé à l'avance.",
+    description: "Nettoyage de gouttières à Forest : chéneaux et descentes vidés, écoulement testé. Devis gratuit, prix annoncé avant l'intervention.",
     url: "https://www.nettoyage-gouttieres-bruxelles.be/communes/forest",
     type: "website",
     images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "Nettoyage gouttières Forest" }],

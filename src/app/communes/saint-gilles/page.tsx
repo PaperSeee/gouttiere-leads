@@ -11,12 +11,12 @@ import { localFaqs, localFaqSchema, getCommune } from "@/lib/communes"
 export const metadata: Metadata = {
   title: { absolute: "Nettoyage de gouttières à Saint-Gilles dès 80 €" },
   description:
-    "Nettoyage de gouttières à Saint-Gilles dès 80 € : chéneaux de corniche, zinc Art nouveau, cours étroites. Devis gratuit, prix fixé à l'avance.",
+    "Nettoyage de gouttières à Saint-Gilles dès 80 € : chéneaux de corniche, zinc Art nouveau, cours étroites. Devis gratuit, prix annoncé avant l'intervention.",
   alternates: { canonical: "https://www.nettoyage-gouttieres-bruxelles.be/communes/saint-gilles" },
   keywords: ["nettoyage gouttières Saint-Gilles", "débouchage gouttières Saint-Gilles", "gouttières bouchées Saint-Gilles", "prix nettoyage gouttières Saint-Gilles"],
   openGraph: {
     title: "Nettoyage Gouttières Saint-Gilles — Devis Gratuit",
-    description: "Nettoyage de gouttières à Saint-Gilles : chéneaux et descentes vidés, écoulement testé. Devis gratuit, prix fixé à l'avance.",
+    description: "Nettoyage de gouttières à Saint-Gilles : chéneaux et descentes vidés, écoulement testé. Devis gratuit, prix annoncé avant l'intervention.",
     url: "https://www.nettoyage-gouttieres-bruxelles.be/communes/saint-gilles",
     type: "website",
     images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "Nettoyage gouttières Saint-Gilles" }],

@@ -152,7 +152,7 @@ export default async function GuidePage({ params }: PageProps<"/blog/[slug]">) {
             <div className="rounded-2xl border border-orange-200 bg-orange-50 p-6">
               <p className="font-bold text-gray-900 mb-2">Besoin d&apos;un professionnel à Bruxelles ?</p>
               <p className="text-sm text-gray-600 mb-4">
-                Devis gratuit, prix fixé avant l&apos;intervention, dans les 19 communes de la Région.
+                Devis gratuit, prix annoncé avant l&apos;intervention, dans les 19 communes de la Région.
               </p>
               <div className="flex flex-wrap gap-3">
                 <a href="tel:0451053370" className="inline-flex items-center gap-2 rounded-xl bg-[#F97316] px-5 py-3 font-bold text-white hover:bg-orange-500">

@@ -11,12 +11,12 @@ import { localFaqs, localFaqSchema, getCommune } from "@/lib/communes"
 export const metadata: Metadata = {
   title: { absolute: "Nettoyage de gouttières à Woluwe-Saint-Pierre dès 80 €" },
   description:
-    "Nettoyage de gouttières à Woluwe-Saint-Pierre dès 80 € : grandes villas, parc de Woluwe, Stockel. Devis gratuit, prix fixé à l'avance.",
+    "Nettoyage de gouttières à Woluwe-Saint-Pierre dès 80 € : grandes villas, parc de Woluwe, Stockel. Devis gratuit, prix annoncé avant l'intervention.",
   alternates: { canonical: "https://www.nettoyage-gouttieres-bruxelles.be/communes/woluwe-saint-pierre" },
   keywords: ["nettoyage gouttières Woluwe-Saint-Pierre", "débouchage gouttières Woluwe-Saint-Pierre", "gouttières bouchées Woluwe-Saint-Pierre", "prix nettoyage gouttières Woluwe-Saint-Pierre"],
   openGraph: {
     title: "Nettoyage Gouttières Woluwe-Saint-Pierre — Devis Gratuit",
-    description: "Nettoyage de gouttières à Woluwe-Saint-Pierre : chéneaux et descentes vidés, écoulement testé. Devis gratuit, prix fixé à l'avance.",
+    description: "Nettoyage de gouttières à Woluwe-Saint-Pierre : chéneaux et descentes vidés, écoulement testé. Devis gratuit, prix annoncé avant l'intervention.",
     url: "https://www.nettoyage-gouttieres-bruxelles.be/communes/woluwe-saint-pierre",
     type: "website",
     images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "Nettoyage gouttières Woluwe-Saint-Pierre" }],

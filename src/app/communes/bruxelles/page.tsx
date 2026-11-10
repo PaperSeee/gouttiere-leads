@@ -11,12 +11,12 @@ import { localFaqs, localFaqSchema, getCommune } from "@/lib/communes"
 export const metadata: Metadata = {
   title: { absolute: "Nettoyage de gouttières à Bruxelles-Ville dès 80 €" },
   description:
-    "Nettoyage de gouttières à Bruxelles-Ville dès 80 € : Pentagone, Laeken, Neder-Over-Heembeek, immeubles et chéneaux. Devis gratuit, prix fixé à l'avance.",
+    "Nettoyage de gouttières à Bruxelles-Ville dès 80 € : Pentagone, Laeken, Neder-Over-Heembeek. Devis gratuit, prix annoncé avant l'intervention.",
   alternates: { canonical: "https://www.nettoyage-gouttieres-bruxelles.be/communes/bruxelles" },
   keywords: ["nettoyage gouttières Bruxelles", "débouchage gouttières Bruxelles", "gouttières bouchées Bruxelles", "prix nettoyage gouttières Bruxelles"],
   openGraph: {
     title: "Nettoyage Gouttières Bruxelles-Ville — Devis Gratuit",
-    description: "Nettoyage de gouttières à Bruxelles-Ville : chéneaux et descentes vidés, écoulement testé. Devis gratuit, prix fixé à l'avance.",
+    description: "Nettoyage de gouttières à Bruxelles-Ville : chéneaux et descentes vidés, écoulement testé. Devis gratuit, prix annoncé avant l'intervention.",
     url: "https://www.nettoyage-gouttieres-bruxelles.be/communes/bruxelles",
     type: "website",
     images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "Nettoyage gouttières Bruxelles" }],

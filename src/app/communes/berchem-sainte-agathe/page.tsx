@@ -11,12 +11,12 @@ import { localFaqs, localFaqSchema, getCommune } from "@/lib/communes"
 export const metadata: Metadata = {
   title: { absolute: "Nettoyage de gouttières à Berchem-Sainte-Agathe dès 80 €" },
   description:
-    "Nettoyage de gouttières à Berchem-Sainte-Agathe dès 80 € : villas des années 60–70, garages à toit plat. Devis gratuit, prix fixé à l'avance.",
+    "Nettoyage de gouttières à Berchem-Sainte-Agathe dès 80 € : villas des années 60–70, garages à toit plat. Devis gratuit, prix annoncé avant l'intervention.",
   alternates: { canonical: "https://www.nettoyage-gouttieres-bruxelles.be/communes/berchem-sainte-agathe" },
   keywords: ["nettoyage gouttières Berchem-Sainte-Agathe", "débouchage gouttières Berchem-Sainte-Agathe", "gouttières bouchées Berchem-Sainte-Agathe", "prix nettoyage gouttières Berchem-Sainte-Agathe"],
   openGraph: {
     title: "Nettoyage Gouttières Berchem-Sainte-Agathe — Devis Gratuit",
-    description: "Nettoyage de gouttières à Berchem-Sainte-Agathe : chéneaux et descentes vidés, écoulement testé. Devis gratuit, prix fixé à l'avance.",
+    description: "Nettoyage de gouttières à Berchem-Sainte-Agathe : chéneaux et descentes vidés, écoulement testé. Devis gratuit, prix annoncé avant l'intervention.",
     url: "https://www.nettoyage-gouttieres-bruxelles.be/communes/berchem-sainte-agathe",
     type: "website",
     images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "Nettoyage gouttières Berchem-Sainte-Agathe" }],

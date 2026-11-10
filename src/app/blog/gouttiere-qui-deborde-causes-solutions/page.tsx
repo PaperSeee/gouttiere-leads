@@ -297,7 +297,7 @@ export default function BlogDebordementPage() {
               ))}
             </div>
             <p className="text-sm text-gray-500 italic not-prose">
-              Devis gratuit avant toute intervention. Prix fixés à l&apos;avance, sans surprise.
+              Devis gratuit avant toute intervention : le professionnel annonce son prix avant de commencer.
             </p>
 
             <h2 className="text-2xl font-bold text-gray-900 mt-10 mb-4">
@@ -361,7 +361,7 @@ export default function BlogDebordementPage() {
             <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
               <div>
                 <h3 className="text-xl font-bold mb-2">Gouttière qui déborde ? Demandez un débouchage</h3>
-                <p className="text-gray-300 text-sm">Devis gratuit · Prix fixé à l'avance · Débouchage haute pression</p>
+                <p className="text-gray-300 text-sm">Devis gratuit · Prix annoncé avant l'intervention · Débouchage haute pression</p>
               </div>
               <a
                 href="tel:0451053370"

@@ -651,7 +651,7 @@ export const guides: Guide[] = [
       {
         h2: "Faire soi-même ou faire appel à un professionnel ?",
         paragraphs: [
-          "Sur une maison de plain-pied, le nettoyage peut se faire soi-même en respectant quelques règles de sécurité : voir [nettoyer ses gouttières soi-même](/blog/nettoyer-gouttieres-soi-meme). Au-delà d'un étage, ou pour un chéneau caché derrière une corniche, un professionnel équipé est plus sûr. Notre [service de nettoyage de gouttières](/services/nettoyage-gouttieres) fonctionne sur devis gratuit, prix fixé avant l'intervention. Et pour les produits à utiliser ou à éviter, consultez notre article sur les [produits de nettoyage des gouttières](/blog/produits-nettoyage-gouttieres-bruxelles).",
+          "Sur une maison de plain-pied, le nettoyage peut se faire soi-même en respectant quelques règles de sécurité : voir [nettoyer ses gouttières soi-même](/blog/nettoyer-gouttieres-soi-meme). Au-delà d'un étage, ou pour un chéneau caché derrière une corniche, un professionnel équipé est plus sûr. Notre [service de nettoyage de gouttières](/services/nettoyage-gouttieres) fonctionne sur devis gratuit, prix annoncé avant l'intervention. Et pour les produits à utiliser ou à éviter, consultez notre article sur les [produits de nettoyage des gouttières](/blog/produits-nettoyage-gouttieres-bruxelles).",
         ],
       },
     ],

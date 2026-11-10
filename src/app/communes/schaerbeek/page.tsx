@@ -11,12 +11,12 @@ import { localFaqs, localFaqSchema, getCommune } from "@/lib/communes"
 export const metadata: Metadata = {
   title: { absolute: "Nettoyage de gouttières à Schaerbeek dès 80 €" },
   description:
-    "Nettoyage de gouttières à Schaerbeek dès 80 € : maisons Belle Époque, chéneaux cachés, parc Josaphat. Devis gratuit, prix fixé à l'avance.",
+    "Nettoyage de gouttières à Schaerbeek dès 80 € : maisons Belle Époque, chéneaux cachés, parc Josaphat. Devis gratuit, prix annoncé avant l'intervention.",
   alternates: { canonical: "https://www.nettoyage-gouttieres-bruxelles.be/communes/schaerbeek" },
   keywords: ["nettoyage gouttières Schaerbeek", "débouchage gouttières Schaerbeek", "gouttières bouchées Schaerbeek", "prix nettoyage gouttières Schaerbeek"],
   openGraph: {
     title: "Nettoyage Gouttières Schaerbeek — Devis Gratuit",
-    description: "Nettoyage de gouttières à Schaerbeek : chéneaux et descentes vidés, écoulement testé. Devis gratuit, prix fixé à l'avance.",
+    description: "Nettoyage de gouttières à Schaerbeek : chéneaux et descentes vidés, écoulement testé. Devis gratuit, prix annoncé avant l'intervention.",
     url: "https://www.nettoyage-gouttieres-bruxelles.be/communes/schaerbeek",
     type: "website",
     images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "Nettoyage gouttières Schaerbeek" }],

@@ -10,7 +10,7 @@ export default function LocalBusinessSchema() {
     parentOrganization: { "@id": `${DOMAIN}/#organization` },
     name: "Nettoyage Gouttières Bruxelles",
     description:
-      "Nettoyage de gouttières à Bruxelles. Débouchage, réparation, démoussage toiture. Devis gratuit, prix fixé avant l'intervention.",
+      "Nettoyage de gouttières à Bruxelles. Débouchage, réparation, démoussage toiture. Devis gratuit, prix annoncé avant l'intervention.",
     url: DOMAIN,
     telephone: "+32451053370",
     email: "contact@nettoyage-gouttieres-bruxelles.be",

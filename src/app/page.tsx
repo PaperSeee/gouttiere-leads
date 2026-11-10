@@ -27,14 +27,14 @@ import GutterIllustration from "@/components/GutterIllustration";
 export const metadata: Metadata = {
   title: { absolute: "Nettoyage de gouttières à Bruxelles dès 80 € — devis gratuit" },
   description:
-    "Nettoyage et entretien de gouttières à Bruxelles : chéneau et descentes vidés, écoulement testé, 19 communes. Devis gratuit, prix annoncé avant.",
+    "Nettoyage et entretien de gouttières à Bruxelles : chéneau et descentes vidés, écoulement testé, 19 communes. Devis gratuit, prix annoncé avant les travaux.",
   keywords: ["nettoyage gouttières Bruxelles", "débouchage gouttières urgence Bruxelles", "réparation gouttières Bruxelles", "démoussage toiture Bruxelles", "gouttières bouchées intervention rapide"],
   alternates: {
     canonical: "https://www.nettoyage-gouttieres-bruxelles.be/",
   },
   openGraph: {
     title: "Nettoyage de gouttières à Bruxelles dès 80 € — devis gratuit",
-    description: "Nettoyage de gouttières à Bruxelles dès 80 € : feuilles, mousses et boues retirées, descentes débouchées, écoulement testé. Devis gratuit, prix fixé à l'avance.",
+    description: "Nettoyage de gouttières à Bruxelles dès 80 € : descentes débouchées, écoulement testé. Devis gratuit, prix annoncé avant l'intervention.",
     url: "https://www.nettoyage-gouttieres-bruxelles.be/",
     type: "website",
     images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "Nettoyage Gouttières Bruxelles" }],
@@ -181,7 +181,7 @@ const risks = [
 
 const steps = [
   { t: "Vous nous contactez", d: "Par téléphone ou via le formulaire : longueur approximative, hauteur, urgence." },
-  { t: "Devis gratuit, prix fixé", d: "Un professionnel indépendant vous rappelle et fixe le prix à l'avance, sans engagement." },
+  { t: "Devis gratuit, prix annoncé", d: "Un professionnel indépendant vous rappelle et vous annonce son prix avant l'intervention, sans engagement." },
   { t: "Intervention au jour convenu", d: "Gouttières et descentes nettoyées, écoulement vérifié avant de partir." },
 ];
 
@@ -216,10 +216,10 @@ export default function HomePage() {
             <p className="mt-5 max-w-xl text-lg leading-relaxed text-green-50/80">
               Le nettoyage de gouttières à Bruxelles retire feuilles, mousse et boues de la gouttière ou du chéneau
               de corniche, débouche les descentes pluviales et teste l&apos;écoulement. Comptez 80 à 150 € pour une
-              maison, dans les 19 communes, avec un prix fixé avant l&apos;intervention.
+              maison, dans les 19 communes, avec un prix annoncé avant l&apos;intervention.
             </p>
             <ul className="mt-6 grid gap-2.5 sm:grid-cols-2">
-              {["Devis gratuit, prix fixé à l'avance", "Descentes pluviales comprises", "Chéneaux de corniche aussi", "19 communes de Bruxelles"].map((c) => (
+              {["Prix annoncé avant l'intervention", "Descentes pluviales comprises", "Chéneaux de corniche aussi", "19 communes de Bruxelles"].map((c) => (
                 <li key={c} className="flex items-center gap-2.5 font-semibold">
                   <CheckCircle size={18} className="shrink-0 text-[#7fd8a4]" />
                   {c}
@@ -256,7 +256,7 @@ export default function HomePage() {
         <div className="mx-auto grid max-w-7xl grid-cols-2 gap-6 px-4 py-8 sm:px-6 lg:grid-cols-4 lg:px-8">
           {[
             { icon: Shield, t: "Mise en relation gratuite", d: "Aucun frais pour la demande de devis" },
-            { icon: Euro, t: "Devis gratuit", d: "Sans engagement, prix fixé à l'avance" },
+            { icon: Euro, t: "Devis gratuit", d: "Sans engagement, prix annoncé avant l'intervention" },
             { icon: Clock, t: "Délai annoncé au téléphone", d: "Selon la saison et l'urgence" },
             { icon: ThumbsUp, t: "Écoulement vérifié", d: "Test d'écoulement avant de partir" },
           ].map(({ icon: Icon, t, d }) => (
@@ -468,7 +468,7 @@ export default function HomePage() {
               Un professionnel indépendant vous rappelle pour fixer le prix.
             </p>
             <ul className="mt-6 space-y-2.5">
-              {["Prix fixé avant l'intervention", "Aucun engagement", "Intervention au jour convenu"].map((c) => (
+              {["Prix annoncé avant l'intervention", "Aucun engagement", "Intervention au jour convenu"].map((c) => (
                 <li key={c} className="flex items-center gap-2.5 font-semibold text-gray-800">
                   <CheckCircle size={18} className="text-[#1F7A55]" />
                   {c}

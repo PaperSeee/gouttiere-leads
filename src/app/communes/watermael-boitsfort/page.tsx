@@ -11,12 +11,12 @@ import { localFaqs, localFaqSchema, getCommune } from "@/lib/communes"
 export const metadata: Metadata = {
   title: { absolute: "Nettoyage de gouttières à Watermael-Boitsfort dès 80 €" },
   description:
-    "Nettoyage de gouttières à Watermael-Boitsfort dès 80 € : cités-jardins, Forêt de Soignes, mousses. Devis gratuit, prix fixé à l'avance.",
+    "Nettoyage de gouttières à Watermael-Boitsfort dès 80 € : cités-jardins, Forêt de Soignes, mousses. Devis gratuit, prix annoncé avant l'intervention.",
   alternates: { canonical: "https://www.nettoyage-gouttieres-bruxelles.be/communes/watermael-boitsfort" },
   keywords: ["nettoyage gouttières Watermael-Boitsfort", "débouchage gouttières Watermael-Boitsfort", "gouttières bouchées Watermael-Boitsfort", "prix nettoyage gouttières Watermael-Boitsfort"],
   openGraph: {
     title: "Nettoyage Gouttières Watermael-Boitsfort — Devis Gratuit",
-    description: "Nettoyage de gouttières à Watermael-Boitsfort : chéneaux et descentes vidés, écoulement testé. Devis gratuit, prix fixé à l'avance.",
+    description: "Nettoyage de gouttières à Watermael-Boitsfort : chéneaux et descentes vidés, écoulement testé. Devis gratuit, prix annoncé avant l'intervention.",
     url: "https://www.nettoyage-gouttieres-bruxelles.be/communes/watermael-boitsfort",
     type: "website",
     images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "Nettoyage gouttières Watermael-Boitsfort" }],

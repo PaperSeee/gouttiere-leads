@@ -362,7 +362,7 @@ export default function BlogAutomneGouttieresBruxellesPage() {
             <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
               <div>
                 <h3 className="text-xl font-bold mb-2">Planifiez votre nettoyage avant l'automne</h3>
-                <p className="text-gray-300 text-sm">Devis gratuit — prix fixé à l'avance — 19 communes de Bruxelles</p>
+                <p className="text-gray-300 text-sm">Devis gratuit — prix annoncé avant l'intervention — 19 communes de Bruxelles</p>
               </div>
               <a
                 href="tel:0451053370"

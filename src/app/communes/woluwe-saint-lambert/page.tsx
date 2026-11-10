@@ -11,12 +11,12 @@ import { localFaqs, localFaqSchema, getCommune } from "@/lib/communes"
 export const metadata: Metadata = {
   title: { absolute: "Nettoyage de gouttières à Woluwe-Saint-Lambert dès 80 €" },
   description:
-    "Nettoyage de gouttières à Woluwe-Saint-Lambert dès 80 € : villas, immeubles, parc Malou, Kapelleveld. Devis gratuit, prix fixé à l'avance.",
+    "Nettoyage de gouttières à Woluwe-Saint-Lambert dès 80 € : villas, immeubles, parc Malou, Kapelleveld. Devis gratuit, prix annoncé avant l'intervention.",
   alternates: { canonical: "https://www.nettoyage-gouttieres-bruxelles.be/communes/woluwe-saint-lambert" },
   keywords: ["nettoyage gouttières Woluwe-Saint-Lambert", "débouchage gouttières Woluwe-Saint-Lambert", "gouttières bouchées Woluwe-Saint-Lambert", "prix nettoyage gouttières Woluwe-Saint-Lambert"],
   openGraph: {
     title: "Nettoyage Gouttières Woluwe-Saint-Lambert — Devis Gratuit",
-    description: "Nettoyage de gouttières à Woluwe-Saint-Lambert : chéneaux et descentes vidés, écoulement testé. Devis gratuit, prix fixé à l'avance.",
+    description: "Nettoyage de gouttières à Woluwe-Saint-Lambert : chéneaux et descentes vidés, écoulement testé. Devis gratuit, prix annoncé avant l'intervention.",
     url: "https://www.nettoyage-gouttieres-bruxelles.be/communes/woluwe-saint-lambert",
     type: "website",
     images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "Nettoyage gouttières Woluwe-Saint-Lambert" }],

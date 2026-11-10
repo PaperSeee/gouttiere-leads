@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   keywords: ["nettoyage gouttières Saint-Josse", "débouchage gouttières Saint-Josse", "gouttières bouchées Saint-Josse", "prix nettoyage gouttières Saint-Josse"],
   openGraph: {
     title: "Nettoyage Gouttières Saint-Josse — Devis Gratuit",
-    description: "Nettoyage de gouttières à Saint-Josse : chéneaux et descentes vidés, écoulement testé. Devis gratuit, prix fixé à l'avance.",
+    description: "Nettoyage de gouttières à Saint-Josse : chéneaux et descentes vidés, écoulement testé. Devis gratuit, prix annoncé avant l'intervention.",
     url: "https://www.nettoyage-gouttieres-bruxelles.be/communes/saint-josse-ten-noode",
     type: "website",
     images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "Nettoyage gouttières Saint-Josse" }],

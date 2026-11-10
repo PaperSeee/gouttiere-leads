@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   keywords: ["nettoyage gouttières Anderlecht", "débouchage gouttières Anderlecht", "gouttières bouchées Anderlecht", "prix nettoyage gouttières Anderlecht"],
   openGraph: {
     title: "Nettoyage Gouttières Anderlecht — Devis Gratuit",
-    description: "Nettoyage de gouttières à Anderlecht : chéneaux et descentes vidés, écoulement testé. Devis gratuit, prix fixé à l'avance.",
+    description: "Nettoyage de gouttières à Anderlecht : chéneaux et descentes vidés, écoulement testé. Devis gratuit, prix annoncé avant l'intervention.",
     url: "https://www.nettoyage-gouttieres-bruxelles.be/communes/anderlecht",
     type: "website",
     images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "Nettoyage gouttières Anderlecht" }],

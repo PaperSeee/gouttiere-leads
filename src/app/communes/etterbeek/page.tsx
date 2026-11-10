@@ -11,12 +11,12 @@ import { localFaqs, localFaqSchema, getCommune } from "@/lib/communes"
 export const metadata: Metadata = {
   title: { absolute: "Nettoyage de gouttières à Etterbeek dès 80 €" },
   description:
-    "Nettoyage de gouttières à Etterbeek dès 80 € : maisons divisées en appartements, toits plats, copropriétés. Devis gratuit, prix fixé à l'avance.",
+    "Nettoyage de gouttières à Etterbeek dès 80 € : maisons divisées en appartements, toits plats, copropriétés. Devis gratuit, prix annoncé avant l'intervention.",
   alternates: { canonical: "https://www.nettoyage-gouttieres-bruxelles.be/communes/etterbeek" },
   keywords: ["nettoyage gouttières Etterbeek", "débouchage gouttières Etterbeek", "gouttières bouchées Etterbeek", "prix nettoyage gouttières Etterbeek"],
   openGraph: {
     title: "Nettoyage Gouttières Etterbeek — Devis Gratuit",
-    description: "Nettoyage de gouttières à Etterbeek : chéneaux et descentes vidés, écoulement testé. Devis gratuit, prix fixé à l'avance.",
+    description: "Nettoyage de gouttières à Etterbeek : chéneaux et descentes vidés, écoulement testé. Devis gratuit, prix annoncé avant l'intervention.",
     url: "https://www.nettoyage-gouttieres-bruxelles.be/communes/etterbeek",
     type: "website",
     images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "Nettoyage gouttières Etterbeek" }],

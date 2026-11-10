@@ -11,12 +11,12 @@ import { localFaqs, localFaqSchema, getCommune } from "@/lib/communes"
 export const metadata: Metadata = {
   title: { absolute: "Nettoyage de gouttières à Ixelles dès 80 €" },
   description:
-    "Nettoyage de gouttières à Ixelles dès 80 € : zinc Art nouveau, maisons de maître, copropriétés, étangs. Devis gratuit, prix fixé à l'avance.",
+    "Nettoyage de gouttières à Ixelles dès 80 € : zinc Art nouveau, maisons de maître, copropriétés, étangs. Devis gratuit, prix annoncé avant l'intervention.",
   alternates: { canonical: "https://www.nettoyage-gouttieres-bruxelles.be/communes/ixelles" },
   keywords: ["nettoyage gouttières Ixelles", "débouchage gouttières Ixelles", "gouttières bouchées Ixelles", "prix nettoyage gouttières Ixelles"],
   openGraph: {
     title: "Nettoyage Gouttières Ixelles — Devis Gratuit",
-    description: "Nettoyage de gouttières à Ixelles : chéneaux et descentes vidés, écoulement testé. Devis gratuit, prix fixé à l'avance.",
+    description: "Nettoyage de gouttières à Ixelles : chéneaux et descentes vidés, écoulement testé. Devis gratuit, prix annoncé avant l'intervention.",
     url: "https://www.nettoyage-gouttieres-bruxelles.be/communes/ixelles",
     type: "website",
     images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "Nettoyage gouttières Ixelles" }],

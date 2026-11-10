@@ -1,6 +1,6 @@
 import { ImageResponse } from "next/og";
 
-export const alt = "Nettoyage Gouttières Bruxelles — devis gratuit, prix fixé à l'avance";
+export const alt = "Nettoyage Gouttières Bruxelles — devis gratuit, prix annoncé avant l'intervention";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 

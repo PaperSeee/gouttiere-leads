@@ -11,12 +11,12 @@ import { localFaqs, localFaqSchema, getCommune } from "@/lib/communes"
 export const metadata: Metadata = {
   title: { absolute: "Nettoyage de gouttières à Uccle dès 80 €" },
   description:
-    "Nettoyage de gouttières à Uccle dès 80 € : villas sous les arbres, zinc ancien, grands linéaires. Devis gratuit, prix fixé à l'avance.",
+    "Nettoyage de gouttières à Uccle dès 80 € : villas sous les arbres, zinc ancien, grands linéaires. Devis gratuit, prix annoncé avant l'intervention.",
   alternates: { canonical: "https://www.nettoyage-gouttieres-bruxelles.be/communes/uccle" },
   keywords: ["nettoyage gouttières Uccle", "débouchage gouttières Uccle", "gouttières bouchées Uccle", "prix nettoyage gouttières Uccle"],
   openGraph: {
     title: "Nettoyage Gouttières Uccle — Devis Gratuit",
-    description: "Nettoyage de gouttières à Uccle : chéneaux et descentes vidés, écoulement testé. Devis gratuit, prix fixé à l'avance.",
+    description: "Nettoyage de gouttières à Uccle : chéneaux et descentes vidés, écoulement testé. Devis gratuit, prix annoncé avant l'intervention.",
     url: "https://www.nettoyage-gouttieres-bruxelles.be/communes/uccle",
     type: "website",
     images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "Nettoyage gouttières Uccle" }],

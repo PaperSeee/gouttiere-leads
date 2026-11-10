@@ -11,12 +11,12 @@ import { localFaqs, localFaqSchema, getCommune } from "@/lib/communes"
 export const metadata: Metadata = {
   title: { absolute: "Nettoyage de gouttières à Evere dès 80 €" },
   description:
-    "Nettoyage de gouttières à Evere dès 80 € : maisons des années 50–70, graines de peupliers, descentes bouchées. Devis gratuit, prix fixé à l'avance.",
+    "Nettoyage de gouttières à Evere dès 80 € : maisons des années 50–70, graines de peupliers. Devis gratuit, prix annoncé avant l'intervention.",
   alternates: { canonical: "https://www.nettoyage-gouttieres-bruxelles.be/communes/evere" },
   keywords: ["nettoyage gouttières Evere", "débouchage gouttières Evere", "gouttières bouchées Evere", "prix nettoyage gouttières Evere"],
   openGraph: {
     title: "Nettoyage Gouttières Evere — Devis Gratuit",
-    description: "Nettoyage de gouttières à Evere : chéneaux et descentes vidés, écoulement testé. Devis gratuit, prix fixé à l'avance.",
+    description: "Nettoyage de gouttières à Evere : chéneaux et descentes vidés, écoulement testé. Devis gratuit, prix annoncé avant l'intervention.",
     url: "https://www.nettoyage-gouttieres-bruxelles.be/communes/evere",
     type: "website",
     images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "Nettoyage gouttières Evere" }],

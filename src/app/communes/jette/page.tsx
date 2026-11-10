@@ -11,12 +11,12 @@ import { localFaqs, localFaqSchema, getCommune } from "@/lib/communes"
 export const metadata: Metadata = {
   title: { absolute: "Nettoyage de gouttières à Jette dès 80 €" },
   description:
-    "Nettoyage de gouttières à Jette dès 80 € : villas des années 50–70, bouleaux, bordure du Laerbeek. Devis gratuit, prix fixé à l'avance.",
+    "Nettoyage de gouttières à Jette dès 80 € : villas des années 50–70, bouleaux, bordure du Laerbeek. Devis gratuit, prix annoncé avant l'intervention.",
   alternates: { canonical: "https://www.nettoyage-gouttieres-bruxelles.be/communes/jette" },
   keywords: ["nettoyage gouttières Jette", "débouchage gouttières Jette", "gouttières bouchées Jette", "prix nettoyage gouttières Jette"],
   openGraph: {
     title: "Nettoyage Gouttières Jette — Devis Gratuit",
-    description: "Nettoyage de gouttières à Jette : chéneaux et descentes vidés, écoulement testé. Devis gratuit, prix fixé à l'avance.",
+    description: "Nettoyage de gouttières à Jette : chéneaux et descentes vidés, écoulement testé. Devis gratuit, prix annoncé avant l'intervention.",
     url: "https://www.nettoyage-gouttieres-bruxelles.be/communes/jette",
     type: "website",
     images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "Nettoyage gouttières Jette" }],

@@ -11,12 +11,12 @@ import { localFaqs, localFaqSchema, getCommune } from "@/lib/communes"
 export const metadata: Metadata = {
   title: { absolute: "Nettoyage de gouttières à Ganshoren dès 80 €" },
   description:
-    "Nettoyage de gouttières à Ganshoren dès 80 € : maisons des années 50–60, jardins arborés, descentes à contrôler. Devis gratuit, prix fixé à l'avance.",
+    "Nettoyage de gouttières à Ganshoren dès 80 € : maisons des années 50–60, jardins arborés. Devis gratuit, prix annoncé avant l'intervention.",
   alternates: { canonical: "https://www.nettoyage-gouttieres-bruxelles.be/communes/ganshoren" },
   keywords: ["nettoyage gouttières Ganshoren", "débouchage gouttières Ganshoren", "gouttières bouchées Ganshoren", "prix nettoyage gouttières Ganshoren"],
   openGraph: {
     title: "Nettoyage Gouttières Ganshoren — Devis Gratuit",
-    description: "Nettoyage de gouttières à Ganshoren : chéneaux et descentes vidés, écoulement testé. Devis gratuit, prix fixé à l'avance.",
+    description: "Nettoyage de gouttières à Ganshoren : chéneaux et descentes vidés, écoulement testé. Devis gratuit, prix annoncé avant l'intervention.",
     url: "https://www.nettoyage-gouttieres-bruxelles.be/communes/ganshoren",
     type: "website",
     images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "Nettoyage gouttières Ganshoren" }],

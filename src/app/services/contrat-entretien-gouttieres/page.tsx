@@ -180,7 +180,7 @@ export default function ContratEntretienGouttieres() {
                 <h3 className="font-bold text-gray-900 mb-4">Avantages du contrat</h3>
                 <div className="space-y-3">
                   {[
-                    { icon: <Percent size={16} className="text-[#F97316]" />, text: "Prix fixé dans le devis" },
+                    { icon: <Percent size={16} className="text-[#F97316]" />, text: "Prix indiqué dans le devis" },
                     { icon: <Clock size={16} className="text-[#F97316]" />, text: "Dates convenues à l'avance" },
                     { icon: <Shield size={16} className="text-[#F97316]" />, text: "Mise en relation gratuite" },
                     { icon: <CalendarCheck size={16} className="text-[#F97316]" />, text: "Passages programmés à l'avance" },

@@ -11,12 +11,12 @@ import { localFaqs, localFaqSchema, getCommune } from "@/lib/communes"
 export const metadata: Metadata = {
   title: { absolute: "Nettoyage de gouttières à Auderghem dès 80 €" },
   description:
-    "Nettoyage de gouttières à Auderghem dès 80 € : feuilles de hêtres de la Forêt de Soignes, maisons 4 façades. Devis gratuit, prix fixé à l'avance.",
+    "Nettoyage de gouttières à Auderghem dès 80 € : feuilles de hêtres de la Forêt de Soignes, maisons 4 façades. Devis gratuit, prix annoncé avant l'intervention.",
   alternates: { canonical: "https://www.nettoyage-gouttieres-bruxelles.be/communes/auderghem" },
   keywords: ["nettoyage gouttières Auderghem", "débouchage gouttières Auderghem", "gouttières bouchées Auderghem", "prix nettoyage gouttières Auderghem"],
   openGraph: {
     title: "Nettoyage Gouttières Auderghem — Devis Gratuit",
-    description: "Nettoyage de gouttières à Auderghem : chéneaux et descentes vidés, écoulement testé. Devis gratuit, prix fixé à l'avance.",
+    description: "Nettoyage de gouttières à Auderghem : chéneaux et descentes vidés, écoulement testé. Devis gratuit, prix annoncé avant l'intervention.",
     url: "https://www.nettoyage-gouttieres-bruxelles.be/communes/auderghem",
     type: "website",
     images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "Nettoyage gouttières Auderghem" }],
