@@ -133,11 +133,11 @@ const tarifsDemoussage = [
 const faqTarifs = [
   {
     q: "Le déplacement est-il facturé en plus ?",
-    a: "Non. Chez nous, le déplacement pour établir le devis est toujours gratuit, sans engagement. Si vous acceptez le devis, le déplacement d'intervention est inclus dans le tarif pour toutes les communes de Bruxelles-Capitale.",
+    a: "Le déplacement pour le devis est en général gratuit : le professionnel indépendant vous le confirme au téléphone avant de venir.",
   },
   {
     q: "Y a-t-il des frais cachés après l'intervention ?",
-    a: "Aucun. Le devis signé est le prix final. Si nous découvrons un problème non prévu lors de l'intervention (ex : crochet cassé caché sous les feuilles), nous vous informons sur place avant d'effectuer un quelconque travail supplémentaire.",
+    a: "Demandez que tout figure dans le devis écrit. Si un problème imprévu apparaît sur place, le professionnel doit vous en parler avant de continuer.",
   },
   {
     q: "Pourquoi les prix varient-ils autant selon les maisons ?",
@@ -145,7 +145,7 @@ const faqTarifs = [
   },
   {
     q: "Le nettoyage des descentes pluviales est-il inclus dans le prix ?",
-    a: "Oui, systématiquement. Nos tarifs nettoyage incluent toujours les gouttières ET les descentes pluviales. Une descente pluviale bouchée est aussi problématique qu'une gouttière obstruée — nous ne nettoyons jamais l'une sans l'autre.",
+    a: "Oui, systématiquement. Le nettoyage comprend toujours les gouttières ET les descentes pluviales. Une descente pluviale bouchée est aussi problématique qu'une gouttière obstruée — le professionnel ne nettoie jamais l'une sans l'autre.",
   },
   {
     q: "Proposez-vous un abonnement entretien annuel ?",
@@ -390,7 +390,7 @@ export default function Tarifs() {
       <section className="py-14 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl font-bold text-gray-900 mb-2">Pourquoi le prix varie d&apos;une maison à l&apos;autre ?</h2>
-          <p className="text-gray-500 text-sm mb-8">8 facteurs déterminent le prix final de votre intervention à Bruxelles.</p>
+          <p className="text-gray-500 text-sm mb-8">8 facteurs font varier le prix de votre intervention à Bruxelles.</p>
           <div className="grid sm:grid-cols-2 gap-4">
             {facteursPrice.map((f) => (
               <div key={f.label} className="flex items-start gap-3 bg-white rounded-xl p-4 border border-gray-100">

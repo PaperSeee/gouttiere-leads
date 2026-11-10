@@ -156,10 +156,10 @@ export default function NettoyageGouttieres() {
                 compacts qui nécessitent parfois un travail minutieux.
               </p>
               <p className="text-gray-600 leading-relaxed mb-4">
-                Une fois les gouttières vidées, nous rinçons à l&apos;eau claire pour vérifier l&apos;écoulement
+                Une fois les gouttières vidées, elles sont rincées à l&apos;eau claire pour vérifier l&apos;écoulement
                 et détecter les points de stagnation. Les descentes pluviales sont également débouchées
-                et rincées. En fin d&apos;intervention, nous contrôlons le débit à la base de chaque descente
-                pour nous assurer que l&apos;évacuation est parfaitement fonctionnelle.
+                et rincées. En fin d&apos;intervention, le professionnel contrôle le débit à la base de chaque descente
+                pour s&apos;assurer que l&apos;évacuation est parfaitement fonctionnelle.
               </p>
 
               <h2 className="text-2xl font-bold text-gray-900 mb-4 mt-8">Que comprend une prestation de nettoyage ?</h2>

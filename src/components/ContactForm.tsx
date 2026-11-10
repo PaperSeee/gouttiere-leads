@@ -91,7 +91,7 @@ export default function ContactForm({ defaultCommune, defaultIntervention, compa
         <CheckCircle size={44} className="mx-auto mb-3 text-green-600" />
         <h3 className="mb-2 text-xl font-bold text-green-900">Demande envoyée !</h3>
         <p className="text-green-800">
-          Nous avons bien reçu votre demande. Un technicien vous rappelle pour fixer l&apos;intervention.
+          Nous avons bien reçu votre demande. Un professionnel indépendant vous rappelle pour fixer l&apos;intervention.
         </p>
         <p className="mt-3 text-sm text-green-700">
           Besoin urgent ?{" "}

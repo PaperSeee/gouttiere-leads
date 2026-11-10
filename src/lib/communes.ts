@@ -805,7 +805,7 @@ export const communes: Commune[] = [
           { link: { href: "/communes/uccle", label: "Uccle" } },
           { text: " ; notre " },
           { link: { href: "/services/nettoyage-gouttieres", label: "service de nettoyage de gouttières" } },
-          { text: " explique comment nous traitons le zinc et le cuivre anciens." },
+          { text: " explique comment le professionnel traite le zinc et le cuivre anciens." },
         ],
       ],
     },
