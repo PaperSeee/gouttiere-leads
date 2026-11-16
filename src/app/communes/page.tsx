@@ -102,7 +102,9 @@ export default function CommunesPage() {
           <p className="text-gray-600">
             Selon votre besoin, retrouvez le détail de nos{" "}
             <Link href="/services" className="font-semibold text-[#1A4731] underline hover:text-[#F97316]">services de nettoyage de gouttières à Bruxelles</Link>{" "}
-            (nettoyage, débouchage, réparation, démoussage) et nos conseils d&apos;entretien sur le{" "}
+            (nettoyage, débouchage, réparation, démoussage), le{" "}
+            <Link href="/services/nettoyage-corniche" className="font-semibold text-[#1A4731] underline hover:text-[#F97316]">nettoyage de corniche à Bruxelles</Link>{" "}
+            pour les façades à corniche, et nos conseils d&apos;entretien sur le{" "}
             <Link href="/blog" className="font-semibold text-[#1A4731] underline hover:text-[#F97316]">blog gouttières</Link>.
           </p>
         </div>

@@ -44,6 +44,13 @@ export default function Blog() {
             .
           </p>
           <p className="mt-4 text-gray-300 text-lg max-w-2xl">
+            Le déroulement d&apos;une intervention est décrit sur notre page{" "}
+            <Link href="/services/nettoyage-gouttieres" className="underline text-white hover:text-gray-200">
+              nettoyage de gouttières à Bruxelles
+            </Link>
+            .
+          </p>
+          <p className="mt-4 text-gray-300 text-lg max-w-2xl">
             Besoin d&apos;un devis ?{" "}
             <Link href="/#devis" className="underline text-white font-semibold hover:text-gray-200">
               Demandez le devis gratuit
