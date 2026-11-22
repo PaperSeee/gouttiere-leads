@@ -3,13 +3,14 @@ import Link from "next/link";
 import { Phone, CheckCircle, ArrowRight } from "lucide-react";
 import Breadcrumb from "@/components/Breadcrumb";
 import { SITE_URL, ORGANIZATION_ID, EDITOR_ID } from "@/lib/schema";
+import { avecOg } from "@/lib/og";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = avecOg({
   title: { absolute: "À propos : qui édite ce site et comment il fonctionne" },
   description:
     "Qui édite ce site (HqDigital), comment fonctionne la mise en relation gratuite avec un professionnel indépendant, et comment celui-ci est choisi.",
   alternates: { canonical: `${SITE_URL}/a-propos` },
-};
+});
 
 const UPDATED = "2026-10-13";
 

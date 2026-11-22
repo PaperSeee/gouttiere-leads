@@ -5,8 +5,9 @@ import Breadcrumb from "@/components/Breadcrumb";
 import ContactForm from "@/components/ContactForm";
 import ServiceGuides from "@/components/ServiceGuides";
 import TrustNote from "@/components/TrustNote";
+import { avecOg } from "@/lib/og";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = avecOg({
   title: { absolute: "Protection anti-feuilles à Bruxelles | Gouttières Bruxelles" },
   description:
     "Pose de protections anti-feuilles pour gouttières à Bruxelles : grilles, brosses, filets. Espacez vos nettoyages. Devis gratuit.",
@@ -25,7 +26,7 @@ export const metadata: Metadata = {
     description: "Pose de grilles, brosses et filets anti-feuilles. Devis gratuit, prix annoncé avant l'intervention.",
     images: ["/opengraph-image"],
   },
-};
+});
 
 const communes = [
   { name: "Anderlecht", slug: "anderlecht" },

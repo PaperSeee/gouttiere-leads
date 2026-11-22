@@ -5,8 +5,9 @@ import Breadcrumb from "@/components/Breadcrumb"
 import ContactForm from "@/components/ContactForm"
 import Byline from "@/components/Byline"
 import { EDITOR_REF, PUBLISHER_REF } from "@/lib/schema"
+import { avecOg } from "@/lib/og";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = avecOg({
   title: { absolute: "Gouttière qui déborde : causes et solutions" },
   description:
     "Votre gouttière déborde sous la pluie ? Les 6 causes les plus fréquentes, les risques pour votre maison et ce qu'il faut faire immédiatement.",
@@ -24,7 +25,7 @@ export const metadata: Metadata = {
     description: "Les 6 causes + les risques + quoi faire maintenant. Débouchage en urgence à Bruxelles.",
     images: ["https://images.unsplash.com/photo-1516455590571-18256e5bb9ff?w=1200&q=80"],
   },
-}
+})
 
 export default function BlogDebordementPage() {
   const DOMAIN = "https://www.nettoyage-gouttieres-bruxelles.be"

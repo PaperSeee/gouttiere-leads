@@ -5,8 +5,9 @@ import Breadcrumb from "@/components/Breadcrumb"
 import ContactForm from "@/components/ContactForm"
 import Byline from "@/components/Byline"
 import { EDITOR_REF, PUBLISHER_REF } from "@/lib/schema"
+import { avecOg } from "@/lib/og";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = avecOg({
   title: { absolute: "Préparer ses gouttières avant l'automne à Bruxelles" },
   description:
     "Guide complet pour préparer vos gouttières avant l'automne à Bruxelles : checklist d'inspection, 5 arbres à risque et quand appeler un professionnel.",
@@ -24,7 +25,7 @@ export const metadata: Metadata = {
     description: "Checklist d'inspection, 5 arbres à risque, quand appeler un pro.",
     images: ["https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=1200&q=80"],
   },
-}
+})
 
 export default function BlogAutomneGouttieresBruxellesPage() {
   const DOMAIN = "https://www.nettoyage-gouttieres-bruxelles.be";

@@ -2,13 +2,14 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight, MapPin, Phone } from "lucide-react";
 import Breadcrumb from "@/components/Breadcrumb";
+import { avecOg } from "@/lib/og";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = avecOg({
   title: { absolute: "Gouttières : les 19 communes de Bruxelles desservies" },
   description:
     "Nettoyage, débouchage et réparation de gouttières dans les 19 communes de la Région bruxelloise. Dès 80 €, devis gratuit, prix annoncé avant l'intervention.",
   alternates: { canonical: "https://www.nettoyage-gouttieres-bruxelles.be/communes" },
-};
+});
 
 const zones: { title: string; intro: string; items: { slug: string; name: string; line: string }[] }[] = [
   {

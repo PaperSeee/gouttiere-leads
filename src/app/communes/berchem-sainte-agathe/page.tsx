@@ -7,8 +7,9 @@ import ContactForm from "@/components/ContactForm"
 import TrustNote from "@/components/TrustNote"
 import { CommuneConseils, CommuneDetail, CommuneQuickLinks, NeighborCommunes } from "@/components/CommuneLocal"
 import { localFaqs, localFaqSchema, getCommune } from "@/lib/communes"
+import { avecOg } from "@/lib/og";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = avecOg({
   title: { absolute: "Nettoyage de gouttières à Berchem-Sainte-Agathe dès 80 €" },
   description:
     "Nettoyage de gouttières à Berchem-Sainte-Agathe dès 80 € : villas des années 60–70, garages à toit plat. Devis gratuit, prix annoncé avant l'intervention.",
@@ -21,7 +22,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "Nettoyage gouttières Berchem-Sainte-Agathe" }],
   },
-}
+})
 
 export default function BerchemSainteAgathePage() {
   const faqSchema = {

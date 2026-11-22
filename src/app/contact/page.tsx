@@ -3,8 +3,9 @@ import Link from "next/link";
 import { Phone, Mail, MapPin, Clock, MessageCircle } from "lucide-react";
 import Breadcrumb from "@/components/Breadcrumb";
 import ContactForm from "@/components/ContactForm";
+import { avecOg } from "@/lib/og";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = avecOg({
   title: { absolute: "Contact et devis gratuit | Gouttières Bruxelles" },
   description:
     "Devis gratuit pour vos gouttières à Bruxelles : appelez le 0451 05 33 70 ou remplissez le formulaire. Un professionnel indépendant vous rappelle pour le devis.",
@@ -17,7 +18,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "Contact nettoyage gouttières Bruxelles" }],
   },
-};
+});
 
 export default function Contact() {
   return (

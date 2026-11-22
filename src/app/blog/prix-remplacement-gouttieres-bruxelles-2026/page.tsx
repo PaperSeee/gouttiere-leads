@@ -5,8 +5,9 @@ import Breadcrumb from "@/components/Breadcrumb"
 import ContactForm from "@/components/ContactForm"
 import Byline from "@/components/Byline"
 import { EDITOR_REF, PUBLISHER_REF } from "@/lib/schema"
+import { avecOg } from "@/lib/og";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = avecOg({
   title: { absolute: "Prix du remplacement de gouttières à Bruxelles" },
   description:
     "Combien coûte le remplacement de vos gouttières à Bruxelles en 2026 ? Tarifs par matériau (zinc, aluminium, PVC), longueur et type de maison.",
@@ -25,7 +26,7 @@ export const metadata: Metadata = {
     description: "Tarifs détaillés pour le remplacement de gouttières à Bruxelles selon le matériau.",
     images: ["https://images.unsplash.com/photo-1504510533704-35680f356dfd?w=1200&q=80"],
   },
-}
+})
 
 export default function BlogPrixRemplacementGouttieresBruxelles2026Page() {
   const DOMAIN = "https://www.nettoyage-gouttieres-bruxelles.be"

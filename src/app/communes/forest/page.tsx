@@ -7,8 +7,9 @@ import ContactForm from "@/components/ContactForm"
 import TrustNote from "@/components/TrustNote"
 import { CommuneConseils, CommuneDetail, CommuneQuickLinks, NeighborCommunes } from "@/components/CommuneLocal"
 import { localFaqs, localFaqSchema, getCommune } from "@/lib/communes"
+import { avecOg } from "@/lib/og";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = avecOg({
   title: { absolute: "Nettoyage de gouttières à Forest dès 80 €" },
   description:
     "Nettoyage de gouttières à Forest dès 80 € : maisons en brique, zinc d'époque, parcs Duden et de Forest. Devis gratuit, prix annoncé avant l'intervention.",
@@ -21,7 +22,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "Nettoyage gouttières Forest" }],
   },
-}
+})
 
 export default function ForestPage() {
   const faqSchema = {

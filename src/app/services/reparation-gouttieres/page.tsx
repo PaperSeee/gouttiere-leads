@@ -4,8 +4,9 @@ import { Phone, CheckCircle, ArrowRight, Wrench } from "lucide-react";
 import Breadcrumb from "@/components/Breadcrumb";
 import ContactForm from "@/components/ContactForm";
 import ServiceGuides from "@/components/ServiceGuides";
+import { avecOg } from "@/lib/og";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = avecOg({
   title: { absolute: "Réparation de gouttières à Bruxelles | Gouttières Bruxelles" },
   description:
     "Réparation de gouttières à Bruxelles : joint dès 40 €, crochet dès 8 €, tronçon zinc, PVC ou alu au mètre. Fuites, soudures, fixations. Devis gratuit.",
@@ -24,7 +25,7 @@ export const metadata: Metadata = {
     description: "Réparation et remplacement gouttières à Bruxelles. Tous matériaux. Devis gratuit.",
     images: ["/opengraph-image"],
   },
-};
+});
 
 const communes = [
   { name: "Anderlecht", slug: "anderlecht" },

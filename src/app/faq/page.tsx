@@ -3,8 +3,9 @@ import Link from "next/link";
 import { ArrowRight, Phone } from "lucide-react";
 import Breadcrumb from "@/components/Breadcrumb";
 import FAQAccordion from "@/components/FAQAccordion";
+import { avecOg } from "@/lib/og";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = avecOg({
   title: { absolute: "FAQ gouttières à Bruxelles : prix, entretien, urgences" },
   description:
     "Prix, fréquence, urgences, nettoyage de toiture : 16 réponses sur l'entretien des gouttières à Bruxelles. Devis gratuit.",
@@ -17,7 +18,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "FAQ nettoyage gouttières Bruxelles" }],
   },
-};
+});
 
 const faqs = [
   {

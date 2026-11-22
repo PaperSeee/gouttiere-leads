@@ -5,6 +5,7 @@ import Breadcrumb from "@/components/Breadcrumb";
 import ContactForm from "@/components/ContactForm";
 import ServiceGuides from "@/components/ServiceGuides";
 import TrustNote from "@/components/TrustNote";
+import { avecOg } from "@/lib/og";
 
 const communes = [
   { name: "Anderlecht", slug: "anderlecht" },
@@ -28,7 +29,7 @@ const communes = [
   { name: "Woluwe-Saint-Pierre", slug: "woluwe-saint-pierre" },
 ];
 
-export const metadata: Metadata = {
+export const metadata: Metadata = avecOg({
   title: { absolute: "Débouchage de gouttières à Bruxelles | Gouttières Bruxelles" },
   description:
     "Débouchage de gouttières et descentes pluviales à Bruxelles : 120 à 160 € en semaine, 160 à 200 € le week-end. Test d'écoulement inclus, devis gratuit.",
@@ -47,7 +48,7 @@ export const metadata: Metadata = {
     description: "Débouchage urgent de gouttières à Bruxelles, test d'écoulement inclus.",
     images: ["/opengraph-image"],
   },
-};
+});
 
 export default function DebouchageGouttieres() {
   const serviceSchema = {

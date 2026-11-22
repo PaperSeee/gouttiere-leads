@@ -5,8 +5,9 @@ import Breadcrumb from "@/components/Breadcrumb"
 import ContactForm from "@/components/ContactForm"
 import Byline from "@/components/Byline"
 import { EDITOR_REF, PUBLISHER_REF } from "@/lib/schema"
+import { avecOg } from "@/lib/og";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = avecOg({
   title: { absolute: "Infiltrations en façade : le rôle des gouttières" },
   description:
     "Taches d'humidité, moisissures, peinture qui s'écaille — les gouttières défectueuses sont souvent la cause des infiltrations de façade.",
@@ -25,7 +26,7 @@ export const metadata: Metadata = {
     description: "Diagnostic et solutions pour les infiltrations causées par des gouttières défaillantes.",
     images: ["https://images.unsplash.com/photo-1516455590571-18256e5bb9ff?w=1200&q=80"],
   },
-}
+})
 
 export default function BlogInfiltrationEauFacadeGouttieres() {
   const DOMAIN = "https://www.nettoyage-gouttieres-bruxelles.be"

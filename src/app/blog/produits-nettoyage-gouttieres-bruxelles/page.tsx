@@ -5,8 +5,9 @@ import Breadcrumb from "@/components/Breadcrumb"
 import ContactForm from "@/components/ContactForm"
 import Byline from "@/components/Byline"
 import { EDITOR_REF, PUBLISHER_REF } from "@/lib/schema"
+import { avecOg } from "@/lib/og";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = avecOg({
   title: { absolute: "Produits de nettoyage de gouttières : lesquels choisir ?" },
   description:
     "Guide sur les produits pour nettoyer vos gouttières à Bruxelles : démoussants, dégraissants, anti-algues. Ce qui fonctionne et ce qui les abîme.",
@@ -25,7 +26,7 @@ export const metadata: Metadata = {
     description: "Démoussants, dégraissants, anti-algues — le guide complet pour choisir les bons produits.",
     images: ["https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200&q=80"],
   },
-}
+})
 
 export default function BlogProduitsNettoyageGouttieresBruxellesPage() {
   const DOMAIN = "https://www.nettoyage-gouttieres-bruxelles.be"

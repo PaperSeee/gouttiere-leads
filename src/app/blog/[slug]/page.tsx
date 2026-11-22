@@ -9,6 +9,7 @@ import { guides, getGuide } from "@/lib/guides"
 import { blogPosts } from "@/lib/blog"
 import Byline from "@/components/Byline"
 import { EDITOR_REF, PUBLISHER_REF } from "@/lib/schema"
+import { avecOg } from "@/lib/og";
 
 const DOMAIN = "https://www.nettoyage-gouttieres-bruxelles.be"
 
@@ -30,11 +31,12 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: PageProps<"/blog/[slug]">): Promise<Metadata> {
   const { slug } = await params
   const g = getGuide(slug)
-  if (!g) return {}
+  if (!g) return avecOg({})
   const url = `${DOMAIN}/blog/${g.slug}`
   const image = g.imageUrl.replace("w=800", "w=1200")
-  return {
-    title: g.title,
+  return avecOg({
+    // ≤ 60 caractères : sans le suffixe « | Gouttières Bruxelles » quand il ferait dépasser (Ahrefs, 22/11/2026)
+    title: `${g.title} | Gouttières Bruxelles`.length <= 60 ? g.title : { absolute: g.title },
     description: g.description,
     alternates: { canonical: url },
     openGraph: {
@@ -46,7 +48,7 @@ export async function generateMetadata({ params }: PageProps<"/blog/[slug]">): P
       publishedTime: g.date,
     },
     twitter: { card: "summary_large_image", title: g.h1, description: g.description, images: [image] },
-  }
+  })
 }
 
 export default async function GuidePage({ params }: PageProps<"/blog/[slug]">) {

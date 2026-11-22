@@ -5,8 +5,9 @@ import Breadcrumb from "@/components/Breadcrumb"
 import ContactForm from "@/components/ContactForm"
 import Byline from "@/components/Byline"
 import { EDITOR_REF, PUBLISHER_REF } from "@/lib/schema"
+import { avecOg } from "@/lib/og";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = avecOg({
   title: { absolute: "Orage à Bruxelles : préparer ses gouttières en 7 points" },
   description:
     "Un orage d'été déverse en 20 minutes l'équivalent de plusieurs jours de pluie. La checklist en 7 points pour préparer vos gouttières avant les intempéries.",
@@ -25,7 +26,7 @@ export const metadata: Metadata = {
     description: "Préparez vos gouttières avant les intempéries : la checklist en 7 points.",
     images: ["https://images.unsplash.com/photo-1500674425229-f692875b0ab7?w=1200&q=80"],
   },
-}
+})
 
 export default function BlogOragesEteGouttieres() {
   const DOMAIN = "https://www.nettoyage-gouttieres-bruxelles.be"

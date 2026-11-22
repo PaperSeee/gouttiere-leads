@@ -4,11 +4,12 @@ import { Phone, CheckCircle, ArrowRight, Landmark, Euro, Shield, Leaf } from "lu
 import Breadcrumb from "@/components/Breadcrumb";
 import ContactForm from "@/components/ContactForm";
 import TrustNote from "@/components/TrustNote";
+import { avecOg } from "@/lib/og";
 
 const URL = "https://www.nettoyage-gouttieres-bruxelles.be/services/nettoyage-corniche";
 const HOMEGRADE = "https://homegrade.brussels/conseils/patrimoine/corniche-entretien-preservation/";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = avecOg({
   title: { absolute: "Nettoyage de corniche à Bruxelles — chéneau vidé, dès 80 €" },
   description:
     "Nettoyage de corniche à Bruxelles : chéneau en zinc vidé par le haut, descente débouchée, pente et soudures contrôlées. Dès 80 €, devis gratuit.",
@@ -27,7 +28,7 @@ export const metadata: Metadata = {
     description: "Chéneau vidé, descente débouchée, pente et soudures contrôlées. Devis gratuit.",
     images: ["/opengraph-image"],
   },
-};
+});
 
 const communesCorniche = [
   { name: "Bruxelles-Ville", slug: "bruxelles" },

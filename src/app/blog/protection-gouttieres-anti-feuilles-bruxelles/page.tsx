@@ -5,8 +5,9 @@ import Breadcrumb from "@/components/Breadcrumb"
 import ContactForm from "@/components/ContactForm"
 import Byline from "@/components/Byline"
 import { EDITOR_REF, PUBLISHER_REF } from "@/lib/schema"
+import { avecOg } from "@/lib/og";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = avecOg({
   title: { absolute: "Protections anti-feuilles : grilles, brosses ou filets ?" },
   description:
     "Grilles, brosses, filets, mousses : comparatif des protections anti-feuilles pour gouttières à Bruxelles. Avantages, limites, prix et efficacité.",
@@ -25,7 +26,7 @@ export const metadata: Metadata = {
     description: "Grilles, brosses, filets, mousses : que choisir à Bruxelles ?",
     images: ["https://images.unsplash.com/photo-1632759145351-1d592919f522?w=1200&q=80"],
   },
-}
+})
 
 export default function BlogProtectionGouttieresAntiFeuilles() {
   const DOMAIN = "https://www.nettoyage-gouttieres-bruxelles.be"

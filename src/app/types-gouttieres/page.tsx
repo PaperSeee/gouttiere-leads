@@ -2,13 +2,14 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight, CheckCircle } from "lucide-react";
 import Breadcrumb from "@/components/Breadcrumb";
+import { avecOg } from "@/lib/og";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = avecOg({
   title: { absolute: "Types de gouttières : zinc, PVC, aluminium, cuivre" },
   description:
     "Guide complet des types de gouttières : zinc, PVC, aluminium et cuivre. Avantages, inconvénients, prix et durée de vie.",
   alternates: { canonical: "https://www.nettoyage-gouttieres-bruxelles.be/types-gouttieres" },
-};
+});
 
 const types = [
   {

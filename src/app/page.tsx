@@ -23,8 +23,9 @@ import FAQAccordion from "@/components/FAQAccordion";
 import BlogCard from "@/components/BlogCard";
 import { blogPosts, getRecentPosts } from "@/lib/blog";
 import GutterIllustration from "@/components/GutterIllustration";
+import { avecOg } from "@/lib/og";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = avecOg({
   title: { absolute: "Nettoyage de gouttières à Bruxelles dès 80 € — devis gratuit" },
   description:
     "Nettoyage et entretien de gouttières à Bruxelles : chéneau et descentes vidés, écoulement testé, 19 communes. Devis gratuit, prix annoncé avant les travaux.",
@@ -39,7 +40,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "Nettoyage Gouttières Bruxelles" }],
   },
-};
+});
 
 const communes = [
   { name: "Anderlecht", slug: "anderlecht" },

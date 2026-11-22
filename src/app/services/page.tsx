@@ -2,13 +2,14 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight, Phone } from "lucide-react";
 import Breadcrumb from "@/components/Breadcrumb";
+import { avecOg } from "@/lib/og";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = avecOg({
   title: { absolute: "Services gouttières à Bruxelles | Gouttières Bruxelles" },
   description:
     "Nettoyage dès 80 €, débouchage dès 120 €, réparation, démoussage 8–20 €/m², protection anti-feuilles et contrat d'entretien. Devis gratuit à Bruxelles.",
   alternates: { canonical: "https://www.nettoyage-gouttieres-bruxelles.be/services" },
-};
+});
 
 const services = [
   { href: "/services/nettoyage-gouttieres", title: "Nettoyage de gouttières", price: "dès 80 €", desc: "Feuilles, mousses et boues retirées, descentes pluviales comprises, écoulement testé avant de partir." },

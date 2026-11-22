@@ -4,8 +4,9 @@ import { Phone, CheckCircle, ArrowRight, Home, Clock, Shield, Leaf } from "lucid
 import Breadcrumb from "@/components/Breadcrumb";
 import ContactForm from "@/components/ContactForm";
 import TrustNote from "@/components/TrustNote";
+import { avecOg } from "@/lib/og";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = avecOg({
   title: { absolute: "Nettoyage de toiture à Bruxelles — débris et mousses retirés" },
   description:
     "Nettoyage de toiture à Bruxelles : feuilles, mousses et débris dégagés des tuiles et ardoises, gouttières nettoyées en même temps. Devis gratuit.",
@@ -24,7 +25,7 @@ export const metadata: Metadata = {
     description: "Feuilles, mousses et débris dégagés du toit, gouttières nettoyées en même temps. Devis gratuit.",
     images: ["/opengraph-image"],
   },
-};
+});
 
 const communes = [
   { name: "Anderlecht", slug: "anderlecht" },

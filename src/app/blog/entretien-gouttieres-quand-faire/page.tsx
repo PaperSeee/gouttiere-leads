@@ -5,8 +5,9 @@ import Breadcrumb from "@/components/Breadcrumb"
 import ContactForm from "@/components/ContactForm"
 import Byline from "@/components/Byline"
 import { EDITOR_REF, PUBLISHER_REF } from "@/lib/schema"
+import { avecOg } from "@/lib/og";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = avecOg({
   title: { absolute: "Quand nettoyer ses gouttières à Bruxelles ?" },
   description:
     "À quelle fréquence nettoyer ses gouttières à Bruxelles ? Le calendrier d'entretien recommandé, les signes d'alerte et les risques d'un entretien négligé.",
@@ -25,7 +26,7 @@ export const metadata: Metadata = {
     description: "Fréquence, meilleurs moments, signes d'alerte — guide complet pour l'entretien de vos gouttières.",
     images: ["https://images.unsplash.com/photo-1504510533704-35680f356dfd?w=1200&q=80"],
   },
-}
+})
 
 export default function BlogEntretienGouttieresMomentPage() {
   const DOMAIN = "https://www.nettoyage-gouttieres-bruxelles.be"

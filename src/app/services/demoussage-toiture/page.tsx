@@ -4,8 +4,9 @@ import { Phone, CheckCircle, ArrowRight, Leaf } from "lucide-react";
 import Breadcrumb from "@/components/Breadcrumb";
 import ContactForm from "@/components/ContactForm";
 import ServiceGuides from "@/components/ServiceGuides";
+import { avecOg } from "@/lib/og";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = avecOg({
   title: { absolute: "Démoussage de toiture à Bruxelles — 8 à 20 €/m²" },
   description:
     "Démoussage de toiture à Bruxelles : brossage des tuiles et ardoises, anti-mousse biodégradable, gouttières nettoyées le même jour. 8 à 20 €/m².",
@@ -24,7 +25,7 @@ export const metadata: Metadata = {
     description: "Démoussage anti-mousse toiture Bruxelles. Devis gratuit, intervention rapide.",
     images: ["/opengraph-image"],
   },
-};
+});
 
 const communes = [
   { name: "Anderlecht", slug: "anderlecht" },

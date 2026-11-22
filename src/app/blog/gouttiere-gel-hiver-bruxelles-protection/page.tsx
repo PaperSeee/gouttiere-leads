@@ -5,8 +5,9 @@ import Breadcrumb from "@/components/Breadcrumb"
 import ContactForm from "@/components/ContactForm"
 import Byline from "@/components/Byline"
 import { EDITOR_REF, PUBLISHER_REF } from "@/lib/schema"
+import { avecOg } from "@/lib/og";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = avecOg({
   title: { absolute: "Gel en hiver : protéger ses gouttières à Bruxelles" },
   description:
     "Gel et neige fondue endommagent les gouttières en hiver à Bruxelles. Découvrez les risques (fissures, descentes bouchées) et comment les protéger du froid.",
@@ -25,7 +26,7 @@ export const metadata: Metadata = {
     description: "Risques du gel et protection de vos gouttières en hiver.",
     images: ["https://images.unsplash.com/photo-1483921020237-2ff51e8e4b22?w=1200&q=80"],
   },
-}
+})
 
 export default function BlogGouttiereGelHiver() {
   const DOMAIN = "https://www.nettoyage-gouttieres-bruxelles.be"

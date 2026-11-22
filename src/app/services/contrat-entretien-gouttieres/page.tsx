@@ -5,8 +5,9 @@ import Breadcrumb from "@/components/Breadcrumb";
 import ContactForm from "@/components/ContactForm";
 import ServiceGuides from "@/components/ServiceGuides";
 import TrustNote from "@/components/TrustNote";
+import { avecOg } from "@/lib/og";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = avecOg({
   title: { absolute: "Contrat d'entretien de gouttières à Bruxelles" },
   description:
     "Contrat d'entretien de gouttières à Bruxelles : un passage programmé en octobre et, si besoin, un second en mars. Conditions fixées dans le devis gratuit.",
@@ -25,7 +26,7 @@ export const metadata: Metadata = {
     description: "Passages programmés en octobre et, si besoin, en mars. Devis gratuit.",
     images: ["/opengraph-image"],
   },
-};
+});
 
 const communes = [
   { name: "Anderlecht", slug: "anderlecht" },

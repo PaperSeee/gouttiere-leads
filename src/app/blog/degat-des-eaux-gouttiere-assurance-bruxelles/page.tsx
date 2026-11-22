@@ -5,8 +5,9 @@ import Breadcrumb from "@/components/Breadcrumb"
 import ContactForm from "@/components/ContactForm"
 import Byline from "@/components/Byline"
 import { EDITOR_REF, PUBLISHER_REF } from "@/lib/schema"
+import { avecOg } from "@/lib/og";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = avecOg({
   title: { absolute: "Dégât des eaux et gouttière : l'assurance paie-t-elle ?" },
   description:
     "Gouttière bouchée et dégât des eaux à Bruxelles : ce que couvre votre assurance, le piège du défaut d'entretien et comment l'éviter.",
@@ -25,7 +26,7 @@ export const metadata: Metadata = {
     description: "Couverture, défaut d'entretien et indemnisation : ce qu'il faut savoir à Bruxelles.",
     images: ["https://images.unsplash.com/photo-1517490232338-06b912a786b5?w=1200&q=80"],
   },
-}
+})
 
 export default function BlogDegatDesEauxGouttiereAssurance() {
   const DOMAIN = "https://www.nettoyage-gouttieres-bruxelles.be"

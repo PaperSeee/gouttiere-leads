@@ -3,8 +3,9 @@ import Link from "next/link";
 import Breadcrumb from "@/components/Breadcrumb";
 import BlogCard from "@/components/BlogCard";
 import { blogPosts, getRecentPosts } from "@/lib/blog";
+import { avecOg } from "@/lib/og";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = avecOg({
   title: { absolute: "Conseils d'entretien des gouttières à Bruxelles" },
   description:
     "Articles et conseils pratiques sur l'entretien des gouttières à Bruxelles. Guides saisonniers, tutoriels et informations pour propriétaires bruxellois.",
@@ -17,7 +18,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "Blog nettoyage gouttières Bruxelles" }],
   },
-};
+});
 
 export default function Blog() {
   return (

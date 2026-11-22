@@ -7,8 +7,9 @@ import ContactForm from "@/components/ContactForm"
 import TrustNote from "@/components/TrustNote"
 import { CommuneConseils, CommuneDetail, CommuneQuickLinks, NeighborCommunes } from "@/components/CommuneLocal"
 import { localFaqs, localFaqSchema, getCommune } from "@/lib/communes"
+import { avecOg } from "@/lib/og";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = avecOg({
   title: { absolute: "Nettoyage de gouttières à Auderghem dès 80 €" },
   description:
     "Nettoyage de gouttières à Auderghem dès 80 € : feuilles de hêtres de la Forêt de Soignes, maisons 4 façades. Devis gratuit, prix annoncé avant l'intervention.",
@@ -21,7 +22,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "Nettoyage gouttières Auderghem" }],
   },
-}
+})
 
 export default function AuderghemPage() {
   const faqSchema = {

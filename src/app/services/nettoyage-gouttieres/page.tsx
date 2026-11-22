@@ -5,8 +5,9 @@ import Breadcrumb from "@/components/Breadcrumb";
 import ContactForm from "@/components/ContactForm";
 import ServiceGuides from "@/components/ServiceGuides";
 import TrustNote from "@/components/TrustNote";
+import { avecOg } from "@/lib/og";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = avecOg({
   title: { absolute: "Nettoyage complet de gouttières : ce qui est compris" },
   description:
     "Ce que comprend un nettoyage de gouttières : feuilles, mousses et boues retirées du chéneau et des descentes, écoulement testé. Dès 80 €, devis gratuit.",
@@ -25,7 +26,7 @@ export const metadata: Metadata = {
     description: "Nettoyage professionnel gouttières + descentes pluviales à Bruxelles. Devis gratuit.",
     images: ["/opengraph-image"],
   },
-};
+});
 
 const communes = [
   { name: "Anderlecht", slug: "anderlecht" },
