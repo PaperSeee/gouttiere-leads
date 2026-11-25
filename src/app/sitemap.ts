@@ -11,24 +11,25 @@ const BASE_URL = "https://www.nettoyage-gouttieres-bruxelles.be";
  * jamais la date de build, qui donnerait la même date à toutes les pages.
  * Les articles de blog utilisent leur date de publication (voir plus bas).
  */
+// Dates recalées le 25/11/2026 sur le dernier commit de texte (hors correctifs Open Graph du 22/11).
 const LAST_MODIFIED: Record<string, string> = {
-  "": "2026-10-13",
+  "": "2026-11-11",
   "/types-gouttieres": "2026-10-13",
-  "/tarifs": "2026-10-13",
+  "/tarifs": "2026-11-11",
   "/faq": "2026-10-13",
   "/contact": "2026-10-13",
   "/a-propos": "2026-10-13",
   "/communes": "2026-10-13",
   "/blog": "2026-10-13",
-  "/services": "2026-10-13",
-  "/services/nettoyage-gouttieres": "2026-10-13",
-  "/services/debouchage-gouttieres": "2026-10-13",
+  "/services": "2026-11-11",
+  "/services/nettoyage-gouttieres": "2026-11-11",
+  "/services/debouchage-gouttieres": "2026-10-21",
   "/services/reparation-gouttieres": "2026-10-13",
-  "/services/demoussage-toiture": "2026-10-13",
-  "/services/nettoyage-corniche": "2026-10-13",
-  "/services/nettoyage-toiture": "2026-10-13",
-  "/services/protection-gouttieres": "2026-10-13",
-  "/services/contrat-entretien-gouttieres": "2026-10-19",
+  "/services/demoussage-toiture": "2026-11-11",
+  "/services/nettoyage-corniche": "2026-11-11",
+  "/services/nettoyage-toiture": "2026-11-11",
+  "/services/protection-gouttieres": "2026-11-11",
+  "/services/contrat-entretien-gouttieres": "2026-11-11",
 };
 
 /** Pages commune : date propre aux communes retravaillées, défaut pour les autres. */

@@ -2,6 +2,7 @@ import Link from "next/link";
 import { ArrowRight, BookOpen, Lightbulb, MapPin } from "lucide-react";
 import { communes, getCommune } from "@/lib/communes";
 import { blogPosts } from "@/lib/blog";
+import { ServicesLinksRow } from "@/components/ServicesLinks";
 
 /** Bloc « Nos conseils pour les habitants de … » + guides utiles, propre à chaque commune. */
 export function CommuneConseils({ slug }: { slug: string }) {
@@ -106,6 +107,9 @@ export function NeighborCommunes({ slug }: { slug: string }) {
           <Link href="/communes" className="inline-flex items-center gap-1.5 text-sm font-semibold text-[#1A4731] hover:text-[#F97316] px-3 py-2">
             Les 19 communes desservies <ArrowRight size={14} />
           </Link>
+        </div>
+        <div className="mt-6">
+          <ServicesLinksRow titre={`Prestations à ${c.name}`} />
         </div>
       </div>
     </section>

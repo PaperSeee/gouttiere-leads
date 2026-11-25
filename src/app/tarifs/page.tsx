@@ -5,6 +5,7 @@ import Breadcrumb from "@/components/Breadcrumb";
 import TrustNote from "@/components/TrustNote";
 import ContactForm from "@/components/ContactForm";
 import { avecOg } from "@/lib/og";
+import ServicesLinks from "@/components/ServicesLinks";
 
 export const metadata: Metadata = avecOg({
   title: { absolute: "Prix nettoyage gouttière à Bruxelles : 80 à 150 € indicatifs" },
@@ -405,6 +406,8 @@ export default function Tarifs() {
           </div>
         </div>
       </section>
+
+      <ServicesLinks titre="Le détail de chaque prestation" />
 
       {/* FAQ tarifs */}
       <section className="py-14 bg-white">
