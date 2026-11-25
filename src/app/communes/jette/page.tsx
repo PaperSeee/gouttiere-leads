@@ -14,6 +14,8 @@ export const metadata: Metadata = avecOg({
   description:
     "Nettoyage de gouttières à Jette dès 80 € : villas des années 50–70, bouleaux, bordure du Laerbeek. Devis gratuit, prix annoncé avant l'intervention.",
   alternates: { canonical: "https://www.nettoyage-gouttieres-bruxelles.be/communes/jette" },
+  // Tri du 25/11/2026 (GO Ilias, t0311ld1) : en ligne et reliée, mais hors index et hors sitemap (COMMUNES_NOINDEX).
+  robots: { index: false, follow: true, googleBot: { index: false, follow: true } },
   keywords: ["nettoyage gouttières Jette", "débouchage gouttières Jette", "gouttières bouchées Jette", "prix nettoyage gouttières Jette"],
   openGraph: {
     title: "Nettoyage Gouttières Jette — Devis Gratuit",

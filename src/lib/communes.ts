@@ -899,6 +899,18 @@ export const communes: Commune[] = [
   },
 ];
 
+// Communes en « noindex, follow » et hors sitemap (tri du 25/11/2026, GO Ilias, tâche t0311ld1) :
+// 0 affichage Google, 0 clic, 0 visiteur, 0 appel/formulaire sur 90 jours. Pages en ligne et reliées.
+// La balise robots est posée dans la page de chaque commune ; pour en rouvrir une, retirer les deux.
+export const COMMUNES_NOINDEX = new Set<string>([
+  "evere",
+  "jette",
+  "forest",
+  "koekelberg",
+  "schaerbeek",
+  "woluwe-saint-pierre",
+]);
+
 export function getCommune(slug: string): Commune {
   const c = communes.find((x) => x.slug === slug);
   if (!c) throw new Error(`Commune inconnue : ${slug}`);

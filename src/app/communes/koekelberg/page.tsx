@@ -14,6 +14,8 @@ export const metadata: Metadata = avecOg({
   description:
     "Nettoyage de gouttières à Koekelberg dès 80 € : maisons mitoyennes étroites, zinc d'époque, parc Élisabeth. Devis gratuit, prix annoncé avant l'intervention.",
   alternates: { canonical: "https://www.nettoyage-gouttieres-bruxelles.be/communes/koekelberg" },
+  // Tri du 25/11/2026 (GO Ilias, t0311ld1) : en ligne et reliée, mais hors index et hors sitemap (COMMUNES_NOINDEX).
+  robots: { index: false, follow: true, googleBot: { index: false, follow: true } },
   keywords: ["nettoyage gouttières Koekelberg", "débouchage gouttières Koekelberg", "gouttières bouchées Koekelberg", "prix nettoyage gouttières Koekelberg"],
   openGraph: {
     title: "Nettoyage Gouttières Koekelberg — Devis Gratuit",

@@ -1,6 +1,6 @@
 import { MetadataRoute } from "next";
 import { blogPosts } from "@/lib/blog";
-import { communes } from "@/lib/communes";
+import { communes, COMMUNES_NOINDEX } from "@/lib/communes";
 import { guides } from "@/lib/guides";
 
 const BASE_URL = "https://www.nettoyage-gouttieres-bruxelles.be";
@@ -55,7 +55,8 @@ const BLOG_LAST_MODIFIED: Record<string, string> = {
 };
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const communeSlugs = communes.map((c) => c.slug);
+  // Communes en noindex (tri du 25/11/2026) : hors sitemap.
+  const communeSlugs = communes.map((c) => c.slug).filter((s) => !COMMUNES_NOINDEX.has(s));
 
   const staticPages = [
     "",

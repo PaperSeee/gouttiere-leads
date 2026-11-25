@@ -14,6 +14,8 @@ export const metadata: Metadata = avecOg({
   description:
     "Nettoyage de gouttières à Woluwe-Saint-Pierre dès 80 € : grandes villas, parc de Woluwe, Stockel. Devis gratuit, prix annoncé avant l'intervention.",
   alternates: { canonical: "https://www.nettoyage-gouttieres-bruxelles.be/communes/woluwe-saint-pierre" },
+  // Tri du 25/11/2026 (GO Ilias, t0311ld1) : en ligne et reliée, mais hors index et hors sitemap (COMMUNES_NOINDEX).
+  robots: { index: false, follow: true, googleBot: { index: false, follow: true } },
   keywords: ["nettoyage gouttières Woluwe-Saint-Pierre", "débouchage gouttières Woluwe-Saint-Pierre", "gouttières bouchées Woluwe-Saint-Pierre", "prix nettoyage gouttières Woluwe-Saint-Pierre"],
   openGraph: {
     title: "Nettoyage Gouttières Woluwe-Saint-Pierre — Devis Gratuit",

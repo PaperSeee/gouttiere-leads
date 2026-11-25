@@ -14,6 +14,8 @@ export const metadata: Metadata = avecOg({
   description:
     "Nettoyage de gouttières à Forest dès 80 € : maisons en brique, zinc d'époque, parcs Duden et de Forest. Devis gratuit, prix annoncé avant l'intervention.",
   alternates: { canonical: "https://www.nettoyage-gouttieres-bruxelles.be/communes/forest" },
+  // Tri du 25/11/2026 (GO Ilias, t0311ld1) : en ligne et reliée, mais hors index et hors sitemap (COMMUNES_NOINDEX).
+  robots: { index: false, follow: true, googleBot: { index: false, follow: true } },
   keywords: ["nettoyage gouttières Forest", "débouchage gouttières Forest", "gouttières bouchées Forest", "prix nettoyage gouttières Forest"],
   openGraph: {
     title: "Nettoyage Gouttières Forest — Devis Gratuit",

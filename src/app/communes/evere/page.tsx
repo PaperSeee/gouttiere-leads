@@ -14,6 +14,8 @@ export const metadata: Metadata = avecOg({
   description:
     "Nettoyage de gouttières à Evere dès 80 € : maisons des années 50–70, graines de peupliers. Devis gratuit, prix annoncé avant l'intervention.",
   alternates: { canonical: "https://www.nettoyage-gouttieres-bruxelles.be/communes/evere" },
+  // Tri du 25/11/2026 (GO Ilias, t0311ld1) : en ligne et reliée, mais hors index et hors sitemap (COMMUNES_NOINDEX).
+  robots: { index: false, follow: true, googleBot: { index: false, follow: true } },
   keywords: ["nettoyage gouttières Evere", "débouchage gouttières Evere", "gouttières bouchées Evere", "prix nettoyage gouttières Evere"],
   openGraph: {
     title: "Nettoyage Gouttières Evere — Devis Gratuit",

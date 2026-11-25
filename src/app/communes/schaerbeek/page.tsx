@@ -14,6 +14,8 @@ export const metadata: Metadata = avecOg({
   description:
     "Nettoyage de gouttières à Schaerbeek dès 80 € : maisons Belle Époque, chéneaux cachés, parc Josaphat. Devis gratuit, prix annoncé avant l'intervention.",
   alternates: { canonical: "https://www.nettoyage-gouttieres-bruxelles.be/communes/schaerbeek" },
+  // Tri du 25/11/2026 (GO Ilias, t0311ld1) : en ligne et reliée, mais hors index et hors sitemap (COMMUNES_NOINDEX).
+  robots: { index: false, follow: true, googleBot: { index: false, follow: true } },
   keywords: ["nettoyage gouttières Schaerbeek", "débouchage gouttières Schaerbeek", "gouttières bouchées Schaerbeek", "prix nettoyage gouttières Schaerbeek"],
   openGraph: {
     title: "Nettoyage Gouttières Schaerbeek — Devis Gratuit",
