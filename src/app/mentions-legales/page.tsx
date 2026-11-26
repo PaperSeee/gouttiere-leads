@@ -86,13 +86,11 @@ export default function MentionsLegales() {
                 Responsable du traitement : Ilias Dorhmi (HqDigital), à l&apos;adresse indiquée ci-dessus.
                 Les données saisies dans le formulaire (nom, téléphone, e-mail, commune, type d&apos;intervention, message) servent uniquement
                 à traiter votre demande de devis : elles sont transmises au professionnel indépendant qui
-                intervient dans votre commune, et à personne d&apos;autre. Elles ne sont ni vendues ni
-                utilisées à des fins publicitaires. Pour exercer vos droits, écrivez à :
+                intervient dans votre commune. Elles ne sont jamais vendues à des fins publicitaires. Elles ne sont transmises à une plateforme de mise en relation (par ex. Solvari ou LeadsConnect) que si vous cochez la case prévue dans le formulaire, et uniquement pour recevoir un devis. Pour exercer vos droits, écrivez à :
                 contact@nettoyage-gouttieres-bruxelles.be
               </p>
               <p className="text-gray-600 leading-relaxed mt-3">
-                <strong>Transmission à une plateforme de mise en relation, uniquement avec votre accord :</strong> par
-                exception à ce qui précède, si vous cochez dans le formulaire la case «&nbsp;J&apos;accepte que ma demande
+                <strong>Transmission à une plateforme de mise en relation, uniquement avec votre accord :</strong> si vous cochez dans le formulaire la case «&nbsp;J&apos;accepte que ma demande
                 soit transmise à un partenaire professionnel (par ex. Solvari) pour recevoir un devis&nbsp;», votre demande
                 (coordonnées, commune, description) peut être transmise à une plateforme de mise en relation avec des
                 professionnels : Solvari SA/BV (BCE 0681.537.836) ou LeadsConnect (BCE 1016.721.633). Cette transmission
