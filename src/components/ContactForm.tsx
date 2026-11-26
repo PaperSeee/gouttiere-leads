@@ -47,10 +47,15 @@ const field =
   "w-full rounded-xl border border-gray-300 bg-white px-3.5 py-3 text-gray-900 placeholder:text-gray-400 focus:border-[#1F7A55] focus:outline-none focus:ring-4 focus:ring-[#1F7A55]/15";
 const label = "mb-1.5 block text-sm font-bold text-gray-800";
 
+// Case facultative « transmission à un partenaire » : texte envoyé tel quel avec la demande (preuve d'opt-in).
+const CONSENT_TEXT =
+  "J'accepte que ma demande soit transmise à un partenaire professionnel (par ex. Solvari) pour recevoir un devis.";
+
 export default function ContactForm({ defaultCommune, defaultIntervention, compact = false }: ContactFormProps) {
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
+  const [consentPartner, setConsentPartner] = useState(false);
   const [form, setForm] = useState({
     nom: "",
     telephone: "",
@@ -73,7 +78,15 @@ export default function ContactForm({ defaultCommune, defaultIntervention, compa
         method: "POST",
         headers: { "Content-Type": "application/json" },
         // prenom reste envoyé (vide) pour garder le même format côté webhook.
-        body: JSON.stringify({ prenom: "", ...form, page: window.location.pathname }),
+        body: JSON.stringify({
+          prenom: "",
+          ...form,
+          page: window.location.pathname,
+          consentPartner: consentPartner ? "oui" : "non",
+          consentText: CONSENT_TEXT,
+          consentUrl: window.location.origin + window.location.pathname,
+          consentAt: new Date().toISOString(),
+        }),
       });
       if (!res.ok) throw new Error("request_failed");
       (window as unknown as { gtag?: (...a: unknown[]) => void }).gtag?.("event", "form_submit", { page_path: window.location.pathname });
@@ -154,6 +167,23 @@ export default function ContactForm({ defaultCommune, defaultIntervention, compa
           />
         </div>
       )}
+
+      <div className="flex items-start gap-2.5">
+        <input
+          id="cf-consent"
+          type="checkbox"
+          name="consentPartner"
+          checked={consentPartner}
+          onChange={(e) => setConsentPartner(e.target.checked)}
+          className="mt-0.5 h-5 w-5 shrink-0 rounded border-gray-300 accent-[#1F7A55]"
+        />
+        <label htmlFor="cf-consent" className="text-sm leading-snug text-gray-700">
+          {CONSENT_TEXT}{" "}
+          <a href="/mentions-legales#donnees-personnelles" target="_blank" className="font-semibold text-[#1F7A55] underline">
+            Politique de confidentialité
+          </a>
+        </label>
+      </div>
 
       {error && (
         <div className="flex items-start gap-2 rounded-xl bg-red-50 p-3 text-sm text-red-800">

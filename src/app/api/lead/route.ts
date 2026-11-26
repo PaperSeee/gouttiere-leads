@@ -43,16 +43,31 @@ export async function POST(req: Request) {
   let page = d.page || "";
   if (!page) { try { page = new URL(req.headers.get("referer") || "").pathname; } catch { /* inconnu */ } }
 
+  // Case facultative « transmission à un partenaire » : preuve d'opt-in (oui/non, texte affiché, page, date-heure).
+  const receivedAt = new Date().toISOString();
+  const consentPartner = /^(oui|ja|yes|true|on|1)$/i.test(d.consentPartner || "") ? "oui" : "non";
+  const consentText = (d.consentText || "").slice(0, 300);
+  const consentUrl = (d.consentUrl || "").slice(0, 300);
+  const consentAt = (d.consentAt || "").slice(0, 40) || receivedAt;
+  const consentLine =
+    consentPartner === "oui"
+      ? `Accord transmission partenaire : OUI — « ${consentText} » — ${consentUrl} — ${consentAt}`
+      : "Accord transmission partenaire : NON";
+
   const payload = {
     site: SITE,
     name,
     phone,
     commune: pick("commune", "adresse"),
-    message: [d.message, extras].filter(Boolean).join(" — "),
+    message: [d.message, extras, consentLine].filter(Boolean).join(" — "),
     page,
-    receivedAt: new Date().toISOString(),
+    receivedAt,
     email,
     service,
+    consentPartner,
+    consentText,
+    consentUrl,
+    consentAt,
   };
 
   try {

@@ -68,7 +68,7 @@ export default function MentionsLegales() {
               </p>
             </section>
 
-            <section>
+            <section id="donnees-personnelles">
               <h2 className="text-xl font-bold text-gray-900 mb-3">5. Protection des données personnelles (RGPD)</h2>
               <p className="text-gray-600 leading-relaxed mb-3">
                 Conformément au Règlement Général sur la Protection des Données (RGPD) et à la loi
@@ -89,6 +89,16 @@ export default function MentionsLegales() {
                 intervient dans votre commune, et à personne d&apos;autre. Elles ne sont ni vendues ni
                 utilisées à des fins publicitaires. Pour exercer vos droits, écrivez à :
                 contact@nettoyage-gouttieres-bruxelles.be
+              </p>
+              <p className="text-gray-600 leading-relaxed mt-3">
+                <strong>Transmission à une plateforme de mise en relation, uniquement avec votre accord :</strong> par
+                exception à ce qui précède, si vous cochez dans le formulaire la case «&nbsp;J&apos;accepte que ma demande
+                soit transmise à un partenaire professionnel (par ex. Solvari) pour recevoir un devis&nbsp;», votre demande
+                (coordonnées, commune, description) peut être transmise à une plateforme de mise en relation avec des
+                professionnels : Solvari SA/BV (BCE 0681.537.836) ou LeadsConnect (BCE 1016.721.633). Cette transmission
+                sert uniquement à vous faire recevoir des devis ; vos données ne sont utilisées à aucune autre fin. Case non
+                cochée : rien n&apos;est transmis à ces plateformes. Nous conservons la preuve de votre accord (texte
+                affiché, page, date et heure) et vous pouvez le retirer à tout moment à la même adresse.
               </p>
             </section>
 
